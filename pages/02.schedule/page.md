@@ -1,5 +1,5 @@
 ---
-title: 'Aktuelles Graswachstum'
+title: Graswachstum
 published: true
 hide_page_title: false
 show_sidebar: true

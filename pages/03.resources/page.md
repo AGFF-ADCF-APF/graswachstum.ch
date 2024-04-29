@@ -13,3 +13,4 @@ hide_git_sync_repo_link: false
 
 ## Professionelles Weidemanagement
 *  [Weideplaner (Exceldatei mit Makros)](https://www.eagff.ch/files/downloads/Weideplaner_AGFF.xlsm)
+*  [Grass10 Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/)

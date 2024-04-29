@@ -15,7 +15,7 @@ hide_git_sync_repo_link: false
 
 
 Vorschläge, Bedenken oder Einspruch?  
-[Kontaktformular](#)
+[Kontaktformular]((/contact)
 
 ## Partner
 [AGFF](https://www.agff.ch)  

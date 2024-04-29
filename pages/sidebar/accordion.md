@@ -53,9 +53,8 @@ forms:
 [safe-email autolink="true"]webmaster@graswachstum.ch[/safe-email]  
 
 
-
 Vorschläge, Bedenken oder Einspruch?  
-[popup-form form=APopupForm classes=" 'myclass1', 'myclass2' "]Kontaktformular[/popup-form]
+[popup-form form=APopupForm classes=" 'myclass1', 'button' "]Kontaktformular[/popup-form]
 
 ## Partner
 [AGFF](https://www.agff.ch)  

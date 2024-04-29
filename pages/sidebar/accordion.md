@@ -54,7 +54,8 @@ forms:
 
 
 Vorschläge, Bedenken oder Einspruch?  
-[popup-form form=APopupForm classes=" 'myclass1', 'button' "]Kontaktformular[/popup-form]
+[Kontaktformular](/contact?classes=button)
+
 
 ## Partner
 [AGFF](https://www.agff.ch)  

@@ -1,5 +1,5 @@
 ---
-title: Anlässe
+title: 'Aktuelles Graswachstum'
 published: true
 hide_page_title: false
 show_sidebar: true

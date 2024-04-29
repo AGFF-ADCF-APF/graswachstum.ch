@@ -1,10 +1,10 @@
 ---
-title: 'Week 1 (May 9 - 15)'
+title: 'Woche 18 (29.04-05.05.)'
 published: true
-date: '09-05-2018 00:00'
-header_image_alt_text: 'SFU Academic Quadrangle'
-header_image_credit: 'Julian Schüngel, Flickr.com'
-header_image_creditlink: 'https://www.flickr.com/photos/medevac71/10610701655/'
+date: '2024-04-29 00:00'
+header_image_alt_text: Graswachstumsberichte
+header_image_credit: Flickr.com
+header_image_creditlink: 'https://www....'
 hide_from_post_list: false
 continue_link: true
 hide_git_sync_repo_link: true

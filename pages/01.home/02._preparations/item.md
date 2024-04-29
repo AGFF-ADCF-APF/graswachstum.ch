@@ -1,12 +1,13 @@
 ---
-title: 'Preparations'
+title: Preparations
 published: true
 ---
 
-## Looking Ahead to Next Week
+## Nicht verpassen
 
-### Week 5 Required Reading
-[embedly]http://www.uxbooth.com/articles/the-art-of-guerrilla-usability-testing/[/embedly]
+### Tagung IG Weidemilch
+[Frühjahrstagung in Bretzwil BL](https://www.weidemilch.ch/2024/03/26/fruehjahrstagung-2024/)
 
-### Week 5 Slides to be Discussed
-[Usability Testing](https://www.google.ca/slides/about/)
+
+### Whatsapp-Gruppe "Graswachstumsberichte"
+[Anleitung](#)

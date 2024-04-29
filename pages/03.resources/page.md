@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Ressourcen
 published: true
 hide_page_title: false
 show_sidebar: true

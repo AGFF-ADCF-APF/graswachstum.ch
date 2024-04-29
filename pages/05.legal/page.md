@@ -1,5 +1,5 @@
 ---
-title: Datenschutz
+title: Rechtliches
 published: true
 hide_page_title: true
 show_sidebar: true

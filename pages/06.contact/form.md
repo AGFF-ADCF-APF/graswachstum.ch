@@ -1,5 +1,5 @@
 ---
-title: Kontaktformular
+title: Kontakt
 date: '23:45 29-04-2024'
 form:
     name: contact
@@ -45,5 +45,8 @@ form:
             subject: '[Site Contact Form] {{ form.value.name|e }}'
             body: '{% include ''forms/data.html.twig'' %}'
         message: 'Thank you for getting in touch!'
+hide_page_title: false
+show_sidebar: true
+hide_git_sync_repo_link: false
 ---
 

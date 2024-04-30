@@ -3,9 +3,15 @@ title: Reminders
 alert_style: alert-secondary
 published: true
 visible: false
+hide_page_title: false
+show_sidebar: true
+hide_git_sync_repo_link: false
 ---
 
 ## Aktuell
+
+
+
 ### Wichtige Erinnerungen
 * [Tagung IG Weidemilch am 30.04.2024 in Bretzwil BL](https://www.weidemilch.ch/2024/03/26/fruehjahrstagung-2024/)
 

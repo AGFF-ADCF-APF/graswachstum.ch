@@ -13,8 +13,8 @@ hide_git_sync_repo_link: false
 [safe-email autolink="true"]webmaster@graswachstum.ch[/safe-email]  
 
 
-Vorschläge, Bedenken oder Einspruch?  
-[Kontaktformular](/contact?classes=button)
+Fragen, Vorschläge, Bedenken oder Einspruch?  
+[Kontaktiere uns!](/contact?class=button)
 
 
 ## Partner

@@ -10,7 +10,8 @@ hide_git_sync_repo_link: false
 
 ## Aktuell
 
-![Aktuelle Graswachstumskarte](/growth/Graswachstum_2024KW18_2.svg)
+![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
+
 
 ### Wichtige Erinnerungen
 * [Tagung IG Weidemilch am 30.04.2024 in Bretzwil BL](https://www.weidemilch.ch/2024/03/26/fruehjahrstagung-2024/)

@@ -16,6 +16,8 @@ hide_git_sync_repo_link: false
 Fragen, Vorschläge, Bedenken oder Einspruch?  
 [Kontaktiere uns!](/contact?classes=button)
 
+[Datenschutz und Rechtsausschluss
+](legal)
 
 ## Partner
 [AGFF](https://www.agff.ch)  

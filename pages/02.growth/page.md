@@ -13,6 +13,6 @@ featherlight:
 
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 
-{% for image in page.find('/gallery/2021/28-09').media %}
+{% for image in page.find('/uploads/').media %}
   {{ image.html() | raw }}
 {% endfor %}

@@ -5,8 +5,9 @@ hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: false
 media_order: 'Graswachstumskurve_2024.svg,Graswachstum_2024KW18_2.svg'
+featherlight:
+    active: true
 ---
-
 
 ![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 

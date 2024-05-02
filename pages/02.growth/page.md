@@ -7,8 +7,7 @@ hide_git_sync_repo_link: false
 media_order: 'Graswachstumskurve_2024.svg,Graswachstum_2024KW18_2.svg'
 ---
 
-[gallery]
+
 ![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
-[/gallery]

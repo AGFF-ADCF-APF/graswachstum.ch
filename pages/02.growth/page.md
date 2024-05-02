@@ -12,3 +12,7 @@ featherlight:
 ![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
+
+{% for image in page.find('/gallery/2021/28-09').media %}
+  {{ image.html() | raw }}
+{% endfor %}

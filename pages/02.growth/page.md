@@ -16,7 +16,7 @@ featherlight:
 
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 
-[ui-accordion independent=true open=all]
+[ui-accordion independent=true open=none]
 [ui-accordion-item title="ältere Graswachstumskarten"]
 {% for image in page.find('/uploads/archive/').media %}
   {{ image.html() | raw }}

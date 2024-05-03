@@ -8,7 +8,5 @@ show_sidebar: true
 hide_git_sync_repo_link: false
 ---
 
-## Aktuell
-
 ![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
 

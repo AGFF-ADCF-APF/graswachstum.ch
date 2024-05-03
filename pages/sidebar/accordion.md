@@ -16,7 +16,7 @@ hide_git_sync_repo_link: false
 Fragen, Vorschläge, Bedenken oder Einspruch?  
 [Kontaktiere uns!](/contact?classes=button)
 
-[fa=whatsapp /]
+[[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
 [Datenschutz und Rechtsausschluss
 ](legal)

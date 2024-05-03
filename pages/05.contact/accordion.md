@@ -6,20 +6,20 @@ form:
     fields:
         name:
             label: Name
-            placeholder: 'Enter your name'
+            placeholder: 'Gib deinen Namen ein'
             autocomplete: 'on'
             type: text
             validate:
                 required: true
         email:
             label: Email
-            placeholder: 'Enter your email address'
+            placeholder: 'Gib deine E-Mail-Adresse ein'
             type: email
             validate:
                 required: true
         message:
             label: Message
-            placeholder: 'Enter your message'
+            placeholder: 'Schreib deine Nachricht an uns'
             type: textarea
             validate:
                 required: true

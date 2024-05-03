@@ -11,7 +11,7 @@ feed:
 ![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
 
 ### Whatsapp-Gruppe "Graswachstumsberichte"
-[Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
+[[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
 
 ### Podcast-Empfehlung

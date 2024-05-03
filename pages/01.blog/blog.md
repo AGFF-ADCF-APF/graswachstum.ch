@@ -20,7 +20,7 @@ post_icon: calendar-o
 hide_post_date: true
 hide_post_taxonomy: true
 feed:
-    description: 'Grav CMS Open Matter Course Hub Description'
+    description: Graswachstumsberichte
     limit: 10
 child_type: item
 show_sidebar: true

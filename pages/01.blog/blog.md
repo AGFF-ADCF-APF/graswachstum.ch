@@ -17,7 +17,7 @@ content:
     pagination: '1'
 hide_post_summary: true
 post_icon: calendar-o
-hide_post_date: false
+hide_post_date: true
 hide_post_taxonomy: false
 feed:
     description: Graswachstumsberichte

@@ -6,6 +6,6 @@ hide_git_sync_repo_link: false
 hide_page_title: false
 ---
 
-## Über das AGFF-Grasmessnetzwerk
+## Über uns
 
 _coming soon_

@@ -10,6 +10,8 @@ hide_page_title: false
 show_sidebar: true
 media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03 Fruehlingstagung IG Weidemilch.jpg'
 header_image: false
+feed:
+    limit: 10
 ---
 
 # Drei gute Ratschläge

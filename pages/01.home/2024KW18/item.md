@@ -9,7 +9,7 @@ continue_link: true
 hide_git_sync_repo_link: true
 hide_page_title: false
 show_sidebar: true
-media_order: '2024-05-03 Wie umgehen mit Weideresten + FruÌˆhlingstagung IG Weidemilch.pdf,2024-05-03 Wie umgehen mit Weideresten.jpg'
+media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03_Wie umgehen mit Weideresten.jpg'
 header_image: false
 ---
 
@@ -20,5 +20,5 @@ Graswachstum / Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fuÌ
 
 ===
 
-![2024-05-03%20Wie%20umgehen%20mit%20Weideresten](2024-05-03%20Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03%20Wie%20umgehen%20mit%20Weideresten")
-![Druckversion (PDF)](2024-05-03%20Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03%20Wie%20umgehen%20mit%20Weideresten")
+![2024-05-03_Wie%20umgehen%20mit%20Weideresten](2024-05-03_Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03_Wie%20umgehen%20mit%20Weideresten")
+![Druckversion (PDF)](2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf](2024-05-03_Wie%20umgehen%20mit%20Weideresten%20+%20Fruehlingstagung%20IG%20Weidemilch.pdf)

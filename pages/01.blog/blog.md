@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Blog
 published: true
 visible: false
 hide_page_title: true
@@ -23,5 +23,9 @@ feed:
     description: 'Grav CMS Open Matter Course Hub Description'
     limit: 10
 child_type: item
+show_sidebar: true
+hide_git_sync_repo_link: false
+hero_scroll: false
+continue_link_as_button: false
 ---
 

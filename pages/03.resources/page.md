@@ -8,6 +8,7 @@ hide_git_sync_repo_link: false
 
 ## Grasland bewirtschaften
 *   [Pflanzeneigenschaften entdecken auf eagff.ch](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/einleitung/einleitung-uebersicht)
+*   [AGFF-Merkblätter bestellen](https://www.agff.ch/online-shop.html) bzw. [AGFF-Mitglied werden](https://www.agff.ch/mitglied-werden.html)
 * [PODCASTS :/> AGRAR SCIENCE - WISSEN KOMPAKT](https://raumberg-gumpenstein.at/forschung/infothek/agrar-science-wissen-kompakt.html)
 
 ## Futter konservieren

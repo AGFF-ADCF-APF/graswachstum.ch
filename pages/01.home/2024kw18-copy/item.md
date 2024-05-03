@@ -16,7 +16,6 @@ header_image: false
 ## Rückblick Frühlingstagung IG Weidemilch
 
 Weidemilch / Michael und Ruedi Sutter zeigen, wie sie ihre Flächen optimal nutzen und Zeit sparen.
-Graswachstum / Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma führen kann.
 
 ===
 

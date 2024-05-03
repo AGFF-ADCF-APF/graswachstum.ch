@@ -101,48 +101,42 @@
 <circle cx='378.51' cy='200.60' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='475.59' cy='200.37' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='275.89' cy='153.60' r='9.60' style='stroke-width: 2.13;' />
+<circle cx='152.36' cy='321.46' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='499.11' cy='149.42' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='193.88' cy='236.59' r='9.60' style='stroke-width: 2.13;' />
-<circle cx='553.78' cy='246.07' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='374.10' cy='180.30' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='297.18' cy='129.01' r='9.60' style='stroke-width: 2.13;' />
-<circle cx='198.59' cy='286.79' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='384.22' cy='161.45' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='480.96' cy='96.72' r='9.60' style='stroke-width: 2.13;' />
-<circle cx='190.87' cy='309.13' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='412.90' cy='115.93' r='9.60' style='stroke-width: 2.13;' />
 <circle cx='144.87' cy='280.14' r='9.60' style='stroke-width: 2.13;' />
-<text x='378.51' y='204.17' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>62</text>
-<text x='475.59' y='203.93' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='275.89' y='157.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>32</text>
-<text x='499.11' y='152.99' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>89</text>
-<text x='193.88' y='240.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>53</text>
-<text x='553.78' y='249.64' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='374.10' y='183.86' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>65</text>
-<text x='297.18' y='132.58' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>17</text>
-<text x='198.59' y='290.35' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>58</text>
-<text x='384.22' y='165.02' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='16.61px' lengthAdjust='spacingAndGlyphs'>102</text>
-<text x='480.96' y='100.28' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>51</text>
-<text x='190.87' y='312.70' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>59</text>
-<text x='412.90' y='119.49' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>65</text>
-<text x='144.87' y='283.70' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>76</text>
-<text x='407.42' y='220.03' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='52.29px' lengthAdjust='spacingAndGlyphs'>Abtwil AG</text>
-<text x='507.68' y='204.44' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='39.84px' lengthAdjust='spacingAndGlyphs'>Benken</text>
-<text x='304.75' y='172.95' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.29px' lengthAdjust='spacingAndGlyphs'>Bretzwil</text>
-<text x='526.68' y='153.38' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='30.66px' lengthAdjust='spacingAndGlyphs'>Flawil</text>
-<text x='232.67' y='227.48' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='53.34px' lengthAdjust='spacingAndGlyphs'>Gampelen</text>
-<text x='592.96' y='249.91' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='53.93px' lengthAdjust='spacingAndGlyphs'>Landquart</text>
-<text x='407.57' y='187.02' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.49px' lengthAdjust='spacingAndGlyphs'>Muri AG</text>
-<text x='326.08' y='117.55' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='41.69px' lengthAdjust='spacingAndGlyphs'>Olsberg</text>
-<text x='232.01' y='300.28' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.31px' lengthAdjust='spacingAndGlyphs'>Posieux</text>
+<text x='378.51' y='204.17' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>24</text>
+<text x='475.59' y='203.93' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='275.89' y='157.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>27</text>
+<text x='152.36' y='325.02' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='499.11' y='152.99' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='5.54px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='193.88' y='240.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>27</text>
+<text x='374.10' y='183.86' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>33</text>
+<text x='297.18' y='132.58' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>51</text>
+<text x='384.22' y='165.02' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>35</text>
+<text x='480.96' y='100.28' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>42</text>
+<text x='412.90' y='119.49' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>27</text>
+<text x='144.87' y='283.70' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>18</text>
+<text x='407.39' y='219.99' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='52.29px' lengthAdjust='spacingAndGlyphs'>Abtwil AG</text>
+<text x='507.70' y='204.24' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='39.84px' lengthAdjust='spacingAndGlyphs'>Benken</text>
+<text x='304.76' y='172.98' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.29px' lengthAdjust='spacingAndGlyphs'>Bretzwil</text>
+<text x='189.00' y='325.15' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='49.03px' lengthAdjust='spacingAndGlyphs'>Carrouge</text>
+<text x='526.61' y='153.37' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='30.66px' lengthAdjust='spacingAndGlyphs'>Flawil</text>
+<text x='232.75' y='241.02' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='53.34px' lengthAdjust='spacingAndGlyphs'>Gampelen</text>
+<text x='407.48' y='186.37' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.49px' lengthAdjust='spacingAndGlyphs'>Muri AG</text>
+<text x='326.07' y='117.55' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='41.69px' lengthAdjust='spacingAndGlyphs'>Olsberg</text>
 <text x='413.13' y='149.94' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='71.08px' lengthAdjust='spacingAndGlyphs'>Rudolfstetten</text>
-<text x='520.66' y='101.06' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='55.18px' lengthAdjust='spacingAndGlyphs'>Salenstein</text>
-<text x='217.80' y='328.56' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='37.40px' lengthAdjust='spacingAndGlyphs'>Sorens</text>
-<text x='442.61' y='119.92' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='34.95px' lengthAdjust='spacingAndGlyphs'>Flaach</text>
-<text x='173.74' y='268.66' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='45.97px' lengthAdjust='spacingAndGlyphs'>Yvonand</text>
+<text x='520.69' y='100.43' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='55.18px' lengthAdjust='spacingAndGlyphs'>Salenstein</text>
+<text x='442.55' y='119.86' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='34.95px' lengthAdjust='spacingAndGlyphs'>Flaach</text>
+<text x='179.98' y='284.02' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='45.97px' lengthAdjust='spacingAndGlyphs'>Yvonand</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NDAuMDA=)'>
 <text x='0.00' y='41.28' style='font-size: 11.00px; font-family: "Arial";' textLength='293.93px' lengthAdjust='spacingAndGlyphs'>Zuwachs in kg TS/ha/Tag, Quelle: AGFF-Grasmessnetzwerk</text>
-<text x='0.00' y='25.15' style='font-size: 13.20px; font-family: "Arial";' textLength='164.22px' lengthAdjust='spacingAndGlyphs'>Graswachstum KW 18 2024</text>
+<text x='0.00' y='25.15' style='font-size: 13.20px; font-family: "Arial";' textLength='164.22px' lengthAdjust='spacingAndGlyphs'>Graswachstum KW 17 2024</text>
 </g>
 </svg>

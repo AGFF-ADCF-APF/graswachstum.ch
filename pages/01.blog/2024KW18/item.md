@@ -1,7 +1,7 @@
 ---
 title: 'Woche 18 (29.04-05.05.2024)'
 published: true
-date: '29-04-2024 00:00'
+date: '03-05-2024 00:00'
 header_image_alt_text: Graswachstumsberichte
 header_image_credit: Flickr.com
 hide_from_post_list: false
@@ -11,6 +11,8 @@ hide_page_title: false
 show_sidebar: true
 media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03_Wie umgehen mit Weideresten.jpg'
 header_image: false
+feed:
+    limit: 10
 ---
 
 # Wie umgehen mit Weideresten?

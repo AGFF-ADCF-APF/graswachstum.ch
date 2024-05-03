@@ -4,7 +4,11 @@ published: true
 hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: false
+feed:
+    limit: 10
 ---
+
+![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
 
 ### Whatsapp-Gruppe "Graswachstumsberichte"
 [Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)

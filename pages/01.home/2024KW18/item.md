@@ -1,5 +1,5 @@
 ---
-title: 'Woche 18 (29.04-05.05.)'
+title: 'Woche 18 (29.04-05.05.2024)'
 published: true
 date: '29-04-2024 00:00'
 header_image_alt_text: Graswachstumsberichte
@@ -12,8 +12,12 @@ show_sidebar: true
 media_order: '2024-05-03 Wie umgehen mit Weideresten + Frühlingstagung IG Weidemilch.pdf,2024-05-03 Wie umgehen mit Weideresten.jpg'
 ---
 
+# Wie umgehen mit Weideresten?
 ## Graswachstumsbericht
 
+Graswachstum / Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma führen kann.
 
 ===
 
+![2024-05-03%20Wie%20umgehen%20mit%20Weideresten](2024-05-03%20Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03%20Wie%20umgehen%20mit%20Weideresten")
+![Druckversion (PDF)](2024-05-03%20Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03%20Wie%20umgehen%20mit%20Weideresten")

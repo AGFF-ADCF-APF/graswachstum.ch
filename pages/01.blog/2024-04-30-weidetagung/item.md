@@ -1,6 +1,6 @@
 ---
 title: 'Frühlingstagung IG Weidemilch 30.04.2024'
-date: '29-04-2024 00:00'
+date: '03-05-2024 00:00'
 header_image_alt_text: Graswachstumsberichte
 header_image_credit: Flickr.com
 hide_from_post_list: false

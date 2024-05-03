@@ -18,8 +18,7 @@ Fragen, Vorschläge, Bedenken oder Einspruch?
 
 [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
-[Datenschutz und Rechtsausschluss
-](legal)
+
 
 ## Partner
 [Bauernzeitung](https://www.bauernzeitung.ch/graswachstum-serie) 

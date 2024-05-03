@@ -21,4 +21,4 @@ Graswachstum / Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fuÌ
 ===
 
 ![2024-05-03_Wie%20umgehen%20mit%20Weideresten](2024-05-03_Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03_Wie%20umgehen%20mit%20Weideresten")
-[Druckversion (PDF)](2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf)
+[Druckversion (PDF)](2024-05-03_Wie%20umgehen%20mit%20Weideresten%20+%20Fruehlingstagung%20IG%20Weidemilch.pdf)

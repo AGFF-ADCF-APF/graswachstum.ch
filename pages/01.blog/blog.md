@@ -1,5 +1,5 @@
 ---
-title: Blog
+title: Wachstumsbericht
 published: true
 visible: false
 hide_page_title: true

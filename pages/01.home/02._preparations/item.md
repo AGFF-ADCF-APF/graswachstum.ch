@@ -7,7 +7,7 @@ hide_git_sync_repo_link: false
 ---
 
 ### Whatsapp-Gruppe "Graswachstumsberichte"
-[Anleitung](#)
+[Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
 
 ### Podcast-Empfehlung

@@ -10,6 +10,7 @@ hide_git_sync_repo_link: true
 hide_page_title: false
 show_sidebar: true
 media_order: '2024-05-03 Wie umgehen mit Weideresten + Frühlingstagung IG Weidemilch.pdf,2024-05-03 Wie umgehen mit Weideresten.jpg'
+header_image: false
 ---
 
 # Wie umgehen mit Weideresten?

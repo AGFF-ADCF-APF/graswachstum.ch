@@ -8,6 +8,9 @@ hide_git_sync_repo_link: false
 
 ## Grasland bewirtschaften
 *   [Pflanzeneigenschaften entdecken auf eagff.ch](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/einleitung/einleitung-uebersicht)
+* [PODCASTS :/> AGRAR SCIENCE - WISSEN KOMPAKT](https://raumberg-gumpenstein.at/forschung/infothek/agrar-science-wissen-kompakt.html)
+
+## Futter konservieren
 *   [Zuckergehalt von Wiesen bestimmen](https://www.agrarheute.com/pflanze/gruenland/knoblauchpresse-ins-gras-553913)
 
 

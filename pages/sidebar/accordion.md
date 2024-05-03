@@ -16,7 +16,7 @@ hide_git_sync_repo_link: false
 Fragen, Vorschläge, Bedenken oder Einspruch?  
 [Kontaktiere uns!](/contact?classes=button)
 
-:fas fa-whatsapp:
+ :fas fa-whatsapp:
 
 [Datenschutz und Rechtsausschluss
 ](legal)

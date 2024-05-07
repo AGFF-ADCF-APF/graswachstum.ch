@@ -3,6 +3,7 @@ title: Graswachstum
 published: true
 twig_first: true
 process:
+    markdown: true
     twig: true
 hide_page_title: false
 show_sidebar: true
@@ -18,7 +19,7 @@ featherlight:
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="ältere Graswachstumskarten"]
-{% for image in page.find('/uploads/archive/').media %}
+{% for image in page.find('/uploads/archive/').media.shuffle %}
   {{ image.html() | raw }}
 {% endfor %}
 [/ui-accordion-item]

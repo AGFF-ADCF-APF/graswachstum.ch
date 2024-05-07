@@ -20,7 +20,9 @@ featherlight:
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="ältere Graswachstumskarten"]
 {% for key,image in page.find('/uploads/archive/').media %}
-	{{ print(image) }}
+	{{ key | raw }}
+    {{ image | raw }}
+
   {{ image.html() | raw }}
 {% endfor %}
 [/ui-accordion-item]

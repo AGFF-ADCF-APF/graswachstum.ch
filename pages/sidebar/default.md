@@ -4,8 +4,6 @@ routable: false
 visible: false
 cache_enable: false
 hide_page_title: false
-show_sidebar: true
-hide_git_sync_repo_link: false
 ---
 
 ## AGFF-Grasmessnetzwerk
@@ -15,7 +13,6 @@ hide_git_sync_repo_link: false
 
 Fragen, Vorschläge, Bedenken oder Einspruch?  
 [Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
-
 
 
 ## Partner

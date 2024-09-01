@@ -21,7 +21,8 @@ featherlight:
 [ui-accordion-item title="Graswachtumsdiagramm interaktiv (Google Chart)"]
 
 <iframe src="https://docs.google.com/spreadsheets/d/1n5WjLc8cLvXpLaB8jMfcO3pimrTKk6NC2Co5JbvRS5E/pubhtml?gid=1445871794&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; height:80%;" ></iframe>
-
+[In neuem Tab öffnen
+](https://docs.google.com/spreadsheets/d/1n5WjLc8cLvXpLaB8jMfcO3pimrTKk6NC2Co5JbvRS5E/pubhtml?gid=1445871794&amp;single=true&amp;widget=true&amp;headers=false)
 [/ui-accordion-item]
 [/ui-accordion]
 

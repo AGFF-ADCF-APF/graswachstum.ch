@@ -1,7 +1,6 @@
 ---
 title: 'Woche 18 (29.04-05.05.2024)'
 published: true
-date: '03-05-2024 00:00'
 ---
 
 # Wie umgehen mit Weideresten?

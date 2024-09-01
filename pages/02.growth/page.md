@@ -19,6 +19,7 @@ featherlight:
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Graswachtumsdiagramm interaktiv (Google Chart)"]
+    <div style="width:100%; height:30px; background-color:#cccccc;">Banner</div>
 <iframe src="https://docs.google.com/spreadsheets/d/1n5WjLc8cLvXpLaB8jMfcO3pimrTKk6NC2Co5JbvRS5E/pubhtml?gid=1445871794&amp;single=true&amp;widget=true&amp;headers=false" style="width:100%; height:80%;" ></iframe>
 [/ui-accordion-item]
 [/ui-accordion]

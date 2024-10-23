@@ -20,6 +20,10 @@ featherlight:
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Bedienung der interaktiven Graswachstumskurve"]
+Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres. 
+Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittelland.
+
+
 ### Tipps:
 - Klick auf Standort: ein-/ausblenden
 - Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet

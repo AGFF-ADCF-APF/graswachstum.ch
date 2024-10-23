@@ -19,6 +19,12 @@ featherlight:
 [Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html?target=_blank)
 
 [ui-accordion independent=true open=none]
+[ui-accordion-item title="Bedienung der interaktiven Graswachstumskurve"]
+### Tipps:
+- Klick auf Standort: ein-/ausblenden
+- Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet
+- Kamerasymbol: angezeigte Grafik lokal speichern
+[/ui-accordion-item]
 [ui-accordion-item title="Graswachtumsdiagramm statisch (wie bisher)"]
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]

@@ -15,9 +15,8 @@ featherlight:
 
 ![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
-<iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px" >
- 
- # Weiteres
+<iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" >
+
 [In neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html)
 
 [ui-accordion independent=true open=none]

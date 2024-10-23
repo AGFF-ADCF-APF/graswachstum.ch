@@ -26,7 +26,7 @@ featherlight:
 [/ui-accordion-item]
 
 [ui-accordion-item title="Graswachtumsdiagramm interaktiv (plotly.js)"]
-<iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:80%;" ></iframe>
+<iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px" ></iframe>
 [In neuem Tab öffnen
 ](/uploads/Graswachstumskurve_ohneLegende_2024.html)
 [/ui-accordion-item]

@@ -56,7 +56,7 @@ pages:
     extra: true
     auto_line_breaks: true
     auto_url_links: true
-    escape_markup: true
+    escape_markup: false
     special_chars:
       '>': gt
       '<': lt

@@ -53,10 +53,10 @@ pages:
     page: true
     twig: true
   markdown:
-    extra: false
-    auto_line_breaks: false
-    auto_url_links: false
-    escape_markup: false
+    extra: true
+    auto_line_breaks: true
+    auto_url_links: true
+    escape_markup: true
     special_chars:
       '>': gt
       '<': lt

@@ -1,0 +1,21 @@
+title: graswachstum.ch
+default_lang: de
+author:
+  name: 'Martin Zbinden'
+  email: martin.zbinden@inforama.ch
+taxonomies:
+  - category
+  - tag
+  - author
+  - filter
+metadata:
+  description: AGFF-Grasmessnetzwerk
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /home

@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1731063011
+count: 1
+index:
+  martinz:
+    storage_key: martinz
+    storage_timestamp: 1714425003
+    key: martinz
+    email: martin.zbinden@gmail.com

@@ -4,7 +4,7 @@ published: true
 show_sidebar: false
 hide_git_sync_repo_link: false
 hide_page_title: false
-media_order: 'Agridea_sanstexte.png,Agroscope_hoch.svg.png,HAFL.svg.png,logo-sg.png,Logo_Inforama_Pantone_co_300dpi.jpg'
+media_order: 'Agridea_sanstexte.png,Agroscope_hoch.svg.png,HAFL.svg.png,logo-sg.png,Logo_Inforama_Pantone_co_300dpi.jpg,Logo-Graswachstum-neu-2024-web.webp,Logo-Graswachstum-neu-2024-web.svg'
 ---
 
 ## Über uns
@@ -19,3 +19,4 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
 
 ## Medienpartner
 http://www.bauernzeitung.ch/graswachstum-serie  
+![Logo-Graswachstum-neu-2024-web](Logo-Graswachstum-neu-2024-web.svg?resize?200,200 "Logo-Graswachstum-neu-2024-web")

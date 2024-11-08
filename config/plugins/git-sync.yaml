@@ -1,10 +1,10 @@
 enabled: true
 folders:
   - pages
+  - themes
   - plugins
   - config
   - data
-  - themes
 SyncNotice: null
 sync:
   on_save: true
@@ -16,7 +16,7 @@ local_repository: null
 repository: 'https://github.com/AGFF-ADCF-APF/graswachstum.ch.git'
 no_user: '0'
 user: martinz
-password: gitsync-def50200852d48cfadba8bbb2bcb3e4f95be688090538cce78b24b7d04b9c68b8b5c5ac00ac8ec92a6d400786b74b2239d8c63889555a38db4dd4bca3a38f87afe3f9b829bd8d749b6e70bc284e8c3f9ce86724cc22009a1151b9b7b
+password: gitsync-def502002d934c34f0b05311958ee9bedab8b4a253d05f92e64ab2e298360d51aaf23a6474bde1ae7a7ddc85fefef7739360901f79edc6eaecc3de0dc0c8886f2e1062689f0cab73e1c34360246d765f93141a8c297275dd2de39783af1ce66ee14c91ae81858c46bbb4809d56f4c92f62b55e0992ea92c54e155301
 webhook: _git-sync-9866952ceb7a
 webhook_enabled: '1'
 webhook_secret: Nahc9eu3

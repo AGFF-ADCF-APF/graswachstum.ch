@@ -15,9 +15,9 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
 
  ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
 
-### Beschreibungen weiterer Standorte folgen 
-
-
+### Beschreibungen weiterer Standorte  
+_**folgen bald...**
+_
 
 ## Datensammlung und Aufbereitung
 1. Die beteiligten Stellen und Betriebe melden selbständig das Graswachstum mit einem vorbereiteten Google Formular. 

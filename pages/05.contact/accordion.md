@@ -18,11 +18,15 @@ form:
             validate:
                 required: true
         message:
-            label: Message
+            label: Nachricht
             placeholder: 'Schreib deine Nachricht an uns'
             type: textarea
             validate:
                 required: true
+        g-recaptcha-response:
+            label: Captcha
+            type: captcha
+            recaptcha_not_validated: 'Captcha not valid!'
     buttons:
         submit:
             type: submit
@@ -31,6 +35,7 @@ form:
             type: reset
             value: Zurücksetzen
     process:
+        captcha: true
         save:
             fileprefix: contact-
             dateformat: Ymd-His-u

@@ -16,19 +16,17 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
  ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
 
 ### Beschreibungen weiterer Standorte  
-_**folgen bald...**
-_
+_**folgen bald**_
 
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Datensammlung und Aufbereitung"]
 1. Die beteiligten Stellen und Betriebe melden selbständig das Graswachstum mit einem vorbereiteten Google Formular. 
-
-
+2. Die gesammelten Daten werden als Google Sheet im Internet publiziert.
+3. Ein [R-Skript ](https://github.com/AGFF-ADCF-APF/r-grassgrowth) ruft die Daten ab und erstellt die Grafiken. 
+4. R lädt die Ergebnisse per FTP automatisch auf diese Internetseite hoch.
 
 Interesse an einer Zusammenarbeit? [Schreib uns!](/contact?class=button)
-
-
 [/ui-accordion-item]
 
 

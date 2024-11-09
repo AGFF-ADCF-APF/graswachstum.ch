@@ -31,7 +31,6 @@ form:
             type: reset
             value: Zurücksetzen
     process:
-        captcha: true
         save:
             fileprefix: contact-
             dateformat: Ymd-His-u

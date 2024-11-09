@@ -46,5 +46,6 @@ form:
 hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: true
+cache_enable: false
 ---
 

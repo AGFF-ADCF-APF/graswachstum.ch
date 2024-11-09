@@ -1,6 +1,5 @@
 ---
 title: Kontakt
-date: '23:45 29-04-2024'
 form:
     name: contact
     fields:

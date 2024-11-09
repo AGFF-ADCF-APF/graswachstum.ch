@@ -20,12 +20,20 @@ _**folgen bald...**
 _
 
 
-## Datensammlung und Aufbereitung
+[ui-accordion independent=true open=none]
+[ui-accordion-item title="Datensammlung und Aufbereitung"]
 1. Die beteiligten Stellen und Betriebe melden selbständig das Graswachstum mit einem vorbereiteten Google Formular. 
 
 
 
 Interesse an einer Zusammenarbeit? [Schreib uns!](/contact?class=button)
+
+
+[/ui-accordion-item]
+
+
+[/ui-accordion]
+
 
 
 ## Medienpartner

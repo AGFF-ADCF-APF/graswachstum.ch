@@ -1,5 +1,5 @@
 enabled: true
-from: webmaster@graswachstum.ch
+from: noreply@graswachstum.ch
 to: webmaster@graswachstum.ch
 mailer:
   engine: sendmail

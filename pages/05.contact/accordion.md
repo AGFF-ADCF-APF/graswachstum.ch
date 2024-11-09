@@ -47,6 +47,6 @@ form:
         message: 'Thank you for getting in touch!'
 hide_page_title: false
 show_sidebar: true
-hide_git_sync_repo_link: false
+hide_git_sync_repo_link: true
 ---
 

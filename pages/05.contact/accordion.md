@@ -44,7 +44,7 @@ form:
         email:
             subject: '[Site Contact Form] {{ form.value.name|e }}'
             body: '{% include ''forms/data.html.twig'' %}'
-        message: 'Thank you for getting in touch!'
+        message: 'Danke für deine Nachricht! Du solltest eine Kopie in deine Mailbox erhalten.'
 hide_page_title: false
 show_sidebar: true
 hide_git_sync_repo_link: true

@@ -19,6 +19,7 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
 _**folgen bald...**
 _
 
+
 ## Datensammlung und Aufbereitung
 1. Die beteiligten Stellen und Betriebe melden selbständig das Graswachstum mit einem vorbereiteten Google Formular. 
 

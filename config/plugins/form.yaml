@@ -16,7 +16,7 @@ files:
   accept:
     - 'image/*'
 recaptcha:
-  version: '3'
+  version: 2-checkbox
   theme: light
   site_key: 6Lc6v3kqAAAAALNpEqV77ahfQXqHBY_Sww57ooaJ
   secret_key: 6Lc6v3kqAAAAAOoisTjE8M7CRUFudeLVtQ06rZew

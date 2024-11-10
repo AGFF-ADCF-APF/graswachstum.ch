@@ -39,4 +39,4 @@ git_sync_edit_theme_link_location: none
 custom_git_sync_repo_link_icon: null
 custom_git_sync_repo_link_text: null
 custom_git_sync_repo_presentation_link_text: null
-git_sync_repo_link: 'https://github.com/AGFF-ADCF-APF/graswachstum.ch.git/tree/main'
+git_sync_repo_link: 'https://github.com/AGFF-ADCF-APF/graswachstum.ch/tree/main'

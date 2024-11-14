@@ -13,9 +13,11 @@ featherlight:
     active: true
 ---
 
-
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>
 [Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html?target=_blank)
+
+![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
+
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Bedienung der interaktiven Graswachstumskurve"]
@@ -32,7 +34,6 @@ Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittel
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]
 
-![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 
 [ui-accordion independent=true open=none]

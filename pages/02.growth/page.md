@@ -43,3 +43,4 @@ Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittel
   {{ image.html() | raw }}
 {% endfor %}
 [/ui-accordion-item]
+[/ui-accordion]

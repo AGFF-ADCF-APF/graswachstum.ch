@@ -8,7 +8,7 @@ continue_link: true
 hide_git_sync_repo_link: true
 hide_page_title: false
 show_sidebar: true
-media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03 Fruehlingstagung IG Weidemilch.jpg'
+media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03 Fruehlingstagung IG Weidemilch.jpg,2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg'
 header_image: false
 feed:
     limit: 10

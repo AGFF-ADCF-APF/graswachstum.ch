@@ -10,6 +10,8 @@ content:
         by: date
         dir: desc
 date: '03-05-2024 00:00'
+hero:
+    image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg'
 ---
 
 # Wie umgehen mit Weideresten?

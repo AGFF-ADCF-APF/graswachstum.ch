@@ -26,6 +26,6 @@ Futterbau / Durch die Niederschläge wurde die N-Mineralisierung stark angekurbe
 
 ===
 
-![](2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti.jpeg)
+![2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti](2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti.jpg "2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti")
 
 [Druckversion (PDF)](2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti.pdf)

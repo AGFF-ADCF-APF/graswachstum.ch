@@ -13,7 +13,7 @@ metadata:
 summary:
   enabled: true
   format: short
-  size: 300
+  size: 280
   delimiter: '==='
 redirects: null
 routes: null

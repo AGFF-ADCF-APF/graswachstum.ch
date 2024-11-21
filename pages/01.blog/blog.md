@@ -29,5 +29,7 @@ hero_scroll: false
 continue_link_as_button: true
 media_order: csm_img_7352_f4e25fef1d.webp
 root_of_blog: true
+hero:
+    image: csm_img_7352_f4e25fef1d.webp
 ---
 

@@ -31,5 +31,6 @@ media_order: csm_img_7352_f4e25fef1d.webp
 root_of_blog: true
 hero:
     image: csm_img_7352_f4e25fef1d.webp
+    content: "![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)\n[button label=\"zur Graswachstumskurve (2024)\" url=\"/growth\" /] "
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Reminders
-alert_style: alert-secondary
+alert_style: alert-light
 published: true
 visible: false
 hide_page_title: false

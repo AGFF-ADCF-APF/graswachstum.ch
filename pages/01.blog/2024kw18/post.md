@@ -1,6 +1,14 @@
 ---
 title: 'Woche 18 (29.04.-05.05.2024)'
 published: true
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
 ---
 
 # Wie umgehen mit Weideresten?

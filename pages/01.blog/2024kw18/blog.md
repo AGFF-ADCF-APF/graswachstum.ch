@@ -1,5 +1,5 @@
 ---
-title: 'Woche 18 (29.04-05.05.2024)'
+title: 'Woche 18 (29.04.-05.05.2024)'
 published: true
 ---
 

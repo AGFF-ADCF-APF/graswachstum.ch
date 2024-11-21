@@ -20,9 +20,9 @@ hero:
     image_alignment: object-top
 ---
 
-# Weideende heisst nicht Grasende
+# Die Weidesaison mit Reserven verlängern
 
-Futterbau / Dieses Futterbaujahr war geprägt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.
+Futterbau / Durch die Niederschläge wurde die N-Mineralisierung stark angekurbelt.
 
 ===
 

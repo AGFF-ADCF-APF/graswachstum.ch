@@ -8,6 +8,14 @@ header_image_credit: 'Rosenfeld Media, Flickr.com'
 header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
 header_image_alt_text: 'A sample UX questionnaire'
 media_order: '2024-11-15_Weideende heisst nicht Grasende.pdf'
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
 ---
 
 # Weideende heisst nicht Grasende

@@ -8,7 +8,7 @@ process:
 hide_page_title: false
 show_sidebar: false
 hide_git_sync_repo_link: false
-media_order: 'Graswachstumskurve_2024.svg,Graswachstum_2024KW18_2.svg'
+media_order: 'IMG_20190509_061559.jpg,IMG_20190509_061615.jpg'
 featherlight:
     active: true
 menu_before_icon: tabler/chart-area-line.svg

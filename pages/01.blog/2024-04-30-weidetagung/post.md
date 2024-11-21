@@ -25,8 +25,6 @@ content:
 taxonomy:
     tag:
         - weide
-        - ansaatwiesen
-        - futterkonservierung
 ---
 
 # Drei gute Ratschläge

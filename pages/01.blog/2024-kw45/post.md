@@ -7,7 +7,7 @@ hide_git_sync_repo_link: true
 header_image_credit: 'Rosenfeld Media, Flickr.com'
 header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
 header_image_alt_text: 'A sample UX questionnaire'
-media_order: Graswachstumkarte_2024KW45.svg
+media_order: 'Graswachstumkarte_2024KW45.svg,2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.jpg,2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.pdf'
 root_of_blog: true
 content:
     items:
@@ -27,5 +27,5 @@ Futterbau / Dieses Futterbaujahr war geprägt von viel Wachstum, aber schwierige
 
 ===
 
-![2024-05-03_Wie%20umgehen%20mit%20Weideresten](2024-05-03_Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03_Wie%20umgehen%20mit%20Weideresten")
-[Druckversion (PDF)](2024-05-03_Wie%20umgehen%20mit%20Weideresten%20+%20Fruehlingstagung%20IG%20Weidemilch.pdf)
+!![2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden](2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden.jpg "2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden")
+[Druckversion (PDF)](2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden.pdf)

@@ -9,5 +9,5 @@ hide_git_sync_repo_link: false
 ---
 
 ![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
-[button label="zur Graswachstumskurve (2024)" url="/growth" /] -->
+[button label="zur Graswachstumskurve (2024)" url="/growth" /] 
 

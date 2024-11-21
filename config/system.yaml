@@ -1,6 +1,5 @@
 absolute_urls: false
 timezone: null
-default_locale: null
 param_sep: ':'
 wrapped_site: false
 reverse_proxy_setup: false
@@ -16,7 +15,9 @@ http_x_forwarded:
   port: true
   ip: true
 languages:
-  supported: null
+  supported:
+    - de
+    - fr
   default_lang: null
   include_default_lang: true
   include_default_lang_file_extension: true
@@ -25,7 +26,6 @@ languages:
   session_store_active: false
   http_accept_language: false
   override_locale: false
-  content_fallback: {  }
   pages_fallback_only: false
   debug: false
 home:

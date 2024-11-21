@@ -28,7 +28,6 @@ taxonomy:
 ---
 
 # Drei gute Ratschläge
-## Rückblick Frühlingstagung IG Weidemilch
 
 Weidemilch / Michael und Ruedi Sutter zeigen, wie sie ihre Flächen optimal nutzen und Zeit sparen.
 

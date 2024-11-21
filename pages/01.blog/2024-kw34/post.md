@@ -6,7 +6,7 @@ hide_git_sync_repo_link: true
 header_image_credit: 'Rosenfeld Media, Flickr.com'
 header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
 header_image_alt_text: 'A sample UX questionnaire'
-media_order: Graswachstumkarte_2024KW45.svg
+media_order: '2024-08-23 Weidesaison mit Reserven verlängern - N. Marti.jpg,2024-08-23 Weidesaison mit Reserven verlängern - N. Marti.pdf'
 root_of_blog: true
 content:
     items:

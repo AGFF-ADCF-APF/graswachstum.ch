@@ -31,11 +31,11 @@ media_order: csm_img_7352_f4e25fef1d.webp
 root_of_blog: true
 hero:
     image: csm_img_7352_f4e25fef1d.webp
-    content: "[ui-accordion independent=true open=all]\n[ui-accordion-item title=\"Section 1\"]\n![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)\n[/ui-accordion-item]\n[/ui-accordion]\n\n"
+    content: "[ui-accordion independent=true open=none]\n[ui-accordion-item title=\"Aktuelles Graswachstum\"]\n![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)\n[/ui-accordion-item]\n[/ui-accordion]"
     buttons:
         -
-            text: /growth
-            link: 'Graswachstumskurve (2024)'
+            text: 'Graswachstumskurve (2024)'
+            link: /growth
             classes: 'bg-primary text-white'
 ---
 

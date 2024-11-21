@@ -4,6 +4,17 @@ published: true
 hide_page_title: false
 show_sidebar: false
 hide_git_sync_repo_link: false
+hero:
+    image: 20230921_142411.JPG
+    image_alignment: object-center
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
 ---
 
 ## Grasland bewirtschaften

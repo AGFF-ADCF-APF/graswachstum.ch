@@ -1,5 +1,5 @@
 ---
-title: 'Über das Messnetzwerk der AGFF'
+title: Über
 date: '20:01 10-11-2024'
 hide_page_title: false
 show_sidebar: true

@@ -21,6 +21,8 @@ content:
         by: date
         dir: desc
 menu: Kurven
+hero:
+    image: IMG_20190509_061559.jpg
 ---
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>

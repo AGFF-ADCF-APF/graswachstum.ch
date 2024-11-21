@@ -17,8 +17,8 @@ content:
         by: date
         dir: desc
 hero:
-    image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.jpg'
-    image_alignment: object-top
+    image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg'
+    image_alignment: object-center
 ---
 
 # Weideende heisst nicht Grasende

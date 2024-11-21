@@ -17,7 +17,7 @@ content:
         dir: desc
 hero:
     image: '2024-08-23 Weidesaison mit Reserven verlängern - N. Marti_Header.jpg'
-    image_alignment: object-top
+    image_alignment: object-center
 ---
 
 # Die Weidesaison mit Reserven verlängern

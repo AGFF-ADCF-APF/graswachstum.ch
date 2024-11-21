@@ -7,11 +7,9 @@ hide_page_title: false
 ---
 
 
-## AGFF-Grasmessnetzwerk
 
-![](/images/Logo-Graswachstum-neu-2024-web.webp)
+![](/images/Logo-Graswachstum-neu-2024-web.webp?resize=200)
 
-[safe-email autolink="true"]webmaster@graswachstum.ch[/safe-email]  
 
 
 Fragen, Vorschläge, Bedenken oder Einspruch?  

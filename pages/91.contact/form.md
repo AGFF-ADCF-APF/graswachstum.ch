@@ -57,3 +57,4 @@ form:
 ---
 
 # Kontaktformular 
+[safe-email autolink="true"]webmaster@graswachstum.ch[/safe-email]

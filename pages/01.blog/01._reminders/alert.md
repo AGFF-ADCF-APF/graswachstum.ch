@@ -9,5 +9,6 @@ hide_git_sync_repo_link: false
 ---
 
 [Zur Graswachstumskurve (2024)](/growth?class=btn)
+
 ![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
 

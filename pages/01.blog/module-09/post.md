@@ -1,5 +1,5 @@
 ---
-title: 'Woche 46 (11.11.-17.11.2024)'
+title: 'Woche 45 (11.11.-17.11.2024)'
 published: true
 date: '15-11-2024 00:00'
 hide_from_post_list: false
@@ -7,7 +7,7 @@ hide_git_sync_repo_link: true
 header_image_credit: 'Rosenfeld Media, Flickr.com'
 header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
 header_image_alt_text: 'A sample UX questionnaire'
-media_order: '2024-11-15_Weideende heisst nicht Grasende.pdf'
+media_order: Graswachstumkarte_2024KW45.svg
 root_of_blog: true
 content:
     items:

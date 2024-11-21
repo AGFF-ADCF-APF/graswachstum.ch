@@ -1,5 +1,10 @@
-last_checked: 1731594828
+last_checked: 1732222448
 data:
+  -
+    title: 'Instagram Feed Plugin is deprecated'
+    url: 'https://getgrav.org/blog/instagram-feed-deprecated'
+    date: 1732107600
+    nicetime: '1 days ago'
   -
     title: 'macOS 15.0 Sequoia Apache Setup: Upgrading Homebrew'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-upgrade-homebrew'
@@ -44,9 +49,4 @@ data:
     title: 'Grav 1.7 Released!'
     url: 'https://getgrav.org/blog/grav-1.7-released'
     date: 1611050100
-    nicetime: '4 years ago'
-  -
-    title: 'Grav 1.7 Stable Release - One week away!'
-    url: 'https://getgrav.org/blog/grav-17-stable-imminent'
-    date: 1610457780
     nicetime: '4 years ago'

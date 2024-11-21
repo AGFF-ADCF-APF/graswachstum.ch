@@ -16,7 +16,7 @@ content:
         by: date
         dir: desc
 hero:
-    image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.jpg'
+    image: '2024-08-23 Weidesaison mit Reserven verlängern - N. Marti.jpg'
     image_alignment: object-top
 ---
 
@@ -26,5 +26,5 @@ Futterbau / Dieses Futterbaujahr war geprägt von viel Wachstum, aber schwierige
 
 ===
 
-![2024-05-03_Wie%20umgehen%20mit%20Weideresten](2024-05-03_Wie%20umgehen%20mit%20Weideresten.jpg "2024-05-03_Wie%20umgehen%20mit%20Weideresten")
-[Druckversion (PDF)](2024-05-03_Wie%20umgehen%20mit%20Weideresten%20+%20Fruehlingstagung%20IG%20Weidemilch.pdf)
+![](2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti.jpeg)
+[Druckversion (PDF)](2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti.pdf)

@@ -11,6 +11,7 @@ hide_git_sync_repo_link: false
 media_order: 'Graswachstumskurve_2024.svg,Graswachstum_2024KW18_2.svg'
 featherlight:
     active: true
+menu_before_icon: tabler/chart-area-line.svg
 ---
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>

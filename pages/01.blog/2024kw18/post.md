@@ -12,7 +12,6 @@ content:
 ---
 
 # Wie umgehen mit Weideresten?
-## Graswachstumsbericht
 
 Graswachstum / Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma führen kann.
 

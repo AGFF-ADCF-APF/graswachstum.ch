@@ -7,6 +7,15 @@ hide_page_title: false
 media_order: 'Agridea_sanstexte.png,Agroscope_hoch.svg.png,HAFL.svg.png,logo-sg.png,Logo_Inforama_Pantone_co_300dpi.jpg,Logo-Graswachstum-neu-2024-web.webp,Logo-Graswachstum-neu-2024-web.svg'
 hero:
     image: IMG_20190322_102544.jpg
+    image_alignment: object-top
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
 ---
 
 ## Über die Messtandorte

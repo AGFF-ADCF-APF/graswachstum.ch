@@ -22,7 +22,7 @@ content:
         dir: desc
 menu: Kurven
 hero:
-    image: IMG_20190509_061615.jpg
+    image: '2018-05-06 19.05.53.jpg'
     image_alignment: object-center
 ---
 

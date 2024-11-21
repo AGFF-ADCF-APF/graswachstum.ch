@@ -12,6 +12,15 @@ media_order: 'Graswachstumskurve_2024.svg,Graswachstum_2024KW18_2.svg'
 featherlight:
     active: true
 menu_before_icon: tabler/chart-area-line.svg
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
+menu: ' '
 ---
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>

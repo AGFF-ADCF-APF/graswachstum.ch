@@ -9,12 +9,13 @@ modular_content:
         by: folder
         dir: asc
 content:
-    items: '@self.children'
+    items:
+        - '@self.children'
     limit: 7
     order:
         by: date
         dir: desc
-    pagination: '1'
+    pagination: true
 hide_post_summary: true
 post_icon: calendar-o
 hide_post_date: true
@@ -22,10 +23,11 @@ hide_post_taxonomy: false
 feed:
     description: Graswachstumsberichte
     limit: 10
-child_type: item
 show_sidebar: true
 hide_git_sync_repo_link: false
 hero_scroll: false
 continue_link_as_button: true
+media_order: csm_img_7352_f4e25fef1d.webp
+root_of_blog: true
 ---
 

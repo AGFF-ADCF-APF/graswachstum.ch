@@ -20,7 +20,7 @@ content:
     order:
         by: date
         dir: desc
-menu: tabler/chart-area-line.svg
+menu: Kurven
 ---
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>

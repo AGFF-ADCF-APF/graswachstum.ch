@@ -36,7 +36,7 @@ menu:
   mobile_nav: true
   icon_classes: 'hidden md:inline-block h-4 w-4 opacity-75 mr-1'
   login:
-    enabled: true
+    enabled: false
     icon: tabler/user.svg
     logged_in_display: emaili
     logout_icon: tabler/logout.svg

@@ -12,7 +12,7 @@ hide_page_title: false
 
 
 
-Fragen, Vorschläge, Bedenken oder Einspruch?  
+Fragen, Vorschläge, Bedenken?  
 [Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
 ### Whatsapp-Gruppe "Graswachstumsberichte" 

@@ -7,4 +7,4 @@ show_sidebar: true
 hide_git_sync_repo_link: false
 ---
 
-[Datenschutz und Rechtsausschluss](legal)
+[Datenschutz und Rechtsausschluss](/legal)

@@ -22,6 +22,11 @@ content:
     order:
         by: date
         dir: desc
+taxonomy:
+    tag:
+        - weide
+        - ansaatwiesen
+        - futterkonservierung
 ---
 
 # Drei gute Ratschläge

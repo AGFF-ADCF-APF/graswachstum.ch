@@ -9,6 +9,7 @@ content:
     order:
         by: date
         dir: desc
+date: '03-05-2024 00:00'
 ---
 
 # Wie umgehen mit Weideresten?

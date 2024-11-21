@@ -5,7 +5,7 @@ hide_page_title: false
 show_sidebar: false
 hide_git_sync_repo_link: false
 hero:
-    image: 20230921_142411.JPG
+    image: IMG_20190509_061615.jpg
     image_alignment: object-center
 root_of_blog: true
 content:

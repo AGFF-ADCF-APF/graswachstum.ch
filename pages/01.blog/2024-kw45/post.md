@@ -27,5 +27,5 @@ Futterbau / Dieses Futterbaujahr war geprägt von viel Wachstum, aber schwierige
 
 ===
 
-!![2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden](2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden.jpg "2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden")
+![2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden](2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden.jpg "2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden")
 [Druckversion (PDF)](2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden.pdf)

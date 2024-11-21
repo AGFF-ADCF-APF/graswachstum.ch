@@ -1,7 +1,7 @@
 enabled: true
 external_in_new_tab: true
 append_site_title: true
-logo_height: h-16
+logo_height: h-24
 custom_logo:
   user/assets/typhoon/Logo-Graswachstum-neu-2024-web.webp:
     name: Logo-Graswachstum-neu-2024-web.webp
@@ -48,7 +48,7 @@ header_bar:
   custom_style: 'linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%)'
   text: auto
   fixed: false
-  height: h-24
+  height: h-32
 hero:
   display: true
   overlay: dark

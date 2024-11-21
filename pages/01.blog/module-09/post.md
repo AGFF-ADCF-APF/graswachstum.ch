@@ -1,7 +1,7 @@
 ---
 title: 'Woche 46 (11.11.-17.11.2024)'
-published: false
-date: '04-07-2018 00:00'
+published: true
+date: '15-11-2024 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Rosenfeld Media, Flickr.com'

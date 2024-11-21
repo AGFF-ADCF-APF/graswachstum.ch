@@ -4,7 +4,6 @@ published: true
 ---
 
 
-![Aktuelle Graswachstumskarte](/uploads/Graswachstumskarte_aktuell.svg)
 
 ### Whatsapp-Gruppe "Graswachstumsberichte"
 [[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)

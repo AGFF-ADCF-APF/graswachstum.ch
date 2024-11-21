@@ -6,7 +6,10 @@ cache_enable: false
 hide_page_title: false
 ---
 
+
 ## AGFF-Grasmessnetzwerk
+
+![](/images/Logo-Graswachstum-neu-2024-web.webp)
 
 [safe-email autolink="true"]webmaster@graswachstum.ch[/safe-email]  
 
@@ -14,6 +17,10 @@ hide_page_title: false
 Fragen, Vorschläge, Bedenken oder Einspruch?  
 [Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
+### Whatsapp-Gruppe "Graswachstumsberichte" 
+[[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
+ 
+ 
 
 ## Partner
 [Bauernzeitung](https://www.bauernzeitung.ch/graswachstum-serie) 

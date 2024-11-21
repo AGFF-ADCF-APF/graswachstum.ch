@@ -1,0 +1,15 @@
+{% set status_mapping = {
+  'info':'bg-blue-500 text-white',
+  'error': 'bg-red-500 text-white',
+  'warning': 'bg-yellow-500 text-white'}
+%}
+
+{% if grav.messages.all %}
+    <div id="messages">
+        {% for message in grav.messages.fetch %}
+            {% set scope = message.scope|e %}
+            {% set color = status_mapping[scope] %}
+            <div class="notice py-2 text-center font-medium {{ color }}"><p>{{ message.message|raw }}</p></div>
+        {% endfor %}
+    </div>
+{% endif %}

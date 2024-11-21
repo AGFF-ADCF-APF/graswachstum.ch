@@ -1,0 +1,87 @@
+{# Default color values #}
+{% set text_class = 'text-gray-800 dark:text-gray-300' %}
+{% set menu_class = 'text-gray-700 dark:text-gray-400' %}
+{% set active_class = 'text-gray-900 dark:text-white' %}
+{% set text_scrolled = text_class %}
+{% set hover_class = 'hover:text-primary dark:hover:text-primary' %}
+
+{# Handle "auto text color" as best we can#}
+{% if header_text == 'auto' %}
+  {% if header_background in  ['dark', 'transparent', 'custom']  %}
+    {% set header_text = 'light' %}
+  {% elseif header_background == 'light' %}
+    {% set header_text = 'dark' %}
+  {% endif %}
+{% endif %}
+
+{# Set header text colors based on options#}
+{% switch header_text %}
+  {% case 'dark' %}
+    {% set header_text_class = 'text-gray-700' %}
+    {% set active_class = 'text-gray-900' %}
+  {% case 'light' %}
+    {% set header_text_class = 'text-gray-200' %}
+    {% set active_class = 'text-white' %}
+  {% default %}
+    {% set header_text_class = text_class %}
+{% endswitch %}
+
+{# set background colors based on option and override as needed#}
+{% switch header_background %}
+  {% case 'custom' %}
+    {% set header_style = 'background: ' ~ header_custom_style ~ ';' %}
+    {% set text_scrolled = header_text_class %}
+  {% case 'dark' %}
+    {% set header_bg_class = 'bg-black/50' %}
+    {% set header_bg_scrolled = 'bg-gray-800' %}
+    {% set text_scrolled = 'text-gray-200' %}
+  {% case 'light' %}
+    {% set header_bg_class = 'bg-white/50' %}
+    {% set header_bg_scrolled = 'bg-white' %}
+    {% set text_scrolled = 'text-gray-800' %}
+  {% case 'transparent' %}
+    {% set header_bg_class = '' %}
+    {% set header_bg_scrolled = 'bg-white dark:bg-gray-900' %}
+    {% set active_class = 'text-white' %}
+  {% default %} {# auto #}
+    {% set header_bg_class = 'bg-white dark:bg-gray-900' %}
+    {% set header_bg_scrolled = header_bg_class %}
+    {% set active_class = 'text-black dark:text-white' %}
+{% endswitch %}
+
+<header
+  {% if header_fixed %}
+  :class="{ 'scrolled {{ header_bg_scrolled }} {{ text_scrolled }} shadow-xl': !atTopOfPage, '{{ header_bg_class }} {{ header_text_class }}': atTopOfPage, 'absolute': !fixedHeader, 'fixed': fixedHeader }"
+  x-init="atTopOfPage = scrollPosition(), fixedHeader = isFixedHeader()"
+  @scroll.window="atTopOfPage = scrollPosition(), fixedHeader = isFixedHeader()"
+  {% endif %}
+  class="{{ header_bg_class }} {{ header_text_class }} absolute top-0 flex items-stretch w-screen z-10 transition duration-75"
+  style="{{ header_style }}"
+>
+  <div class="flex items-center w-full {{ header_height }}">
+    <div class="flex-auto {{ theme_var('wrapper_spacing')|e }}">
+      <nav class="header-nav relative flex items-center justify-between lg:justify-start animated ">
+        <div class="flex items-center">
+          <div class="flex items-center justify-between w-full md:w-auto">
+            <a href="{{ home_url }}" aria-label="Logo" class="">
+              {% include 'partials/logo.html.twig' %}
+            </a>
+          </div>
+        </div>
+        {% if theme_config.menu.primary_location == 'header' %}
+          <div class="hidden h-full md:flex md:flex-grow justify-end">
+            {% include 'partials/navigation.html.twig' %}
+          </div>
+        {% endif %}
+      </nav>
+    </div>
+    {% if theme_config.menu.mobile_nav == true %}
+      <div class="flex items-center md:hidden justify-end">
+        <button @click="show_mobile_nav = true" aria-label="Mobile menu" type="button"
+                class="inline-flex items-center justify-center p-2 mr-2 rounded-md focus:outline-none transition duration-150 ease-in-out">
+          {{ svg_icon('tabler/menu.svg', 'current-color h-8 w-8')|raw }}
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</header>

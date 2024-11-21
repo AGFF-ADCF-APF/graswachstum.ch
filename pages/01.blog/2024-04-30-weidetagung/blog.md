@@ -12,6 +12,16 @@ media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weide
 header_image: false
 feed:
     limit: 10
+hero:
+    image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg'
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
 ---
 
 # Drei gute Ratschläge

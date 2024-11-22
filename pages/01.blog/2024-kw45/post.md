@@ -25,6 +25,7 @@ taxonomy:
     author:
         - 'Zbinden Martin'
         - 'Marti Nicolas'
+author: 'Nicolas Marti, Martin Zbinden'
 ---
 
 # Weideende heisst nicht Grasende

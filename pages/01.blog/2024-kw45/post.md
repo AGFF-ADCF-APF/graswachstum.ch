@@ -19,6 +19,12 @@ content:
 hero:
     image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg'
     image_alignment: object-center
+taxonomy:
+    tag:
+        - weide
+    author:
+        - 'Zbinden Martin'
+        - 'Marti Nicolas'
 ---
 
 # Weideende heisst nicht Grasende

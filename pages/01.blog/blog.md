@@ -37,5 +37,7 @@ hero:
             text: 'Graswachstumskurve (2024)'
             link: /growth
             classes: 'bg-primary text-white'
+show_breadcrumbs: true
+show_pagination: true
 ---
 

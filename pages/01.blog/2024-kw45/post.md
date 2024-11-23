@@ -4,24 +4,15 @@ published: true
 date: '15-11-2024 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
-header_image_credit: 'Rosenfeld Media, Flickr.com'
-header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
-header_image_alt_text: 'A sample UX questionnaire'
+header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 media_order: 'Graswachstumkarte_2024KW45.svg,2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.jpg,2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.pdf'
-root_of_blog: true
-content:
-    items:
-        - '@self.children'
-    limit: 10
-    order:
-        by: date
-        dir: desc
 hero:
     image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg'
     image_alignment: object-center
 taxonomy:
     tag:
         - weide
+        - wachstumsbericht
     author:
         - 'Zbinden Martin'
         - 'Marti Nicolas'

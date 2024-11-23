@@ -2,29 +2,21 @@
 title: 'Frühlingstagung IG Weidemilch 30.04.2024'
 date: '03-05-2024 00:00'
 header_image_alt_text: Graswachstumsberichte
-header_image_credit: Flickr.com
+header_image_credit: Martin Zbinden
 hide_from_post_list: false
 continue_link: true
 hide_git_sync_repo_link: true
 hide_page_title: false
 show_sidebar: true
-media_order: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf,2024-05-03 Fruehlingstagung IG Weidemilch.jpg,2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg'
-header_image: false
+#header_image: false
 feed:
     limit: 10
 hero:
     image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg'
-root_of_blog: true
-content:
-    items:
-        - '@self.children'
-    limit: 10
-    order:
-        by: date
-        dir: desc
 taxonomy:
     tag:
         - weide
+        - betriebsportrait
 ---
 
 # Drei gute Ratschläge

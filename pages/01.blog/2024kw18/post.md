@@ -1,20 +1,13 @@
 ---
 title: 'Woche 18 (29.04.-05.05.2024)'
 published: true
-root_of_blog: true
-content:
-    items:
-        - '@self.children'
-    limit: 10
-    order:
-        by: date
-        dir: desc
 date: '03-05-2024 00:00'
 hero:
     image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg'
 taxonomy:
     tag:
         - weide
+        - wachstumsbericht
 ---
 
 # Wie umgehen mit Weideresten?

@@ -1,23 +1,18 @@
 ---
 title: 'Woche 34 (19.08.-25.08.2024)'
-date: '15-11-2024 00:00'
+date: '2024-08-23 00:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
-header_image_credit: 'Rosenfeld Media, Flickr.com'
-header_image_creditlink: 'https://www.flickr.com/photos/rosenfeldmedia/9203760174/'
+header_image_credit: 'Martin Zbinden, riedackerhof.ch'
+header_image_creditlink: 'https://riedackerhof.ch'
 header_image_alt_text: 'A sample UX questionnaire'
-media_order: '2024-08-23 Weidesaison mit Reserven verlängern - N. Marti.jpg,2024-08-23 Weidesaison mit Reserven verlängern - N. Marti.pdf'
-root_of_blog: true
-content:
-    items:
-        - '@self.children'
-    limit: 10
-    order:
-        by: date
-        dir: desc
 hero:
     image: '2024-08-23 Weidesaison mit Reserven verlängern - N. Marti_Header.jpg'
     image_alignment: object-center
+taxonomy: 
+    tag: 
+        - weide
+        - wachstumsbericht
 ---
 
 # Die Weidesaison mit Reserven verlängern

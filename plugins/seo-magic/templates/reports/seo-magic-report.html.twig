@@ -1,0 +1,62 @@
+{% if seodata is empty %}
+  <div class="alert warning"> No SEO Data found.  Please click the (<i class="fa fa-fw fa-magic"></i>) icon in the quicktray to <strong>generate the SEO-Magic data</strong></div>
+{% else %}
+<table class="regular-table seomagic-report">
+  <thead>
+  <tr>
+    <th style="width:10%;">Score</th>
+    <th class="">Page Title</th>
+    <th class="">Summary</th>
+    <th style="width:40%;">Links</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for data in seodata %}
+  <tr>
+    <td class="total-score">
+      <div class="percent seomagic-score__badge score-{{ just_grade(data.score.score)|lower }}">
+        <span class="grade">{{ data.score.score }}%</span>
+      </div>
+    </td>
+    <td class="page-info truncate">
+      <a href="{{ admin_route('/pages' ~ data.rawroute) }}">
+        <strong class="">{{ data.title }}</strong>
+        <span class="">{{ parseurl(data.url, 5) }}</span>
+      </a>
+    </td>
+    <td class="scores nobreak">
+      {% set summary_scores = {
+          'url' : 'PAGE_URL',
+          'head.items.title' : 'PAGE_TITLE',
+          'head.items.meta' : 'METADATA',
+          'head.items.canonical': 'CANONICAL',
+          'content.items.headers': 'CONTENT_HEADERS',
+          'content.items.links': 'CONTENT_LINKS',
+          'content.items.images': 'CONTENT_ITEMS',
+        } %}
+        {% for url_summary, title_summary in summary_scores %}
+          {% set summary = data.score.get('items.' ~ url_summary) %}
+          {{ grade(summary.score)|raw }}
+        {% endfor %}
+
+    </td>
+    <td class="broken-links">
+      {% set broken_link_count = data.broken_links|count %}
+      Found <strong>{{ data.total_links }}</strong> Links.
+      {% if broken_link_count > 0 %}
+        <strong>{{ broken_link_count }}</strong> of these are broken.
+        <ul>
+        {% for route,link in data.broken_links %}
+          <li>
+            <div><span class="code code__{{ link.status|first }}">{{ link.status }}</span> <code>{{ route }}</code></div>
+            {% if link.message %}<div class="message">{{ link.message}}</div>{% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endif %}

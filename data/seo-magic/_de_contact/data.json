@@ -1,0 +1,335 @@
+{
+    "grav": {
+        "page_route": "\/contact",
+        "page_rawroute": "\/contact",
+        "page_title": "Kontakt"
+    },
+    "updated": 1732392925,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Kontakt",
+        "grav-page-route": "\/contact",
+        "grav-page-rawroute": "\/contact",
+        "cache-control": "max-age=604800",
+        "expires": "Sat, 30 Nov 2024 20:15:25 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html;charset=UTF-8",
+        "date": "Sat, 23 Nov 2024 20:15:25 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1732392925.43043804168701171875,
+        "total_time": 0.0845569999999999932782657197094522416591644287109375,
+        "namelookup_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
+        "connect_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
+        "pretransfer_time": 4.89999999999999984179321899091519298963248729705810546875e-5,
+        "starttransfer_time": 0.084401000000000003797850922637735493481159210205078125,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/de\/contact",
+        "content_type": "text\/html;charset=UTF-8",
+        "header_size": 518,
+        "request_size": 119,
+        "redirect_count": 0,
+        "size_download": 5665,
+        "speed_download": 67440,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 25440
+    },
+    "content": {
+        "body": "<h1>Kontaktformular<\/h1>\n<p>webmaster@graswachstum.ch<\/p>\n    \n\n\n\n                \n\n\n\n\n\n\n\n\n\n\n\n        \n                                      \n                          \n            Name              *\n      \n        \n                        \n                                    \n                                      \n                        \n  \n                                                      \n                          \n            Email              *\n      \n        \n                        \n                                    \n                                  \n                        \n  \n                                                      \n                          \n            Message              *\n      \n        \n                  \n                \n                            \n                \n  \n                                                      \n                          \n            \n      \n        \n                    \n    \n    \n                  \n  \n                            \n\n        \n            \n    \n    \n      \n            \n  \n\n                    \n      \n      \n  Submit\n\n                            \n      \n      \n  Reset",
+        "headers": {
+            "h1": [
+                "Kontakt",
+                "Kontaktformular"
+            ],
+            "h2": [],
+            "h3": [],
+            "h4": [],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/91.contact\/IMG_20170925_123125_HDR.jpg",
+                "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 0,
+                "article": 1,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/de": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/de\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/de\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/de\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/de\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "mailto:webmaster@graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "webmaster@graswachstum.ch",
+                "external": true
+            },
+            "\/de\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "M. Zbinden",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Kontakt | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "AGFF-Grasmessnetzwerk",
+            "title": "Kontakt | graswachstum.ch",
+            "image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/de\/contact",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Kontakt | graswachstum.ch",
+            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Kontakt | graswachstum.ch",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "twitter:image:alt": "Kontakt | graswachstum.ch",
+            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/de\/contact",
+        "links": {
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "https:\/\/www.google.com\/recaptcha\/api.js?onload=captchaOnloadCallback_contact&render=explicit&hl=de&theme=light ": {
+                "async": "",
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 39 (easy handle 0x5600687f0800)\n> GET \/de\/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:25 GMT\r\n* Added cookie grav-site-23a95d8=\"aaa2b9079ca8772727a475569be4e7eb\" for domain graswachstum.ch, path \/, expire 1732394725\n< set-cookie: grav-site-23a95d8=aaa2b9079ca8772727a475569be4e7eb; expires=Sat, 23 Nov 2024 20:45:25 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:25 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

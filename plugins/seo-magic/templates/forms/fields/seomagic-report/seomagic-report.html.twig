@@ -1,0 +1,605 @@
+{% if attribute(grav.config.plugins, 'seo-magic').enable_seo_report %}
+
+{% set score = seomagic_score.getScores() %}
+{% set response = seomagic_rawdata.response_headers %}
+{% set info = seomagic_rawdata.info %}
+{% set timings = seomagic_rawdata.timings %}
+{% set meta = seomagic_rawdata.head.meta %}
+{% set page_title = seomagic_rawdata.head.title %}
+{% set headers = seomagic_rawdata.content.headers %}
+{% set images = seomagic_rawdata.content.images %}
+{% set links = seomagic_rawdata.content.links %}
+{% set grav_base = grav.uri.rootUrl(true) %}
+
+<div class="seomagic-report">
+  {% if seomagic_rawdata.timings %}
+  <h1>{{ 'PLUGIN_SEOMAGIC.SEOMAGIC_REPORT'|tu }}<br /><strong>{{ seomagic_page.url(true) }}</strong></h1>
+  <h6>{{ 'PLUGIN_SEOMAGIC.GENERATED'|tu }} {{ response.date }}</h6>
+
+  <div class="seomagic-report__padding">
+
+    <div class="seomagic-score">
+      <div class="seomagic-score__overall">
+        {% set total = score.score %}
+        {% set angle = 240 %}
+        {% set bgstart = angle + total/100 * angle %}
+        {% set bgpercent = (100 - total) * angle / 360  %}
+        <div class="seomagic-score__score" style="background: conic-gradient(from {{ bgstart }}deg, #ccc {{ bgpercent }}%, transparent 0 360deg);">
+          <span>{{ total }}</span>
+        </div>
+      </div>
+
+      {% set summary_scores = {
+        'url' : 'PAGE_URL',
+        'head.items.title' : 'PAGE_TITLE',
+        'head.items.meta' : 'METADATA',
+        'head.items.canonical': 'CANONICAL',
+        'content.items.headers': 'CONTENT_HEADERS',
+        'content.items.links': 'CONTENT_LINKS',
+        'content.items.images': 'CONTENT_ITEMS',
+      } %}
+
+      <div class="seomagic-score__subscores">
+
+          {% for url_summary, title_summary in summary_scores %}
+            {% set summary = score.get('items.' ~ url_summary) %}
+            <a href="#{{ url_summary|replace({'.':'-'}) }}">
+              {{ grade(summary.score, title_summary)|raw }}
+            </a>
+          {% endfor %}
+
+      </div>
+    </div>
+
+    <h3>{{ 'PLUGIN_SEOMAGIC.PAGE_LOAD_TIME'|tu }}: <strong>{{ timings.total_time * 1000 }} ms</strong></h3>
+    <div class="seomagic-timings">
+      <div class="timing timing-1 hint--bottom-left" data-hint="{{ 'PLUGIN_SEOMAGIC.DNS_TIME'|tu }}: {{ timings.namelookup_time * 1000 }} ms" style="width:{{ timings.namelookup_time / timings.total_time * 1000 }}%;">{{ 'PLUGIN_SEOMAGIC.DNS'|tu }}</div>
+      <div class="timing timing-2 hint--bottom-left" data-hint="{{ 'PLUGIN_SEOMAGIC.CONNECT_TIME'|tu }}: {{ timings.connect_time * 1000 }} ms" style="width:{{ timings.connect_time / timings.total_time * 1000 }}%;">{{ 'PLUGIN_SEOMAGIC.CONNECT'|tu }}</div>
+      <div class="timing timing-3 hint--bottom-left" data-hint="{{ 'PLUGIN_SEOMAGIC.PRE_XFER_TIME'|tu }}: {{ timings.pretransfer_time * 1000 }} ms" style="width:{{ timings.pretransfer_time / timings.total_time * 1000 }}%;">{{ 'PLUGIN_SEOMAGIC.PRE_XFER'|tu }}</div>
+      <div class="timing timing-4 hint--bottom-left" data-hint="{{ 'PLUGIN_SEOMAGIC.DATA_XFER_TIME'|tu }}: {{ timings.starttransfer_time * 1000 }} ms">{{ 'PLUGIN_SEOMAGIC.DATA'|tu }}</div>
+    </div>
+
+    <div class="quick-jump-bar">
+      <div class="quick-jump">
+        <ul>
+          <li><a data-quick-jump="summary" href="#summary">{{ 'PLUGIN_SEOMAGIC.SUMMARY'|tu }}</a></li>
+          <li><a data-quick-jump="url" href="#url">{{ 'PLUGIN_SEOMAGIC.PAGE_URL'|tu }}</a></li>
+          <li><a data-quick-jump="magic-head" href="#magic-head">{{ 'PLUGIN_SEOMAGIC.HEAD_ELEMENTS'|tu }}</a></li>
+          <li><a data-quick-jump="content-elements" href="#content-elements">{{ 'PLUGIN_SEOMAGIC.CONTENT_ELEMENTS'|tu }}</a></li>
+          <li><a data-quick-jump="content-items-images" href="#content-items-images">{{ 'PLUGIN_SEOMAGIC.CONTENT_IMAGES'|tu }}</a></li>
+          <li><a data-quick-jump="content-items-links" href="#content-items-links">{{ 'PLUGIN_SEOMAGIC.CONTENT_LINKS'|tu }}</a></li>
+        </ul>
+      </div>
+      <div class="actions">
+        <ul>
+          <li><a data-expand="1" href="#">{{ 'PLUGIN_SEOMAGIC.EXPAND_ALL'|tu }}</a></li>
+          <li><a data-expand="0" href="#">{{ 'PLUGIN_SEOMAGIC.COLLAPSE_ALL'|tu }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="summary">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.SUMMARY_INFORMATION'|tu }}
+      </h2>
+      <div class="expand-panel">
+        <div class="container grid">
+          <div class="block size-1-2">
+            <table class="information">
+              <thead>
+              <tr>
+                <th colspan="2">{{ 'PLUGIN_SEOMAGIC.RESPONSE_HEADER'|tu }}</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.SERVER'|tu }}</th>
+                <td>{{ response['server'] }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.TYPE'|tu }}</th>
+                <td>{{ response['content-type'] }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.ENCODING'|tu }}</th>
+                <td>{{ response['content-encoding'] }}</td>
+              </tr>
+              </tbody>
+            </table>
+
+            <table class="information">
+              <thead>
+              <tr>
+                <th colspan="2">{{ 'PLUGIN_SEOMAGIC.CACHING_STATUS'|tu }}</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.EXPIRES'|tu }}</th>
+                <td>{{ response['expires'] }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.CACHE_CONTROL'|tu }}</th>
+                <td>{{ response['cache-control'] }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.PRAGMA'|tu }}</th>
+                <td>{{ response['pragma'] }}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="block size-1-2">
+            <table class="information">
+              <thead>
+              <tr>
+                <th colspan="2">{{ 'PLUGIN_SEOMAGIC.CONNECTION'|tu }}</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.EXTERNAL_IP'|tu }}</th>
+                <td>{{ info.primary_ip }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.LOCAL_IP'|tu }}</th>
+                <td>{{ info.local_ip }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.VERSION'|tu }}</th>
+                <td>HTTP/{{ info.http_version }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.SSL_PROTECTED'|tu }}</th>
+                <td>{{ info.scheme == 'HTTPS' ? 'Yes' : 'No' }}</td>
+              </tr>
+              {% if info.scheme == 'HTTPS' %}
+                <tr>
+                  <th>{{ 'PLUGIN_SEOMAGIC.SSL_VERIFY'|tu }}</th>
+                  <td>{{ info.ssl_verifyresult ? 'Yes' : 'No' }}</td>
+                </tr>
+                <tr>
+                  <th>{{ 'PLUGIN_SEOMAGIC.SSL_CERTIFICATE'|tu }}</th>
+                  <td>{{ info.certinfo|json_encode }}</td>
+                </tr>
+              {% endif %}
+              </tbody>
+            </table>
+
+            <table class="information">
+              <thead>
+              <tr>
+                <th colspan="2">{{ 'PLUGIN_SEOMAGIC.SIZE_SPEED'|tu }}</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.HEADER_SIZE'|tu }}</th>
+                <td>{{ info.header_size|nicefilesize }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.REQUEST_SIZE'|tu }}</th>
+                <td>{{ info.request_size|nicefilesize }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.ORIGINAL_PAGE_SIZE'|tu }}</th>
+                <td>{{ info.content_size|nicefilesize }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.DOWNLOAD_PAGE_SIZE'|tu }}</th>
+                <td>{{ info.download_content_length|nicefilesize }}</td>
+              </tr>
+              <tr>
+                <th>{{ 'PLUGIN_SEOMAGIC.DOWNLOAD_SPEED'|tu }}</th>
+                <td>{{ info.speed_download * 8 / 1000 }} Mbps</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="url">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.PAGE_URL'|tu }}
+      </h2>
+      <div class="expand-panel">
+        <table class="">
+          <tbody>
+          <tr>
+            {% set url_details = score.get('items.url')  %}
+            <th class="sextuple">{{ seomagic_page.url(true) }}</th>
+            <td class="quadruple msg"><p>{{ url_details.msg }}</p></td>
+            <td class="shrink">{{ grade(url_details.score)|raw }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="magic-head">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.HEAD_ELEMENTS'|tu }}
+      </h2>
+      <div class="expand-panel">
+        <a id="head-items-title"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3">{{ 'PLUGIN_SEOMAGIC.PAGE_TITLE'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            {% set title_details = score.get('items.head.items.title')  %}
+            <th class="sextuple">{{ page_title }}</th>
+            <td class="quadruple msg"><p>{{ title_details.msg }}</p></td>
+            <td class="shrink">{{ grade(title_details.score)|raw }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a id="head-items-icon"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3">{{ 'PLUGIN_SEOMAGIC.FAV_ICON'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            {% set icon_details = score.get('items.head.items.icon')  %}
+            <td class="sextuple breakall"><a href="{{ seomagic_rawdata.head.icon }}" target="_blank"><i class="fa fa-external-link-square"></i> {{ seomagic_rawdata.head.icon ?: '[Not Found]' }}</a></td>
+            <td class="quadruple msg"><p>{{ icon_details.msg }}</p></td>
+            <td class="shrink">{{ grade(icon_details.score)|raw }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a id="head-items-canonical"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3">{{ 'PLUGIN_SEOMAGIC.CANONICAL_URL'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            {% set canonical_details = score.get('items.head.items.canonical')  %}
+            <td class="sextuple breakall"><a href="{{ seomagic_rawdata.head.canonical }}" target="_blank"><i class="fa fa-external-link-square"></i> {{ seomagic_rawdata.head.canonical ?: '[Not Found]' }}</a></td>
+            <td class="quadruple msg"><p>{{ canonical_details.msg }}</p></td>
+            <td class="shrink">{{ grade(canonical_details.score)|raw }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a id="head-items-meta"></a>
+        <table>
+          {% set meta_details = score.get('items.head.items.meta')  %}
+          <thead>
+          <tr>
+            <th colspan="2">{{ 'PLUGIN_SEOMAGIC.METADATA'|tu }}</th>
+            <th class="shrink">{{ grade(meta_details.score)|raw }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for key, value in meta_details|flat_keys|subs_last %}
+            {% set msg = value.msg %}
+            {% set score_grade = value.score %}
+            {% set data_value = meta[key] %}
+
+            {% if msg %}
+              <tr>
+                <th class="double">{{ key }}</th>
+                <td class="quadruple breakword">{{ data_value }}</td>
+                <td class="quadruple msg"><p>{{ msg }}</p></td>
+                <td class="shrink">{{ grade(score_grade)|raw }}</td>
+              </tr>
+            {% endif %}
+
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <a id="head-meta-links"></a>
+        <table>
+          {% set link_details = score.get('items.head.items.links')  %}
+          <thead>
+          <tr>
+            <th colspan="2">{{ 'PLUGIN_SEOMAGIC.CSS_STYLESHEETS'|tu }} ({{ link_details.items|length }})</th>
+            <th class="shrink"></th>
+          </tr>
+          </thead>
+          <tbody>
+
+          {% for key, value in link_details.items %}
+            <tr>
+              <td class="sextuple breakall"><a href="{{ key }}" target="_blank"><i class="fa fa-external-link-square"></i> {{ key }}</a></td>
+              <td class="quadruple msg"><p>{{ value.msg }}</p></td>
+              <td class="shrink">{{ grade(value.score, null, 0)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <a id="head-meta-scripts"></a>
+        <table>
+          {% set script_details = score.get('items.head.items.scripts')  %}
+          <thead>
+          <tr>
+            <th colspan="2">{{ 'PLUGIN_SEOMAGIC.JAVASCRIPT'|tu }} ({{ script_details.items|length }})</th>
+            <th class="shrink"></th>
+          </tr>
+          </thead>
+          <tbody>
+
+          {% for key, value in script_details.items %}
+            <tr>
+              <td class="sextuple breakall"><a href="{{ key }}" target="_blank"><i class="fa fa-external-link-square"></i> {{ key }}</a></td>
+              <td class="quadruple msg"><p>{{ value.msg }}</p></td>
+              <td class="shrink">{{ grade(value.score, null, value.weight)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="content-elements">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.CONTENT_ELEMENTS'|tu }}
+      </h2>
+      <div class="expand-panel">
+        {% set header_details = score.get('items.content.items.headers')  %}
+        <a id="content-items-headers"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3" class=>{{ 'PLUGIN_SEOMAGIC.HEADER_TAGS'|tu }}</th>
+            <th class="shrink">{{ grade(header_details.score)|raw }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for level,header_items in headers %}
+            {% set header_detail = attribute(header_details.items, level) %}
+            <tr>
+              <td class="double nowrap"><code>&lt;{{ level }}&gt;</code> ({{ header_items|length }})</td>
+              <td class="quadruple">
+                <ul>
+                  {% for header in header_items %}
+                    <li><strong>{{ header }}</strong></li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td class="quadruple msg"><p>{{ header_detail.msg }}</p></td>
+              <td class="shrink">{{ grade(header_detail.score, null, header_detail.weight)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <a id="head-items-good_tags"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3">{{ 'PLUGIN_SEOMAGIC.GOOD_HTML_TAGS'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for tagtype, goodtag in score.get('items.content.items.good_tags.items') %}
+            <tr>
+              <td class="sextuple">
+                {% for tag, count in attribute(seomagic_rawdata.content.good_tags, tagtype) %}
+                  <div><code>&lt;{{ tag }}&gt;</code> ({{ count }})</div>
+                {% endfor %}
+              </td>
+              <td class="quadruple msg"><p>{{ goodtag.msg }}</p></td>
+              <td class="shrink">{{ grade(goodtag.score)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <a id="head-items-bad_tags"></a>
+        <table>
+          <thead>
+          <tr>
+            <th colspan="3">{{ 'PLUGIN_SEOMAGIC.BAD_HTML_TAGS'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% for tagtype,badtag in score.get('items.content.items.bad_tags.items') %}
+            <tr>
+              {% set count = attribute(seomagic_rawdata.content.bad_tags, tagtype)  %}
+              <td class="sextuple"><code>&lt;{{ tagtype }}&gt;</code> ({{ count }})</td>
+              <td class="quadruple msg"><p>{{ badtag.msg }}</p></td>
+              <td class="shrink">{{ grade(badtag.score)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="content-items-images">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.CONTENT_IMAGES'|tu }}
+      </h2>
+      <div class="expand-panel">
+        {% set image_details = score.get('items.content.items.images')  %}
+        <table>
+          <thead>
+          <tr>
+            <th class="triple">{{ 'PLUGIN_SEOMAGIC.IMAGE'|tu }}</th>
+            <th class="double">{{ 'PLUGIN_SEOMAGIC.ALT_TAG'|tu }}</th>
+            <th>{{ 'PLUGIN_SEOMAGIC.STATUS'|tu }}</th>
+            <th class="quadruple msg">{{ 'PLUGIN_SEOMAGIC.MESSAGE'|tu }}</th>
+            <th class="shrink">{{ grade(image_details.score, null, image_details.weight)|raw }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% if images|length == 0 %}
+            <tr>
+              <td colspan="5"><i>{{ 'PLUGIN_SEOMAGIC.NO_IMAGES_FOUND'|tu }}</i></td>
+            </tr>
+          {% endif %}
+          {% for image in images %}
+            {% set image_detail = attribute(image_details.items, loop.index0) %}
+            {% set image_code = image.status ?: 'N/A' %}
+            {% switch image_code %}
+              {% case 'N/A' %}
+                {% set image_message = "Image was not checked" %}
+                {% set image_class = 'na' %}
+              {% case '200' %}
+                {% set image_message = "Image is functional" %}
+                {% set image_class = 'good' %}
+              {% default %}
+                {% set image_message = "Image is broken or restricted" %}
+                {% set image_class = 'bad' %}
+            {% endswitch %}
+            <tr>
+              <td class="triple breakall"><a href="{{ image.src }}" target="_blank"><i class="fa fa-picture-o"></i> {{ image.src|replace({(grav_base): ''}) }}</a></td>
+              <td class="double breakall">{{ image.alt ?: '<i>None</i>' }}</td>
+              <td class="link-status-{{ image_class }}">
+                <span class="hint--bottom" data-hint="{{ image_message }}">{{ image_code }}</span>
+              </td>
+              <td class="quadruple msg"><p>{{ image_detail.msg }}</p></td>
+              <td class="shrink">{{ grade(image_detail.score, null, image_detail.weight)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="expand-wrapper">
+      <h2 id="content-items-links">
+        <i class="fa fa-caret-down expand-icon"></i>
+        {{ 'PLUGIN_SEOMAGIC.CONTENT_LINKS'|tu }}
+      </h2>
+      <div class="expand-panel">
+        {% set link_details = score.get('items.content.items.links')  %}
+
+        {% set broken_links = 0 %}
+        {% for link, attrib in links %}
+          {% if attrib.status > 400 %}
+            {% set broken_links = broken_links + 1 %}
+          {% endif %}
+        {% endfor %}
+
+        {% if broken_links > 0 %}
+          <div class="alert error">{{ 'PLUGIN_SEOMAGIC.BROKEN_LINKS_ALERT'|tu([broken_links])|raw }}</div>
+        {% endif %}
+
+        <table>
+          <thead>
+          <tr>
+            <th class="triple">{{ 'PLUGIN_SEOMAGIC.LINK'|tu }}</th>
+            <th class="double">{{ 'PLUGIN_SEOMAGIC.TEXT'|tu }}</th>
+            <th>{{ 'PLUGIN_SEOMAGIC.STATUS'|tu }}</th>
+            <th class="quadruple msg">{{ 'PLUGIN_SEOMAGIC.MESSAGE'|tu }}</th>
+            <th class="shrink">{{ grade(link_details.score, null, link_details.weight)|raw }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          {% if links|length == 0 %}
+            <tr>
+              <td colspan="5"><i>{{ 'PLUGIN_SEOMAGIC.NO_LINKS_FOUND'|tu }}</i></td>
+            </tr>
+          {% endif %}
+          {% for link,attrib in links %}
+            {% set link_detail = attribute(link_details.items, link)|defined(null) %}
+            {% set link_score = link_detail.score ?: '85' %}
+            {% set link_weight = link_detail.weight ?: 0 %}
+            {% set link_type = attrib.external ? 'external-link' : 'link' %}
+            {% set link_msg = link_detail.msg ?: 'A standard ' ~ link_type ~ ' link' %}
+            {% set link_code = attrib.status ?: 'N/A' %}
+
+            {% if link_code == 'N/A' %}
+              {% set link_message = "Link Checker not enabled" %}
+              {% set link_class = 'na' %}
+            {% elseif link_code >= 200 and link_code < 300 %}
+              {% set link_message = "Link is functional" %}
+              {% set link_class = 'good' %}
+            {% elseif link_code >= 300 and link_code < 400 %}
+              {% set link_message = "Link is " ~ attrib.status_msg %}
+              {% set link_class = 'ok' %}
+            {% else %}
+              {% set link_message = "Link is broken or restricted" %}
+              {% set link_class = 'bad' %}
+            {% endif %}
+
+            <tr>
+              <td class="triple breakall"><a href="{{ link }}" target="_blank">
+                  <i class="fa fa-{{ link_type }}"></i>
+                  {{ link|replace({(grav_base): ''}) }}</a></td>
+              <td class="double breakall">{{ attrib.text ?: '<i>None</i>' }}</td>
+              <td class="link-status-{{ link_class }}"><span class="hint--bottom" data-hint="{{ link_message }}">{{ link_code }}</span></td>
+              <td class="quadruple msg"><p>{{ link_msg  }}</p></td>
+              <td class="shrink">{{ grade(link_score, null, link_weight)|raw }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+
+        <a id="content-selected-body-text"></a>
+        <table>
+          <thead>
+          <tr>
+            <th>{{ 'PLUGIN_SEOMAGIC.SELECTED_BODY_TEXT'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="msg"><p>{{ 'PLUGIN_SEOMAGIC.SELECTED_BODY_TEXT_INFO'|tu|raw }}</p></td>
+          </tr>
+          <tr>
+            <td>{{ seomagic_body|raw }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <a id="content-debug-info"></a>
+        <table>
+          <thead>
+          <tr>
+            <th>{{ 'PLUGIN_SEOMAGIC.CRAWL_DEBUG'|tu }}</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="msg"><p>{{ 'PLUGIN_SEOMAGIC.CRAWL_DEBUG_INFO'|tu|raw }}</p></td>
+          </tr>
+          <tr>
+            <td>
+          <pre class="prewrap">
+          {{- seomagic_rawdata.debug -}}
+          </pre>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  {% else %}
+
+  <div class="notice alert error">
+    {{ 'PLUGIN_SEOMAGIC.NO_REPORT_AVAILABLE'|tu }}
+  </div>
+
+  {% endif %}
+
+</div>
+
+{% else %}
+  <div class="info alert">
+    SEO Report is currently disabled.  To enable, visit the SEO-Magic configuration options.
+  </div>
+{% endif %}

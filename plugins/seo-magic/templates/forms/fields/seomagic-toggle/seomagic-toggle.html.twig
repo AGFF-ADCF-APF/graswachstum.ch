@@ -1,0 +1,11 @@
+{% extends "forms/fields/toggle/toggle.html.twig" %}
+
+{% set default_value = config.get(field.source) %}
+
+{% block input %}
+{{ parent() }}
+<div class="seo-msg">
+    <div class="seomagic-label">Default Value:</div>
+    <div>{{ default_value ?: '[NOTE: no value in "config.' ~ field.source ~ '" is defined]' }}</div>
+</div>
+{% endblock %}

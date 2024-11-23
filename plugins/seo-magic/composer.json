@@ -1,0 +1,12 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Grav\\Plugin\\SEOMagic\\": "classes/"
+        }
+    },
+    "require": {
+        "symfony/dom-crawler": "^5.4",
+        "symfony/css-selector": "^5.4",
+        "php-science/textrank": "^1.2"
+    }
+}

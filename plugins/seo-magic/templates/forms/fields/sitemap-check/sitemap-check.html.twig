@@ -1,0 +1,5 @@
+{% if config.plugins.sitemap.enabled != true %}
+<div class="notice alert error">{{ 'PLUGIN_SEOMAGIC.SITEMAP_DISABLED'|tu|raw }}</div>
+{% elseif grav.seomagic.checkSitemap() is null %}
+  <div class="notice alert error">{{ 'PLUGIN_SEOMAGIC.SITEMAP_CHECK'|tu|raw }}</div>
+{% endif %}

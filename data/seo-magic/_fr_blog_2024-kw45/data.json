@@ -1,0 +1,374 @@
+{
+    "grav": {
+        "page_route": "\/blog\/2024-kw45",
+        "page_rawroute": "\/blog\/2024-kw45",
+        "page_title": "Woche 45 (11.11.-17.11.2024)"
+    },
+    "updated": 1732392927,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Woche 45 (11.11.-17.11.2024)",
+        "grav-page-route": "\/blog\/2024-kw45",
+        "grav-page-rawroute": "\/blog\/2024-kw45",
+        "cache-control": "max-age=604800",
+        "expires": "Sat, 30 Nov 2024 20:15:27 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html;charset=UTF-8",
+        "date": "Sat, 23 Nov 2024 20:15:27 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1732392927.1154420375823974609375,
+        "total_time": 0.0807299999999999962074781478804652579128742218017578125,
+        "namelookup_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "connect_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "pretransfer_time": 5.8000000000000000340005801291454190504737198352813720703125e-5,
+        "starttransfer_time": 0.08061100000000000209698924891199567355215549468994140625,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45",
+        "content_type": "text\/html;charset=UTF-8",
+        "header_size": 553,
+        "request_size": 126,
+        "redirect_count": 0,
+        "size_download": 5327,
+        "speed_download": 66587,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 23308
+    },
+    "content": {
+        "body": "<h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
+        "headers": {
+            "h1": [
+                "Woche 45 (11.11.-17.11.2024)",
+                "Weideende heisst nicht Grasende"
+            ],
+            "h2": [],
+            "h3": [],
+            "h4": [
+                "Tags populaires",
+                "Archives"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw45\/2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg",
+                "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw45\/2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.jpg",
+                "alt": "2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 1,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/fr": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/fr\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/fr\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/fr\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/fr\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/fr\/blog\/2024-kw45\/tag:weide#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/fr\/blog\/2024-kw45\/2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden.pdf": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Druckversion (PDF)",
+                "external": false
+            },
+            "\/fr\/blog\/2024-kw34": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Article pr\u00e9c\u00e9dent",
+                "external": false
+            },
+            "\/fr\/blog\/2024-kw45\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2\n                November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2\n                May 2024",
+                "external": true
+            },
+            "\/fr\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "M. Zbinden",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "AGFF-Grasmessnetzwerk",
+            "title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
+            "image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
+            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45\/seomagic-image.jpg",
+            "twitter:image:alt": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
+            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw45",
+        "links": {
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: f3 (easy handle 0x560068874ff0)\n> GET \/fr\/blog\/2024-kw45 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 45 (11.11.-17.11.2024)\r\n< grav-page-route: \/blog\/2024-kw45\r\n< grav-page-rawroute: \/blog\/2024-kw45\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:27 GMT\r\n* Added cookie grav-site-23a95d8=\"17dc895bf0aca32b79c8d8f59a677fc3\" for domain graswachstum.ch, path \/, expire 1732394727\n< set-cookie: grav-site-23a95d8=17dc895bf0aca32b79c8d8f59a677fc3; expires=Sat, 23 Nov 2024 20:45:27 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:27 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

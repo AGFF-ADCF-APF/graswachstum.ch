@@ -8,6 +8,8 @@ taxonomy:
     tag:
         - weide
         - wachstumsbericht
+sitemap:
+    lastmod: '25-11-2024 20:57'
 ---
 
 # Wie umgehen mit Weideresten?

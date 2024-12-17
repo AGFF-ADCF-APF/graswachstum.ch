@@ -13,12 +13,13 @@ taxonomy:
         - infrastruktur
     author:
         - 'Zbinden Martin'
-author: 'Martin Zbinden'
+author: Zbinden
 published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
 aura:
     author: zbma
+authorString: null
 ---
 
 # Saubere Kühe = sauberes Gras

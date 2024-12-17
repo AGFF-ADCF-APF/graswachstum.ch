@@ -27,7 +27,7 @@
         {{ page.content|raw }}
       </article>
         {% include 'partials/author-bio.html.twig' ignore missing %}
-
+		{{ page.header.authorString|raw }}
 
       <div class="flex-none flex-centered w-full p-6 mx-auto">
         <div class="space-x-3 text-center">

@@ -4,26 +4,26 @@
         "page_rawroute": "\/author\/zbma",
         "page_title": "zbma"
     },
-    "updated": 1734470131,
+    "updated": 1734470188,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "zbma",
         "grav-page-route": "\/author\/zbma",
         "grav-page-rawroute": "\/author\/zbma",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 21:15:31 GMT",
+        "expires": "Tue, 24 Dec 2024 21:16:28 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 21:15:31 GMT",
+        "date": "Tue, 17 Dec 2024 21:16:28 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734470131.234757900238037109375,
-        "total_time": 0.104408000000000000806466005087713710963726043701171875,
-        "namelookup_time": 0.0004609999999999999840093189984457922037108801305294036865234375,
-        "connect_time": 0.00052899999999999995636823513223134796135127544403076171875,
-        "pretransfer_time": 0.00895199999999999988797849681532170507125556468963623046875,
-        "starttransfer_time": 0.1038550000000000028688162956314045004546642303466796875,
+        "start_time": 1734470188.317389965057373046875,
+        "total_time": 0.100134000000000000785149723014910705387592315673828125,
+        "namelookup_time": 0.0004710000000000000102383379552151154712191782891750335693359375,
+        "connect_time": 0.00051800000000000001425248807862544708768837153911590576171875,
+        "pretransfer_time": 0.007590000000000000392186283448836547904647886753082275390625,
+        "starttransfer_time": 0.09961899999999999921751481224418967030942440032958984375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 523,
         "request_size": 120,
         "redirect_count": 0,
-        "size_download": 5119,
-        "speed_download": 49221,
+        "size_download": 5121,
+        "speed_download": 51210,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 23376
+        "content_size": 23448
     },
     "content": {
         "body": "",
@@ -187,11 +187,11 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "AGFF-Grasmessnetzwerk",
-            "title": "zbma",
+            "title": "zbma | graswachstum.ch",
             "image": "https:\/\/graswachstum.ch\/author\/zbma\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/author\/zbma",
             "og:site_name": "graswachstum.ch",
-            "og:title": "zbma",
+            "og:title": "zbma | graswachstum.ch",
             "og:description": "AGFF-Grasmessnetzwerk",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/author\/zbma\/seomagic-image.jpg",
@@ -199,10 +199,10 @@
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/author\/zbma\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "zbma",
+            "twitter:title": "zbma | graswachstum.ch",
             "twitter:description": "AGFF-Grasmessnetzwerk",
             "twitter:image": "https:\/\/graswachstum.ch\/author\/zbma\/seomagic-image.jpg",
-            "twitter:image:alt": "zbma",
+            "twitter:image:alt": "zbma | graswachstum.ch",
             "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
@@ -345,5 +345,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff38800)\n> GET \/author\/zbma HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: zbma\r\n< grav-page-route: \/author\/zbma\r\n< grav-page-rawroute: \/author\/zbma\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 21:15:31 GMT\r\n* Added cookie grav-site-23a95d8=\"49884a0e61317c0f559b21863af3d205\" for domain graswachstum.ch, path \/, expire 1734471931\n< set-cookie: grav-site-23a95d8=49884a0e61317c0f559b21863af3d205; expires=Tue, 17 Dec 2024 21:45:31 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 21:15:31 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff42cf0)\n> GET \/author\/zbma HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: zbma\r\n< grav-page-route: \/author\/zbma\r\n< grav-page-rawroute: \/author\/zbma\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 21:16:28 GMT\r\n* Added cookie grav-site-23a95d8=\"fcb6a946ff27d501cf6260e080319ca3\" for domain graswachstum.ch, path \/, expire 1734471988\n< set-cookie: grav-site-23a95d8=fcb6a946ff27d501cf6260e080319ca3; expires=Tue, 17 Dec 2024 21:46:28 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 21:16:28 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

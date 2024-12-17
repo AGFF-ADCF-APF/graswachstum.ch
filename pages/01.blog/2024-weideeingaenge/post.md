@@ -11,15 +11,10 @@ taxonomy:
     tag:
         - weide
         - infrastruktur
-    author:
-        - zbma
 published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
-aura:
-    author: zbma
 author: zbma
-authorString: null
 ---
 
 # Saubere Kühe = sauberes Gras

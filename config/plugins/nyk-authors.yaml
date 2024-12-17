@@ -1,10 +1,11 @@
 enabled: true
-author_taxonomy: '2'
+author_taxonomy: '0'
 automatic_username_enabled: true
 blacklist_enabled: false
 blacklist: null
-whitelist_enabled: false
-whitelist: null
+whitelist_enabled: true
+whitelist:
+  - martinz
 extra_authors: null
 lang: de
 custom_lang_conjunction: null

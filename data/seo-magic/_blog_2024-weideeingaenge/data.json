@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-weideeingaenge",
         "page_title": "Weideeing\u00e4nge"
     },
-    "updated": 1734469151,
+    "updated": 1734469172,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Weideeing\u00e4nge",
         "grav-page-route": "\/blog\/2024-weideeingaenge",
         "grav-page-rawroute": "\/blog\/2024-weideeingaenge",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 20:59:11 GMT",
+        "expires": "Tue, 24 Dec 2024 20:59:32 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 20:59:11 GMT",
+        "date": "Tue, 17 Dec 2024 20:59:32 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734469151.449470043182373046875,
-        "total_time": 0.1077349999999999974331643670666380785405635833740234375,
-        "namelookup_time": 0.0019380000000000000524857934891542754485271871089935302734375,
-        "connect_time": 0.0020209999999999997931376949367177076055668294429779052734375,
-        "pretransfer_time": 0.016892999999999998295141523385609616525471210479736328125,
-        "starttransfer_time": 0.1072099999999999997424282582869636826217174530029296875,
+        "start_time": 1734469172.186500072479248046875,
+        "total_time": 0.0917229999999999989768184605054557323455810546875,
+        "namelookup_time": 0.000493999999999999972986886032089159925817511975765228271484375,
+        "connect_time": 0.000555000000000000046247727869541677137021906673908233642578125,
+        "pretransfer_time": 0.009011999999999999177990872567534097470343112945556640625,
+        "starttransfer_time": 0.09126599999999999990318855225268634967505931854248046875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 559,
         "request_size": 133,
         "redirect_count": 0,
-        "size_download": 5373,
-        "speed_download": 50214,
+        "size_download": 5383,
+        "speed_download": 59153,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24099
+        "content_size": 24116
     },
     "content": {
         "body": "<h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n<p>test<\/p>",
@@ -382,5 +382,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff482f0)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 20:59:11 GMT\r\n* Added cookie grav-site-23a95d8=\"60f08bed8a0933be761e5ecd9e1cd4b7\" for domain graswachstum.ch, path \/, expire 1734470951\n< set-cookie: grav-site-23a95d8=60f08bed8a0933be761e5ecd9e1cd4b7; expires=Tue, 17 Dec 2024 21:29:11 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 20:59:11 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff80610)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 20:59:32 GMT\r\n* Added cookie grav-site-23a95d8=\"a833486b560f6c64f340b94d077ab6f4\" for domain graswachstum.ch, path \/, expire 1734470972\n< set-cookie: grav-site-23a95d8=a833486b560f6c64f340b94d077ab6f4; expires=Tue, 17 Dec 2024 21:29:32 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 20:59:32 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

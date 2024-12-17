@@ -1,6 +1,6 @@
 ---
 title: 2024-Weideeingänge
-date: '15-11-2024 00:00'
+date: '17-12-2024 20:24'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -16,6 +16,9 @@ taxonomy:
         - 'Zbinden Martin'
         - 'Marti Nicolas'
 author: 'Nicolas Marti, Martin Zbinden'
+published: false
+sitemap:
+    lastmod: '17-12-2024 20:24'
 ---
 
 # Weideende heisst nicht Grasende

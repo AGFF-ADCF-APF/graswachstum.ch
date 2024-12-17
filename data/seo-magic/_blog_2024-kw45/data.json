@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-kw45",
         "page_title": "Woche 45 (11.11.-17.11.2024)"
     },
-    "updated": 1734461937,
+    "updated": 1734463453,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 45 (11.11.-17.11.2024)",
         "grav-page-route": "\/blog\/2024-kw45",
         "grav-page-rawroute": "\/blog\/2024-kw45",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
+        "expires": "Tue, 24 Dec 2024 19:24:13 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
+        "date": "Tue, 17 Dec 2024 19:24:13 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461937.2709100246429443359375,
-        "total_time": 0.11057899999999999673949702128084027208387851715087890625,
-        "namelookup_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
-        "connect_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
-        "pretransfer_time": 4.3999999999999998855949867593295721235335804522037506103515625e-5,
-        "starttransfer_time": 0.11045000000000000650590692430341732688248157501220703125,
+        "start_time": 1734463453.7635219097137451171875,
+        "total_time": 0.1204240000000000032631675139782601036131381988525390625,
+        "namelookup_time": 0.000519000000000000038559433424012468094588257372379302978515625,
+        "connect_time": 0.000568999999999999952864093710758197630639187991619110107421875,
+        "pretransfer_time": 0.00793899999999999987643217735922007705084979534149169921875,
+        "starttransfer_time": 0.1199260000000000048192561052928795106709003448486328125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 553,
         "request_size": 123,
         "redirect_count": 0,
-        "size_download": 5422,
-        "speed_download": 49290,
+        "size_download": 5458,
+        "speed_download": 45483,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24344
+        "content_size": 24861
     },
     "content": {
         "body": "<h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
@@ -126,7 +126,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
                 "external": false
             },
             "\/tag:weide#blog_list": {
@@ -157,6 +157,13 @@
                 "text": "Vorheriger Beitrag",
                 "external": false
             },
+            "\/blog\/2024-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "N\u00e4chster Beitrag",
+                "external": false
+            },
             "\/tag:weide": {
                 "count": 0,
                 "target": "",
@@ -182,7 +189,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "1 November 2024",
+                "text": "2 November 2024",
                 "external": true
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
@@ -229,12 +236,12 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "Weideende heisst nicht Grasende Futterbau \/ Dieses Futterbaujahr war gepr\u00e4gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum st\u2026",
-            "title": "Woche 45 (11.11.-17.11.2024)",
+            "title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
             "keywords": "grasende,futterbau,futterbaujahr,gepr\u00e4gt,wachstum,heisst,schwierigen,weideende,erntebedingungen,graswachstum",
             "image": "https:\/\/graswachstum.ch\/blog\/2024-kw45\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2024-kw45",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 45 (11.11.-17.11.2024)",
+            "og:title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
             "og:description": "Weideende heisst nicht Grasende Futterbau \/ Dieses Futterbaujahr war gepr\u00e4gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum st\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/blog\/2024-kw45\/seomagic-image.jpg",
@@ -242,20 +249,14 @@
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2024-kw45\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 45 (11.11.-17.11.2024)",
+            "twitter:title": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch",
             "twitter:description": "Weideende heisst nicht Grasende Futterbau \/ Dieses Futterbaujahr war gepr\u00e4gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum st\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/blog\/2024-kw45\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 45 (11.11.-17.11.2024)"
+            "twitter:image:alt": "Woche 45 (11.11.-17.11.2024) | graswachstum.ch"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/blog\/2024-kw45",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -346,11 +347,6 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
-                "async": null,
-                "defer": null,
-                "type": null
-            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
                 "async": null,
                 "defer": null,
@@ -398,5 +394,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 35 (easy handle 0x55fbb0050220)\n> GET \/blog\/2024-kw45 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 45 (11.11.-17.11.2024)\r\n< grav-page-route: \/blog\/2024-kw45\r\n< grav-page-rawroute: \/blog\/2024-kw45\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"25d52ecb6462453e6ad8623b2ce98c95\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=25d52ecb6462453e6ad8623b2ce98c95; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff1ba90)\n> GET \/blog\/2024-kw45 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 45 (11.11.-17.11.2024)\r\n< grav-page-route: \/blog\/2024-kw45\r\n< grav-page-rawroute: \/blog\/2024-kw45\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:24:13 GMT\r\n* Added cookie grav-site-23a95d8=\"dab51bca19c0fa3935fbdec3d354fd52\" for domain graswachstum.ch, path \/, expire 1734465253\n< set-cookie: grav-site-23a95d8=dab51bca19c0fa3935fbdec3d354fd52; expires=Tue, 17 Dec 2024 19:54:13 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:24:13 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

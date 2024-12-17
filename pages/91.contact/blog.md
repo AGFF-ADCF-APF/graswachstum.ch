@@ -29,10 +29,10 @@ form:
     buttons:
         submit:
             type: submit
-            value: Submit
+            value: Absenden
         reset:
             type: reset
-            value: Reset
+            value: Zurücksetzen
     process:
         captcha: true
         save:
@@ -43,7 +43,7 @@ form:
         email:
             subject: '[Site Contact Form] {{ form.value.name|e }}'
             body: '{% include ''forms/data.html.twig'' %}'
-        message: 'Thank you for getting in touch!'
+        message: 'Danke für deine Nachricht!'
 root_of_blog: true
 content:
     items:

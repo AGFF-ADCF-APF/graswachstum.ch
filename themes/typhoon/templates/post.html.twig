@@ -7,8 +7,9 @@
 {% set icon_left = svg_icon('tabler/chevron-left.svg', 'w-5') %}
 {% set icon_right = svg_icon('tabler/chevron-right.svg', 'w-5') %}
 
+{% set author = authors[page.header.author] %}
 {% if page.header.author %}
-  {% set subtitle = subtitle ~ ' - ' ~ page.header.author %}
+  {% set subtitle = subtitle ~ ' - ' ~ author.name %}
 {% endif %}
 
 {% set hero_tags = true %}

@@ -14,7 +14,7 @@ taxonomy:
 published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
-author: mani
+author: zbma
 ---
 
 # Saubere Kühe = sauberes Gras

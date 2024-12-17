@@ -36,8 +36,21 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 
 ===
 
-test
+
 [columns count=2]
+1. Faktoren für Trittschäden:
+fest:
+* Boden 
+* Topographie
+* Witterung
+
+beeinflussbar: 
+* Tierverhalten 
+* Grasnarbe
+* Tiergewicht
+
+1. Allfällige Massnahmen zur Reduktion von Trittschäden sollen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Damit lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) optimal wahrnehmen.
+
 
 [/columns]
 

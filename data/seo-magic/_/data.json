@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog",
         "page_title": "Wachstumsbericht"
     },
-    "updated": 1734461936,
+    "updated": 1734463311,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Wachstumsbericht",
         "grav-page-route": "\/",
         "grav-page-rawroute": "\/blog",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:56 GMT",
+        "expires": "Tue, 24 Dec 2024 19:21:51 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:56 GMT",
+        "date": "Tue, 17 Dec 2024 19:21:51 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461936.7978661060333251953125,
-        "total_time": 0.1250880000000000047410964043592684902250766754150390625,
-        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "pretransfer_time": 6.89999999999999966658614791725767645402811467647552490234375e-5,
-        "starttransfer_time": 0.1249989999999999989999110994176589883863925933837890625,
+        "start_time": 1734463311.3263719081878662109375,
+        "total_time": 0.11871600000000000207922568051799316890537738800048828125,
+        "namelookup_time": 0.00050500000000000002352285033424550420022569596767425537109375,
+        "connect_time": 0.000558000000000000010748346657152296756976284086704254150390625,
+        "pretransfer_time": 0.0105990000000000007818190539410352357663214206695556640625,
+        "starttransfer_time": 0.1165839999999999931912242345788399688899517059326171875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 517,
         "request_size": 109,
         "redirect_count": 0,
-        "size_download": 5920,
-        "speed_download": 47360,
+        "size_download": 5987,
+        "speed_download": 50737,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 28466
+        "content_size": 28957
     },
     "content": {
         "body": "weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 45 (11.11.-17.11.2024)\n        <\/h3>\n      \n            <h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n    \n    \n      15th Nov 2024\n              - Nicolas Marti, Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 34 (19.08.-25.08.2024)\n        <\/h3>\n      \n            <h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n    \n    \n      23rd Aug 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
@@ -152,7 +152,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
                 "external": false
             },
             "\/blog\/2024-kw45": {
@@ -275,34 +275,28 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Wachstumsbericht",
+            "description": "15th Nov 2024 - Nicolas Marti, Martin Zbinden weide wachstumsbericht Woche 34 (19.08.-25.08.2024) Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch di\u2026",
+            "title": "Wachstumsbericht | graswachstum.ch",
+            "keywords": "wachstumsbericht,weide,woche,2024,zbinden,betriebsportrait,11.11.-17.11.2024,futterbau,19.08.-25.08.2024,29.04.-05.05.2024",
             "image": "https:\/\/graswachstum.ch\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Wachstumsbericht",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Wachstumsbericht | graswachstum.ch",
+            "og:description": "15th Nov 2024 - Nicolas Marti, Martin Zbinden weide wachstumsbericht Woche 34 (19.08.-25.08.2024) Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch di\u2026",
             "og:type": "website",
             "og:image": "https:\/\/graswachstum.ch\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Wachstumsbericht",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Wachstumsbericht | graswachstum.ch",
+            "twitter:description": "15th Nov 2024 - Nicolas Marti, Martin Zbinden weide wachstumsbericht Woche 34 (19.08.-25.08.2024) Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch di\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/seomagic-image.jpg",
-            "twitter:image:alt": "Wachstumsbericht",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "Wachstumsbericht | graswachstum.ch"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -399,11 +393,6 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
-                "async": null,
-                "defer": null,
-                "type": null
-            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
                 "async": null,
                 "defer": null,
@@ -451,5 +440,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 13 (easy handle 0x55fbb0050220)\n> GET \/ HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:56 GMT\r\n* Added cookie grav-site-23a95d8=\"44cdc6d9a9c3d9864bd7f26b86bb0f5c\" for domain graswachstum.ch, path \/, expire 1734463736\n< set-cookie: grav-site-23a95d8=44cdc6d9a9c3d9864bd7f26b86bb0f5c; expires=Tue, 17 Dec 2024 19:28:56 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:56 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff584a0)\n> GET \/ HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:21:51 GMT\r\n* Added cookie grav-site-23a95d8=\"5aeb4676088510bc9e577dd097af47fb\" for domain graswachstum.ch, path \/, expire 1734465111\n< set-cookie: grav-site-23a95d8=5aeb4676088510bc9e577dd097af47fb; expires=Tue, 17 Dec 2024 19:51:51 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:21:51 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

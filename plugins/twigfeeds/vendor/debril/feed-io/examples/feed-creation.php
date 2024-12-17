@@ -16,7 +16,6 @@ use \FeedIo\Feed;
 $feed = new Feed();
 $feed->setLink('https://feed-io.net');
 $feed->setTitle('feed-io example feed');
-$feed->setDescription('my greate feed');
 
 // The item instance SHOULD be instanciated by the feed
 $item = $feed->newItem();
@@ -24,8 +23,8 @@ $item = $feed->newItem();
 $item->setTitle('a title');
 $item->setLastModified(new \DateTime());
 $item->setLink('https://feed-io.net/item/1');
-$item->setContent("Hope you like the code you are reading");
-$item->setSummary('my summary');
+$item->setDescription("Hope you like the code you are reading");
+
 $feed->add($item);
 
 $feedIo = Factory::create()->getFeedIo();

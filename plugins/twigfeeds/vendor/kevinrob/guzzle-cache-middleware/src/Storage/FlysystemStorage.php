@@ -5,7 +5,6 @@ namespace Kevinrob\GuzzleCache\Storage;
 use Kevinrob\GuzzleCache\CacheEntry;
 use League\Flysystem\AdapterInterface;
 use League\Flysystem\Filesystem;
-use League\Flysystem\FileNotFoundException;
 
 class FlysystemStorage implements CacheStorageInterface
 {
@@ -52,10 +51,6 @@ class FlysystemStorage implements CacheStorageInterface
      */
     public function delete($key)
     {
-        try {
-            return $this->filesystem->delete($key);
-        } catch (FileNotFoundException $ex) {
-            return true;
-        }
+        return $this->filesystem->delete($key);
     }
 }

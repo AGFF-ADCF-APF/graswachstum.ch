@@ -21,7 +21,7 @@ class ModifiedSinceTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $date = new DateTimeBuilder();
         $date->addDateFormat(\DateTime::ATOM);

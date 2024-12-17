@@ -19,7 +19,7 @@ class AuthorTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Author();
     }

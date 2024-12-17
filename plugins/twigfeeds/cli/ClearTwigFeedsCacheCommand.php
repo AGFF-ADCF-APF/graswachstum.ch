@@ -1,9 +1,8 @@
 <?php
-
 /**
  * TwigFeeds Plugin, Clear Cache CLI
  *
- * PHP version 8
+ * PHP version 7
  *
  * @category   Extensions
  * @package    Grav
@@ -12,7 +11,6 @@
  * @license    http://www.opensource.org/licenses/mit-license.html MIT License
  * @link       https://github.com/OleVik/grav-plugin-twigfeeds
  */
-
 namespace Grav\Plugin\Console;
 
 use Grav\Common\Grav;

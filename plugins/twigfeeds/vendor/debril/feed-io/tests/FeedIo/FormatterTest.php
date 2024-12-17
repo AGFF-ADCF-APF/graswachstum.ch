@@ -24,7 +24,7 @@ class FormatterTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $ruleSet = new RuleSet();
         $ruleSet->add(new Title());
@@ -67,13 +67,11 @@ class FormatterTest extends TestCase
         $item = new Item();
         $item->set('title', 'the title');
         $item->set('description', 'the description');
-        $item->set('custom', 'a custom value');
-        $item->set('custom', 'another custom value');
 
         $rules = $this->object->getAllRules(new RuleSet(), $item);
-        $this->assertCount(3, $rules);
+        $this->assertCount(2, $rules);
 
-        $ruleNames = array('title', 'description', 'custom');
+        $ruleNames = array('title', 'description');
         foreach ($rules as $rule) {
             $this->assertEquals(current($ruleNames), $rule->getNodeName());
             next($ruleNames);
@@ -85,8 +83,8 @@ class FormatterTest extends TestCase
         $feed = new Feed();
         $feed->setTitle('foo-bar');
         $out = $this->object->toString($feed);
-        $this->assertIsString($out);
-        $this->assertStringContainsString('foo-bar', $out);
+        $this->assertInternalType('string', $out);
+        $this->assertContains('foo-bar', $out);
         $this->assertEquals('<?xml version="1.0"?>
 <channel><feed><title>foo-bar</title></feed></channel>
 ', $out);
@@ -102,7 +100,6 @@ class FormatterTest extends TestCase
     public function testSetItems()
     {
         $feed = new Feed();
-
         $feed->add(new Item());
         $feed->add(new Item());
 

@@ -19,7 +19,7 @@ class AuthorTest extends TestCase
 
     const AUTHOR = 'John Doe';
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Author();
     }

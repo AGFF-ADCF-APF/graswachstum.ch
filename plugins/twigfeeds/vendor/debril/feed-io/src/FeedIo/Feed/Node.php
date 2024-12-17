@@ -1,42 +1,64 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Feed;
 
-use ArrayIterator;
-use DateTime;
-use Generator;
-use FeedIo\Feed\Item\Author;
-use FeedIo\Feed\Item\AuthorInterface;
 use FeedIo\Feed\Node\Category;
 use FeedIo\Feed\Node\CategoryInterface;
 
-class Node implements NodeInterface, ElementsAwareInterface, ArrayableInterface
+class Node implements NodeInterface, ElementsAwareInterface
 {
     use ElementsAwareTrait;
 
-    protected ArrayIterator $categories;
+    /**
+     * @var \ArrayIterator
+     */
+    protected $categories;
 
-    protected ?AuthorInterface $author = null;
+    /**
+     * @var string
+     */
+    protected $title;
 
-    protected ?DateTime $lastModified = null;
+    /**
+     * @var string
+     */
+    protected $publicId;
 
-    protected ?string $title = null;
+    /**
+     * @var string
+     */
+    protected $description;
 
-    protected ?string $publicId = null;
+    /**
+     * @var \DateTime
+     */
+    protected $lastModified;
 
-    protected ?string $link = null;
-
-    protected ?string $host = null;
+    /**
+     * @var string
+     */
+    protected $link;
 
     public function __construct()
     {
         $this->initElements();
-        $this->categories = new ArrayIterator();
+        $this->categories = new \ArrayIterator();
     }
 
-    public function set(string $name, string $value = null): NodeInterface
+    /**
+     * @param  string $name  element name
+     * @param  string $value element value
+     * @return NodeInterface
+     */
+    public function set(string $name, string $value = null) : NodeInterface
     {
         $element = $this->newElement();
 
@@ -48,109 +70,149 @@ class Node implements NodeInterface, ElementsAwareInterface, ArrayableInterface
         return $this;
     }
 
-    public function getAuthor(): ?AuthorInterface
-    {
-        return $this->author;
-    }
-
-    public function setAuthor(AuthorInterface $author = null): NodeInterface
-    {
-        $this->author = $author;
-
-        return $this;
-    }
-
-    public function newAuthor(): AuthorInterface
-    {
-        return new Author();
-    }
-
-    public function getCategories(): iterable
+    /**
+     * returns node's categories
+     *
+     * @return iterable
+     */
+    public function getCategories() : iterable
     {
         return $this->categories;
     }
 
-    public function getCategoriesGenerator(): Generator
+    /**
+     * @return \Generator
+     */
+    public function getCategoriesGenerator() : \Generator
     {
         foreach ($this->categories as $category) {
             yield $category->getlabel();
         }
     }
 
-    public function addCategory(CategoryInterface $category): NodeInterface
+    /**
+     * adds a category to the node
+     *
+     * @param \FeedIo\Feed\Node\CategoryInterface $category
+     * @return NodeInterface
+     */
+    public function addCategory(CategoryInterface $category) : NodeInterface
     {
         $this->categories->append($category);
 
         return $this;
     }
 
-    public function newCategory(): CategoryInterface
+    /**
+     * returns a new CategoryInterface
+     *
+     * @return \FeedIo\Feed\Node\CategoryInterface
+     */
+    public function newCategory() : CategoryInterface
     {
         return new Category();
     }
 
-    public function getTitle(): ?string
+    /**
+     * @return string
+     */
+    public function getTitle() : ? string
     {
         return $this->title;
     }
 
-    public function setTitle(string $title = null): NodeInterface
+    /**
+     * @param  string $title
+     * @return NodeInterface
+     */
+    public function setTitle(string $title = null) : NodeInterface
     {
         $this->title = $title;
 
         return $this;
     }
 
-    public function getPublicId(): ?string
+    /**
+     * @return string
+     */
+    public function getPublicId() : ? string
     {
         return $this->publicId;
     }
 
-    public function setPublicId(string $publicId = null): NodeInterface
+    /**
+     * @param  string $publicId
+     * @return NodeInterface
+     */
+    public function setPublicId(string $publicId = null) : NodeInterface
     {
         $this->publicId = $publicId;
 
         return $this;
     }
 
-    public function getLastModified(): ?DateTime
+    /**
+     * @return string
+     */
+    public function getDescription() : ? string
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param  string $description
+     * @return NodeInterface
+     */
+    public function setDescription(string $description = null) : NodeInterface
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLastModified() : ? \DateTime
     {
         return $this->lastModified;
     }
 
-    public function setLastModified(DateTime $lastModified = null): NodeInterface
+    /**
+     * @param  \DateTime $lastModified
+     * @return NodeInterface
+     */
+    public function setLastModified(\DateTime $lastModified = null) : NodeInterface
     {
         $this->lastModified = $lastModified;
 
         return $this;
     }
 
-    public function getHost(): ?string
-    {
-        return $this->host;
-    }
-
-    public function getLink(): ?string
+    /**
+     * @return string
+     */
+    public function getLink() : ? string
     {
         return $this->link;
     }
 
-    public function setLink(string $link = null): NodeInterface
+    /**
+     * @param  string $link
+     * @return NodeInterface
+     */
+    public function setLink(string $link = null) : NodeInterface
     {
         $this->link = $link;
-        $this->setHost($link);
 
         return $this;
     }
 
-    protected function setHost(string $link = null): void
-    {
-        if (!is_null($link)) {
-            $this->host = '//' . parse_url($link, PHP_URL_HOST);
-        }
-    }
-
-    public function getValue(string $name): ?string
+    /**
+     * @param string $name element name
+     * @return null|string
+     */
+    public function getValue(string $name) : ? string
     {
         foreach ($this->getElementIterator($name) as $element) {
             return $element->getValue();
@@ -159,27 +221,21 @@ class Node implements NodeInterface, ElementsAwareInterface, ArrayableInterface
         return null;
     }
 
-    public function toArray(): array
+    /**
+     * @return array
+     */
+    public function toArray() : array
     {
         $properties = get_object_vars($this);
-        $properties['elements'] = iterator_to_array($this->getElementsGenerator());
-        $properties['categories'] = iterator_to_array($this->getCategoriesGenerator());
 
         foreach ($properties as $name => $property) {
             if ($property instanceof \DateTime) {
                 $properties[$name] = $property->format(\DateTime::ATOM);
-            } elseif ($property instanceof \ArrayIterator) {
-                $properties[$name] = [];
-                foreach ($property as $entry) {
-                    if ($entry instanceof ArrayableInterface) {
-                        $entry = $entry->toArray();
-                    }
-                    $properties[$name] []= $entry;
-                }
-            } elseif ($property instanceof ArrayableInterface) {
-                $properties[$name] = $property->toArray();
             }
         }
+
+        $properties['elements'] = iterator_to_array($this->getElementsGenerator());
+        $properties['categories'] = iterator_to_array($this->getCategoriesGenerator());
 
         return $properties;
     }

@@ -1,44 +1,66 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule;
 
-use DOMDocument;
-use DOMElement;
 use FeedIo\Feed\NodeInterface;
 use FeedIo\RuleAbstract;
 use FeedIo\RuleSet;
 
 class Structure extends RuleAbstract
 {
-    public const NODE_NAME = 'structure';
+    const NODE_NAME = 'structure';
 
-    protected RuleSet $ruleSet;
+    /**
+     * @var \FeedIo\RuleSet
+     */
+    protected $ruleSet;
 
+    /**
+     * @param string  $nodeName
+     * @param RuleSet $ruleSet
+     */
     public function __construct(string $nodeName = null, RuleSet $ruleSet = null)
     {
         parent::__construct($nodeName);
 
-        $this->ruleSet = $ruleSet ?? new RuleSet();
+        $this->ruleSet = is_null($ruleSet) ? new RuleSet() : $ruleSet;
     }
 
-    public function setProperty(NodeInterface $node, DOMElement $element): void
+    /**
+     * @param  NodeInterface $node
+     * @param  \DOMElement   $element
+     * @return mixed
+     */
+    public function setProperty(NodeInterface $node, \DOMElement $element) : void
     {
         foreach ($element->childNodes as $domNode) {
-            if ($domNode instanceof DomElement) {
+            if ($domNode instanceof \DomElement) {
                 $rule = $this->ruleSet->get($domNode->tagName);
                 $rule->setProperty($node, $domNode);
             }
         }
     }
 
-    protected function hasValue(NodeInterface $node): bool
+    /**
+     * @inheritDoc
+     */
+    protected function hasValue(NodeInterface $node) : bool
     {
         return true;
     }
 
-    protected function addElement(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void
+    /**
+     * @inheritDoc
+     */
+    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
         $element = $document->createElement($this->getNodeName());
 

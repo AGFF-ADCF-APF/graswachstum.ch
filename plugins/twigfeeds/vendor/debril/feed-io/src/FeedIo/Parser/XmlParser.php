@@ -1,17 +1,23 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Parser;
 
-use DOMElement;
-use FeedIo\FeedIoException;
+use FeedIo\Parser;
 use FeedIo\RuleSet;
 use FeedIo\FeedInterface;
 use FeedIo\Feed\NodeInterface;
 use FeedIo\ParserAbstract;
 use FeedIo\Reader\Document;
-use FeedIo\Standard\XmlAbstract;
+use FeedIo\Parser\MissingFieldsException;
+use FeedIo\Parser\UnsupportedFormatException;
 
 /**
  * Parses a DOM document if its format matches the parser's standard
@@ -23,25 +29,39 @@ use FeedIo\Standard\XmlAbstract;
  */
 class XmlParser extends ParserAbstract
 {
-    public function isItem(string $tagName): bool
-    {
-        if ($this->standard instanceof XmlAbstract) {
-            return (strtolower($this->standard->getItemNodeName()) === strtolower($tagName));
-        }
 
-        return false;
+    /**
+     * @param $tagName
+     * @return bool
+     */
+    public function isItem(string $tagName) : bool
+    {
+        return (strtolower($this->standard->getItemNodeName()) === strtolower($tagName));
     }
 
-    public function parseContent(Document $document, FeedInterface $feed): FeedInterface
+    /**
+     * @param  Document                       $document
+     * @param  FeedInterface                  $feed
+     * @return \FeedIo\FeedInterface
+     * @throws Parser\MissingFieldsException
+     * @throws Parser\UnsupportedFormatException
+     */
+    public function parseContent(Document $document, FeedInterface $feed) : FeedInterface
     {
-        if ($this->standard instanceof XmlAbstract) {
-            $element = $this->standard->getMainElement($document->getDOMDocument());
-            $this->parseNode($feed, $element, $this->standard->getFeedRuleSet());
-        }
+        $element = $this->standard->getMainElement($document->getDOMDocument());
+
+        $this->parseNode($feed, $element, $this->standard->getFeedRuleSet());
+
         return $feed;
     }
 
-    public function checkBodyStructure(Document $document, iterable $mandatoryFields): bool
+    /**
+     * @param Document $document
+     * @param iterable $mandatoryFields
+     * @throws MissingFieldsException
+     * @return bool
+     */
+    public function checkBodyStructure(Document $document, iterable $mandatoryFields) : bool
     {
         $errors = array();
 
@@ -62,10 +82,16 @@ class XmlParser extends ParserAbstract
         return true;
     }
 
-    public function parseNode(NodeInterface $item, DOMElement $element, RuleSet $ruleSet): NodeInterface
+    /**
+     * @param  NodeInterface $item
+     * @param  \DOMElement   $element
+     * @param  RuleSet       $ruleSet
+     * @return NodeInterface
+     */
+    public function parseNode(NodeInterface $item, \DOMElement $element, RuleSet $ruleSet) : NodeInterface
     {
         foreach ($element->childNodes as $node) {
-            if ($node instanceof DOMElement) {
+            if ($node instanceof \DOMElement) {
                 $this->handleNode($item, $node, $ruleSet);
             }
         }
@@ -73,22 +99,19 @@ class XmlParser extends ParserAbstract
         return $item;
     }
 
-    protected function handleNode(NodeInterface $item, DOMElement $node, RuleSet $ruleSet): void
+    /**
+     * @param NodeInterface $item
+     * @param \DOMElement $node
+     * @param RuleSet $ruleSet
+     */
+    protected function handleNode(NodeInterface $item, \DOMElement $node, RuleSet $ruleSet) : void
     {
         if ($this->isItem($node->tagName) && $item instanceof FeedInterface) {
-            $newItem = $this->parseNode($item->newItem(), $node, $this->getItemRuleSet());
+            $newItem = $this->parseNode($item->newItem(), $node, $this->standard->getItemRuleSet());
             $this->addValidItem($item, $newItem);
         } else {
             $rule = $ruleSet->get($node->tagName);
             $rule->setProperty($item, $node);
         }
-    }
-
-    protected function getItemRuleSet(): RuleSet
-    {
-        if ($this->standard instanceof XmlAbstract) {
-            return $this->standard->getItemRuleSet();
-        }
-        throw new FeedIoException('Not an XML Standard');
     }
 }

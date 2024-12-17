@@ -1,14 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule;
 
-use DomDocument;
-use DOMElement;
-use DOMNode;
-use DOMNodeList;
-use DOMText;
 use FeedIo\Feed\ElementsAwareInterface;
 use FeedIo\Feed\NodeInterface;
 use FeedIo\Feed\Node\ElementInterface;
@@ -16,39 +17,55 @@ use FeedIo\RuleAbstract;
 
 class OptionalField extends RuleAbstract
 {
-    public const NODE_NAME = 'default';
+    const NODE_NAME = 'default';
 
-    public function setProperty(NodeInterface $node, DOMElement $element): void
+    /**
+     * @param  NodeInterface $node
+     * @param  \DOMElement   $domElement
+     */
+    public function setProperty(NodeInterface $node, \DOMElement $domElement) : void
     {
-        if ($node instanceof ElementsAwareInterface) {
-            $newElement = $this->createElementFromDomNode($node, $element);
-            $node->addElement($newElement);
-        }
+        $element = $this->createElementFromDomNode($node, $domElement);
+
+        $node->addElement($element);
     }
 
-    private function addSubElements(ElementsAwareInterface $node, ElementInterface $element, DOMNode $domNode): void
+    /**
+     * @param NodeInterface $node
+     * @param ElementInterface $element
+     * @param \DOMNode $domNode
+     */
+    private function addSubElements(NodeInterface $node, ElementInterface $element, \DOMNode $domNode) : void
     {
         if (!$domNode->hasChildNodes() || !$this->hasSubElements($domNode)) {
+            // no elements to add
             return;
         }
 
         $this->addElementsFromNodeList($node, $element, $domNode->childNodes);
     }
 
-    private function addElementsFromNodeList(ElementsAwareInterface $node, ElementInterface $element, DOMNodeList $childNodeList): void
+    /**
+     * @param NodeInterface $node
+     * @param ElementInterface $element
+     * @param \DOMNodeList $childNodeList
+     */
+    private function addElementsFromNodeList(NodeInterface $node, ElementInterface $element, \DOMNodeList $childNodeList) : void
     {
         foreach ($childNodeList as $childNode) {
-            if ($childNode instanceof DOMText) {
+            if ($childNode instanceof \DOMText) {
                 continue;
             }
 
-            if ($element instanceof ElementsAwareInterface) {
-                $element->addElement($this->createElementFromDomNode($node, $childNode));
-            }
+            $element->addElement($this->createElementFromDomNode($node, $childNode));
         }
     }
 
-    private function hasSubElements(DOMNode $domNode): bool
+    /**
+     * @param \DOMNode $domNode
+     * @return bool
+     */
+    private function hasSubElements(\DOMNode $domNode) : bool
     {
         foreach ($domNode->childNodes as $childDomNode) {
             if (!$childDomNode instanceof \DOMText) {
@@ -59,7 +76,12 @@ class OptionalField extends RuleAbstract
         return false;
     }
 
-    private function createElementFromDomNode(ElementsAwareInterface $node, DOMNode $domNode): ElementInterface
+    /**
+     * @param NodeInterface $node
+     * @param \DOMNode $domNode
+     * @return ElementInterface
+     */
+    private function createElementFromDomNode(NodeInterface $node, \DOMNode $domNode) : ElementInterface
     {
         $element = $node->newElement();
         $element->setName($domNode->nodeName);
@@ -73,7 +95,12 @@ class OptionalField extends RuleAbstract
         return $element;
     }
 
-    public function buildDomElement(DomElement $domElement, ElementInterface $element): DOMElement
+    /**
+     * @param \DomElement $domElement
+     * @param ElementInterface $element
+     * @return \DomElement
+     */
+    public function buildDomElement(\DomElement $domElement, ElementInterface $element) : \DOMElement
     {
         $domElement->nodeValue = $element->getValue();
 
@@ -81,13 +108,11 @@ class OptionalField extends RuleAbstract
             $domElement->setAttribute($name, $value);
         }
 
-        if ($element instanceof ElementsAwareInterface) {
-            /** @var ElementInterface $subElement */
-            foreach ($element->getAllElements() as $subElement) {
-                $subDomElement = $domElement->ownerDocument->createElement($subElement->getName());
-                $this->buildDomElement($subDomElement, $subElement);
-                $domElement->appendChild($subDomElement);
-            }
+        /** @var ElementInterface $subElement */
+        foreach ($element->getAllElements() as $subElement) {
+            $subDomElement = $domElement->ownerDocument->createElement($subElement->getName());
+            $this->buildDomElement($subDomElement, $subElement);
+            $domElement->appendChild($subDomElement);
         }
 
         return $domElement;
@@ -96,7 +121,7 @@ class OptionalField extends RuleAbstract
     /**
      * @inheritDoc
      */
-    protected function hasValue(NodeInterface $node): bool
+    protected function hasValue(NodeInterface $node) : bool
     {
         return $node instanceof ElementsAwareInterface;
     }
@@ -104,22 +129,15 @@ class OptionalField extends RuleAbstract
     /**
      * @inheritDoc
      */
-    protected function addElement(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void
+    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
-        $addedElementsCount = 0;
-
+        $domElement = $document->createElement($this->getNodeName());
         if ($node instanceof ElementsAwareInterface) {
             foreach ($node->getElementIterator($this->getNodeName()) as $element) {
-                $domElement = $document->createElement($this->getNodeName());
                 $this->buildDomElement($domElement, $element);
-                $rootElement->appendChild($domElement);
-                $addedElementsCount++;
             }
         }
 
-        if (! $addedElementsCount) {
-            // add an implicit empty element if the node had no elements matching this rule
-            $rootElement->appendChild($document->createElement($this->getNodeName()));
-        }
+        $rootElement->appendChild($domElement);
     }
 }

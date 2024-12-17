@@ -1,6 +1,12 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Standard;
 
@@ -11,15 +17,15 @@ use FeedIo\StandardAbstract;
 
 class Json extends StandardAbstract
 {
-    public const SYNTAX_FORMAT = 'Json';
+    const SYNTAX_FORMAT = 'Json';
 
-    protected array $mandatoryFields = ['version', 'title', 'items'];
+    protected $mandatoryFields = ['version', 'title', 'items'];
 
     /**
      * @param Document $document
      * @return bool
      */
-    public function canHandle(Document $document): bool
+    public function canHandle(Document $document) : bool
     {
         return $document->isJson();
     }
@@ -27,7 +33,7 @@ class Json extends StandardAbstract
     /**
      * @return FormatterInterface
      */
-    public function getFormatter(): FormatterInterface
+    public function getFormatter() : FormatterInterface
     {
         return new JsonFormatter();
     }

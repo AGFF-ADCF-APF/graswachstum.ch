@@ -1,11 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Standard;
 
-use DOMDocument;
-use DOMElement;
 use FeedIo\Formatter\XmlFormatter;
 use FeedIo\FormatterInterface;
 use FeedIo\StandardAbstract;
@@ -15,39 +19,74 @@ use FeedIo\Rule\Title;
 
 abstract class XmlAbstract extends StandardAbstract
 {
+
     /**
      * Name of the node containing all the feed's items
      */
-    public const ITEM_NODE = 'item';
+    const ITEM_NODE = 'item';
 
     /**
      * This is for XML Standards
      */
-    public const SYNTAX_FORMAT = 'Xml';
+    const SYNTAX_FORMAT = 'Xml';
 
-    protected ?RuleSet $feedRuleSet = null;
+    /**
+     * RuleSet used to parse the feed's main node
+     * @var \FeedIo\RuleSet
+     */
+    protected $feedRuleSet;
 
-    protected ?RuleSet $itemRuleSet = null;
+    /**
+     * @var \FeedIo\RuleSet
+     */
+    protected $itemRuleSet;
 
-    abstract public function format(DOMDocument $document): DOMDocument;
+    /**
+     * Formats the document according to the standard's specification
+     * @param  \DOMDocument $document
+     * @return \DOMDocument
+     */
+    abstract public function format(\DOMDocument $document) : \DOMDocument;
 
-    abstract public function getMainElement(DOMDocument $document): DOMElement;
+    /**
+     * @param  \DOMDocument $document
+     * @return \DomElement
+     */
+    abstract public function getMainElement(\DOMDocument $document) : \DOMElement;
 
-    abstract public function buildFeedRuleSet(): RuleSet;
+    /**
+     * Builds and returns a rule set to parse the root node
+     * @return \FeedIo\RuleSet
+     */
+    abstract public function buildFeedRuleSet() : RuleSet;
 
-    abstract public function buildItemRuleSet(): RuleSet;
+    /**
+     * Builds and returns a rule set to parse an item
+     * @return \FeedIo\RuleSet
+     */
+    abstract public function buildItemRuleSet() : RuleSet;
 
-    public function getItemNodeName(): string
+    /**
+     * @return string
+     */
+    public function getItemNodeName() : string
     {
         return static::ITEM_NODE;
     }
 
-    public function getFormatter(): FormatterInterface
+    /**
+     * @return FormatterInterface
+     */
+    public function getFormatter() : FormatterInterface
     {
         return new XmlFormatter($this);
     }
 
-    public function getFeedRuleSet(): RuleSet
+    /**
+     * Returns the RuleSet used to parse the feed's main node
+     * @return \FeedIo\RuleSet
+     */
+    public function getFeedRuleSet() : RuleSet
     {
         if (is_null($this->feedRuleSet)) {
             $this->feedRuleSet = $this->buildFeedRuleSet();
@@ -56,7 +95,10 @@ abstract class XmlAbstract extends StandardAbstract
         return $this->feedRuleSet;
     }
 
-    public function getItemRuleSet(): RuleSet
+    /**
+     * @return \FeedIo\RuleSet
+     */
+    public function getItemRuleSet() : RuleSet
     {
         if (is_null($this->itemRuleSet)) {
             $this->itemRuleSet = $this->buildItemRuleSet();
@@ -65,7 +107,11 @@ abstract class XmlAbstract extends StandardAbstract
         return $this->itemRuleSet;
     }
 
-    public function getModifiedSinceRule(string $tagName): ModifiedSince
+    /**
+     * @param  string        $tagName
+     * @return ModifiedSince
+     */
+    public function getModifiedSinceRule(string $tagName) : ModifiedSince
     {
         $rule = new ModifiedSince($tagName);
         $rule->setDefaultFormat($this->getDefaultDateFormat());
@@ -74,7 +120,10 @@ abstract class XmlAbstract extends StandardAbstract
         return $rule;
     }
 
-    protected function buildBaseRuleSet(): RuleSet
+    /**
+     * @return RuleSet
+     */
+    protected function buildBaseRuleSet() : RuleSet
     {
         $ruleSet = $ruleSet = new RuleSet();
         $ruleSet->add(new Title());

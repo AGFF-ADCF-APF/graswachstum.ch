@@ -1,11 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule\Atom;
 
-use DomDocument;
-use DOMElement;
 use FeedIo\Feed\ItemInterface;
 use FeedIo\Feed\NodeInterface;
 use FeedIo\RuleAbstract;
@@ -13,10 +17,16 @@ use FeedIo\RuleSet;
 
 class LinkNode extends RuleAbstract
 {
-    public const NODE_NAME = 'link';
+    const NODE_NAME = 'link';
 
-    protected RuleSet $ruleSet;
+    /**
+     * @var \FeedIo\RuleSet
+     */
+    protected $ruleSet;
 
+    /**
+     * @param string $nodeName
+     */
     public function __construct(string $nodeName = null)
     {
         parent::__construct($nodeName);
@@ -26,7 +36,12 @@ class LinkNode extends RuleAbstract
         $this->ruleSet->add($mediaRule, ['media', 'enclosure']);
     }
 
-    public function setProperty(NodeInterface $node, DOMElement $element): void
+    /**
+     * @param  NodeInterface $node
+     * @param  \DOMElement   $element
+     * @return mixed
+     */
+    public function setProperty(NodeInterface $node, \DOMElement $element) : void
     {
         if ($element->hasAttribute('rel')) {
             $this->ruleSet->get($element->getAttribute('rel'))->setProperty($node, $element);
@@ -35,12 +50,19 @@ class LinkNode extends RuleAbstract
         }
     }
 
-    protected function hasValue(NodeInterface $node): bool
+    /**
+     * @inheritDoc
+     */
+    protected function hasValue(NodeInterface $node) : bool
     {
         return true;
     }
 
-    protected function addElement(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void
+
+    /**
+     * @inheritDoc
+     */
+    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
         if ($node instanceof ItemInterface && $node->hasMedia()) {
             $this->ruleSet->get('media')->apply($document, $rootElement, $node);

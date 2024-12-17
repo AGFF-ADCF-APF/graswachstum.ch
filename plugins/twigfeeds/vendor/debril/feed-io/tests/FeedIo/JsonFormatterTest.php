@@ -18,8 +18,6 @@ use \PHPUnit\Framework\TestCase;
 
 class JsonFormatterTest extends TestCase
 {
-    const LOGO = 'http://localhost/logo.jpeg';
-
     public function testToString()
     {
         $items = [
@@ -29,10 +27,6 @@ class JsonFormatterTest extends TestCase
 
         $feed = new Feed();
         $feed->setTitle('feed title');
-        $feed->setLogo(self::LOGO);
-        $author = new Item\Author();
-        $author->setName('alex');
-        $feed->setAuthor($author);
 
         foreach ($items as $item) {
             $feed->add($item);
@@ -44,19 +38,15 @@ class JsonFormatterTest extends TestCase
         $this->assertJson($string);
         $json = json_decode($string, true);
 
-        $this->assertEquals('alex', $json['authors'][0]['name']);
         $this->assertEquals('feed title', $json['title']);
-        $this->assertEquals('http://localhost/logo.jpeg', $json['icon']);
         $this->assertCount(2, $json['items']);
 
         foreach ($json['items'] as $item) {
             $this->assertArrayHasKey('title', $item);
             $this->assertArrayHasKey('url', $item);
-            $this->assertArrayHasKey('authors', $item);
+            $this->assertArrayHasKey('author', $item);
             $this->assertArrayHasKey('date_published', $item);
         }
-
-        $this->assertEquals(['name' => 'foo bar'], $json['items'][0]['authors'][0]);
     }
 
     public function testIsHtml()
@@ -83,6 +73,7 @@ class JsonFormatterTest extends TestCase
         $item->addCategory(new Category());
         $item->setLastModified(new \DateTime());
         $item->setTitle($title);
+        $item->setDescription($description);
 
         return $item;
     }

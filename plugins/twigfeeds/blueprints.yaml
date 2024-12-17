@@ -1,6 +1,5 @@
 name: Twig Feeds
-version: 5.0.0-beta.2
-testing: true
+version: 4.0.1
 description: "Parse RSS, Atom, and JSON feeds with Twig."
 icon: feed
 author:
@@ -12,7 +11,7 @@ keywords: avatar, avatars, identicon, identicons
 bugs: https://github.com/olevik/grav-plugin-twigfeeds/issues
 license: MIT
 dependencies:
-  - { name: grav, version: ">=1.7" }
+  - { name: grav, version: ">=1.6" }
 
 form:
   validation: strict

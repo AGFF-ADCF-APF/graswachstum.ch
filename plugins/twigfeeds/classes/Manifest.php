@@ -1,9 +1,8 @@
 <?php
-
 /**
  * TwigFeeds Plugin, Manifest API
  *
- * PHP version 8
+ * PHP version 7
  *
  * @category   Extensions
  * @package    Grav
@@ -12,8 +11,9 @@
  * @license    http://www.opensource.org/licenses/mit-license.html MIT License
  * @link       https://github.com/OleVik/grav-plugin-twigfeeds
  */
-
 namespace Grav\Plugin\TwigFeedsPlugin\API;
+
+use DateTime;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
@@ -151,7 +151,8 @@ class Manifest
                 } catch (IOExceptionInterface $e) {
                     throw new \Exception($e);
                 }
-                return 'Removed ' . $path;;
+                return 'Removed ' . $path;
+                ;
             } else {
                 return 'Not a directory: ' . $path;
             }
@@ -204,7 +205,7 @@ class Manifest
             } else {
                 $end = 50;
             }
-            $amount = abs($start - $end);
+            $amount = abs($start-$end);
             $manifest['data'][$feed['source']]['amount'] = $amount;
             $manifest['data'][$feed['source']]['etag'] = '';
             $manifest['data'][$feed['source']]['last_modified'] = '';
@@ -311,7 +312,7 @@ class Manifest
             } else {
                 $end = 50;
             }
-            $feeds[$feed['source']]['amount'] = abs($start - $end);
+            $feeds[$feed['source']]['amount'] = abs($start-$end);
             if (isset($feed['cache_time'])) {
                 $feeds[$feed['source']]['cache_time'] = $feed['cache_time'];
             } elseif (isset($setting['cache_time'])) {

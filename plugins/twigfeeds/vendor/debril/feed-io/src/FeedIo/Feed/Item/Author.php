@@ -1,32 +1,46 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Feed\Item;
 
-use FeedIo\Feed\ArrayableInterface;
-
-class Author implements AuthorInterface, ArrayableInterface
+class Author implements AuthorInterface
 {
-    protected ?string $name = null;
-
-    protected ?string $uri = null;
-
-    protected ?string $email = null;
 
     /**
-     * @return string|null
+     * @var string
      */
-    public function getName(): ?string
+    protected $name;
+
+    /**
+     * @var string
+     */
+    protected $uri;
+
+    /**
+     * @var string
+     */
+    protected $email;
+
+    /**
+     * @return string
+     */
+    public function getName() : ? string
     {
         return $this->name;
     }
 
     /**
-     * @param string|null $name
+     * @param  string $name
      * @return AuthorInterface
      */
-    public function setName(string $name = null): AuthorInterface
+    public function setName(string $name = null) : AuthorInterface
     {
         $this->name = $name;
 
@@ -34,18 +48,18 @@ class Author implements AuthorInterface, ArrayableInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getUri(): ?string
+    public function getUri() : ? string
     {
         return $this->uri;
     }
 
     /**
-     * @param string|null $uri
+     * @param  string $uri
      * @return AuthorInterface
      */
-    public function setUri(string $uri = null): AuthorInterface
+    public function setUri(string $uri = null) : AuthorInterface
     {
         $this->uri = $uri;
 
@@ -53,29 +67,21 @@ class Author implements AuthorInterface, ArrayableInterface
     }
 
     /**
-     * @return string|null
+     * @return string
      */
-    public function getEmail(): ?string
+    public function getEmail() : ? string
     {
         return $this->email;
     }
 
     /**
-     * @param string|null $email
+     * @param  string $email
      * @return AuthorInterface
      */
-    public function setEmail(string $email = null): AuthorInterface
+    public function setEmail(string $email = null) : AuthorInterface
     {
         $this->email = $email;
 
         return $this;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray(): array
-    {
-        return get_object_vars($this);
     }
 }

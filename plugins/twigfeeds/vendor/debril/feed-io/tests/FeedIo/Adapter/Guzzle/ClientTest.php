@@ -26,7 +26,7 @@ XML;
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Client($this->getGuzzleClient());
     }
@@ -43,25 +43,28 @@ XML;
         $this->assertEquals(1994, $response->getLastModified()->format('Y'));
     }
 
-    public function testGetNotModified()
+    public function testSetUserAgent()
     {
-        $client = new Client($this->getClientWithStatus(304));
-        $response = $client->getResponse('http://test', new \DateTime());
-        $this->assertEquals(304, $response->getStatusCode());
-        $this->assertEquals("", $response->getBody());
+        $this->object->setUserAgent('the new user-agent');
+
+        $this->assertAttributeEquals('the new user-agent', 'userAgent', $this->object);
     }
 
+    /**
+     * @expectedException \FeedIo\Adapter\NotFoundException
+     */
     public function testGetNotFound()
     {
-        $client = new Client($this->getClientWithStatus(404));
-        $this->expectException('\FeedIo\Adapter\NotFoundException');
+        $client = new Client($this->getErroredClient(404));
         $client->getResponse('http://test', new \DateTime());
     }
 
+    /**
+     * @expectedException \FeedIo\Adapter\ServerErrorException
+     */
     public function testGetServerError()
     {
-        $client = new Client($this->getClientWithStatus(500));
-        $this->expectException('\FeedIo\Adapter\ServerErrorException');
+        $client = new Client($this->getErroredClient(500));
         $client->getResponse('http://test', new \DateTime());
     }
 
@@ -69,19 +72,18 @@ XML;
      * @param $statusCode
      * @return \GuzzleHttp\ClientInterface
      */
-    protected function getClientWithStatus($statusCode)
+    protected function getErroredClient($statusCode)
     {
-        $stream = $this->getMockForAbstractClass('\Psr\Http\Message\StreamInterface');
-        $stream->expects($this->any())->method('getContents')->will($this->returnValue(""));
+        $exception = new BadResponseException(
+            'message',
+            new \GuzzleHttp\Psr7\Request('get', 'http://test'),
+            new \GuzzleHttp\Psr7\Response("{$statusCode}")
+        );
 
-        $response = $this->getMockForAbstractClass('\Psr\Http\Message\ResponseInterface');
-        $response->expects($this->any())->method('getBody')->will($this->returnValue($stream));
-        $response->expects($this->any())->method('getStatusCode')->will($this->returnValue($statusCode));
+        $guzzleClient = $this->getMockForAbstractClass('\GuzzleHttp\ClientInterface');
+        $guzzleClient->expects($this->any())->method('request')->will($this->throwException($exception));
 
-        $client = $this->createMock('\GuzzleHttp\ClientInterface');
-        $client->expects($this->any())->method('request')->will($this->returnValue($response));
-
-        return $client;
+        return $guzzleClient;
     }
 
     /**
@@ -93,15 +95,42 @@ XML;
 
         $stream->expects($this->any())->method('getContents')->will($this->returnValue($this->body));
         $response = $this->getMockForAbstractClass('\Psr\Http\Message\ResponseInterface');
-        $response->expects($this->any())->method('getStatusCode')->will($this->returnValue(200));
         $response->expects($this->any())->method('getBody')->will($this->returnValue($stream));
         $response->expects($this->any())->method('getHeader')->will($this->returnValue(['Tue, 15 Nov 1994 12:45:26 GMT']));
         $response->expects($this->any())->method('getHeaders')->will($this->returnValue(array()));
         $response->expects($this->any())->method('hasHeader')->will($this->returnValue(true));
 
-        $client = $this->createMock('\GuzzleHttp\ClientInterface');
+        $client = $this->createMock('\GuzzleHttp\Client');
         $client->expects($this->any())->method('request')->will($this->returnValue($response));
 
         return $client;
+    }
+
+
+    /**
+     * @runInSeparateProcess
+     */
+    public function testGetPromise()
+    {
+        $mock = new MockHandler([
+            new Response(200, ['X-Foo' => 'Bar']),
+        ]);
+
+        $handler = HandlerStack::create($mock);
+        $client = new Client(new \GuzzleHttp\Client(['handler' => $handler]));
+
+        $request = $this->createMock('\FeedIo\Async\Request');
+        $request->expects($this->once())->method('getUrl')->will($this->returnValue('https://packagist.org/feeds/releases.rss'));
+
+        $requests = [$request];
+
+        $reader = $this->getMockForAbstractClass('\FeedIo\Adapter\Guzzle\Async\ReaderInterface');
+        $promises = $client->getPromises($requests, $reader);
+
+        $this->assertInstanceOf('\Generator', $promises, '$promises MUST be a generator');
+        foreach ($promises as $promise) {
+            $this->assertInstanceOf('\GuzzleHttp\Promise\PromiseInterface', $promise, '$promise MUST be a promise');
+            $this->assertInstanceOf('\Psr\Http\Message\ResponseInterface', $promise->wait(), 'the promise MUST return a PSR-7 Response');
+        }
     }
 }

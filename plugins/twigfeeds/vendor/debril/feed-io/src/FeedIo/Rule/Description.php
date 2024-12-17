@@ -1,45 +1,56 @@
-<?php
-
-declare(strict_types=1);
-
+<?php declare(strict_types=1);
+/**
+ * Created by PhpStorm.
+ * User: alex
+ * Date: 26/10/14
+ * Time: 00:26
+ */
 namespace FeedIo\Rule;
 
-use DomDocument;
-use DOMElement;
 use FeedIo\Feed\NodeInterface;
-use FeedIo\FeedInterface;
+use FeedIo\RuleAbstract;
 
-class Description extends TextAbstract
+class Description extends RuleAbstract
 {
-    public const NODE_NAME = 'description';
+    const NODE_NAME = 'description';
 
     /**
      * @param  NodeInterface $node
-     * @param  DOMElement   $element
+     * @param  \DOMElement   $element
      */
-    public function setProperty(NodeInterface $node, DOMElement $element): void
+    public function setProperty(NodeInterface $node, \DOMElement $element) : void
     {
-        if ($node instanceof FeedInterface) {
-            $node->setDescription($this->getProcessedContent($element, $node));
+        $string = '';
+        if ($element->firstChild && $element->firstChild->nodeType == XML_CDATA_SECTION_NODE) {
+            $string = $element->firstChild->textContent;
+        } else {
+            foreach ($element->childNodes as $childNode) {
+                $string .= $element->ownerDocument->saveXML($childNode);
+            }
         }
+
+        $node->setDescription(htmlspecialchars_decode($string));
     }
 
     /**
      * @inheritDoc
      */
-    protected function hasValue(NodeInterface $node): bool
+    protected function hasValue(NodeInterface $node) : bool
     {
-        if ($node instanceof FeedInterface) {
-            return !! $node->getDescription();
-        }
-        return false;
+        return !! $node->getDescription();
     }
 
-    protected function addElement(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void
+    /**
+     * @inheritDoc
+     */
+    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
-        if ($node instanceof FeedInterface) {
-            $element = $this->generateElement($document, $node->getDescription());
-            $rootElement->appendChild($element);
+        $description = htmlspecialchars($node->getDescription());
+        $element = $document->createElement($this->getNodeName(), $description);
+        if ($description !== $node->getDescription() && $this->getNodeName() != 'description') {
+            $element->setAttribute('type', 'html');
         }
+
+        $rootElement->appendChild($element);
     }
 }

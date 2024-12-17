@@ -1,25 +1,17 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Adapter;
 
-use Psr\Http\Message\ResponseInterface;
+use FeedIo\FeedIoException;
 
-class ServerErrorException extends HttpRequestException
+class ServerErrorException extends FeedIoException
 {
-    public function __construct(
-        protected ResponseInterface $response,
-        float $duration = 0
-    ) {
-        parent::__construct(
-            'internal server error',
-            $duration
-        );
-    }
-
-    public function getResponse(): ResponseInterface
-    {
-        return $this->response;
-    }
 }

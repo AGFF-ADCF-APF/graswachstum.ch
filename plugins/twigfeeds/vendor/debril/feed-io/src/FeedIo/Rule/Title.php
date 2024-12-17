@@ -1,6 +1,12 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule;
 
@@ -9,7 +15,7 @@ use FeedIo\RuleAbstract;
 
 class Title extends RuleAbstract
 {
-    public const NODE_NAME = 'title';
+    const NODE_NAME = 'title';
 
     /**
      * Sets the accurate $item property according to the DomElement content
@@ -17,7 +23,7 @@ class Title extends RuleAbstract
      * @param  NodeInterface $node
      * @param  \DOMElement   $element
      */
-    public function setProperty(NodeInterface $node, \DOMElement $element): void
+    public function setProperty(NodeInterface $node, \DOMElement $element) : void
     {
         $node->setTitle($element->nodeValue);
     }
@@ -28,7 +34,7 @@ class Title extends RuleAbstract
      * @param NodeInterface $node
      * @return bool
      */
-    protected function hasValue(NodeInterface $node): bool
+    protected function hasValue(NodeInterface $node) : bool
     {
         return !! $node->getTitle();
     }
@@ -40,7 +46,7 @@ class Title extends RuleAbstract
      * @param \DOMElement $rootElement
      * @param NodeInterface $node
      */
-    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node): void
+    protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
         $title = htmlspecialchars($node->getTitle());
         $element = $document->createElement(static::NODE_NAME, $title);

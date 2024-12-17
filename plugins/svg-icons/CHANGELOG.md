@@ -1,3 +1,13 @@
+# v2.6.0
+## 12/02/2024
+
+1. [](#new)
+   * Upgraded Tabler to `3.23.0` (5736 icons)
+   * Upgraded Hero Icons to `2.2.0` (324 icons)
+   * Upgraded to Simple Brand Icons to `13.19.0` (3256 icons)
+   * Upgraded to Bootstrap Icons to `1.11.3` (2059 icons)
+   * Upgraded to Lucide Icons to `0.462.0` (1704 icons)
+
 # v2.5.3
 ## 08/09/2024
 

@@ -7,7 +7,6 @@
  */
 namespace FeedIo\Rule;
 
-use FeedIo\Feed;
 use FeedIo\Feed\Item;
 
 use \PHPUnit\Framework\TestCase;
@@ -21,11 +20,9 @@ class DescriptionTest extends TestCase
 
     const DESCRIPTION = 'lorem ipsum';
 
-    const HTML_DESCRIPTION = '<h1>a title</h1><div><p>A paragraph<a href="/link.html">a link</a></p><p>second paragraph</p></div>';
+    const HTML_DESCRIPTION = '<h1>a title</h1><div><p>A paragraph</p><p>second paragraph</p></div>';
 
-    const HTML_DESCRIPTION_WITH_ABSOLUTE_URL = '<h1>a title</h1><div><p>A paragraph<a href="//localhost/link.html">a link</a></p><p>second paragraph</p></div>';
-
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Description();
     }
@@ -37,61 +34,36 @@ class DescriptionTest extends TestCase
 
     public function testSet()
     {
-        $feed = new Feed();
+        $item = new Item();
         $document = new \DOMDocument();
         $element = $document->createElement('description', self::DESCRIPTION);
         $document->appendChild($element);
 
-        $this->object->setProperty($feed, $element);
-        $this->assertEquals(self::DESCRIPTION, $feed->getDescription());
+        $this->object->setProperty($item, $element);
+        $this->assertEquals(self::DESCRIPTION, $item->getDescription());
     }
-
-    public function testSetWithAbsoluteUrlConversion()
-    {
-        $feed = new Feed();
-        $feed->setLink('http://localhost/item.html');
-        $document = new \DOMDocument();
-        $element = $document->createElement('description', self::HTML_DESCRIPTION);
-        $document->appendChild($element);
-
-        $this->object->setProperty($feed, $element);
-        $this->assertEquals(self::HTML_DESCRIPTION_WITH_ABSOLUTE_URL, $feed->getDescription());
-    }
-
-    public function testSetWithoutConversion()
-    {
-        $feed = new Feed();
-        $feed->setLink('http://localhost/item.html');
-        $document = new \DOMDocument();
-        $element = $document->createElement('description', self::HTML_DESCRIPTION_WITH_ABSOLUTE_URL);
-        $document->appendChild($element);
-
-        $this->object->setProperty($feed, $element);
-        $this->assertEquals(self::HTML_DESCRIPTION_WITH_ABSOLUTE_URL, $feed->getDescription());
-    }
-
 
     public function testSetProperty()
     {
-        $feed = new Feed();
+        $item = new Item();
 
         $document = new \DOMDocument();
         $element = $document->createElement('description', self::HTML_DESCRIPTION);
         $document->appendChild($element);
 
-        $this->object->setProperty($feed, $element);
-        $this->assertEquals(self::HTML_DESCRIPTION, $feed->getDescription());
+        $this->object->setProperty($item, $element);
+        $this->assertEquals(self::HTML_DESCRIPTION, $item->getDescription());
     }
 
     public function testCreateElement()
     {
-        $feed = new Feed();
-        $feed->setDescription(self::DESCRIPTION);
+        $item = new Item();
+        $item->setDescription(self::DESCRIPTION);
 
         $document = new \DOMDocument();
         $rootElement = $document->createElement('feed');
 
-        $this->object->apply($document, $rootElement, $feed);
+        $this->object->apply($document, $rootElement, $item);
 
         $addedElement = $rootElement->firstChild;
 

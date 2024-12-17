@@ -12,7 +12,6 @@ namespace FeedIo\Reader\Fixer;
 
 use FeedIo\Feed;
 use FeedIo\Feed\Item;
-use FeedIo\Reader\ResultMockFactory;
 use Psr\Log\NullLogger;
 
 use \PHPUnit\Framework\TestCase;
@@ -21,29 +20,22 @@ class PublicIdTest extends TestCase
 {
 
     /**
-     * @var PublicId
+     * @var FeedIo\Reader\Fixer\PublicId
      */
     protected $object;
 
-    /**
-     * @var ResultMockFactory
-     */
-    protected $resultMockFactory;
-
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new PublicId();
         $this->object->setLogger(new NullLogger());
-        $this->resultMockFactory = new ResultMockFactory();
     }
 
     public function testCorrect()
     {
-        $result = $this->resultMockFactory->makeWithFeed($this->getFeed());
-        $feed = $result->getFeed();
+        $feed = $this->getFeed();
 
         $this->assertNull($feed->getPublicId());
-        $this->object->correct($result);
+        $this->object->correct($feed);
 
         $this->assertEquals($feed->getLink(), $feed->getPublicId());
 

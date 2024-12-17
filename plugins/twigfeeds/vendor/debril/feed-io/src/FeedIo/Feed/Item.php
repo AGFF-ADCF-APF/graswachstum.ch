@@ -1,24 +1,36 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Feed;
 
-use ArrayIterator;
 use FeedIo\Feed\Item\Media;
 use FeedIo\Feed\Item\MediaInterface;
+use FeedIo\Feed\Item\Author;
+use FeedIo\Feed\Item\AuthorInterface;
 
 class Item extends Node implements ItemInterface
 {
-    protected ArrayIterator $medias;
 
-    protected ?string $summary = null;
+    /**
+     * @var \ArrayIterator
+     */
+    protected $medias;
 
-    protected ?string $content = null;
+    /**
+     * @var AuthorInterface
+     */
+    protected $author;
 
     public function __construct()
     {
-        $this->medias = new ArrayIterator();
+        $this->medias = new \ArrayIterator();
 
         parent::__construct();
     }
@@ -27,7 +39,7 @@ class Item extends Node implements ItemInterface
      * @param  MediaInterface $media
      * @return ItemInterface
      */
-    public function addMedia(MediaInterface $media): ItemInterface
+    public function addMedia(MediaInterface $media) : ItemInterface
     {
         $this->medias->append($media);
 
@@ -37,7 +49,7 @@ class Item extends Node implements ItemInterface
     /**
      * @return iterable
      */
-    public function getMedias(): iterable
+    public function getMedias() : iterable
     {
         return $this->medias;
     }
@@ -45,7 +57,7 @@ class Item extends Node implements ItemInterface
     /**
      * @return boolean
      */
-    public function hasMedia(): bool
+    public function hasMedia() : bool
     {
         return $this->medias->count() > 0;
     }
@@ -53,47 +65,35 @@ class Item extends Node implements ItemInterface
     /**
      * @return MediaInterface
      */
-    public function newMedia(): MediaInterface
+    public function newMedia() : MediaInterface
     {
         return new Media();
     }
 
     /**
-     * @return string|null
+     * @return AuthorInterface
      */
-    public function getSummary(): ?string
+    public function getAuthor() : ? AuthorInterface
     {
-        return $this->summary;
+        return $this->author;
     }
 
     /**
-     * @param string|null $summary
+     * @param  AuthorInterface $author
      * @return ItemInterface
      */
-    public function setSummary(string $summary = null): ItemInterface
+    public function setAuthor(AuthorInterface $author = null) : ItemInterface
     {
-        $this->summary = $summary;
+        $this->author = $author;
 
         return $this;
     }
 
     /**
-     * Returns the 'content' for Atom and JSONFeed formats, 'description' for RSS
-     * @return string|null
+     * @return AuthorInterface
      */
-    public function getContent(): ?string
+    public function newAuthor() : AuthorInterface
     {
-        return $this->content;
-    }
-
-    /**
-     * @param string|null $content
-     * @return ItemInterface
-     */
-    public function setContent(string $content = null): ItemInterface
-    {
-        $this->content = $content;
-
-        return $this;
+        return new Author();
     }
 }

@@ -1,4 +1,12 @@
 <?php
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule;
 
@@ -8,7 +16,7 @@ use FeedIo\RuleAbstract;
 
 class Language extends RuleAbstract
 {
-    public const NODE_NAME = 'language';
+    const NODE_NAME = 'language';
 
     /**
      * @param  NodeInterface $node
@@ -17,14 +25,14 @@ class Language extends RuleAbstract
     public function setProperty(NodeInterface $node, \DOMElement $element): void
     {
         if ($node instanceof FeedInterface) {
-            $node->setLanguage($element->nodeValue);
+            $node->set(static::NODE_NAME, $element->nodeValue);
         }
     }
 
     /**
      * @inheritDoc
      */
-    protected function hasValue(NodeInterface $node): bool
+    protected function hasValue(NodeInterface $node) : bool
     {
         return $node instanceof FeedInterface && !! $node->getLanguage();
     }

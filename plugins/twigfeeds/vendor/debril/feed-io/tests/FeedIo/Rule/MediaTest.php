@@ -23,7 +23,7 @@ class MediaTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Media();
     }
@@ -42,9 +42,9 @@ class MediaTest extends TestCase
 
         $count = 0;
         foreach ($item->getMedias() as $itemMedia) {
-            $this->assertIsString($itemMedia->getType());
-            $this->assertIsString($itemMedia->getUrl());
-            $this->assertIsString($itemMedia->getLength());
+            $this->assertInternalType('string', $itemMedia->getType());
+            $this->assertInternalType('string', $itemMedia->getUrl());
+            $this->assertInternalType('string', $itemMedia->getLength());
 
             $this->assertEquals($media->getAttribute('url'), $itemMedia->getUrl());
             $count++;

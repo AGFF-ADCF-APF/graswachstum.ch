@@ -1,10 +1,15 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Adapter\Guzzle;
 
-use DateTime;
 use FeedIo\Adapter\ResponseInterface;
 use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
 
@@ -13,44 +18,44 @@ use Psr\Http\Message\ResponseInterface as PsrResponseInterface;
  */
 class Response implements ResponseInterface
 {
-    public const HTTP_LAST_MODIFIED = 'Last-Modified';
+    const HTTP_LAST_MODIFIED = 'Last-Modified';
 
-    protected ?string $body = null;
+    /**
+     * @var \Psr\Http\Message\ResponseInterface
+     */
+    protected $psrResponse;
 
-    public function __construct(
-        protected PsrResponseInterface $psrResponse,
-        protected float $duration
-    ) {
-    }
-
-    public function getDuration(): float
+    /**
+     * @param \Psr\Http\Message\ResponseInterface
+     */
+    public function __construct(PsrResponseInterface $psrResponse)
     {
-        return $this->duration;
+        $this->psrResponse = $psrResponse;
     }
 
-    public function getStatusCode(): int
+    /**
+     * @return boolean
+     */
+    public function isModified() : bool
     {
-        return (int) $this->psrResponse->getStatusCode();
+        return $this->psrResponse->getStatusCode() != 304 && $this->psrResponse->getBody()->getSize() > 0;
     }
 
-    public function isModified(): bool
+    /**
+     * @return string
+     */
+    public function getBody() : ? string
     {
-        return $this->psrResponse->getStatusCode() != 304 && strlen($this->getBody()) > 0;
+        return $this->psrResponse->getBody()->getContents();
     }
 
-    public function getBody(): ?string
-    {
-        if (is_null($this->body)) {
-            $this->body = $this->psrResponse->getBody()->getContents();
-        }
-
-        return $this->body;
-    }
-
-    public function getLastModified(): ?DateTime
+    /**
+     * @return \DateTime|null
+     */
+    public function getLastModified() : ?\DateTime
     {
         if ($this->psrResponse->hasHeader(static::HTTP_LAST_MODIFIED)) {
-            $lastModified = DateTime::createFromFormat(DateTime::RFC2822, $this->getHeader(static::HTTP_LAST_MODIFIED)[0]);
+            $lastModified = \DateTime::createFromFormat(\DateTime::RFC2822, $this->getHeader(static::HTTP_LAST_MODIFIED)[0]);
 
             return false === $lastModified ? null : $lastModified;
         }
@@ -58,12 +63,19 @@ class Response implements ResponseInterface
         return null;
     }
 
-    public function getHeaders(): iterable
+    /**
+     * @return iterable
+     */
+    public function getHeaders()  : iterable
     {
         return $this->psrResponse->getHeaders();
     }
 
-    public function getHeader(string $name): iterable
+    /**
+     * @param  string       $name
+     * @return iterable
+     */
+    public function getHeader(string $name) : iterable
     {
         return $this->psrResponse->getHeader($name);
     }

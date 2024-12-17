@@ -22,7 +22,7 @@ class StandardAbstractTest extends TestCase
      */
     protected $object;
 
-    public function setUp(): void
+    public function setUp()
     {
         $date = new DateTimeBuilder();
         $date->addDateFormat(\DateTime::ATOM);
@@ -38,12 +38,12 @@ class StandardAbstractTest extends TestCase
 
     public function testGetItemNodeName()
     {
-        $this->assertIsString($this->object->getItemNodeName());
+        $this->assertInternalType('string', $this->object->getItemNodeName());
     }
 
     public function testGetMandatoryFields()
     {
-        $this->assertIsArray($this->object->getMandatoryFields());
+        $this->assertInternalType('array', $this->object->getMandatoryFields());
     }
 
     public function testGetFeedRuleSet()

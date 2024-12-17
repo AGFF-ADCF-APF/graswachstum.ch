@@ -16,6 +16,7 @@ namespace FeedIo\Feed;
  *
  * Simple class using the ElementsAwareTrait to test this trait
  */
+use \PHPUnit\Framework\TestCase;
 
 class ElementsAwareClass
 {

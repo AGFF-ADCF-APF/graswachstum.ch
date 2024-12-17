@@ -2,28 +2,28 @@
     "grav": {
         "page_route": "\/contact",
         "page_rawroute": "\/contact",
-        "page_title": "Contact"
+        "page_title": "Kontakt"
     },
-    "updated": 1734461937,
+    "updated": 1734462470,
     "response_headers": {
         "pragma": "no-cache",
-        "grav-page-title": "Contact",
+        "grav-page-title": "Kontakt",
         "grav-page-route": "\/contact",
         "grav-page-rawroute": "\/contact",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
+        "expires": "Tue, 24 Dec 2024 19:07:50 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
+        "date": "Tue, 17 Dec 2024 19:07:50 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461937.3876569271087646484375,
-        "total_time": 0.165235999999999993992361169148352928459644317626953125,
-        "namelookup_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
-        "connect_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
-        "pretransfer_time": 7.3999999999999996227843801488432973201270215213298797607421875e-5,
-        "starttransfer_time": 0.16507600000000000051159076974727213382720947265625,
+        "start_time": 1734462470.3760368824005126953125,
+        "total_time": 0.10039199999999999513011772478421335108578205108642578125,
+        "namelookup_time": 0.0004479999999999999932796812540658493162482045590877532958984375,
+        "connect_time": 0.000503999999999999999215904988858483193325810134410858154296875,
+        "pretransfer_time": 0.008042000000000000536903854708725702948868274688720703125,
+        "starttransfer_time": 0.09983599999999999419220131358088110573589801788330078125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 518,
         "request_size": 116,
         "redirect_count": 0,
-        "size_download": 5244,
-        "speed_download": 31781,
+        "size_download": 4917,
+        "speed_download": 49170,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,17 +41,20 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 21644
+        "content_size": 21449
     },
     "content": {
-        "body": "<p>title: Contact Form<\/p>\n<p>form:\nname: contact<\/p>\n<p>fields:\nname:\nlabel: Name\nplaceholder: Enter your name\nautocomplete: on\ntype: text\nvalidate:\nrequired: true<\/p>\n<p>email:\nlabel: Email\nplaceholder: Enter your email address\ntype: email\nvalidate:\nrequired: true<\/p>\n<p>message:\nlabel: Message\nplaceholder: Enter your message\ntype: textarea\nvalidate:\nrequired: true<\/p>\n<p>g-recaptcha-response:\nlabel: Captcha\ntype: captcha\nrecaptcha_not_validated: 'Captcha not valid!'<\/p>\n<p>buttons:\nsubmit:\ntype: submit\nvalue: Submit\nreset:\ntype: reset\nvalue: Reset<\/p>\n<p>process:\ncaptcha: true\nsave:\nfileprefix: contact-\ndateformat: Ymd-His-u\nextension: txt\nbody: \"{% include 'forms\/data.txt.twig' %}\"\nemail:\nsubject: \"[Site Contact Form] {{ form.value.name|e }}\"\nbody: \"{% include 'forms\/data.html.twig' %}\"\nmessage: Thank you for getting in touch!<\/p>",
+        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          Kontakt\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n    \n  \n      \n      <h4>H&auml;ufigste Tags<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archiv<\/h4>\n      <ul>\n\n<\/ul>\n    \n    \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
         "headers": {
             "h1": [
-                "Contact"
+                "Kontakt"
             ],
             "h2": [],
             "h3": [],
-            "h4": [],
+            "h4": [
+                "H\u00e4ufigste Tags",
+                "Archiv"
+            ],
             "h5": [],
             "h6": []
         },
@@ -74,8 +77,8 @@
                 "header": 1,
                 "nav": 1,
                 "section": 2,
-                "aside": 0,
-                "article": 1,
+                "aside": 1,
+                "article": 0,
                 "footer": 1
             }
         },
@@ -116,7 +119,28 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
                 "external": false
             },
             "\/legal": {
@@ -143,29 +167,29 @@
         }
     },
     "head": {
-        "title": "graswachstum.ch",
+        "title": "Kontakt | graswachstum.ch",
         "meta": {
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Contact",
+            "description": "title: Contact Form form: name: contact fields: name: label: Name placeholder: Enter your name autocomplete: on type: text validate: required: true email: labe\u2026",
+            "title": "graswachstum.ch",
+            "keywords": "type,label,email,message,true,captcha,name,placeholder,your,required",
             "image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/contact",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Contact",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "graswachstum.ch",
+            "og:description": "title: Contact Form form: name: contact fields: name: label: Name placeholder: Enter your name autocomplete: on type: text validate: required: true email: labe\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Contact",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "graswachstum.ch",
+            "twitter:description": "title: Contact Form form: name: contact fields: name: label: Name placeholder: Enter your name autocomplete: on type: text validate: required: true email: labe\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
-            "twitter:image:alt": "Contact",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "graswachstum.ch"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/contact",
@@ -318,5 +342,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 3d (easy handle 0x55fbb0050220)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Contact\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"274158875601ff82797006624eef7dd1\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=274158875601ff82797006624eef7dd1; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff1bb20)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:07:50 GMT\r\n* Added cookie grav-site-23a95d8=\"8f288f7e875d6a3da6b2eddd733768e6\" for domain graswachstum.ch, path \/, expire 1734464270\n< set-cookie: grav-site-23a95d8=8f288f7e875d6a3da6b2eddd733768e6; expires=Tue, 17 Dec 2024 19:37:50 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:07:50 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

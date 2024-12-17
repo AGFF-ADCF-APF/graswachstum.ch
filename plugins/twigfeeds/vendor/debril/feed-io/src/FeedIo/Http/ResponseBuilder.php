@@ -1,6 +1,12 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Http;
 
@@ -11,14 +17,25 @@ use Psr\Http\Message\ResponseInterface;
 
 class ResponseBuilder
 {
+
     /**
-     * @param int $maxAge max-age in seconds
-     * @param bool $public is the response public
+     * @var int $maxAge max-age in seconds
      */
-    public function __construct(
-        protected int $maxAge = 600,
-        protected bool $public = true
-    ) {
+    protected $maxAge;
+
+    /**
+     * @var bool $public is the response public
+     */
+    protected $public;
+
+    /**
+     * @param int $maxAge
+     * @param bool $public
+     */
+    public function __construct(int $maxAge = 600, bool $public = true)
+    {
+        $this->maxAge = $maxAge;
+        $this->public = $public;
     }
 
     /**
@@ -27,17 +44,13 @@ class ResponseBuilder
      * @param  FeedInterface $feed
      * @return ResponseInterface
      */
-    public function createResponse(string $format, FormatterInterface $formatter, FeedInterface $feed): ResponseInterface
+    public function createResponse(string $format, FormatterInterface $formatter, FeedInterface $feed) : ResponseInterface
     {
         $headers = [
-            'Content-Type'  => ($format === 'json') ? 'application/json' : 'application/xhtml+xml',
-            'Cache-Control' => ($this->public ? 'public' : 'private') . ", max-age={$this->maxAge}",
+            'Content-Type' => ($format === 'json') ? 'application/json':'application/xhtml+xml',
+            'Cache-Control' => ($this->public ? 'public':'private') . ", max-age={$this->maxAge}",
+            'Last-Modified' => $feed->getLastModified()->format(\DateTime::RSS),
         ];
-
-        // Feed could have no items
-        if ($feed->getLastModified() instanceof \DateTime) {
-            $headers['Last-Modified'] = $feed->getLastModified()->format(\DateTime::RSS);
-        }
 
         return new Response(200, $headers, $formatter->toString($feed));
     }

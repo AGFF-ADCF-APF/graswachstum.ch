@@ -20,7 +20,7 @@ class RssTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Rss(
             new DateTimeBuilder()

@@ -21,7 +21,7 @@ class NodeTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Node();
     }
@@ -41,6 +41,13 @@ class NodeTest extends TestCase
         $this->assertEquals($publicId, $this->object->getPublicId());
     }
 
+    public function testDescription()
+    {
+        $description = 'lorem ipsum';
+        $this->assertInstanceOf('\FeedIo\Feed\Node', $this->object->setDescription($description));
+        $this->assertEquals($description, $this->object->getDescription());
+    }
+
     public function testLink()
     {
         $link = 'http://localhost';
@@ -54,7 +61,7 @@ class NodeTest extends TestCase
         $this->assertInstanceOf('\FeedIo\Feed\Node', $this->object->setLastModified($lastModified));
         $this->assertEquals($lastModified, $this->object->getLastModified());
     }
-
+    
     public function testNewCategory()
     {
         $this->assertInstanceOf('\FeedIo\Feed\Node\CategoryInterface', $this->object->newCategory());
@@ -79,30 +86,33 @@ class NodeTest extends TestCase
         $this->object->set('foo', 'bar')
             ->setLastModified(new \DateTime())
             ->setTitle('my title')
-            ->addCategory($category);
+            ->addCategory($category)
+            ->setDescription('lorem ipsum');
 
         $out = $this->object->toArray();
 
+        $this->assertEquals('lorem ipsum', $out['description']);
         $this->assertEquals('my title', $out['title']);
         $this->assertEquals('bar', $out['elements']['foo']);
         $this->assertEquals('test', $out['categories'][0]);
+        $this->assertInternalType('string', $out['lastModified']);
     }
 
     public function testAddCategory()
     {
         $category = new \FeedIo\Feed\Node\Category;
         $category->setTerm('term');
-
+        
         $this->object->addCategory($category);
         $categories = $this->object->getCategories();
-
+        
         $count = 0;
         foreach ($categories as $testedCategory) {
             $count++;
             $this->assertEquals('term', $testedCategory->getTerm());
             $this->assertEquals($category, $testedCategory);
         }
-
+        
         $this->assertEquals(1, $count);
     }
 }

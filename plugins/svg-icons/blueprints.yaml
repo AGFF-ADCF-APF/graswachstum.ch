@@ -1,7 +1,7 @@
 name: SVG Icons
 type: plugin
 slug: svg-icons
-version: 2.5.3
+version: 2.6.0
 premium: true
 description: Various SVG icons and utilities to use them.
 icon: diamond

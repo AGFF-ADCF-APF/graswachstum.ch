@@ -23,7 +23,7 @@ class RdfTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Rdf(
             new DateTimeBuilder()

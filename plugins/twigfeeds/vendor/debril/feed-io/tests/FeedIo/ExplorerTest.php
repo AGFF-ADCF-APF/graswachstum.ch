@@ -26,7 +26,7 @@ class ExplorerTest extends TestCase
      */
     protected $object;
 
-    public function setUp(): void
+    public function setUp()
     {
         $this->object = new Explorer(
             $this->getClientMock(),

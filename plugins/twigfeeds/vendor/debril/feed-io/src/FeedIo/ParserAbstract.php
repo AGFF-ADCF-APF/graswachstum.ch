@@ -1,6 +1,12 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo;
 
@@ -20,13 +26,41 @@ use Psr\Log\LoggerInterface;
  */
 abstract class ParserAbstract
 {
-    public function __construct(
-        protected StandardAbstract $standard,
-        protected LoggerInterface $logger
-    ) {
+
+    /**
+     * @var \Psr\Log\LoggerInterface
+     */
+    protected $logger;
+
+    /**
+     * @var array[FilterInterface]
+     */
+    protected $filters = array();
+
+    /**
+     * @var StandardAbstract
+     */
+    protected $standard;
+
+    /**
+     * @param StandardAbstract $standard
+     * @param LoggerInterface  $logger
+     */
+    public function __construct(StandardAbstract $standard, LoggerInterface $logger)
+    {
+        $this->standard = $standard;
+        $this->logger = $logger;
     }
 
-    public function parse(Document $document, FeedInterface $feed): FeedInterface
+    /**
+     * Tries to parse the document
+     *
+     * @param Document $document
+     * @param FeedInterface $feed
+     * @return \FeedIo\FeedInterface
+     * @throws \FeedIo\Parser\UnsupportedFormatException
+     */
+    public function parse(Document $document, FeedInterface $feed) : FeedInterface
     {
         if (!$this->standard->canHandle($document)) {
             throw new UnsupportedFormatException('this is not a supported format');
@@ -38,21 +72,79 @@ abstract class ParserAbstract
         return $feed;
     }
 
-    public function getStandard(): StandardAbstract
+    /**
+     * This method is called by parse() if and only if the checkBodyStructure was successful
+     *
+     * @param Document $document
+     * @param FeedInterface $feed
+     * @return \FeedIo\FeedInterface
+     */
+    abstract public function parseContent(Document $document, FeedInterface $feed) : FeedInterface;
+
+    /**
+     * @param Document $document
+     * @param iterable $mandatoryFields
+     * @throws MissingFieldsException
+     * @return bool
+     */
+    abstract public function checkBodyStructure(Document $document, iterable $mandatoryFields) : bool;
+
+    /**
+     * @return StandardAbstract
+     */
+    public function getStandard() : StandardAbstract
     {
         return $this->standard;
     }
 
-    public function addValidItem(FeedInterface $feed, NodeInterface $item): ParserAbstract
+    /**
+     * @param  FeedInterface $feed
+     * @param  NodeInterface $item
+     * @return ParserAbstract
+     */
+    public function addValidItem(FeedInterface $feed, NodeInterface $item) : ParserAbstract
     {
-        if ($item instanceof ItemInterface) {
+        if ($item instanceof ItemInterface && $this->isValid($item)) {
             $feed->add($item);
         }
 
         return $this;
     }
 
-    abstract public function parseContent(Document $document, FeedInterface $feed): FeedInterface;
+    /**
+     * @param  ItemInterface $item
+     * @return bool
+     */
+    public function isValid(ItemInterface $item) : bool
+    {
+        foreach ($this->filters as $filter) {
+            if (!$filter->isValid($item)) {
+                return false;
+            }
+        }
 
-    abstract public function checkBodyStructure(Document $document, iterable $mandatoryFields): bool;
+        return true;
+    }
+
+    /**
+     * @param  FilterInterface $filter
+     * @return ParserAbstract
+     */
+    public function addFilter(FilterInterface $filter) : ParserAbstract
+    {
+        $this->filters[] = $filter;
+
+        return $this;
+    }
+
+    /**
+     * Reset filters
+     * @return ParserAbstract
+     */
+    public function resetFilters() : ParserAbstract
+    {
+        $this->filters = [];
+
+        return $this;
+    }
 }

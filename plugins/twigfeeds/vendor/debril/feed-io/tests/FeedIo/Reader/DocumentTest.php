@@ -33,20 +33,24 @@ class DocumentTest extends TestCase
     public function testGetJsonAsArray()
     {
         $document = new Document('{"foo": "bar"}');
-        $this->assertIsArray($document->getJsonAsArray());
+        $this->assertInternalType('array', $document->getJsonAsArray());
     }
 
+    /**
+     * @expectedException \LogicException
+     */
     public function testLoadWrongDoucment()
     {
         $document = new Document('something wrong');
-        $this->expectException('\LogicException');
         $document->getDOMDocument();
     }
 
+    /**
+     * @expectedException \LogicException
+     */
     public function testLoadWrongJsonDoucment()
     {
         $document = new Document('something wrong');
-        $this->expectException('\LogicException');
         $document->getJsonAsArray();
     }
 }

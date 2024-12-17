@@ -1,30 +1,46 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Feed\Node;
 
 class Category implements CategoryInterface
 {
-    protected ?string $term = null;
 
-    protected ?string $scheme = null;
+    /**
+     * @var string
+     */
+    protected $term;
 
-    protected ?string $label = null;
+    /**
+     * @var string
+     */
+    protected $scheme;
+
+    /**
+     * @var string
+     */
+    protected $label;
 
     /**
      * @return null|string
      */
-    public function getTerm(): ?string
+    public function getTerm() : ? string
     {
         return $this->term;
     }
 
     /**
-     * @param string|null $term
+     * @param  string $term
      * @return CategoryInterface
      */
-    public function setTerm(string $term = null): CategoryInterface
+    public function setTerm(string $term = null) : CategoryInterface
     {
         $this->term = $term;
 
@@ -34,16 +50,16 @@ class Category implements CategoryInterface
     /**
      * @return null|string
      */
-    public function getScheme(): ?string
+    public function getScheme() : ? string
     {
         return $this->scheme;
     }
 
     /**
-     * @param string|null $scheme
+     * @param  string $scheme
      * @return CategoryInterface
      */
-    public function setScheme(string $scheme = null): CategoryInterface
+    public function setScheme(string $scheme = null) : CategoryInterface
     {
         $this->scheme = $scheme;
 
@@ -53,16 +69,16 @@ class Category implements CategoryInterface
     /**
      * @return null|string
      */
-    public function getLabel(): ?string
+    public function getLabel() : ? string
     {
         return $this->label;
     }
 
     /**
-     * @param string|null $label
+     * @param  string $label
      * @return CategoryInterface
      */
-    public function setLabel(string $label = null): CategoryInterface
+    public function setLabel(string $label = null) : CategoryInterface
     {
         $this->label = $label;
 

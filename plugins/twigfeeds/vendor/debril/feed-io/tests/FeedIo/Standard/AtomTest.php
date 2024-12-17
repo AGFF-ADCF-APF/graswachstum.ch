@@ -21,7 +21,7 @@ class AtomTest extends TestCase
      */
     protected $object;
 
-    protected function setUp(): void
+    protected function setUp()
     {
         $this->object = new Atom(
             new DateTimeBuilder()

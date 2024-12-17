@@ -1,29 +1,32 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Rule;
 
-use DateTime;
-use DateTimeZone;
 use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
 
 class DateTimeBuilder implements DateTimeBuilderInterface
 {
     /**
      * Supported date formats
+     * @var array
      */
-    protected array $dateFormats = [
+    protected $dateFormats = [
         \DateTime::RFC2822,
         \DateTime::ATOM,
         \DateTime::RFC3339,
-        \DateTime::RFC3339_EXTENDED,
         \DateTime::RSS,
         \DateTime::W3C,
         'Y-m-d\TH:i:s.uP',
-        'Y-m-d\TH:i:s.uvP',
         'Y-m-d\TH:i:s',
-        'Y-m-d\TH:iP',
         'Y-m-d',
         'd/m/Y',
         'D, d M Y H:i O',
@@ -31,44 +34,79 @@ class DateTimeBuilder implements DateTimeBuilderInterface
         'D M d Y H:i:s e',
         '*, m#d#Y - H:i',
         'D, d M Y H:i:s \U\T',
-        '*, d M* Y H:i:s e',
-        '*, d M Y',
     ];
 
-    protected ?DateTimeZone $feedTimezone = null;
+    /**
+     * @var \DateTimeZone
+     */
+    protected $feedTimezone;
 
-    protected DateTimeZone $serverTimezone;
+    /**
+     * @var \DateTimeZone
+     */
+    protected $serverTimezone;
 
-    protected string $lastGuessedFormat = DateTime::RFC2822;
+    /**
+     * @var LoggerInterface
+     */
+    protected $logger;
 
-    public function __construct(protected ?LoggerInterface $logger = null)
+    /**
+     * @var string
+     */
+    protected $lastGuessedFormat = \DateTime::RFC2822;
+
+    /**
+     * @param \Psr\Log\LoggerInterface        $logger
+     */
+    public function __construct(LoggerInterface $logger = null)
     {
-        $this->setTimezone(new DateTimeZone(date_default_timezone_get()));
+        if (is_null($logger)) {
+            $logger = new NullLogger;
+        }
+        $this->logger = $logger;
+        $this->setTimezone(new \DateTimeZone(date_default_timezone_get()));
     }
 
-    public function addDateFormat(string $dateFormat): DateTimeBuilderInterface
+    /**
+     * @param $dateFormat
+     * @return DateTimeBuilder
+     */
+    public function addDateFormat(string $dateFormat) : DateTimeBuilderInterface
     {
         $this->dateFormats[] = $dateFormat;
 
         return $this;
     }
 
-    public function setDateFormats(array $dateFormats): DateTimeBuilderInterface
+    /**
+     * @param  array $dateFormats
+     * @return $this
+     */
+    public function setDateFormats(array $dateFormats) : DateTimeBuilderInterface
     {
         $this->dateFormats = $dateFormats;
 
         return $this;
     }
 
-    public function getLastGuessedFormat(): string
+    /**
+     * @return string
+     */
+    public function getLastGuessedFormat() : string
     {
         return $this->lastGuessedFormat;
     }
 
-    public function guessDateFormat(string $date): ?string
+    /**
+     * Tries to guess the date's format from the list
+     * @param  string                   $date
+     * @return string|null             date Format
+     */
+    public function guessDateFormat(string $date) : ? string
     {
         foreach ($this->dateFormats as $format) {
-            $test = DateTime::createFromFormat($format, $date);
+            $test = \DateTime::createFromFormat($format, $date);
             if ($test instanceof \DateTime) {
                 $this->lastGuessedFormat = $format;
 
@@ -79,7 +117,12 @@ class DateTimeBuilder implements DateTimeBuilderInterface
         return null;
     }
 
-    public function convertToDateTime(string $string): DateTime
+    /**
+     * Creates a DateTime instance for the given string. Default format is RFC2822
+     * @param  string                   $string
+     * @return \DateTime
+     */
+    public function convertToDateTime(string $string) : \DateTime
     {
         $string = trim($string);
         foreach ([$this->getLastGuessedFormat(), $this->guessDateFormat($string) ] as $format) {
@@ -91,57 +134,97 @@ class DateTimeBuilder implements DateTimeBuilderInterface
             }
         }
 
-        if ($this->logger) {
-            $this->logger->notice("unsupported date format : {$string}, returning current datetime");
-        }
+        return $this->stringToDateTime($string);
+    }
 
-        $date = new DateTime(timezone: $this->getFeedTimezone());
+    /**
+     * Creates a DateTime instance for the given string if the format was not catch from the list
+     * @param  string                   $string
+     * @return \DateTime
+     * @throws InvalidArgumentException
+     */
+    public function stringToDateTime(string $string) : \DateTime
+    {
+        $this->logger->notice("unsupported date format, use strtotime() to build the DateTime instance : {$string}");
+
+        if (false === strtotime($string)) {
+            throw new \InvalidArgumentException('Impossible to convert date : '.$string);
+        }
+        $date = new \DateTime($string, $this->getFeedTimezone());
         $date->setTimezone($this->getTimezone());
 
         return $date;
     }
 
-    public function getFeedTimezone(): ?DateTimeZone
+    /**
+     * @return \DateTimeZone
+     */
+    public function getFeedTimezone() : ? \DateTimeZone
     {
         return $this->feedTimezone;
     }
 
-    public function setFeedTimezone(DateTimeZone $timezone): void
+    /**
+     * Specifies the feed's timezone. Do this it the timezone is missing
+     *
+     * @param \DateTimeZone $timezone
+     */
+    public function setFeedTimezone(\DateTimeZone $timezone) : void
     {
         $this->feedTimezone = $timezone;
     }
 
-    public function resetFeedTimezone(): void
+    /**
+     * Resets feedTimezone to null.
+     */
+    public function resetFeedTimezone() : void
     {
         $this->feedTimezone = null;
     }
 
-    public function getServerTimezone(): ?DateTimeZone
+    /**
+     * @return \DateTimeZone
+     */
+    public function getServerTimezone() : ? \DateTimeZone
     {
         return $this->serverTimezone;
     }
 
-    public function setServerTimezone(DateTimeZone $timezone): void
+    /**
+     * @param \DateTimeZone $timezone
+     */
+    public function setServerTimezone(\DateTimeZone $timezone) : void
     {
         $this->serverTimezone = $timezone;
     }
 
-    public function getTimezone(): ?DateTimeZone
+    /**
+     * @return \DateTimeZone
+     */
+    public function getTimezone() : ? \DateTimeZone
     {
         return $this->getServerTimezone();
     }
 
-    public function setTimezone(DateTimeZone $timezone): void
+    /**
+     * @param \DateTimeZone $timezone
+     */
+    public function setTimezone(\DateTimeZone $timezone) : void
     {
         $this->setServerTimezone($timezone);
     }
 
-    protected function newDate(string $format, string $string): DateTime|bool
+    /**
+     * @param $format
+     * @param $string
+     * @return \DateTime
+     */
+    protected function newDate(string $format, string $string)
     {
         if (!! $this->getFeedTimezone()) {
-            return DateTime::createFromFormat($format, $string, $this->getFeedTimezone());
+            return \DateTime::createFromFormat($format, $string, $this->getFeedTimezone());
         }
 
-        return DateTime::createFromFormat($format, $string);
+        return \DateTime::createFromFormat($format, $string);
     }
 }

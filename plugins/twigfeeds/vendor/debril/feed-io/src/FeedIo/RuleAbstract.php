@@ -1,30 +1,48 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo;
 
-use DOMDocument;
-use DOMElement;
 use FeedIo\Feed\NodeInterface;
 
 abstract class RuleAbstract
 {
-    public const NODE_NAME = 'node';
+    const NODE_NAME = 'node';
 
-    protected string $nodeName;
+    /**
+     * @var string
+     */
+    protected $nodeName;
 
+    /**
+     * @param string $nodeName
+     */
     public function __construct(string $nodeName = null)
     {
-        $this->nodeName = $nodeName ?? static::NODE_NAME;
+        $this->nodeName = is_null($nodeName) ? static::NODE_NAME : $nodeName;
     }
 
-    public function getNodeName(): string
+    /**
+     * @return string
+     */
+    public function getNodeName() : string
     {
         return $this->nodeName;
     }
 
-    public function getAttributeValue(DOMElement $element, string $name): ?string
+    /**
+     * @param  \DOMElement $element
+     * @param  string      $name
+     * @return string|null
+     */
+    public function getAttributeValue(\DOMElement $element, $name) : ? string
     {
         if ($element->hasAttribute($name)) {
             return $element->getAttribute($name);
@@ -33,13 +51,14 @@ abstract class RuleAbstract
         return null;
     }
 
-    public function getChildValue(DOMElement $element, string $name, ?string $ns = null): ?string
+    /**
+     * @param  \DOMElement $element
+     * @param  string      $name
+     * @return string|null
+     */
+    public function getChildValue(\DOMElement $element, string $name) : ? string
     {
-        if ($ns === null) {
-            $list = $element->getElementsByTagName($name);
-        } else {
-            $list = $element->getElementsByTagNameNS($ns, $name);
-        }
+        $list = $element->getElementsByTagName($name);
         if ($list->length > 0) {
             return $list->item(0)->nodeValue;
         }
@@ -47,44 +66,69 @@ abstract class RuleAbstract
         return null;
     }
 
-    public function getChildAttributeValue(DOMElement $element, string $child_name, string $attribute_name, ?string $ns = null): ?string
-    {
-        if ($ns === null) {
-            $list = $element->getElementsByTagName($child_name);
-        } else {
-            $list = $element->getElementsByTagNameNS($ns, $child_name);
-        }
-        if ($list->length > 0) {
-            return $list->item(0)->getAttribute($attribute_name);
-        }
-
-        return null;
-    }
-
-    public function apply(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void
+    /**
+     * adds the accurate DomElement content according to the node's property
+     *
+     * @param \DomDocument $document
+     * @param \DOMElement $rootElement
+     * @param NodeInterface $node
+     */
+    public function apply(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void
     {
         if ($this->hasValue($node)) {
             $this->addElement($document, $rootElement, $node);
         }
     }
 
-    protected function setNonEmptyAttribute(DomElement $element, string $name, string $value = null): void
+    /**
+     * Sets the attribute only if the value is not empty
+     * @param DomElement $element
+     * @param string     $name
+     * @param string     $value
+     */
+    protected function setNonEmptyAttribute(\DomElement $element, string $name, string $value = null) : void
     {
         if (! is_null($value)) {
             $element->setAttribute($name, $value);
         }
     }
 
-    protected function appendNonEmptyChild(DomDocument $document, DOMElement $element, string $name, string $value = null): void
+    /**
+     * Appends a child node only if the value is not null
+     * @param DomDocument $document
+     * @param DOMElement  $element
+     * @param string      $name
+     * @param string      $value
+     */
+    protected function appendNonEmptyChild(\DomDocument $document, \DOMElement $element, string $name, string $value = null) : void
     {
         if (! is_null($value)) {
             $element->appendChild($document->createElement($name, $value));
         }
     }
 
-    abstract public function setProperty(NodeInterface $node, DOMElement $element): void;
+    /**
+     * Sets the accurate $item property according to the DomElement content
+     *
+     * @param  NodeInterface $node
+     * @param  \DOMElement   $element
+     */
+    abstract public function setProperty(NodeInterface $node, \DOMElement $element) : void;
 
-    abstract protected function hasValue(NodeInterface $node): bool;
+    /**
+     * Tells if the node contains the expected value
+     *
+     * @param NodeInterface $node
+     * @return bool
+     */
+    abstract protected function hasValue(NodeInterface $node) : bool;
 
-    abstract protected function addElement(DomDocument $document, DOMElement $rootElement, NodeInterface $node): void;
+    /**
+     * Creates and adds the element(s) to the document's rootElement
+     *
+     * @param \DomDocument $document
+     * @param \DOMElement $rootElement
+     * @param NodeInterface $node
+     */
+    abstract protected function addElement(\DomDocument $document, \DOMElement $rootElement, NodeInterface $node) : void;
 }

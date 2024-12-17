@@ -1,57 +1,60 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
+/*
+ * This file is part of the feed-io package.
+ *
+ * (c) Alexandre Debril <alex.debril@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace FeedIo\Standard;
 
 use DOMDocument;
 use FeedIo\Reader\Document;
 use FeedIo\Rule\Author;
-use FeedIo\Rule\Content;
 use FeedIo\Rule\Description;
-use FeedIo\Rule\Image;
 use FeedIo\Rule\Language;
 use FeedIo\Rule\Link;
 use FeedIo\Rule\PublicId;
 use FeedIo\Rule\Media;
 use FeedIo\Rule\Category;
-use FeedIo\Rule\Logo;
 use FeedIo\RuleSet;
 
 class Rss extends XmlAbstract
 {
+
     /**
      * Format version
      */
-    public const VERSION = '2.0';
+    const VERSION = '2.0';
 
     /**
      * RSS document must have a <rss> root node
      */
-    public const ROOT_NODE_TAGNAME = 'rss';
+    const ROOT_NODE_TAGNAME = 'rss';
 
     /**
      * <channel> node contains feed's metadata
      */
-    public const CHANNEL_NODE_TAGNAME = 'channel';
+    const CHANNEL_NODE_TAGNAME = 'channel';
 
     /**
      * publication date
      */
-    public const DATE_NODE_TAGNAME = 'pubDate';
+    const DATE_NODE_TAGNAME = 'pubDate';
 
-    protected array $mandatoryFields = ['channel'];
+    protected $mandatoryFields = ['channel'];
 
     /**
      * Formats the document according to the standard's specification
      * @param  \DOMDocument $document
      * @return \DOMDocument
      */
-    public function format(\DOMDocument $document): \DOMDocument
+    public function format(\DOMDocument $document) : \DOMDocument
     {
         $rss = $document->createElement(static::ROOT_NODE_TAGNAME);
         $rss->setAttribute('version', static::VERSION);
-
         $channel = $document->createElement(static::CHANNEL_NODE_TAGNAME);
         $rss->appendChild($channel);
         $document->appendChild($rss);
@@ -64,11 +67,8 @@ class Rss extends XmlAbstract
      * @param  Document $document
      * @return boolean
      */
-    public function canHandle(Document $document): bool
+    public function canHandle(Document $document) : bool
     {
-        if (!isset($document->getDOMDocument()->documentElement->tagName)) {
-            return false;
-        }
         return static::ROOT_NODE_TAGNAME === $document->getDOMDocument()->documentElement->tagName;
     }
 
@@ -76,7 +76,7 @@ class Rss extends XmlAbstract
      * @param  DOMDocument $document
      * @return \DomElement
      */
-    public function getMainElement(\DOMDocument $document): \DOMElement
+    public function getMainElement(\DOMDocument $document) : \DOMElement
     {
         return $document->documentElement->getElementsByTagName(static::CHANNEL_NODE_TAGNAME)->item(0);
     }
@@ -84,12 +84,10 @@ class Rss extends XmlAbstract
     /**
      * @return \FeedIo\RuleSet
      */
-    public function buildFeedRuleSet(): RuleSet
+    public function buildFeedRuleSet() : RuleSet
     {
         $ruleSet = $this->buildBaseRuleSet();
-        $ruleSet
-            ->add(new Description())
-            ->add(new Language());
+        $ruleSet->add(new Language());
 
         return $ruleSet;
     }
@@ -97,15 +95,13 @@ class Rss extends XmlAbstract
     /**
      * @return \FeedIo\RuleSet
      */
-    public function buildItemRuleSet(): RuleSet
+    public function buildItemRuleSet() : RuleSet
     {
         $ruleSet = $this->buildBaseRuleSet();
         $ruleSet
             ->add(new Author(), ['dc:creator'])
             ->add(new PublicId())
-            ->add(new Image())
-            ->add(new Content())
-            ->add(new Media(), ['media:thumbnail', 'media:group', 'media:content'])
+            ->add(new Media(), ['media:thumbnail'])
             ;
 
         return $ruleSet;
@@ -114,15 +110,14 @@ class Rss extends XmlAbstract
     /**
      * @return \FeedIo\RuleSet
      */
-    protected function buildBaseRuleSet(): RuleSet
+    protected function buildBaseRuleSet() : RuleSet
     {
         $ruleSet = parent::buildBaseRuleSet();
         $ruleSet
             ->add(new Link())
-            ->add(new Category())
-            ->add(new Logo())
-            ->add($this->getModifiedSinceRule(static::DATE_NODE_TAGNAME), ['dc:date', 'lastBuildDate', 'lastPubDate'])
-        ;
+            ->add(new Description(), ['content:encoded'])
+            ->add($this->getModifiedSinceRule(static::DATE_NODE_TAGNAME), ['lastBuildDate', 'lastPubDate'])
+            ->add(new Category());
 
         return $ruleSet;
     }

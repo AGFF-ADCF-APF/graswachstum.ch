@@ -4,13 +4,13 @@ The **SVG Icons** Plugin is an extension for [Grav CMS](http://github.com/getgra
 
 This package currently contains 6 primary SVG icon sets:
 
-* [Tabler Icons (5450)](https://tabler-icons.io/) → [DEFAULT] Developed by [Csaba Kissi](https://twitter.com/csaba_kiss) (v3.11.0)
-* [Hero Icons (292)](https://heroicons.dev/) → Developed by [Steve Schoger](https://twitter.com/steveschoger) with both `outline` and `solid` variants (v2.0.13)
-* [Simple Icon Brands (2746)](https://simpleicons.org/) → Over 2400 popular brand icons (v9.18.0)
+* [Tabler Icons (5736)](https://tabler-icons.io/) → [DEFAULT] Developed by [Csaba Kissi](https://twitter.com/csaba_kiss) (v3.23.0)
+* [Hero Icons (324)](https://heroicons.dev/) → Developed by [Steve Schoger](https://twitter.com/steveschoger) with both `outline` and `solid` variants (v2.2.0)
+* [Simple Icon Brands (3256)](https://simpleicons.org/) → Over 2400 popular brand icons (v13.19.0)
+* [Bootstrap Icons (2059)](https://icons.getbootstrap.com/) → Over 2000 icons (v1.11.3)
+* [Iconsax icons (1792)](https://iconsax.io/) →  `outline` and `bold` variants (v1.0)
+* [Lucide icons (1704)](https://lucide.dev/) → Forked from feather icons (v0.462.0)
 * [Social Icons (6)](#) → A few basic consistent social networking icons (v1.0)
-* **NEW** [Bootstrap Icons (2056)](https://icons.getbootstrap.com/) → Over 2000 icons (v1.11.1)
-* **NEW** [Iconsax icons (1792)](https://iconsax.io/) →  `outline` and `bold` variants (v1.0)
-* **NEW** [Lucide icons (1323)](https://lucide.dev/) → Forked from feather icons (v0.288.0)
 
 ## Installation
 

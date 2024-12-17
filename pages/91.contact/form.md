@@ -52,7 +52,7 @@ content:
     order:
         by: date
         dir: desc
-published: false
+published: true
 sitemap:
     lastmod: '17-12-2024 20:11'
 ---

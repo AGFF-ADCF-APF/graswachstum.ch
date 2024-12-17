@@ -46,7 +46,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 |  Witterung |   Tiergewicht |
 
 
-1. Allfällige Massnahmen zur Reduktion von Trittschäden sollen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Damit lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) optimal wahrnehmen.
+2. Allfällige Massnahmen zur Reduktion von Trittschäden sollen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Damit lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) optimal wahrnehmen.
 
 
 

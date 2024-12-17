@@ -28,6 +28,7 @@ gallery:
             title: 'Golden Sand Dunes'
             image: sergey-pesterev-_VqyrvQi6do-unsplash.jpg
             desc: 'Nulla tempus, ex '
+visible: false
 ---
 
 # Saubere Kühe = sauberes Gras

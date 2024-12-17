@@ -13,7 +13,7 @@ taxonomy:
         - infrastruktur
     author:
         - 'Zbinden Martin'
-author: 'Nicolas Marti, Martin Zbinden'
+author: 'Martin Zbinden'
 published: true
 sitemap:
     lastmod: '17-12-2024 20:24'

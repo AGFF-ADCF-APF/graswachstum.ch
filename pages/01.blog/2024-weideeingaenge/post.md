@@ -1,6 +1,6 @@
 ---
 title: Weideeingänge
-date: '17-12-2024 20:24'
+date: '17-12-2021 20:24'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -14,7 +14,7 @@ taxonomy:
     author:
         - 'Zbinden Martin'
 author: 'Nicolas Marti, Martin Zbinden'
-published: false
+published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
 aura:
@@ -27,7 +27,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 
 ===
 
-
+test
 [columns count=2]
 
 [/columns]

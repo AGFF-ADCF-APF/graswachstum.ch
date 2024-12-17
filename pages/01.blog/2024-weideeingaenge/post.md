@@ -29,6 +29,7 @@ gallery:
             image: sergey-pesterev-_VqyrvQi6do-unsplash.jpg
             desc: 'Nulla tempus, ex '
 visible: false
+media_order: 'Feldweg_Tränkefass_img_6964.jpg,Tränke_2017-06-27 08.36.48.jpg,Weideeingang_Moosegg_2017-05-31 16.32.58.jpg,Weideeingang_Nesselgraben_2017-05-24 17.35.12.jpg,Weideeingang_Stromzaun_IMG_20170406_110423.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611_HDR.jpg,Weideweg_IMG_20170302_140039.jpg,Weideweg_Willisau_IMG_20170406_143433.jpg,Weideweg_Willisau_IMG_20170406_144020.jpg,Weideweg_Willisau_IMG_20220502_151406.jpg'
 ---
 
 # Saubere Kühe = sauberes Gras

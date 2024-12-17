@@ -25,4 +25,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 
 ===
 
+[columns count=2]
+
+[/columns]
 

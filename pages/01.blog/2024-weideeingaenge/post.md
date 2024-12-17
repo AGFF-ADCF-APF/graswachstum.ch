@@ -10,10 +10,9 @@ hero:
 taxonomy:
     tag:
         - weide
-        - wachstumsbericht
+        - infrastruktur
     author:
         - 'Zbinden Martin'
-        - 'Marti Nicolas'
 author: 'Nicolas Marti, Martin Zbinden'
 published: false
 sitemap:

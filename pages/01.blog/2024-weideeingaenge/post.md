@@ -18,6 +18,7 @@ sitemap:
     lastmod: '17-12-2024 20:24'
 aura:
     author: zbma
+author: 'Zbinden Martin'
 authorString: null
 ---
 

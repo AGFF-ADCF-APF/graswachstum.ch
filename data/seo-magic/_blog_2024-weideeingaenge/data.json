@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-weideeingaenge",
         "page_title": "Weideeing\u00e4nge"
     },
-    "updated": 1734470578,
+    "updated": 1734471022,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Weideeing\u00e4nge",
         "grav-page-route": "\/blog\/2024-weideeingaenge",
         "grav-page-rawroute": "\/blog\/2024-weideeingaenge",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 21:22:58 GMT",
+        "expires": "Tue, 24 Dec 2024 21:30:22 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 21:22:58 GMT",
+        "date": "Tue, 17 Dec 2024 21:30:22 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734470578.71173191070556640625,
-        "total_time": 0.1207870000000000054729554221921716816723346710205078125,
-        "namelookup_time": 0.000516999999999999989945542733238426080788485705852508544921875,
-        "connect_time": 0.000573999999999999965978603189142859264393337070941925048828125,
-        "pretransfer_time": 0.00865299999999999923383509070617947145365178585052490234375,
-        "starttransfer_time": 0.11921099999999999752287038745635072700679302215576171875,
+        "start_time": 1734471022.2233660221099853515625,
+        "total_time": 0.1100470000000000059259264162392355501651763916015625,
+        "namelookup_time": 0.000555000000000000046247727869541677137021906673908233642578125,
+        "connect_time": 0.00063199999999999996631860899043431345489807426929473876953125,
+        "pretransfer_time": 0.01111700000000000014555023852835802244953811168670654296875,
+        "starttransfer_time": 0.1093989999999999962465579983472707681357860565185546875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 559,
         "request_size": 133,
         "redirect_count": 0,
-        "size_download": 5657,
-        "speed_download": 47141,
+        "size_download": 5954,
+        "speed_download": 54127,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,18 +41,24 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 25284
+        "content_size": 27498
     },
     "content": {
-        "body": "<h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n<p>test<\/p>",
+        "body": "<h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n<p>test<\/p>\n\n\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024",
         "headers": {
             "h1": [
                 "Weideeing\u00e4nge",
-                "Saubere K\u00fche = sauberes Gras"
+                "Saubere K\u00fche = sauberes Gras",
+                "Drei gute Ratschl\u00e4ge",
+                "Wie umgehen mit Weideresten?"
             ],
             "h2": [],
-            "h3": [],
+            "h3": [
+                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "Woche 18 (29.04.-05.05.2024)"
+            ],
             "h4": [
+                "Other Related Posts:",
                 "H\u00e4ufigste Tags",
                 "Archiv"
             ],
@@ -67,8 +73,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/images\/WhatsApp Image 2024-12-17 at 21.49.50.jpeg",
-                "alt": "Martin Zbinden",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg",
+                "alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg",
+                "alt": "Woche 18 (29.04.-05.05.2024)",
                 "external": true,
                 "status": 200
             }
@@ -79,7 +91,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 1,
-                "article": 1,
+                "article": 3,
                 "footer": 1
             }
         },
@@ -141,7 +153,28 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "N\u00e4chster Beitrag",
+                "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": false
+            },
+            "\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "\/blog\/2024-kw18": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Woche 18 (29.04.-05.05.2024)",
+                "external": false
+            },
+            "\/tag:wachstumsbericht#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
                 "external": false
             },
             "\/tag:weide": {
@@ -328,12 +361,6 @@
                 "type": "text\/css",
                 "media": null,
                 "crossorigin": null
-            },
-            "\/user\/plugins\/aura-authors\/assets\/style.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
             }
         },
         "scripts": {
@@ -394,5 +421,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff58070)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 21:22:58 GMT\r\n* Added cookie grav-site-23a95d8=\"c46762710e506b75799c5be0402d8351\" for domain graswachstum.ch, path \/, expire 1734472378\n< set-cookie: grav-site-23a95d8=c46762710e506b75799c5be0402d8351; expires=Tue, 17 Dec 2024 21:52:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 21:22:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff43ef0)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 21:30:22 GMT\r\n* Added cookie grav-site-23a95d8=\"68adcd24acdb1c7930dd6daac6457dc3\" for domain graswachstum.ch, path \/, expire 1734472822\n< set-cookie: grav-site-23a95d8=68adcd24acdb1c7930dd6daac6457dc3; expires=Tue, 17 Dec 2024 22:00:22 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 21:30:22 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

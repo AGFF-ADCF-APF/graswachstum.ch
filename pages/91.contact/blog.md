@@ -1,31 +1,31 @@
 ---
-title: 'Contact Form'
+title: Kontakt
 form:
     name: contact
     fields:
-        name: null
-        label: Name
-        placeholder: 'Enter your name'
-        autocomplete: 'on'
-        type: text
-        validate:
-            required: true
-    email:
-        label: Email
-        placeholder: 'Enter your email address'
-        type: email
-        validate:
-            required: true
-    message:
-        label: Message
-        placeholder: 'Enter your message'
-        type: textarea
-        validate:
-            required: true
-    g-recaptcha-response:
-        label: Captcha
-        type: captcha
-        recaptcha_not_validated: 'Captcha not valid!'
+        name:
+            label: Name
+            placeholder: 'Enter your name'
+            autocomplete: 'on'
+            type: text
+            validate:
+                required: true
+        email:
+            label: Email
+            placeholder: 'Enter your email address'
+            type: email
+            validate:
+                required: true
+        message:
+            label: Message
+            placeholder: 'Enter your message'
+            type: textarea
+            validate:
+                required: true
+        g-recaptcha-response:
+            label: Captcha
+            type: captcha
+            recaptcha_not_validated: 'Captcha not valid!'
     buttons:
         submit:
             type: submit

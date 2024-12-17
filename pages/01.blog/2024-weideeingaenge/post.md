@@ -12,13 +12,13 @@ taxonomy:
         - weide
         - infrastruktur
     author:
-        - 'Zbinden Martin'
+        - martinz
 published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
 aura:
     author: zbma
-author: 'Zbinden Martin'
+author: martinz
 authorString: null
 ---
 

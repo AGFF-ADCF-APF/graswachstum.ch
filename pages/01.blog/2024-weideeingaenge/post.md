@@ -38,6 +38,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 
 
 1. Faktoren für Trittschäden:
+
 |  nicht veränderbar  |  beeinflussbar  |
 |  :-----          |  :-----          |
 |  Boden |  Tierverhalten |

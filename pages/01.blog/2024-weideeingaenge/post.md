@@ -15,6 +15,19 @@ published: true
 sitemap:
     lastmod: '17-12-2024 20:24'
 author: zbma
+gallery:
+    thumb:
+        width: 400
+        height: 300
+    items:
+        -
+            title: 'Climbing Hilly Peaks'
+            image: david-marcu-78A265wPiO4-unsplash.jpg
+            desc: ' viverra nulla, in mollis erat purus a mauris'
+        -
+            title: 'Golden Sand Dunes'
+            image: sergey-pesterev-_VqyrvQi6do-unsplash.jpg
+            desc: 'Nulla tempus, ex '
 ---
 
 # Saubere Kühe = sauberes Gras

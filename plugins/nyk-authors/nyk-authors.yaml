@@ -1,0 +1,18 @@
+enabled: true                     # Turn plugin on or off
+
+author_taxonomy: '0'              # Taxonomy type where authors are added
+automatic_username_enabled: true  # Automatically add current user as author
+blacklist_enabled: false          # Enable blacklist
+blacklist: null                   # Usernames excluded from being used as authors
+whitelist_enabled: false          # Enable whitelist
+whitelist: null                   # Only usernames that will be used as authors
+extra_authors: null               # Additional authors without a user account or display name overwrites
+
+lang: en                          # Language used for the conjunction before the last author in string
+custom_lang_conjunction: null     # If lang is set to custom, a custom conjunction
+
+page_link_enabled: true           # Automatically add links to author pages that have already been created
+page_link_attributes:             # HTML attributes added to the <a> tag of links to author pages
+  rel: author
+  target: _blank
+page_path: /author/               # Path to folder with author pages

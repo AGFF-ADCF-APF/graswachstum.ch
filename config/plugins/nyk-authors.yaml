@@ -1,0 +1,15 @@
+enabled: true
+author_taxonomy: '2'
+automatic_username_enabled: true
+blacklist_enabled: false
+blacklist: null
+whitelist_enabled: false
+whitelist: null
+extra_authors: null
+lang: de
+custom_lang_conjunction: null
+page_link_enabled: true
+page_link_attributes:
+  rel: author
+  target: _blank
+page_path: /author/

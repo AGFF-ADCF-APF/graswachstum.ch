@@ -1,0 +1,28 @@
+{
+  "name": "nykold/nyk-authors",
+  "type": "grav-plugin",
+  "description": "A plugin to display author names in Grav-powered blogs",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/Nykold/nyk-authors",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "José Alves Amaro",
+      "email": "jose.alves.amaro@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\NykAuthors\\": "classes/"
+    },
+    "classmap":  ["nyk-authors.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.1.3"
+    }
+  }
+}

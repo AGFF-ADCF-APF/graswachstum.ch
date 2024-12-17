@@ -4,26 +4,26 @@
         "page_rawroute": "\/contact",
         "page_title": "Kontakt"
     },
-    "updated": 1734462845,
+    "updated": 1734462909,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Kontakt",
         "grav-page-route": "\/contact",
         "grav-page-rawroute": "\/contact",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 19:14:05 GMT",
+        "expires": "Tue, 24 Dec 2024 19:15:09 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 19:14:05 GMT",
+        "date": "Tue, 17 Dec 2024 19:15:09 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734462845.2260990142822265625,
-        "total_time": 0.09571200000000000540634204071466228924691677093505859375,
-        "namelookup_time": 0.0004699999999999999859313926098280944643192924559116363525390625,
-        "connect_time": 0.00052099999999999997875310686623606670764274895191192626953125,
-        "pretransfer_time": 0.00865999999999999929556349087533817510120570659637451171875,
-        "starttransfer_time": 0.0951940000000000008384404281969182193279266357421875,
+        "start_time": 1734462909.1318190097808837890625,
+        "total_time": 0.1069070000000000020268231537556857801973819732666015625,
+        "namelookup_time": 0.000540000000000000006904199434387692235759459435939788818359375,
+        "connect_time": 0.00061300000000000004658773367083313132752664387226104736328125,
+        "pretransfer_time": 0.010649999999999999744648704336213995702564716339111328125,
+        "starttransfer_time": 0.10642400000000000470645744599096360616385936737060546875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 518,
         "request_size": 116,
         "redirect_count": 0,
-        "size_download": 5628,
-        "speed_download": 59242,
+        "size_download": 4822,
+        "speed_download": 45490,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,17 +41,20 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 25101
+        "content_size": 20999
     },
     "content": {
-        "body": "<p>Kontaktformular<\/p>\n    \n\n\n\n                \n\n\n\n\n\n\n\n\n\n\n\n        \n                                      \n                          \n            Name              *\n      \n        \n                        \n                                    \n                                      \n                        \n  \n                                                      \n                          \n            Email              *\n      \n        \n                        \n                                    \n                                  \n                        \n  \n                                                      \n                          \n            Message              *\n      \n        \n                  \n                \n                            \n                \n  \n                                                      \n                          \n            \n      \n        \n                    \n    \n    \n                  \n  \n                            \n\n        \n            \n    \n    \n      \n            \n  \n\n                    \n      \n      \n  Submit\n\n                            \n      \n      \n  Reset",
+        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          Kontakt\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n    \n  \n      \n      <h4>H&auml;ufigste Tags<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archiv<\/h4>\n      <ul>\n\n<\/ul>\n    \n    \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
         "headers": {
             "h1": [
                 "Kontakt"
             ],
             "h2": [],
             "h3": [],
-            "h4": [],
+            "h4": [
+                "H\u00e4ufigste Tags",
+                "Archiv"
+            ],
             "h5": [],
             "h6": []
         },
@@ -74,8 +77,8 @@
                 "header": 1,
                 "nav": 1,
                 "section": 2,
-                "aside": 0,
-                "article": 1,
+                "aside": 1,
+                "article": 0,
                 "footer": 1
             }
         },
@@ -117,6 +120,27 @@
                 "target": "",
                 "rel": "",
                 "text": "Kontakt",
+                "external": false
+            },
+            "\/contact\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/contact\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/contact\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
                 "external": false
             },
             "\/legal": {
@@ -285,11 +309,6 @@
                 "defer": "defer",
                 "type": null
             },
-            "https:\/\/www.google.com\/recaptcha\/api.js?onload=captchaOnloadCallback_contact&render=explicit&hl=de&theme=light ": {
-                "async": "",
-                "defer": "defer",
-                "type": null
-            },
             "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
                 "async": null,
                 "defer": null,
@@ -312,5 +331,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff58440)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:14:05 GMT\r\n* Added cookie grav-site-23a95d8=\"b3403bf963476f4678f7a93bd5db1f88\" for domain graswachstum.ch, path \/, expire 1734464645\n< set-cookie: grav-site-23a95d8=b3403bf963476f4678f7a93bd5db1f88; expires=Tue, 17 Dec 2024 19:44:05 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:14:05 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff1bd20)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:15:09 GMT\r\n* Added cookie grav-site-23a95d8=\"c912997d3f60852ac05c549f13c7ec57\" for domain graswachstum.ch, path \/, expire 1734464709\n< set-cookie: grav-site-23a95d8=c912997d3f60852ac05c549f13c7ec57; expires=Tue, 17 Dec 2024 19:45:09 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:15:09 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

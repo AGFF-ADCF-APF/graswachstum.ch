@@ -4,7 +4,7 @@ authors:
   -
     name: 'Zbinden Martin'
     label: zbma
-    description: null
+    description: 'Martin interessiert sich für Grasland, Milch und allerlei technische Spielereien. Er ist unter anderem zuständig für Aufbereitung der Graswachstumsmeldungen.'
     person-facebook-url: null
     person-twitter-user: null
     person-instagram-url: null
@@ -12,7 +12,13 @@ authors:
     person-pinterest-url: null
     person-youtube-url: null
     person-website-url: null
-    image: {  }
+    image:
+      'user/images/WhatsApp Image 2024-12-17 at 21.49.50.jpeg':
+        name: 'WhatsApp Image 2024-12-17 at 21.49.50.jpeg'
+        full_path: 'WhatsApp Image 2024-12-17 at 21.49.50.jpeg'
+        type: image/jpeg
+        size: 56913
+        path: 'user/images/WhatsApp Image 2024-12-17 at 21.49.50.jpeg'
   -
     name: 'Nicolas Marti'
     label: mani

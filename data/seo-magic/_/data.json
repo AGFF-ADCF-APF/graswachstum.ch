@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog",
         "page_title": "Wachstumsbericht"
     },
-    "updated": 1734463311,
+    "updated": 1734463317,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Wachstumsbericht",
         "grav-page-route": "\/",
         "grav-page-rawroute": "\/blog",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 19:21:51 GMT",
+        "expires": "Tue, 24 Dec 2024 19:21:57 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 19:21:51 GMT",
+        "date": "Tue, 17 Dec 2024 19:21:57 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734463311.3263719081878662109375,
-        "total_time": 0.11871600000000000207922568051799316890537738800048828125,
-        "namelookup_time": 0.00050500000000000002352285033424550420022569596767425537109375,
-        "connect_time": 0.000558000000000000010748346657152296756976284086704254150390625,
-        "pretransfer_time": 0.0105990000000000007818190539410352357663214206695556640625,
-        "starttransfer_time": 0.1165839999999999931912242345788399688899517059326171875,
+        "start_time": 1734463317.4004099369049072265625,
+        "total_time": 0.10155799999999999549959994737946544773876667022705078125,
+        "namelookup_time": 0.000671999999999999962814467568961163124185986816883087158203125,
+        "connect_time": 0.000769000000000000043763603851942889377824030816555023193359375,
+        "pretransfer_time": 0.0113340000000000003244071677954707411117851734161376953125,
+        "starttransfer_time": 0.101017999999999996685318137679132632911205291748046875,
         "redirect_time": 0
     },
     "info": {
@@ -33,7 +33,7 @@
         "request_size": 109,
         "redirect_count": 0,
         "size_download": 5987,
-        "speed_download": 50737,
+        "speed_download": 59277,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -440,5 +440,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff584a0)\n> GET \/ HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:21:51 GMT\r\n* Added cookie grav-site-23a95d8=\"5aeb4676088510bc9e577dd097af47fb\" for domain graswachstum.ch, path \/, expire 1734465111\n< set-cookie: grav-site-23a95d8=5aeb4676088510bc9e577dd097af47fb; expires=Tue, 17 Dec 2024 19:51:51 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:21:51 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff43b80)\n> GET \/ HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:21:57 GMT\r\n* Added cookie grav-site-23a95d8=\"67a37fcdc239c7fdcd0d179780ff7996\" for domain graswachstum.ch, path \/, expire 1734465117\n< set-cookie: grav-site-23a95d8=67a37fcdc239c7fdcd0d179780ff7996; expires=Tue, 17 Dec 2024 19:51:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:21:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

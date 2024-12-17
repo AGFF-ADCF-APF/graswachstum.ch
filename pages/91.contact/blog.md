@@ -44,6 +44,17 @@ form:
             subject: '[Site Contact Form] {{ form.value.name|e }}'
             body: '{% include ''forms/data.html.twig'' %}'
         message: 'Thank you for getting in touch!'
+root_of_blog: true
+content:
+    items:
+        - '@self.children'
+    limit: 10
+    order:
+        by: date
+        dir: desc
+published: false
+sitemap:
+    lastmod: '17-12-2024 20:11'
 ---
 
 Kontaktformular

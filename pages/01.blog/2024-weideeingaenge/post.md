@@ -21,9 +21,10 @@ sitemap:
 
 # Saubere Kühe = sauberes Gras
 
-Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen genügen.  
+Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen genügen. Anbei ein Sammlung von spannenden Ansätzen, welche ich in den letzten Jahren gesehen habe.
 
 ===
+
 
 [columns count=2]
 

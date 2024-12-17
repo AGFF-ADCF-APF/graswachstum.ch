@@ -2,7 +2,7 @@ enabled: true
 include-css: true
 authors:
   -
-    name: 'Zbinden Martin'
+    name: 'Martin Zbinden'
     label: zbma
     description: 'Martin interessiert sich für Grasland, Milch und allerlei technische Spielereien. Er ist unter anderem zuständig für Aufbereitung der Graswachstumsmeldungen.'
     person-facebook-url: null

@@ -4,36 +4,36 @@
         "page_rawroute": "\/growth",
         "page_title": "Graswachstumskurve"
     },
-    "updated": 1734461938,
+    "updated": 1734461937,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Graswachstumskurve",
         "grav-page-route": "\/growth",
         "grav-page-rawroute": "\/growth",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461938.767879009246826171875,
-        "total_time": 0.1045770000000000032880365097298636101186275482177734375,
-        "namelookup_time": 3.60000000000000009120308674948063298870692960917949676513671875e-5,
-        "connect_time": 3.60000000000000009120308674948063298870692960917949676513671875e-5,
-        "pretransfer_time": 6.799999999999999946397044592316660782671533524990081787109375e-5,
-        "starttransfer_time": 0.1044670000000000043005599081880063749849796295166015625,
+        "start_time": 1734461937.5579240322113037109375,
+        "total_time": 0.159461999999999992638777257525362074375152587890625,
+        "namelookup_time": 2.000000000000000163606107828062619091724627651274204254150390625e-5,
+        "connect_time": 2.000000000000000163606107828062619091724627651274204254150390625e-5,
+        "pretransfer_time": 9.0000000000000005668208957754217180990963242948055267333984375e-5,
+        "starttransfer_time": 0.1593630000000000046522785623892559669911861419677734375,
         "redirect_time": 0
     },
     "info": {
-        "url": "https:\/\/graswachstum.ch\/fr\/growth",
+        "url": "https:\/\/graswachstum.ch\/growth",
         "content_type": "text\/html;charset=UTF-8",
         "header_size": 527,
-        "request_size": 118,
+        "request_size": 115,
         "redirect_count": 0,
-        "size_download": 5289,
-        "speed_download": 50855,
+        "size_download": 5292,
+        "speed_download": 33283,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24320
+        "content_size": 24198
     },
     "content": {
         "body": "<p>Interaktive Grafik in neuem Tab &ouml;ffnen<\/p>\n\n                    \n            \n            Bedienung der interaktiven Graswachstumskurve\n            \n<p>Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres.\nDie rote, gestrichelte Linie ist ein langj&auml;hriger Mittelwert f&uuml;r das CH-Mittelland.<\/p>\n<h3>Tipps:<\/h3>\n<ul>\n<li>Klick auf Standort: ein-\/ausblenden<\/li>\n<li>Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet<\/li>\n<li>Kamerasymbol: angezeigte Grafik lokal speichern\n<\/li><\/ul>\n        \n                    \n            \n            Graswachtumsdiagramm statisch (wie bisher)\n            \n<p><\/p>\n\n        \n    \n\n<p><\/p>\n\n                    \n            \n            Vergangene Graswachstumskarten",
@@ -290,49 +290,49 @@
             "flash": 0
         },
         "links": {
-            "\/fr": {
+            "\/": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "",
                 "external": false
             },
-            "\/fr\/growth": {
+            "\/growth": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Kurven",
                 "external": false
             },
-            "\/fr\/resources": {
+            "\/resources": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
                 "external": false
             },
-            "\/fr\/about": {
+            "\/about": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
                 "external": false
             },
-            "\/fr\/contact": {
+            "\/contact": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Contact",
                 "external": false
             },
-            "\/fr\/uploads\/Graswachstumskurve_ohneLegende_2024.html": {
+            "\/uploads\/Graswachstumskurve_ohneLegende_2024.html": {
                 "count": 0,
                 "target": "_blank",
                 "rel": "",
                 "text": "Interaktive Grafik in neuem Tab \u00f6ffnen",
                 "external": false
             },
-            "\/fr\/legal": {
+            "\/legal": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -362,26 +362,26 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "AGFF-Grasmessnetzwerk",
-            "title": "Graswachstumskurve | graswachstum.ch",
-            "image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
-            "og:url": "https:\/\/graswachstum.ch\/fr\/growth",
+            "title": "Graswachstumskurve",
+            "image": "https:\/\/graswachstum.ch\/growth\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/growth",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Graswachstumskurve | graswachstum.ch",
+            "og:title": "Graswachstumskurve",
             "og:description": "AGFF-Grasmessnetzwerk",
             "og:type": "article",
-            "og:image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
+            "og:image": "https:\/\/graswachstum.ch\/growth\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:secure": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
+            "og:image:secure": "https:\/\/graswachstum.ch\/growth\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Graswachstumskurve | graswachstum.ch",
+            "twitter:title": "Graswachstumskurve",
             "twitter:description": "AGFF-Grasmessnetzwerk",
-            "twitter:image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
-            "twitter:image:alt": "Graswachstumskurve | graswachstum.ch",
+            "twitter:image": "https:\/\/graswachstum.ch\/growth\/seomagic-image.jpg",
+            "twitter:image:alt": "Graswachstumskurve",
             "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
-        "canonical": "https:\/\/graswachstum.ch\/fr\/growth",
+        "canonical": "https:\/\/graswachstum.ch\/growth",
         "links": {
             "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
                 "rel": "stylesheet",
@@ -537,5 +537,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d9 (easy handle 0x55fbb00501a0)\n> GET \/fr\/growth HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstumskurve\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"f57aff50c619ee74f08f9c0e59687fa1\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=f57aff50c619ee74f08f9c0e59687fa1; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 43 (easy handle 0x55fbb0050220)\n> GET \/growth HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstumskurve\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"83a153a1da2399161b158399593c4eed\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=83a153a1da2399161b158399593c4eed; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

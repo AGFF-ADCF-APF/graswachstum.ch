@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog",
         "page_title": "Wachstumsbericht"
     },
-    "updated": 1732392926,
+    "updated": 1734461938,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Wachstumsbericht",
         "grav-page-route": "\/",
         "grav-page-rawroute": "\/blog",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:26 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:26 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392926.828444957733154296875,
-        "total_time": 0.08853400000000000158451030074502341449260711669921875,
-        "namelookup_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
-        "connect_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
-        "pretransfer_time": 6.09999999999999987219424790740873731920146383345127105712890625e-5,
-        "starttransfer_time": 0.08841300000000000547384360061187180690467357635498046875,
+        "start_time": 1734461938.2415730953216552734375,
+        "total_time": 0.08963100000000000233679742223102948628365993499755859375,
+        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "pretransfer_time": 6.2999999999999999901988123607310399165726266801357269287109375e-5,
+        "starttransfer_time": 0.089509000000000005226041821515536867082118988037109375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 517,
         "request_size": 111,
         "redirect_count": 0,
-        "size_download": 5844,
-        "speed_download": 66409,
+        "size_download": 5925,
+        "speed_download": 66573,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 27421
+        "content_size": 28645
     },
     "content": {
-        "body": "weide\n        \n      \n      \n      \n      \n        <h3>\n           Woche 45 (11.11.-17.11.2024)\n        <\/h3>\n      \n            <h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n    \n    \n      15th Nov 2024\n              - Nicolas Marti, Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           Woche 34 (19.08.-25.08.2024)\n        <\/h3>\n      \n            <h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n    \n    \n      15th Nov 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
+        "body": "weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 45 (11.11.-17.11.2024)\n        <\/h3>\n      \n            <h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n    \n    \n      15th Nov 2024\n              - Nicolas Marti, Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 34 (19.08.-25.08.2024)\n        <\/h3>\n      \n            <h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n    \n    \n      23rd Aug 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
         "headers": {
             "h1": [
                 "Wachstumsbericht",
@@ -93,7 +93,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg",
                 "alt": "Woche 18 (29.04.-05.05.2024)",
                 "external": true,
                 "status": 200
@@ -152,7 +152,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Kontakt",
+                "text": "Contact",
                 "external": false
             },
             "\/fr\/blog\/2024-kw45": {
@@ -169,6 +169,13 @@
                 "text": "weide",
                 "external": false
             },
+            "\/fr\/tag:wachstumsbericht#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
             "\/fr\/blog\/2024-kw34": {
                 "count": 0,
                 "target": "",
@@ -176,7 +183,7 @@
                 "text": "Woche 34 (19.08.-25.08.2024)",
                 "external": false
             },
-            "\/fr\/blog\/2024kw18": {
+            "\/fr\/blog\/2024-kw18": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -190,6 +197,13 @@
                 "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
                 "external": false
             },
+            "\/fr\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
             "\/fr\/tag:weide": {
                 "count": 0,
                 "target": "",
@@ -197,18 +211,39 @@
                 "text": "weide",
                 "external": false
             },
+            "\/fr\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/fr\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
             "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "2\n                November 2024",
+                "text": "1 November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 August 2024",
                 "external": true
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "2\n                May 2024",
+                "text": "2 May 2024",
                 "external": true
             },
             "\/fr\/legal": {
@@ -416,5 +451,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d7 (easy handle 0x560068874ff0)\n> GET \/fr HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:26 GMT\r\n* Added cookie grav-site-23a95d8=\"662254623f266a9a27f4d87772cf089a\" for domain graswachstum.ch, path \/, expire 1732394726\n< set-cookie: grav-site-23a95d8=662254623f266a9a27f4d87772cf089a; expires=Sat, 23 Nov 2024 20:45:26 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:26 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: a9 (easy handle 0x55fbb00501a0)\n> GET \/fr HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"154f80bf54220ced981d75a5be30e1de\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=154f80bf54220ced981d75a5be30e1de; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

@@ -4,26 +4,26 @@
         "page_rawroute": "\/about",
         "page_title": "\u00dcber uns"
     },
-    "updated": 1732392926,
+    "updated": 1734461938,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "\u00dcber uns",
         "grav-page-route": "\/about",
         "grav-page-rawroute": "\/about",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:26 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:26 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392926.63702392578125,
-        "total_time": 0.08037999999999999312105813942253007553517818450927734375,
-        "namelookup_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "connect_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "pretransfer_time": 4.800000000000000121604115665974177318275906145572662353515625e-5,
-        "starttransfer_time": 0.0802329999999999987636556397774256765842437744140625,
+        "start_time": 1734461937.96893596649169921875,
+        "total_time": 0.11175000000000000210942374678779742680490016937255859375,
+        "namelookup_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
+        "connect_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
+        "pretransfer_time": 0.000103999999999999993599737735383570225167204625904560089111328125,
+        "starttransfer_time": 0.11166500000000000036859404417555197142064571380615234375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 516,
         "request_size": 117,
         "redirect_count": 0,
-        "size_download": 4570,
-        "speed_download": 57125,
+        "size_download": 5477,
+        "speed_download": 49342,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,16 +41,23 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 20027
+        "content_size": 22021
     },
     "content": {
-        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber uns\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
+        "body": "<h2>&Uuml;ber die Messtandorte<\/h2>\n<h3>Standorte Posieux und Sorens<\/h3>\n<p>Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb &laquo;Schulbauernhof Sorens&raquo; und stellt die aktuellen Wachstumszahlen als Referenzwerte f&uuml;r interessierte Kreise ins Netz.\nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n<p><\/p>\n<h3>Beschreibungen weiterer Standorte<\/h3>\n<p><em>folgen bald<\/em><\/p>\n<h2>Datensammlung und Aufbereitung<\/h2>\n<ol>\n<li>Die beteiligten Stellen und Betriebe melden selbst&auml;ndig das Graswachstum mit einem vorbereiteten Google Formular. <\/li>\n<li>Die gesammelten Daten werden als Google Sheet im Internet publiziert.<\/li>\n<li>Ein R-Skript  ruft die Daten ab und erstellt die Grafiken. <\/li>\n<li>R l&auml;dt die Ergebnisse per FTP automatisch auf diese Internetseite hoch.<\/li>\n<\/ol>\n<p>Interesse an einer Zusammenarbeit? Schreib uns!<\/p>\n<h2>Medienpartner<\/h2>\n<p>Bauernzeitung &ndash; Serie Graswachstum\n<\/p>",
         "headers": {
             "h1": [
                 "\u00dcber uns"
             ],
-            "h2": [],
-            "h3": [],
+            "h2": [
+                "\u00dcber die Messtandorte",
+                "Datensammlung und Aufbereitung",
+                "Medienpartner"
+            ],
+            "h3": [
+                "Standorte Posieux und Sorens",
+                "Beschreibungen weiterer Standorte"
+            ],
             "h4": [],
             "h5": [],
             "h6": []
@@ -67,6 +74,18 @@
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/images\/7\/4\/8\/1\/9\/7481908c81e678df54f4b5c7eb33d53b05f12f10-agroscopehochsvg.png",
+                "alt": "Agroscope_hoch.svg",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/Logo-Graswachstum-neu-2024-web.svg?decoding=auto&fetchpriority=auto",
+                "alt": "Logo-Graswachstum-neu-2024-web",
+                "external": true,
+                "status": 200
             }
         ],
         "good_tags": {
@@ -75,7 +94,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 0,
-                "article": 0,
+                "article": 1,
                 "footer": 1
             }
         },
@@ -116,8 +135,36 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Kontakt",
+                "text": "Contact",
                 "external": false
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum.html": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Agroscope - Graswachstum",
+                "external": true
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum\/erhebungsmethode.html": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link",
+                "external": true
+            },
+            "https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "R-Skript",
+                "external": true
+            },
+            "http:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Bauernzeitung \u2013 Serie Graswachstum",
+                "external": true
             },
             "\/fr\/legal": {
                 "count": 0,
@@ -318,5 +365,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: cb (easy handle 0x560068874ff0)\n> GET \/fr\/about HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:26 GMT\r\n* Added cookie grav-site-23a95d8=\"791b702c152be6b6c7845f753f51dbd8\" for domain graswachstum.ch, path \/, expire 1732394726\n< set-cookie: grav-site-23a95d8=791b702c152be6b6c7845f753f51dbd8; expires=Sat, 23 Nov 2024 20:45:26 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:26 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 99 (easy handle 0x55fbb00501a0)\n> GET \/fr\/about HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"8a987232197c108d5ad5c3e79540ac95\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=8a987232197c108d5ad5c3e79540ac95; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

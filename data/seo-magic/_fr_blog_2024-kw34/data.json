@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-kw34",
         "page_title": "Woche 34 (19.08.-25.08.2024)"
     },
-    "updated": 1732392927,
+    "updated": 1734461938,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 34 (19.08.-25.08.2024)",
         "grav-page-route": "\/blog\/2024-kw34",
         "grav-page-rawroute": "\/blog\/2024-kw34",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:27 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:27 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392927.02332210540771484375,
-        "total_time": 0.0861709999999999975983655531308613717555999755859375,
-        "namelookup_time": 2.500000000000000119804340059648239957823534496128559112548828125e-5,
-        "connect_time": 2.500000000000000119804340059648239957823534496128559112548828125e-5,
-        "pretransfer_time": 0.000101999999999999999195955668884749911740073002874851226806640625,
-        "starttransfer_time": 0.0860559999999999936104444486772990785539150238037109375,
+        "start_time": 1734461938.5115559101104736328125,
+        "total_time": 0.080313999999999996504129740060307085514068603515625,
+        "namelookup_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
+        "connect_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
+        "pretransfer_time": 4.800000000000000121604115665974177318275906145572662353515625e-5,
+        "starttransfer_time": 0.08022300000000000264055444176847231574356555938720703125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 553,
         "request_size": 126,
         "redirect_count": 0,
-        "size_download": 5322,
-        "speed_download": 61883,
+        "size_download": 5446,
+        "speed_download": 68075,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 23629
+        "content_size": 24928
     },
     "content": {
         "body": "<h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n<p><\/p>\n<p>Druckversion (PDF)<\/p>",
@@ -126,7 +126,21 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Kontakt",
+                "text": "Contact",
+                "external": false
+            },
+            "\/fr\/tag:weide#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/fr\/tag:wachstumsbericht#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
                 "external": false
             },
             "\/fr\/blog\/2024-kw34\/2024-08-23 Weidesaison mit Reserven verla\u0308ngern - N. Marti.pdf": {
@@ -136,7 +150,7 @@
                 "text": "Druckversion (PDF)",
                 "external": false
             },
-            "\/fr\/blog\/2024kw18": {
+            "\/fr\/blog\/2024-kw18": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -150,25 +164,46 @@
                 "text": "Article suivant",
                 "external": false
             },
-            "\/fr\/blog\/2024-kw34\/tag:weide": {
+            "\/fr\/tag:weide": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "weide",
                 "external": false
             },
+            "\/fr\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/fr\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
             "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "2\n                November 2024",
+                "text": "1 November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 August 2024",
                 "external": true
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "2\n                May 2024",
+                "text": "2 May 2024",
                 "external": true
             },
             "\/fr\/legal": {
@@ -200,13 +235,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
             "title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
+            "keywords": "verl\u00e4ngern,futterbau,niederschl\u00e4ge,n-mineralisierung,reserven,stark,weidesaison,angekurbelt,druckversion",
             "image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34",
             "og:site_name": "graswachstum.ch",
             "og:title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -214,10 +250,9 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/blog\/2024-kw34",
@@ -370,5 +405,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: eb (easy handle 0x560068874ff0)\n> GET \/fr\/blog\/2024-kw34 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 34 (19.08.-25.08.2024)\r\n< grav-page-route: \/blog\/2024-kw34\r\n< grav-page-rawroute: \/blog\/2024-kw34\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:27 GMT\r\n* Added cookie grav-site-23a95d8=\"2b457f563897e913d5418d30cdbce84a\" for domain graswachstum.ch, path \/, expire 1732394727\n< set-cookie: grav-site-23a95d8=2b457f563897e913d5418d30cdbce84a; expires=Sat, 23 Nov 2024 20:45:27 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:27 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: c3 (easy handle 0x55fbb00501a0)\n> GET \/fr\/blog\/2024-kw34 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 34 (19.08.-25.08.2024)\r\n< grav-page-route: \/blog\/2024-kw34\r\n< grav-page-rawroute: \/blog\/2024-kw34\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"2eadf1b7caf69f9f41a2ef1e5d565d8d\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=2eadf1b7caf69f9f41a2ef1e5d565d8d; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

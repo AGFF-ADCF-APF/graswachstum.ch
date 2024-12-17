@@ -4,26 +4,26 @@
         "page_rawroute": "\/about2",
         "page_title": "\u00dcber"
     },
-    "updated": 1732392926,
+    "updated": 1734461938,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "\u00dcber",
         "grav-page-route": "\/about2",
         "grav-page-rawroute": "\/about2",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:26 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:26 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392926.7234799861907958984375,
-        "total_time": 0.097546999999999994823696169987670145928859710693359375,
-        "namelookup_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "connect_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "pretransfer_time": 4.50000000000000028341044788771085904954816214740276336669921875e-5,
-        "starttransfer_time": 0.097434999999999993836041767281130887567996978759765625,
+        "start_time": 1734461938.0857160091400146484375,
+        "total_time": 0.1493669999999999997708499677173676900565624237060546875,
+        "namelookup_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "connect_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "pretransfer_time": 4.60000000000000000359955121265187472090474329888820648193359375e-5,
+        "starttransfer_time": 0.149251999999999995782928863263805396854877471923828125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 514,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 4771,
-        "speed_download": 49185,
+        "size_download": 4798,
+        "speed_download": 32201,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 20798
+        "content_size": 21080
     },
     "content": {
-        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n    \n  \n      \n      <h4>Tags populaires<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n    \n    \n        \n      <h4>Archives<\/h4>\n      <ul>\n\n<\/ul>\n    \n    \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
+        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Contact\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n    \n  \n      \n      <h4>Tags populaires<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archives<\/h4>\n      <ul>\n\n<\/ul>\n    \n    \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Contact\n                  <\/li>\n  \n    <\/ul>",
         "headers": {
             "h1": [
                 "\u00dcber"
@@ -119,7 +119,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Kontakt",
+                "text": "Contact",
                 "external": false
             },
             "\/tag:weide": {
@@ -127,6 +127,20 @@
                 "target": "",
                 "rel": "",
                 "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
                 "external": false
             },
             "\/fr\/legal": {
@@ -334,5 +348,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d1 (easy handle 0x560068874ff0)\n> GET \/fr\/about2 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber\r\n< grav-page-route: \/about2\r\n< grav-page-rawroute: \/about2\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:26 GMT\r\n* Added cookie grav-site-23a95d8=\"94070c646104cf20e3dd510416c2aa92\" for domain graswachstum.ch, path \/, expire 1732394726\n< set-cookie: grav-site-23a95d8=94070c646104cf20e3dd510416c2aa92; expires=Sat, 23 Nov 2024 20:45:26 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:26 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: a3 (easy handle 0x55fbb00501a0)\n> GET \/fr\/about2 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber\r\n< grav-page-route: \/about2\r\n< grav-page-rawroute: \/about2\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"ae91ad5749e2a838bfba2797d99f3b40\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=ae91ad5749e2a838bfba2797d99f3b40; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

@@ -1,39 +1,39 @@
 {
     "grav": {
-        "page_route": "\/blog\/2024-04-30-weidetagung",
-        "page_rawroute": "\/blog\/2024-04-30-weidetagung",
-        "page_title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+        "page_route": "\/contact",
+        "page_rawroute": "\/contact",
+        "page_title": "Contact"
     },
-    "updated": 1734461938,
+    "updated": 1734461937,
     "response_headers": {
         "pragma": "no-cache",
-        "grav-page-title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
-        "grav-page-route": "\/blog\/2024-04-30-weidetagung",
-        "grav-page-rawroute": "\/blog\/2024-04-30-weidetagung",
+        "grav-page-title": "Contact",
+        "grav-page-route": "\/contact",
+        "grav-page-rawroute": "\/contact",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
+        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461938.3380320072174072265625,
-        "total_time": 0.08281199999999999672439798814593814313411712646484375,
-        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "pretransfer_time": 4.69999999999999972378865453759289039226132445037364959716796875e-5,
-        "starttransfer_time": 0.08271699999999999886046708752473932690918445587158203125,
+        "start_time": 1734461937.3876569271087646484375,
+        "total_time": 0.165235999999999993992361169148352928459644317626953125,
+        "namelookup_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
+        "connect_time": 1.69999999999999998659926114807916519566788338124752044677734375e-5,
+        "pretransfer_time": 7.3999999999999996227843801488432973201270215213298797607421875e-5,
+        "starttransfer_time": 0.16507600000000000051159076974727213382720947265625,
         "redirect_time": 0
     },
     "info": {
-        "url": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung",
+        "url": "https:\/\/graswachstum.ch\/contact",
         "content_type": "text\/html;charset=UTF-8",
-        "header_size": 592,
-        "request_size": 139,
+        "header_size": 518,
+        "request_size": 116,
         "redirect_count": 0,
-        "size_download": 5360,
-        "speed_download": 65365,
+        "size_download": 5244,
+        "speed_download": 31781,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,21 +41,17 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24165
+        "content_size": 21644
     },
     "content": {
-        "body": "<h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
+        "body": "<p>title: Contact Form<\/p>\n<p>form:\nname: contact<\/p>\n<p>fields:\nname:\nlabel: Name\nplaceholder: Enter your name\nautocomplete: on\ntype: text\nvalidate:\nrequired: true<\/p>\n<p>email:\nlabel: Email\nplaceholder: Enter your email address\ntype: email\nvalidate:\nrequired: true<\/p>\n<p>message:\nlabel: Message\nplaceholder: Enter your message\ntype: textarea\nvalidate:\nrequired: true<\/p>\n<p>g-recaptcha-response:\nlabel: Captcha\ntype: captcha\nrecaptcha_not_validated: 'Captcha not valid!'<\/p>\n<p>buttons:\nsubmit:\ntype: submit\nvalue: Submit\nreset:\ntype: reset\nvalue: Reset<\/p>\n<p>process:\ncaptcha: true\nsave:\nfileprefix: contact-\ndateformat: Ymd-His-u\nextension: txt\nbody: \"{% include 'forms\/data.txt.twig' %}\"\nemail:\nsubject: \"[Site Contact Form] {{ form.value.name|e }}\"\nbody: \"{% include 'forms\/data.html.twig' %}\"\nmessage: Thank you for getting in touch!<\/p>",
         "headers": {
             "h1": [
-                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
-                "Drei gute Ratschl\u00e4ge"
+                "Contact"
             ],
             "h2": [],
             "h3": [],
-            "h4": [
-                "Tags populaires",
-                "Archives"
-            ],
+            "h4": [],
             "h5": [],
             "h6": []
         },
@@ -67,8 +63,8 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03 Fruehlingstagung IG Weidemilch.jpg",
-                "alt": "2024-05-03%20Fruehlingstagung%20IG%20Weidemilch",
+                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg",
+                "alt": "Hero Image",
                 "external": true,
                 "status": 200
             }
@@ -78,7 +74,7 @@
                 "header": 1,
                 "nav": 1,
                 "section": 2,
-                "aside": 1,
+                "aside": 0,
                 "article": 1,
                 "footer": 1
             }
@@ -88,112 +84,42 @@
             "flash": 0
         },
         "links": {
-            "\/fr": {
+            "\/": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "",
                 "external": false
             },
-            "\/fr\/growth": {
+            "\/growth": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Kurven",
                 "external": false
             },
-            "\/fr\/resources": {
+            "\/resources": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
                 "external": false
             },
-            "\/fr\/about": {
+            "\/about": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
                 "external": false
             },
-            "\/fr\/contact": {
+            "\/contact": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Contact",
                 "external": false
             },
-            "\/fr\/tag:weide#blog_list": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "weide",
-                "external": false
-            },
-            "\/fr\/tag:betriebsportrait#blog_list": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "betriebsportrait",
-                "external": false
-            },
-            "\/fr\/blog\/2024-kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "Druckversion (PDF)",
-                "external": false
-            },
-            "\/fr\/blog\/2024-kw18": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "Article suivant",
-                "external": false
-            },
-            "\/fr\/tag:weide": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "weide",
-                "external": false
-            },
-            "\/fr\/tag:wachstumsbericht": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "wachstumsbericht",
-                "external": false
-            },
-            "\/fr\/tag:betriebsportrait": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "betriebsportrait",
-                "external": false
-            },
-            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "1 November 2024",
-                "external": true
-            },
-            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "1 August 2024",
-                "external": true
-            },
-            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "2 May 2024",
-                "external": true
-            },
-            "\/fr\/legal": {
+            "\/legal": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -217,32 +143,32 @@
         }
     },
     "head": {
-        "title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
+        "title": "graswachstum.ch",
         "meta": {
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
-            "title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
-            "keywords": "ratschl\u00e4ge,weidemilch,michael,ruedi,sutter,zeigen,fl\u00e4chen,optimal,nutzen,gute",
-            "image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
-            "og:url": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung",
+            "description": "AGFF-Grasmessnetzwerk",
+            "title": "Contact",
+            "image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/contact",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
-            "og:description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
+            "og:title": "Contact",
+            "og:description": "AGFF-Grasmessnetzwerk",
             "og:type": "article",
-            "og:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "og:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:secure": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "og:image:secure": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
-            "twitter:description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
-            "twitter:image": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
-            "twitter:image:alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch"
+            "twitter:title": "Contact",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
+            "twitter:image:alt": "Contact",
+            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
-        "canonical": "https:\/\/graswachstum.ch\/fr\/blog\/2024-04-30-weidetagung",
+        "canonical": "https:\/\/graswachstum.ch\/contact",
         "links": {
             "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
                 "rel": "stylesheet",
@@ -392,5 +318,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: b7 (easy handle 0x55fbb00501a0)\n> GET \/fr\/blog\/2024-04-30-weidetagung HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Fr\u00fchlingstagung IG Weidemilch 30.04.2024\r\n< grav-page-route: \/blog\/2024-04-30-weidetagung\r\n< grav-page-rawroute: \/blog\/2024-04-30-weidetagung\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"2c8d94159af6723027dc0a6c1c76a3e4\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=2c8d94159af6723027dc0a6c1c76a3e4; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 3d (easy handle 0x55fbb0050220)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Contact\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"274158875601ff82797006624eef7dd1\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=274158875601ff82797006624eef7dd1; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

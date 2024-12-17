@@ -39,5 +39,8 @@ hero:
             classes: 'bg-primary text-white'
 show_breadcrumbs: true
 show_pagination: true
+author: 'Martin Zbinden'
+sitemap:
+    lastmod: '17-12-2024 20:21'
 ---
 

@@ -5,27 +5,27 @@ form:
     fields:
         name:
             label: Name
-            placeholder: 'Enter your name'
+            placeholder: 'Wie heisst du?'
             autocomplete: 'on'
             type: text
             validate:
                 required: true
         email:
             label: Email
-            placeholder: 'Enter your email address'
+            placeholder: 'Gib deine E-Mail-Adresse ein.'
             type: email
             validate:
                 required: true
         message:
             label: Message
-            placeholder: 'Enter your message'
+            placeholder: 'Was willst du uns sagen?'
             type: textarea
             validate:
                 required: true
         g-recaptcha-response:
             label: Captcha
             type: captcha
-            recaptcha_not_validated: 'Captcha not valid!'
+            recaptcha_not_validated: 'Captcha ungültig!'
     buttons:
         submit:
             type: submit

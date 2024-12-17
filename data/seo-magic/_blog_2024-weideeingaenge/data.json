@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-weideeingaenge",
         "page_title": "Weideeing\u00e4nge"
     },
-    "updated": 1734477217,
+    "updated": 1734477228,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Weideeing\u00e4nge",
         "grav-page-route": "\/blog\/2024-weideeingaenge",
         "grav-page-rawroute": "\/blog\/2024-weideeingaenge",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 23:13:37 GMT",
+        "expires": "Tue, 24 Dec 2024 23:13:48 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 23:13:37 GMT",
+        "date": "Tue, 17 Dec 2024 23:13:48 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734477217.1206951141357421875,
-        "total_time": 0.10649799999999999544630924219745793379843235015869140625,
-        "namelookup_time": 0.0004260000000000000006279698983036041681771166622638702392578125,
-        "connect_time": 0.0004749999999999999990459020882127560980734415352344512939453125,
-        "pretransfer_time": 0.007361999999999999620692303636815267964266240596771240234375,
-        "starttransfer_time": 0.10592000000000000026201263381153694353997707366943359375,
+        "start_time": 1734477228.826097011566162109375,
+        "total_time": 0.09578499999999999514610493633881560526788234710693359375,
+        "namelookup_time": 0.000550999999999999949019946487993593109422363340854644775390625,
+        "connect_time": 0.0006310000000000000504318808935977358487434685230255126953125,
+        "pretransfer_time": 0.0104379999999999993620658500503850518725812435150146484375,
+        "starttransfer_time": 0.09529100000000000070254912998279905878007411956787109375,
         "redirect_time": 0
     },
     "info": {
@@ -33,7 +33,7 @@
         "request_size": 133,
         "redirect_count": 0,
         "size_download": 6545,
-        "speed_download": 61745,
+        "speed_download": 68894,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -433,5 +433,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff794a0)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 23:13:37 GMT\r\n* Added cookie grav-site-23a95d8=\"dd5ab21cab75e3e9eeb1d6bfdee97747\" for domain graswachstum.ch, path \/, expire 1734479017\n< set-cookie: grav-site-23a95d8=dd5ab21cab75e3e9eeb1d6bfdee97747; expires=Tue, 17 Dec 2024 23:43:37 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 23:13:37 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff41b50)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 23:13:48 GMT\r\n* Added cookie grav-site-23a95d8=\"dbc421390af1d5cbfbbfe8c9c8849cfd\" for domain graswachstum.ch, path \/, expire 1734479028\n< set-cookie: grav-site-23a95d8=dbc421390af1d5cbfbbfe8c9c8849cfd; expires=Tue, 17 Dec 2024 23:43:48 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 23:13:48 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

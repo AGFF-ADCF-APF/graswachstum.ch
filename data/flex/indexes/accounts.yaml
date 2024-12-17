@@ -1,9 +1,14 @@
 version: '1.2'
-timestamp: 1734469731
-count: 1
+timestamp: 1734469970
+count: 2
 index:
   martinz:
     storage_key: martinz
     storage_timestamp: 1734469731
     key: martinz
     email: martin.zbinden@gmail.com
+  zbma:
+    storage_key: zbma
+    storage_timestamp: 1734469970
+    key: zbma
+    email: martin.zbinden@inforama.ch

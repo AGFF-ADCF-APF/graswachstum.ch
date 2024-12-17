@@ -17,6 +17,8 @@ author: 'Nicolas Marti, Martin Zbinden'
 published: false
 sitemap:
     lastmod: '17-12-2024 20:24'
+aura:
+    author: zbma
 ---
 
 # Saubere Kühe = sauberes Gras

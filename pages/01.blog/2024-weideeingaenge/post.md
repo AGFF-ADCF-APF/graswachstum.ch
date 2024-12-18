@@ -39,7 +39,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 ===
 
 
-1. Faktoren für Trittschäden:
+1. Faktoren, die das Ausmass von Trittschäden beeinflussen.
 
 |  nicht veränderbar  |  beeinflussbar  |
 |  :-----          |  :-----          |
@@ -47,8 +47,17 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 |  Topographie  |  Grasnarbe |
 |  Witterung |   Tiergewicht |
 
+Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erachtens grösseren Einfluss als Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
 
-2. Allfällige Massnahmen zur Reduktion von Trittschäden sollen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Damit lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) optimal wahrnehmen.
+
+
+2. Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tränkebereiche sind abhängig vom Weidesystem und der Umsetzung auf dem Betrieb. DIE Lösung für alle gibt es nicht. So benötigt der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang keine Wartebereiche auf den Koppeln, dafür genug breite Weidewege, damit sich die Kühe individuell und ruhig zwischen Weide und Stall 
+
+3. Allfällige Massnahmen zur Reduktion von Trittschäden müssen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Als Resultat lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) möglichst gut wahrnehmen. 
+4. Wenn durchgetretene, morastige Stellen einfach befestigt werden, kann es sein, dass sich die Schäden einfach örtlich verschieben oder sogar ausdehnen. Das Management muss auch angeschaut werden: Wieso halten sich übermässig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als nötig? 
+5. Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
+
+
 
 
 

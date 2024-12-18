@@ -58,6 +58,8 @@ Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erach
 5. Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
 
 
-
+[lightbox image="TraenkeEingang_befestigt_2013-09-25.jpg" gallery="gallery1" class="inline-block" desc=".dbs-1"]
+    ![Tränkeingang befestigt](TraenkeEingang_befestigt_2013-09-25.jpg?cropZoom=200,200)
+[/lightbox]
 
 

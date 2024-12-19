@@ -1,0 +1,29 @@
+{% set parts = [] %}
+
+
+{% if ref.author %}
+  {% set parts = parts|merge([
+    '<span class="ref-author">' ~ ref.author ~ '</span>'
+    ]) %}
+{% endif %}
+
+{% if ref.year %}
+  {% set parts = parts|merge([
+    '<span class="ref-year">(' ~ ref.year ~ ')</span>'
+    ]) %}
+{% endif %}
+
+{% if ref.title %}
+  {% set parts = parts|merge([
+    '<span class="ref-title">"' ~ ref.title ~ '"</span>'
+    ]) %}
+{% endif %}
+
+{% if ref.url %}
+  {% set parts = parts|merge([
+    '<span class="ref-link">[<a class="ref-url" href="' ~ ref.url  ~'" >' ~ ref.url|truncate(32, true)|raw ~ '</a>]</span>'
+  ]) %}
+{% endif %}
+
+
+{{ parts|join(", ")|raw }}.

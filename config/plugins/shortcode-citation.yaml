@@ -3,4 +3,4 @@ built_in_css: true
 builtin_css: false
 heading_text: null
 items: all
-reorder_uncited: true
+reorder_uncited: false

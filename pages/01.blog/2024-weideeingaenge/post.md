@@ -1,7 +1,7 @@
 ---
 title: Weideeingänge
 date: '17-12-2021 20:24'
-hide_from_post_list: false
+hide_from_post_list: true
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:

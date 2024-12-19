@@ -1,7 +1,7 @@
+enabled: false
 default_for_all: true
 dev_host: localhost
 dev_port: 2000
-enabled: true
 env: production
 options:
   markdownit:

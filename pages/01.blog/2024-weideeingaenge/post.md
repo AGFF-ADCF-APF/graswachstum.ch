@@ -44,6 +44,16 @@ references:
         journal: null
         volume: null
         pages: null
+    -
+        id: '1'
+        type: journal
+        title: 'AGFF W14: '
+        author: null
+        year: '2004'
+        url: null
+        journal: null
+        volume: null
+        pages: null
 ---
 
 # Saubere Kühe = sauberes Gras
@@ -69,20 +79,21 @@ Die Faktoren sind sortiert nach Wichtigkeit, d.h. das Tierverhalten hat  einen g
 4. Wenn durchgetretene, morastige Stellen befestigt werden, kann es sein, dass sich die **Schäden örtlich verschieben** oder sogar **ausdehnen**. Das Management muss auch immer angeschaut werden: Wieso halten sich übermässig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als nötig? 
 5. Wenn die Tiere **nur zum Fressen auf die Weide** kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
 
-In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis gezeigt. Es gilt wie so oft in der Landwirtschaft: Generelle Empfehlungen sind schwierig, der Austausch mit den Kollegen vor Ort und etwas Experimentierfreude zahlen sich aus. Nachfolgend ein paar allgemeine Ratschläge, welche für das AGFF Infoblatt W14 zusammengestellt wurden.
+In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis gezeigt. Es gilt wie so oft in der Landwirtschaft: Generelle Empfehlungen sind schwierig, der Austausch mit den Kollegen vor Ort und etwas Experimentierfreude zahlen sich aus. Nachfolgend ein paar Ratschläge, welche im AGFF Infoblatt W14 [cite=1/] (wo nicht anders angegeben) oder in anderer Literatur zu finden sind:
 
 
 > Weidewege, worauf muss geachtet werden
 * Ein befestigter Weg soll mehr als 20 Jahre halten!
 * Lage des Weges gut planen: wie können möglichst viele Koppeln erschlossen werden?
 * **Je grösser die Herde, desto breiter der Weg.** Die Herde kommt auf schmalen Wegen langsamer voran. Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
-* Weiche Triebwege – die jedoch rasch abtrocknen – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht.[cite=2  /]
+* Weiche Triebwege – die jedoch rasch abtrocknen – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht.[cite=2/]
 * Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
 * Wird der Weg ebenfalls von Fahrzeugen benutzt, muess er genügend breit und gut gebaut sein; ansonsten können sich Spuren bilden.
 * Die Dauerhaftigkeit eines Weges hängt vom **Abfliessen des Wassers** ab: Bombierte Form, je nach Untergrund Drainage einbauen und tiefere Erdschichten vermeiden.
 * Den Wegbau für das Legen von Wasser- und/oder Elektroleitungen nutzen.
 * Der elektrische Zaun muss 50cm vom Wegrand entfernt sein; dies ergibt gesamthaft eine minimale Wegbreite von 2 Metern.
 
+ 
 
 > Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
 * Pflanzenschicht entfernen (15-20cm)

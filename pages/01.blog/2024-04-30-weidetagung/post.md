@@ -12,6 +12,7 @@ feed:
     limit: 10
 hero:
     image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg'
+    display: true
 taxonomy:
     category:
         - blog

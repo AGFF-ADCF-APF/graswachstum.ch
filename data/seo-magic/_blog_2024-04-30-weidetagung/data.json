@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-04-30-weidetagung",
         "page_title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
     },
-    "updated": 1734588500,
+    "updated": 1734588570,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
         "grav-page-route": "\/blog\/2024-04-30-weidetagung",
         "grav-page-rawroute": "\/blog\/2024-04-30-weidetagung",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 26 Dec 2024 06:08:20 GMT",
+        "expires": "Thu, 26 Dec 2024 06:09:30 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Thu, 19 Dec 2024 06:08:20 GMT",
+        "date": "Thu, 19 Dec 2024 06:09:29 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734588500.38708209991455078125,
-        "total_time": 0.1025169999999999970174968666469794698059558868408203125,
-        "namelookup_time": 0.0002809999999999999997779553950749686919152736663818359375,
-        "connect_time": 0.0003429999999999999889255253293640635092742741107940673828125,
-        "pretransfer_time": 0.0157319999999999994566568517484483891166746616363525390625,
-        "starttransfer_time": 0.10178199999999999747490875279254396446049213409423828125,
+        "start_time": 1734588569.97400188446044921875,
+        "total_time": 0.123194999999999998951949464753852225840091705322265625,
+        "namelookup_time": 0.00065499999999999998327726569158357960986904799938201904296875,
+        "connect_time": 0.0007320000000000000117683640610266593284904956817626953125,
+        "pretransfer_time": 0.0089060000000000007214229214014267199672758579254150390625,
+        "starttransfer_time": 0.12262699999999999989075405437688459642231464385986328125,
         "redirect_time": 0
     },
     "info": {
@@ -33,7 +33,7 @@
         "request_size": 136,
         "redirect_count": 0,
         "size_download": 6480,
-        "speed_download": 63529,
+        "speed_download": 52682,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -442,5 +442,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbafffc8e0)\n> GET \/blog\/2024-04-30-weidetagung HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Fr\u00fchlingstagung IG Weidemilch 30.04.2024\r\n< grav-page-route: \/blog\/2024-04-30-weidetagung\r\n< grav-page-rawroute: \/blog\/2024-04-30-weidetagung\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:08:20 GMT\r\n* Added cookie grav-site-23a95d8=\"6b5c6b072ba1eff8083d6c9b38a58458\" for domain graswachstum.ch, path \/, expire 1734590300\n< set-cookie: grav-site-23a95d8=6b5c6b072ba1eff8083d6c9b38a58458; expires=Thu, 19 Dec 2024 06:38:20 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:08:20 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaffb01e0)\n> GET \/blog\/2024-04-30-weidetagung HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Fr\u00fchlingstagung IG Weidemilch 30.04.2024\r\n< grav-page-route: \/blog\/2024-04-30-weidetagung\r\n< grav-page-rawroute: \/blog\/2024-04-30-weidetagung\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:09:30 GMT\r\n* Added cookie grav-site-23a95d8=\"745ba3d4ffc3e773c949736a99095f63\" for domain graswachstum.ch, path \/, expire 1734590370\n< set-cookie: grav-site-23a95d8=745ba3d4ffc3e773c949736a99095f63; expires=Thu, 19 Dec 2024 06:39:30 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:09:29 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

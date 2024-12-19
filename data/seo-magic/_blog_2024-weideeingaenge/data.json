@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-weideeingaenge",
         "page_title": "Weideeing\u00e4nge"
     },
-    "updated": 1734588786,
+    "updated": 1734590349,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Weideeing\u00e4nge",
         "grav-page-route": "\/blog\/2024-weideeingaenge",
         "grav-page-rawroute": "\/blog\/2024-weideeingaenge",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 26 Dec 2024 06:13:06 GMT",
+        "expires": "Thu, 26 Dec 2024 06:39:09 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Thu, 19 Dec 2024 06:13:06 GMT",
+        "date": "Thu, 19 Dec 2024 06:39:08 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734588786.0218980312347412109375,
-        "total_time": 0.34469600000000000239452901951153762638568878173828125,
-        "namelookup_time": 0.00065499999999999998327726569158357960986904799938201904296875,
-        "connect_time": 0.00074700000000000005111189249618064422975294291973114013671875,
-        "pretransfer_time": 0.011539000000000000645261621912140981294214725494384765625,
-        "starttransfer_time": 0.3440469999999999917150717010372318327426910400390625,
+        "start_time": 1734590348.48822689056396484375,
+        "total_time": 0.6984989999999999810142981004901230335235595703125,
+        "namelookup_time": 0.000699999999999999992887633748495090912911109626293182373046875,
+        "connect_time": 0.00077599999999999999707178677255114962463267147541046142578125,
+        "pretransfer_time": 0.0117230000000000007809308755213351105339825153350830078125,
+        "starttransfer_time": 0.6942099999999999937472239253111183643341064453125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 559,
         "request_size": 133,
         "redirect_count": 0,
-        "size_download": 8539,
-        "speed_download": 24822,
+        "size_download": 8352,
+        "speed_download": 11965,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 35646
+        "content_size": 35037
     },
     "content": {
-        "body": "<h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n<ol>\n<li>Faktoren, die das Ausmass von Trittsch&auml;den beeinflussen.<\/li>\n<\/ol>\n\n\n\nnicht ver&auml;nderbar\nbeeinflussbar\n\n\n\n\nBoden\nTierverhalten\n\n\nTopographie\nGrasnarbe\n\n\nWitterung\nTiergewicht\n\n\n\n<p>Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erachtens gr&ouml;sseren Einfluss als Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden k&ouml;nnen, weil zum Beispiel ein unpassendes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).<\/p>\n<ol>\n<li>\n<p>Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tr&auml;nkebereiche sind abh&auml;ngig vom Weidesystem und der Umsetzung auf dem Betrieb. DIE L&ouml;sung f&uuml;r alle gibt es nicht. So ben&ouml;tigt der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang keine Wartebereiche auf den Koppeln, daf&uuml;r genug breite Weidewege, damit sich die K&uuml;he individuell und ruhig zwischen Weide und Stall <\/p>\n<\/li>\n<li>\n<p>Allf&auml;llige Massnahmen zur Reduktion von Trittsch&auml;den m&uuml;ssen darauf abzielen, die unbewachsene Fl&auml;che und die Verschmutzung der Klauen m&ouml;glichst gering zu halten. Als Resultat l&auml;sst sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gew&auml;sserschutz) m&ouml;glichst gut wahrnehmen. <\/p>\n<\/li>\n<li>\n<p>Wenn durchgetretene, morastige Stellen einfach befestigt werden, kann es sein, dass sich die Sch&auml;den einfach &ouml;rtlich verschieben oder sogar ausdehnen. Das Management muss auch angeschaut werden: Wieso halten sich &uuml;berm&auml;ssig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als n&ouml;tig? <\/p>\n<\/li>\n<li>\n<p>Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die D&uuml;ngerverteilung besser und die Sch&auml;den reduzieren sich - vor allem bei nasser Witterung.<\/p>\n<\/li>\n<\/ol>\n    \n\n    \n<pre><code>![Tr&auml;nkeingang befestigt](TraenkeEingang_befestigt_2013-09-25.jpg?cropZoom=200,200)<\/code><\/pre>\n\n\n\n\n<pre><code>\n    ### Aston Martin DBS 1\n\n    \n        Morbi ac interdum velit. Ut sed purus in **erat feugiat mollis**. In porta ligula quis vulputate ullamcorper. \n    <\/code><\/pre>\n\n    Aenean eu condimentum odio. Aliquam ac justo eget libero ullamcorper vehicula. Ut aliquet massa at sapien pellentesqu, in bibendum ligula vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum vestibulum sollicitudin. Sed vitae sodales neque. Donec placerat massa non suscipit accumsan.\n[\/div]\n[\/div]\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024",
+        "body": "<h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n<ol>\n<li>Faktoren, die das Ausmass von Trittsch&auml;den beeinflussen.<\/li>\n<\/ol>\n\n\n\nnicht ver&auml;nderbar\nbeeinflussbar\n\n\n\n\nBoden\nTierverhalten\n\n\nTopographie\nGrasnarbe\n\n\nWitterung\nTiergewicht\n\n\n\n<p>Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erachtens gr&ouml;sseren Einfluss als Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden k&ouml;nnen, weil zum Beispiel ein unpassendes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).<\/p>\n<ol>\n<li>Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tr&auml;nkebereiche sind abh&auml;ngig vom Weidesystem und der Umsetzung auf dem Betrieb. DIE L&ouml;sung f&uuml;r alle gibt es nicht. So ben&ouml;tigt der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang keine Wartebereiche auf den Koppeln, daf&uuml;r genug breite Weidewege, damit sich die K&uuml;he individuell und ruhig zwischen Weide und Stall <\/li>\n<li>Allf&auml;llige Massnahmen zur Reduktion von Trittsch&auml;den m&uuml;ssen darauf abzielen, die unbewachsene Fl&auml;che und die Verschmutzung der Klauen m&ouml;glichst gering zu halten. Als Resultat l&auml;sst sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gew&auml;sserschutz) m&ouml;glichst gut wahrnehmen. <\/li>\n<li>Wenn durchgetretene, morastige Stellen einfach befestigt werden, kann es sein, dass sich die Sch&auml;den einfach &ouml;rtlich verschieben oder sogar ausdehnen. Das Management muss auch angeschaut werden: Wieso halten sich &uuml;berm&auml;ssig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als n&ouml;tig? <\/li>\n<li>Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die D&uuml;ngerverteilung besser und die Sch&auml;den reduzieren sich - vor allem bei nasser Witterung.<\/li>\n<\/ol>\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024",
         "headers": {
             "h1": [
                 "Weideeing\u00e4nge",
@@ -81,13 +81,13 @@
             },
             {
                 "src": "https:\/\/graswachstum.ch\/images\/7\/2\/f\/f\/f\/72ffff2e849fbbc0c178b37d705c4cde1b61df3c-traenkeeingangbefestigt2013-09-25.jpg",
-                "alt": "Climbing Hilly Peaks",
+                "alt": "Befestigte Umgebung von Tr\u00e4nkestellen und Eing\u00e4ngen",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/images\/7\/2\/f\/f\/f\/72ffff2e849fbbc0c178b37d705c4cde1b61df3c-traenkeeingangbefestigt2013-09-25.jpg",
-                "alt": "Golden Sand Dunes",
+                "src": "https:\/\/graswachstum.ch\/images\/1\/2\/8\/1\/7\/12817ef9aeccfe237d29ed1ebd758708046dfaa9-weidewegimg20170302140039.jpg",
+                "alt": "Achtung, Baubewilligung!",
                 "external": true,
                 "status": 200
             },
@@ -174,14 +174,14 @@
                 "text": "infrastruktur",
                 "external": false
             },
-            "\/user\/pages\/01.blog\/2024-weideeingaenge\/TraenkeEingang_befestigt_2013-09-25.jpg": {
+            "\/images\/4\/d\/2\/9\/4\/4d294c92fecfa5d4566f35e3ac28c14f348fa1ad-traenkeeingangbefestigt2013-09-25.jpg": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "![Tr\u00e4nkeingang befestigt](TraenkeEingang_befestigt_2013-09-25.jpg?cropZoom=200,200)",
+                "text": "",
                 "external": false
             },
-            "\/images\/4\/d\/2\/9\/4\/4d294c92fecfa5d4566f35e3ac28c14f348fa1ad-traenkeeingangbefestigt2013-09-25.jpg": {
+            "\/images\/a\/9\/0\/e\/a\/a90ea1e60b8ee0b3dd884020dc5df06d643b3afd-weidewegimg20170302140039.jpg": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -310,7 +310,7 @@
             "generator": "GravCMS",
             "description": "nicht ver\u00e4nderbar beeinflussbar Boden Tierverhalten Topographie Grasnarbe Witterung Tiergewicht Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalte\u2026",
             "title": "Weideeing\u00e4nge | graswachstum.ch",
-            "keywords": "weide,tierverhalten,fressen,d\u00fcngerverteilung,faktoren,beeinflussen,boden,tiergewicht,ruhig,stall",
+            "keywords": "weide,tierverhalten,fressen,faktoren,beeinflussen,boden,d\u00fcngerverteilung,tiergewicht,ausmass,trittsch\u00e4den",
             "image": "https:\/\/graswachstum.ch\/blog\/2024-weideeingaenge\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2024-weideeingaenge",
             "og:site_name": "graswachstum.ch",
@@ -475,5 +475,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbafec9e80)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:13:06 GMT\r\n* Added cookie grav-site-23a95d8=\"4dc76a590a30d9f2cd5cafd20f90bafd\" for domain graswachstum.ch, path \/, expire 1734590586\n< set-cookie: grav-site-23a95d8=4dc76a590a30d9f2cd5cafd20f90bafd; expires=Thu, 19 Dec 2024 06:43:06 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:13:06 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbafec99a0)\n> GET \/blog\/2024-weideeingaenge HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Weideeing\u00e4nge\r\n< grav-page-route: \/blog\/2024-weideeingaenge\r\n< grav-page-rawroute: \/blog\/2024-weideeingaenge\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:39:09 GMT\r\n* Added cookie grav-site-23a95d8=\"475642dad5bfcdf6905161dc7e543aa2\" for domain graswachstum.ch, path \/, expire 1734592149\n< set-cookie: grav-site-23a95d8=475642dad5bfcdf6905161dc7e543aa2; expires=Thu, 19 Dec 2024 07:09:08 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:39:08 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

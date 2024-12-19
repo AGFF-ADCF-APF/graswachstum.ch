@@ -34,7 +34,7 @@ media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideeingang_Moosegg_2017-05-31 1
 
 # Saubere Kühe = sauberes Gras
 
-Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen genügen. Anbei ein Sammlung von spannenden Ansätzen, welche ich in den letzten Jahren gesehen habe.
+Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen genügten. Anbei ein Sammlung spannender Ansätze von zahlreichen Betrieben in der ganzen Schweiz.
 
 ===
 
@@ -47,11 +47,11 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 |  Topographie  |  Grasnarbe |
 |  Witterung |   Tiergewicht |
 
-Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erachtens grösseren Einfluss als Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
+Die Faktoren sind sortiert nach Wichtigkeit, d.h. das Tierverhalten hat  einen grösseren Einfluss als das Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes oder ungewohntes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
 
+2. Bei Weideinfrastrukturen geht es nicht in erster Linie darum, **das Weideerlebnis für Tiere** und Mensch zu verbessern, und nur zweitranging um das Verhindern von Trittschäden mit baulichen (!) Massnahmen, die selber auch wieder die Futterfläche verkleinern. Massnahmen zur Reduktion von Trittschäden müssen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Als Resultat lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) möglichst gut wahrnehmen. 
 
-2. **Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tränkebereiche sind abhängig vom Weidesystem und der Umsetzung auf dem Betrieb.**  DIE Lösung für alle gibt es nicht. Wenn kleinere Herden regelmässig eine Wiese queren müssen, reicht bei kleinen Herden ein kleines, klauenfreundlich gestaltetes Kuhweglein von 1m Breite. Der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang braucht hingegen Kuhautobahnen, damit sich die Kühe individuell und ruhig zwischen Weide und Stall bewegen und kreuzen können. 
-3. Allfällige Massnahmen zur Reduktion von Trittschäden müssen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Als Resultat lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) möglichst gut wahrnehmen. 
+3. **Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tränkebereiche sind abhängig vom Weidesystem und der Umsetzung auf dem Betrieb.**  DIE Lösung für alle gibt es nicht. Wenn kleinere Herden regelmässig eine Wiese queren müssen, reicht bei kleinen Herden ein kleines, klauenfreundlich gestaltetes Kuhweglein von 1m Breite. Der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang braucht hingegen Kuhautobahnen, damit sich die Kühe individuell und ruhig zwischen Weide und Stall bewegen und kreuzen können. 
 4. Wenn durchgetretene, morastige Stellen befestigt werden, kann es sein, dass sich die **Schäden örtlich verschieben** oder sogar **ausdehnen**. Das Management muss auch immer angeschaut werden: Wieso halten sich übermässig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als nötig? 
 5. Wenn die Tiere **nur zum Fressen auf die Weide** kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
 
@@ -59,14 +59,15 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 
 
 > Weidewege, worauf muss geachtet werden
- * Ein befestigter Weg soll mehr als 20 Jahre halten!
-* Lage des Weges genau planen, wie können möglichst viele Koppeln erschlossen werden?
-* Je grösser die Herde, desto breiter der Weg.
-* Die Herde kommt auf schmalen Wegen langsamer voran.
-* Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). 
-* Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
+* Ein befestigter Weg soll mehr als 20 Jahre halten!
+* Lage des Weges gut planen: wie können möglichst viele Koppeln erschlossen werden?
+* **Je grösser die Herde, desto breiter der Weg.** Die Herde kommt auf schmalen Wegen langsamer voran. Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
+* Weiche Triebwege – die jedoch rasch abtrocknen – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht.
 * Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
-* ...
+* Wird der Weg ebenfalls von Fahrzeugen benutzt, muess er genügend breit und gut gebaut sein; ansonsten können sich Spuren bilden.
+* Die Dauerhaftigkeit eines Weges hängt vom **Abfliessen des Wassers** ab: Bombierte Form, je nach Untergrund Drainage einbauen und tiefere Erdschichten vermeiden.
+* Den Wegbau für das Legen von Wasser- und/oder Elektroleitungen nutzen.
+* Der elektrische Zaun muss 50cm vom Wegrand entfernt sein; dies ergibt gesamthaft eine minimale Wegbreite von 2 Metern.
 
 
 > Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF

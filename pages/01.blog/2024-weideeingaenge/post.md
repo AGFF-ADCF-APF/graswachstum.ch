@@ -8,8 +8,6 @@ hero:
     image: Feldweg_Tränkefass_img_6964.jpg
     image_alignment: object-center
 taxonomy:
-    category:
-        - blog
     tag:
         - weide
         - infrastruktur
@@ -24,11 +22,11 @@ gallery:
     items:
         -
             title: 'Climbing Hilly Peaks'
-            image: david-marcu-78A265wPiO4-unsplash.jpg
+            image: TraenkeEingang_befestigt_2013-09-25.jpg
             desc: ' viverra nulla, in mollis erat purus a mauris'
         -
             title: 'Golden Sand Dunes'
-            image: sergey-pesterev-_VqyrvQi6do-unsplash.jpg
+            image: TraenkeEingang_befestigt_2013-09-25.jpg
             desc: 'Nulla tempus, ex '
 visible: false
 media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideeingang_Moosegg_2017-05-31 16.32.58.jpg,Weideeingang_Nesselgraben_2017-05-24 17.35.12.jpg,Weideeingang_Stromzaun_IMG_20170406_110423.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611_HDR.jpg,Weideweg_IMG_20170302_140039.jpg,Weideweg_Willisau_IMG_20170406_143433.jpg,Weideweg_Willisau_IMG_20170406_144020.jpg,Weideweg_Willisau_IMG_20220502_151406.jpg,Feldweg_Tränkefass_img_6964.jpg'
@@ -64,4 +62,15 @@ Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erach
     ![Tränkeingang befestigt](TraenkeEingang_befestigt_2013-09-25.jpg?cropZoom=200,200)
 [/lightbox]
 
+[div class="glightbox-desc dbs-1"]
+    [div class="prose"]
+        ### Aston Martin DBS 1
+
+        [div class="text-lg"]
+            Morbi ac interdum velit. Ut sed purus in **erat feugiat mollis**. In porta ligula quis vulputate ullamcorper. 
+        [/div]
+
+        Aenean eu condimentum odio. Aliquam ac justo eget libero ullamcorper vehicula. Ut aliquet massa at sapien pellentesqu, in bibendum ligula vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum vestibulum sollicitudin. Sed vitae sodales neque. Donec placerat massa non suscipit accumsan.
+    [/div]
+[/div]
 

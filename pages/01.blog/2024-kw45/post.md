@@ -10,6 +10,8 @@ hero:
     image: '2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg'
     image_alignment: object-center
 taxonomy:
+    category:
+        - blog
     tag:
         - weide
         - wachstumsbericht
@@ -17,6 +19,8 @@ taxonomy:
         - 'Zbinden Martin'
         - 'Marti Nicolas'
 author: 'Nicolas Marti, Martin Zbinden'
+sitemap:
+    lastmod: '19-12-2024 07:07'
 ---
 
 # Weideende heisst nicht Grasende

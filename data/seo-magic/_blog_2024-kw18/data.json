@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-kw18",
         "page_title": "Woche 18 (29.04.-05.05.2024)"
     },
-    "updated": 1734461937,
+    "updated": 1734588485,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 18 (29.04.-05.05.2024)",
         "grav-page-route": "\/blog\/2024-kw18",
         "grav-page-rawroute": "\/blog\/2024-kw18",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
+        "expires": "Thu, 26 Dec 2024 06:08:05 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
+        "date": "Thu, 19 Dec 2024 06:08:05 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461937.051197052001953125,
-        "total_time": 0.1050999999999999989785948173448559828102588653564453125,
-        "namelookup_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
-        "connect_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
-        "pretransfer_time": 9.1000000000000002870099991003627337704529054462909698486328125e-5,
-        "starttransfer_time": 0.10498200000000000586819481895872741006314754486083984375,
+        "start_time": 1734588485.4010570049285888671875,
+        "total_time": 0.09729799999999999560174046564497984945774078369140625,
+        "namelookup_time": 0.0003809999999999999910176018413920928651350550353527069091796875,
+        "connect_time": 0.00045899999999999998960553693194697189028374850749969482421875,
+        "pretransfer_time": 0.0136240000000000006930012119710227125324308872222900390625,
+        "starttransfer_time": 0.09656800000000000105959685470224940218031406402587890625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 553,
         "request_size": 123,
         "redirect_count": 0,
-        "size_download": 5343,
-        "speed_download": 50885,
+        "size_download": 6473,
+        "speed_download": 66731,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,18 +41,25 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 23985
+        "content_size": 30032
     },
     "content": {
-        "body": "<h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
+        "body": "<h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
         "headers": {
             "h1": [
                 "Woche 18 (29.04.-05.05.2024)",
-                "Wie umgehen mit Weideresten?"
+                "Wie umgehen mit Weideresten?",
+                "Saubere K\u00fche = sauberes Gras",
+                "Drei gute Ratschl\u00e4ge"
             ],
             "h2": [],
-            "h3": [],
+            "h3": [
+                "Weideeing\u00e4nge",
+                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+            ],
             "h4": [
+                "Other Related Posts:",
+                "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
                 "Archiv"
             ],
@@ -71,6 +78,18 @@
                 "alt": "2024-05-03_Wie%20umgehen%20mit%20Weideresten",
                 "external": true,
                 "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg",
+                "alt": "Weideeing\u00e4nge",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg",
+                "alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": true,
+                "status": 200
             }
         ],
         "good_tags": {
@@ -79,7 +98,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 1,
-                "article": 1,
+                "article": 3,
                 "footer": 1
             }
         },
@@ -120,7 +139,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
                 "external": false
             },
             "\/tag:weide#blog_list": {
@@ -148,7 +167,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Vorheriger Beitrag",
+                "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
                 "external": false
             },
             "\/blog\/2024-kw34": {
@@ -156,6 +175,34 @@
                 "target": "",
                 "rel": "",
                 "text": "N\u00e4chster Beitrag",
+                "external": false
+            },
+            "\/blog\/2024-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge",
+                "external": false
+            },
+            "\/tag:infrastruktur#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
                 "external": false
             },
             "\/tag:weide": {
@@ -170,6 +217,13 @@
                 "target": "",
                 "rel": "",
                 "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
                 "external": false
             },
             "\/tag:betriebsportrait": {
@@ -198,6 +252,13 @@
                 "target": "",
                 "rel": "",
                 "text": "2 May 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 December 2021",
                 "external": true
             },
             "\/legal": {
@@ -229,34 +290,28 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Woche 18 (29.04.-05.05.2024)",
+            "description": "Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308hren kann. Druckversion (PDF)",
+            "title": "Woche 18 (29.04.-05.05.2024) | graswachstum.ch",
+            "keywords": "zweite,umtrieb,starten,vielerorts,dilemma,graswachstum,fu\u0308hren,umgehen,weideresten,druckversion",
             "image": "https:\/\/graswachstum.ch\/blog\/2024-kw18\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2024-kw18",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 18 (29.04.-05.05.2024)",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Woche 18 (29.04.-05.05.2024) | graswachstum.ch",
+            "og:description": "Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308hren kann. Druckversion (PDF)",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/blog\/2024-kw18\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2024-kw18\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 18 (29.04.-05.05.2024)",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Woche 18 (29.04.-05.05.2024) | graswachstum.ch",
+            "twitter:description": "Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308hren kann. Druckversion (PDF)",
             "twitter:image": "https:\/\/graswachstum.ch\/blog\/2024-kw18\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 18 (29.04.-05.05.2024)",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "Woche 18 (29.04.-05.05.2024) | graswachstum.ch"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/blog\/2024-kw18",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -347,11 +402,6 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
-                "async": null,
-                "defer": null,
-                "type": null
-            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
                 "async": null,
                 "defer": null,
@@ -399,5 +449,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 27 (easy handle 0x55fbb0050220)\n> GET \/blog\/2024-kw18 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 18 (29.04.-05.05.2024)\r\n< grav-page-route: \/blog\/2024-kw18\r\n< grav-page-rawroute: \/blog\/2024-kw18\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"b0a8fee69364681ec353c03e9750fef5\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=b0a8fee69364681ec353c03e9750fef5; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbb00b7680)\n> GET \/blog\/2024-kw18 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 18 (29.04.-05.05.2024)\r\n< grav-page-route: \/blog\/2024-kw18\r\n< grav-page-rawroute: \/blog\/2024-kw18\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:08:05 GMT\r\n* Added cookie grav-site-23a95d8=\"89ae126e93769cf117f51b362baf095d\" for domain graswachstum.ch, path \/, expire 1734590285\n< set-cookie: grav-site-23a95d8=89ae126e93769cf117f51b362baf095d; expires=Thu, 19 Dec 2024 06:38:05 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:08:05 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

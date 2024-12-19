@@ -5,6 +5,8 @@ date: '03-05-2024 00:00'
 hero:
     image: '2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg'
 taxonomy:
+    category:
+        - blog
     tag:
         - weide
         - wachstumsbericht

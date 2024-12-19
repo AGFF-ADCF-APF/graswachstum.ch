@@ -56,7 +56,8 @@ Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erach
 5. Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
 
 ### Weitere Informationen
-[Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf?class=button)
-[AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html?class=button)
+[Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)
+
+[AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html)
 
 

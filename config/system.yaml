@@ -153,7 +153,7 @@ assets:
   collections:
     jquery: 'system://assets/jquery/jquery-2.1.4.min.js'
 errors:
-  display: 0
+  display: 1
   log: true
 log:
   handler: file
@@ -161,7 +161,7 @@ log:
     facility: local6
     tag: grav
 debugger:
-  enabled: false
+  enabled: true
   provider: clockwork
   censored: false
   shutdown:

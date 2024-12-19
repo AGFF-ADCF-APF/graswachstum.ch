@@ -56,7 +56,7 @@ references:
         pages: null
 ---
 
-# Saubere Kühe = sauberes Gras
+# Saubere Kuhe = sauberes Gras
 
 Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen genügten. Anbei ein Sammlung spannender Ansätze von zahlreichen Betrieben in der ganzen Schweiz.
 
@@ -98,6 +98,9 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 > Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
 * Pflanzenschicht entfernen (15-20cm)
 * ...
+
+[cite /]
+
 
 ### Weitere Informationen
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)

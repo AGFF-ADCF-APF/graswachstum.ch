@@ -8,6 +8,8 @@ hero:
     image: Feldweg_Tränkefass_img_6964.jpg
     image_alignment: object-center
 taxonomy:
+    category:
+        - blog
     tag:
         - weide
         - infrastruktur

@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2024-kw45",
         "page_title": "Woche 45 (11.11.-17.11.2024)"
     },
-    "updated": 1734463453,
+    "updated": 1734588461,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 45 (11.11.-17.11.2024)",
         "grav-page-route": "\/blog\/2024-kw45",
         "grav-page-rawroute": "\/blog\/2024-kw45",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 19:24:13 GMT",
+        "expires": "Thu, 26 Dec 2024 06:07:41 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 19:24:13 GMT",
+        "date": "Thu, 19 Dec 2024 06:07:41 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734463453.7635219097137451171875,
-        "total_time": 0.1204240000000000032631675139782601036131381988525390625,
-        "namelookup_time": 0.000519000000000000038559433424012468094588257372379302978515625,
-        "connect_time": 0.000568999999999999952864093710758197630639187991619110107421875,
-        "pretransfer_time": 0.00793899999999999987643217735922007705084979534149169921875,
-        "starttransfer_time": 0.1199260000000000048192561052928795106709003448486328125,
+        "start_time": 1734588461.2458980083465576171875,
+        "total_time": 0.10678700000000000691624535420487518422305583953857421875,
+        "namelookup_time": 0.00072999999999999996315447337025261731469072401523590087890625,
+        "connect_time": 0.00079900000000000001403044347370041577960364520549774169921875,
+        "pretransfer_time": 0.011218999999999999805933015295522636733949184417724609375,
+        "starttransfer_time": 0.1061620000000000063611338418922969140112400054931640625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 553,
         "request_size": 123,
         "redirect_count": 0,
-        "size_download": 5458,
-        "speed_download": 45483,
+        "size_download": 6563,
+        "speed_download": 61915,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,18 +41,25 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24861
+        "content_size": 29959
     },
     "content": {
-        "body": "<h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
+        "body": "<h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
         "headers": {
             "h1": [
                 "Woche 45 (11.11.-17.11.2024)",
-                "Weideende heisst nicht Grasende"
+                "Weideende heisst nicht Grasende",
+                "Saubere K\u00fche = sauberes Gras",
+                "Drei gute Ratschl\u00e4ge"
             ],
             "h2": [],
-            "h3": [],
+            "h3": [
+                "Weideeing\u00e4nge",
+                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+            ],
             "h4": [
+                "Other Related Posts:",
+                "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
                 "Archiv"
             ],
@@ -77,6 +84,18 @@
                 "alt": "2024-11-15%20Weideende%20heisst%20nicht%20Grasende%20-%20N.%20Marti%20M.%20Zbinden",
                 "external": true,
                 "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg",
+                "alt": "Weideeing\u00e4nge",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg",
+                "alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": true,
+                "status": 200
             }
         ],
         "good_tags": {
@@ -85,7 +104,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 1,
-                "article": 1,
+                "article": 3,
                 "footer": 1
             }
         },
@@ -161,7 +180,35 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "N\u00e4chster Beitrag",
+                "text": "Weideeing\u00e4nge",
+                "external": false
+            },
+            "\/tag:infrastruktur#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/blog\/2024-04-30-weidetagung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": false
+            },
+            "\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
                 "external": false
             },
             "\/tag:weide": {
@@ -178,6 +225,13 @@
                 "text": "wachstumsbericht",
                 "external": false
             },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
             "\/tag:betriebsportrait": {
                 "count": 0,
                 "target": "",
@@ -189,7 +243,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "2 November 2024",
+                "text": "1 November 2024",
                 "external": true
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
@@ -204,6 +258,13 @@
                 "target": "",
                 "rel": "",
                 "text": "2 May 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 December 2021",
                 "external": true
             },
             "\/legal": {
@@ -394,5 +455,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff1ba90)\n> GET \/blog\/2024-kw45 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 45 (11.11.-17.11.2024)\r\n< grav-page-route: \/blog\/2024-kw45\r\n< grav-page-rawroute: \/blog\/2024-kw45\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 19:24:13 GMT\r\n* Added cookie grav-site-23a95d8=\"dab51bca19c0fa3935fbdec3d354fd52\" for domain graswachstum.ch, path \/, expire 1734465253\n< set-cookie: grav-site-23a95d8=dab51bca19c0fa3935fbdec3d354fd52; expires=Tue, 17 Dec 2024 19:54:13 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 19:24:13 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff27c00)\n> GET \/blog\/2024-kw45 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 45 (11.11.-17.11.2024)\r\n< grav-page-route: \/blog\/2024-kw45\r\n< grav-page-rawroute: \/blog\/2024-kw45\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:07:41 GMT\r\n* Added cookie grav-site-23a95d8=\"a6064f15b91dbbe9b92a1c588eb510e7\" for domain graswachstum.ch, path \/, expire 1734590261\n< set-cookie: grav-site-23a95d8=a6064f15b91dbbe9b92a1c588eb510e7; expires=Thu, 19 Dec 2024 06:37:41 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:07:41 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

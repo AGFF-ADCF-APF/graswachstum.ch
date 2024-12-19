@@ -58,7 +58,7 @@ Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erach
 In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis gezeigt. Es gilt wie so oft in der Landwirtschaft: Generelle Empfehlungen sind schwierig, der Austausch mit den Kollegen vor Ort und etwas Experimentierfreude zahlen sich aus. Nachfolgend ein paar allgemeine Ratschläge, welche für das AGFF Infoblatt W14 zusammengestellt wurden.
 
 
-!!!! Weidewege, worauf muss geachtet werden
+!! Weidewege, worauf muss geachtet werden
 * Ein befestigter Weg soll mehr als 20 Jahre halten!
 * Lage des Weges genau planen, wie können möglichst viele Koppeln erschlossen werden?
 * Je grösser die Herde, desto breiter der Weg.
@@ -69,7 +69,7 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 * 
 
 
-!!!! Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
+!!! Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
 * Pflanzenschicht entfernen (15-20cm)
 * ...
 

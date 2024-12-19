@@ -1,5 +1,5 @@
 enabled: true
-route: /blog
+route: /random
 redirect: true
 filters:
   category:

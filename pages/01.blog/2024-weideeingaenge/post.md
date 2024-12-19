@@ -83,3 +83,6 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html)
 
 
+[cite /]
+
+https://raumberg-gumpenstein.at/jdownloads/Allgemein/Biologische_Landwirtschaft_und_Biodiversitaet_der_Nutztiere/40_triebwege_anlegen1.pdf

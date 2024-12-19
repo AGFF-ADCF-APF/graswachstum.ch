@@ -1,5 +1,5 @@
 version: '1.2'
-timestamp: 1734470931
+timestamp: 1734595901
 count: 3
 index:
   mani:
@@ -9,7 +9,7 @@ index:
     email: nicolas.marti@edulu.ch
   martinz:
     storage_key: martinz
-    storage_timestamp: 1734469731
+    storage_timestamp: 1734595901
     key: martinz
     email: martin.zbinden@gmail.com
   zbma:

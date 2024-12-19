@@ -33,6 +33,17 @@ media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideeingang_Moosegg_2017-05-31 1
 shortcode-citation:
     items: cited
     reorder_uncited: true
+references:
+    -
+        id: steinwidder-2008
+        type: web
+        title: 'Triebwege richtig anlegen'
+        author: 'Andreas Steinwidder'
+        year: '2008'
+        url: 'https://raumberg-gumpenstein.at/jdownloads/Allgemein/Biologische_Landwirtschaft_und_Biodiversitaet_der_Nutztiere/40_triebwege_anlegen1.pdf'
+        journal: null
+        volume: null
+        pages: null
 ---
 
 # Saubere Kühe = sauberes Gras
@@ -65,7 +76,7 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 * Ein befestigter Weg soll mehr als 20 Jahre halten!
 * Lage des Weges gut planen: wie können möglichst viele Koppeln erschlossen werden?
 * **Je grösser die Herde, desto breiter der Weg.** Die Herde kommt auf schmalen Wegen langsamer voran. Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
-* Weiche Triebwege – die jedoch rasch abtrocknen – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht.[cite=raumberg-2014  /]
+* Weiche Triebwege – die jedoch rasch abtrocknen – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht.[cite=steinwidder-2008  /]
 * Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
 * Wird der Weg ebenfalls von Fahrzeugen benutzt, muess er genügend breit und gut gebaut sein; ansonsten können sich Spuren bilden.
 * Die Dauerhaftigkeit eines Weges hängt vom **Abfliessen des Wassers** ab: Bombierte Form, je nach Untergrund Drainage einbauen und tiefere Erdschichten vermeiden.
@@ -85,4 +96,3 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 
 [cite /]
 
-https://raumberg-gumpenstein.at/jdownloads/Allgemein/Biologische_Landwirtschaft_und_Biodiversitaet_der_Nutztiere/40_triebwege_anlegen1.pdf

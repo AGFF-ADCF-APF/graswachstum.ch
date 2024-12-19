@@ -66,10 +66,10 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 * Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). 
 * Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
 * Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
-* 
+* ...
 
 
-!!! Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
+> Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
 * Pflanzenschicht entfernen (15-20cm)
 * ...
 

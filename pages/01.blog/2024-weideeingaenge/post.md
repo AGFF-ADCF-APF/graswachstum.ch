@@ -38,7 +38,7 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 
 ===
 
-
+## 5 Gedanken zu Weideinfrastrukturen
 1. Faktoren, die das Ausmass von Trittschäden beeinflussen.
 
 |  nicht veränderbar  |  beeinflussbar  |
@@ -50,10 +50,28 @@ Weideinfrastruktur / Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastrukt
 Die Faktoren sind sortiert nach Wichtigkeit, d.h. Tierverhalten hat meines Erachtens grösseren Einfluss als Tiergewicht. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
 
 
-2. Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tränkebereiche sind abhängig vom Weidesystem und der Umsetzung auf dem Betrieb. DIE Lösung für alle gibt es nicht. So benötigt der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang keine Wartebereiche auf den Koppeln, dafür genug breite Weidewege, damit sich die Kühe individuell und ruhig zwischen Weide und Stall 
+2. **Die geeigneten Infrastrukturen wie Auftriebswege, befestigte Eingangs- und Tränkebereiche sind abhängig vom Weidesystem und der Umsetzung auf dem Betrieb.**  DIE Lösung für alle gibt es nicht. Wenn kleinere Herden regelmässig eine Wiese queren müssen, reicht bei kleinen Herden ein kleines, klauenfreundlich gestaltetes Kuhweglein von 1m Breite. Der Betrieb mit automatischem Melksystem (AMS) und freiem Weidezugang braucht hingegen Kuhautobahnen, damit sich die Kühe individuell und ruhig zwischen Weide und Stall bewegen und kreuzen können. 
 3. Allfällige Massnahmen zur Reduktion von Trittschäden müssen darauf abzielen, die **unbewachsene Fläche** und die **Verschmutzung** der Klauen möglichst gering zu halten. Als Resultat lässt sich der Futterverlust minimieren, und der Boden kann seine Filterfunktion (Gewässerschutz) möglichst gut wahrnehmen. 
-4. Wenn durchgetretene, morastige Stellen einfach befestigt werden, kann es sein, dass sich die Schäden einfach örtlich verschieben oder sogar ausdehnen. Das Management muss auch angeschaut werden: Wieso halten sich übermässig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als nötig? 
-5. Wenn die Tiere nur zum Fressen auf die Weide kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
+4. Wenn durchgetretene, morastige Stellen befestigt werden, kann es sein, dass sich die **Schäden örtlich verschieben** oder sogar **ausdehnen**. Das Management muss auch immer angeschaut werden: Wieso halten sich übermässig viele Tiere in einem bestimmten Bereich auf? Wieso bewegen sie sich mehr als nötig? 
+5. Wenn die Tiere **nur zum Fressen auf die Weide** kommen, ist die Düngerverteilung besser und die Schäden reduzieren sich - vor allem bei nasser Witterung.
+
+In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis gezeigt. Es gilt wie so oft in der Landwirtschaft: Generelle Empfehlungen sind schwierig, der Austausch mit den Kollegen vor Ort und etwas Experimentierfreude zahlen sich aus. Nachfolgend ein paar allgemeine Ratschläge, welche für das AGFF Infoblatt W14 zusammengestellt wurden.
+
+
+!!!! Weidewege, worauf muss geachtet werden
+* Ein befestigter Weg soll mehr als 20 Jahre halten!
+* Lage des Weges genau planen, wie können möglichst viele Koppeln erschlossen werden?
+* Je grösser die Herde, desto breiter der Weg.
+* Die Herde kommt auf schmalen Wegen langsamer voran.
+* Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). 
+* Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
+* Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
+* 
+
+
+!!!! Welche Arbeiten sind vor dem Legen des Belags zu erledigen? (aus dem AGFF
+* Pflanzenschicht entfernen (15-20cm)
+* ...
 
 ### Weitere Informationen
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)

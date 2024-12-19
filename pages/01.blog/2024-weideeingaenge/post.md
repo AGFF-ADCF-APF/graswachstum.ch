@@ -104,6 +104,6 @@ In der Fotogallerie (ganz unten) werden zahlreiche Beispiele aus der Praxis geze
 
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html)
 
-[cite /]
+[cite ]
 
 

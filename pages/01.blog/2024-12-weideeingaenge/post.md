@@ -181,3 +181,4 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html) mit ausführlicher Bewertung der verschiedenen Materialien
 
 
+## Bildergallerie

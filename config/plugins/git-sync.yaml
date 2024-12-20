@@ -2,7 +2,6 @@ enabled: true
 folders:
   - pages
   - themes
-  - plugins
   - config
   - data
 SyncNotice: null

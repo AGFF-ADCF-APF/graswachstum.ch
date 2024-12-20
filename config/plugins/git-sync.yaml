@@ -32,4 +32,4 @@ git:
   bin: git
   ignore: null
   private_key: null
-logging: false
+logging: true

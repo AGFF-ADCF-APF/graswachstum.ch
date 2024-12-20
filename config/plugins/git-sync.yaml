@@ -16,7 +16,7 @@ local_repository: null
 repository: 'https://github.com/AGFF-ADCF-APF/graswachstum.ch.git'
 no_user: '0'
 user: martinz
-password: gitsync-def50200bc0fd0c57aad48df56f3695576a5718f703439f72a50fc76f327c160a0063b7dfd14027f1f867ad11e0b2b1ba844b4c45cd86c83a9a0c7b211e1bf63007188867a5ca581500013eb8c1aae62c4a12d7961af5024e23a98d6
+password: gitsync-def502001f7a00a349ae11161b80612ac7f60ff05ed6311fa433c2353fc26b4f0fb5747b7fd414693aaa1d70f41e494d34a040ef077606a75c4d455de1a85dfba5f0fdbe19d79cf44472a176b7c6c348b83482aea21e480ac39b6732
 webhook: _git-sync-9866952ceb7a
 webhook_enabled: '1'
 webhook_secret: Nahc9eu3

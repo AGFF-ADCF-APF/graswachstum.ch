@@ -44,5 +44,9 @@ sitemap:
     lastmod: '17-12-2024 20:21'
 aura:
     author: zbma
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+menu: Blog
 ---
 

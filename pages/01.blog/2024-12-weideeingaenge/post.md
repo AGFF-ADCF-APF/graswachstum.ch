@@ -168,10 +168,12 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 ## Weitere Informationen
 
 [Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
-[ui-accordion independent=true open=none][ui-accordion-item title="[Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
-"]
+[ui-accordion independent=true open=none]
+[ui-accordion-item title="Weideinfos bei HBLFA Raumberg-Gumpenstein (raumberg-gumpenstein.at)"]
+[Hauptseite Weideinfos HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)
 
-[/ui-accordion-item][/ui-accordion]
+[/ui-accordion-item]
+[/ui-accordion]
 
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)
 [plugin:youtube](https://www.youtube.com/watch?v=RgcuCzbcmwk)

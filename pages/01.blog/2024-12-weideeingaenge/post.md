@@ -145,7 +145,7 @@ In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeig
 * Der elektrische Zaun muss 50cm vom Wegrand entfernt sein; dies ergibt **gesamthaft eine minimale Wegbreite von 2 Metern**.
 
 
-![](Weideweg_IMG_20170406_143433.jpg?lightbox "Diese Kühe können sich glücklich schätzen, dass sie die höher gelegenen Koppeln auf einem bequemen, weichen und trockenen Weg erreichen können. Die Situation vor und nach dem Bau kann mit dem nachfolgenden Bildvergleich betrachtet werden. Bild: Willisau, 2017 (M. Zbinden)")
+![](Weideweg_IMG_20170406_143433.jpg?lightbox "Diese Kühe können sich glücklich schätzen, dass sie die höher gelegenen Koppeln auf einem direkten, weichen und trockenen Weg erreichen können. Die Situation vor und nach dem Bau kann mit dem nachfolgenden Bildvergleich betrachtet werden. Bild: Willisau, 2017 (M. Zbinden)")
 
 [ui-image-compare]
 ![Jahr 2012](Ober-Hinterberg_2012.jpg)
@@ -168,19 +168,30 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 
 
 ## Weitere Informationen
-
-[Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
-
+[ui-accordion independent=true open=none]
+[ui-accordion-item title="[Österreich: Weideinfos von HBLFA Raumberg-Gumpenstein"]
+[Hauptseite Weideinfos HBLFA Raumberg-Gumpenstein](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
 
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)
+
 [plugin:youtube](https://www.youtube.com/watch?v=RgcuCzbcmwk)
 
 
-[Teagasc Grass10 - Hauptseite Weideinfrastruktur (Englisch) ](https://www.teagasc.ie/crops/grassland/grass10/grazing-infrastructure/)
+[/ui-accordion-item]
+[ui-accordion-item title="Irland: Grass10 Grazing Infrastructure (teagasc.ie)"]
+[Hauptseite Teagasc Grass10 Weideinfrastrukturen (Englisch) ](https://www.teagasc.ie/crops/grassland/grass10/grazing-infrastructure/?class=button)
+
 [Infrastruktur Handbuch für Rinderfarmen (PDF)](https://www.teagasc.ie/media/website/publications/2018/Beef-Farm-Infrastructure.pdf)
 
+[/ui-accordion-item]
+
+
+[ui-accordion-item title="AGFF: Merk- und Infoblätter"]
 
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html) mit ausführlicher Bewertung der verschiedenen Materialien
+[/ui-accordion-item]
+[/ui-accordion]
+
 
 
 ## Bildergallerie

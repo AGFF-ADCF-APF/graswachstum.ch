@@ -173,7 +173,7 @@ images:
   cache_perms: '0755'
   debug: false
   auto_fix_orientation: false
-  seofriendly: false
+  seofriendly: true
   cls:
     auto_sizes: false
     aspect_ratio: false
@@ -189,10 +189,10 @@ images:
     scale: 33
     watermark_all: false
 media:
-  enable_media_timestamp: false
+  enable_media_timestamp: true
   unsupported_inline_types: null
   allowed_fallback_types: null
-  auto_metadata_exif: false
+  auto_metadata_exif: true
   upload_limit: 805306368
 session:
   enabled: true

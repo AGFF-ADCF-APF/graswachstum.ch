@@ -1,0 +1,6 @@
+node_modules
+images/logo/*
+/yarn-error.log
+.DS_Store
+.idea
+/images/icons/*

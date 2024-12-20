@@ -1,0 +1,5 @@
+:root {
+  --color-primary: {{ primary_color.tailwindFormat }};
+  --color-primary__lighter: {{ color(primary_color.lighten(brightness_lighter)).tailwindFormat }};
+  --color-primary__darker: {{ color(primary_color.darken(brightness_darker)).tailwindFormat }};
+}

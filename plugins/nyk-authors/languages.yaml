@@ -1,0 +1,194 @@
+en:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Display Name
+    GENERAL_SECTION: General Settings
+    PLUGIN_STATUS_HELP: Turns the plugin on or off
+    AUTHOR_SECTION: Author Settings
+    TAXONOMY: Author taxonomy type
+    TAXONOMY_HELP: The type of taxonomy used to add authors to pages
+    AUTOMATIC_USERNAME: Automatically add user as author on page creation
+    AUTOMATIC_USERNAME_HELP: Automatically adds the current user as an author when creating new pages
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Users that will not be included as authors in any page
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Only these users will be included as authors in any page
+    EXTRA_AUTHORS: Additional authors
+    EXTRA_AUTHORS_HELP: By default the plugin fetches user accounts to find authors' names. You can use this setting to add authors that don't have an account or to overwrite an author's name.
+    LANG_SECTION: Language Settings
+    LANG_OPTION_HELP: The language you want to use for the conjunction in pages with more than one author
+    LANG_EN: English ("and")
+    LANG_FR: French ("et")
+    LANG_DE: German ("und")
+    LANG_PT: Portuguese ("e")
+    LANG_ES: Spanish ("y")
+    LANG_COMMA: Just a comma (",")
+    LANG_CUSTOM: Others (set a custom conjunction)
+    CUSTOM_CONJUNCTION: Custom conjunction (with "Others" selected)
+    CUSTOM_CONJUNCTION_HELP: Set a custom conjunction for pages with more than one author
+    PAGE_SECTION: Author Page Settings
+    PAGE_LINK: Add links to author pages
+    PAGE_LINK_HELP: Automatically add a link to an author's page to that author in the list
+    PAGE_LINK_ATTRIBUTES: Link attributes
+    PAGE_LINK_ATTRIBUTES_HELP: Attributes you wish to add to the <a> tags of the author page links (the 'href' attribute will be overwritten)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribute (e.g. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Value (e.g. 'author')
+    PAGE_PATH: Author pages' folder (/path/to/folder/)
+    PAGE_PATH_HELP: 'Set the path to the folder that contains the author pages (format: /path/to/folder/)'
+    PAGE_PATH_ERROR: 'Invalid path (format: /path/to/folder/)'
+    PAGE_INSTRUCTIONS: Author pages should be at `/path/to/folder/username` and should already be created, if you want a link to them. If no path is set, it defaults to `/username`.
+
+fr:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Nom affiché
+    GENERAL_SECTION: Paramètres Généraux
+    PLUGIN_STATUS_HELP: Active ou désactive le plugin
+    AUTHOR_SECTION: Paramètres de l'Auteur
+    TAXONOMY: Type de taxonomie pour les auteurs
+    TAXONOMY_HELP: Le type de taxonomie utilisé pour ajouter des auteurs aux pages
+    AUTOMATIC_USERNAME: Ajouter automatiquement l'utilisateur comme auteur
+    AUTOMATIC_USERNAME_HELP: Ajout automatique de l'utilisateur actuel comme auteur lors de la création de nouvelles pages
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Utilisateurs qui ne seront pas considérés comme auteurs dans aucune page
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Seuls ces utilisateurs seront considérés comme auteurs dans toutes les pages
+    EXTRA_AUTHORS: Auteurs supplémentaires
+    EXTRA_AUTHORS_HELP: Par défaut, le plugin utilise des comptes d'utilisateurs pour trouver les noms des auteurs. Ce paramètre vous permet d'ajouter des auteurs qui n'ont pas de compte ou de remplacer le nom d'un auteur.
+    LANG_SECTION: Paramètres de Langue
+    LANG_OPTION_HELP: La langue à utiliser pour la conjonction dans les pages avec plus d'un auteur
+    LANG_EN: Anglais ("and")
+    LANG_FR: Français ("et")
+    LANG_DE: Allemand ("und")
+    LANG_PT: Portugais ("e")
+    LANG_ES: Espagnol ("y")
+    LANG_COMMA: Juste une virgule (",")
+    LANG_CUSTOM: Autres (définir une conjonction personnalisée)
+    CUSTOM_CONJUNCTION: Conjonction personnalisée (avec "Autres" sélectionné)
+    CUSTOM_CONJUNCTION_HELP: Définir une conjonction personnalisée pour les pages avec plus d'un auteur
+    PAGE_SECTION: Paramètres de la Page d'Auteur
+    PAGE_LINK: Ajouter des hyperliens vers les pages d'auteur
+    PAGE_LINK_HELP: Ajouter automatiquement un hyperlien vers la page d'un auteur à cet auteur dans la liste
+    PAGE_LINK_ATTRIBUTES: Attributs de l'hyperlien
+    PAGE_LINK_ATTRIBUTES_HELP: Attributs à ajouter aux balises <a> des hyperliens vers les pages des auteurs (l'attribut 'href' sera écrasé)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribut (par ex. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Valeur (par ex. 'author')
+    PAGE_PATH: Dossier des pages d'auteur (/chemin/vers/le/dossier/)
+    PAGE_PATH_HELP: "Définir le chemin vers le dossier contenant les pages d'auteur (format: /chemin/vers/le/dossier/)"
+    PAGE_PATH_ERROR: 'Chemin invalide (format: /chemin/vers/le/dossier/)'
+    PAGE_INSTRUCTIONS: Les pages d'auteur doivent être dans `/chemin/vers/le/dossier/nom-d'utilisateur` et doivent déjà être créées, si vous voulez un hyperlien vers elles. Si le chemin n'est pas défini, ce sera automatiquement `/nom-d'utilisateur`.
+
+de:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Anzeigename
+    GENERAL_SECTION: Allgemeine Einstellungen
+    PLUGIN_STATUS_HELP: Aktiviert oder deaktiviert das Plugin
+    AUTHOR_SECTION: Autor Einstellungen
+    TAXONOMY: Autor Tag-Typ
+    TAXONOMY_HELP: Der Tag-Typ, mit dem Autoren zu Seiten hinzugefügt werden
+    AUTOMATIC_USERNAME: Automatisch Benutzer als Autor hinzufügen
+    AUTOMATIC_USERNAME_HELP: Fügt den aktuellen Benutzer als Autor hinzu, wenn neue Seiten erstellt werden
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Benutzer, die nicht als Autoren in Seiten hinzugefügt werden
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Nur diese Benutzer werden als Autoren in Seiten hinzugefügt
+    EXTRA_AUTHORS: Weitere Autoren
+    EXTRA_AUTHORS_HELP: Standardmäßig durchsucht das Plugin Benutzerkonten nach Autorennamen. Mit dieser Einstellung können Sie Autoren ohne Benutzerkonto hinzufügen oder den Namen eines Autors überschreiben.
+    LANG_SECTION: Spracheinstellungen
+    LANG_OPTION_HELP: Die Sprache, die Sie für die Konjunktion verwenden möchten, auf Seiten mit mehr als einem Autor
+    LANG_EN: Englisch ("and")
+    LANG_FR: Französisch ("et")
+    LANG_DE: Deutsch ("und")
+    LANG_PT: Portugiesisch ("e")
+    LANG_ES: Spanisch ("y")
+    LANG_COMMA: Nur ein Komma (",")
+    LANG_CUSTOM: Andere (benutzerdefinierte Konjunktion)
+    CUSTOM_CONJUNCTION: Benutzerdefinierte Konjunktion (mit "Andere" ausgewählt)
+    CUSTOM_CONJUNCTION_HELP: Setzen Sie eine benutzerdefinierte Konjunktion für Seiten mit mehr als einem Autor
+    PAGE_SECTION: Autorenseiten-Einstellungen
+    PAGE_LINK: Links zu Autorenseiten hinzufügen
+    PAGE_LINK_HELP: Automatisches hinzufügen einen Link zu einer Autorenseite zu diesem Autor in der Liste
+    PAGE_LINK_ATTRIBUTES: Link-Attribute
+    PAGE_LINK_ATTRIBUTES_HELP: Attribute, die Sie den <a>-Tags der Links zur Autorenseite hinzufügen möchten (das 'href'-Attribut wird überschrieben)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Attribut (z. B. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Wert (z. B. 'author')
+    PAGE_PATH: Ordner der Autorenseiten (/pfad/zum/ordner)
+    PAGE_PATH_HELP: 'Legen Sie den Pfad zu dem Ordner fest, der die Autorenseiten enthält (format: /pfad/zum/ordner/)'
+    PAGE_PATH_ERROR: 'Ungültiger Pfad (format: /pfad/zum/ordner/)'
+    PAGE_INSTRUCTIONS: Autorenseiten sollten sich unter `/pfad/zum/ordner/benutzername` befinden und bereits erstellt sein, wenn Sie einen Link zu ihnen wünschen. Wenn kein Pfad festgelegt ist, ist der Standardwert `\benutzername`.
+
+pt:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Nome a exibir
+    GENERAL_SECTION: Definições Gerais
+    PLUGIN_STATUS_HELP: Liga ou desliga o plugin
+    AUTHOR_SECTION: Definições de Autor
+    TAXONOMY: Tipo de taxonomia para autores
+    TAXONOMY_HELP: O tipo de taxonomia que será utilizado para adicionar autores a páginas
+    AUTOMATIC_USERNAME: Adicionar utilizador como autor de novas páginas automaticamente
+    AUTOMATIC_USERNAME_HELP: Adiciona automaticamente o utilizador atual como autor quando é criada uma nova página
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Utilizadores que não serão considerados autores de qualquer página
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Só estes utilizadores serão considerados autores em qualquer página
+    EXTRA_AUTHORS: Autores adicionais
+    EXTRA_AUTHORS_HELP: Automaticamente, o plugin usa as contas de utilizador para encontrar nomes de autores. Esta definição permite adicionar autores que não tenham uma conta correspondente ou substituir o nome atribuído a um autor.
+    LANG_SECTION: Definições de Idioma
+    LANG_OPTION_HELP: O idioma a usar para a conjunção em páginas com mais de um autor
+    LANG_EN: Inglês ("and")
+    LANG_FR: Francês ("et")
+    LANG_DE: Alemão ("und")
+    LANG_PT: Português ("e")
+    LANG_ES: Espanhol ("y")
+    LANG_COMMA: Só uma vírgula (",")
+    LANG_CUSTOM: Outros (definir uma conjunção personalizada)
+    CUSTOM_CONJUNCTION: Conjunção personalizada (com "Outros" selecionado)
+    CUSTOM_CONJUNCTION_HELP: A conjunção personalizada a usar em páginas com mais de um autor
+    PAGE_SECTION: Definições de Página de Autor
+    PAGE_LINK: Adicionar hiperligações para páginas de autor
+    PAGE_LINK_HELP: Adiciona hiperligações para a página de cada autor a esse autor na lista
+    PAGE_LINK_ATTRIBUTES: Atributos da hiperligação
+    PAGE_LINK_ATTRIBUTES_HELP: Atributos a adicionar às tags <a> das hiperligações para páginas de autor (o atributo 'href' será substituído)
+    PAGE_LINK_ATTRIBUTES_KEYPH: Atributo (p. ex. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Valor (p. ex. 'author')
+    PAGE_PATH: Pasta de páginas de autor (/caminho/para/a/pasta/)
+    PAGE_PATH_HELP: 'Define o caminho para a pasta que contém as páginas de autor (formato: /caminho/para/a/pasta/)'
+    PAGE_PATH_ERROR: 'Caminho inválido (formato: /caminho/para/a/pasta/)'
+    PAGE_INSTRUCTIONS: As páginas de autor deverão estar em `/caminho/para/a/pasta/nome-de-utilizador` e deverão ser previamente criadas, para que uma hiperligação seja adicionada. Se o caminho não for definido, será `/nome-de-utilizador`, automaticamente.
+
+es:
+  PLUGIN_NYK_AUTHORS:
+    DISPLAY_NAME: Nombre para mostrar
+    GENERAL_SECTION: Configuración General
+    PLUGIN_STATUS_HELP: Activa o desactiva el plugin
+    AUTHOR_SECTION: Configuración de Autor
+    TAXONOMY: Tipo de taxonomía para autores
+    TAXONOMY_HELP: El tipo de taxonomía que se usará para añadir autores a las páginas
+    AUTOMATIC_USERNAME: Añadir usuario como autor de nuevas páginas automáticamente
+    AUTOMATIC_USERNAME_HELP: Añade automáticamente el usuario actual como autor cuando se crea una nueva página
+    BLACKLIST: Blacklist
+    BLACKLIST_HELP: Usuarios que no serán considerados autores de ninguna página
+    WHITELIST: Whitelist
+    WHITELIST_HELP: Sólo estos usuarios serán considerados autores en cualquier página
+    EXTRA_AUTHORS: Autores adicionales
+    EXTRA_AUTHORS_HELP: Automáticamente, el plugin usa las cuentas de usuario para encontrar nombres de autores. Esta configuración permite añadir autores que no tengan una cuenta correspondiente o reemplazar el nombre asignado a un autor.
+    LANG_SECTION: Configuración de Idioma
+    LANG_OPTION_HELP: El idioma a utilizar para la conjunción en páginas con más de un autor
+    LANG_EN: Inglés ("and")
+    LANG_FR: Francés ("et")
+    LANG_DE: Alemán ("und")
+    LANG_PT: Portugués ("e")
+    LANG_ES: Español ("y")
+    LANG_COMMA: Sólo una coma (",")
+    LANG_CUSTOM: Otros (definir una conjunción personalizada)
+    CUSTOM_CONJUNCTION: Conjunción personalizada (con "Otros" seleccionado)
+    CUSTOM_CONJUNCTION_HELP: La conjunción personalizada para usar en páginas con más de un autor
+    PAGE_SECTION: Configuración de Página de Autor
+    PAGE_LINK: Añadir enlaces a páginas de autores
+    PAGE_LINK_HELP: Añade automáticamente un enlace a la página de un autor a ese autor en la lista
+    PAGE_LINK_ATTRIBUTES: Atributos del enlace
+    PAGE_LINK_ATTRIBUTES_HELP: Atributos que se añadirán a las etiquetas <a> de los enlaces a las páginas de autor (se reemplazará el atributo 'href')
+    PAGE_LINK_ATTRIBUTES_KEYPH: Atributo (p. ej. 'rel')
+    PAGE_LINK_ATTRIBUTES_VALUEPH: Valor (p. ej. 'author')
+    PAGE_PATH: Carpeta de páginas de autor (/ruta/a/la/carpeta/)
+    PAGE_PATH_HELP: 'Establece la ruta a la carpeta que contiene las páginas de autor (formato: /ruta/a/la/carpeta/)'
+    PAGE_PATH_ERROR: 'Ruta no válida (formato: /ruta/a/la/carpeta/)'
+    PAGE_INSTRUCTIONS: Las páginas de autor deben estar en `/ruta/a/la/carpeta/nombre-de-usuario` y deben haber sido creadas previamente para que se pueda añadir un enlace. Si no se especifica la ruta, automáticamente será `/nombre-de-usuario`.

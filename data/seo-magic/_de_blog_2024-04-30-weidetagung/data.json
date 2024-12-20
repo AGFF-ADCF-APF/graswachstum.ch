@@ -1,0 +1,396 @@
+{
+    "grav": {
+        "page_route": "\/blog\/2024-04-30-weidetagung",
+        "page_rawroute": "\/blog\/2024-04-30-weidetagung",
+        "page_title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+    },
+    "updated": 1732564651,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+        "grav-page-route": "\/blog\/2024-04-30-weidetagung",
+        "grav-page-rawroute": "\/blog\/2024-04-30-weidetagung",
+        "cache-control": "max-age=604800",
+        "expires": "Mon, 02 Dec 2024 19:57:31 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html;charset=UTF-8",
+        "date": "Mon, 25 Nov 2024 19:57:31 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1732564651.0870189666748046875,
+        "total_time": 0.13685300000000000242295072894194163382053375244140625,
+        "namelookup_time": 0.01079699999999999930622163191173967788927257061004638671875,
+        "connect_time": 0.0108690000000000001889599587912016431801021099090576171875,
+        "pretransfer_time": 0.0230180000000000002657873920952624757774174213409423828125,
+        "starttransfer_time": 0.13629700000000000148503431773860938847064971923828125,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung",
+        "content_type": "text\/html;charset=UTF-8",
+        "header_size": 592,
+        "request_size": 139,
+        "redirect_count": 0,
+        "size_download": 5369,
+        "speed_download": 39477,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 24164
+    },
+    "content": {
+        "body": "<h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n<p>\nDruckversion (PDF)<\/p>",
+        "headers": {
+            "h1": [
+                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "Drei gute Ratschl\u00e4ge"
+            ],
+            "h2": [],
+            "h3": [],
+            "h4": [
+                "H\u00e4ufigste Tags",
+                "Archiv"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03 Fruehlingstagung IG Weidemilch.jpg",
+                "alt": "2024-05-03%20Fruehlingstagung%20IG%20Weidemilch",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 1,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/de": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/de\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/de\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/de\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/de\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/de\/tag:weide#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/de\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "\/de\/blog\/2024-kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch.pdf": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Druckversion (PDF)",
+                "external": false
+            },
+            "\/de\/blog\/2024kw18": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "N\u00e4chster Beitrag",
+                "external": false
+            },
+            "\/de\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/de\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/de\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 August 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2 May 2024",
+                "external": true
+            },
+            "\/de\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "M. Zbinden",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
+            "title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
+            "keywords": "ratschl\u00e4ge,weidemilch,michael,ruedi,sutter,zeigen,fl\u00e4chen,optimal,nutzen,gute",
+            "image": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
+            "og:description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch",
+            "twitter:description": "Drei gute Ratschl\u00e4ge Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl\u00e4chen optimal nutzen und Zeit sparen. Druckversion (PDF)",
+            "twitter:image": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung\/seomagic-image.jpg",
+            "twitter:image:alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024 | graswachstum.ch"
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/de\/blog\/2024-04-30-weidetagung",
+        "links": {
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct  9 02:25:42 2024 GMT\n*  expire date: Jan  7 02:25:41 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x5600686d6dc0)\n> GET \/de\/blog\/2024-04-30-weidetagung HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Fr\u00fchlingstagung IG Weidemilch 30.04.2024\r\n< grav-page-route: \/blog\/2024-04-30-weidetagung\r\n< grav-page-rawroute: \/blog\/2024-04-30-weidetagung\r\n< cache-control: max-age=604800\r\n< expires: Mon, 02 Dec 2024 19:57:31 GMT\r\n* Added cookie grav-site-23a95d8=\"c10d4e6abdd20f7974686ff6f5f89e94\" for domain graswachstum.ch, path \/, expire 1732566451\n< set-cookie: grav-site-23a95d8=c10d4e6abdd20f7974686ff6f5f89e94; expires=Mon, 25 Nov 2024 20:27:31 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Mon, 25 Nov 2024 19:57:31 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

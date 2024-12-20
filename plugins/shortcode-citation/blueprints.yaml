@@ -1,0 +1,62 @@
+name: Shortcode Citations
+version: 0.2.0
+description: "Provides the ability to add citations via shortcodes such as [cite=id /]"
+icon: superscript
+author:
+  name: Nathan Parsons
+  email: github@tantalum.blue
+  url: https://tantalum.blue
+keywords: cite, citation, reference, academic, bibliography, shortcode
+homepage: https://github.com/n-parsons/grav-plugin-shortcode-citation
+bugs: https://github.com/n-parsons/grav-plugin-shortcode-citation/issues
+license: MIT
+
+dependencies:
+  - { name: shortcode-core }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    builtin_css:
+      type: toggle
+      label: Builtin CSS
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    heading_text:
+      type: text
+      label: Heading text
+      placeholder: "References"
+    items:
+      type: select
+      label: Works to reference
+      help: 
+      options:
+        "cited": Only cited works
+        "all": All works
+        "uncited": Only uncited works
+    reorder_uncited:
+      type: toggle
+      label: Order uncited works alphabetically (by ID)
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+

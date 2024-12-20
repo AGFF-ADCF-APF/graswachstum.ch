@@ -1,0 +1,35 @@
+enabled: true
+folders:
+  - pages
+  - themes
+  - plugins
+  - config
+  - data
+SyncNotice: null
+sync:
+  on_save: true
+  on_delete: true
+  on_media: true
+  cron_enable: true
+  cron_at: '0 12,23 * * *'
+local_repository: null
+repository: 'https://github.com/AGFF-ADCF-APF/graswachstum.ch.git'
+no_user: '0'
+user: martinz
+password: gitsync-def50200bc0fd0c57aad48df56f3695576a5718f703439f72a50fc76f327c160a0063b7dfd14027f1f867ad11e0b2b1ba844b4c45cd86c83a9a0c7b211e1bf63007188867a5ca581500013eb8c1aae62c4a12d7961af5024e23a98d6
+webhook: _git-sync-9866952ceb7a
+webhook_enabled: '1'
+webhook_secret: Nahc9eu3
+branch: main
+remote:
+  name: origin
+  branch: main
+git:
+  author: gravfull
+  message: '(Grav GitSync) Automatic Commit'
+  name: GitSync
+  email: git-sync@trilby.media
+  bin: git
+  ignore: null
+  private_key: null
+logging: false

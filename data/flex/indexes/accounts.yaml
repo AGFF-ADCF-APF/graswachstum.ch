@@ -1,0 +1,19 @@
+version: '1.2'
+timestamp: 1734595901
+count: 3
+index:
+  mani:
+    storage_key: mani
+    storage_timestamp: 1734470931
+    key: mani
+    email: nicolas.marti@edulu.ch
+  martinz:
+    storage_key: martinz
+    storage_timestamp: 1734595901
+    key: martinz
+    email: martin.zbinden@gmail.com
+  zbma:
+    storage_key: zbma
+    storage_timestamp: 1734469970
+    key: zbma
+    email: martin.zbinden@inforama.ch

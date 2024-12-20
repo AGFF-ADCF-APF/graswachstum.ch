@@ -1,0 +1,21 @@
+{% extends "forms/field.html.twig" %}
+
+{% block group %}
+  {% set urlinfo = parse_url(attribute(seomagic_metadata, 'og:url')) %}
+
+  <div class="seomagic-opengraph">
+    <a class="seomagic-link" href="{{ attribute(seomagic_metadata, 'og:url') }}" target="_blank">
+      <div class="seomagic-card">
+        <div class="seomagic-card__image">
+          <img alt="opengraph image" class="lazy" data-src="{{ attribute(seomagic_metadata, 'og:image') }}"/>
+        </div>
+        <div class="seomagic-card__content">
+          <h2>{{ attribute(seomagic_metadata, 'og:title') }}</h2>
+          <p>{{ attribute(seomagic_metadata, 'og:description') }}</p>
+          <span>{{ urlinfo.host }}</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+{% endblock %}

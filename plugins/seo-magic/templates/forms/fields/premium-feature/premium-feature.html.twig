@@ -1,0 +1,48 @@
+{% extends "forms/fields/text/text.html.twig" %}
+
+{% set field_path = plugin.slug ~ '/templates/forms/fields/premium-feature' %}
+{% set site_url = uri.rootUrl(true) %}
+{% set license = get_license_data.licenses[plugin.slug] %}
+
+{% block group %}
+
+  {% block stylesheets %}
+    {{ parent() }}
+    {% do assets.addCss('plugin://' ~ field_path ~ '/premium-feature.css') %}
+  {% endblock %}
+  {% block javascripts %}
+    {{ parent() }}
+    {% do assets.addJs('plugin://' ~ field_path ~ '/premium-feature.js', { group: 'bottom' }) %}
+  {% endblock %}
+
+  {% if not license %}
+    <p class="alert error missing-license">
+      {{ 'PLUGIN_SEOMAGIC.WEBSHOT_MISSING_LICENSE'|tu(plugin.name, base_url_relative)|raw }}
+    </p>
+  {% else %}
+    <div data-premium-feature="{{ { origin: site_url, feature: field.feature, license: license|base64_encode }|json_encode|base64_encode|e }}">
+      <div class="form-input-wrapper large form-input-addon-wrapper">
+        <div class="form-input-addon form-input-prepend">
+          <i class="pf-icons pf-loading fa fa-spinner fa-pulse fa-duration-05"></i>
+          <i class="pf-icons pf-error hidden fa fa-exclamation-circle error-reverse"></i>
+          <i class="pf-icons pf-registered hidden fa fa-check-circle info-reverse"></i>
+          <i class="pf-icons pf-unregistered hidden fa fa-warning warning-color"></i>
+        </div>
+        <input type="text" value="" placeholder="{{ site_url }}">
+        <div class="form-input-addon form-input-append">
+          <button data-premium-feature-register class="button button-primary button-small" disabled>{{ 'PLUGIN_SEOMAGIC.WEBSHOT_REGISTER'|tu }}</button>
+          <button data-premium-feature-unregister class="button error button-small hidden" disabled>{{ 'PLUGIN_SEOMAGIC.WEBSHOT_UNREGISTER'|tu }}</button>
+        </div>
+      </div>
+      <div>
+        <small class="hidden" data-premium-feature-message="registered">
+          {{ 'PLUGIN_SEOMAGIC.WEBSHOT_REGISTERED_LICENSE'|tu(plugin.name, site_url, field.feature)|raw }}
+        </small>
+        <small class="hidden" data-premium-feature-message="unregistered">
+          {{ 'PLUGIN_SEOMAGIC.WEBSHOT_UNREGISTERED_LICENSE'|tu(plugin.name, field.feature)|raw }}
+        </small>
+      </div>
+      <div class="premium-feature-error error-reverse"></div>
+    </div>
+  {% endif %}
+{% endblock %}

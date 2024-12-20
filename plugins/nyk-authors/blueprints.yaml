@@ -1,0 +1,188 @@
+name: Nyk Authors
+slug: nyk-authors
+type: plugin
+version: 1.0.4
+description: A plugin to display author names in Grav-powered blogs
+icon: user-circle
+author:
+  name: José Alves Amaro
+  email: jose.alves.amaro@gmail.com
+  url: https://github.com/Nykold
+homepage: https://github.com/Nykold/nyk-authors
+keywords: grav, plugin, author, frontmatter, auto, automatic, taxonomy, blog, blogging
+bugs: https://github.com/Nykold/nyk-authors/issues
+docs: https://github.com/Nykold/nyk-authors/blob/main/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.3' }
+  - { name: admin, version: '>=1.9.1' }
+  - { name: form, version: '>=3.0.0' }
+  - { name: login, version: '>=3.0.0'}
+  - { name: email, version: '>=3.0.0'}
+
+form:
+  validation: loose
+  fields:
+    general_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.GENERAL_SECTION
+      fields:
+        enabled:
+          type: toggle
+          label: PLUGIN_ADMIN.PLUGIN_STATUS
+          help: PLUGIN_NYK_AUTHORS.PLUGIN_STATUS_HELP
+          highlight: 1
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+    spacer1:
+      type: spacer
+      underline: true
+    author_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.AUTHOR_SECTION
+      fields:
+        author_taxonomy:
+          type: select
+          label: PLUGIN_NYK_AUTHORS.TAXONOMY
+          help: PLUGIN_NYK_AUTHORS.TAXONOMY_HELP
+          default: '0'
+          config-options@: site.taxonomies
+        automatic_username_enabled:
+          type: toggle
+          label: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME
+          help: PLUGIN_NYK_AUTHORS.AUTOMATIC_USERNAME_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        blacklist_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.BLACKLIST
+          help: PLUGIN_NYK_AUTHORS.BLACKLIST_HELP
+          text: PLUGIN_NYK_AUTHORS.BLACKLIST_HELP
+          icon: minus-square
+          collapsed: true
+          collapsible: true
+          fields:
+            blacklist_enabled:
+              type: toggle
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+              style: vertical
+            blacklist:
+              type: array
+              value_only: true
+              placeholder_value: PLUGIN_ADMIN.USERNAME
+              style: vertical
+        whitelist_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.WHITELIST
+          help: PLUGIN_NYK_AUTHORS.WHITELIST_HELP
+          text: PLUGIN_NYK_AUTHORS.WHITELIST_HELP
+          icon: check-square
+          collapsed: true
+          collapsible: true
+          fields:
+            whitelist_enabled:
+              type: toggle
+              highlight: 1
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+              style: vertical
+            whitelist:
+              type: array
+              value_only: true
+              placeholder_value: PLUGIN_ADMIN.USERNAME
+              style: vertical
+        extra_authors_fieldset:
+          type: fieldset
+          title: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS
+          help: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
+          text: PLUGIN_NYK_AUTHORS.EXTRA_AUTHORS_HELP
+          icon: plus-square
+          collapsed: true
+          collapsible: true
+          fields:
+            extra_authors:
+              type: array
+              placeholder_key: PLUGIN_ADMIN.USERNAME
+              placeholder_value: PLUGIN_NYK_AUTHORS.DISPLAY_NAME
+              style: vertical
+    spacer2:
+      type: spacer
+      underline: true
+    lang_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.LANG_SECTION
+      fields:
+        lang:
+          type: select
+          label: PLUGIN_ADMIN.LANGUAGE
+          help: PLUGIN_NYK_AUTHORS.LANG_OPTION_HELP
+          default: comma
+          options:
+            en: PLUGIN_NYK_AUTHORS.LANG_EN
+            fr: PLUGIN_NYK_AUTHORS.LANG_FR
+            de: PLUGIN_NYK_AUTHORS.LANG_DE
+            pt: PLUGIN_NYK_AUTHORS.LANG_PT
+            es: PLUGIN_NYK_AUTHORS.LANG_ES
+            comma: PLUGIN_NYK_AUTHORS.LANG_COMMA
+            custom: PLUGIN_NYK_AUTHORS.LANG_CUSTOM
+        custom_lang_conjunction:
+          type: text
+          label: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION
+          help: PLUGIN_NYK_AUTHORS.CUSTOM_CONJUNCTION_HELP
+          placeholder: 'and'
+    spacer3:
+      type: spacer
+      underline: true
+    page_section:
+      type: section
+      title: PLUGIN_NYK_AUTHORS.PAGE_SECTION
+      fields:
+        page_link_enabled:
+          type: toggle
+          label: PLUGIN_NYK_AUTHORS.PAGE_LINK
+          help: PLUGIN_NYK_AUTHORS.PAGE_LINK_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        page_link_attributes:
+          type: array
+          label: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES
+          help: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_HELP
+          placeholder_key: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_KEYPH
+          placeholder_value: PLUGIN_NYK_AUTHORS.PAGE_LINK_ATTRIBUTES_VALUEPH
+        page_path:
+          type: text
+          label: PLUGIN_NYK_AUTHORS.PAGE_PATH
+          help: PLUGIN_NYK_AUTHORS.PAGE_PATH_HELP
+          placeholder: '/author/'
+          validate:
+            pattern: '^\/([a-z0-9]+(?:-[a-z0-9]+)*\/)*'
+            message: PLUGIN_NYK_AUTHORS.PAGE_PATH_ERROR
+        page_instructions:
+          type: display
+          markdown: true
+          content: PLUGIN_NYK_AUTHORS.PAGE_INSTRUCTIONS

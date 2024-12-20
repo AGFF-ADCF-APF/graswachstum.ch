@@ -1,0 +1,36 @@
+{% set social_enabled = footer.social_enabled %}
+{% set social = site.footer.social|defined(footer.social) %}
+
+{% if social_enabled and social %}
+  <div class="flex social space-x-2 items-center justify-center mb-6 md:mb-0 md:justify-start">
+    {% for item in social %}
+
+      {% set icon_class = 'relative w-5 h-5' %}
+
+
+      {% if item.network == 'custom' %}
+        {% set icon = item.custom.icon %}
+        {% set link_class = (item.custom.colors ?: 'bg-gray-700 text-gray-100') ~ ' rounded-full p-1.5' %}
+      {% else %}
+        {% if item.network|ends_with('__brands') %}
+          {% set brand = item.network|replace({'__brands': ''}) %}
+          {% set icon = 'tabler/brand-' ~ brand ~ '.svg' %}
+          {% set link_class = 'bg-' ~ brand ~ ' rounded-full p-1.5 text-gray-100 dark:text-gray-800' %}
+          {% set icon_class = icon_class ~ ' stroke-current' %}
+        {% else %}
+          {% set icon = 'social/' ~ item.network ~ '.svg' %}
+          {% set icon_class = 'relative w-8 h-8 fill-current stroke-current' %}
+          {% set link_class = 'text-' ~ item.network %}
+        {% endif %}
+
+      {% endif %}
+
+      {% set network = item.custom.network ?: item.network %}
+
+      <a href="{{ url(item.link) }}" aria-label="{{ network }}"
+         class="{{ link_class }} {{ extra }} group opacity-75 hover:opacity-100 transition" {% if item.newtab %}target="_blank"{% endif %}>
+        {{ svg_icon(icon, icon_class ~ ' group-hover:brightness-120')|raw }}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

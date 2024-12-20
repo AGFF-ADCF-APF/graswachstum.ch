@@ -1,0 +1,8 @@
+{% set this_page = object %}
+{% if not this_page.published  %}
+  <div class="error alert">{{ 'PLUGIN_SEOMAGIC.SEOMAGIC_PAGE_UNPUBLISHED'|tu|raw }}</div>
+{% elseif seomagic_rawdata.updated is empty %}
+  <div class="error alert">{{ 'PLUGIN_SEOMAGIC.SEOMAGIC_DATA_NOT_GENERATED'|tu|raw }}</div>
+{% else %}
+  <div class="seomagic alert">{{ 'PLUGIN_SEOMAGIC.SEOMAGIC_DATA_GENERATED'|tu([seomagic_rawdata.updated|nicetime])|raw }}</div>
+{% endif %}

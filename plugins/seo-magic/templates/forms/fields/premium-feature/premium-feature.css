@@ -1,0 +1,17 @@
+.fa-duration-05 {
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+}
+
+.missing-license {
+    margin: 0 !important;
+}
+.missing-license a {
+    color: inherit !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.warning-color {
+    color: #debb09;
+}

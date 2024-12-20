@@ -1,0 +1,240 @@
+form:
+  fields:
+    tabs:
+      fields:
+        options:
+          fields:
+            publishing:
+              fields:
+                header.metadata:
+                  unset@: true
+        seomagic_tab:
+          type: tab
+          title: PLUGIN_SEOMAGIC.SEOMAGIC
+          ordering@: 2
+
+          fields:
+
+            seo_magic_announce:
+              type: seomagic-banner
+
+            tabs:
+              type: tabs
+              class: subtle
+              fields:
+
+                tab_1:
+                  type: tab
+                  title: PLUGIN_SEOMAGIC.METADATA
+                  fields:
+
+                    seo_title_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.META_TITLE
+                      underline: true
+
+                      fields:
+                        header.seo-magic.title:
+                          toggleable: true
+                          type: seomagic-title
+                          classes: char-counter
+                          label: PLUGIN_SEOMAGIC.CUSTOM_TITLE
+                          source: generated
+
+                    seo_image_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.META_IMAGE
+                      underline: true
+
+                      fields:
+                        header.seo-magic.images.type:
+                          toggleable: true
+                          type: elements
+                          label: PLUGIN_SEOMAGIC.META_IMAGE_TYPE
+                          help: PLUGIN_SEOMAGIC.META_IMAGE_TYPE_HELP
+                          config-default@: plugins.seo-magic.images.type
+                          options:
+                            auto: PLUGIN_SEOMAGIC.IMAGE_TYPE_AUTO
+                            webshot: PLUGIN_SEOMAGIC.IMAGE_TYPE_WEBSHOT
+                            image_name: PLUGIN_SEOMAGIC.IMAGE_TYPE_IMAGE_NAME
+                            image_attribute: PLUGIN_SEOMAGIC.IMAGE_TYPE_IMAGE_ATTRIBUTE
+                            'og-image': PLUGIN_SEOMAGIC.IMAGE_TYPE_OG_IMAGE
+                            media_first: PLUGIN_SEOMAGIC.IMAGE_TYPE_MEDIA_FIRST
+                            default: PLUGIN_SEOMAGIC.IMAGE_TYPE_DEFAULT
+                            none: PLUGIN_SEOMAGIC.IMAGE_TYPE_NONE
+                          fields:
+                            image_name:
+                              type: element
+                              fields:
+                                header.seo-magic.images.image_name:
+                                  toggleable: true
+                                  type: text
+                                  config-default@: plugins.seo-magic.images.image_name
+                                  label: PLUGIN_SEOMAGIC.SPECIFIC_IMAGE
+                                  help: PLUGIN_SEOMAGIC.SPECIFIC_IMAGE_HELP
+                            image_attribute:
+                              type: element
+                              fields:
+                                header.seo-magic.images.image_attribute:
+                                  toggleable: true
+                                  type: text
+                                  config-default@: plugins.seo-magic.images.image_attribute
+                                  label: PLUGIN_SEOMAGIC.SPECIFIC_HEADER_ATTR
+                                  help: PLUGIN_SEOMAGIC.SPECIFIC_HEADER_ATTR_HELP
+
+                    seo_keywords_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.META_KEYWORDS
+                      underline: true
+
+                      fields:
+                        header.seo-magic.keywords:
+                          toggleable: true
+                          type: seomagic-keywords
+                          classes: fancy
+                          source: generated
+                          label: PLUGIN_SEOMAGIC.CUSTOM_KEYWORDS
+                          validate:
+                            type: commalist
+
+                        header.seo-magic.keywords_position:
+                          toggleable: true
+                          label: PLUGIN_SEOMAGIC.KEYWORDS_POSITION
+                          help: PLUGIN_SEOMAGIC.KEYWORDS_POSITION_HELP
+                          type: toggle
+                          default: prepend
+                          highlight: prepend
+                          options:
+                            prepend: PLUGIN_SEOMAGIC.KEYWORDS_POSITION_PREPEND
+                            replace: PLUGIN_SEOMAGIC.KEYWORDS_POSITION_REPLACE
+
+                        header.seo-magic.keywords_default_fallback:
+                          toggleable: true
+                          type: seomagic-toggle
+                          label: PLUGIN_SEOMAGIC.DEFAULT_KEYWORDS
+                          help: PLUGIN_SEOMAGIC.DEFAULT_KEYWORDS_HELP
+                          source: site.metadata.keywords
+                          classes: fancy
+                          config-default@: plugins.seo-magic.keywords_default_fallback
+                          highlight: 1
+                          options:
+                            1: PLUGIN_ADMIN.ENABLED
+                            0: PLUGIN_ADMIN.DISABLED
+                          validate:
+                            type: bool
+
+
+                    seo_description_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.META_DESCRIPTION
+                      underline: true
+
+                      fields:
+                        header.seo-magic.desc_summarization_method:
+                          toggleable: true
+                          type: elements
+                          label: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION
+                          help: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_HELP
+                          config-default@: plugins.seo-magic.desc_summarization_method
+                          options:
+                            default: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_DEFAULT
+                            textrank: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_TEXTRANK
+                            attribute: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_ATTRIBUTE
+                          fields:
+                            attribute:
+                              type: element
+                              fields:
+                                header.seo-magic.desc_summarization_attribute:
+                                  toggleable: true
+                                  type: text
+                                  config-default@: plugins.seo-magic.desc_summarization_attribute
+                                  label: PLUGIN_SEOMAGIC.SUMMARIZATION_HEADER_ATTRIBUTE
+                                  help: PLUGIN_SEOMAGIC.SUMMARIZATION_HEADER_ATTRIBUTE_HELP
+                                  placeholder: hero.content
+
+                        header.seo-magic.description:
+                          toggleable: true
+                          rows: 5
+                          type: seomagic-description
+                          classes: char-counter
+                          source: generated
+                          label: PLUGIN_SEOMAGIC.CUSTOM_DESCRIPTION
+
+                        header.seo-magic.desc_default_fallback:
+                          toggleable: true
+                          type: seomagic-toggle
+                          label: PLUGIN_SEOMAGIC.DEFAULT_DESC
+                          help: PLUGIN_SEOMAGIC.DEFAULT_DESC_HELP
+                          source: site.metadata.description
+                          classes: fancy
+                          config-default@: plugins.seo-magic.desc_default_fallback
+                          highlight: 1
+                          options:
+                            1: PLUGIN_ADMIN.ENABLED
+                            0: PLUGIN_ADMIN.DISABLED
+                          validate:
+                            type: bool
+
+
+                tab_2:
+                  type: tab
+                  title: PLUGIN_SEOMAGIC.OPENGRAPH
+
+                  fields:
+
+                    opengraph_preview:
+                      type: seomagic-opengraph
+                      label: PLUGIN_SEOMAGIC.OPENGRAPH_PREVIEW
+
+                    opengraph_override_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.OPENGRAPH_OVERRIDES
+                      underline: true
+
+                      fields:
+
+                        header.seo-magic.opengraph.title:
+                          toggleable: true
+                          type: seomagic-title
+                          classes: char-counter
+                          source: metadata
+                          label: PLUGIN_SEOMAGIC.TITLE_OVERRIDE
+
+                        header.seo-magic.opengraph.description:
+                          toggleable: true
+                          type: seomagic-description
+                          classes: char-counter
+                          source: metadata
+                          label: PLUGIN_SEOMAGIC.DESC_OVERRIDE
+
+                    twitter_override_section:
+                      type: section
+                      title: PLUGIN_SEOMAGIC.TWITTER_OVERRIDES
+                      underline: true
+
+                      fields:
+
+                        header.seo-magic.twitter.title:
+                          toggleable: true
+                          type: seomagic-title
+                          classes: char-counter
+                          source: opengraph
+                          label: PLUGIN_SEOMAGIC.TITLE_OVERRIDE
+
+                        header.seo-magic.twitter.description:
+                          toggleable: true
+                          type: seomagic-description
+                          classes: char-counter
+                          source: opengraph
+                          label: PLUGIN_SEOMAGIC.DESC_OVERRIDE
+
+
+                tab_3:
+                  type: tab
+                  title: PLUGIN_SEOMAGIC.SEO_REPORT
+                  data-condition@: '\Grav\Plugin\SeoMagicPlugin::shouldShowReportTab'
+
+                  fields:
+                    seomagic_report:
+                      type: seomagic-report
+

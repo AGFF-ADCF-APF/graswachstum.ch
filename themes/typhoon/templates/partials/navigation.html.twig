@@ -1,0 +1,31 @@
+{% set classes = classes ? classes : {
+  root: 'flex mr-8 ' ~ header_height,
+  default: {
+    a: 'flex px-3 py-2 w-full hover:bg-gray-100 dark:hover:bg-gray-900 items-center',
+    li: {
+      base: 'flex leading-5 relative',
+      inactive: ' ' ~ hover_class ~ ' ' ~ menu_class,
+      active: 'font-semibold text-black dark:text-white',
+    },
+    icon: 'w-4 h-4 ml-1 opacity-50',
+    ul: 'flex transition duration-300 z-10 absolute py-2 flex-col w-48 rounded-b bg-white dark:bg-gray-800 border-t-2 border-gray-200 dark:border-gray-600 shadow-lg',
+  },
+  level_1: {
+    a: 'flex items-center h-full px-3',
+    li: {
+      base: 'flex ml-4 text-sm relative inline-flex items-center pt-1 border-b-2 font-medium leading-5 transition duration-150 ease-in-out ',
+      inactive: 'border-transparent ' ~ hover_class ~' hover:border-primary focus:outline-none focus:border-gray-300 ',
+      active: 'font-semibold border-primary focus:outline-none focus:border-primary ' ~ (header_fixed ?: active_class) ,
+    },
+    ul: 'flex transition duration-300 z-10 absolute py-2 flex-col w-48 rounded-b bg-white border-gray-200 shadow-lg',
+  }
+} %}
+
+{% import 'macros/macros.html.twig' as macros %}
+<ul class='{{ classes.root }}'>
+  {% if show_onpage_menu %}
+    {{ macros.nav_loop(theme_onpage_menu(), classes, alpine, svg) }}
+  {% else %}
+    {{ macros.nav_loop(theme_primary_menu(), classes, alpine, svg) }}
+  {% endif %}
+</ul>

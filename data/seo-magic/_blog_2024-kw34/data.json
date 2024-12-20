@@ -1,0 +1,466 @@
+{
+    "grav": {
+        "page_route": "\/blog\/2024-kw34",
+        "page_rawroute": "\/blog\/2024-kw34",
+        "page_title": "Woche 34 (19.08.-25.08.2024)"
+    },
+    "updated": 1734588474,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Woche 34 (19.08.-25.08.2024)",
+        "grav-page-route": "\/blog\/2024-kw34",
+        "grav-page-rawroute": "\/blog\/2024-kw34",
+        "cache-control": "max-age=604800",
+        "expires": "Thu, 26 Dec 2024 06:07:54 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html;charset=UTF-8",
+        "date": "Thu, 19 Dec 2024 06:07:54 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1734588474.390739917755126953125,
+        "total_time": 0.105704999999999993409716125825070776045322418212890625,
+        "namelookup_time": 0.0005029999999999999749089596434714621864259243011474609375,
+        "connect_time": 0.000555000000000000046247727869541677137021906673908233642578125,
+        "pretransfer_time": 0.0099939999999999994118038415535920648835599422454833984375,
+        "starttransfer_time": 0.105183999999999999719335619374760426580905914306640625,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/blog\/2024-kw34",
+        "content_type": "text\/html;charset=UTF-8",
+        "header_size": 553,
+        "request_size": 123,
+        "redirect_count": 0,
+        "size_download": 6589,
+        "speed_download": 62752,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 30428
+    },
+    "content": {
+        "body": "<h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n<p><\/p>\n<p>Druckversion (PDF)<\/p>\n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei nassem Wetter zeigt sich rasch, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gen. Anbei ein Sammlung von spannenden Ans&auml;tzen, welche ich in den letzten Jahren gesehen habe.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            betriebsportrait\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
+        "headers": {
+            "h1": [
+                "Woche 34 (19.08.-25.08.2024)",
+                "Die Weidesaison mit Reserven verl\u00e4ngern",
+                "Saubere K\u00fche = sauberes Gras",
+                "Drei gute Ratschl\u00e4ge"
+            ],
+            "h2": [],
+            "h3": [
+                "Weideeing\u00e4nge",
+                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+            ],
+            "h4": [
+                "Other Related Posts:",
+                "Zuf\u00e4lliger Artikel",
+                "H\u00e4ufigste Tags",
+                "Archiv"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw34\/2024-08-23 Weidesaison mit Reserven verla\u0308ngern - N. Marti_Header.jpg",
+                "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw34\/2024-08-23 Weidesaison mit Reserven verla\u0308ngern - N. Marti.jpg",
+                "alt": "2024-08-23%20Weidesaison%20mit%20Reserven%20verla%CC%88ngern%20-%20N.%20Marti",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg",
+                "alt": "Weideeing\u00e4nge",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg",
+                "alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 3,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/tag:weide#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/blog\/2024-kw34\/2024-08-23 Weidesaison mit Reserven verla\u0308ngern - N. Marti.pdf": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Druckversion (PDF)",
+                "external": false
+            },
+            "\/blog\/2024-kw18": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Vorheriger Beitrag",
+                "external": false
+            },
+            "\/blog\/2024-kw45": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "N\u00e4chster Beitrag",
+                "external": false
+            },
+            "\/blog\/2024-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge",
+                "external": false
+            },
+            "\/tag:infrastruktur#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/blog\/2024-04-30-weidetagung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "external": false
+            },
+            "\/tag:betriebsportrait#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false
+            },
+            "\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 August 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2 May 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 December 2021",
+                "external": true
+            },
+            "\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "M. Zbinden",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
+            "title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
+            "keywords": "verl\u00e4ngern,futterbau,niederschl\u00e4ge,n-mineralisierung,reserven,stark,weidesaison,angekurbelt,druckversion",
+            "image": "https:\/\/graswachstum.ch\/blog\/2024-kw34\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/blog\/2024-kw34",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
+            "og:description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/blog\/2024-kw34\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2024-kw34\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch",
+            "twitter:description": "Die Weidesaison mit Reserven verl\u00e4ngern Futterbau \/ Durch die Niederschl\u00e4ge wurde die N-Mineralisierung stark angekurbelt. Druckversion (PDF)",
+            "twitter:image": "https:\/\/graswachstum.ch\/blog\/2024-kw34\/seomagic-image.jpg",
+            "twitter:image:alt": "Woche 34 (19.08.-25.08.2024) | graswachstum.ch"
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/blog\/2024-kw34",
+        "links": {
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff22b80)\n> GET \/blog\/2024-kw34 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 34 (19.08.-25.08.2024)\r\n< grav-page-route: \/blog\/2024-kw34\r\n< grav-page-rawroute: \/blog\/2024-kw34\r\n< cache-control: max-age=604800\r\n< expires: Thu, 26 Dec 2024 06:07:54 GMT\r\n* Added cookie grav-site-23a95d8=\"d546510319891d3a50ebdd39ee84409e\" for domain graswachstum.ch, path \/, expire 1734590274\n< set-cookie: grav-site-23a95d8=d546510319891d3a50ebdd39ee84409e; expires=Thu, 19 Dec 2024 06:37:54 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Thu, 19 Dec 2024 06:07:54 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

@@ -1,0 +1,7 @@
+enabled: false
+jqcookie: true
+possition: top
+url: /legal
+customcss: false
+urlcss: 'http://example.com/assets/css/style.css'
+position: bot

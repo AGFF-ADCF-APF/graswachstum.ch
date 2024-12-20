@@ -1,0 +1,105 @@
+enabled: true
+external_in_new_tab: true
+append_site_title: true
+logo_height: h-24
+custom_logo:
+  user/assets/typhoon/Logo-Graswachstum-neu-2024-web.webp:
+    name: Logo-Graswachstum-neu-2024-web.webp
+    full_path: Logo-Graswachstum-neu-2024-web.webp
+    type: image/webp
+    size: 15838
+    path: user/assets/typhoon/Logo-Graswachstum-neu-2024-web.webp
+custom_logo_strip_svg_style: false
+custom_favicon:
+  user/assets/typhoon/favicon.png:
+    name: favicon.png
+    full_path: favicon.png
+    type: image/png
+    size: 16597
+    path: user/assets/typhoon/favicon.png
+colors:
+  text_style: 'text-gray-600 dark:text-gray-400'
+  brightness_lighter: 20
+  brightness_darker: 20
+  primary: '#459185'
+appearance:
+  theme: system
+  selector: true
+  storage: true
+  cookie: true
+body_classes: null
+section_classes: 'bg-white dark:bg-gray-900 py-8 md:py-24'
+wrapper_spacing: 'xl:container xl:mx-auto md:px-6 px-4'
+menu:
+  primary_location: header
+  primary_menu_levels: 3
+  mobile_nav: true
+  icon_classes: 'hidden md:inline-block h-4 w-4 opacity-75 mr-1'
+  login:
+    enabled: false
+    icon: tabler/user.svg
+    logged_in_display: emaili
+    logout_icon: tabler/logout.svg
+  langswitcher:
+    enabled: true
+    icon: tabler/world.svg
+header_bar:
+  background: auto
+  custom_style: 'linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%)'
+  text: auto
+  fixed: false
+  height: h-24
+hero:
+  display: true
+  overlay: dark
+  overlay_direction: right
+  alignment: left
+  image: 'theme://images/headers/sea-and-sky.jpg'
+  custom: '#3C4043'
+  height: null
+  padding: 'pt-32 md:pt-40 lg:pt-48 xl:pt-56 pb-16 md:pb-20 lg:pb-24 xl:pb-32'
+  image_alignment: object-center
+  overlay_gradient:
+    - '0.8'
+    - '0.3'
+footer:
+  menu_enabled: true
+  menu:
+    -
+      label: 'Datenschutz und Rechtsausschluss'
+      link: /legal
+      newtab: false
+  social_enabled: true
+  social:
+    -
+      network: custom
+      custom:
+        network: 'Webseite AGFF'
+        icon: tabler/world-www.svg
+        colors: 'bg-black text-gray-100'
+      link: 'https://www.agff.ch'
+      newtab: true
+    -
+      network: youtube__brands
+      custom:
+        network: Github
+        icon: tabler/brand-github.svg
+        colors: 'bg-[#6e5494] text-gray-100'
+      link: 'https://www.youtube.com/channel/UC2MdwIMqqR9JeDhpwMgt8EQ'
+      newtab: true
+  copyright: "[graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
+notices:
+  -
+    content: 'An example **critical** message that should show up on homepage only'
+    enabled: false
+    route: /
+    type: critical
+    learn_more_link: 'https://getgrav.org'
+  -
+    content: 'An example **note** that should appear on all pages! No link..'
+    enabled: false
+    route: null
+    type: note
+    learn_more_link: null
+footer_page_route: null
+notices_page_route: null

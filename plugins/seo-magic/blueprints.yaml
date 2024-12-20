@@ -1,0 +1,440 @@
+name: Seo Magic
+slug: seo-magic
+type: plugin
+version: 5.2.1
+premium: true
+description: Powerful SEO plugin
+icon: magic
+author:
+  name: Trilby Media, LLC
+  email: hello@trilby.media
+homepage: https://getgrav.org/premium/seo-magic
+keywords: grav, plugin, seo, premium, webshot
+bugs: https://github.com/getgrav/grav-premium-issues/labels/seo-magic
+docs: https://getgrav.org/premium/seo-magic/docs
+license: https://getgrav.org/premium/license
+
+dependencies:
+  - { name: grav, version: '>=1.7.32' }
+  - { name: sitemap, version: '>=3.0.0' }
+  - { name: form, version: '>=6.0.0' }
+
+form:
+  validation: strict
+  fields:
+    sitemap_check:
+      type: sitemap-check
+
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    seomagic_actions:
+      type: seomagic-actions
+      label: PLUGIN_SEOMAGIC.SEOMAGIC_ACTIONS
+
+    enable_quicktray:
+      type: toggle
+      label: PLUGIN_SEOMAGIC.ENABLE_QUICKTRAY
+      help: PLUGIN_SEOMAGIC.ENABLE_QUICKTRAY_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    enable_admin_page_events:
+      type: toggle
+      label: PLUGIN_SEOMAGIC.ENABLE_PAGE_EVENTS
+      help: PLUGIN_SEOMAGIC.ENABLE_PAGE_EVENTS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    enable_seo_report:
+      type: toggle
+      label: PLUGIN_SEOMAGIC.ENABLE_SEO_REPORT
+      help: PLUGIN_SEOMAGIC.ENABLE_SEO_REPORT_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    enable_site_seo_report:
+      type: toggle
+      label: PLUGIN_SEOMAGIC.ENABLE_SITE_SEO_REPORT
+      help: PLUGIN_SEOMAGIC.ENABLE_SITE_SEO_REPORT_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    user_agent:
+      type: text
+      label: PLUGIN_SEOMAGIC.USER_AGENT_STRING
+      help: PLUGIN_SEOMAGIC.USER_AGENT_STRING_HELP
+
+    client_timeout:
+      type: number
+      label: PLUGIN_SEOMAGIC.CLIENT_TIMEOUT
+      help: PLUGIN_SEOMAGIC.CLIENT_TIMEOUT_HELP
+      size: x-small
+      append: Seconds
+      validate:
+        min: 1
+
+    client_connections:
+      type: number
+      label: PLUGIN_SEOMAGIC.CLIENT_CONNECTIONS
+      help: PLUGIN_SEOMAGIC.CLIENT_CONNECTIONS_HELP
+      size: x-small
+      validate:
+        min: 1
+        max: 25
+
+    robots:
+      type: text
+      label: PLUGIN_SEOMAGIC.ROBOTS_STRING
+      help: PLUGIN_SEOMAGIC.ROBOTS_STRING_HELP
+
+    body_selectors:
+      type: array
+      label: PLUGIN_SEOMAGIC.CSS_BODY_SELECTORS
+      help: PLUGIN_SEOMAGIC.CSS_BODY_SELECTORS_HELP
+      value_only: true
+
+    ignore_routes:
+      type: array
+      value_only: true
+      label: PLUGIN_SEOMAGIC.IGNORE_ROUTES
+      help: PLUGIN_SEOMAGIC.IGNORE_ROUTES_HELP
+
+    custom_stopwords:
+      type: selectize
+      label: PLUGIN_SEOMAGIC.CUSTOM_CSS_STOPWORDS
+      help: PLUGIN_SEOMAGIC.CUSTOM_CSS_STOPWORDS_HELP
+      classes: fancy
+      validate:
+        type: commalist
+
+    link_checker_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.LINK_CHECKER
+      underline: true
+      fields:
+
+        enable_image_checker:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.ENABLE_IMAGE_CHECKER
+          help: PLUGIN_SEOMAGIC.ENABLE_IMAGE_CHECKER_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        enable_link_checker:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.ENABLE_LINK_CHECKER
+          help: PLUGIN_SEOMAGIC.ENABLE_LINK_CHECKER_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        link_check_timeout:
+          type: number
+          label: PLUGIN_SEOMAGIC.LINK_CHECK_TIMEOUT
+          help: PLUGIN_SEOMAGIC.LINK_CHECK_TIMEOUT_HELP
+          size: x-small
+          append: Seconds
+          validate:
+            min: 1
+
+        link_max_retries:
+          type: number
+          label: PLUGIN_SEOMAGIC.LINK_MAX_RETRIES
+          help: PLUGIN_SEOMAGIC.LINK_MAX_RETRIES_HELP
+          size: x-small
+          validate:
+            min: 1
+
+        link_check_whitelist:
+          type: selectize
+          size: large
+          placeholder: "e.g. github.com"
+          label: PLUGIN_SEOMAGIC.LINK_CHECK_WHITELIST
+          help: PLUGIN_SEOMAGIC.LINK_CHECK_WHITELIST_HELP
+          classes: fancy
+          validate:
+            type: commalist
+
+
+    meta_content_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.META_CONTENT
+      underline: true
+      fields:
+        metadata.title_frontmatter:
+          type: text
+          label: PLUGIN_SEOMAGIC.TITLE_FRONTMATTER
+        metadata.description_frontmatter:
+          type: text
+          label: PLUGIN_SEOMAGIC.DESCRIPTION_FRONTMATTER
+        metadata.keywords_frontmatter:
+          type: text
+          label: PLUGIN_SEOMAGIC.KEYWORDS_FRONTMATTER
+        opengraph.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.OPENGRAPH_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        twitter.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.TWITTER_CARD_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        twitter.username:
+          type: text
+          label: PLUGIN_SEOMAGIC.TWITTER_USERNAME
+          placeholder: '@getgrav'
+
+        twitter.card:
+          type: select
+          label: PLUGIN_SEOMAGIC.TWITTER_CARD
+          default: summary_large_image
+          options:
+            summary_large_image: PLUGIN_SEOMAGIC.TWITTER_CARD_IMAGE_LARGE
+            summary: PLUGIN_SEOMAGIC.TWITTER_CARD_SUMMARY
+            app: PLUGIN_SEOMAGIC.TWITTER_CARD_APP
+            player: PLUGIN_SEOMAGIC.TWITTER_CARD_PLAYER
+
+        twitter.reading_time:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.TWITTER_READING_TIME
+          help: PLUGIN_SEOMAGIC.TWITTER_READING_TIME_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        facebook.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.FACEBOOK_CARD_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        facebook.appid:
+          type: text
+          label: PLUGIN_SEOMAGIC.FACEBOOK_APP
+          help: PLUGIN_SEOMAGIC.FACEBOOK_APP_HELP
+          placeholder: '1234567890'
+
+    meta_images_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.META_IMAGES
+      underline: true
+      fields:
+
+        images.type:
+          type: elements
+          label: PLUGIN_SEOMAGIC.IMAGE_TYPE
+          help: PLUGIN_SEOMAGIC.IMAGE_TYPE_HELP
+          default: auto
+          options:
+            webshot: PLUGIN_SEOMAGIC.IMAGE_TYPE_WEBSHOT
+            auto: PLUGIN_SEOMAGIC.IMAGE_TYPE_AUTO
+            image_name: PLUGIN_SEOMAGIC.IMAGE_TYPE_IMAGE_NAME
+            image_attribute: PLUGIN_SEOMAGIC.IMAGE_TYPE_IMAGE_ATTRIBUTE
+            'og-image': PLUGIN_SEOMAGIC.IMAGE_TYPE_OG_IMAGE
+            media_first: PLUGIN_SEOMAGIC.IMAGE_TYPE_MEDIA_FIRST
+            default: PLUGIN_SEOMAGIC.IMAGE_TYPE_DEFAULT
+            none: PLUGIN_SEOMAGIC.IMAGE_TYPE_NONE
+          fields:
+            webshot:
+              type: element
+              fields:
+                images.webshot_feature:
+                  type: premium-feature
+                  label: PLUGIN_SEOMAGIC.ENABLE_WEBSHOT
+                  help: PLUGIN_SEOMAGIC.ENABLE_WEBSHOT_HELP
+                  feature: webshot
+            auto:
+              type: element
+              fields:
+                images.auto_order:
+                  type: array
+                  value_only: true
+                  size: large
+                  label: PLUGIN_SEOMAGIC.AUTO_ORDER
+                  help: PLUGIN_SEOMAGIC.AUTO_ORDER_HELP
+            image_name:
+              type: element
+              fields:
+                images.image_name:
+                  type: text
+                  label: PLUGIN_SEOMAGIC.IMAGE_NAME
+                  help: PLUGIN_SEOMAGIC.IMAGE_NAME_HELP
+            image_attribute:
+              type: element
+              fields:
+                images.image_attribute:
+                  type: text
+                  label: PLUGIN_SEOMAGIC.IMAGE_ATTRIBUTE
+                  help: PLUGIN_SEOMAGIC.IMAGE_ATTRIBUTE_HELP
+            default:
+              type: element
+              fields:
+                images.default_image:
+                  type: text
+                  label: PLUGIN_SEOMAGIC.DEFAULT_IMAGE
+                  help: PLUGIN_SEOMAGIC.DEFAULT_IMAGE_HELP
+
+        images.size.x:
+          type: text
+          label: PLUGIN_SEOMAGIC.IMAGE_SIZE_X
+          size: small
+          append: px
+          placeholder: 1200
+
+        images.size.y:
+          type: text
+          label: PLUGIN_SEOMAGIC.IMAGE_SIZE_Y
+          size: small
+          append: px
+          placeholder: 600
+
+    autogeneration_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.META_AUTOGENERATION
+      underline: true
+      fields:
+
+        keep_utf8_chars:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.KEEP_UTF8_CHARS
+          help: PLUGIN_SEOMAGIC.KEEP_UTF8_CHARS_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        global_keywords:
+          type: selectize
+          label: PLUGIN_SEOMAGIC.GLOBAL_KEYWORDS
+          help: PLUGIN_SEOMAGIC.GLOBAL_KEYWORDS_HELP
+          classes: fancy
+          validate:
+            type: commalist
+
+        autogenerate_keywords:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.GENERATE_KEYWORDS
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        keywords_default_fallback:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.KEYWORDS_DEFAULT_FALLBACK
+          help: PLUGIN_SEOMAGIC.KEYWORDS_DEFAULT_FALLBACK_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        autogenerate_desc:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.GENERATE_DESC
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        desc_default_fallback:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.DESC_DEFAULT_FALLBACK
+          help: PLUGIN_SEOMAGIC.DESC_DEFAULT_FALLBACK_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        desc_summarization_method:
+            type: elements
+            label: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION
+            help: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_HELP
+            default: default
+            options:
+              default: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_DEFAULT
+              textrank: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_TEXTRANK
+              attribute: PLUGIN_SEOMAGIC.DESC_SUMMARIZATION_ATTRIBUTE
+            fields:
+              attribute:
+                type: element
+                fields:
+                  desc_summarization_attribute:
+                    type: text
+                    label: PLUGIN_SEOMAGIC.SUMMARIZATION_HEADER_ATTRIBUTE
+                    help: PLUGIN_SEOMAGIC.SUMMARIZATION_HEADER_ATTRIBUTE_HELP
+                    placeholder: hero.content

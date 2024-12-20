@@ -1,0 +1,267 @@
+PLUGIN_SEOMAGIC:
+  SEOMAGIC: "SEO Magic"
+  SEOMAGIC_ACTIONS: "SEO Magic Actions"
+  SEOMAGIC_REGENERATE_SEO_DATA: "Regenerate SEO Data"
+  SEOMAGIC_DELETE_SEO_DATA: "Delete SEO Data"
+  ENABLE_QUICKTRAY: "Enable Quicktray Icon"
+  ENABLE_QUICKTRAY_HELP: "Allows quick access to regenerate SEO-Magic data"
+  ENABLE_PAGE_EVENTS: "Enable Admin Page Events"
+  ENABLE_PAGE_EVENTS_HELP: "Allows page save and delete to regenerate or delete SEO-Magic data"
+  ENABLE_SEO_REPORT: "Enable Page-level SEO Report"
+  ENABLE_SEO_REPORT_HELP: "Displays an SEO-Magic report when editing a page"
+  ENABLE_SITE_SEO_REPORT: "Enable Site-wide SEO Report"
+  ENABLE_SITE_SEO_REPORT_HELP: "Displays the summary SEO report in the 'Tools -> Reports' page"
+  USER_AGENT_STRING: "User Agent String"
+  USER_AGENT_STRING_HELP: "Used for the SEO-Magic data crawler"
+  ROBOTS_STRING: "Robots String"
+  ROBOTS_STRING_HELP: "If no robots.txt file exists, use this string for default robots header tag"
+  CSS_BODY_SELECTORS: "CSS Body Selectors"
+  CSS_BODY_SELECTORS_HELP: "Used to select areas of content to be used for auto-generated keywords and descriptions"
+  CUSTOM_CSS_STOPWORDS: "Custom Stop-Words"
+  CUSTOM_CSS_STOPWORDS_HELP: "Extra stop-words to be used in the auto-generation process, these will not be counted as 'interesting' words."
+  META_CONTENT: "Meta Content"
+  OPENGRAPH_ENABLED: "OpenGraph Enabled"
+  TWITTER_CARD_ENABLED: "Twitter Card Enabled"
+  TWITTER_USERNAME: "Twitter Username"
+  TWITTER_CARD: "Twitter Card Type"
+  TWITTER_CARD_IMAGE_LARGE: "Summary Large Image"
+  TWITTER_CARD_SUMMARY: "Summary"
+  TWITTER_CARD_APP: "App"
+  TWITTER_CARD_PLAYER: "Player"
+  TWITTER_READING_TIME: "Twitter Reading Time"
+  TWITTER_READING_TIME_HELP: "If enabled and \"readingtime\" plugin installed, can display reading time of page in the Twitter card"
+  FACEBOOK_CARD_ENABLED: "Facebook Card Enabled"
+  FACEBOOK_APP: "Facebook App"
+  FACEBOOK_APP_HELP: "Find this in your Facebook Dashboard (https://developers.facebook.com/apps/redirect/dashboard)"
+  META_IMAGES: "Meta Images"
+  IMAGE_TYPE: "Image Type"
+  IMAGE_TYPE_HELP: 'SEO Magic will fallback through the following image type list until an image is found: "Image Name" → "Image Attribut"e → "OG-Image" → "First image found in Page" → "Default URL"'
+  IMAGE_TYPE_AUTO: "Automatically pick a local image"
+  IMAGE_TYPE_WEBSHOT: "WebShot Automatic Screenshot Service"
+  IMAGE_TYPE_IMAGE_NAME: "Specific filename in each page folder"
+  IMAGE_TYPE_IMAGE_ATTRIBUTE: "Specific attribute in page header"
+  IMAGE_TYPE_OG_IMAGE: "A provided OG-Image in the page"
+  IMAGE_TYPE_MEDIA_FIRST: "The first image found in the current page's folder"
+  IMAGE_TYPE_DEFAULT: "Default URL of a specific image"
+  IMAGE_TYPE_NONE: "No image"
+  ENABLE_WEBSHOT: "Enable Webshot Feature"
+  ENABLE_WEBSHOT_HELP: "Registers the URL with the premium feature Webshot and associates the URL to the license"
+  WEBSHOT_REGISTER: "Register"
+  WEBSHOT_UNREGISTER: "Unregister"
+  WEBSHOT_MISSING_LICENSE: 'No license was found for %1$s. Ensure you have a proper license in the <a href="%2$s/license-manager">License Manager</a>'
+  WEBSHOT_REGISTERED_LICENSE: 'Your %1$s license has been associated to <strong>%2$s</strong> for the %3$s feature. You can unregister or change the site at any time.'
+  WEBSHOT_UNREGISTERED_LICENSE: 'Your %1$s license has no site currently associated to it for the %2$s feature. Fill the field with your site URL and click Register to enable the %2$s feature.'
+  IMAGE_NAME: "Image Name"
+  IMAGE_NAME_HELP: "When using a \"Specific filename\" for Image Type, this is the name of the file to use. Also supports comma seperated names"
+  IMAGE_ATTRIBUTE: "Image Attribute"
+  IMAGE_ATTRIBUTE_HELP: "When using a \"Specific attribute\" for Image Type, this is the name of the attribute element from the page header. Also supports comma seperated attributes"
+  DEFAULT_IMAGE: "Default Image"
+  DEFAULT_IMAGE_HELP: "When using a \"Default Image URL\" for Image Type, this is the URL of the image to use"
+  IMAGE_SIZE_X: "Image Size X"
+  IMAGE_SIZE_Y: "Image Size Y"
+  META_AUTOGENERATION: "Meta Auto-Generation"
+  GLOBAL_KEYWORDS: "Global Keywords"
+  GLOBAL_KEYWORDS_HELP: "A set of global keywords to be included before any auto-generated keywords"
+  GENERATE_KEYWORDS: "Generate Keywords"
+  GENERATE_DESC: "Generate Description"
+  DESC_SUMMARIZATION: "Description Auto-Summarization"
+  DESC_SUMMARIZATION_HELP: "How should the description be generated, either from the first content found on the page, or via a smart Textrank algorithm"
+  DESC_SUMMARIZATION_DEFAULT: "Simple Content Summarization"
+  DESC_SUMMARIZATION_TEXTRANK: "PHP.Science Textrank Algorithm"
+  METADATA: "Metadata"
+  METADATA_TITLE: "Metadata Title"
+  METADATA_DESCRIPTION: "Metadata Description"
+  METADATA_KEYWORDS: "Metadata Keywords"
+  META_TITLE: "Meta Title"
+  CUSTOM_TITLE: "Custom Title"
+  META_IMAGE: "Meta Image"
+  META_IMAGE_TYPE: "Image Type"
+  META_IMAGE_TYPE_HELP: 'SEO Magic will fallback through the following image type list until an image is found: "Image Name" → "Image Attribut"e → "OG-Image" → "First image found in Page" → "Default URL"'
+  META_IMAGE_TYPE_AUTO: "Auto-Select available image"
+  META_IMAGE_TYPE_WEBSHOT: "Webshot automatic Screenshot service"
+  META_IMAGE_TYPE_IMAGE_NAME: "Specific image"
+  META_IMAGE_TYPE_IMAGE_ATTRIBUTE: "Specific header attribute"
+  SPECIFIC_IMAGE: "Specific Image"
+  SPECIFIC_IMAGE_HELP: "If Image Type is set to \"Specific image\" you can select which image that will be here. Can be a simple image name for local page reference or full stream path, eg. page://images/headers/awesomeazing.jpg"
+  SPECIFIC_HEADER_ATTR: "Specific Header Attribute"
+  SPECIFIC_HEADER_ATTR_HELP: "If Image Type is set to \"Specific header attribute\" you can select which header attribute that is here"
+  META_KEYWORDS: "Meta Keywords"
+  CUSTOM_KEYWORDS: "Custom Keywords"
+  KEYWORDS_POSITION: "Keywords Position"
+  KEYWORDS_POSITION_HELP: "Custom keywords in relation to the content auto-generated keywords"
+  KEYWORDS_POSITION_PREPEND: "Prepend"
+  KEYWORDS_POSITION_REPLACE: "Replace"
+  META_DESCRIPTION: "Meta Description"
+  CUSTOM_DESCRIPTION: "Custom Description"
+  OPENGRAPH: "OpenGraph"
+  OPENGRAPH_PREVIEW: "OpenGraph Preview"
+  OPENGRAPH_OVERRIDES: "OpenGraph Overrides"
+  TITLE_OVERRIDE: "Title Override"
+  DESC_OVERRIDE: "Description Override"
+  TWITTER_OVERRIDES: "Twitter Overrides"
+  SEO_REPORT: "SEO Report"
+  SEOMAGIC_DATA_NOT_GENERATED: '<i class="fa fa-ban"></i> SEO Magic Data has not been generated for this page, click <strong><i class="fa fa-check"></i> Save</strong> to generate.'
+  SEOMAGIC_DATA_GENERATED: '<i class="fa fa-clock-o"></i> SEO Magic Data was last updated on <strong>%1$s</strong>. Click <strong><i class="fa fa-check"></i> Save</strong> to regenerate.'
+  CURRENT_OPENGRAPH: 'Current OpenGraph'
+  CURRENT_METADATA: 'Current Metadata'
+  AUTO_GENERATED: 'Auto-Generated'
+  SITEMAP_DISABLED: '<i class="fa fa-exclamation-circle"></i> Sitemap plugin is not installed or disabled. SEO Magic requires sitemap to be functional and accurate.'
+  SITEMAP_CHECK: '<i class="fa fa-exclamation-circle"></i> Sitemap installed but "Sitemap URL" not reachable. SEO Magic requires sitemap to be functional and accurate.'
+  SEOMAGIC_REPORT: 'SEO-Magic Report'
+  GENERATED: 'Generated'
+  PAGE_URL: 'Page URL'
+  PAGE_TITLE: 'Page Title'
+  CANONICAL: 'Canonical'
+  CONTENT_HEADERS: 'Content Headers'
+  CONTENT_LINKS: 'Content Links'
+  CONTENT_ITEMS: 'Content Items'
+  PAGE_LOAD_TIME: 'Page Load Time'
+  DNS: 'DNS'
+  DNS_TIME: 'DNS Time'
+  CONNECT: 'Connect'
+  CONNECT_TIME: 'Connect Time'
+  PRE_XFER: 'Pre-Transfer'
+  PRE_XFER_TIME: 'Pre-Transfer Time'
+  DATA: 'Data'
+  DATA_XFER_TIME: 'Data Transfer Time'
+  SUMMARY: 'Summary'
+  HEAD_ELEMENTS: 'Head Elements'
+  CONTENT_ELEMENTS: 'Content Elements'
+  CONTENT_IMAGES: 'Content Images'
+  EXPAND_ALL: 'Expand All'
+  COLLAPSE_ALL: 'Collapse All'
+  SUMMARY_INFORMATION: 'Summary Information'
+  RESPONSE_HEADER: 'Response Header'
+  SERVER: 'Server'
+  TYPE: 'Type'
+  ENCODING: 'Encoding'
+  CACHING_STATUS: 'Caching Status'
+  EXPIRES: 'Expires'
+  CACHE_CONTROL: 'Cache-Control'
+  PRAGMA: 'Pragma'
+  CONNECTION: 'Connection'
+  EXTERNAL_IP: 'External IP'
+  LOCAL_IP: 'Local IP'
+  VERSION: 'Version'
+  SSL_PROTECTED: 'SSL Protected'
+  SSL_VERIFY: 'SSL Verifiy'
+  SSL_CERTFICATE: 'SSL Certificate'
+  SIZE_SPEED: 'Size & Speed'
+  HEADER_SIZE: 'Header Size'
+  REQUEST_SIZE: 'Request Size'
+  ORIGINAL_PAGE_SIZE: 'Original Page Size'
+  DOWNLOAD_PAGE_SIZE: 'Download Page Size'
+  DOWNLOAD_SPEED: 'Download Speed'
+  FAV_ICON: 'Fav Icon'
+  CANONICAL_URL: 'Canonical URL'
+  CSS_STYLESHEETS: 'CSS Stylesheets'
+  JAVASCRIPT: 'JavaScript'
+  HEADER_TAGS: 'Header Tags'
+  GOOD_HTML_TAGS: 'Good HTML Tags'
+  BAD_HTML_TAGS: 'Bad HTML Tags'
+  IMAGE: 'Image'
+  ALT_TAG: 'Alt Tag'
+  STATUS: 'Status'
+  MESSAGE: 'Message'
+  NO_IMAGES_FOUND: 'No images found'
+  LINK: 'Link'
+  TEXT: 'Text'
+  HEADERS: 'Headers'
+  TITLE: 'Title'
+  NO_LINKS_FOUND: 'No links found'
+  SELECTED_BODY_TEXT: 'Seo-Magic Selected Body Text'
+  SELECTED_BODY_TEXT_INFO: 'This is the body that is selected based on the <strong>Body selector</strong> configuration option.  It is used to determine automatically generate <strong>Metadata Keywords</strong> and <strong>Metadata Descriptions</strong>. The current <strong>Metadata Keywords</strong> are highlighted.'
+  CRAWL_DEBUG: 'SEO Magic Crawling Debug Information'
+  CRAWL_DEBUG_INFO: "This is the debug output from SEO Magic's crawling of the page"
+  NO_REPORT_AVAILABLE: 'No report available, please save this page to generate your report'
+  URL_SCORE_MSG_1: "URL is using SSL with HTTPS protocol and looks good"
+  URL_SCORE_MSG_2: "For best SEO don't use an extension on your URLs"
+  URL_SCORE_MSG_3: "URL contains underscores ('_'), recommendation is to use hyphens as separators ('-')"
+  URL_SCORE_MSG_4: "URL contains underscores spaces, recommendation is to use hyphens as separators ('-')"
+  URL_SCORE_MSG_5: "URL should be SSL encrypted and use HTTPS protocol, not HTTP"
+  URL_SCORE_MSG_6: "URL is %s characters longer than recommended!"
+  META_SCORE_MSG_1: "Meta Image found, it is not required but great to have"
+  META_SCORE_MSG_2: "No Meta Image found"
+  META_SCORE_MSG_3: "Responsive viewport tag found, this is key to ensuring a responsive design"
+  META_SCORE_MSG_4: "No responsive viewport tag found, are you sure your site is responsive?"
+  META_SCORE_MSG_5: "Found a robots tag in your page, this is potentially beneficial for your SEO"
+  META_SCORE_MSG_6: "No robots tag found in your page, this is probably because you have a 'robots.txt' file at the root of your site."
+  META_SCORE_MSG_7: "Found a charset meta header, this is helpful for browsers to properly handle your page encoding"
+  META_SCORE_MSG_8: "No charset meta header found, consider adding this for better browser and crawling compatibility"
+  META_SCORE_MSG_9: "Found OpenGraph MetaTag for %s"
+  META_SCORE_MSG_10: "Found Twitter MetaTag for %s"
+  HEAD_ICON_SCORE_MSG_1: "Found a site icon for your page, no direct SEO benefit but is important for modern browsers"
+  HEAD_ICON_SCORE_MSG_2: "Unable to find a site icon for your page, consider adding one for a better user experience"
+  HEAD_CANONICAL_SCORE_MSG_1: "Found a canonical URL which is valuable for search engines this is a the master copy of the page"
+  HEAD_CANONICAL_SCORE_MSG_2: "Unable to find a canonical URL for your page, consider adding one for a better SEO"
+  HEAD_LINKS_SCORE_MSG_1: "Found a standard CSS Stylesheet tag"
+  HEAD_SCRIPT_SCORE_MSG_1: "Found a script like with a %s tag, this is a great way to optimize JavaScript loading"
+  HEAD_SCRIPT_SCORE_MSG_2: "Found a standard script tag with no loading attribute"
+  TAG_SCORE_MSG_1: "Found %s Flash embeds in your content, it should be removed due to the likeliness it is malware"
+  TAG_SCORE_MSG_2: "No Flash embeds found in your content"
+  TAG_SCORE_MSG_3: "Found %s IFrames in your content, these are rarely used intentionally and could indicate your site is compromised"
+  TAG_SCORE_MSG_4: "No IFrames found in your content"
+  TAG_SCORE_MSG_5: "Found %s Semantic tags in your content, this shows your site is structured semantically and is beneficial for SEO"
+  TAG_SCORE_MSG_6: "Found %s Semantic tags in your content, consider using more to ensure semantic structure"
+  TAG_SCORE_MSG_7: "Found no Semantic tags in your content, consider using them to ensure semantic structure"
+  CONTENT_LINKS_SCORE_MSG_1: "Link is not broken and should link correctly"
+  CONTENT_LINKS_SCORE_MSG_2: "Link is broken or restricted and should be investigated"
+  CONTENT_LINKS_SCORE_MSG_3: "Contains one of your keywords, this is generally the best way to include keywords and boost SEO"
+  IMAGES_SCORE_MSG_1: "Image is not broken and should display correctly"
+  IMAGES_SCORE_MSG_2: "Image is broken and is not displaying correctly"
+  IMAGES_SCORE_MSG_3: "Does not contain an 'alt' tag, every <img> tag should contain one"
+  IMAGES_SCORE_MSG_4: "Found an 'alt' tag, this is good for screen-readers, search engines and therefore SEO"
+  HEADER_SCORE_MSG_1: "You should at least have an H1 header on the page, and a good balance of headers indicates solid content structure"
+  ITEMS_SCORE_MSG_1: "%1$s %2$s found, the perfect number is more than %3$s and less than %4$s items"
+  ITEMS_SCORE_MSG_2: "%s not found but are optional"
+  ITEMS_SCORE_MSG_3: "%1$s not found, this is critical for SEO and should contain between %2$s and %3$s items"
+  ITEMS_SCORE_MSG_4: "%1$s found but should be a minimum of %2$s items"
+  ITEMS_SCORE_MSG_5: "%1$s found but should be a maximum of %2$s items"
+  LENGTH_SCORE_MSG_1: "%1$s is a good length at %2$s characters between %3$s and %4$s characters"
+  LENGTH_SCORE_MSG_2: "%1$s not found, this is critical for SEO and should be between %2$s and %3$s characters in length"
+  LENGTH_SCORE_MSG_3: "%1$s is %2$s characters long but should be a minimum of %3$s in length"
+  LENGTH_SCORE_MSG_4: "%1$s is %2$s characters long but should be a maximum of %3$s in length"
+  LOG_RESULTS: "SEOMagic: processed %1$s (%2$s)"
+  PROCESSED_RESULTS: "SEOMagic processed for %s pages"
+  NO_SITEMAP: "Sitemap URL does not exist: %s"
+  REMOVED_MSG: "Successfully removed SEO Magic data"
+  SEOMAGIC_HINT: "process all pages and generate SEO-Magic data"
+  INSUFFICIENT_PERMS: "Insufficient permissions to perform SEO-Magic action."
+  KEEP_UTF8_CHARS: "Keep UTF8 Characters"
+  KEEP_UTF8_CHARS_HELP: "If disabled, SEO-Magic will strip UTF8 characters such as ä, æ, é, ì, ô, ù, etc."
+  SEOMAGIC_PAGE_UNPUBLISHED: "This page is unpublished. The SEO Report will not be available until published."
+  DESC_DEFAULT_FALLBACK: "Description Default Fallback"
+  DESC_DEFAULT_FALLBACK_HELP: "If 'Generate Description' is disabled, or no description can be generated, fall back to default description from site.yaml if it exists"
+  DEFAULT_DESC: "Default Description"
+  DEFAULT_DESC_HELP: "Force using the default description from site.yaml if it exists"
+  KEYWORDS_DEFAULT_FALLBACK: "Keywords Default Fallback"
+  KEYWORDS_DEFAULT_FALLBACK_HELP: "If 'Generate Keywords' is disabled, or no keywords can be generated, fall back to default keywords from site.yaml if they exist"
+  DEFAULT_KEYWORDS: "Default Keywords"
+  DEFAULT_KEYWORDS_HELP: "Force using the default keywords from site.yaml if they exist"
+  IGNORE_ROUTES: "Ignore Routes"
+  IGNORE_ROUTES_HELP: "Routes to ignore. Should be based from root of the site.  e.g. '/my/ignored-page'"
+  ENABLE_LINK_CHECKER: "Enable Link Checker"
+  ENABLE_LINK_CHECKER_HELP: "This will check every link found on a page to ensure it's valid. NOTE: This will increase the processing time"
+  BROKEN_LINKS_ALERT: "SEO-Magic Found <strong>%s</strong> broken links on this page.  Please address these as soon as possible."
+  SSL_CERTIFICATE: "SSL Certificate"
+  CLIENT_TIMEOUT: "Client Timeout"
+  CLIENT_TIMEOUT_HELP: "How long to wait before timing out when crawling pages"
+  CLIENT_CONNECTIONS: "Client Connections"
+  CLIENT_CONNECTIONS_HELP: "The number of concurrent connections the HTTPClient can use"
+  LINK_CHECKER: "Link Checker"
+  LINK_CHECK_TIMEOUT: "Link Check Timeout"
+  LINK_CHECK_TIMEOUT_HELP: "How long to wait before timing out when crawling images and links"
+  LINK_MAX_RETRIES: "Maximum Retries"
+  LINK_MAX_RETRIES_HELP: "Number of times to retry a link that is broken or unreachable"
+  LINK_CHECK_WHITELIST: "Whitelist URLs"
+  LINK_CHECK_WHITELIST_HELP: "Ignore links for these URLs"
+  ENABLE_IMAGE_CHECKER: "Enable Image Checker"
+  ENABLE_IMAGE_CHECKER_HELP: "This will check ever image found on teh page to enture it's valid."
+  AUTO_ORDER: "Automatic Ordering"
+  AUTO_ORDER_HELP: "The order in which the image types should be checked"
+  DESC_SUMMARIZATION_ATTRIBUTE: "Page Header Attribute/s"
+  SUMMARIZATION_HEADER_ATTRIBUTE: "Summary Header Attribute/s"
+  SUMMARIZATION_HEADER_ATTRIBUTE_HELP: "Either a singular or comma seperated page header attribute in 'dot' syntax"
+  TITLE_FRONTMATTER: "Title Frontmatter Selector"
+  DESCRIPTION_FRONTMATTER: "Description Frontmatter Selector"
+  KEYWORDS_FRONTMATTER: "Keywords Frontmatter Selector"

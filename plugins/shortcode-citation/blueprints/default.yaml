@@ -1,0 +1,88 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+
+      fields:
+        content:
+          fields:
+            references:
+              type: fieldset
+              title: References
+              info: "(shortcode-citation)"
+              icon: superscript
+              collapsible: true
+              collapsed: true
+              fields:
+                header.references:
+                  type: list
+                  style: vertical
+                  collapsed: true
+                  fields:
+                    .id:
+                      type: text
+                      label: ID
+                      validate:
+                        required: true
+                    .type:
+                      type: select
+                      label: Reference type
+                      options:
+                        book: Book
+                        journal: Journal article
+                        web: Website/webpage
+                    .title:
+                      type: text
+                      label: Title
+                    .author:
+                      type: text
+                      label: Author
+                    .year:
+                      type: text
+                      label: Year
+                    .url:
+                      type: text
+                      label: URL
+                    .journal:
+                      type: text
+                      label: Journal
+                    .volume:
+                      type: text
+                      label: Journal volume
+                    .pages:
+                      type: text
+                      label: Page numbers (x-y)
+
+        options:
+          fields:
+            shortcode_citation:
+              type: section
+              title: Shortcode Citation
+              fields:
+                header.shortcode-citation.heading_text:
+                  type: text
+                  label: Heading text
+                  placeholder: "References"
+                header.shortcode-citation.items:
+                  type: select
+                  label: Works to reference
+                  help: 
+                  options:
+                    "cited": Only cited works
+                    "all": All works
+                    "uncited": Only uncited works
+                header.shortcode-citation.reorder_uncited:
+                  type: toggle
+                  label: Order uncited works alphabetically (by ID)
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool

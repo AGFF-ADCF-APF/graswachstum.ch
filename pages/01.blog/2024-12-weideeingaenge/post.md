@@ -169,7 +169,7 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 
 ## Weitere Informationen
 [ui-accordion independent=true open=none]
-[ui-accordion-item title="[Österreich: Weideinfos von HBLFA Raumberg-Gumpenstein"]
+[ui-accordion-item title="Österreich: Weideinfos von HBLFA Raumberg-Gumpenstein"]
 [Hauptseite Weideinfos HBLFA Raumberg-Gumpenstein](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
 
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)
@@ -189,6 +189,7 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 [ui-accordion-item title="AGFF: Merk- und Infoblätter"]
 
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html) mit ausführlicher Bewertung der verschiedenen Materialien
+
 [/ui-accordion-item]
 [/ui-accordion]
 

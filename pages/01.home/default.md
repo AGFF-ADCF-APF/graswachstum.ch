@@ -1,6 +1,12 @@
 ---
 title: Home
-body_classes: title-center title-h1h2
+body_classes: 'title-center title-h1h2'
+published: false
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '20-12-2024 06:25'
 ---
 
 # Say Hello to Grav!

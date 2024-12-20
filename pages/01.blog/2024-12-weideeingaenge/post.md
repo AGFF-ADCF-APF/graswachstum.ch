@@ -48,6 +48,10 @@ gallery:
             image: Weidewege_2017-05-24.jpg
             desc: 'Wo der Vater einst noch mit der Seilwinde pflügte und Kulturen anbaute - gibt es heute trotz mehr als 50% Hangneigung keine Treppenbildung. Möglich ist das durch eine geschickte Weideeinteilung mit schmalen, hohen Koppeln **[(Karte)](https://map.geo.admin.ch/#/map?lang=de&center=2620360.62,1202984.55&z=11.629&topic=ech&layers=ch.swisstopo.zeitreihen@year=1864,f;ch.bfs.gebaeude_wohnungs_register,f;ch.bav.haltestellen-oev,f;ch.swisstopo.swisstlm3d-wanderwege,f;ch.vbs.schiessanzeigen,f;ch.astra.wanderland-sperrungen_umleitungen,f;ch.blw.hang_steillagen,,0.35&bgLayer=ch.swisstopo.swissimage&featureInfo=default)**, kurze Besatzzeiten (max. 3 Tage, Ausweichmöglichkeiten bei nasser Witterung) und weil die Tiere nach dem Fressen selbständig in den Stall zurück gehen können. _Bild: Rüderswil, 2017 (M. Zbinden)_'
         -
+            title: 'Nicht für schwere Geräte: Teer direkt auf Grasnarbe verlegt'
+            image: null
+            desc: 'Gute Erfahrungen haben einige Betriebe mit dem direkten Einbau einer ca. 10cm dicken Asphaltschicht direkt auf die Wiese gemacht. Anfangskosten sind zwar relativ hoch, aber dafür hat man über Jahre einen sauberen, gern begangenen Triebweg ohne Unterhaltsbedarf. Achtung, ohne Kofferung darf nicht mit schwerem Gerät draufgefahren werden, was bei einer Breite von 1 bis 2 Metern auch nicht beabsichtigt werden sollte. Ein besseres Bild folgt!  _Foto: fotoART by Thommy Weiss / ccnull.de_ '
+        -
             title: 'Achtung, Baubewilligung nötig!'
             image: Weideweg_IMG_20170302_140039.jpg
             desc: 'Dauerhafte Massnahmen, oder solche die Erdverschiebungen beinhalten, sind in vielen Gemeinden Baubewilligungs-pflichtig. Aus Gründen des einfacheren Baus haben sich mittlerweile auch Systeme etabliert, welche ohne Aushub direkt auf die Grasnarbe verlegt werden können... _Bild: Untersteckholz, 2017 (M. Zbinden)_ '

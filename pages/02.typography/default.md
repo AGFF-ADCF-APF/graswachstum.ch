@@ -1,5 +1,11 @@
 ---
 title: Typography
+published: false
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '20-12-2024 06:20'
 ---
 
 ! Details on the full capabilities of Spectre.css can be found in the [Official Spectre Documentation](https://picturepan2.github.io/spectre/elements.html)

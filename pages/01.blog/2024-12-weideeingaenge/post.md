@@ -1,5 +1,5 @@
 ---
-title: 'Weideeingänge und Auftriebswege'
+title: 'Weideeingänge und Zugangswege'
 date: '20-12-2024 08:00'
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
@@ -99,24 +99,16 @@ references:
 shortcode-citation:
     items: all
     reorder_uncited: true
-seo-magic:
-    keywords:
-        - Weideinfrastruktur
-        - Zugangswege
-        - Weidetränke
-        - AGFF
-    description: 'Weidewege, worauf muss geachtet werden? Mit Bildergallerie.'
+seo-magic: {  }
 ---
 
 # Saubere Kühe = sauberes Gras
 
-_Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastrukturen den betrieblichen Anforderungen genügten. Was gute Weidezugänge ausmacht und verschiedene spannende Ansätze von Betrieben in der ganzen Schweiz, erfährst du in diesem Beitrag. Mit Bildergallerie._
+_Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen genügten. Was gute Weidezugänge ausmacht und verschiedene spannende Ansätze von Betrieben in der ganzen Schweiz, erfährst du in diesem Beitrag. Mit Bildergallerie._
 
 ===
 
-[TOC]
-
-## 5 Gedanken zu Weideinfrastrukturen
+## 5 Gedanken zum Weideinfrastrukturen
 1. Zahlreiche Faktoren haben Einfluss auf das Ausmass von Trittschäden. Eine Auswahl findet sich in der nachfolgenden Tabelle, sortiert nach absteigender Wichtigkeit. Das heisst, das Tierverhalten wird als grösserer Einfluss als das Tiergewicht angeschaut. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes oder ungewohntes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
 
 |  nicht veränderbar  |  beeinflussbar  |
@@ -175,12 +167,20 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 
 ## Weitere Informationen
 
-[Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)
+[Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
+[ui-accordion independent=true open=none][ui-accordion-item title="[Weideinfos von HBLFA Raumberg-Gumpenstein ](https://raumberg-gumpenstein.at/forschung/institute/bio-landwirtschaft-und-biodiversitaet-der-nutztiere/weideinfos?class=button)  
+"]
+
+[/ui-accordion-item][/ui-accordion]
 
 [Weide-Triebwegbefestigungen im direkten Vergleich, HBLFA Raumberg-Gumpenstein (PDF) ](https://raumberg-gumpenstein.at/jdownloads/FODOK/2016/fodok_4_17653_weidetriebwege.pdf)
+[plugin:youtube](https://www.youtube.com/watch?v=RgcuCzbcmwk)
+
+
+[Teagasc Grass10 - Hauptseite Weideinfrastruktur (Englisch) ](https://www.teagasc.ie/crops/grassland/grass10/grazing-infrastructure/)
+[Infrastruktur Handbuch für Rinderfarmen (PDF)](https://www.teagasc.ie/media/website/publications/2018/Beef-Farm-Infrastructure.pdf)
+
 
 [AGFF Infoblatt W14 Zugangswege zu den Weiden: nützlich oder unnötig (AGFF, gedruckt)](https://www.agff.ch/online-shop/informationsblaetter.html) mit ausführlicher Bewertung der verschiedenen Materialien
 
-[plugin:youtube](https://www.youtube.com/watch?v=RgcuCzbcmwk)
 
-## Bildergallerie

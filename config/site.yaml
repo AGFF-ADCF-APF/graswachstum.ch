@@ -9,7 +9,7 @@ taxonomies:
   - author
   - filter
 metadata:
-  description: 'Grasmessnetz der AGFF'
+  description: AGFF-Grasmessnetzwerk
 summary:
   enabled: true
   format: short

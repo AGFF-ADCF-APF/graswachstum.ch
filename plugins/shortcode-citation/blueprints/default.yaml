@@ -60,7 +60,7 @@ form:
 
         options:
           fields:
-            shortcode_citation:
+            shortcode-citation:
               type: section
               title: Shortcode Citation
               fields:

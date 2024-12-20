@@ -69,23 +69,23 @@ footer:
       label: 'Datenschutz und Rechtsausschluss'
       link: /legal
       newtab: false
-  social_enabled: true
+  social_enabled: false
   social:
     -
       network: custom
       custom:
-        network: 'Webseite AGFF'
-        icon: tabler/world-www.svg
+        network: X
+        icon: tabler/brand-x.svg
         colors: 'bg-black text-gray-100'
-      link: 'https://www.agff.ch'
+      link: 'https://x.com/getgrav'
       newtab: true
     -
-      network: youtube__brands
+      network: custom
       custom:
         network: Github
         icon: tabler/brand-github.svg
         colors: 'bg-[#6e5494] text-gray-100'
-      link: 'https://www.youtube.com/channel/UC2MdwIMqqR9JeDhpwMgt8EQ'
+      link: 'https://github.com/getgrav'
       newtab: true
   copyright: "[graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
 notices:

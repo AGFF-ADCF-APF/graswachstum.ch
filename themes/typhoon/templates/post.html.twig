@@ -26,16 +26,11 @@
 
       <article class="magic-content {{ prose_style }} max-w-none my-6">
         {{ page.content|raw }}
-	
-    	{% include 'partials/gallery.html.twig' %}
-
-	{% include 'partials/citations.html.twig' %}
-
       </article>
         
+    	{% include 'partials/gallery.html.twig' %}
 
         {% include 'partials/author-bio.html.twig' ignore missing %}
-    	
     
 		{{ page.header.authorString|raw }}
 

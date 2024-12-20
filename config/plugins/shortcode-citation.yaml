@@ -1,6 +1,6 @@
 enabled: true
 built_in_css: true
-builtin_css: true
-heading_text: Quellen
-items: cited
+builtin_css: false
+heading_text: null
+items: all
 reorder_uncited: false

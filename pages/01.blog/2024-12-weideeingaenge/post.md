@@ -61,10 +61,6 @@ gallery:
             desc: 'Dauerhafte Massnahmen, oder solche die Erdverschiebungen beinhalten, sind in vielen Gemeinden Baubewilligungs-pflichtig. Aus Gründen des einfacheren Baus haben sich mittlerweile auch Systeme etabliert, welche ohne Aushub direkt auf die Grasnarbe verlegt werden können... _Bild: Untersteckholz, 2017 (M. Zbinden)_ '
         -
             title: 'Holzschnitzel für Provisorien'
-            image: Triebweg_IMG_4121_S.Oehrli.jpg
-            desc: 'Als Notmassnahme oder provisorisch angelegte Wege dienen Holzschnitzel. Die Deckschicht muss aber jährlich erneuert werden. Nicht geeignet für nasse Verhältnisse/Stellen. _Bild: Ort und Jahr unbekannt (S. Oehrli)_ '
-        -
-            title: 'Holzschnitzel für Provisorien'
             image: Triebweg_IMG_4121_S.Oehrli.JPG
             desc: 'Als Notmassnahme oder provisorisch angelegte Wege dienen Holzschnitzel. Die Deckschicht muss aber jährlich erneuert werden. Nicht geeignet für nasse Verhältnisse/Stellen. _Bild: Ort und Jahr unbekannt (S. Oehrli)_ '
         -

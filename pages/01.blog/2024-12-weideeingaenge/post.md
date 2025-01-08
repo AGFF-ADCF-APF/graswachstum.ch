@@ -48,17 +48,17 @@ gallery:
             image: Weidewege_2017-05-24.jpg
             desc: 'Wo der Vater einst noch mit der Seilwinde pflügte und Kulturen anbaute - gibt es heute trotz mehr als 50% Hangneigung keine Treppenbildung. Möglich ist das durch eine geschickte Weideeinteilung mit schmalen, hohen Koppeln **[(Karte)](https://map.geo.admin.ch/#/map?lang=de&center=2620360.62,1202984.55&z=11.629&topic=ech&layers=ch.swisstopo.zeitreihen@year=1864,f;ch.bfs.gebaeude_wohnungs_register,f;ch.bav.haltestellen-oev,f;ch.swisstopo.swisstlm3d-wanderwege,f;ch.vbs.schiessanzeigen,f;ch.astra.wanderland-sperrungen_umleitungen,f;ch.blw.hang_steillagen,,0.35&bgLayer=ch.swisstopo.swissimage&featureInfo=default)**, kurze Besatzzeiten (max. 3 Tage, Ausweichmöglichkeiten bei nasser Witterung) und weil die Tiere nach dem Fressen selbständig in den Stall zurück gehen können. _Bild: Rüderswil, 2017 (M. Zbinden)_'
         -
-            title: 'Nicht für schwere Geräte: Asphalt direkt auf Grasnarbe verlegt'
+            title: 'Asphalt direkt auf Grasnarbe verlegt'
             image: Treibweg_Asphalt_1.jpeg
-            desc: 'Gute Erfahrungen haben einige Betriebe mit dem direkten Einbau einer ca. 10cm dicken Asphaltschicht direkt auf die Grasnarbe gemacht. Die Anfangskosten sind zwar relativ hoch, aber dafür hat man über Jahre einen sauberen, gern begangenen Triebweg ohne Unterhaltsbedarf. Achtung, ohne Kofferung darf nicht mit schwerem Gerät draufgefahren werden, was bei einer Breite von 1 bis 2 Metern auch nicht beabsichtigt werden sollte.  _Foto: zVg_'
+            desc: 'Gute Erfahrungen haben einige Betriebe mit dem direkten Einbau einer ca. 10cm dicken Asphaltschicht direkt auf die Grasnarbe gemacht. Die Anfangskosten sind zwar relativ hoch, aber dafür hat man über Jahre einen sauberen, gern begangenen Triebweg ohne Unterhaltsbedarf. Frost und Nässe dürften  die Dauerhaftigkeit beeinträchtigen.  _Foto: zVg_'
+        -
+            title: 'Achtung: nur für geringe Belastungen '
+            image: Treibweg_Asphalt_3.jpeg
+            desc: 'Achtung, ohne Kofferung darf nicht mit schwerem Gerät draufgefahren werden, was bei einer Breite von 1 bis 2 Metern auch nicht beabsichtigt werden sollte. Dafür kann ein einmal ausgedienter Weg auch relativ einfach wieder entfernt und entsorgt werden.  _Foto: zVg_'
         -
             title: 'Achtung, Baubewilligung nötig!'
             image: Weideweg_IMG_20170302_140039.jpg
             desc: 'Dauerhafte Massnahmen, oder solche die Erdverschiebungen beinhalten, sind in vielen Gemeinden Baubewilligungs-pflichtig. Aus Gründen des einfacheren Baus haben sich mittlerweile auch Systeme etabliert, welche ohne Aushub direkt auf die Grasnarbe verlegt werden können... _Bild: Untersteckholz, 2017 (M. Zbinden)_ '
-        -
-            title: 'Holzschnitzel für Provisorien'
-            image: Triebweg_IMG_4121_S.Oehrli.jpg
-            desc: 'Als Notmassnahme oder provisorisch angelegte Wege dienen Holzschnitzel. Die Deckschicht muss aber jährlich erneuert werden. Nicht geeignet für nasse Verhältnisse/Stellen. _Bild: Ort und Jahr unbekannt (S. Oehrli)_ '
         -
             title: 'Holzschnitzel für Provisorien'
             image: Triebweg_IMG_4121_S.Oehrli.JPG
@@ -71,7 +71,7 @@ gallery:
             title: 'Grosse Weideherden erfordern ein ausgeklügeltes Wegnetz'
             image: Plantahof_Treibwegkreuzung_M.Zbinden.JPG
             desc: 'Grosse Vollweide-Herden (>40 Tiere) erfordern in jedem Fall geeignetes Wegnetz, damit die hofnäheren Flächen nicht überbeansprucht werden. Hier ein Beispiel vom Plantahof in Landquart. _Bild: Landquart, 2023 (M. Zbinden)_ '
-visible: true
+            visible: true
 media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_IMG_20170302_140039.jpg,Strassenquerung_PXL_20240406_115058034.jpg,Weideweg_IMG_20170406_144020.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611.jpg,Holzschnitzel_IMG_20120418_090339.jpg,Weideeingang_2017-05-31.jpg,Trittschäden_Grasnarbe_IMG_20160424_185708.jpg,TraenkeEingang_befestigt_2013-09-25.jpg,Weideeingang_Waldhfo_2013-09-25 15.02.56.jpg,Weideweg_IMG_20170406_143433.jpg,Tränkefass_seitlich_IMG_20141101_133701.jpg,IMG_0562.JPG,Triebweg_IMG_4121_S.Oehrli.JPG,Weideeingang_Stromverbindung_IMG_20170406_110423.jpg,Weidewege_2017-05-24.jpg,Weideweg_IMG_20220502_151406.jpg,Schema_Weideweg.jpg,Ober-Hinterberg_2015.jpg,Ober-Hinterberg_2012.jpg,Feldweg_Traenkefass_img_6964.jpg,FlexibleEingaenge_IMG_20160414_085622.jpg,Nasse_Weide_PXL_20240601_155722580.jpg,hintergrund-textur-asphalt_cc-by-20.jpg,Treibweg_Asphalt_1.jpeg'
 references:
     -

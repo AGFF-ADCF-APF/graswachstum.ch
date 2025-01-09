@@ -1,6 +1,6 @@
 ---
 title: 'Woche 2 (06.01.2025)'
-date: '09-01-2025 15:55'
+date: '13-01-2025 15:55'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -11,8 +11,8 @@ taxonomy:
     category:
         - blog
     tag:
-        - mischungswahl
         - wachstumsbericht
+        - mischungswahl
     author:
         - 'Zbinden Martin'
 author: 'Nicolas Marti, Martin Zbinden'
@@ -21,6 +21,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
+publish_date: '13-01-2025 07:56'
 ---
 
 # Weideende heisst nicht Grasende

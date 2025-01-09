@@ -24,9 +24,21 @@ shortcode-citation:
 publish_date: '13-01-2025 07:56'
 ---
 
-# Weideende heisst nicht Grasende
+# Wiesenverbessern heisst, Schwächen erkennen und beseitigen
 
-Futterbau / Dieses Futterbaujahr war geprägt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.
+Futterbau / Angelehnt an einen hervorragenden Newsletter von Edmund Leisen, ...
+
 
 ===
+
+Dauerwiesen ... 
+... bleiben nur dann dicht und unkrautfrei, wenn die Nutzungsart und -intensität auf die vorhandenen Pflanzen abgestimmt sind.
+
+... Deckfrüchte in diesem Zusammenhang für längerdauernde Ansaaten nicht verwendet werden sollten. Westerwoldisches Raigras und Co., aber auch höhere Anteile Rotklee sind aus diesem Blickwinkel kritisch zu betrachten.
+
+
+Das wichtigste in Kürze:
+- Rotklee und Raigräser können in ackerfähigen Lagen für max. 3-jährige Ansaatwiesen verwendet eingesetzt werden, sogar auf Biobetrieben.
+
+
 

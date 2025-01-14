@@ -73,14 +73,14 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 ## 2 Futterprobe erfassen
 Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.
 
-[Raufutter-Meisterschaft 2025 ** Einschreiben** (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
+[Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
 
 
 
 
 ## 3 Futterproben gegenseitig bewerten
 
-[Raufutter-Meisterschaft 2025 ** Benotung** (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button)
+[Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button)
 
 ##
 

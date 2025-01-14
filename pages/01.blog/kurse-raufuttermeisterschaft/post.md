@@ -26,7 +26,7 @@ shortcode-citation:
 routes:
     aliases:
         - /raufuttermeisterschaft
-media_order: 'Futterproben.jpg,Agroscope_Probenahme von Raufutter_Hayoz_2024.pdf,12665-17179-fr-pub.pdf,12665-17199-de-pub.pdf'
+media_order: 'Futterproben.jpg,12665-17179-fr-pub.pdf,12665-17199-de-pub.pdf,Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf,productImage_1348.jpg,productImage_1347.jpg,productImage_1349.jpg'
 references:
     -
         id: agroscope_2007
@@ -70,18 +70,38 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 [/ui-accordion-item][/ui-accordion]
 
 
-## 2 Futterprobe erfassen
+## 2 Eigene Futterprobe beurteilen
+Beurteilen Sie die eigene Futterprobe mit den geeigneten Hilfsmitteln. 
+
+**Ziel:** Schätzung der Nährstoffgehalte mit ca. +/- 5% Genauigkeit (+/- 0.3 MJ NEL)
+
+
+Grassilage
+
+[![productImage_1347](productImage_1347.jpg) Schlüssel Maissilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1347_2_D.pdf)
+
+
+Kostenloser Download PDF
+
+## 3 Futterprobe erfassen
 Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.
 
 [qrcode]https://forms.office.com/e/Wway0C1DDk[/qrcode][Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
 
+[Vorlage für Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/Pages/ShareFormPage.aspx?id=Y4MGSWGDB0aVSWK2tVeUqgjLZKG4mxRJiMSMkJHpahZUMThSRTZITFFIMklJWlEzQlU3MTI4M1FNUS4u&sharetoken=WGrftmmG7XMEaMhrWKzy)
 
 
 
 
-## 3 Futterproben gegenseitig bewerten
 
-[qrcode]https://forms.office.com/e/wJVP7NUF3q[/qrcode][Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button)
+## 4 Futterproben gegenseitig bewerten
+
+[qrcode]https://forms.office.com/e/wJVP7NUF3q[/qrcode][Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button) Link zu Formular für Kurs Zollikofen
+
+[Vorlage für Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/Pages/ShareFormPage.aspx?id=Y4MGSWGDB0aVSWK2tVeUqgjLZKG4mxRJiMSMkJHpahZUNEJHSlNMR1FSME1GWUhJNTI1NlFVMVZFWC4u&sharetoken=0zeq0tZzsvzAIuXv4Dp1)
+
+
+##
 
 ##
 

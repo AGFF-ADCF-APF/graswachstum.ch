@@ -67,13 +67,13 @@ Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine r
 [/columns]
 
 [lightbox image="Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1.webp" gallery="gallery1" class="inline-block" desc=".dbs-1"]
-    
+        ![Red DBS - 2](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2.webp?resize=200,400)
 [/lightbox]
 
 Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1.webp
 
 [lightbox image="Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2.webp" gallery="gallery1" class="inline-block" desc=".dbs-2"]
-    ![Red DBS - 2](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2.webp?cropZoom=200,400)
+    ![Red DBS - 2](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2.webp?resize=200,400)
 [/lightbox]
 
 [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf)

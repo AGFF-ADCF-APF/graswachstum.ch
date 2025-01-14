@@ -71,19 +71,19 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 
 
 ## 2 Eigene Futterprobe beurteilen
-Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einschätzschlüsseln von AGFF / Agridea. 
-
 **Ziel:** Schätzung der Nährstoffgehalte mit ca. +/- 5% Genauigkeit (+/- 0.3 MJ NEL)
 
-|  Column 1 Title  |  Column 2 Title  |  Column 3 Title  |
+Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einschätzschlüsseln von AGFF / Agridea. 
 
+[columns count=3]
 [![productImage_1349](productImage_1349.jpg?resize=200) Schlüssel Dürrfutter [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1349_2_D.pdf)
 [![productImage_1348](productImage_1348.jpg?resize=200) Schlüssel Grassilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1348_2_D.pdf) 
 [![productImage_1347](productImage_1347.jpg?resize=200) Schlüssel Maissilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1347_2_D.pdf)
-
+[/columns]
 
 
 ## 3 Futterprobe erfassen
+Ziel: 
 Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.
 
 [qrcode]https://forms.office.com/e/Wway0C1DDk[/qrcode][Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)

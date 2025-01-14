@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "page_title": "Unterlagen Raufuttermeisterschaft"
     },
-    "updated": 1736888294,
+    "updated": 1736888356,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Unterlagen Raufuttermeisterschaft",
         "grav-page-route": "\/blog\/kurse-raufuttermeisterschaft",
         "grav-page-rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 21 Jan 2025 20:58:14 GMT",
+        "expires": "Tue, 21 Jan 2025 20:59:16 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 14 Jan 2025 20:58:14 GMT",
+        "date": "Tue, 14 Jan 2025 20:59:16 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1736888294.7201159000396728515625,
-        "total_time": 0.1273849999999999982325249447967507876455783843994140625,
-        "namelookup_time": 0.000540000000000000006904199434387692235759459435939788818359375,
-        "connect_time": 0.000608000000000000033473224192448469693772494792938232421875,
-        "pretransfer_time": 0.01208700000000000052136073236397351138293743133544921875,
-        "starttransfer_time": 0.1269270000000000120365939437760971486568450927734375,
+        "start_time": 1736888356.784184932708740234375,
+        "total_time": 0.1262820000000000053574922276311554014682769775390625,
+        "namelookup_time": 0.000560999999999999975248965444762916376930661499500274658203125,
+        "connect_time": 0.000638000000000000003740063814205996095552109181880950927734375,
+        "pretransfer_time": 0.0112230000000000003368416656712724943645298480987548828125,
+        "starttransfer_time": 0.12580299999999999815969431438134051859378814697265625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 596,
         "request_size": 142,
         "redirect_count": 0,
-        "size_download": 7982,
-        "speed_download": 62850,
+        "size_download": 8180,
+        "speed_download": 64920,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 32320
+        "content_size": 32947
     },
     "content": {
-        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            1 Futterprobe nehmen\n                    <\/li>\n                    <li>\n            2 Futterprobe erfassen\n                    <\/li>\n    \n        <\/ul>\n    \n\n<h2>1 Futterprobe nehmen<\/h2>\n<p>W&auml;hle m&ouml;glichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repr&auml;sentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der Kurzanleitung von Bastien Hayoz (2022) .<\/p>\n\nFutterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beif&uuml;gen.\n<p><\/p>\n                    \n            \n            Weitere Informationen\n            \nProbenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis. [1]\n [cite=\n\n        \n    \n\n<h2>2 Futterprobe erfassen<\/h2>\n<p>Erfasse die Futterprobe sp&auml;testens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.<\/p>\n<p>Raufutter-Meisterschaft 2025 Einschreiben (Microsoft Forms)<\/p>\n\n                    \n            \n            Schnellzugriff auf diese Seite\n            \n<p>Diese URL verwenden, um dauerhaft auf diesen Inhalt zu verweisen:\nhttps:\/\/graswachstum.ch\/raufuttermeisterschaft <\/p>\n\n\n        \n    \n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n        \n\n\n\n\n\n\n\n\n  \n          <h2>Quellen<\/h2>\n    \n    <ol>\n              \n        <li>Glauser, W.  , (2007), \"Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis.\",  ALP aktuell, 30, p1&ndash;4, [Link to article].\n            <\/li>          <\/ol>",
+        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            1 Futterprobe nehmen\n                    <\/li>\n                    <li>\n            2 Futterprobe erfassen\n                    <\/li>\n    \n        <\/ul>\n    \n\n<h2>1 Futterprobe nehmen<\/h2>\n<p>W&auml;hle m&ouml;glichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repr&auml;sentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der Kurzanleitung von Bastien Hayoz (2022) .<\/p>\n\nFutterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beif&uuml;gen.\n<p><\/p>\n                    \n            \n            Weitere Informationen\n            \nProbenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis. [1]\nLehrmittel Pflanzenbau, Auszug aus A6.6 Die Qualit&auml;t von konserviertem Raufutter bewerten [2]\n\n        \n    \n\n<h2>2 Futterprobe erfassen<\/h2>\n<p>Erfasse die Futterprobe sp&auml;testens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.<\/p>\n<p>Raufutter-Meisterschaft 2025 Einschreiben (Microsoft Forms)<\/p>\n\n                    \n            \n            Schnellzugriff auf diese Seite\n            \n<p>Diese URL verwenden, um dauerhaft auf diesen Inhalt zu verweisen:\nhttps:\/\/graswachstum.ch\/raufuttermeisterschaft <\/p>\n\n\n        \n    \n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n        \n\n\n\n\n\n\n\n\n  \n          <h2>Quellen<\/h2>\n    \n    <ol>\n              \n        <li>Glauser, W.  , (2007), \"Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis.\",  ALP aktuell, 30, p1&ndash;4, [Link to article].\n            <\/li>              \n        <li>(2019), \"1 Qualit&auml;t des Erntegutes und dessen Konservierung sicherstellen \", &laquo;Pflanzenbau&raquo;, Auflage 2, A6.6 | &copy; edition-lmz, p5&ndash;7, [Link to article].\n            <\/li>          <\/ol>",
         "headers": {
             "h1": [
                 "Unterlagen Raufuttermeisterschaft",
@@ -188,8 +188,15 @@
                 "count": 0,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
-                "text": "",
+                "text": "Lehrmittel Pflanzenbau, Auszug aus A6.6 Die Qualit\u00e4t von konserviertem Raufutter bewerten",
                 "external": true
+            },
+            "#cite-lmz_2019": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "[2]",
+                "external": false
             },
             "https:\/\/forms.office.com\/e\/Wway0C1DDk": {
                 "count": 0,
@@ -206,6 +213,13 @@
                 "external": true
             },
             "https:\/\/ira.agroscope.ch\/fr-CH\/Page\/Publikation?einzelpublikationId=17199": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Link to article",
+                "external": true
+            },
+            "https:\/\/www.eagff.ch\/raufutter-konservieren\/qualitaet-duerrfutter-silage\/bewertungs-methoden-1": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -346,14 +360,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] 2 Futterprobe erfassen Erfasse die Futte\u2026",
+            "description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] [cite= 2 Futterprobe erfassen Erfasse di\u2026",
             "title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
-            "keywords": "futterprobe,erfassen,betrieb,landwirtschaftlichen,futtermitteln,merkblatt,probenahme,erfasse,w\u00e4hle,sp\u00e4testens",
+            "keywords": "futterprobe,erfassen,landwirtschaftlichen,futtermitteln,betrieb,erfasse,merkblatt,probenahme,w\u00e4hle,bitte",
             "image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
             "og:site_name": "graswachstum.ch",
             "og:title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
-            "og:description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] 2 Futterprobe erfassen Erfasse die Futte\u2026",
+            "og:description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] [cite= 2 Futterprobe erfassen Erfasse di\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -361,7 +375,7 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
-            "twitter:description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] 2 Futterprobe erfassen Erfasse die Futte\u2026",
+            "twitter:description": "Weitere Informationen Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f\u00fcr die Praxis. [1] [cite= 2 Futterprobe erfassen Erfasse di\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "twitter:image:alt": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
             "twitter:label1": "Est. reading time",
@@ -536,5 +550,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55be2214d8c0)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Tue, 21 Jan 2025 20:58:14 GMT\r\n* Added cookie grav-site-23a95d8=\"8cbbcc476d8a7b6f598bf589380989c0\" for domain graswachstum.ch, path \/, expire 1736890094\n< set-cookie: grav-site-23a95d8=8cbbcc476d8a7b6f598bf589380989c0; expires=Tue, 14-Jan-2025 21:28:14 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 14 Jan 2025 20:58:14 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55be2214dd10)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Tue, 21 Jan 2025 20:59:16 GMT\r\n* Added cookie grav-site-23a95d8=\"d46c9b471cec4c79c88180497355c20f\" for domain graswachstum.ch, path \/, expire 1736890156\n< set-cookie: grav-site-23a95d8=d46c9b471cec4c79c88180497355c20f; expires=Tue, 14-Jan-2025 21:29:16 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 14 Jan 2025 20:59:16 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

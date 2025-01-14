@@ -78,7 +78,9 @@ Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einschätzschlüssel
 [columns count=3]
 
 Dürrfutter  [![productImage_1349](productImage_1349.jpg?resize=200) Schlüssel Dürrfutter [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1349_2_D.pdf)
+
 Grassilage [![productImage_1348](productImage_1348.jpg?resize=200) Schlüssel Grassilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1348_2_D.pdf) 
+
 Maissilage [![productImage_1347](productImage_1347.jpg?resize=200) Schlüssel Maissilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1347_2_D.pdf)
 [/columns]
 

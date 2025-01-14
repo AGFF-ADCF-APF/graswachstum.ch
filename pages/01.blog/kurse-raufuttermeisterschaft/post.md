@@ -26,6 +26,7 @@ shortcode-citation:
 routes:
     aliases:
         - /raufuttermeisterschaft
+media_order: Futterproben.jpg
 ---
 
 # Raufuttermeisterschaft
@@ -33,5 +34,7 @@ routes:
 Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **Raufuttermeisterschaft** (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.
 
 ===
+
+[TOC]
 
 

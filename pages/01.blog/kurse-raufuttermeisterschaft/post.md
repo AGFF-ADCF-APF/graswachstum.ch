@@ -40,7 +40,8 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Schnellzugriff auf diese Seite"]
-https://graswachstum.ch/raufuttermeisterschaft
+Diese URL verwenden, um dauerhaft auf diesen Inhalt zu verweisen:
+https://graswachstum.ch/raufuttermeisterschaft 
 [qrcode]https://graswachstum.ch/raufuttermeisterschaft[/qrcode]
 [/ui-accordion-item]
 [/ui-accordion]

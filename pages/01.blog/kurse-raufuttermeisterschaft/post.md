@@ -25,7 +25,7 @@ shortcode-citation:
     reorder_uncited: true
 routes:
     aliases:
-        - raufuttermeisterschaft
+        - /raufuttermeisterschaft
 ---
 
 # Raufuttermeisterschaft

@@ -1,0 +1,454 @@
+{
+    "grav": {
+        "page_route": "\/blog\/kurse-raufuttermeisterschaft",
+        "page_rawroute": "\/blog\/kurse-raufuttermeisterschaft",
+        "page_title": "Unterlagen Raufuttermeisterschaft"
+    },
+    "updated": 1736885500,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Unterlagen Raufuttermeisterschaft",
+        "grav-page-route": "\/blog\/kurse-raufuttermeisterschaft",
+        "grav-page-rawroute": "\/blog\/kurse-raufuttermeisterschaft",
+        "cache-control": "max-age=604800",
+        "expires": "Tue, 21 Jan 2025 20:11:40 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html;charset=UTF-8",
+        "date": "Tue, 14 Jan 2025 20:11:40 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1736885500.874494075775146484375,
+        "total_time": 0.1073159999999999947295492574994568713009357452392578125,
+        "namelookup_time": 0.000607000000000000009166278847061448686872608959674835205078125,
+        "connect_time": 0.000679000000000000024542867738119866771739907562732696533203125,
+        "pretransfer_time": 0.01021900000000000065247807157220449880696833133697509765625,
+        "starttransfer_time": 0.10683299999999999740918354973473469726741313934326171875,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+        "content_type": "text\/html;charset=UTF-8",
+        "header_size": 596,
+        "request_size": 142,
+        "redirect_count": 0,
+        "size_download": 5898,
+        "speed_download": 55121,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 27188
+    },
+    "content": {
+        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>",
+        "headers": {
+            "h1": [
+                "Unterlagen Raufuttermeisterschaft",
+                "Raufuttermeisterschaft"
+            ],
+            "h2": [],
+            "h3": [],
+            "h4": [
+                "Zuf\u00e4lliger Artikel",
+                "H\u00e4ufigste Tags",
+                "Archiv"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 1,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/tag:kurse#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false
+            },
+            "\/tag:konservierung#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false
+            },
+            "\/blog\/2024-kw45": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Vorheriger Beitrag",
+                "external": false
+            },
+            "\/blog\/2024-12-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "N\u00e4chster Beitrag",
+                "external": false
+            },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false
+            },
+            "\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:gallerie": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false
+            },
+            "\/tag:kurse": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false
+            },
+            "\/tag:konservierung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false
+            },
+            "\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 December 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2 November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 August 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2 May 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1 December 2021",
+                "external": true
+            },
+            "\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "M. Zbinden",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "AGFF-Grasmessnetzwerk",
+            "title": "Unterlagen Raufuttermeisterschaft",
+            "image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Unterlagen Raufuttermeisterschaft",
+            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Unterlagen Raufuttermeisterschaft",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "twitter:image:alt": "Unterlagen Raufuttermeisterschaft",
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten",
+            "keywords": ""
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+        "links": {
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-citation\/css\/citations.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55be2210a260)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Tue, 21 Jan 2025 20:11:40 GMT\r\n* Added cookie grav-site-23a95d8=\"93c2fe9b8013ca00549c6bb8d6af703f\" for domain graswachstum.ch, path \/, expire 1736887300\n< set-cookie: grav-site-23a95d8=93c2fe9b8013ca00549c6bb8d6af703f; expires=Tue, 14-Jan-2025 20:41:40 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 14 Jan 2025 20:11:40 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

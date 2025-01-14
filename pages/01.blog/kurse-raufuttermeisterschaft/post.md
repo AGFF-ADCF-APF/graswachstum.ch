@@ -59,6 +59,8 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 [TOC]
 
 ## 1 Futterprobe nehmen
+**Lernziel:** Wissen, wie eine repräsentative Futterprobe genommen wird.
+
 Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) .
 
 [columns count=2]
@@ -79,7 +81,7 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 
 
 ## 2 Eigene Futterprobe beurteilen
-**Ziel:** Schätzung der Nährstoffgehalte mit ca. +/- 5% Genauigkeit (+/- 0.3 MJ NEL)
+**Lernziel:** Schätzung der Nährstoffgehalte mit ca. +/- 5% Genauigkeit (+/- 0.3 MJ NEL)
 
 Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einschätzschlüsseln von AGFF / Agridea. 
 
@@ -96,7 +98,8 @@ Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einschätzschlüssel
 
 
 ## 3 Futterprobe erfassen
-Ziel: 
+**Lernziel:** Repetition der Fachbegriffe rund um die Beschreibung von Wiesenbeständen und Futtermitteln.
+
 Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.
 
 [qrcode]https://forms.office.com/e/Wway0C1DDk[/qrcode][Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
@@ -107,16 +110,21 @@ Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele 
 
 
 
-## 4 Futterproben gegenseitig bewerten
+## 4 Futterproben gegenseitig benoten
+**Lernziel:** Futtermittel nach Wertigkeit einstufen und auch weniger offensichtliche Mängel entdecken
+
+Bilde dir zu jeder angeschauten Probe innert weniger Minuten ein abschliessendes Urteil.  Die Benotung folgt einem stark vereinfachten Schema gemäss nachstehendem Formular.
 
 [qrcode]https://forms.office.com/e/wJVP7NUF3q[/qrcode][Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button) Link zu Formular für Kurs Zollikofen
+**Wichtig: für jede angeschaute Probe Formular erneut ausfüllen und absenden. **
 
 [Vorlage für Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)](https://forms.office.com/Pages/ShareFormPage.aspx?id=Y4MGSWGDB0aVSWK2tVeUqgjLZKG4mxRJiMSMkJHpahZUNEJHSlNMR1FSME1GWUhJNTI1NlFVMVZFWC4u&sharetoken=0zeq0tZzsvzAIuXv4Dp1)
 
 
-##
+## 5 Auswertung der gesammelten Benotungen
 
-##
+Anleitung zur Auswertung mir RStudio folgt.
+
 
 
 # Über die Heumeisterschaft  / championnat des foins

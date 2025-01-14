@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "page_title": "Unterlagen Raufuttermeisterschaft"
     },
-    "updated": 1736885622,
+    "updated": 1736885905,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Unterlagen Raufuttermeisterschaft",
         "grav-page-route": "\/blog\/kurse-raufuttermeisterschaft",
         "grav-page-rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 21 Jan 2025 20:13:42 GMT",
+        "expires": "Tue, 21 Jan 2025 20:18:25 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 14 Jan 2025 20:13:42 GMT",
+        "date": "Tue, 14 Jan 2025 20:18:25 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1736885622.74796295166015625,
-        "total_time": 0.11869100000000000483257878158838138915598392486572265625,
-        "namelookup_time": 0.0005850000000000000165145674912992035388015210628509521484375,
-        "connect_time": 0.00065499999999999998327726569158357960986904799938201904296875,
-        "pretransfer_time": 0.011738999999999999435118525070720352232456207275390625,
-        "starttransfer_time": 0.11821199999999999763478086833856650628149509429931640625,
+        "start_time": 1736885905.051415920257568359375,
+        "total_time": 0.12315399999999999958166796432124101556837558746337890625,
+        "namelookup_time": 0.00064499999999999995704824673481425634236074984073638916015625,
+        "connect_time": 0.00072699999999999999865385458264199769473634660243988037109375,
+        "pretransfer_time": 0.01150299999999999933653072048400645144283771514892578125,
+        "starttransfer_time": 0.1214449999999999973976372302786330692470073699951171875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 596,
         "request_size": 142,
         "redirect_count": 0,
-        "size_download": 5958,
-        "speed_download": 50491,
+        "size_download": 5970,
+        "speed_download": 48536,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 27857
+        "content_size": 27905
     },
     "content": {
-        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>",
+        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n<p>\n\n<\/p>",
         "headers": {
             "h1": [
                 "Unterlagen Raufuttermeisterschaft",
@@ -450,5 +450,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55be2214bff0)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Tue, 21 Jan 2025 20:13:42 GMT\r\n* Added cookie grav-site-23a95d8=\"dbc096759e3499d0f165626c20990c2b\" for domain graswachstum.ch, path \/, expire 1736887422\n< set-cookie: grav-site-23a95d8=dbc096759e3499d0f165626c20990c2b; expires=Tue, 14-Jan-2025 20:43:42 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 14 Jan 2025 20:13:42 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55be22196410)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Tue, 21 Jan 2025 20:18:25 GMT\r\n* Added cookie grav-site-23a95d8=\"bae9f9b855b5752af22cd0a3bb572693\" for domain graswachstum.ch, path \/, expire 1736887705\n< set-cookie: grav-site-23a95d8=bae9f9b855b5752af22cd0a3bb572693; expires=Tue, 14-Jan-2025 20:48:25 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 14 Jan 2025 20:18:25 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

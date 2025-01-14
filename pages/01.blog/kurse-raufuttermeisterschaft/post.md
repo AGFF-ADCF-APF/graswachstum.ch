@@ -59,7 +59,7 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 [TOC]
 
 ## 1 Futterprobe nehmen
-Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2022) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) .
+Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) .
 
 Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beifügen.
 
@@ -73,8 +73,20 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 ## 2 Futterprobe erfassen
 Erfasse die Futterprobe spätestens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.
 
-[Raufutter-Meisterschaft 2025 Einschreiben (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
+[Raufutter-Meisterschaft 2025 **Einschreiben** (Microsoft Forms)](https://forms.office.com/e/Wway0C1DDk?class=button)
 
+
+
+
+## 3 Futterproben gegenseitig bewerten
+
+[Raufutter-Meisterschaft 2025 **Benotung** (Microsoft Forms)](https://forms.office.com/e/wJVP7NUF3q?class=button)
+
+##
+
+
+# Über die Heumeisterschaft  / championnat des foins
+Inspiriert durch den jährlich in Grangeneuve durchgeführten **Wettbewerb schönstes Heu** (fr. _championnat des foins_).
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="Schnellzugriff auf diese Seite"]

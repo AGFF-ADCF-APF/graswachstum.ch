@@ -38,3 +38,6 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 [TOC]
 
 
+!!!! Schnellzugriff auf diese Seite: https://graswachstum.ch/raufuttermeisterschaft
+[qrcode]https://graswachstum.ch/raufuttermeisterschaft[/qrcode]
+

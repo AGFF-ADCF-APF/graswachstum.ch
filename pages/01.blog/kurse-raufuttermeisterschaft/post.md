@@ -70,7 +70,8 @@ Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine r
 
 
 
-[[qrcode size=100]https://graswachstum.ch/blog/kurse-raufuttermeisterschaft/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf[/qrcode] Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf)
+[Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) 
+[ui-accordion independent=true open=none][ui-accordion-item title="QR-Code"][qrcode size=100]https://graswachstum.ch/blog/kurse-raufuttermeisterschaft/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf[/qrcode][/ui-accordion-item][/ui-accordion]
 
 Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beifügen.
 

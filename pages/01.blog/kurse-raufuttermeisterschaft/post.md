@@ -49,7 +49,7 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 [TOC]
 
 ## 1 Futterprobe nehmen
-Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2022)](Agroscope_Probenahme von Raufutter_Hayoz_2024.pdf)
+Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2022)](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) .
 
 :[ui-accordion independent=true open=none][ui-accordion-item title="Weitere Informationen"]
 [Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt für die Praxis.](12665-17199-de-pub.pdf) [cite=agroscope_2007 /]

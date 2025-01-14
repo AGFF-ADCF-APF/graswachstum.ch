@@ -38,6 +38,16 @@ references:
         journal: ' ALP aktuell'
         volume: '30'
         pages: 1-4
+    -
+        id: lmz_200
+        type: journal
+        title: '1 Qualität des Erntegutes und dessen Konservierung sicherstellen '
+        author: null
+        year: '2019'
+        url: 'https://www.eagff.ch/raufutter-konservieren/qualitaet-duerrfutter-silage/bewertungs-methoden-1'
+        journal: '«Pflanzenbau», Auflage 2, A6.6 | © edition-lmz'
+        volume: null
+        pages: 5-7
 ---
 
 # Raufuttermeisterschaft
@@ -56,6 +66,7 @@ Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel
 
 :[ui-accordion independent=true open=none][ui-accordion-item title="Weitere Informationen"]
 [Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt für die Praxis.](12665-17199-de-pub.pdf) [cite=agroscope_2007 /]
+[](https://www.eagff.ch/files/images/bilder/Raufutter_konservieren/Kap_G5/G5_Seiten_5-7_aus_L2_III_A6.6_d_190508_Konservierung.pdf) [cite=
 [/ui-accordion-item][/ui-accordion]
 
 

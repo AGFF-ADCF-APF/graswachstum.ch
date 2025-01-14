@@ -62,7 +62,7 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) .
 
 [columns count=2]
-[![Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1.webp?lightbox=200 "Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1")]([Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf))
+[![Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1.webp?lightbox&resize=200 "Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_1")]([Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf))
 [![Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2](Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2.webp "Agroscope_ProbenahmeRaufutter_Hayoz_2024_Seite_2")]([Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf))
 [/columns]
 

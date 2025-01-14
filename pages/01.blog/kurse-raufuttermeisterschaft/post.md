@@ -71,12 +71,12 @@ Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine r
 
 
 [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) 
-[qrcode size=100 label="[Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) "]https://graswachstum.ch/blog/kurse-raufuttermeisterschaft/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf[/qrcode]
 
 Futterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beifügen.
 
 
 :[ui-accordion independent=true open=none][ui-accordion-item title="Weitere Informationen"]
+* [qrcode size=100]https://graswachstum.ch/blog/kurse-raufuttermeisterschaft/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf[/qrcode] [Kurzanleitung von Bastien Hayoz (2024) [svg-icon="file-type-pdf" /]](Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf) 
 * [Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt für die Praxis.](12665-17199-de-pub.pdf) [cite=agroscope_2007 /]
 * [Lehrmittel Pflanzenbau, Auszug aus A6.6 Die Qualität von konserviertem Raufutter bewerten](https://www.eagff.ch/files/images/bilder/Raufutter_konservieren/Kap_G5/G5_Seiten_5-7_aus_L2_III_A6.6_d_190508_Konservierung.pdf) [cite=lmz_2019 /]
 [/ui-accordion-item][/ui-accordion]

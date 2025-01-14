@@ -127,7 +127,7 @@ Anleitung zur Auswertung mir RStudio folgt.
 
 
 
-# Über die Heumeisterschaft  / championnat des foins
+## Über die Heumeisterschaft  / championnat des foins
 Inspiriert durch den jährlich in Grangeneuve durchgeführten **Wettbewerb schönstes Heu** (fr. _championnat des foins_).
 
 [ui-accordion independent=true open=none]

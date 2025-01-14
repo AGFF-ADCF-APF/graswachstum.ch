@@ -26,7 +26,18 @@ shortcode-citation:
 routes:
     aliases:
         - /raufuttermeisterschaft
-media_order: Futterproben.jpg
+media_order: 'Futterproben.jpg,Agroscope_Probenahme von Raufutter_Hayoz_2024.pdf,12665-17179-fr-pub.pdf,12665-17199-de-pub.pdf'
+references:
+    -
+        id: agroscope_2007
+        type: journal
+        title: 'Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt für die Praxis.'
+        author: 'Glauser, W.  '
+        year: '2007'
+        url: 'https://ira.agroscope.ch/fr-CH/Page/Publikation?einzelpublikationId=17199'
+        journal: ' ALP aktuell'
+        volume: '30'
+        pages: 1-4
 ---
 
 # Raufuttermeisterschaft
@@ -36,6 +47,19 @@ Diese Seite bietet Informationen und Unterlagen für die Durchführung einer **R
 ===
 
 [TOC]
+
+## 1 Futterprobe nehmen
+Wähle möglichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repräsentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der [Kurzanleitung von Bastien Hayoz (2022)](Agroscope_Probenahme von Raufutter_Hayoz_2024.pdf)
+
+:[ui-accordion independent=true open=none][ui-accordion-item title="Weitere Informationen"]
+[Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt für die Praxis.](12665-17199-de-pub.pdf) [cite=agroscope_2007 /]
+[/ui-accordion-item][/ui-accordion]
+
+
+## Probe erfassen
+
+https://forms.office.com/e/Wway0C1DDk
+
 
 
 [ui-accordion independent=true open=none]

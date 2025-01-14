@@ -78,7 +78,7 @@ Beurteilen Sie die eigene Futterprobe mit den geeigneten Hilfsmitteln.
 
 Grassilage
 
-[![productImage_1347](productImage_1347.jpg) Schlüssel Maissilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1347_2_D.pdf?resize=200)
+[![productImage_1347](productImage_1347.jpg) Schlüssel Maissilage [svg-icon="file-type-pdf" /]](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1347_2_D.pdf?cropResize=200)
 
 
 Kostenloser Download PDF

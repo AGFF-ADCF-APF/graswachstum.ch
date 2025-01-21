@@ -74,7 +74,7 @@ footer:
     -
       network: custom
       custom:
-        network: X
+        network: AGFF
         icon: tabler/brand-x.svg
         colors: 'bg-black text-gray-100'
       link: 'https://x.com/getgrav'
@@ -87,7 +87,7 @@ footer:
         colors: 'bg-[#6e5494] text-gray-100'
       link: 'https://github.com/getgrav'
       newtab: true
-  copyright: "[graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
+  copyright: "![](/images/AGFF_f.svg) [graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
 notices:
   -
     content: 'An example **critical** message that should show up on homepage only'

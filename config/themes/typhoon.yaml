@@ -69,15 +69,15 @@ footer:
       label: 'Datenschutz und Rechtsausschluss'
       link: /legal
       newtab: false
-  social_enabled: false
+  social_enabled: true
   social:
     -
       network: custom
       custom:
         network: AGFF
-        icon: tabler/brand-x.svg
+        icon: images/AGFF_f.svg
         colors: 'bg-black text-gray-100'
-      link: 'https://x.com/getgrav'
+      link: 'https://www.agff.ch/'
       newtab: true
     -
       network: custom
@@ -85,9 +85,9 @@ footer:
         network: Github
         icon: tabler/brand-github.svg
         colors: 'bg-[#6e5494] text-gray-100'
-      link: 'https://github.com/getgrav'
+      link: 'https://github.com/AGFF-ADCF-APF'
       newtab: true
-  copyright: "![Logo AGFF](/images/AGFF_f.svg?resize=80){.center}\n\n[graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
+  copyright: "![Logo AGFF](/images/AGFF_f.svg?resize=80)\n\n[graswachstum.ch](https://getgrav.org?classes=hover:text-primary,font-bold) was [svg-icon icon=\"code\" class=\"text-gray-700 dark:text-gray-400 w-4 h-4\"] with [svg-icon icon=\"heart\" class=\"text-red-700 w-4 h-4 animate-pulse\"] by [M. Zbinden](https://graswachstum.ch?classes=hover:text-primary,font-bold)\n"
 notices:
   -
     content: 'An example **critical** message that should show up on homepage only'

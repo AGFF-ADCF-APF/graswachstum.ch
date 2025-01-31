@@ -65,7 +65,7 @@ Fragen, Vorschläge, Bedenken?
  
  
 
-## Partner
+### Partner
 [Bauernzeitung](https://www.bauernzeitung.ch/graswachstum-serie) 
 [AGFF](https://www.agff.ch) 
 [IG Weidemilch](https://www.weidemilch.ch) 

@@ -35,7 +35,10 @@
         {% include 'partials/author-bio.html.twig' ignore missing %}
     
 		{{ page.header.authorString|raw }}
+        
       </article>
+    {{ likes_ratings() }}
+
         
 
       <div class="flex-none flex-centered w-full p-6 mx-auto">

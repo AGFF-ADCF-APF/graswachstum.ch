@@ -57,4 +57,17 @@ sitemap:
     lastmod: '17-12-2024 20:11'
 ---
 
-Kontaktformular
+Fragen, Vorschläge, Bedenken?  
+[Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
+
+### Whatsapp-Gruppe "Graswachstumsberichte" 
+[[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
+ 
+ 
+
+## Partner
+[Bauernzeitung](https://www.bauernzeitung.ch/graswachstum-serie) 
+[AGFF](https://www.agff.ch) 
+[IG Weidemilch](https://www.weidemilch.ch) 
+[Betriebe und Organisationen](/about)
+

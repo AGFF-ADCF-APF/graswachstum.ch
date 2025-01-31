@@ -63,6 +63,7 @@ hero:
         -
             text: '[[fa=whatsapp /]]'
             link: 'https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr'
+            classes: 'bg-primary text-white'
 feed:
     limit: 10
 shortcode-citation:

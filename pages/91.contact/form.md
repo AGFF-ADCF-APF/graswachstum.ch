@@ -64,6 +64,11 @@ hero:
             text: Whatsapp
             link: 'https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr'
             classes: 'bg-primary text-white'
+        -
+            text: null
+            link: null
+            classes: 'bg-primary text-white'
+    height: 20px
 feed:
     limit: 10
 shortcode-citation:

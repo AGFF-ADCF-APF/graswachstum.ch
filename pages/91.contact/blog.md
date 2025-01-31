@@ -55,6 +55,14 @@ content:
 published: true
 sitemap:
     lastmod: '17-12-2024 20:11'
+hero:
+    display: true
+    image: IMG_20170925_123125_HDR.jpg
+feed:
+    limit: 10
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
 ---
 
 Fragen, Vorschläge, Bedenken?  

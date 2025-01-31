@@ -58,6 +58,11 @@ sitemap:
 hero:
     display: true
     image: IMG_20170925_123125_HDR.jpg
+    content: 'Kontaktiere uns auf verschiedenen Kanälen.'
+    buttons:
+        -
+            text: '[[fa=whatsapp /]]'
+            link: 'https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr'
 feed:
     limit: 10
 shortcode-citation:

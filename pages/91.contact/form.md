@@ -61,7 +61,7 @@ hero:
     content: 'Kontaktiere uns auf verschiedenen Kanälen.'
     buttons:
         -
-            text: '[[fa=whatsapp /]]'
+            text: Whatsapp
             link: 'https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr'
             classes: 'bg-primary text-white'
 feed:

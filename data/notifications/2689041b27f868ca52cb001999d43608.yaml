@@ -1,6 +1,14 @@
-last_checked: 1738319391
+last_checked: 1738698209
 data:
   feed:
+    -
+      id: 324
+      date: '2025-02-03 11:40'
+      message: '🗳️ Nominations Successful! Now please <b>VOTE</b> for "Grav" in the 2024 CMS Critic Awards!'
+      link: 'https://cmscritic.com/vote'
+      type: note
+      location:
+        - feed
     -
       id: 32
       date: '2025-01-18 11:40'

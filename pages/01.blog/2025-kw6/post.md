@@ -45,3 +45,6 @@ Der Kanton SG stellt für sein Gebiet [tagesaktuelle Messwerte](https://www.sg.c
 [Aktuelle Messwerte (ausgewählte Stationen)](https://www.agrometeo.ch/de/meteorologie?stations=223,216,194,55,185,212,128,149&sensors=1%3Aavg,1%3Amin,2%3Amin,2%3Aavg,6%3Asum,6%3Acumsum%3A0,3%3Aavg&from=2025-01-23&to=2025-12-31&scale=day&groupBy=sensor&measured=1&class=button)
 
 [Karte mit weiteren Agrometeo-Stationen](https://www.agrometeo.ch/de?class=button)
+
+Jetzt aktuell: Wiesen kontrollieren und Massnahmen ergreifen
+[AGFF Merkblatt 5](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf?class=button)

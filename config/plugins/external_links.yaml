@@ -4,8 +4,10 @@ weight: 0
 exclude:
   classes:
     - exclude
+  domains: null
 links:
-  www: false
+  www: true
+  redirects: true
   schemes:
     - http
     - https

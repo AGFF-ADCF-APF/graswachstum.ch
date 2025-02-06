@@ -42,7 +42,8 @@ Im Artikel spricht Nicolas Marti unter anderem die Hofdüngerausbringung an. Gru
 
 Der Kanton SG stellt für sein Gebiet [tagesaktuelle Messwerte](https://www.sg.ch/content/dam/sgch/umwelt-natur/umwelt/dokumente/landwirtschaft/Ergebnisse%20Vegetationsstand%20f%C3%BCr%20Webseite.pdf) zur Verfügung. Für die Bestimmung der Tagesmitteltemperaturen kann www.agrometeo.ch herangezogen werden, sofern Messstationen in der Nähe vorhanden sind. Wenn die Abfrage für einen Ort einmal konfiguriert ist, kann die URL als Favorit abgespeichert werden. Dieser Link führt zu einer vorbereiteten Abfrage der wichtigsten Temperaturwerte.
 
-[Aktuelle Temperaturen auf agrometeo.ch (ausgewählte Stationen)](https://www.agrometeo.ch/de/meteorologie?stations=223,216,194,55,185,212,128,149&sensors=1%3Aavg,1%3Amin,2%3Amin,2%3Aavg,6%3Asum,6%3Acumsum%3A0,3%3Aavg&from=2025-01-23&to=2025-12-31&scale=day&groupBy=sensor&measured=1&class=button)
+[Aktuelle Temperaturen auf agrometeo.ch (ausgewählte Stationen)](https://www.agrometeo.ch/de/meteorologie?stations=223,216,194,55,185,212,128,149&sensors=1%3Aavg,1%3Amin,2%3Amin,2%3Aavg,6%3Asum,6%3Acumsum%3A0,3%3Aavg&from=2025-01-23&to=2025-12-31&scale=day&groupBy=sensor&measured=1&class=button) 
+(auf Knopf "Diagramm erstellen" drücken, etwas warten...)
 
 [Weitere verfügbare Agrometeo-Stationen](https://www.agrometeo.ch/de?class=button)
 

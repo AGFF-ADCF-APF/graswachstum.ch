@@ -40,7 +40,7 @@ media_order: 'Temperatur Durchschnitt +2 m (°C) (1).png'
 **Grünlandpflege / Bald schon geht es ans Austreiben der Kühe auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbestände noch zu kontrollieren und allenfalls zu pflegen.
 ** 
 
-[Zum Artikel](https://www.bauernzeitung.ch/dossier/pflanzen/den-beginn-der-weidesaison-jetzt-planen-548723?class=button) [AGFF Merkblatt 5](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf?class=button)
+[Artikel Bauern Zeitung](https://www.bauernzeitung.ch/dossier/pflanzen/den-beginn-der-weidesaison-jetzt-planen-548723?class=button) [AGFF Merkblatt 5](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf?class=button)
 
 Hier gibts etwas Zusatzmaterial zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch).
 

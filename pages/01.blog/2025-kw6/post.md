@@ -7,6 +7,15 @@ header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: 'Temperatur Durchschnitt +2 m (°C) (1).png'
     image_alignment: object-center
+    buttons:
+        -
+            text: 'Artikel Bauern Zeitung'
+            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/den-beginn-der-weidesaison-jetzt-planen-548723'
+            classes: 'bg-primary text-white'
+        -
+            text: 'AGFF Merkblatt 5'
+            link: 'https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf'
+            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

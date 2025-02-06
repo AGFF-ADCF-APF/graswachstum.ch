@@ -1,0 +1,569 @@
+{
+    "grav": {
+        "page_route": "\/blog\/2025-kw6",
+        "page_rawroute": "\/blog\/2025-kw6",
+        "page_title": "Woche 6 (03.02.-10.02.2025)"
+    },
+    "updated": 1738872570,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Woche 6 (03.02.-10.02.2025)",
+        "grav-page-route": "\/blog\/2025-kw6",
+        "grav-page-rawroute": "\/blog\/2025-kw6",
+        "cache-control": "max-age=604800",
+        "expires": "Thu, 13 Feb 2025 20:09:30 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:09:30 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1738872570.6725780963897705078125,
+        "total_time": 0.1361420000000000130047084212492336519062519073486328125,
+        "namelookup_time": 0.000411000000000000015494550087424840967287309467792510986328125,
+        "connect_time": 0.00045600000000000002510491814433635227032937109470367431640625,
+        "pretransfer_time": 0.007559999999999999879818357584326804499141871929168701171875,
+        "starttransfer_time": 0.134415000000000006696865284538944251835346221923828125,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/blog\/2025-kw6",
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 551,
+        "request_size": 122,
+        "redirect_count": 0,
+        "size_download": 8018,
+        "speed_download": 58955,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 35035
+    },
+    "content": {
+        "body": "<h1>Den Beginn der Weidesaison jetzt planen<\/h1>\n<p>Gr&uuml;nlandpflege \/ Bald schon geht es ans Austreiben der K&uuml;he auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbest&auml;nde noch zu kontrollieren und allenfalls zu pflegen.<\/p>\n<p>Zum Artikel <\/p>\n<p>Hier gibts etwas Zusatzmaterial: Link zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch)<\/p>\n\n<p>Aktuelle Messwerte (ausgew&auml;hlte Stationen)<\/p>\n<p>Karte mit weiteren Agrometeo-Stationen<\/p>\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere Kuhe = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Anbei ein Sammlung spannender Ans&auml;tze von zahlreichen Betrieben in der ganzen Schweiz.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden",
+        "headers": {
+            "h1": [
+                "Woche 6 (03.02.-10.02.2025)",
+                "Den Beginn der Weidesaison jetzt planen",
+                "Saubere K\u00fche = sauberes Gras",
+                "Saubere Kuhe = sauberes Gras"
+            ],
+            "h2": [],
+            "h3": [
+                "Weideeing\u00e4nge und Zugangswege",
+                "Weideeing\u00e4nge"
+            ],
+            "h4": [
+                "Other Related Posts:",
+                "Zuf\u00e4lliger Artikel",
+                "H\u00e4ufigste Tags",
+                "Archiv",
+                "Abonnements"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw6\/Temperatur Durchschnitt +2 m (\u00b0C) (1).png?g-3b01abb6",
+                "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-12-weideeingaenge\/Nasse_Weide_PXL_20240601_155722580.jpg?g-3b01abb6",
+                "alt": "Weideeing\u00e4nge und Zugangswege",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg?g-3b01abb6",
+                "alt": "Weideeing\u00e4nge",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-3b01abb6",
+                "alt": "Logo AGFF",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 3,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "\/growth": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kurven",
+                "external": false
+            },
+            "\/resources": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false
+            },
+            "\/about": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false
+            },
+            "\/contact": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/tag:weide#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "https:\/\/www.bauernzeitung.ch\/dossier\/pflanzen\/den-beginn-der-weidesaison-jetzt-planen-548723": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Zum Artikel",
+                "external": true
+            },
+            "https:\/\/www.agrometeo.ch\/de\/meteorologie?stations=223%2C216%2C194%2C55%2C185%2C212%2C128%2C149&sensors=1%3Aavg%2C1%3Amin%2C2%3Amin%2C2%3Aavg%2C6%3Asum%2C6%3Acumsum%3A0%2C3%3Aavg&from=2025-01-23&to=2025-12-31&scale=day&groupBy=sensor&measured=1": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Aktuelle Messwerte (ausgew\u00e4hlte Stationen)",
+                "external": true
+            },
+            "https:\/\/www.agrometeo.ch\/de": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Karte mit weiteren Agrometeo-Stationen",
+                "external": true
+            },
+            "\/blog\/2024-12-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge und Zugangswege",
+                "external": false
+            },
+            "\/tag:infrastruktur#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:gallerie#blog_list": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false
+            },
+            "\/blog\/2024-weideeingaenge": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge",
+                "external": false
+            },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false
+            },
+            "\/tag:weide": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false
+            },
+            "\/tag:wachstumsbericht": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false
+            },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:gallerie": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false
+            },
+            "\/tag:kurse": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false
+            },
+            "\/tag:konservierung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false
+            },
+            "\/tag:betriebsportrait": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:feb_2025": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1\n                February 2025",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1\n                December 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2\n                November 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1\n                August 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "2\n                May 2024",
+                "external": true
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "1\n                December 2021",
+                "external": true
+            },
+            "\/blog.atom": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Atom",
+                "external": false
+            },
+            "\/blog.rss": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "RSS",
+                "external": false
+            },
+            "\/legal": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false
+            },
+            "https:\/\/getgrav.org": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true
+            },
+            "https:\/\/agff.ch": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "AGFF",
+                "external": true
+            }
+        }
+    },
+    "head": {
+        "title": "Woche 6 (03.02.-10.02.2025) | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "AGFF-Grasmessnetzwerk",
+            "title": "Woche 6 (03.02.-10.02.2025)",
+            "image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/blog\/2025-kw6",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Woche 6 (03.02.-10.02.2025)",
+            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Woche 6 (03.02.-10.02.2025)",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
+            "twitter:image:alt": "Woche 6 (03.02.-10.02.2025)",
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten",
+            "keywords": ""
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/blog\/2025-kw6",
+        "links": {
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-citation\/css\/citations.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-ui\/css\/ui-cslider.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-ui\/css\/ui-accordion.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/shortcode-ui\/js\/ui-cslider.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x5583132faad0)\n> GET \/blog\/2025-kw6 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 6 (03.02.-10.02.2025)\r\n< grav-page-route: \/blog\/2025-kw6\r\n< grav-page-rawroute: \/blog\/2025-kw6\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:09:30 GMT\r\n* Added cookie grav-site-23a95d8=\"148af3817bc0cabd5d88e49a99abe938\" for domain graswachstum.ch, path \/, expire 1738874370\n< set-cookie: grav-site-23a95d8=148af3817bc0cabd5d88e49a99abe938; expires=Thu, 06-Feb-2025 20:39:30 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:09:30 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+}

@@ -20,6 +20,10 @@ taxonomy:
 author: 'Nicolas Marti, Martin Zbinden'
 sitemap:
     lastmod: '19-12-2024 07:07'
+published: false
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
 ---
 
 # Weideende heisst nicht Grasende

@@ -4,36 +4,36 @@
         "page_rawroute": "\/about",
         "page_title": "\u00dcber uns"
     },
-    "updated": 1734461938,
+    "updated": 1738874254,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "\u00dcber uns",
         "grav-page-route": "\/about",
         "grav-page-rawroute": "\/about",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:34 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:34 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461937.96893596649169921875,
-        "total_time": 0.11175000000000000210942374678779742680490016937255859375,
-        "namelookup_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
-        "connect_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
-        "pretransfer_time": 0.000103999999999999993599737735383570225167204625904560089111328125,
-        "starttransfer_time": 0.11166500000000000036859404417555197142064571380615234375,
+        "start_time": 1738874254.33586597442626953125,
+        "total_time": 0.12029499999999999915178960918638040311634540557861328125,
+        "namelookup_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "connect_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
+        "pretransfer_time": 6.00000000000000015200514458246772164784488268196582794189453125e-5,
+        "starttransfer_time": 0.120194999999999996287414205653476528823375701904296875,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/fr\/about",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 516,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 517,
         "request_size": 117,
         "redirect_count": 0,
-        "size_download": 5477,
-        "speed_download": 49342,
+        "size_download": 5642,
+        "speed_download": 47016,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 22021
+        "content_size": 23165
     },
     "content": {
-        "body": "<h2>&Uuml;ber die Messtandorte<\/h2>\n<h3>Standorte Posieux und Sorens<\/h3>\n<p>Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb &laquo;Schulbauernhof Sorens&raquo; und stellt die aktuellen Wachstumszahlen als Referenzwerte f&uuml;r interessierte Kreise ins Netz.\nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n<p><\/p>\n<h3>Beschreibungen weiterer Standorte<\/h3>\n<p><em>folgen bald<\/em><\/p>\n<h2>Datensammlung und Aufbereitung<\/h2>\n<ol>\n<li>Die beteiligten Stellen und Betriebe melden selbst&auml;ndig das Graswachstum mit einem vorbereiteten Google Formular. <\/li>\n<li>Die gesammelten Daten werden als Google Sheet im Internet publiziert.<\/li>\n<li>Ein R-Skript  ruft die Daten ab und erstellt die Grafiken. <\/li>\n<li>R l&auml;dt die Ergebnisse per FTP automatisch auf diese Internetseite hoch.<\/li>\n<\/ol>\n<p>Interesse an einer Zusammenarbeit? Schreib uns!<\/p>\n<h2>Medienpartner<\/h2>\n<p>Bauernzeitung &ndash; Serie Graswachstum\n<\/p>",
+        "body": "<h2>&Uuml;ber die Messtandorte<\/h2>\n<h3>Standorte Posieux und Sorens<\/h3>\n<p>Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb &laquo;Schulbauernhof Sorens&raquo; und stellt die aktuellen Wachstumszahlen als Referenzwerte f&uuml;r interessierte Kreise ins Netz.\nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\nAgroscope_hoch.svg\n<h3>Beschreibungen weiterer Standorte<\/h3>\n<p><em>folgen bald<\/em><\/p>\n<h2>Datensammlung und Aufbereitung<\/h2>\n<ol>\n<li>Die beteiligten Stellen und Betriebe melden selbst&auml;ndig das Graswachstum mit einem vorbereiteten Google Formular. <\/li>\n<li>Die gesammelten Daten werden als Google Sheet im Internet publiziert.<\/li>\n<li>Ein R-Skript  ruft die Daten ab und erstellt die Grafiken. <\/li>\n<li>R l&auml;dt die Ergebnisse per FTP automatisch auf diese Internetseite hoch.<\/li>\n<\/ol>\n<p>Interesse an einer Zusammenarbeit? Schreib uns!<\/p>\n<h2>Medienpartner<\/h2>\nBauernzeitung &ndash; Serie GraswachstumLogo-Graswachstum-neu-2024-web",
         "headers": {
             "h1": [
                 "\u00dcber uns"
@@ -70,20 +70,26 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/IMG_20190322_102544.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/IMG_20190322_102544.jpg?g-1442c913",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/images\/7\/4\/8\/1\/9\/7481908c81e678df54f4b5c7eb33d53b05f12f10-agroscopehochsvg.png",
+                "src": "https:\/\/graswachstum.ch\/images\/a\/g\/r\/o\/s\/agroscopehochsvg-74812f10.png?g-1442c913",
                 "alt": "Agroscope_hoch.svg",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/Logo-Graswachstum-neu-2024-web.svg?decoding=auto&fetchpriority=auto",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/Logo-Graswachstum-neu-2024-web.svg?decoding=auto&fetchpriority=auto&g-1442c913",
                 "alt": "Logo-Graswachstum-neu-2024-web",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -135,7 +141,21 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
+                "external": false
+            },
+            "#ueber-die-messtandorte": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "#standorte-posieux-und-sor": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
                 "external": false
             },
             "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum.html": {
@@ -152,12 +172,33 @@
                 "text": "Link",
                 "external": true
             },
+            "#beschreibungen-weiterer-s": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "#datensammlung-und-aufbere": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
             "https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth": {
                 "count": 0,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
                 "text": "R-Skript",
                 "external": true
+            },
+            "#medienpartner": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
             },
             "http:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
                 "count": 0,
@@ -180,11 +221,11 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
@@ -195,13 +236,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "\u00dcber die Messtandorte Standorte Posieux und Sorens Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf de\u2026",
             "title": "\u00dcber uns | graswachstum.ch",
+            "keywords": "graswachstum,agroscope,methode,vorbereiteten,versuchsbetrieb,posieux,sorens,selbst\u00e4ndig,standorte,daten",
             "image": "https:\/\/graswachstum.ch\/fr\/about\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/about",
             "og:site_name": "graswachstum.ch",
             "og:title": "\u00dcber uns | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "\u00dcber die Messtandorte Standorte Posieux und Sorens Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf de\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/about\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -209,20 +251,15 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/about\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "\u00dcber uns | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "\u00dcber die Messtandorte Standorte Posieux und Sorens Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf de\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/about\/seomagic-image.jpg",
             "twitter:image:alt": "\u00dcber uns | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/about",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -235,7 +272,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -254,6 +303,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -313,12 +374,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -365,5 +431,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 99 (easy handle 0x55fbb00501a0)\n> GET \/fr\/about HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"8a987232197c108d5ad5c3e79540ac95\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=8a987232197c108d5ad5c3e79540ac95; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 13f (easy handle 0x55831343e3b0)\n> GET \/fr\/about HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:34 GMT\r\n* Added cookie grav-site-23a95d8=\"a47a7094c5faec964dbfd0457491ce04\" for domain graswachstum.ch, path \/, expire 1738876054\n< set-cookie: grav-site-23a95d8=a47a7094c5faec964dbfd0457491ce04; expires=Thu, 06-Feb-2025 21:07:34 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:34 GMT\r\n< server: Apache\r\n< \r\n"
 }

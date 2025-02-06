@@ -4,36 +4,36 @@
         "page_rawroute": "\/growth",
         "page_title": "Graswachstumskurve"
     },
-    "updated": 1734461938,
+    "updated": 1738874256,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Graswachstumskurve",
         "grav-page-route": "\/growth",
         "grav-page-rawroute": "\/growth",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:36 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:36 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461938.767879009246826171875,
-        "total_time": 0.1045770000000000032880365097298636101186275482177734375,
-        "namelookup_time": 3.60000000000000009120308674948063298870692960917949676513671875e-5,
-        "connect_time": 3.60000000000000009120308674948063298870692960917949676513671875e-5,
-        "pretransfer_time": 6.799999999999999946397044592316660782671533524990081787109375e-5,
-        "starttransfer_time": 0.1044670000000000043005599081880063749849796295166015625,
+        "start_time": 1738874256.1743190288543701171875,
+        "total_time": 0.109955999999999998184563310132944025099277496337890625,
+        "namelookup_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
+        "connect_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
+        "pretransfer_time": 4.50000000000000028341044788771085904954816214740276336669921875e-5,
+        "starttransfer_time": 0.109870999999999996443733607520698569715023040771484375,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/fr\/growth",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 527,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 528,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 5289,
-        "speed_download": 50855,
+        "size_download": 5433,
+        "speed_download": 49844,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 24320
+        "content_size": 25213
     },
     "content": {
-        "body": "<p>Interaktive Grafik in neuem Tab &ouml;ffnen<\/p>\n\n                    \n            \n            Bedienung der interaktiven Graswachstumskurve\n            \n<p>Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres.\nDie rote, gestrichelte Linie ist ein langj&auml;hriger Mittelwert f&uuml;r das CH-Mittelland.<\/p>\n<h3>Tipps:<\/h3>\n<ul>\n<li>Klick auf Standort: ein-\/ausblenden<\/li>\n<li>Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet<\/li>\n<li>Kamerasymbol: angezeigte Grafik lokal speichern\n<\/li><\/ul>\n        \n                    \n            \n            Graswachtumsdiagramm statisch (wie bisher)\n            \n<p><\/p>\n\n        \n    \n\n<p><\/p>\n\n                    \n            \n            Vergangene Graswachstumskarten",
+        "body": "<p>Interaktive Grafik in neuem Tab &ouml;ffnen<\/p>\n\n                    \n            \n            Bedienung der interaktiven Graswachstumskurve\n            \n<p>Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres.\nDie rote, gestrichelte Linie ist ein langj&auml;hriger Mittelwert f&uuml;r das CH-Mittelland.<\/p>\n<h3>Tipps:<\/h3>\n<ul>\n<li>Klick auf Standort: ein-\/ausblenden<\/li>\n<li>Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet<\/li>\n<li>Kamerasymbol: angezeigte Grafik lokal speichern\n<\/li><\/ul>\n        \n                    \n            \n            Graswachtumsdiagramm statisch (wie bisher)\n            \nGraswachstumskurve_2024\n\n        \n    \n\nGraswachstumskarte_aktuell\n\n                    \n            \n            Vergangene Graswachstumskarten",
         "headers": {
             "h1": [
                 "Graswachstumskurve"
@@ -65,212 +65,218 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/02.growth\/2018-05-06 19.05.53.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/02.growth\/2018-05-06 19.05.53.jpg?g-1442c913",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskurve_2024.svg?decoding=auto&fetchpriority=auto",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskurve_2024.svg?decoding=auto&fetchpriority=auto&g-1442c913",
                 "alt": "Graswachstumskurve_2024",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskarte_aktuell.svg?decoding=auto&fetchpriority=auto",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskarte_aktuell.svg?decoding=auto&fetchpriority=auto&g-1442c913",
                 "alt": "Graswachstumskarte_aktuell",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW35.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW35.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW22.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW22.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW39.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW39.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW12.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW12.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW21.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW21.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW26.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW26.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW40.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW40.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW14.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW14.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW38.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW38.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW16.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW16.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW43.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW43.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW36.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW36.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW37.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW37.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW42.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW42.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW24.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW24.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW30.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW30.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW20.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW20.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW32.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW32.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW28.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW28.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW13.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW13.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW18.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW18.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW17.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW17.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW25.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW25.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW46.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW46.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW33.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW33.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW29.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW29.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW15.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW15.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW34.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW34.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW19.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW19.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW45.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW45.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW27.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW27.svg?g-1442c913",
                 "alt": "",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW23.svg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2024KW23.svg?g-1442c913",
                 "alt": "",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -322,7 +328,7 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
                 "external": false
             },
             "\/fr\/uploads\/Graswachstumskurve_ohneLegende_2024.html": {
@@ -330,6 +336,13 @@
                 "target": "_blank",
                 "rel": "",
                 "text": "Interaktive Grafik in neuem Tab \u00f6ffnen",
+                "external": false
+            },
+            "#tipps": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
                 "external": false
             },
             "\/fr\/legal": {
@@ -346,11 +359,11 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
@@ -361,13 +374,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller G\u2026",
             "title": "Graswachstumskurve | graswachstum.ch",
+            "keywords": "linie,gestrichelte,standort,grafik,standorte,doppelklick,schwarze,bildet,ein-\/ausblenden,neuem",
             "image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/growth",
             "og:site_name": "graswachstum.ch",
             "og:title": "Graswachstumskurve | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller G\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -375,20 +389,15 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Graswachstumskurve | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller G\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/growth\/seomagic-image.jpg",
             "twitter:image:alt": "Graswachstumskurve | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/growth",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -401,7 +410,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -414,6 +435,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -485,12 +518,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -537,5 +575,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d9 (easy handle 0x55fbb00501a0)\n> GET \/fr\/growth HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstumskurve\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"f57aff50c619ee74f08f9c0e59687fa1\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=f57aff50c619ee74f08f9c0e59687fa1; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 21b (easy handle 0x558313444fa0)\n> GET \/fr\/growth HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstumskurve\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:36 GMT\r\n* Added cookie grav-site-23a95d8=\"aed921198c060f18b9f9bc0e45184342\" for domain graswachstum.ch, path \/, expire 1738876056\n< set-cookie: grav-site-23a95d8=aed921198c060f18b9f9bc0e45184342; expires=Thu, 06-Feb-2025 21:07:36 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:36 GMT\r\n< server: Apache\r\n< \r\n"
 }

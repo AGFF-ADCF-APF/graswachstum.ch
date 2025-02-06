@@ -4,36 +4,36 @@
         "page_rawroute": "\/resources",
         "page_title": "Ressourcen"
     },
-    "updated": 1734461937,
+    "updated": 1738874254,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Ressourcen",
         "grav-page-route": "\/resources",
         "grav-page-rawroute": "\/resources",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:57 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:34 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:57 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:34 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461937.8538639545440673828125,
-        "total_time": 0.10993500000000000493827201353269629180431365966796875,
-        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "start_time": 1738874254.224091053009033203125,
+        "total_time": 0.1057950000000000001509903313490212894976139068603515625,
+        "namelookup_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
         "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "pretransfer_time": 5.3000000000000000778023478975597981843748129904270172119140625e-5,
-        "starttransfer_time": 0.1097909999999999997033484078201581723988056182861328125,
+        "pretransfer_time": 4.69999999999999972378865453759289039226132445037364959716796875e-5,
+        "starttransfer_time": 0.10570000000000000228705943072782247327268123626708984375,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/resources",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 525,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 526,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 5322,
-        "speed_download": 48825,
+        "size_download": 5523,
+        "speed_download": 52600,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 21972
+        "content_size": 22908
     },
     "content": {
         "body": "<h2>Grasland bewirtschaften<\/h2>\n<ul>\n<li>eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen<\/li>\n<li>Wurzelbilder von Futtergr&auml;sern<\/li>\n<li>AGFF.ch: AGFF-Merkbl&auml;tter bestellen bzw. AGFF-Mitglied werden<\/li>\n<li>Raumberg-Gumpenstein.at: PODCASTS :\/&gt; AGRAR SCIENCE - WISSEN KOMPAKT<\/li>\n<\/ul>\n<h2>Futter konservieren<\/h2>\n<ul>\n<li>Zuckergehalt von Wiesen bestimmen<\/li>\n<\/ul>\n<h2>Professionelles Weidemanagement<\/h2>\n<ul>\n<li>eAGFF.ch: Weideplaner (Exceldatei mit Makros)<\/li>\n<li>Teagasc.ie: Grass10 Newsletter<\/li>\n<\/ul>\n<h2>Graswachstum messen<\/h2>\n<ul>\n<li>Github.com: R-Skript f&uuml;r automatische Darstellung von Graswachstum auf CH-Karte<\/li>\n<li>\n<\/li>\n<\/ul>",
@@ -68,8 +68,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.resources\/IMG_20190509_061615.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.resources\/IMG_20190509_061615.jpg?g-1442c913",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -121,7 +127,14 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
+                "external": false
+            },
+            "#grasland-bewirtschaften": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
                 "external": false
             },
             "https:\/\/www.eagff.ch\/wiesenpflanzen-kennen\/graeser\/einleitung\/einleitung-uebersicht": {
@@ -131,7 +144,7 @@
                 "text": "eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen",
                 "external": true
             },
-            "https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas mitteleuropaeischer gruenlandpflanzen, band 1: monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc": {
+            "https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc": {
                 "count": 0,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
@@ -159,12 +172,26 @@
                 "text": "Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT",
                 "external": true
             },
+            "#futter-konservieren": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
             "https:\/\/www.agrarheute.com\/pflanze\/gruenland\/knoblauchpresse-ins-gras-553913": {
                 "count": 0,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
                 "text": "Zuckergehalt von Wiesen bestimmen",
                 "external": true
+            },
+            "#professionelles-weidemana": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
             },
             "https:\/\/www.eagff.ch\/files\/downloads\/Weideplaner_AGFF.xlsm": {
                 "count": 0,
@@ -179,6 +206,13 @@
                 "rel": "nofollow noopener noreferrer",
                 "text": "Teagasc.ie: Grass10 Newsletter",
                 "external": true
+            },
+            "#graswachstum-messen": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
             },
             "https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth": {
                 "count": 0,
@@ -201,11 +235,11 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
@@ -216,34 +250,30 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Ressourcen",
+            "description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
+            "title": "Ressourcen | graswachstum.ch",
+            "keywords": "graswachstum,messen,darstellung,newsletter,ch-karte,exceldatei,bestimmen,professionelles,weidemanagement,eagff.ch",
             "image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/resources",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Ressourcen",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Ressourcen | graswachstum.ch",
+            "og:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Ressourcen",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Ressourcen | graswachstum.ch",
+            "twitter:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
-            "twitter:image:alt": "Ressourcen",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "Ressourcen | graswachstum.ch",
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/resources",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -256,7 +286,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -275,6 +317,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -334,12 +388,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -386,5 +445,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 93 (easy handle 0x55fbb00501a0)\n> GET \/resources HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:57 GMT\r\n* Added cookie grav-site-23a95d8=\"c312f1450a0bd987ae315098f60cfcd2\" for domain graswachstum.ch, path \/, expire 1734463737\n< set-cookie: grav-site-23a95d8=c312f1450a0bd987ae315098f60cfcd2; expires=Tue, 17 Dec 2024 19:28:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:57 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 137 (easy handle 0x55831343e3b0)\n> GET \/resources HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:34 GMT\r\n* Added cookie grav-site-23a95d8=\"a4bd0ed06df73a0c86bd695b5a08f920\" for domain graswachstum.ch, path \/, expire 1738876054\n< set-cookie: grav-site-23a95d8=a4bd0ed06df73a0c86bd695b5a08f920; expires=Thu, 06-Feb-2025 21:07:34 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:34 GMT\r\n< server: Apache\r\n< \r\n"
 }

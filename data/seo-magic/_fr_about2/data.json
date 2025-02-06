@@ -4,36 +4,36 @@
         "page_rawroute": "\/about2",
         "page_title": "\u00dcber"
     },
-    "updated": 1734461938,
+    "updated": 1738874254,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "\u00dcber",
         "grav-page-route": "\/about2",
         "grav-page-rawroute": "\/about2",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:34 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:34 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461938.0857160091400146484375,
-        "total_time": 0.1493669999999999997708499677173676900565624237060546875,
-        "namelookup_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
-        "connect_time": 1.5000000000000000380012861456169304119612206704914569854736328125e-5,
-        "pretransfer_time": 4.60000000000000000359955121265187472090474329888820648193359375e-5,
-        "starttransfer_time": 0.149251999999999995782928863263805396854877471923828125,
+        "start_time": 1738874254.462460041046142578125,
+        "total_time": 0.0962159999999999959729990450796321965754032135009765625,
+        "namelookup_time": 1.800000000000000045601543374740316494353464804589748382568359375e-5,
+        "connect_time": 1.800000000000000045601543374740316494353464804589748382568359375e-5,
+        "pretransfer_time": 6.89999999999999966658614791725767645402811467647552490234375e-5,
+        "starttransfer_time": 0.09613199999999999523225824304972775280475616455078125,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/fr\/about2",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 514,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 515,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 4798,
-        "speed_download": 32201,
+        "size_download": 5284,
+        "speed_download": 55041,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 21080
+        "content_size": 24155
     },
     "content": {
-        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Contact\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n    \n  \n      \n      <h4>Tags populaires<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archives<\/h4>\n      <ul>\n\n<\/ul>\n    \n    \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Contact\n                  <\/li>\n  \n    <\/ul>",
+        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n        \n      <h4>Article al&eacute;atoire<\/h4>\n      \n  \n  \n  \n  \n  \n  \n J'ai de la chance !\n    \n  \n  \n      \n      <h4>Tags populaires<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                infrastruktur\n            \n        \n          \n            \n                gallerie\n            \n        \n          \n            \n                kurse\n            \n        \n          \n            \n                konservierung\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archives<\/h4>\n      <ul>\n\n<\/ul>\n    \n        \n      <h4>Syndication<\/h4>\n            \n  \n  \n  \n  \n Atom\n  \n  \n  \n  \n RSS    \n  \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch Messnetz der  AGFF<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
         "headers": {
             "h1": [
                 "\u00dcber"
@@ -52,8 +52,10 @@
             "h2": [],
             "h3": [],
             "h4": [
+                "Article al\u00e9atoire",
                 "Tags populaires",
-                "Archives"
+                "Archives",
+                "Syndication"
             ],
             "h5": [],
             "h6": []
@@ -66,8 +68,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg?g-1442c913",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -119,7 +127,14 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
+                "external": false
+            },
+            "\/fr\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "J'ai de la chance !",
                 "external": false
             },
             "\/tag:weide": {
@@ -136,11 +151,53 @@
                 "text": "wachstumsbericht",
                 "external": false
             },
+            "\/tag:infrastruktur": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false
+            },
+            "\/tag:gallerie": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false
+            },
+            "\/tag:kurse": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false
+            },
+            "\/tag:konservierung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false
+            },
             "\/tag:betriebsportrait": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "betriebsportrait",
+                "external": false
+            },
+            ".atom": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Atom",
+                "external": false
+            },
+            ".rss": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "RSS",
                 "external": false
             },
             "\/fr\/legal": {
@@ -157,11 +214,11 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
@@ -172,13 +229,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "Kurven Ressourcen \u00dcber uns Contact \u00dcber Tags populaires weide wachstumsbericht betriebsportrait Archives Datenschutz und Rechtsausschluss graswachstum.ch was\u2026",
             "title": "\u00dcber | graswachstum.ch",
+            "keywords": "\u00fcber,ressourcen,contact,kurven,tags,dark,weide,wachstumsbericht,betriebsportrait,populaires",
             "image": "https:\/\/graswachstum.ch\/fr\/about2\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/about2",
             "og:site_name": "graswachstum.ch",
             "og:title": "\u00dcber | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "Kurven Ressourcen \u00dcber uns Contact \u00dcber Tags populaires weide wachstumsbericht betriebsportrait Archives Datenschutz und Rechtsausschluss graswachstum.ch was\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/about2\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -186,20 +244,15 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/about2\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "\u00dcber | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "Kurven Ressourcen \u00dcber uns Contact \u00dcber Tags populaires weide wachstumsbericht betriebsportrait Archives Datenschutz und Rechtsausschluss graswachstum.ch was\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/about2\/seomagic-image.jpg",
             "twitter:image:alt": "\u00dcber | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/about2",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -212,7 +265,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -231,6 +296,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -296,12 +373,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -348,5 +430,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: a3 (easy handle 0x55fbb00501a0)\n> GET \/fr\/about2 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber\r\n< grav-page-route: \/about2\r\n< grav-page-rawroute: \/about2\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"ae91ad5749e2a838bfba2797d99f3b40\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=ae91ad5749e2a838bfba2797d99f3b40; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 14b (easy handle 0x55831343e3b0)\n> GET \/fr\/about2 HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber\r\n< grav-page-route: \/about2\r\n< grav-page-rawroute: \/about2\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:34 GMT\r\n* Added cookie grav-site-23a95d8=\"2039ce308b8cb070b03c2c7e096577d1\" for domain graswachstum.ch, path \/, expire 1738876054\n< set-cookie: grav-site-23a95d8=2039ce308b8cb070b03c2c7e096577d1; expires=Thu, 06-Feb-2025 21:07:34 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:34 GMT\r\n< server: Apache\r\n< \r\n"
 }

@@ -4,36 +4,36 @@
         "page_rawroute": "\/author\/zbma",
         "page_title": "zbma"
     },
-    "updated": 1734470188,
+    "updated": 1738874252,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "zbma",
         "grav-page-route": "\/author\/zbma",
         "grav-page-rawroute": "\/author\/zbma",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 21:16:28 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:32 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 21:16:28 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:32 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734470188.317389965057373046875,
-        "total_time": 0.100134000000000000785149723014910705387592315673828125,
-        "namelookup_time": 0.0004710000000000000102383379552151154712191782891750335693359375,
-        "connect_time": 0.00051800000000000001425248807862544708768837153911590576171875,
-        "pretransfer_time": 0.007590000000000000392186283448836547904647886753082275390625,
-        "starttransfer_time": 0.09961899999999999921751481224418967030942440032958984375,
+        "start_time": 1738874252.0856800079345703125,
+        "total_time": 0.0962220000000000019735324485736782662570476531982421875,
+        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "pretransfer_time": 4.69999999999999972378865453759289039226132445037364959716796875e-5,
+        "starttransfer_time": 0.09611599999999999310862364154672832228243350982666015625,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/author\/zbma",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 523,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 524,
         "request_size": 120,
         "redirect_count": 0,
-        "size_download": 5121,
-        "speed_download": 51210,
+        "size_download": 6570,
+        "speed_download": 68437,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 23448
+        "content_size": 28790
     },
     "content": {
         "body": "",
@@ -52,8 +52,10 @@
             "h2": [],
             "h3": [],
             "h4": [
+                "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
-                "Archiv"
+                "Archiv",
+                "Abonnements"
             ],
             "h5": [],
             "h6": []
@@ -66,8 +68,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg?g-1442c913",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -129,6 +137,13 @@
                 "text": "N\u00e4chster Beitrag",
                 "external": false
             },
+            "\/random": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false
+            },
             "\/tag:weide": {
                 "count": 0,
                 "target": "",
@@ -150,11 +165,46 @@
                 "text": "infrastruktur",
                 "external": false
             },
+            "\/tag:gallerie": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false
+            },
+            "\/tag:kurse": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false
+            },
+            "\/tag:konservierung": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false
+            },
             "\/tag:betriebsportrait": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "betriebsportrait",
+                "external": false
+            },
+            "\/.atom": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "Atom",
+                "external": false
+            },
+            "\/.rss": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "RSS",
                 "external": false
             },
             "\/legal": {
@@ -171,11 +221,11 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
@@ -203,7 +253,9 @@
             "twitter:description": "AGFF-Grasmessnetzwerk",
             "twitter:image": "https:\/\/graswachstum.ch\/author\/zbma\/seomagic-image.jpg",
             "twitter:image:alt": "zbma | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten",
+            "keywords": ""
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/author\/zbma",
@@ -220,7 +272,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -239,6 +303,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -285,6 +361,12 @@
                 "type": "text\/css",
                 "media": null,
                 "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-citation\/css\/citations.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
             }
         },
         "scripts": {
@@ -298,7 +380,17 @@
                 "defer": null,
                 "type": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -345,5 +437,5 @@
             }
         }
     },
-    "debug": "*   Trying 85.13.141.84:443...\n* TCP_NODELAY set\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* ALPN, offering h2\n* ALPN, offering http\/1.1\n* successfully set certificate verify locations:\n*   CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384\n* ALPN, server accepted to use h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify ok.\n* Using HTTP2, server supports multi-use\n* Connection state changed (HTTP\/2 confirmed)\n* Copying HTTP\/2 data in stream buffer to connection buffer after upgrade: len=0\n* Using Stream ID: 1 (easy handle 0x55fbaff42cf0)\n> GET \/author\/zbma HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n* Connection state changed (MAX_CONCURRENT_STREAMS == 100)!\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: zbma\r\n< grav-page-route: \/author\/zbma\r\n< grav-page-rawroute: \/author\/zbma\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 21:16:28 GMT\r\n* Added cookie grav-site-23a95d8=\"fcb6a946ff27d501cf6260e080319ca3\" for domain graswachstum.ch, path \/, expire 1734471988\n< set-cookie: grav-site-23a95d8=fcb6a946ff27d501cf6260e080319ca3; expires=Tue, 17 Dec 2024 21:46:28 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 21:16:28 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 17 (easy handle 0x55831343e3b0)\n> GET \/author\/zbma HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: zbma\r\n< grav-page-route: \/author\/zbma\r\n< grav-page-rawroute: \/author\/zbma\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:32 GMT\r\n* Added cookie grav-site-23a95d8=\"9ffd6037c799ce9652e9175496b12a72\" for domain graswachstum.ch, path \/, expire 1738876052\n< set-cookie: grav-site-23a95d8=9ffd6037c799ce9652e9175496b12a72; expires=Thu, 06-Feb-2025 21:07:32 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:32 GMT\r\n< server: Apache\r\n< \r\n"
 }

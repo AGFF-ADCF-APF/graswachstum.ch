@@ -1,0 +1,60 @@
+enabled: true
+enable_admin_page_events: true
+enable_quicktray: true
+enable_seo_report: true
+enable_site_seo_report: true
+enable_image_checker: true
+enable_link_checker: true
+link_max_retries: 2
+link_check_timeout: 10
+link_check_whitelist:
+  - github.com
+client_timeout: 30
+client_connections: 1
+log_results: true
+user_agent: 'Grav SEOMagic Plugin'
+robots: all
+body_selectors:
+  - .magic-content
+  - 'article .rich-text'
+ignore_routes: null
+custom_stopwords:
+  - content
+  - '&'
+metadata:
+  title_frontmatter: metadata.title
+  description_frontmatter: metadata.description
+  keywords_frontmatter: metadata.keywords
+opengraph:
+  enabled: true
+twitter:
+  enabled: true
+  username: null
+  card: summary_large_image
+  reading_time: true
+facebook:
+  enabled: true
+  appid: null
+keep_utf8_chars: true
+global_keywords: null
+autogenerate_desc: true
+autogenerate_keywords: true
+desc_summarization_method: textrank
+images:
+  auto_order:
+    - image_name
+    - image_attribute
+    - og-image
+    - media_first
+    - default
+  type: webshot
+  webshot_url: 'https://webshot.getgrav.org'
+  image_name: og-image.jpg
+  image_attribute: hero_image
+  default_image: 'https://getgrav.org/user/pages/images/grav-homepage.jpg'
+  size:
+    x: '1200'
+    'y': '630'
+keywords_default_fallback: true
+desc_default_fallback: true
+desc_summarization_attribute: null

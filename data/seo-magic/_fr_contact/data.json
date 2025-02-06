@@ -2,38 +2,38 @@
     "grav": {
         "page_route": "\/contact",
         "page_rawroute": "\/contact",
-        "page_title": "Contact"
+        "page_title": "Kontakt"
     },
-    "updated": 1734461938,
+    "updated": 1738874256,
     "response_headers": {
         "pragma": "no-cache",
-        "grav-page-title": "Contact",
+        "grav-page-title": "Kontakt",
         "grav-page-route": "\/contact",
         "grav-page-rawroute": "\/contact",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 24 Dec 2024 18:58:58 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:36 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Tue, 17 Dec 2024 18:58:58 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 06 Feb 2025 20:37:36 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1734461938.677752971649169921875,
-        "total_time": 0.085177000000000002710720536924782209098339080810546875,
-        "namelookup_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "connect_time": 1.20000000000000003040102891649354432956897653639316558837890625e-5,
-        "pretransfer_time": 4.3000000000000001654058834343885564521769993007183074951171875e-5,
-        "starttransfer_time": 0.0850619999999999987227994324712199158966541290283203125,
+        "start_time": 1738874256.0755650997161865234375,
+        "total_time": 0.093052999999999996827426684831152670085430145263671875,
+        "namelookup_time": 1.900000000000000104603825601401467793039046227931976318359375e-5,
+        "connect_time": 1.900000000000000104603825601401467793039046227931976318359375e-5,
+        "pretransfer_time": 0.00012400000000000000540019418071580048490432091057300567626953125,
+        "starttransfer_time": 0.0929709999999999980868636839659302495419979095458984375,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/fr\/contact",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 518,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 519,
         "request_size": 119,
         "redirect_count": 0,
-        "size_download": 5256,
-        "speed_download": 61835,
+        "size_download": 6277,
+        "speed_download": 67494,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,16 +41,19 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 21772
+        "content_size": 27791
     },
     "content": {
-        "body": "<p>title: Contact Form<\/p>\n<p>form:\nname: contact<\/p>\n<p>fields:\nname:\nlabel: Name\nplaceholder: Enter your name\nautocomplete: on\ntype: text\nvalidate:\nrequired: true<\/p>\n<p>email:\nlabel: Email\nplaceholder: Enter your email address\ntype: email\nvalidate:\nrequired: true<\/p>\n<p>message:\nlabel: Message\nplaceholder: Enter your message\ntype: textarea\nvalidate:\nrequired: true<\/p>\n<p>g-recaptcha-response:\nlabel: Captcha\ntype: captcha\nrecaptcha_not_validated: 'Captcha not valid!'<\/p>\n<p>buttons:\nsubmit:\ntype: submit\nvalue: Submit\nreset:\ntype: reset\nvalue: Reset<\/p>\n<p>process:\ncaptcha: true\nsave:\nfileprefix: contact-\ndateformat: Ymd-His-u\nextension: txt\nbody: \"{% include 'forms\/data.txt.twig' %}\"\nemail:\nsubject: \"[Site Contact Form] {{ form.value.name|e }}\"\nbody: \"{% include 'forms\/data.html.twig' %}\"\nmessage: Thank you for getting in touch!<\/p>",
+        "body": "<p>Fragen, Vorschl&auml;ge, Bedenken?\nKontaktiere uns! <i><\/i><\/p>\n<h3>Whatsapp-Gruppe \"Graswachstumsberichte\"<\/h3>\n<p><i><\/i> Link zum Beitreten <\/p>\n<h3>Partner<\/h3>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>\n    \n\n\n\n                \n\n\n\n\n\n\n\n\n\n\n\n        \n                                      \n                          \n            Name              *\n      \n        \n                        \n                                    \n                                      \n                        \n  \n                                                      \n                          \n            Email              *\n      \n        \n                        \n                                    \n                                  \n                        \n  \n                                                      \n                          \n            Message              *\n      \n        \n                  \n                \n                            \n                \n  \n                                                      \n                          \n            \n      \n        \n                    \n    \n    \n                  \n  \n                            \n\n        \n            \n    \n    \n      \n            \n  \n\n                    \n      \n      \n  Absenden\n\n                            \n      \n      \n  Zur&uuml;cksetzen",
         "headers": {
             "h1": [
-                "Contact"
+                "Kontakt"
             ],
             "h2": [],
-            "h3": [],
+            "h3": [
+                "Whatsapp-Gruppe \"Graswachstumsberichte\"",
+                "Partner"
+            ],
             "h4": [],
             "h5": [],
             "h6": []
@@ -63,8 +66,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/91.contact\/IMG_20170925_123125_HDR.jpg?g-1442c913",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -116,8 +125,57 @@
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Contact",
+                "text": "Kontakt",
                 "external": false
+            },
+            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link zum Beitreten",
+                "external": true
+            },
+            "": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "#whatsapp-gruppe-graswachs": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "#partner": {
+                "count": 0,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false
+            },
+            "https:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Bauernzeitung",
+                "external": true
+            },
+            "https:\/\/www.agff.ch": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "AGFF",
+                "external": true
+            },
+            "https:\/\/www.weidemilch.ch": {
+                "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "IG Weidemilch",
+                "external": true
             },
             "\/fr\/legal": {
                 "count": 0,
@@ -133,49 +191,45 @@
                 "text": "graswachstum.ch",
                 "external": true
             },
-            "https:\/\/graswachstum.ch": {
+            "https:\/\/agff.ch": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
+                "text": "AGFF",
                 "external": true
             }
         }
     },
     "head": {
-        "title": "graswachstum.ch",
+        "title": "Kontakt | graswachstum.ch",
         "meta": {
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Kontakt | graswachstum.ch",
+            "description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
+            "title": "graswachstum.ch",
+            "keywords": "bauernzeitung,organisationen,message,email,link,beitreten,partner,name,agff,weidemilch",
             "image": "https:\/\/graswachstum.ch\/fr\/contact\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/contact",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Kontakt | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "graswachstum.ch",
+            "og:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/contact\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/contact\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Kontakt | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "graswachstum.ch",
+            "twitter:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/contact\/seomagic-image.jpg",
-            "twitter:image:alt": "Kontakt | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:image:alt": "graswachstum.ch",
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/contact",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
@@ -188,7 +242,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -207,6 +273,18 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -266,12 +344,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -293,6 +376,11 @@
             },
             "\/user\/themes\/typhoon\/js\/alpine.js": {
                 "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "https:\/\/www.google.com\/recaptcha\/api.js?onload=captchaOnloadCallback_contact&render=explicit&hl=fr&theme=light ": {
+                "async": "",
                 "defer": "defer",
                 "type": null
             },
@@ -318,5 +406,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x55fbafefb080 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d3 (easy handle 0x55fbb00501a0)\n> GET \/fr\/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Contact\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Tue, 24 Dec 2024 18:58:58 GMT\r\n* Added cookie grav-site-23a95d8=\"0cf75c4e632af799c85baa89c0318b97\" for domain graswachstum.ch, path \/, expire 1734463738\n< set-cookie: grav-site-23a95d8=0cf75c4e632af799c85baa89c0318b97; expires=Tue, 17 Dec 2024 19:28:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Tue, 17 Dec 2024 18:58:58 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 213 (easy handle 0x558313444fa0)\n> GET \/fr\/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:36 GMT\r\n* Added cookie grav-site-23a95d8=\"394f9945aa9be92a1078e0e853e0a756\" for domain graswachstum.ch, path \/, expire 1738876056\n< set-cookie: grav-site-23a95d8=394f9945aa9be92a1078e0e853e0a756; expires=Thu, 06-Feb-2025 21:07:36 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:36 GMT\r\n< server: Apache\r\n< \r\n"
 }

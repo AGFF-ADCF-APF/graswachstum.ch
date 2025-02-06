@@ -4,36 +4,36 @@
         "page_rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "page_title": "Unterlagen Raufuttermeisterschaft"
     },
-    "updated": 1738874253,
+    "updated": 1738874255,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Unterlagen Raufuttermeisterschaft",
         "grav-page-route": "\/blog\/kurse-raufuttermeisterschaft",
         "grav-page-rawroute": "\/blog\/kurse-raufuttermeisterschaft",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 13 Feb 2025 20:37:33 GMT",
+        "expires": "Thu, 13 Feb 2025 20:37:35 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 06 Feb 2025 20:37:33 GMT",
+        "date": "Thu, 06 Feb 2025 20:37:35 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1738874253.19979000091552734375,
-        "total_time": 0.1362210000000000087450047203674330376088619232177734375,
-        "namelookup_time": 1.800000000000000045601543374740316494353464804589748382568359375e-5,
-        "connect_time": 1.800000000000000045601543374740316494353464804589748382568359375e-5,
-        "pretransfer_time": 6.700000000000000226207941267375645111314952373504638671875e-5,
-        "starttransfer_time": 0.1360550000000000092637009174723061732947826385498046875,
+        "start_time": 1738874255.676209926605224609375,
+        "total_time": 0.109076000000000006284750497798086144030094146728515625,
+        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
+        "pretransfer_time": 5.00000000000000023960868011929647991564706899225711822509765625e-5,
+        "starttransfer_time": 0.10898499999999999854338739169179461896419525146484375,
         "redirect_time": 0
     },
     "info": {
-        "url": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+        "url": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft",
         "content_type": "text\/html; charset=utf-8",
         "header_size": 597,
-        "request_size": 142,
+        "request_size": 145,
         "redirect_count": 0,
-        "size_download": 14456,
-        "speed_download": 106294,
+        "size_download": 14464,
+        "speed_download": 132697,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 51795
+        "content_size": 51836
     },
     "content": {
-        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            1 Futterprobe nehmen\n                    <\/li>\n                    <li>\n            2 Eigene Futterprobe beurteilen\n                            <ul>\n                    \n                    <li>\n            D&uuml;rrfutter\n                    <\/li>\n                    <li>\n            Grassilage\n                    <\/li>\n                    <li>\n            Maissilage\n                    <\/li>\n    \n                <\/ul>\n                    <\/li>\n                    <li>\n            3 Futterprobe erfassen\n                    <\/li>\n                    <li>\n            4 Futterproben gegenseitig benoten\n                    <\/li>\n                    <li>\n            5 Auswertung der gesammelten Benotungen\n                    <\/li>\n                    <li>\n            &Uuml;ber die Heumeisterschaft  \/ championnat des foins\n                    <\/li>\n    \n        <\/ul>\n    \n\n<h2>1 Futterprobe nehmen<\/h2>\n<p>Lernziel: Wissen, wie eine repr&auml;sentative Futterprobe genommen wird.<\/p>\n<p>W&auml;hle m&ouml;glichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repr&auml;sentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n .<\/p>\n\n<p>\n  \n\n\n  \n<\/p>\n\n<p>Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n <\/p>\n\nFutterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beif&uuml;gen.\n\n<p><\/p>\n                    \n            \n            Weitere Informationen\n            \n<ul>\n<li>\n Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n <\/li>\n<li>\nProbenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis. [1]<\/li>\n<li>\nLehrmittel Pflanzenbau, Auszug aus A6.6 Die Qualit&auml;t von konserviertem Raufutter bewerten [2]\n<\/li><\/ul>\n        \n    \n\n\n\n<h2>2 Eigene Futterprobe beurteilen<\/h2>\n<p>Lernziel: Sch&auml;tzung der N&auml;hrstoffgehalte mit ca. +\/- 5% Genauigkeit (+\/- 0.3 MJ NEL)<\/p>\n<p>Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einsch&auml;tzschl&uuml;sseln von AGFF \/ Agridea. <\/p>\n\n<h3>D&uuml;rrfutter<\/h3>\n<p> Schl&uuml;ssel D&uuml;rrfutter \n  \n  \n  \n  \n  \n  \n  \n<\/p>\n\n<h3>Grassilage<\/h3>\n<p> Schl&uuml;ssel Grassilage \n  \n  \n  \n  \n  \n  \n  \n <\/p>\n\n<h3>Maissilage<\/h3>\n<p> Schl&uuml;ssel Maissilage \n  \n  \n  \n  \n  \n  \n  \n<\/p>\n\n\n<h2>3 Futterprobe erfassen<\/h2>\n<p>Lernziel: Repetition der Fachbegriffe rund um die Beschreibung von Wiesenbest&auml;nden und Futtermitteln.<\/p>\n<p>Erfasse die Futterprobe sp&auml;testens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.<\/p>\n<p>Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<p>Vorlage f&uuml;r Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<h2>4 Futterproben gegenseitig benoten<\/h2>\n<p>Lernziel: Futtermittel nach Wertigkeit einstufen und auch weniger offensichtliche M&auml;ngel entdecken<\/p>\n<p>Bilde dir zu jeder angeschauten Probe innert weniger Minuten ein abschliessendes Urteil.  Die Benotung folgt einem stark vereinfachten Schema gem&auml;ss nachstehendem Formular.<\/p>\n<p>Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms) Link zu Formular f&uuml;r Kurs Zollikofen\nWichtig: f&uuml;r jede angeschaute Probe Formular erneut ausf&uuml;llen und absenden. <\/p>\n<p>Vorlage f&uuml;r Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<h2>5 Auswertung der gesammelten Benotungen<\/h2>\n<p>Anleitung zur Auswertung mir RStudio folgt.<\/p>\n<h2>&Uuml;ber die Heumeisterschaft  \/ championnat des foins<\/h2>\n<p>Inspiriert durch den j&auml;hrlich in Grangeneuve durchgef&uuml;hrten Wettbewerb sch&ouml;nstes Heu (fr. <em>championnat des foins<\/em>).<\/p>\n\n                    \n            \n            Schnellzugriff auf diese Seite\n            \n<p>Diese URL verwenden, um dauerhaft auf diesen Inhalt zu verweisen:\nhttps:\/\/graswachstum.ch\/raufuttermeisterschaft <\/p>\n\n\n        \n    \n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n        \n\n\n\n\n\n\n\n\n  \n          <h2>Quellen<\/h2>\n    \n    <ol>\n              \n        <li>Glauser, W.  , (2007), \"Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis.\",  ALP aktuell, 30, p1&ndash;4, [Link to article].\n            <\/li>              \n        <li>(2019), \"1 Qualit&auml;t des Erntegutes und dessen Konservierung sicherstellen \", &laquo;Pflanzenbau&raquo;, Auflage 2, A6.6 | &copy; edition-lmz, p5&ndash;7, [Link to article].\n            <\/li>          <\/ol>",
+        "body": "<h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n<p>\n\n<\/p>\n                <h4>Table des mati&egrave;res<\/h4>\n        <ul>\n            \n                    <li>\n            1 Futterprobe nehmen\n                    <\/li>\n                    <li>\n            2 Eigene Futterprobe beurteilen\n                            <ul>\n                    \n                    <li>\n            D&uuml;rrfutter\n                    <\/li>\n                    <li>\n            Grassilage\n                    <\/li>\n                    <li>\n            Maissilage\n                    <\/li>\n    \n                <\/ul>\n                    <\/li>\n                    <li>\n            3 Futterprobe erfassen\n                    <\/li>\n                    <li>\n            4 Futterproben gegenseitig benoten\n                    <\/li>\n                    <li>\n            5 Auswertung der gesammelten Benotungen\n                    <\/li>\n                    <li>\n            &Uuml;ber die Heumeisterschaft  \/ championnat des foins\n                    <\/li>\n    \n        <\/ul>\n    \n\n<h2>1 Futterprobe nehmen<\/h2>\n<p>Lernziel: Wissen, wie eine repr&auml;sentative Futterprobe genommen wird.<\/p>\n<p>W&auml;hle m&ouml;glichst eine abgrenzbare Futtermittelcharge und entnimme daraus eine repr&auml;sentative Probe von ca. 1 Kilogramm. Befolge dabei die Anweisungen der Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n .<\/p>\n\n<p>\n  \n\n\n  \n<\/p>\n\n<p>Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n <\/p>\n\nFutterprobe bitte in abgegebenen Probesack packen. Vor dem Zuknoten einen Zettel mit Name und Chargenbezeichnung beif&uuml;gen.\n\n<p><\/p>\n                    \n            \n            Weitere Informationen\n            \n<ul>\n<li>\n Kurzanleitung von Bastien Hayoz (2024) \n  \n  \n  \n  \n  \n  \n  \n <\/li>\n<li>\nProbenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis. [1]<\/li>\n<li>\nLehrmittel Pflanzenbau, Auszug aus A6.6 Die Qualit&auml;t von konserviertem Raufutter bewerten [2]\n<\/li><\/ul>\n        \n    \n\n\n\n<h2>2 Eigene Futterprobe beurteilen<\/h2>\n<p>Lernziel: Sch&auml;tzung der N&auml;hrstoffgehalte mit ca. +\/- 5% Genauigkeit (+\/- 0.3 MJ NEL)<\/p>\n<p>Beurteilen Sie die eigene Futterprobe mit den nachfolgenden Einsch&auml;tzschl&uuml;sseln von AGFF \/ Agridea. <\/p>\n\n<h3>D&uuml;rrfutter<\/h3>\n<p> Schl&uuml;ssel D&uuml;rrfutter \n  \n  \n  \n  \n  \n  \n  \n<\/p>\n\n<h3>Grassilage<\/h3>\n<p> Schl&uuml;ssel Grassilage \n  \n  \n  \n  \n  \n  \n  \n <\/p>\n\n<h3>Maissilage<\/h3>\n<p> Schl&uuml;ssel Maissilage \n  \n  \n  \n  \n  \n  \n  \n<\/p>\n\n\n<h2>3 Futterprobe erfassen<\/h2>\n<p>Lernziel: Repetition der Fachbegriffe rund um die Beschreibung von Wiesenbest&auml;nden und Futtermitteln.<\/p>\n<p>Erfasse die Futterprobe sp&auml;testens am Vortag elektronisch. Gebe dabei so viele Informationen ein, wie du herausfinden kannst.<\/p>\n<p>Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<p>Vorlage f&uuml;r Einschreiben Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<h2>4 Futterproben gegenseitig benoten<\/h2>\n<p>Lernziel: Futtermittel nach Wertigkeit einstufen und auch weniger offensichtliche M&auml;ngel entdecken<\/p>\n<p>Bilde dir zu jeder angeschauten Probe innert weniger Minuten ein abschliessendes Urteil.  Die Benotung folgt einem stark vereinfachten Schema gem&auml;ss nachstehendem Formular.<\/p>\n<p>Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms) Link zu Formular f&uuml;r Kurs Zollikofen\nWichtig: f&uuml;r jede angeschaute Probe Formular erneut ausf&uuml;llen und absenden. <\/p>\n<p>Vorlage f&uuml;r Benotung Raufutter-Meisterschaft 2025 (Microsoft Forms)<\/p>\n<h2>5 Auswertung der gesammelten Benotungen<\/h2>\n<p>Anleitung zur Auswertung mir RStudio folgt.<\/p>\n<h2>&Uuml;ber die Heumeisterschaft  \/ championnat des foins<\/h2>\n<p>Inspiriert durch den j&auml;hrlich in Grangeneuve durchgef&uuml;hrten Wettbewerb sch&ouml;nstes Heu (fr. <em>championnat des foins<\/em>).<\/p>\n\n                    \n            \n            Schnellzugriff auf diese Seite\n            \n<p>Diese URL verwenden, um dauerhaft auf diesen Inhalt zu verweisen:\nhttps:\/\/graswachstum.ch\/raufuttermeisterschaft <\/p>\n\n\n        \n    \n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n        \n\n\n\n\n\n\n\n\n  \n          <h2>Quellen<\/h2>\n    \n    <ol>\n              \n        <li>Glauser, W.  , (2007), \"Probenahme in Futtermitteln auf dem landwirtschaftlichen Betrieb: Merkblatt f&uuml;r die Praxis.\",  ALP aktuell, 30, p1&ndash;4, [Link to article].\n            <\/li>              \n        <li>(2019), \"1 Qualit&auml;t des Erntegutes und dessen Konservierung sicherstellen \", &laquo;Pflanzenbau&raquo;, Auflage 2, A6.6 | &copy; edition-lmz, p5&ndash;7, [Link to article].\n            <\/li>          <\/ol>",
         "headers": {
             "h1": [
                 "Unterlagen Raufuttermeisterschaft",
@@ -65,11 +65,11 @@
                 "Maissilage"
             ],
             "h4": [
-                "Inhaltsverzeichnis",
-                "Zuf\u00e4lliger Artikel",
-                "H\u00e4ufigste Tags",
-                "Archiv",
-                "Abonnements"
+                "Table des mati\u00e8res",
+                "Article al\u00e9atoire",
+                "Tags populaires",
+                "Archives",
+                "Syndication"
             ],
             "h5": [],
             "h6": []
@@ -100,7 +100,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAKISURBVFiF7ZhBjqQwDEWNWGSZI+QmcDEkkHIxuEmOkGUWCM\/\/DjVT3XvGpVZbqAQ8Fi7bsX8i8ms\/3BS2S1A9B83aFglHDXz5MK0iYU8yVJlkkbZq2GPYRZIv5XOSKW6gKeQCh8Oh5yfQoHW8QJukNsUPoaKH5gvha\/hgkg+gwoc26zmj6qze6tfse1A+HgXhy0e1\/DKSX1aKB+3WJJ5zXQvdvqJ8s\/9P61iQXLSOEVeRtbShIsWPU91Sm4vMdZlAwyl6Rfj4iqQTRZMKWnSPG0orkSp8jlpcaWX6rIvSUXzY8AL\/QFwpHb0SfEYElZHEisRtVl+KTE78ZbWr2MRBfnNxpXGDl0Uwmi\/cqpbe2++q86K0Aa\/gLXwGRWeA27fPXlRz6Uom7wwjsr1Hzur0ONVmN8vM1nWi9gWOvfqGF0XaLjqaqQrYRd8z6EXhKIqqDYzkqGFLvV9t4kqRScxfmXXDCGZn4P9AqosrRdVBqKDal+lu8xdEMdz3pWasfps41MCVfaK4UpbalOglCo+7mGZbh1VdKdZkQOz0foVgYvjs\/+bRU1Rs\/jarK8SKvfyt2r1o195QBQuu1MZizaqO6kojV13qO4HRIvmucr2oFXuxNdgbOtrCmwZ2olBw0MAIZt6R34bePleU4SvOTjTaPpxqk\/sUdoaL0zn70h5G6MvtjiQWK1eGuFKKuYsZhRaHZuAHXAtLepjShq4nMd5sRxARuVFdaT\/74p5uwPYuvFTu28TxoNavChv7wWSagoLPqzO18xw7J6SYgvzGxNG\/PjvSQ\/vp5clIUmoen0B3aiYLX7M1yBpUX2pnqgwfz1XgNsLYeJjhSu3si9c26D1xbDr70l\/7wfYHBabqaZw\/MwYAAAAASUVORK5CYII=",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAKISURBVFiF7ZhBjqQwDEWNWGSZI+QmcDEkkHIxuEmOkGUWCM\/\/DjVT3XvGpVZbqAQ8Fi7bsX8i8ms\/3BS2S1A9B83aFglHDXz5MK0iYU8yVJlkkbZq2GPYRZIv5XOSKW6gKeQCh8Oh5yfQoHW8QJukNsUPoaKH5gvha\/hgkg+gwoc26zmj6qze6tfse1A+HgXhy0e1\/DKSX1aKB+3WJJ5zXQvdvqJ8s\/9P61iQXLSOEVeRtbShIsWPU91Sm4vMdZlAwyl6Rfj4iqQTRZMKWnSPG0orkSp8jlpcaWX6rIvSUXzY8AL\/QFwpHb0SfEYElZHEisRtVl+KTE78ZbWr2MRBfnNxpXGDl0Uwmi\/cqpbe2++q86K0Aa\/gLXwGRWeA27fPXlRz6Uom7wwjsr1Hzur0ONVmN8vM1nWi9gWOvfqGF0XaLjqaqQrYRd8z6EXhKIqqDYzkqGFLvV9t4kqRScxfmXXDCGZn4P9AqosrRdVBqKDal+lu8xdEMdz3pWasfps41MCVfaK4UpbalOglCo+7mGZbh1VdKdZkQOz0foVgYvjs\/+bRU1Rs\/jarK8SKvfyt2r1o195QBQuu1MZizaqO6kojV13qO4HRIvmucr2oFXuxNdgbOtrCmwZ2olBw0MAIZt6R34bePleU4SvOTjTaPpxqk\/sUdoaL0zn70h5G6MvtjiQWK1eGuFKKuYsZhRaHZuAHXAtLepjShq4nMd5sRxARuVFdaT\/74p5uwPYuvFTu28TxoNavChv7wWSagoLPqzO18xw7J6SYgvzGxNG\/PjvSQ\/vp5clIUmoen0B3aiYLX7M1yBpUX2pnqgwfz1XgNsLYeJjhSu3si9c26D1xbDr70l\/7wfYHBabqaZw\/MwYAAAAASUVORK5CYII=",
                 "alt": "",
                 "external": false,
                 "status": 404
@@ -112,7 +112,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHUSURBVEiJ7dY9jusgEAfwsSjozAWs+BoUkbiS07kK3iqdfSU6rkHEBXBHgfx\/46e8tynNOuWOu18RwTAfIfqNkwEUGd1GSd+KBaosUMcf8qatG0hVWURHwveu4e+GpdZk0ZtZ\/Uw\/sU7zr2XrPmF8tzHmJ1qJ8nbfQ8Y5HaO\/aD7f9S3Ph4xDBkOksipvz3nIwlBGgadrZTLzB0wkkeGePtGdP1Vlcemo6D4nuV2HHlUmEo0dBa38iun\/WY5Zn4BAvYdPJnX2tJENFq5hm8QmUGVlwKPIJpMeBOJSZUHx+3JeWrJYA1WZ4J4Okozys1hf9XzGMIWRaDOJa+Or2Cor9LdXqaW7QKgzvt1IpsnKf7mBH7vGROokn4VarqtbGE4bFvEo+qI3ma73rs54Rtjoe6\/4dBPZKhNLhODe4hmLVGlI3dh7otXduZ6H0xasyJ2EA2Yxv\/rjqPUT59RwXWEyW79UWUwRpJ8O7i7+3e2oCeAReLbDkUHEaePgvFyIzFKaoqps37WcU92SKrdK22tD+CdWzNfmNe2O2r5rkYGkW4OiPmG2x8bbh6f9qz8qjPO6b672ql59ftT2\/xsxXwxPmO+9ddD2Xcvv6ZBvvC\/tafuNE\/EHVqN7ENgNP5MAAAAASUVORK5CYII=",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHUSURBVEiJ7dY9jusgEAfwsSjozAWs+BoUkbiS07kK3iqdfSU6rkHEBXBHgfx\/46e8tynNOuWOu18RwTAfIfqNkwEUGd1GSd+KBaosUMcf8qatG0hVWURHwveu4e+GpdZk0ZtZ\/Uw\/sU7zr2XrPmF8tzHmJ1qJ8nbfQ8Y5HaO\/aD7f9S3Ph4xDBkOksipvz3nIwlBGgadrZTLzB0wkkeGePtGdP1Vlcemo6D4nuV2HHlUmEo0dBa38iun\/WY5Zn4BAvYdPJnX2tJENFq5hm8QmUGVlwKPIJpMeBOJSZUHx+3JeWrJYA1WZ4J4Okozys1hf9XzGMIWRaDOJa+Or2Cor9LdXqaW7QKgzvt1IpsnKf7mBH7vGROokn4VarqtbGE4bFvEo+qI3ma73rs54Rtjoe6\/4dBPZKhNLhODe4hmLVGlI3dh7otXduZ6H0xasyJ2EA2Yxv\/rjqPUT59RwXWEyW79UWUwRpJ8O7i7+3e2oCeAReLbDkUHEaePgvFyIzFKaoqps37WcU92SKrdK22tD+CdWzNfmNe2O2r5rkYGkW4OiPmG2x8bbh6f9qz8qjPO6b672ql59ftT2\/xsxXwxPmO+9ddD2Xcvv6ZBvvC\/tafuNE\/EHVqN7ENgNP5MAAAAASUVORK5CYII=",
                 "alt": "",
                 "external": false,
                 "status": 404
@@ -124,7 +124,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHNSURBVEiJ7dY\/rrQgEADwMRR0cgGyXIPChCtht5X4qu30SnRcA8MFsKMgzhuTzZct5XPLN3S\/Aod\/MwL8xc1ArBx4hKzH6hCbLIIE5bdyaOctiCZLKAE4+o7GiGur8aofZg8L\/IdRNjRbcf4bRmt7prBhz7F+rPeS0Z6SPTTlN3zs8yWj4NEAiCLqx3FesmjrM+rN9zyb5QumMjyZ30KGiYZosoSqRK1K5sdgFTYZy6xQRlqEHed3LldN5eoiqIAhmyzdbQMbn1g6spkdDBsNX9J0BbRlmNYmq7SN0ajSg8M9QpPhSslzMCIsbH\/f5ztWbSqSHybT3fiprslwljyVA3qYGMY2YznNCrsiwo+3LDcZWMkl0Hx0r8Zob5ta2Ytqjj54HibZZlJIeh8qCMpuBtdkaU2F6kugGou51eYKVQPsfqL7bO8b0jc8esSFLe\/3cdWownJ63kbgbA61NlnKkUuqTegn9m9tF40hvqLuyMBgwttG4VR4AJi1dlU0GdV7UPTKexB1bDTqM46VDanSDd272l21s1+ep5F1b7CKb5gDc1D3oWofbavRvp6dqx9EdE12\/m+k8qAZP\/rWRTt7rUJaSRmpX7rb9hc34hfHaXjY5D6znQAAAABJRU5ErkJggg==",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHNSURBVEiJ7dY\/rrQgEADwMRR0cgGyXIPChCtht5X4qu30SnRcA8MFsKMgzhuTzZct5XPLN3S\/Aod\/MwL8xc1ArBx4hKzH6hCbLIIE5bdyaOctiCZLKAE4+o7GiGur8aofZg8L\/IdRNjRbcf4bRmt7prBhz7F+rPeS0Z6SPTTlN3zs8yWj4NEAiCLqx3FesmjrM+rN9zyb5QumMjyZ30KGiYZosoSqRK1K5sdgFTYZy6xQRlqEHed3LldN5eoiqIAhmyzdbQMbn1g6spkdDBsNX9J0BbRlmNYmq7SN0ajSg8M9QpPhSslzMCIsbH\/f5ztWbSqSHybT3fiprslwljyVA3qYGMY2YznNCrsiwo+3LDcZWMkl0Hx0r8Zob5ta2Ytqjj54HibZZlJIeh8qCMpuBtdkaU2F6kugGou51eYKVQPsfqL7bO8b0jc8esSFLe\/3cdWownJ63kbgbA61NlnKkUuqTegn9m9tF40hvqLuyMBgwttG4VR4AJi1dlU0GdV7UPTKexB1bDTqM46VDanSDd272l21s1+ep5F1b7CKb5gDc1D3oWofbavRvp6dqx9EdE12\/m+k8qAZP\/rWRTt7rUJaSRmpX7rb9hc34hfHaXjY5D6znQAAAABJRU5ErkJggg==",
                 "alt": "",
                 "external": false,
                 "status": 404
@@ -136,25 +136,25 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHPSURBVEiJ7dUxbuwgEAbgH7mgMxewzDUoVuJKu91Wi11tF18JKQXXwOICdkeBPBk\/JXlJZ+KUGcmy9BUIBvgB\/upkEZW7zjpswMURVVlE56LdpAjD5QpVZYk6BxulylfcaKo1NEH41tzKD+zOM5LKt\/gN47WhyB5rBr6s95DtPU2hN2t4+dbnI7aXDkSLXL7t5xGLPEiRkLAjjYlOG1F6Uu6NIjZaqqw4epLf7GYn2pqpyv6NRzospsX\/Xh0zoLtHs2GlsTze9+OM6aF5wm4GxhVRUGVQRUZE20L428f8DlqiRBSiXGlAqytt0YOmOQsi79J5a7jPxQqvsvKPZqiyiMKfDjDK34qqMv655De5mIedKk0P3BDD4\/G5os89+rnBRdeEOYisXsc0VRonrN8gMmdWp6qsOMhO9oYzFoqGKks8\/WjmQFnxecZp22dYLCzAuZuGKmsWyp3kcxXWcm2oyjQ1OcqeRxzLx9oO29TtJ0uumW\/We7afMa57xMy3AxeRlirb877xM8HgcouuyviduXe2B79QRVTa\/r5F23OycUr+kpEXnva011Ot8TkVuTWOU1ZVGa9N8t3iEdVnTh417qnToZerh33p1Gn7qxP1BtsMjqGTP7LFAAAAAElFTkSuQmCC",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJgAAACYAQMAAAAiDLJiAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHPSURBVEiJ7dUxbuwgEAbgH7mgMxewzDUoVuJKu91Wi11tF18JKQXXwOICdkeBPBk\/JXlJZ+KUGcmy9BUIBvgB\/upkEZW7zjpswMURVVlE56LdpAjD5QpVZYk6BxulylfcaKo1NEH41tzKD+zOM5LKt\/gN47WhyB5rBr6s95DtPU2hN2t4+dbnI7aXDkSLXL7t5xGLPEiRkLAjjYlOG1F6Uu6NIjZaqqw4epLf7GYn2pqpyv6NRzospsX\/Xh0zoLtHs2GlsTze9+OM6aF5wm4GxhVRUGVQRUZE20L428f8DlqiRBSiXGlAqytt0YOmOQsi79J5a7jPxQqvsvKPZqiyiMKfDjDK34qqMv655De5mIedKk0P3BDD4\/G5os89+rnBRdeEOYisXsc0VRonrN8gMmdWp6qsOMhO9oYzFoqGKks8\/WjmQFnxecZp22dYLCzAuZuGKmsWyp3kcxXWcm2oyjQ1OcqeRxzLx9oO29TtJ0uumW\/We7afMa57xMy3AxeRlirb877xM8HgcouuyviduXe2B79QRVTa\/r5F23OycUr+kpEXnva011Ot8TkVuTWOU1ZVGa9N8t3iEdVnTh417qnToZerh33p1Gn7qxP1BtsMjqGTP7LFAAAAAElFTkSuQmCC",
                 "alt": "",
                 "external": false,
                 "status": 404
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGFSURBVFiF7ZixrcMwDERpuEipETSKR5NHyygewaUKw\/y8o+L\/8ZMBckFYGApfk4OoEymzb3x4OGPyvfp6mpXNpky9MT3waUFtCXrb6zplSpfe3O+NmebMT5kSpzbH1845ZLfPoKMOvRdf5elvATbqteeK1aLDN46yxSmbe9naC1eRoiNGTXZ7GVL0sAJ16RsRm9EPL2\/Xo7FMvRu9PTgqM66ud6aIllUXzhA\/qOhusjTKDfWGZmG4d3YOTZd2LFF1C2uveqrWpRQXjofKDN\/+19cpUuSXWJbYx9SLbL03Xdpxvmze6XWdFKdMlx606pNOyB1sY1NlafgG8g87L556h7crUkTU5AzV3MHV\/jihJKU4kCxDOiGO3DtT\/v0T15JPV7fj1x4pUgTmbkzfnRfRLfo3k6WpLpRWvJDA6zDTKdPrbaRy+t7TvXlFqdLrbSQTNAh\/OIMw5cFKrzuZV6fZM0Q17tmBV3ddeolbPOdux+D69NqjQ4dv8JSNaeLIsVaVfuOD4wcpYWK7UklXVgAAAABJRU5ErkJggg==",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGFSURBVFiF7ZixrcMwDERpuEipETSKR5NHyygewaUKw\/y8o+L\/8ZMBckFYGApfk4OoEymzb3x4OGPyvfp6mpXNpky9MT3waUFtCXrb6zplSpfe3O+NmebMT5kSpzbH1845ZLfPoKMOvRdf5elvATbqteeK1aLDN46yxSmbe9naC1eRoiNGTXZ7GVL0sAJ16RsRm9EPL2\/Xo7FMvRu9PTgqM66ud6aIllUXzhA\/qOhusjTKDfWGZmG4d3YOTZd2LFF1C2uveqrWpRQXjofKDN\/+19cpUuSXWJbYx9SLbL03Xdpxvmze6XWdFKdMlx606pNOyB1sY1NlafgG8g87L556h7crUkTU5AzV3MHV\/jihJKU4kCxDOiGO3DtT\/v0T15JPV7fj1x4pUgTmbkzfnRfRLfo3k6WpLpRWvJDA6zDTKdPrbaRy+t7TvXlFqdLrbSQTNAh\/OIMw5cFKrzuZV6fZM0Q17tmBV3ddeolbPOdux+D69NqjQ4dv8JSNaeLIsVaVfuOD4wcpYWK7UklXVgAAAABJRU5ErkJggg==",
                 "alt": "",
                 "external": false,
                 "status": 404
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGSSURBVFiF7ZjBsYMwDETFcOBICS6F0kxplOISOHJgUHZXkPxMfgEoEx3A8ctFo5W8xuwXXx6u6Nyb2dGfa8aN6c5H7fCa5qPfxmZdbOWlg\/uC5Yine9BzKzVV1WY8V\/sSinzb5I7alTk9vQRYXJpE1h+KzUXPubEj3+iy+s9USUUjQNVlVKZ9RC4KAUKNh+YGZru6TAJNS13nVMdt+zs96o2pDVKdr2cfNW2Wq1QJ6a6lQ3WOSqFUHpWqaWmUC0ori0Xt9J\/F0lL2EV69UkSmRdO7uKelMD4xE87pzToOa2b6aimMt36DZ\/B9WGFb81Ikp5MI+cotVOTLH2npfuVbaOWQKZTJOualbCx5hWYxN+CCNg6RtJRLnFPGGx\/P31apyXtTmhqrvCnQ2gykjMQ0QudRZdY8WmUj0lJlF\/cFboxcvyZDRnp+G3HJUDcg1fHy3hnp85I9zY6WM2ry1WVpKe908t4W3+Xa2\/ernJR1DNct57AkptIknOp1P+L2+N5luehzbnD4xXfgXQJNS3\/xxfEAFPm\/C2yEUS0AAAAASUVORK5CYII=",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAGSSURBVFiF7ZjBsYMwDETFcOBICS6F0kxplOISOHJgUHZXkPxMfgEoEx3A8ctFo5W8xuwXXx6u6Nyb2dGfa8aN6c5H7fCa5qPfxmZdbOWlg\/uC5Yine9BzKzVV1WY8V\/sSinzb5I7alTk9vQRYXJpE1h+KzUXPubEj3+iy+s9USUUjQNVlVKZ9RC4KAUKNh+YGZru6TAJNS13nVMdt+zs96o2pDVKdr2cfNW2Wq1QJ6a6lQ3WOSqFUHpWqaWmUC0ori0Xt9J\/F0lL2EV69UkSmRdO7uKelMD4xE87pzToOa2b6aimMt36DZ\/B9WGFb81Ikp5MI+cotVOTLH2npfuVbaOWQKZTJOualbCx5hWYxN+CCNg6RtJRLnFPGGx\/P31apyXtTmhqrvCnQ2gykjMQ0QudRZdY8WmUj0lJlF\/cFboxcvyZDRnp+G3HJUDcg1fHy3hnp85I9zY6WM2ry1WVpKe908t4W3+Xa2\/ernJR1DNct57AkptIknOp1P+L2+N5luehzbnD4xXfgXQJNS3\/xxfEAFPm\/C2yEUS0AAAAASUVORK5CYII=",
                 "alt": "",
                 "external": false,
                 "status": 404
             },
             {
-                "src": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHfSURBVFiF7ZhBsoJADERDsWDJETiKNwO5GUfhCCxdUOR3Jwyi\/gM0llNo6Tw2IZ1OBrPf+vLlXJPZrfaJPx\/dvYk9Ybri0064aiKzZuZlNijT1td28uXGa49oHny+APUJPzbrtmbur0MhHjz\/yv3fiLRoKAePH7c5NlM8r7pSo1mhCApXpqD\/qF81avs9kQWzyufe3pcajYcPSzm7CtOhTLG\/0ro9suBjuPdY1K5JUza+WFYoarN6GMRzF6bsj4vBuhkRCvPRIReHq6hSJoKUESEL+w0mTFM5XtQONDIRnWtTy46DmSQEMzjUvitHkxpchaMIW88WfkLBF1fRpCtHPjxyqj3aOo1le05916NMTfgkQsYXRqzwydJDJSn2E9XIFB0S2cFkeKhOkaKH1mGSOV+h6eesokxZBTjgREQUTIyFcB5lykTEAQe5iLINnzz3Iz1ax77l0YyxWMUeWnSlSUulZlGyE\/l5+tKk7EQcC0uFDuEtLkxzoTyN81VXivSpK0FKB+EBh80U5zJkIU5nx5SrSPfzb7iKxaCS3mLKNN4zhHW7MSLe4MUJlWmefzMWnnHe3ptJ0jXSUfkxx75mQY2GcnhmX\/Y51j50pUazQvN9TpQn\/49H378g\/a0vXn8WNYCSuHD01gAAAABJRU5ErkJggg==",
+                "src": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHfSURBVFiF7ZhBsoJADERDsWDJETiKNwO5GUfhCCxdUOR3Jwyi\/gM0llNo6Tw2IZ1OBrPf+vLlXJPZrfaJPx\/dvYk9Ybri0064aiKzZuZlNijT1td28uXGa49oHny+APUJPzbrtmbur0MhHjz\/yv3fiLRoKAePH7c5NlM8r7pSo1mhCApXpqD\/qF81avs9kQWzyufe3pcajYcPSzm7CtOhTLG\/0ro9suBjuPdY1K5JUza+WFYoarN6GMRzF6bsj4vBuhkRCvPRIReHq6hSJoKUESEL+w0mTFM5XtQONDIRnWtTy46DmSQEMzjUvitHkxpchaMIW88WfkLBF1fRpCtHPjxyqj3aOo1le05916NMTfgkQsYXRqzwydJDJSn2E9XIFB0S2cFkeKhOkaKH1mGSOV+h6eesokxZBTjgREQUTIyFcB5lykTEAQe5iLINnzz3Iz1ax77l0YyxWMUeWnSlSUulZlGyE\/l5+tKk7EQcC0uFDuEtLkxzoTyN81VXivSpK0FKB+EBh80U5zJkIU5nx5SrSPfzb7iKxaCS3mLKNN4zhHW7MSLe4MUJlWmefzMWnnHe3ptJ0jXSUfkxx75mQY2GcnhmX\/Y51j50pUazQvN9TpQn\/49H378g\/a0vXn8WNYCSuHD01gAAAABJRU5ErkJggg==",
                 "alt": "",
                 "external": false,
                 "status": 404
@@ -181,49 +181,49 @@
             "flash": 0
         },
         "links": {
-            "\/": {
+            "\/fr": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "",
                 "external": false
             },
-            "\/growth": {
+            "\/fr\/growth": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Kurven",
                 "external": false
             },
-            "\/resources": {
+            "\/fr\/resources": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
                 "external": false
             },
-            "\/about": {
+            "\/fr\/about": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
                 "external": false
             },
-            "\/contact": {
+            "\/fr\/contact": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Kontakt",
                 "external": false
             },
-            "\/tag:kurse#blog_list": {
+            "\/fr\/tag:kurse#blog_list": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "kurse",
                 "external": false
             },
-            "\/tag:konservierung#blog_list": {
+            "\/fr\/tag:konservierung#blog_list": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -293,14 +293,14 @@
                 "text": "",
                 "external": false
             },
-            "\/blog\/kurse-raufuttermeisterschaft\/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf": {
+            "\/fr\/blog\/kurse-raufuttermeisterschaft\/Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Kurzanleitung von Bastien Hayoz (2024)",
                 "external": false
             },
-            "\/blog\/kurse-raufuttermeisterschaft\/%5BAgroscope_ProbenahmeRaufutter_Hayoz_2024.pdf%5D(Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf)": {
+            "\/fr\/blog\/kurse-raufuttermeisterschaft\/%5BAgroscope_ProbenahmeRaufutter_Hayoz_2024.pdf%5D(Agroscope_ProbenahmeRaufutter_Hayoz_2024.pdf)": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -321,7 +321,7 @@
                 "text": "",
                 "external": false
             },
-            "\/blog\/kurse-raufuttermeisterschaft\/12665-17199-de-pub.pdf": {
+            "\/fr\/blog\/kurse-raufuttermeisterschaft\/12665-17199-de-pub.pdf": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -419,70 +419,70 @@
                 "text": "Link to article",
                 "external": true
             },
-            "\/blog\/2024-kw45": {
+            "\/fr\/blog\/2024-kw45": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Vorheriger Beitrag",
+                "text": "Article pr\u00e9c\u00e9dent",
                 "external": false
             },
-            "\/blog\/2024-12-weideeingaenge": {
+            "\/fr\/blog\/2024-12-weideeingaenge": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "N\u00e4chster Beitrag",
+                "text": "Article suivant",
                 "external": false
             },
-            "\/random": {
+            "\/fr\/random": {
                 "count": 0,
                 "target": "",
                 "rel": "",
-                "text": "Auf gut Gl\u00fcck!",
+                "text": "J'ai de la chance !",
                 "external": false
             },
-            "\/tag:weide": {
+            "\/fr\/tag:weide": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "weide",
                 "external": false
             },
-            "\/tag:wachstumsbericht": {
+            "\/fr\/tag:wachstumsbericht": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "wachstumsbericht",
                 "external": false
             },
-            "\/tag:infrastruktur": {
+            "\/fr\/tag:infrastruktur": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "infrastruktur",
                 "external": false
             },
-            "\/tag:gallerie": {
+            "\/fr\/tag:gallerie": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "gallerie",
                 "external": false
             },
-            "\/tag:kurse": {
+            "\/fr\/tag:kurse": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "kurse",
                 "external": false
             },
-            "\/tag:konservierung": {
+            "\/fr\/tag:konservierung": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "konservierung",
                 "external": false
             },
-            "\/tag:betriebsportrait": {
+            "\/fr\/tag:betriebsportrait": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -531,21 +531,21 @@
                 "text": "1\n                December 2021",
                 "external": true
             },
-            "\/blog.atom": {
+            "\/fr\/blog.atom": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "Atom",
                 "external": false
             },
-            "\/blog.rss": {
+            "\/fr\/blog.rss": {
                 "count": 0,
                 "target": "",
                 "rel": "",
                 "text": "RSS",
                 "external": false
             },
-            "\/legal": {
+            "\/fr\/legal": {
                 "count": 0,
                 "target": "",
                 "rel": "",
@@ -575,28 +575,28 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "Inhaltsverzeichnis 1 Futterprobe nehmen 2 Eigene Futterprobe beurteilen D\u00fcrrfutter Grassilage Maissilage 3 Futterprobe erfassen 4 Futterproben gegenseitig ben\u2026",
-            "title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
+            "title": "Unterlagen Raufuttermeisterschaft",
             "keywords": "eigene,futterprobe,2025,maissilage,microsoft,beurteilen,erfassen,forms,raufutter-meisterschaft,lernziel",
-            "image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
-            "og:url": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+            "image": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
+            "og:title": "Unterlagen Raufuttermeisterschaft",
             "og:description": "Inhaltsverzeichnis 1 Futterprobe nehmen 2 Eigene Futterprobe beurteilen D\u00fcrrfutter Grassilage Maissilage 3 Futterprobe erfassen 4 Futterproben gegenseitig ben\u2026",
             "og:type": "article",
-            "og:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "og:image": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:secure": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "og:image:secure": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
+            "twitter:title": "Unterlagen Raufuttermeisterschaft",
             "twitter:description": "Inhaltsverzeichnis 1 Futterprobe nehmen 2 Eigene Futterprobe beurteilen D\u00fcrrfutter Grassilage Maissilage 3 Futterprobe erfassen 4 Futterproben gegenseitig ben\u2026",
-            "twitter:image": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
-            "twitter:image:alt": "Unterlagen Raufuttermeisterschaft | graswachstum.ch",
+            "twitter:image": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft\/seomagic-image.jpg",
+            "twitter:image:alt": "Unterlagen Raufuttermeisterschaft",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "1 Minute"
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
-        "canonical": "https:\/\/graswachstum.ch\/blog\/kurse-raufuttermeisterschaft",
+        "canonical": "https:\/\/graswachstum.ch\/fr\/blog\/kurse-raufuttermeisterschaft",
         "links": {
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
@@ -781,5 +781,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: b7 (easy handle 0x558313444b60)\n> GET \/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:33 GMT\r\n* Added cookie grav-site-23a95d8=\"64a4ea858acd4453c933c5d3c202ee1f\" for domain graswachstum.ch, path \/, expire 1738876053\n< set-cookie: grav-site-23a95d8=64a4ea858acd4453c933c5d3c202ee1f; expires=Thu, 06-Feb-2025 21:07:33 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:33 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 1f3 (easy handle 0x55831343e3b0)\n> GET \/fr\/blog\/kurse-raufuttermeisterschaft HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Unterlagen Raufuttermeisterschaft\r\n< grav-page-route: \/blog\/kurse-raufuttermeisterschaft\r\n< grav-page-rawroute: \/blog\/kurse-raufuttermeisterschaft\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:35 GMT\r\n* Added cookie grav-site-23a95d8=\"240736f0a878ffc609a33a34e88e1314\" for domain graswachstum.ch, path \/, expire 1738876055\n< set-cookie: grav-site-23a95d8=240736f0a878ffc609a33a34e88e1314; expires=Thu, 06-Feb-2025 21:07:35 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:35 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

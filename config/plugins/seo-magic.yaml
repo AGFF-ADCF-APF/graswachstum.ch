@@ -47,7 +47,7 @@ images:
     - og-image
     - media_first
     - default
-  type: webshot
+  type: auto
   webshot_url: 'https://webshot.getgrav.org'
   image_name: og-image.jpg
   image_attribute: hero_image

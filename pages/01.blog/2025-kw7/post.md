@@ -1,6 +1,6 @@
 ---
 title: 'Woche 7 (10.02.-16.02.2025)'
-date: '06-02-2025 20:57'
+date: '11-02-2025 22:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'

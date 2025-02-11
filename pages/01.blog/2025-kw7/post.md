@@ -46,7 +46,7 @@ So auch diesmal: die aktuellen Bodentemperaturen sind mit 5 bis 7°C in Irland b
 
 **Zu 1/4:**
 Aufgrund des bereits vorhandenen Grasbewuchs von ca. 600 - 800 kg TS/ha wird für Irland geraten, bereits bis zu 1/3 der Tagesration an Weidefutter einzuplanen. Natürlich kann dies noch nicht verallgemeinert werden: Auf Grund der tatsächlich gemessenen durchschnittlichen Grasvorräte (Average Farm Cover AFC, in kg TS/ha), der verfügbaren Fläche und der Futteraufnahme sollte ein Frühlings-Gras-Budget erstellt werden. Ein Beispiel:
-![SpringGrazingAllocation_2025](SpringGrazingAllocation_2025.png&lightbox&resize=600 "Beispiel für Frühlings-Weidezuteilung. Quelle: Teagasc Grass10 Newsletter")
+![SpringGrazingAllocation_2025](SpringGrazingAllocation_2025.png&lightbox "Beispiel für Frühlings-Weidezuteilung. Quelle: Teagasc Grass10 Newsletter")
 ![SpringGrazingAllocation_2025](SpringGrazingAllocation_2025.png "SpringGrazingAllocation_2025")
 
 Übersetzt in unsere Verhältnisse heisst das: Die **Grashöhe messen**, sobald die **Weiden ergrünen**. Und dann mutig drauf los, wenn die Bodenbedingungen es zulassen. Für die nächsten Tage heisst es aber auch für Irland: Wegen Regenwetter stundenweise Beweidung in Betracht ziehen und Kühe nur hungrig und zum Fressen auf die Weide lassen.

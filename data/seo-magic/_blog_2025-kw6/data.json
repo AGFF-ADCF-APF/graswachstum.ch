@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-kw6",
         "page_title": "Woche 6 (03.02.-09.02.2025)"
     },
-    "updated": 1739302783,
+    "updated": 1739302843,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 6 (03.02.-09.02.2025)",
         "grav-page-route": "\/blog\/2025-kw6",
         "grav-page-rawroute": "\/blog\/2025-kw6",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 18 Feb 2025 19:39:43 GMT",
+        "expires": "Tue, 18 Feb 2025 19:40:43 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Tue, 11 Feb 2025 19:39:43 GMT",
+        "date": "Tue, 11 Feb 2025 19:40:43 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1739302783.2495739459991455078125,
-        "total_time": 0.1431920000000000137152511570093338377773761749267578125,
-        "namelookup_time": 0.017478000000000000480060435847917688079178333282470703125,
-        "connect_time": 0.0175559999999999986897147863373902509920299053192138671875,
-        "pretransfer_time": 0.02127300000000000024247270857813418842852115631103515625,
-        "starttransfer_time": 0.1426759999999999972697395378418150357902050018310546875,
+        "start_time": 1739302843.4198439121246337890625,
+        "total_time": 0.145579999999999987192467187924194149672985076904296875,
+        "namelookup_time": 0.000382999999999999985421383907890913178562186658382415771484375,
+        "connect_time": 0.0004789999999999999878534662212103967249277047812938690185546875,
+        "pretransfer_time": 0.00438000000000000021260770921571747749112546443939208984375,
+        "starttransfer_time": 0.1450329999999999952553508819619310088455677032470703125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 551,
         "request_size": 122,
         "redirect_count": 0,
-        "size_download": 9166,
-        "speed_download": 64011,
+        "size_download": 9213,
+        "speed_download": 63284,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,21 +41,21 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 38457
+        "content_size": 39057
     },
     "content": {
-        "body": "<h1>Den Beginn der Weidesaison jetzt planen<\/h1>\n<p>Gr&uuml;nlandpflege \/ Bald schon geht es ans Austreiben der K&uuml;he auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbest&auml;nde noch zu kontrollieren und allenfalls zu pflegen.\n <\/p>\n<p>Artikel Bauern Zeitung AGFF Merkblatt 5<\/p>\n<p>Hier gibts etwas Zusatzmaterial zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch).<\/p>\n\n<p>Im Artikel spricht Nicolas Marti unter anderem die Hofd&uuml;ngerausbringung an. Grunds&auml;tzlich d&uuml;rfen w&auml;hrend der Vegetationsruhe keine G&uuml;lle und kein Gefl&uuml;gelmist ausgebracht werden. Grunds&auml;tzlich ist davon auszugehen, dass im Mittelland im Januar und Februar Vegetationsruhe herrscht. Wenn w&auml;hrend 5 Tagen die durchschnittliche Temperatur in 2 Metern H&ouml;he (Tag und Nacht!) &uuml;ber 5 &deg;C klettert, gilt die Ruhe als unterbrochen. Verschiedene Kantone habe hierzu ihre Merkbl&auml;tter ver&ouml;ffentlicht (Beispiele LU, AG, ZH, SG).<\/p>\n<p>Der Kanton SG stellt f&uuml;r sein Gebiet tagesaktuelle Messwerte zur Verf&uuml;gung. F&uuml;r die Bestimmung der Tagesmitteltemperaturen kann www.agrometeo.ch herangezogen werden, sofern Messstationen in der N&auml;he vorhanden sind. Wenn die Abfrage f&uuml;r einen Ort einmal konfiguriert ist, kann die URL als Favorit abgespeichert werden. Dieser Link f&uuml;hrt zu einer vorbereiteten Abfrage der wichtigsten Temperaturwerte.<\/p>\n<p>Aktuelle Temperaturen auf agrometeo.ch (ausgew&auml;hlte Stationen)\n(auf Knopf \"Diagramm erstellen\" dr&uuml;cken, etwas warten...)<\/p>\n<p>Weitere verf&uuml;gbare Agrometeo-Stationen<\/p>\n<p>Jetzt aktuell: Wiesen kontrollieren und Massnahmen ergreifen\nAGFF Merkblatt 5<\/p>\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere Kuhe = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Anbei ein Sammlung spannender Ans&auml;tze von zahlreichen Betrieben in der ganzen Schweiz.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden",
+        "body": "<h1>Den Beginn der Weidesaison jetzt planen<\/h1>\n<p>Gr&uuml;nlandpflege \/ Bald schon geht es ans Austreiben der K&uuml;he auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbest&auml;nde noch zu kontrollieren und allenfalls zu pflegen.\n <\/p>\n<p>Artikel Bauern Zeitung AGFF Merkblatt 5<\/p>\n<p>Hier gibts etwas Zusatzmaterial zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch).<\/p>\n\n<p>Im Artikel spricht Nicolas Marti unter anderem die Hofd&uuml;ngerausbringung an. Grunds&auml;tzlich d&uuml;rfen w&auml;hrend der Vegetationsruhe keine G&uuml;lle und kein Gefl&uuml;gelmist ausgebracht werden. Grunds&auml;tzlich ist davon auszugehen, dass im Mittelland im Januar und Februar Vegetationsruhe herrscht. Wenn w&auml;hrend 5 Tagen die durchschnittliche Temperatur in 2 Metern H&ouml;he (Tag und Nacht!) &uuml;ber 5 &deg;C klettert, gilt die Ruhe als unterbrochen. Verschiedene Kantone habe hierzu ihre Merkbl&auml;tter ver&ouml;ffentlicht (Beispiele LU, AG, ZH, SG).<\/p>\n<p>Der Kanton SG stellt f&uuml;r sein Gebiet tagesaktuelle Messwerte zur Verf&uuml;gung. F&uuml;r die Bestimmung der Tagesmitteltemperaturen kann www.agrometeo.ch herangezogen werden, sofern Messstationen in der N&auml;he vorhanden sind. Wenn die Abfrage f&uuml;r einen Ort einmal konfiguriert ist, kann die URL als Favorit abgespeichert werden. Dieser Link f&uuml;hrt zu einer vorbereiteten Abfrage der wichtigsten Temperaturwerte.<\/p>\n<p>Aktuelle Temperaturen auf agrometeo.ch (ausgew&auml;hlte Stationen)\n(auf Knopf \"Diagramm erstellen\" dr&uuml;cken, etwas warten...)<\/p>\n<p>Weitere verf&uuml;gbare Agrometeo-Stationen<\/p>\n<p>Jetzt aktuell: Wiesen kontrollieren und Massnahmen ergreifen\nAGFF Merkblatt 5<\/p>\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge\n        <\/h3>\n      \n            <h1>Saubere Kuhe = sauberes Gras<\/h1>\n<p>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Anbei ein Sammlung spannender Ans&auml;tze von zahlreichen Betrieben in der ganzen Schweiz.<\/p>\n\n    \n    \n      17th Dec 2021\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden",
         "headers": {
             "h1": [
                 "Woche 6 (03.02.-09.02.2025)",
                 "Den Beginn der Weidesaison jetzt planen",
-                "Saubere K\u00fche = sauberes Gras",
-                "Saubere Kuhe = sauberes Gras"
+                "Saubere Kuhe = sauberes Gras",
+                "Saubere K\u00fche = sauberes Gras"
             ],
             "h2": [],
             "h3": [
-                "Weideeing\u00e4nge und Zugangswege",
-                "Weideeing\u00e4nge"
+                "Weideeing\u00e4nge",
+                "Weideeing\u00e4nge und Zugangswege"
             ],
             "h4": [
                 "Other Related Posts:",
@@ -81,14 +81,14 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-12-weideeingaenge\/Nasse_Weide_PXL_20240601_155722580.jpg?g-bb449b04",
-                "alt": "Weideeing\u00e4nge und Zugangswege",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg?g-bb449b04",
+                "alt": "Weideeing\u00e4nge",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-weideeingaenge\/Feldweg_Tra\u0308nkefass_img_6964.jpg?g-bb449b04",
-                "alt": "Weideeing\u00e4nge",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-12-weideeingaenge\/Nasse_Weide_PXL_20240601_155722580.jpg?g-bb449b04",
+                "alt": "Weideeing\u00e4nge und Zugangswege",
                 "external": true,
                 "status": 200
             },
@@ -250,6 +250,22 @@
                 "external": false,
                 "status": 200
             },
+            "\/blog\/2025-kw7": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "N\u00e4chster Beitrag",
+                "external": false,
+                "status": 200
+            },
+            "\/blog\/2024-weideeingaenge": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge",
+                "external": false,
+                "status": 200
+            },
             "\/tag:infrastruktur#blog_list": {
                 "count": 1,
                 "target": "",
@@ -263,14 +279,6 @@
                 "target": "",
                 "rel": "",
                 "text": "gallerie",
-                "external": false,
-                "status": 200
-            },
-            "\/blog\/2024-weideeingaenge": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "Weideeing\u00e4nge",
                 "external": false,
                 "status": 200
             },
@@ -342,7 +350,7 @@
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "1\n                February 2025",
+                "text": "2\n                February 2025",
                 "external": true,
                 "status": 200
             },
@@ -435,12 +443,12 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "Aktuelle Temperaturen auf agrometeo.ch (ausgew\u00e4hlte Stationen) (auf Knopf Diagramm erstellen dr\u00fccken, etwas warten...) Weitere verf\u00fcgbare Agrometeo-Statione\u2026",
-            "title": "Woche 6 (03.02.-10.02.2025) | graswachstum.ch",
+            "title": "Woche 6 (03.02.-09.02.2025) | graswachstum.ch",
             "keywords": "weideinfrastruktur,betrieblichen,gras,regentagen,deutlich,letzten,zeigte,weidesaison,weide,infrastruktur,",
             "image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2025-kw6",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 6 (03.02.-10.02.2025) | graswachstum.ch",
+            "og:title": "Woche 6 (03.02.-09.02.2025) | graswachstum.ch",
             "og:description": "Aktuelle Temperaturen auf agrometeo.ch (ausgew\u00e4hlte Stationen) (auf Knopf Diagramm erstellen dr\u00fccken, etwas warten...) Weitere verf\u00fcgbare Agrometeo-Statione\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
@@ -448,10 +456,10 @@
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 6 (03.02.-10.02.2025) | graswachstum.ch",
+            "twitter:title": "Woche 6 (03.02.-09.02.2025) | graswachstum.ch",
             "twitter:description": "Aktuelle Temperaturen auf agrometeo.ch (ausgew\u00e4hlte Stationen) (auf Knopf Diagramm erstellen dr\u00fccken, etwas warten...) Weitere verf\u00fcgbare Agrometeo-Statione\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/blog\/2025-kw6\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 6 (03.02.-10.02.2025) | graswachstum.ch",
+            "twitter:image:alt": "Woche 6 (03.02.-09.02.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
             "twitter:data1": "1 Minute"
         },
@@ -652,5 +660,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw6\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw6]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw6 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 6 (03.02.-09.02.2025)\r\n< grav-page-route: \/blog\/2025-kw6\r\n< grav-page-rawroute: \/blog\/2025-kw6\r\n< cache-control: max-age=604800\r\n< expires: Tue, 18 Feb 2025 19:39:43 GMT\r\n* Added cookie grav-site-23a95d8=\"18907bf1db5d0892d92d1eff41addbc5\" for domain graswachstum.ch, path \/, expire 1739304583\n< set-cookie: grav-site-23a95d8=18907bf1db5d0892d92d1eff41addbc5; expires=Tue, 11-Feb-2025 20:09:43 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 11 Feb 2025 19:39:43 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw6\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw6]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw6 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 6 (03.02.-09.02.2025)\r\n< grav-page-route: \/blog\/2025-kw6\r\n< grav-page-rawroute: \/blog\/2025-kw6\r\n< cache-control: max-age=604800\r\n< expires: Tue, 18 Feb 2025 19:40:43 GMT\r\n* Added cookie grav-site-23a95d8=\"3752c432cb61121c8ee6a7d45c737eff\" for domain graswachstum.ch, path \/, expire 1739304643\n< set-cookie: grav-site-23a95d8=3752c432cb61121c8ee6a7d45c737eff; expires=Tue, 11-Feb-2025 20:10:43 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 11 Feb 2025 19:40:43 GMT\r\n< server: Apache\r\n< \r\n"
 }

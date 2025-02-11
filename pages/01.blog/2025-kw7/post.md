@@ -5,7 +5,7 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: 'Temperatur Durchschnitt +2 m (°C) (1).png'
+    image: PXL_20250209_144310976.jpg
     image_alignment: object-center
 taxonomy:
     category:
@@ -22,29 +22,18 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-media_order: 'Temperatur Durchschnitt +2 m (°C) (1).png'
+media_order: 'PXL_20250209_144310976.jpg,Grass10_Week.png,Spring grazing allocation_2025.png'
 ---
 
-# Den Beginn der Weidesaison jetzt planen
+# Soll ich mit Weiden beginnen?
 
-**Grünlandpflege / Bald schon geht es ans Austreiben der Kühe auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbestände noch zu kontrollieren und allenfalls zu pflegen.
+**Grass10 Newsletter / Das Grass10-Team von [Teagasc](https://www.teagasc.ie/crops/grassland/grass10/) bringt jeden Dienstag Nachmittag den [Grass10-Weide-Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/) heraus. Achtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration für unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.
 ** 
 
-[Artikel Bauern Zeitung](https://www.bauernzeitung.ch/dossier/pflanzen/den-beginn-der-weidesaison-jetzt-planen-548723?class=button) [AGFF Merkblatt 5](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf?class=button)
-
-Hier gibts etwas Zusatzmaterial zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch).
-
 ===
+"Can grazing begin on your farm?" Diese Frage stellt der heute erschienen Grass10-Newsletter. Nun ja, eine berechtigte Frage, da letztes Jahr auch schon Kühe auf der Weide waren, als ich Mitte Februar in die Skiferien fuhr. Dennoch stellt sich immer die Frage, wie weit wir Empfehlungen aus dem Meer-beeinflussten, milderen Irland auf die Schweiz übertragen können. Im Frühjahr darf man die Empfehlung meist ca. 2 Wochen nach hinten schieben, dann passt es für das im Mittelland recht gut. 
+So auch diesmal: die aktuellen Bodentemperaturen sind mit 5 bis 7°C in Irland bereits etwas wärmer als in der Schweiz (ca. 3-4°C gemäss [Agrometeo](https://www.agrometeo.ch/de/meteorologie/grafik?stations=159,160,136,223,216,194,55,185,212,128&sensors=1%3Acumsum%3A0,3%3Aavg&from=2025-01-01&to=2025-02-16&scale=day&groupBy=sensor&measured=1)) – wobei nicht ganz klar wird, ob die Bodentemperatur ebenfalls in einer Tiefe von 10cm gemessen wird. Somit dürfte auch das Graswachstum bei uns noch kaum angefangen haben, im Gegensatz zu Irland mit ca. 6-10kg TS/ha/Tag. Gemein hat die Insel die erwarteten Regenfälle in den nächsten Tagen.
 
-Im Artikel spricht Nicolas Marti unter anderem die Hofdüngerausbringung an. Grundsätzlich dürfen während der Vegetationsruhe keine Gülle und kein Geflügelmist ausgebracht werden. Grundsätzlich ist davon auszugehen, dass im Mittelland im Januar und Februar Vegetationsruhe herrscht. Wenn während 5 Tagen die durchschnittliche Temperatur in 2 Metern Höhe (Tag und Nacht!) über 5 °C klettert, gilt die Ruhe als unterbrochen. Verschiedene Kantone habe hierzu ihre Merkblätter veröffentlicht (Beispiele [LU](https://lawa.lu.ch/-/media/LAWA/Dokumente/Landwirtschaft/Stofflicher_Gewaesserschutz/MB_Checkliste_Hof_und_Recyclingduenger.pdf), [AG](https://www.ag.ch/media/kanton_aargau/dfr/dokumente_3/landwirtschaft_2/1470062_Merkblatt_14_01.pdf
-), [ZH](https://redaktion.strickhof.ch/server/api/dokument/GetDokument?id=686), [SG](https://www.sg.ch/umwelt-natur/umwelt/Vollzugshilfsmittel/stoffgesetzgebung--umweltgefaehrdende-stoffe--vollzugsaufgaben-g/vollzug-der-vorschriften-ueber-die-verwendung-von-duenger-und-bo/duengen-im-winter.html)).
+![Grass10_Week](Grass10_Week.png "Grass10_Week")
 
-Der Kanton SG stellt für sein Gebiet [tagesaktuelle Messwerte](https://www.sg.ch/content/dam/sgch/umwelt-natur/umwelt/dokumente/landwirtschaft/Ergebnisse%20Vegetationsstand%20f%C3%BCr%20Webseite.pdf) zur Verfügung. Für die Bestimmung der Tagesmitteltemperaturen kann www.agrometeo.ch herangezogen werden, sofern Messstationen in der Nähe vorhanden sind. Wenn die Abfrage für einen Ort einmal konfiguriert ist, kann die URL als Favorit abgespeichert werden. Dieser Link führt zu einer vorbereiteten Abfrage der wichtigsten Temperaturwerte.
-
-[Aktuelle Temperaturen auf agrometeo.ch (ausgewählte Stationen)](https://www.agrometeo.ch/de/meteorologie?stations=223,216,194,55,185,212,128,149&sensors=1%3Aavg,1%3Amin,2%3Amin,2%3Aavg,6%3Asum,6%3Acumsum%3A0,3%3Aavg&from=2025-01-23&to=2025-12-31&scale=day&groupBy=sensor&measured=1&class=button) 
-(auf Knopf "Diagramm erstellen" drücken, etwas warten...)
-
-[Weitere verfügbare Agrometeo-Stationen](https://www.agrometeo.ch/de?class=button)
-
-Jetzt aktuell: Wiesen kontrollieren und Massnahmen ergreifen
-[AGFF Merkblatt 5](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/agff-merkblatt-5.pdf?class=button)
+Aufgrund des bereits vorhandenen Grasbewuchs von ca. 600 - 800 kg TS/ha wird für Irland geraten, bereits bis zu 1/3 der Tagesration an Weidefutter einzuplanen. Natürlich kann dies noch nicht verallgemeinert werden: Auf Grund der tatsächlich gemessenen durchschnittlichen Grasvorräte (Average Farm Cover AFC, in kg TS/ha), der verfügbaren Fläche und der Futteraufnahme sollte ein Frühlings-Gras-Budget erstellt werden. Ein Beispiel:

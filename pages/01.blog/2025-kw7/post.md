@@ -15,7 +15,7 @@ taxonomy:
         - wachstumsbericht
     author:
         - 'Zbinden Martin'
-author: 'Nicolas Marti, Martin Zbinden'
+author: 'Martin Zbinden'
 sitemap:
     lastmod: '19-12-2024 07:07'
 shortcode-citation:

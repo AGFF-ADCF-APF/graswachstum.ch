@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-kw7",
         "page_title": "Woche 7 (10.02.-16.02.2025)"
     },
-    "updated": 1739306829,
+    "updated": 1739306843,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 7 (10.02.-16.02.2025)",
         "grav-page-route": "\/blog\/2025-kw7",
         "grav-page-rawroute": "\/blog\/2025-kw7",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 18 Feb 2025 20:47:09 GMT",
+        "expires": "Tue, 18 Feb 2025 20:47:23 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Tue, 11 Feb 2025 20:47:09 GMT",
+        "date": "Tue, 11 Feb 2025 20:47:23 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1739306829.252541065216064453125,
-        "total_time": 0.124051999999999995605293179323780350387096405029296875,
-        "namelookup_time": 0.0003409999999999999945217432628652431958471424877643585205078125,
-        "connect_time": 0.0004249999999999999763210245529165831612772308290004730224609375,
-        "pretransfer_time": 0.0040280000000000003301803275235215551219880580902099609375,
-        "starttransfer_time": 0.1235300000000000009148237722911289893090724945068359375,
+        "start_time": 1739306843.1247460842132568359375,
+        "total_time": 0.1184790000000000009805489753489382565021514892578125,
+        "namelookup_time": 0.0003730000000000000134024735753968116114265285432338714599609375,
+        "connect_time": 0.000451000000000000011990408665951690636575222015380859375,
+        "pretransfer_time": 0.00426200000000000016331380692236052709631621837615966796875,
+        "starttransfer_time": 0.11801799999999999790656346476680482737720012664794921875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 551,
         "request_size": 122,
         "redirect_count": 0,
-        "size_download": 8930,
-        "speed_download": 71985,
+        "size_download": 8929,
+        "speed_download": 75363,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -81,7 +81,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/images\/g\/r\/a\/s\/s\/grass10week-0a29b4ee.png?g-bb449b04",
+                "src": "https:\/\/graswachstum.ch\/images\/g\/r\/a\/s\/s\/grass10week-44197925.png?g-bb449b04",
                 "alt": "Grass10_Week",
                 "external": true,
                 "status": 200
@@ -410,7 +410,7 @@
             "generator": "GravCMS",
             "description": "Ein Beispiel: weide infrastruktur Weideeing\u00e4nge Saubere Kuhe = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sic\u2026",
             "title": "Woche 7 (10.02.-16.02.2025) | graswachstum.ch",
-            "keywords": "weideinfrastruktur,betrieblichen,gras,regentagen,deutlich,schweiz,irland,betrieben,infrastruktur,weide,",
+            "keywords": "weideinfrastruktur,gras,regentagen,betrieblichen,deutlich,schweiz,irland,betrieben,infrastruktur,weide,",
             "image": "https:\/\/graswachstum.ch\/blog\/2025-kw7\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2025-kw7",
             "og:site_name": "graswachstum.ch",
@@ -626,5 +626,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw7\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw7]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw7 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 7 (10.02.-16.02.2025)\r\n< grav-page-route: \/blog\/2025-kw7\r\n< grav-page-rawroute: \/blog\/2025-kw7\r\n< cache-control: max-age=604800\r\n< expires: Tue, 18 Feb 2025 20:47:09 GMT\r\n* Added cookie grav-site-23a95d8=\"a0152b102d907d5ed092513f13c5fe0e\" for domain graswachstum.ch, path \/, expire 1739308629\n< set-cookie: grav-site-23a95d8=a0152b102d907d5ed092513f13c5fe0e; expires=Tue, 11-Feb-2025 21:17:09 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 11 Feb 2025 20:47:09 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw7\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw7]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw7 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 7 (10.02.-16.02.2025)\r\n< grav-page-route: \/blog\/2025-kw7\r\n< grav-page-rawroute: \/blog\/2025-kw7\r\n< cache-control: max-age=604800\r\n< expires: Tue, 18 Feb 2025 20:47:23 GMT\r\n* Added cookie grav-site-23a95d8=\"3d7bd974a9e9d4a02de752c8a4178c4c\" for domain graswachstum.ch, path \/, expire 1739308643\n< set-cookie: grav-site-23a95d8=3d7bd974a9e9d4a02de752c8a4178c4c; expires=Tue, 11-Feb-2025 21:17:23 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 11 Feb 2025 20:47:23 GMT\r\n< server: Apache\r\n< \r\n"
 }

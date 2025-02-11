@@ -1,5 +1,5 @@
 ---
-title: 'Woche 6 (03.02.-10.02.2025)'
+title: 'Woche 6 (03.02.-09.02.2025)'
 date: '06-02-2025 20:57'
 hide_from_post_list: false
 hide_git_sync_repo_link: true

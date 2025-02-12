@@ -7,6 +7,7 @@ header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: PXL_20250209_144310976.jpg
     image_alignment: object-center
+    content: 'Bild: Anfangs Februar geniessen Schafe ihr erstes frisches grün im Jahr 2025. Ganz im Hintergrund (kaum erkennbar) eine Wanderherde am Durchziehen.'
 taxonomy:
     category:
         - blog

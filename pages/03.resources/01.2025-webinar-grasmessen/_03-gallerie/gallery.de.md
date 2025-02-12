@@ -17,7 +17,7 @@ gallery:
             desc: 'Foto: Nathan, 2024'
             video: null
         -
-            title: '"Erntepanzer"'
+            title: 'Spuren der Erntepanzer'
             image: 2024_Raphael_Erntepanzer.jpeg
             desc: 'Foto: Raphael Etterlin, 2024'
             video: null

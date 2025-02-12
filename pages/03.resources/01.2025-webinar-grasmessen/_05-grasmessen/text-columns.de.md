@@ -5,6 +5,8 @@ date: '19:37 12-02-2025'
 shortcode-citation:
     items: cited
     reorder_uncited: true
+aura:
+    author: zbma
 ---
 
 ## Das hat mir das Grasmessen im 2024 gebracht?

@@ -50,11 +50,11 @@ So auch diesmal: die aktuellen Bodentemperaturen sind mit 5 bis 7°C in Irland b
 4. Erstellen der ersten Grasvorrats-Messung und des Gras-Budgets
 
 ## Weidebeginn prüfen
-* Laut Grass10 kann mit Weiden begonnen werden, sobald die Grasbedeckung wenigstens 700 kg TS/ha beträgt. Dies entspricht ca. 6.5cm oder 13 clics mit dem Rising Plate Meter (RPM). 
+> * Laut Grass10 kann mit Weiden begonnen werden, sobald die Grasbedeckung wenigstens 700 (bis 1000) kg TS/ha beträgt. Dies entspricht ca. 6.5cm oder 13 clics mit dem Rising Plate Meter (RPM). 
 * Zunächst sollte mit einem Weidegang von einigen Stunden pro Tag angefangen werden. Dies kann so gelöst werden, dass die Kühe nach dem Morgenmelken nicht mehr gefüttert werden und dann vor dem Mittag hungrig auf eine Weideportion gelassen werden. Gezieltes, kurzes Beweiden sollte vor allem dann eingehalten werden, wenn es regnerisch und nass ist wie in den nächsten Tagen.
 * Zunächst sollten 6 kg TS pro laktierende Kuh und Tag zugewiesen werden. Sofern die Portionen sauber abgefressen werden, kann die Grasmenge alle paar Tage erhöht werden.
 
-! Interessanterweise scheinen die Iren das grossflächige Überweiden im Frühjahr, welches bei uns oft empfohlen wird,  nicht zu kennen. Es gilt zu bedenken, dass die dichten Raigrasbestände in Irland nicht mit unseren artenreicheren Naturwiesen zu vergleichen sind. Gerade in vorwiegend geschnittenen Naturwiesen kann ein früher Weidegang die Kräuter zurückdrängen und rasenbildende Gräser fördern.
+Interessanterweise scheinen die Iren das grossflächige Überweiden im Frühjahr, welches bei uns oft empfohlen wird,  nicht zu kennen. Es gilt zu bedenken, dass die dichten Raigrasbestände in Irland nicht mit unseren artenreicheren Naturwiesen zu vergleichen sind. Gerade in vorwiegend geschnittenen Naturwiesen kann ein früher Weidegang die Kräuter zurückdrängen und rasenbildende Gräser fördern. Zudem spricht nichts gegen eine Überweidung von noch kürzeren 
 
 ## Frühlings-Gras-Budget erstellen (zu Punkt 4)
 Aufgrund des bereits vorhandenen Grasbewuchs von ca. 600 - 800 kg TS/ha wird für Irland geraten, bereits bis zu 1/3 der Tagesration an Weidefutter einzuplanen. Natürlich kann dies noch nicht verallgemeinert werden: Auf Grund der tatsächlich gemessenen durchschnittlichen Grasvorräte (Average Farm Cover AFC, in kg TS/ha), der verfügbaren Fläche und der Futteraufnahme sollte ein Frühlings-Gras-Budget erstellt werden. Ein Beispiel:

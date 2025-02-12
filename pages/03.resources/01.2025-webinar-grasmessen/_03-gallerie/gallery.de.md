@@ -25,7 +25,7 @@ gallery:
         -
             title: '"Erntepanzer"'
             image: 2024_Raphael_Erntepanzer.jpeg
-            desc: 'Foto: Raphael, 2024'
+            desc: 'Foto: Raphael Etterlin, 2024'
             video: null
         -
             title: 'Heubelüften: mission impossible'

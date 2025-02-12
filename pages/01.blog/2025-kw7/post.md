@@ -28,7 +28,7 @@ media_order: 'PXL_20250209_144310976.jpg,Grass10_Week.png,Spring grazing allocat
 
 # Soll ich mit Weiden beginnen?
 
-_Grass10 Newsletter / Das Grass10-Team von [Teagasc](https://www.teagasc.ie/crops/grassland/grass10/) bringt jeden Dienstag Nachmittag den [Grass10-Weide-Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/) heraus. Achtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration für unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter._
+**Grass10 Newsletter / Das Grass10-Team von [Teagasc](https://www.teagasc.ie/crops/grassland/grass10/) bringt jeden Dienstag Nachmittag den [Grass10-Weide-Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/) heraus. Achtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration für unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.**
 
 
 ===

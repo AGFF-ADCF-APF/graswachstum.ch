@@ -1,5 +1,5 @@
 ---
-title: 'Programm (Vorschlag)'
+title: 'Links:'
 body_classes: modular
 date: '19:42 12-02-2025'
 shortcode-citation:
@@ -7,12 +7,8 @@ shortcode-citation:
     reorder_uncited: true
 ---
 
-20h00 Beginn Webinar, Begrüssung durch Martin Zbinden
+Aktuelle Studie zu den Vorteilen von Mischungen mit Kräutern: https://onlinelibrary.wiley.com/doi/full/10.1111/gfs.12700?campaign=woletoc
 
-20h10 Fragerunde: Michael, Susanne, Nicolas und das Plenum 
+KI für die Weideführung: https://www.aimer-farming.com
 
-21h00 Input von Nicolas Marti:  **So bringt Grasslandtools den grössten Nutzen. Tipps und Tricks eines regelmässigen Anwenders.**
-
-21h20 Verschiedenes
-
-21h30 Abschluss: Ausblick und Ideen für www.graswachstum.ch (Martin)
+Programm Plantahof Stalltag: https://www.klimabauern.ch/kurse-eintrag/plantahof-stalltag

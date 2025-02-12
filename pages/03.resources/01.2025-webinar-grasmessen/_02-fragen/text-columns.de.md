@@ -34,3 +34,6 @@ shortcode-citation:
 - 
 
 
+Aktuelle Studie zu den Vorteilen von Mischungen mit Kräutern: https://onlinelibrary.wiley.com/doi/full/10.1111/gfs.12700?campaign=woletoc
+
+https://www.aimer-farming.com

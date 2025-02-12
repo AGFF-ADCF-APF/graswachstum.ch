@@ -4,26 +4,26 @@
         "page_rawroute": "\/resources\/2025-webinar-grasmessen",
         "page_title": "Grasmess-Webinar 2025"
     },
-    "updated": 1739400975,
+    "updated": 1739401043,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Grasmess-Webinar 2025",
         "grav-page-route": "\/resources\/2025-webinar-grasmessen",
         "grav-page-rawroute": "\/resources\/2025-webinar-grasmessen",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 19 Feb 2025 22:56:15 GMT",
+        "expires": "Wed, 19 Feb 2025 22:57:23 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 12 Feb 2025 22:56:15 GMT",
+        "date": "Wed, 12 Feb 2025 22:57:23 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1739400975.557219982147216796875,
-        "total_time": 0.1447279999999999955395679762659710831940174102783203125,
-        "namelookup_time": 0.0003860000000000000041321113197767544988892041146755218505859375,
-        "connect_time": 0.0004620000000000000083162643438328132106107659637928009033203125,
-        "pretransfer_time": 0.0038019999999999998241406728993752039968967437744140625,
-        "starttransfer_time": 0.144000999999999990119903259255806915462017059326171875,
+        "start_time": 1739401043.8487110137939453125,
+        "total_time": 0.1356380000000000085602636090698069892823696136474609375,
+        "namelookup_time": 0.000378999999999999996613819774893272551707923412322998046875,
+        "connect_time": 0.00045600000000000002510491814433635227032937109470367431640625,
+        "pretransfer_time": 0.00367199999999999991684429545557577512226998805999755859375,
+        "starttransfer_time": 0.1349740000000000106350483974892995320260524749755859375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 585,
         "request_size": 142,
         "redirect_count": 0,
-        "size_download": 9226,
-        "speed_download": 63747,
+        "size_download": 9227,
+        "speed_download": 68026,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -662,5 +662,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/resources\/2025-webinar-grasmessen\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/resources\/2025-webinar-grasmessen]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/resources\/2025-webinar-grasmessen HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Grasmess-Webinar 2025\r\n< grav-page-route: \/resources\/2025-webinar-grasmessen\r\n< grav-page-rawroute: \/resources\/2025-webinar-grasmessen\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Feb 2025 22:56:15 GMT\r\n* Added cookie grav-site-23a95d8=\"bf61f8048dcf9f6feff80ce6d7cef8fc\" for domain graswachstum.ch, path \/, expire 1739402775\n< set-cookie: grav-site-23a95d8=bf61f8048dcf9f6feff80ce6d7cef8fc; expires=Wed, 12-Feb-2025 23:26:15 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 12 Feb 2025 22:56:15 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 13 08:00:35 2024 GMT\n*  expire date: Mar 13 08:00:34 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/resources\/2025-webinar-grasmessen\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/resources\/2025-webinar-grasmessen]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/resources\/2025-webinar-grasmessen HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Grasmess-Webinar 2025\r\n< grav-page-route: \/resources\/2025-webinar-grasmessen\r\n< grav-page-rawroute: \/resources\/2025-webinar-grasmessen\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Feb 2025 22:57:23 GMT\r\n* Added cookie grav-site-23a95d8=\"dd2d4a897f244ca9342c1ccb70b5d188\" for domain graswachstum.ch, path \/, expire 1739402843\n< set-cookie: grav-site-23a95d8=dd2d4a897f244ca9342c1ccb70b5d188; expires=Wed, 12-Feb-2025 23:27:23 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 12 Feb 2025 22:57:23 GMT\r\n< server: Apache\r\n< \r\n"
 }

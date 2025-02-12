@@ -1,6 +1,6 @@
 ---
 title: 'Webinar: Rückblick Messkampagne 2024 und Ausblick'
-date: '11-02-2025 22:00'
+date: '01-01-2024 22:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'

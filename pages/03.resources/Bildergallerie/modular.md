@@ -1,5 +1,5 @@
 ---
-title: 'Webinar für Grasmessende (Copy)'
+title: 'Webinar für Grasmessende'
 date: '01-01-2024 22:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true

@@ -15,9 +15,9 @@ columns: 2
 - Mut, im April grosszügig wegzukonservieren
 - Rasch Defizite und Überschüsse identifizieren und entsprechen handeln
 - Die Weiden von zu hinterst bis zu vorderst gründlich anschauen.
-- Projektion für 5, für 10 Tage erstellen und damit in die Zukunft planen.
+- Projektion für 5 bis 10 Tage erstellen und damit in die Zukunft planen.
 - Gute Diskussionsgrundlage: nicht mehr mähen oder nicht, sondern mähen wir Koppel 5A auch noch oder nicht?
-- Wenn mehrere Personen beim Weidemanagement beteiligt werden, vereinfachen Messungen die Kommunikation.
+- Wenn mehrere Personen am Weidemanagement beteiligt werden, vereinfachen Messungen die Kommunikation.
 - Workflow mit Grasshopper: Messung mit App, Feedwedge am PC bearbeiten, Nachzäunen mit Hilfe der App
 
 ## Das möchte ich 2025 verbessern

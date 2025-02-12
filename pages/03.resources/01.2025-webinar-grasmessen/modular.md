@@ -13,7 +13,7 @@ header_bar:
 content:
     items: self@.modular
 seo-magic:
-    description: "Herausforderungen, Highlights und was mir das Grasmessen im 2024 gebracht hat.\n"
+    description: 'Herausforderungen, Highlights und was mir das Grasmessen im 2024 gebracht hat.'
 ---
 
 # Rückblick Messkampagne 2024 und Ausblick

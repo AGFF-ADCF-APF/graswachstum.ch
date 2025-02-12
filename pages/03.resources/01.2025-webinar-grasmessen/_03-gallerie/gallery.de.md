@@ -33,7 +33,7 @@ gallery:
             desc: 'Foto: Martin Zbinden, 2024'
             video: null
         -
-            title: Wintereinfall
+            title: 'Wintereinfall im April'
             image: 2024_Sutter_Wintereinfall.jpeg
             desc: 'Foto: Michael Sutter, 2024'
             video: null
@@ -45,22 +45,22 @@ gallery:
         -
             title: 'Pretopping: mission possible?'
             image: 2024_PittKaech_Pretopping.jpeg
-            desc: 'Foto: Susanne Käch, 2024'
+            desc: "\nFoto: Susanne Käch, 2024"
             video: null
         -
-            title: null
+            title: 'Schwierige Futterstaffelung '
             image: 2024_Marti_Abgestorbene-Triebe-und-Keimlinge-alt-genutzt.jpg
-            desc: 'Foto: Nicolas Marti, 2024'
+            desc: "Ausgeschiedene Koppeln konnten viel zu lange nicht wegkonserviert werden. Die Grasnarbendichte hat enorm abgenommen, die Koppeln in der Rotation wurden dafür übernutzt.\n\nFoto: Nicolas Marti, 2024"
             video: null
         -
             title: 'Erste Nachtweide am 19. März 2024'
             image: 2024-PittKaech_erste-Nachweide-2024-03-19.jpeg
-            desc: 'Foto: Susanne Käch, 2024'
+            desc: "Sehr frühes und ausdauerndes Graswachstum. Kaum Bewässern, und ca. 130dt TS/ha statt 110.\nFoto: Susanne Käch, 2024"
             video: null
         -
-            title: null
+            title: 'Früher Weidebeginn'
             image: 2024_Sutter_Löwenzahn.jpeg
-            desc: 'Foto: Michael Sutter, 2024'
+            desc: "Das Programm AMER, das im Rahmen einer Schülerarbeit ausprobiert wurde hat sehr gute Unterstützung bei der Weideplanung gebracht.\nFoto: Michael Sutter, 2024\n"
             video: null
         -
             title: 'Ungebremstes Herbstwachstum'
@@ -68,19 +68,19 @@ gallery:
             desc: 'Foto: Gerber, 2024'
             video: null
         -
-            title: null
+            title: 'Überständige Koppeln beim erstmöglichen Zeitpunkt'
             image: 2024_Marti_Koppel-Maehen-mit-Motormaeher.jpg
-            desc: 'Foto: Nicolas Marti, 2024'
+            desc: "\n\nFoto: Nicolas Marti, 2024\n"
             video: null
         -
-            title: null
+            title: Spitzwegerich-Chicorée-Weidemischung
             image: 2024_Marti_Weidemischung-mit-Kraeuter.jpg
-            desc: 'Foto: Nicolas Marti, 2024'
+            desc: "Die Milchharnstoffgehalte waren tief, aber während der Beweidung der Kräutermischung war die Nutzungslelastizität deutlich besser, die \nFoto: Nicolas Marti, 2024"
             video: null
         -
-            title: null
+            title: 'Februar = Herbstgras abräumen'
             image: 2024_Marti_Weidebeginn_07.02.2024.jpg
-            desc: 'Foto: Nicolas Marti, 2024'
+            desc: "Dank dem frühen Abweiden, wurde das Dilemma während dem starken Wachstum während der Nässeperiode etwas gemildert.\nFoto: Nicolas Marti, 2024"
             video: null
         -
             title: null

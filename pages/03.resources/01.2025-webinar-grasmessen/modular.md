@@ -1,5 +1,5 @@
 ---
-title: 'Webinar für Grasmessende'
+title: 'Grasmess-Webinar 2025'
 date: '12-02-2025 18:58'
 shortcode-citation:
     items: cited

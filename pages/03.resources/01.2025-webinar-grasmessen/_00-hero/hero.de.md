@@ -6,5 +6,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 published: true
+hero:
+    subtitle: 'Herausforderungen, Highlights und was das Grasmessen im 2024 gebracht hat.'
 ---
 

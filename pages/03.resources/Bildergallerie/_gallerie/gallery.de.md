@@ -1,6 +1,6 @@
 ---
-title: 'Powerful Gallery'
-subtitle: 'Exploring the globe...'
+title: 'Bildergallerie 2024'
+subtitle: 'Grass growth impossible...'
 gallery:
     grid_classes: 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-2'
     thumb:

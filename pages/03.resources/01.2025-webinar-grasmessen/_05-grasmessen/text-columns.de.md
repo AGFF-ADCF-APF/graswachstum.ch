@@ -7,6 +7,7 @@ shortcode-citation:
     reorder_uncited: true
 aura:
     author: zbma
+columns: 2
 ---
 
 ## Das hat mir das Grasmessen im 2024 gebracht?

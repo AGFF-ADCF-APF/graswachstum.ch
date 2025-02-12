@@ -7,7 +7,6 @@ header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: PXL_20250209_144310976.jpg
     image_alignment: object-center
-    content: 'Bild: Anfangs Februar geniessen Schafe ihr erstes frisches grün im Jahr 2025. Ganz im Hintergrund (kaum erkennbar) eine Wanderherde am Durchziehen.'
     text: auto
 taxonomy:
     category:
@@ -63,3 +62,5 @@ Interessanterweise scheinen die Iren das grossflächige Überweiden im Frühjahr
 
 ## Schlussfolgerung
 Übersetzt in unsere Verhältnisse heisst das: Die **Grashöhe messen**, sobald die **Weiden ergrünen**. Und dann mutig drauf los, wenn die Bodenbedingungen es zulassen – gerade wenn Bestände gemäss obigen Zahlen schon recht hoch aus dem Winter kommen. Für die nächsten Tage heisst es aber auch für Irland: Wegen Regenwetter stundenweise Beweidung vorziehen und Kühe nur hungrig und zum Fressen auf die Weide lassen.
+
+![PXL_20250209_144310976](PXL_20250209_144310976.jpg?lightbox&resize=300 "Titelbild: Anfangs Februar geniessen Schafe ihr erstes frisches grün im Jahr 2025. Ganz im Hintergrund (kaum erkennbar) eine Wanderherde am Durchziehen.")

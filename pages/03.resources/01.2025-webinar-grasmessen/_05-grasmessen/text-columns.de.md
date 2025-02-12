@@ -7,12 +7,6 @@ shortcode-citation:
     reorder_uncited: true
 ---
 
-## Meine grösste Weide-Herausforderung 2024
-
-
-## Mein Weide-Highlight 2024
-
-
 ## Das hat mir das Grasmessen im 2024 gebracht?
 - Richtige Entscheidungen zur richtigen Zeit treffen
 - Mut, im April grosszügig wegzukonservieren
@@ -22,15 +16,13 @@ shortcode-citation:
 - Gute Diskussionsgrundlage: nicht mehr mähen oder nicht, sondern mähen wir Koppel 5A auch noch oder nicht?
 - Wenn mehrere Personen beim Weidemanagement beteiligt werden, vereinfachen Messungen die Kommunikation.
 - Workflow mit Grasshopper: Messung mit App, Feedwedge am PC bearbeiten, Nachzäunen mit Hilfe der App
-- 
 
-## Das möchte ich 2025 anders machen.
+## Das möchte ich 2025 verbessern
 - Graswachstumsmodelle für die Schweiz
-- AIMER-Farming vertiefter einsetzen: Korrektur Bestandestyp aufgrund Besatzdauer, 
-- Treffen/Austausch mit Truenorth-Technologies
+- AIMER-Farming vertiefter einsetzen: Korrektur Bestandestyp aufgrund Besatzdauer und früheren Erfahrungen. 
+- Treffen/Austausch mit Grashopper-Herstellerin Truenorth-Technologies organisieren
 - Plantahof Stalltag 26. März 2025
-- Grasslandtools: Formel und Anwendung weiter verfeinern. ...
+- Grasslandtools: Formel und Grasmengen-Schätzung weiter verfeinern. 
 - Average Cover mehr einbeziehen, um das Graswachstum und die Futterverwertung zu optimieren.
-- 
 
 

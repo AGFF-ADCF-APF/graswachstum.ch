@@ -25,7 +25,7 @@ shortcode-citation:
 media_order: 'SpringGrazingAllocation_2025.png,NyfelerD_Schleppschlauch.webp'
 ---
 
-# Gülle sinnvoll nutzen, nicht «entsorgen»
+# Gülle nicht «entsorgen»
 
 **Sobald die Vegetationsruhe aufgehoben ist, können die Pflanzen wieder Stickstoff aufnehmen. Bis dahin müssen die Fässer und Verteiler parkiert bleiben.
 **

@@ -58,7 +58,6 @@ Einige unverzichtbare Schlüsselpunkte:
 * Den Ladewagen nicht vollstopfen.
 * Auf der Heubelüftung fertig trocknen.
 
-Für weitere Fragen steht Ihnen Pierre Aeby, [pierre.aeby@fr.ch](mailto:pierre.aeby@fr.ch), zur Verfügung.
 
 
 Original-Publikation: https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne

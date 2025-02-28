@@ -29,7 +29,7 @@ shortcode-citation:
     reorder_uncited: true
 ---
 
-# Gülle sinnvoll nutzen, nicht «entsorgen»
+# Luzerne: nie trocken bewegen
 
 **Grangeneuve hat kürzlich ein kurzes Video zum Thema Ernte und Konservierung von Luzerne veröffentlicht: Darin kommen zwei Landwirte, Sébastien Berset und David Hänni, zu Wort, die den Anbau und die Konservierung von Luzerne beherrschen.
 **
@@ -39,19 +39,18 @@ shortcode-citation:
 Unter den Futterleguminosen hat die Luzerne dank ihrer Hitzetoleranz, ihrer Fähigkeit, Wiederkauen anzuregen und ihres Gehalts an Beta-Carotin eine Sonderstellung. Luzerne weist auch einen interessanten Proteingehalt auf, dieser ist jedoch niedriger als jener von Weiss- und Rotklee.
 Das meiste Eiweiss befindet sich in den Blättern der Luzerne: Die Gehalte liegen bei über 25 % Eiweissanteil. Die Stängel haben weniger als 15 %. Daher muss alles getan werden, um die Blätter bei der Konservierung zu erhalten.
 
+
+===
+
 Einige unverzichtbare Schlüsselpunkte:
 * Jung genug mähen, um einen hohen Blattanteil zu gewährleisten.
 * Auf mehr als 8 cm Höhe mähen.
-› Sofort zetten, entweder mit einem Aufbereiter, der breit streut, oder mittels Kreisler.
-› Nur zu Zeiten, in denen die Blätter weich sind und an den Stängeln haften, früh morgens oder spät abends, und niemals am Nachmittag, kreiseln, schwaden oder laden.
-› Kurz bevor die Blätter von selbst zwischen den Fingern zerbrechen, laden.
-› Den Ladewagen nicht vollstopfen.
-› Auf der Heubelüftung fertig trocknen.
+* Sofort zetten, entweder mit einem Aufbereiter, der breit streut, oder mittels Kreisler.
+* Nur zu Zeiten, in denen die Blätter weich sind und an den Stängeln haften, früh morgens oder spät abends, und niemals am Nachmittag, kreiseln, schwaden oder laden.
+* Kurz bevor die Blätter von selbst zwischen den Fingern zerbrechen, laden.
+* Den Ladewagen nicht vollstopfen.
+* Auf der Heubelüftung fertig trocknen.
 
 
-
-Wir empfehlen Ihnen, sich den Film anzusehen
-
-===
 
 

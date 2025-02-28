@@ -1,15 +1,20 @@
-last_checked: 1739378230
+last_checked: 1740741563
 data:
+  -
+    title: 'TailwindCSS 4.0 upgrade for Typhoon Premium Theme'
+    url: 'https://getgrav.org/blog/tailwindcss4-upgrade-for-typhoon-premium-theme'
+    date: 1739361300
+    nicetime: '2 Wochen her'
   -
     title: '2024 CMS Critic Award Voting'
     url: 'https://getgrav.org/blog/cms-critic-award-vote-2024'
     date: 1738588260
-    nicetime: '1 Wochen her'
+    nicetime: '4 Wochen her'
   -
     title: '2024 CMS Critic Award Nominations'
     url: 'https://getgrav.org/blog/cms-critic-award-nominations-2024'
     date: 1736169060
-    nicetime: '1 Monate her'
+    nicetime: '2 Monate her'
   -
     title: 'Grav 1.8-beta Released'
     url: 'https://getgrav.org/blog/grav-18-beta-released'
@@ -45,8 +50,3 @@ data:
     url: 'https://getgrav.org/blog/new-email-plugin'
     date: 1665048600
     nicetime: '2 Jahre her'
-  -
-    title: 'Skeleton Build Automation'
-    url: 'https://getgrav.org/blog/skeletons-build-automation'
-    date: 1614347940
-    nicetime: '4 Jahre her'

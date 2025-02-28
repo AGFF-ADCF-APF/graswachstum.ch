@@ -44,6 +44,7 @@ media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
 ===
 
 Unter den Futterleguminosen hat die Luzerne dank ihrer Hitzetoleranz, ihrer Fähigkeit, Wiederkauen anzuregen und ihres Gehalts an Beta-Carotin eine Sonderstellung. Luzerne weist auch einen interessanten Proteingehalt auf, dieser ist jedoch niedriger als jener von Weiss- und Rotklee.
+
 Das meiste Eiweiss befindet sich in den Blättern der Luzerne: Die Gehalte liegen bei über 25 % Eiweissanteil. Die Stängel haben weniger als 15 %. Daher muss alles getan werden, um die Blätter bei der Konservierung zu erhalten.
 
 

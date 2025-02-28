@@ -32,7 +32,7 @@ media_order: 'SpringGrazingAllocation_2025.png,NyfelerD_Schleppschlauch.webp'
 
 Daniel Nyfeler vom Arenenberg (TG) schreibt über die sinnvolle Gülleverteilung auf Grasland.
 
-[Artikel BauernZeitung](https://www.bauernzeitung.ch/artikel/pflanzen/guelle-sinnvoll-nutzen-nicht-entsorgen-549036?class=button)
+[Artikel Bauern Zeitung](https://www.bauernzeitung.ch/artikel/pflanzen/guelle-sinnvoll-nutzen-nicht-entsorgen-549036?class=button)
 
 ===
 

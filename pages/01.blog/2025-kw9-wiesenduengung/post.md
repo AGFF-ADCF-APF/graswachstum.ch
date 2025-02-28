@@ -5,7 +5,7 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: PXL_20250209_144310976.jpg
+    image: NyfelerD_Schleppschlauch.webp
     image_alignment: object-center
     text: auto
 taxonomy:
@@ -22,7 +22,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-media_order: 'PXL_20250209_144310976.jpg,Grass10_Week.png,Spring grazing allocation_2025.png'
+media_order: 'SpringGrazingAllocation_2025.png,NyfelerD_Schleppschlauch.webp'
 ---
 
 # Gülle sinnvoll nutzen, nicht «entsorgen»

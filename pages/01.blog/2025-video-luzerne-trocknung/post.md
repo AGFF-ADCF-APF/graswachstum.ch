@@ -10,6 +10,10 @@ hero:
     text: auto
     buttons:
         -
+            text: 'Luzerne auf eAGFF'
+            link: 'https://www.eagff.ch/wiesenpflanzen-kennen/kleearten/artspezifische-merkmale/luzerne'
+            classes: 'bg-primary text-white'
+        -
             text: Original-Post
             link: 'https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne'
             classes: 'bg-primary text-white'
@@ -30,7 +34,7 @@ shortcode-citation:
 media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
 ---
 
-# Luzerne: nie trocken bewegen
+# Nie trocken bewegen
 
 **Grangeneuve hat kürzlich ein kurzes Video zum Thema Ernte und Konservierung von Luzerne veröffentlicht: Darin kommen zwei Landwirte, Sébastien Berset und David Hänni, zu Wort, die den Anbau und die Konservierung von Luzerne beherrschen.
 **

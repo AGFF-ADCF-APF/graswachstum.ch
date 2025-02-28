@@ -16,7 +16,7 @@ taxonomy:
         - wachstumsbericht
     author:
         - 'Zbinden Martin'
-author: 'Martin Zbinden'
+author: 'Daniel Nyfeler, Arenenberg TG'
 sitemap:
     lastmod: '19-12-2024 07:07'
 shortcode-citation:

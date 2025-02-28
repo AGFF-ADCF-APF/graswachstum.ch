@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-kw9-wiesenduengung",
         "page_title": "Woche 7 (24.02.-02.03.2025)"
     },
-    "updated": 1740741860,
+    "updated": 1740741874,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 7 (24.02.-02.03.2025)",
         "grav-page-route": "\/blog\/2025-kw9-wiesenduengung",
         "grav-page-rawroute": "\/blog\/2025-kw9-wiesenduengung",
         "cache-control": "max-age=604800",
-        "expires": "Fri, 07 Mar 2025 11:24:20 GMT",
+        "expires": "Fri, 07 Mar 2025 11:24:34 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Fri, 28 Feb 2025 11:24:20 GMT",
+        "date": "Fri, 28 Feb 2025 11:24:34 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1740741860.4794600009918212890625,
-        "total_time": 0.1764179999999999914894743824334000237286090850830078125,
-        "namelookup_time": 0.000378999999999999996613819774893272551707923412322998046875,
-        "connect_time": 0.0004429999999999999801651717756811876824940554797649383544921875,
-        "pretransfer_time": 0.0035400000000000001777744618181031910353340208530426025390625,
-        "starttransfer_time": 0.17568200000000000482458517581108026206493377685546875,
+        "start_time": 1740741874.11726093292236328125,
+        "total_time": 0.167383000000000004003908316008164547383785247802734375,
+        "namelookup_time": 0.000339000000000000000117961196366422882420010864734649658203125,
+        "connect_time": 0.000413999999999999979995168875035460587241686880588531494140625,
+        "pretransfer_time": 0.005130000000000000011379786002407854539342224597930908203125,
+        "starttransfer_time": 0.1666310000000000013375967000683885999023914337158203125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 581,
         "request_size": 137,
         "redirect_count": 0,
-        "size_download": 10882,
-        "speed_download": 61683,
+        "size_download": 10981,
+        "speed_download": 65604,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 44409
+        "content_size": 45640
     },
     "content": {
         "body": "<h1>G&uuml;lle sinnvoll nutzen, nicht &laquo;entsorgen&raquo;<\/h1>\n<p>Sobald die Vegetationsruhe aufgehoben ist, k&ouml;nnen die Pflanzen wieder Stickstoff aufnehmen. Bis dahin m&uuml;ssen die F&auml;sser und Verteiler parkiert bleiben.\n<\/p>\n<h1>Artikel BauernZeitung<\/h1>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Grass10: Die 4 Merkpunkte der Woche\n                    <\/li>\n                    <li>\n            Weidebeginn pr&uuml;fen\n                    <\/li>\n                    <li>\n            Fr&uuml;hlings-Gras-Budget erstellen (zu Punkt 4)\n                    <\/li>\n                    <li>\n            Schlussfolgerung\n                    <\/li>\n    \n        <\/ul>\n    \n\n<p><em>\"Can grazing begin on your farm?\"<\/em> Diese Frage stellt der heute erschienene Grass10-Newsletter. Nun ja, eine berechtigte Frage, da letztes Jahr auch schon K&uuml;he auf der Weide waren, als ich Mitte Februar in die Skiferien fuhr. Dennoch stellt sich immer die Frage, wie weit wir Empfehlungen aus dem Meer-beeinflussten, milderen Irland auf die Schweiz &uuml;bertragen k&ouml;nnen. Im Fr&uuml;hjahr darf man die Empfehlung meist ca. 2 Wochen nach hinten schieben, dann passt es f&uuml;r das im Mittelland recht gut. <\/p>\n<p>So auch diesmal: die aktuellen Bodentemperaturen sind mit 5 bis 7&deg;C in Irland bereits etwas w&auml;rmer als in der Schweiz (ca. 3-4&deg;C gem&auml;ss Agrometeo) &ndash; wobei nicht ganz klar wird, ob die Bodentemperatur ebenfalls in einer Tiefe von 10cm gemessen wird. Somit d&uuml;rfte auch das Graswachstum bei uns noch kaum angefangen haben, im Gegensatz zu Irland mit ca. 6-10kg TS\/ha\/Tag. Gemein hat die Insel die erwarteten Regenf&auml;lle in den n&auml;chsten Tagen.<\/p>\n<h2>Grass10: Die 4 Merkpunkte der Woche<\/h2>\nEmpfehlungen f&uuml;r Irische Weidebetriebe, Woche 7. Quelle: Teagasc Grass10 Newsletter vom 11.02.2025\n<p>&Uuml;bersetzung der 4 Merkpunkte aus der Grafik:<\/p>\n<ol>\n<li>Can grazing begin on your farm?<\/li>\n<li>Fr&uuml;hlings-Weide-Vormittage in deiner N&auml;he (Werbung f&uuml;r Flurg&auml;nge der Beratung)<\/li>\n<li>D&uuml;ngerapplikation diesen Fr&uuml;hling<\/li>\n<li>Erstellen der ersten Grasvorrats-Messung und des Gras-Budgets<\/li>\n<\/ol>\n<h2>Weidebeginn pr&uuml;fen<\/h2>\n<blockquote>\n<ul>\n<li>Laut Grass10 kann mit Weiden begonnen werden, sobald die Grasbedeckung wenigstens 700 (bis 1000) kg TS\/ha betr&auml;gt. Dies entspricht ca. 6.5cm oder 13 clics mit dem Rising Plate Meter (RPM). <\/li>\n<li>Zun&auml;chst sollte mit einem Weidegang von einigen Stunden pro Tag angefangen werden. Dies kann so gel&ouml;st werden, dass die K&uuml;he nach dem Morgenmelken nicht mehr gef&uuml;ttert werden und dann vor dem Mittag hungrig auf eine Weideportion gelassen werden. Gezieltes, kurzes Beweiden sollte vor allem dann eingehalten werden, wenn es regnerisch und nass ist wie in den n&auml;chsten Tagen.<\/li>\n<li>Zun&auml;chst sollten 6 kg TS pro laktierende Kuh und Tag zugewiesen werden. Sofern die Portionen sauber abgefressen werden, kann die Grasmenge alle paar Tage erh&ouml;ht werden.<\/li>\n<\/ul>\n<\/blockquote>\n<p>Interessanterweise scheinen die Iren das grossfl&auml;chige &Uuml;berweiden im Fr&uuml;hjahr, welches bei uns oft empfohlen wird,  nicht zu kennen. Es gilt zu bedenken, dass die dichten Raigrasbest&auml;nde in Irland nicht mit unseren artenreicheren Naturwiesen zu vergleichen sind. Gerade in vorwiegend geschnittenen Naturwiesen kann ein fr&uuml;her Weidegang die Kr&auml;uter zur&uuml;ckdr&auml;ngen und rasenbildende Gr&auml;ser f&ouml;rdern. Zudem spricht nichts gegen eine &Uuml;berweidung von noch k&uuml;rzeren <\/p>\n<h2>Fr&uuml;hlings-Gras-Budget erstellen (zu Punkt 4)<\/h2>\n<blockquote>\nAufgrund des bereits vorhandenen Grasbewuchs von ca. 600 - 800 kg TS\/ha wird f&uuml;r Irland geraten, bereits bis zu 1\/3 der Tagesration an Weidefutter einzuplanen. Nat&uuml;rlich kann dies noch nicht verallgemeinert werden: Auf Grund der tats&auml;chlich gemessenen durchschnittlichen Grasvorr&auml;te (Average Farm Cover AFC, in kg TS\/ha), der verf&uuml;gbaren Fl&auml;che und der Futteraufnahme sollte ein Fr&uuml;hlings-Gras-Budget erstellt werden. Ein Beispiel:Beispiel f&uuml;r Fr&uuml;hlings-Weidezuteilung. Quelle: Teagasc Grass10 Newsletter\n<\/blockquote>\n<h2>Schlussfolgerung<\/h2>\n<p>&Uuml;bersetzt in unsere Verh&auml;ltnisse heisst das: Die Grash&ouml;he messen, sobald die Weiden ergr&uuml;nen. Und dann mutig drauf los, wenn die Bodenbedingungen es zulassen &ndash; gerade wenn Best&auml;nde gem&auml;ss obigen Zahlen schon recht hoch aus dem Winter kommen. F&uuml;r die n&auml;chsten Tage heisst es aber auch f&uuml;r Irland: Wegen Regenwetter stundenweise Beweidung vorziehen und K&uuml;he nur hungrig und zum Fressen auf die Weide lassen.<\/p>\n\nTitelbild: Anfangs Februar geniessen Schafe ihr erstes frisches gr&uuml;n im Jahr 2025. Ganz im Hintergrund (kaum erkennbar) eine Wanderherde am Durchziehen.\n\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 7 (10.02.-16.02.2025)\n        <\/h3>\n      \n            <h1>Soll ich mit Weiden beginnen?<\/h1>\n<p>Grass10 Newsletter \/ Das Grass10-Team von Teagasc bringt jeden Dienstag Nachmittag den Grass10-Weide-Newsletter heraus.\nAchtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration f&uuml;r unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.<\/p>\n\n    \n    \n      11th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden",
@@ -267,6 +267,14 @@
                 "external": false,
                 "status": 200
             },
+            "\/blog\/2025-kw6": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Vorheriger Beitrag",
+                "external": false,
+                "status": 200
+            },
             "\/blog\/2025-kw7": {
                 "count": 1,
                 "target": "",
@@ -475,26 +483,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Woche 7 (24.02.-02.03.2025)",
+            "description": "Artikel BauernZeitung Inhaltsverzeichnis Grass10: Die 4 Merkpunkte der Woche Weidebeginn pr\u00fcfen Fr\u00fchlings-Gras-Budget erstellen (zu Punkt 4) Schlussfolgerung\u2026",
+            "title": "Woche 7 (24.02.-02.03.2025) | graswachstum.ch",
+            "keywords": "grass10,newsletter,merkpunkte,irland,teagasc,woche,k\u00fche,erstellen,fr\u00fchlings-gras-budget,weide,",
             "image": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 7 (24.02.-02.03.2025)",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Woche 7 (24.02.-02.03.2025) | graswachstum.ch",
+            "og:description": "Artikel BauernZeitung Inhaltsverzeichnis Grass10: Die 4 Merkpunkte der Woche Weidebeginn pr\u00fcfen Fr\u00fchlings-Gras-Budget erstellen (zu Punkt 4) Schlussfolgerung\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 7 (24.02.-02.03.2025)",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Woche 7 (24.02.-02.03.2025) | graswachstum.ch",
+            "twitter:description": "Artikel BauernZeitung Inhaltsverzeichnis Grass10: Die 4 Merkpunkte der Woche Weidebeginn pr\u00fcfen Fr\u00fchlings-Gras-Budget erstellen (zu Punkt 4) Schlussfolgerung\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 7 (24.02.-02.03.2025)",
+            "twitter:image:alt": "Woche 7 (24.02.-02.03.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "3 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung",
@@ -693,5 +701,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw9-wiesenduengung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw9-wiesenduengung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 7 (24.02.-02.03.2025)\r\n< grav-page-route: \/blog\/2025-kw9-wiesenduengung\r\n< grav-page-rawroute: \/blog\/2025-kw9-wiesenduengung\r\n< cache-control: max-age=604800\r\n< expires: Fri, 07 Mar 2025 11:24:20 GMT\r\n* Added cookie grav-site-23a95d8=\"64bcf8e6585682f43d93b60b28c76ef8\" for domain graswachstum.ch, path \/, expire 1740743660\n< set-cookie: grav-site-23a95d8=64bcf8e6585682f43d93b60b28c76ef8; expires=Fri, 28-Feb-2025 11:54:20 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 28 Feb 2025 11:24:20 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* old SSL session ID is stale, removing\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-kw9-wiesenduengung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-kw9-wiesenduengung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-kw9-wiesenduengung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 7 (24.02.-02.03.2025)\r\n< grav-page-route: \/blog\/2025-kw9-wiesenduengung\r\n< grav-page-rawroute: \/blog\/2025-kw9-wiesenduengung\r\n< cache-control: max-age=604800\r\n< expires: Fri, 07 Mar 2025 11:24:34 GMT\r\n* Added cookie grav-site-23a95d8=\"6be7ea65dde57deda4766ae402d7b720\" for domain graswachstum.ch, path \/, expire 1740743674\n< set-cookie: grav-site-23a95d8=6be7ea65dde57deda4766ae402d7b720; expires=Fri, 28-Feb-2025 11:54:34 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 28 Feb 2025 11:24:34 GMT\r\n< server: Apache\r\n< \r\n"
 }

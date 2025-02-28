@@ -30,9 +30,10 @@ media_order: 'SpringGrazingAllocation_2025.png,NyfelerD_Schleppschlauch.webp'
 **Sobald die Vegetationsruhe aufgehoben ist, können die Pflanzen wieder Stickstoff aufnehmen. Bis dahin müssen die Fässer und Verteiler parkiert bleiben.
 **
 
+Daniel Nyfeler vom Arenenberg (TG) schreibt über die sinnvolle Gülleverteilung auf Grasland.
+
 [Artikel BauernZeitung](https://www.bauernzeitung.ch/artikel/pflanzen/guelle-sinnvoll-nutzen-nicht-entsorgen-549036?class=button)
 
 ===
 
-[TOC]
 

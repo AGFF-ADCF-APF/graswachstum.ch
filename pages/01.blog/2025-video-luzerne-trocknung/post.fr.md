@@ -1,5 +1,5 @@
 ---
-title: 'Neues Video: Ernte und Konservierung der Luzerne'
+title: 'Nouvelle vidéo: Conditionnement de la luzerne'
 date: '28-02-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
@@ -10,11 +10,11 @@ hero:
     text: auto
     buttons:
         -
-            text: 'Luzerne auf eAGFF'
-            link: 'https://www.eagff.ch/wiesenpflanzen-kennen/kleearten/artspezifische-merkmale/luzerne'
+            text: 'Luzerne sur eAGFF'
+            link: 'https://www.eagff.ch/fr/connaitre-les-plantes-des-prairies/legumineuses/particularites-par-espece/luzerne'
             classes: 'bg-primary text-white'
         -
-            text: Original-Post
+            text: 'Message originale'
             link: 'https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne'
             classes: 'bg-primary text-white'
 taxonomy:
@@ -34,31 +34,25 @@ shortcode-citation:
 media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
 ---
 
-# Nie trocken bewegen
+# Jamais bouger sec
 
-**Grangeneuve hat kürzlich ein kurzes Video zum Thema Ernte und Konservierung von Luzerne veröffentlicht: Darin kommen zwei Landwirte, Sébastien Berset und David Hänni, zu Wort, die den Anbau und die Konservierung von Luzerne beherrschen.
+**Grangeneuve a récemment publié une petite vidéo sur le sujet du conditionnement de la luzerne : elle donne la parole à deux éleveurs, Sébastien Berset et David Hänni, qui en maîtrisent la culture et la conservation. 
 **
 
-[plugin:vimeo](https://vimeo.com/1052318315)
+[plugin:vimeo](https://vimeo.com/1052313303)
 
 ===
 
-Unter den Futterleguminosen hat die Luzerne dank ihrer Hitzetoleranz, ihrer Fähigkeit, Wiederkauen anzuregen und ihres Gehalts an Beta-Carotin eine Sonderstellung. Luzerne weist auch einen interessanten Proteingehalt auf, dieser ist jedoch niedriger als jener von Weiss- und Rotklee.
-Das meiste Eiweiss befindet sich in den Blättern der Luzerne: Die Gehalte liegen bei über 25 % Eiweissanteil. Die Stängel haben weniger als 15 %. Daher muss alles getan werden, um die Blätter bei der Konservierung zu erhalten.
+Parmi les légumineuses fourragères, la luzerne tient une position un peu à part : sa tolérance à la chaleur, ses capacités à faire ruminer des animaux, ses apports en bêtacarotènes. La luzerne présente également des teneurs intéressantes en protéines, tout en étant inférieures à celles du trèfle blanc, voire du trèfle violet.
 
-
-
-
-Einige unverzichtbare Schlüsselpunkte:
-* Jung genug mähen, um einen hohen Blattanteil zu gewährleisten.
-* Auf mehr als 8 cm Höhe mähen.
-* Sofort zetten, entweder mit einem Aufbereiter, der breit streut, oder mittels Kreisler.
-* Nur zu Zeiten, in denen die Blätter weich sind und an den Stängeln haften, früh morgens oder spät abends, und niemals am Nachmittag, kreiseln, schwaden oder laden.
-* Kurz bevor die Blätter von selbst zwischen den Fingern zerbrechen, laden.
-* Den Ladewagen nicht vollstopfen.
-* Auf der Heubelüftung fertig trocknen.
-
-Für weitere Fragen steht Ihnen Pierre Aeby, [pierre.aeby@fr.ch](mailto:pierre.aeby@fr.ch), zur Verfügung.
+Les protéines se trouvent majoritairement dans les feuilles de la luzerne : les teneurs dépassent 25 % de MA. Les tiges ont moins de 15%. Il faut donc tout faire pour maintenir les feuilles lors du conditionnement. Quelques étapes-clé indispensables :
+* Faucher assez jeune pour assurer une part élevée de feuilles.
+* Faucher à plus de 8 cm de haut.
+* Étendre immédiatement, soit avec un conditionneur qui épand large, soit grâce à un passage de pirouette.
+* Pirouetter, andainer ou charger uniquement aux heures où les feuilles sont molles et adhèrent aux tiges, tôt le matin ou tard le soir, et jamais en plein après-midi.
+* Charger dire juste avant que les feuilles ne se brisent toutes seules entre les doigts.
+* Ne pas comprimer dans l’autochargeuse.
+* Finir de sécher en grange.
 
 
 Original-Publikation: https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne

@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-video-luzerne-trocknung",
         "page_title": "Neues Video: Ernte und Konservierung der Luzerne"
     },
-    "updated": 1740748588,
+    "updated": 1740748637,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Neues Video: Ernte und Konservierung der Luzerne",
         "grav-page-route": "\/blog\/2025-video-luzerne-trocknung",
         "grav-page-rawroute": "\/blog\/2025-video-luzerne-trocknung",
         "cache-control": "max-age=604800",
-        "expires": "Fri, 07 Mar 2025 13:16:28 GMT",
+        "expires": "Fri, 07 Mar 2025 13:17:17 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Fri, 28 Feb 2025 13:16:28 GMT",
+        "date": "Fri, 28 Feb 2025 13:17:17 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1740748588.0996019840240478515625,
-        "total_time": 0.162175000000000013589129821411916054785251617431640625,
-        "namelookup_time": 0.0003770000000000000022100377083944522382807917892932891845703125,
-        "connect_time": 0.000501000000000000034715286201247863573371432721614837646484375,
-        "pretransfer_time": 0.0047010000000000003173017404378697392530739307403564453125,
-        "starttransfer_time": 0.1617180000000000006377121053446899168193340301513671875,
+        "start_time": 1740748637.2561929225921630859375,
+        "total_time": 0.2222099999999999908606440612857113592326641082763671875,
+        "namelookup_time": 0.0003240000000000000149845413854876596815302036702632904052734375,
+        "connect_time": 0.000398000000000000024764912343044898079824633896350860595703125,
+        "pretransfer_time": 0.00407099999999999996591615314400769420899450778961181640625,
+        "starttransfer_time": 0.2213569999999999982076559490451472811400890350341796875,
         "redirect_time": 0
     },
     "info": {
@@ -33,7 +33,7 @@
         "request_size": 142,
         "redirect_count": 0,
         "size_download": 9448,
-        "speed_download": 58258,
+        "speed_download": 42518,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -642,5 +642,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-video-luzerne-trocknung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-video-luzerne-trocknung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-video-luzerne-trocknung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Neues Video: Ernte und Konservierung der Luzerne\r\n< grav-page-route: \/blog\/2025-video-luzerne-trocknung\r\n< grav-page-rawroute: \/blog\/2025-video-luzerne-trocknung\r\n< cache-control: max-age=604800\r\n< expires: Fri, 07 Mar 2025 13:16:28 GMT\r\n* Added cookie grav-site-23a95d8=\"7485e2945aff21d5bfc72dff84f4e5d7\" for domain graswachstum.ch, path \/, expire 1740750388\n< set-cookie: grav-site-23a95d8=7485e2945aff21d5bfc72dff84f4e5d7; expires=Fri, 28-Feb-2025 13:46:28 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 28 Feb 2025 13:16:28 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/blog\/2025-video-luzerne-trocknung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/blog\/2025-video-luzerne-trocknung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/blog\/2025-video-luzerne-trocknung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Neues Video: Ernte und Konservierung der Luzerne\r\n< grav-page-route: \/blog\/2025-video-luzerne-trocknung\r\n< grav-page-rawroute: \/blog\/2025-video-luzerne-trocknung\r\n< cache-control: max-age=604800\r\n< expires: Fri, 07 Mar 2025 13:17:17 GMT\r\n* Added cookie grav-site-23a95d8=\"8d55e283c2cb8f749e0873be2e557642\" for domain graswachstum.ch, path \/, expire 1740750437\n< set-cookie: grav-site-23a95d8=8d55e283c2cb8f749e0873be2e557642; expires=Fri, 28-Feb-2025 13:47:17 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 28 Feb 2025 13:17:17 GMT\r\n< server: Apache\r\n< \r\n"
 }

@@ -5,7 +5,7 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: 'Luzerne SM323_IMG_20180629_182533.jpg'
+    image: LuzerneSM323_IMG_20180629_182533.jpg
     image_alignment: object-center
     text: auto
     buttons:

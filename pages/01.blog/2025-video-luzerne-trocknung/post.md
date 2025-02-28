@@ -5,7 +5,7 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: NyfelerD_Schleppschlauch.webp
+    image: 'Luzerne SM323_IMG_20180629_182533.jpg'
     image_alignment: object-center
     text: auto
     buttons:
@@ -27,6 +27,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
+media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
 ---
 
 # Luzerne: nie trocken bewegen

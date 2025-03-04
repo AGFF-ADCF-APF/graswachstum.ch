@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-kw10",
         "page_title": "Woche 10 (03.03.-09.03.2025)"
     },
-    "updated": 1741102549,
+    "updated": 1741102564,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 10 (03.03.-09.03.2025)",
         "grav-page-route": "\/blog\/2025-kw10",
         "grav-page-rawroute": "\/blog\/2025-kw10",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 11 Mar 2025 15:35:49 GMT",
+        "expires": "Tue, 11 Mar 2025 15:36:04 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Tue, 04 Mar 2025 15:35:49 GMT",
+        "date": "Tue, 04 Mar 2025 15:36:04 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1741102549.31610393524169921875,
-        "total_time": 0.167200999999999988521182103795581497251987457275390625,
-        "namelookup_time": 0.000395999999999999976151021652270856066024862229824066162109375,
-        "connect_time": 0.0004829999999999999766610303542080373517819680273532867431640625,
-        "pretransfer_time": 0.0044679999999999997495336856445646844804286956787109375,
-        "starttransfer_time": 0.1664259999999999906084013900908757932484149932861328125,
+        "start_time": 1741102564.2649109363555908203125,
+        "total_time": 0.1615050000000000096633812063373625278472900390625,
+        "namelookup_time": 0.0004079999999999999967838226755389996469602920114994049072265625,
+        "connect_time": 0.00049200000000000003279321258986556131276302039623260498046875,
+        "pretransfer_time": 0.00404999999999999978073095263653158326633274555206298828125,
+        "starttransfer_time": 0.16104499999999999371169678852311335504055023193359375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 554,
         "request_size": 126,
         "redirect_count": 0,
-        "size_download": 8719,
-        "speed_download": 52146,
+        "size_download": 8805,
+        "speed_download": 54518,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 43099
+        "content_size": 43749
     },
     "content": {
         "body": "<h1>G&uuml;lle nicht &laquo;entsorgen&raquo;<\/h1>\n<p>Sobald die Vegetationsruhe aufgehoben ist, k&ouml;nnen die Pflanzen wieder Stickstoff aufnehmen. Bis dahin m&uuml;ssen die F&auml;sser und Verteiler parkiert bleiben.\n<\/p>\n<p>Daniel Nyfeler vom Arenenberg (TG) schreibt &uuml;ber die sinnvolle G&uuml;lleverteilung auf Grasland.<\/p>\n<p>Artikel Bauern Zeitung<\/p>\n\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 7 (10.02.-16.02.2025)\n        <\/h3>\n      \n            <h1>Soll ich mit Weiden beginnen?<\/h1>\n<p>Grass10 Newsletter \/ Das Grass10-Team von Teagasc bringt jeden Dienstag Nachmittag den Grass10-Weide-Newsletter heraus.\nAchtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration f&uuml;r unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.<\/p>\n\n    \n    \n      11th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden",
@@ -418,26 +418,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Woche 10 (03.03.-09.03.2025)",
+            "description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
+            "title": "Woche 10 (03.03.-09.03.2025) | graswachstum.ch",
+            "keywords": "weideinfrastruktur,weide,wachstumsbericht,betrieblichen,deutlich,infrastruktur,regentagen,gras,zeitung,inspiration,",
             "image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 10 (03.03.-09.03.2025)",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Woche 10 (03.03.-09.03.2025) | graswachstum.ch",
+            "og:description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 10 (03.03.-09.03.2025)",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Woche 10 (03.03.-09.03.2025) | graswachstum.ch",
+            "twitter:description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 10 (03.03.-09.03.2025)",
+            "twitter:image:alt": "Woche 10 (03.03.-09.03.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw10",
@@ -648,5 +648,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/blog\/2025-kw10]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/blog\/2025-kw10 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 10 (03.03.-09.03.2025)\r\n< grav-page-route: \/blog\/2025-kw10\r\n< grav-page-rawroute: \/blog\/2025-kw10\r\n< cache-control: max-age=604800\r\n< expires: Tue, 11 Mar 2025 15:35:49 GMT\r\n* Added cookie grav-site-23a95d8=\"5626c58eafd01db9b7e045f381debf32\" for domain graswachstum.ch, path \/, expire 1741104349\n< set-cookie: grav-site-23a95d8=5626c58eafd01db9b7e045f381debf32; expires=Tue, 04-Mar-2025 16:05:49 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 04 Mar 2025 15:35:49 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/blog\/2025-kw10\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/blog\/2025-kw10]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/blog\/2025-kw10 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 10 (03.03.-09.03.2025)\r\n< grav-page-route: \/blog\/2025-kw10\r\n< grav-page-rawroute: \/blog\/2025-kw10\r\n< cache-control: max-age=604800\r\n< expires: Tue, 11 Mar 2025 15:36:04 GMT\r\n* Added cookie grav-site-23a95d8=\"2186e8c51ea69e12ef1fec1c9fd2f0f1\" for domain graswachstum.ch, path \/, expire 1741104364\n< set-cookie: grav-site-23a95d8=2186e8c51ea69e12ef1fec1c9fd2f0f1; expires=Tue, 04-Mar-2025 16:06:04 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 04 Mar 2025 15:36:04 GMT\r\n< server: Apache\r\n< \r\n"
 }

@@ -1,6 +1,6 @@
 ---
 title: 'Woche 10 (03.03.-09.03.2025)'
-date: '07-03-2025 08:00'
+date: '07-03-2023 08:00'
 hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:

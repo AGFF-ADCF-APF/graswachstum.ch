@@ -56,17 +56,26 @@ gallery:
             image: Stohler_2025-03-04_Rohrschwingel.jpeg
             desc: '... denn gerade der hier gesäte Zucht-Rohrschwingel braucht etwas höhere Temperaturen, um durchzustarten. _Foto: Olsberg BL, 04. März 2025 (A. Stohler)_'
         -
+            title: 'Weideinfrastrukturen unterhalten'
+            image: Sutter_2025_Hoflader-Weidezaeune.jpeg
+            desc: 'Jetzt ist es höchste Zeit, die restlichen Weidezäune fertig zu stellen und Tränkesystem zu kontrollieren. _Foto: Bretzwil BL, Februar 2025 (M. Sutter)_'
+        -
             title: 'And the winner is... '
             image: Joss_2025-02-17_Weidestart.jpeg
-            desc: 'Sichtlich haben alle beteiligiten Freude, wenn der Winter Pause macht._Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
+            desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht._Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
 ---
 
 # Weidestart
 
-**Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein gut sichtbares Graswachstum.
+**Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein stärkeres sichtbares Graswachstum.
 **
 
+[TOC]
+
 ===
+
+## Aktuelle Messwerte
+Das aktuelle Graswachstum ...
 
 
 ## Der frühe Weidebeginn macht Sinn

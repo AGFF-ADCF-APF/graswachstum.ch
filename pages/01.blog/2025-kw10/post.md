@@ -73,14 +73,15 @@ gallery:
 
 **Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben seit Mitte Februar mit dem Weidegang angefangen. Momentan verhindern frostige Nächte ein stärkeres, gut sichtbares Graswachstum.
 **
+Für die ganze Schweiz heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung, gibt es schon ein wenig Grasvorrat, der genutzt werden will. 
+
+Kühle bis frostige Nachttemperaturen verhindern momentan noch, dass das Gras wächst: einzelne Betriebe messen aber bereits die Grashöhen ihrer Weiden und stellten für Ende Februar ein Graswachstum von ca. 10 kg TS/ha/Tag fest. Mit den erwarteten, milderen Nächten dürfte die Graszunahme am Wochenende bereits um die 20kg betragen.
+
+
 
 [TOC]
 
 ===
-
-Für die ganze Schweiz heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung, gibt es schon ein wenig Grasvorrat, der genutzt werden will. 
-
-Kühle bis frostige Nachttemperaturen verhindern momentan noch, dass das Gras wächst: einzelne Betriebe messen aber bereits die Grashöhen ihrer Weiden und stellten für Ende Februar ein Graswachstum von ca. 10 kg TS/ha/Tag fest. Mit den erwarteten, milderen Nächten dürfte die Graszunahme am Wochenende bereits um die 20kg betragen.
 
 
 ## Aktuelle Messwerte

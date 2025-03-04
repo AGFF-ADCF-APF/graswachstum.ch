@@ -101,10 +101,17 @@ Wer seine Wiesen früh  beweidet, profitiert von einigen **Vorteilen**:
 - Mehr Triebe = Trittfestigkeit.
 
 
-Gewisse Aspekte können als **Nachteil** ausgelegt werden:
+Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 - Weide muss bei Schnee oder viel Regen wieder pausiert werden.
 - Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
 - Frühe Beweidung kann Graswachstum etwas bremsen - kann aber im Hinblick auf den Futterberg im Frühling toleriert werden.
+
+## Weitere Pflegemassnahmen
+Eine frühe Beweidung erspart oft weitere Massnahmen auf den betreffenden Parzellen. Ein Walzen bei leicht feuchtem Boden kann allfällige Unebenheiten weiter reduzieren. Mäusehaufen werden am effizientesten mit einer Wiesenegge verstrichen - sinnvoll kombiniert mit einer Übersaat. Diese Pflegemassnahmen sind speziell auf den Parzellen angebracht, auf denen eine Schnittnutzung folgt. 
+
+[Übersicht Pflegemassnahmen auf eAGFF.ch
+](https://www.eagff.ch/problempflanzen-schaedlinge-krankheiten/unkrautregulierung-1/indirekte-massnahmen/pflegemassnahmen?class=button)
+
 
 
 ## Bildergallerie

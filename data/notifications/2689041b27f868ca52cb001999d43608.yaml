@@ -1,19 +1,11 @@
-last_checked: 1740748410
+last_checked: 1741101875
 data:
   feed:
     -
-      id: 324
-      date: '2025-02-03 11:40'
-      message: '🗳️ Nominations Successful! Now please <b>VOTE</b> for "Grav" in the 2024 CMS Critic Awards!'
-      link: 'https://cmscritic.com/vote'
-      type: note
-      location:
-        - feed
-    -
       id: 32
-      date: '2025-01-18 11:40'
-      message: '🏆 Only a week left to <b>Nominate</b> "Grav CMS" in the 2024 CMS Critic Awards!'
-      link: 'https://cmscritic.com/nominate'
+      date: '2025-03-01 11:40'
+      message: 'Help Grav achieve 15k stars on GitHub! ⭐️ it today!'
+      link: 'https://github.com/getgrav/grav'
       type: note
       location:
         - feed

@@ -65,7 +65,7 @@ gallery:
             desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht. _Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
 ---
 
-# Weidestart
+# Weidestart jetzt!
 
 **Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein stärkeres sichtbares Graswachstum.
 **

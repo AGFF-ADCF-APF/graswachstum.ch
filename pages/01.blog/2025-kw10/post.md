@@ -5,7 +5,7 @@ hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: Sutter_2025_Hoflader-Weidezäune.jpeg
-    image_alignment: object-center
+    image_alignment: object-top
     text: auto
     display: true
 taxonomy:

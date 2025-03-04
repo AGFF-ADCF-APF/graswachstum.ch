@@ -56,6 +56,10 @@ gallery:
             image: Stohler_2025-03-04_Rohrschwingel.jpeg
             desc: '... denn gerade der hier gesäte Zucht-Rohrschwingel braucht etwas höhere Temperaturen, um durchzustarten. _Foto: Olsberg BL, 04. März 2025 (A. Stohler)_'
         -
+            title: 'Pflegeweide - gerade auch bei Mäuseschäden'
+            image: Schnider_2025-03-03_Weidestart.jpeg
+            desc: 'Mäuseschäden sind kein Grund, nicht ein erstes Mal zu überweiden. Mäusegänge werden zertrampelt. Mäusehaufen können später immer noch mit einer Egge verstrichen werden. _Foto: Benken SG, 03. März 2025 (T. Schnider)_'
+        -
             title: 'Weideinfrastrukturen unterhalten'
             image: Sutter_2025_Hoflader-Weidezaeune.jpeg
             desc: 'Jetzt ist es höchste Zeit, die restlichen Weidezäune fertig zu stellen und Tränkesystem zu kontrollieren. _Foto: Bretzwil BL, Februar 2025 (M. Sutter)_'

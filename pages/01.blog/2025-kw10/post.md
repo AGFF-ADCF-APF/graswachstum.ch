@@ -4,9 +4,10 @@ date: '07-03-2023 08:00'
 hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: null
+    image: Sutter_2025_Hoflader-Weidezäune.jpeg
     image_alignment: object-center
     text: auto
+    display: true
 taxonomy:
     category:
         - blog

@@ -24,15 +24,14 @@ shortcode-citation:
 media_order: 'SpringGrazingAllocation_2025.png,NyfelerD_Schleppschlauch.webp'
 ---
 
-# Gülle nicht «entsorgen»
+# Die Weidesaison beginnt
 
-**Sobald die Vegetationsruhe aufgehoben ist, können die Pflanzen wieder Stickstoff aufnehmen. Bis dahin müssen die Fässer und Verteiler parkiert bleiben.
+** Zusammenfassung
 **
 
-Daniel Nyfeler vom Arenenberg (TG) schreibt über die sinnvolle Gülleverteilung auf Grasland.
 
-[Artikel Bauern Zeitung](https://www.bauernzeitung.ch/artikel/pflanzen/guelle-sinnvoll-nutzen-nicht-entsorgen-549036?class=button)
 
 ===
+
 
 

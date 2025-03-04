@@ -34,7 +34,7 @@ gallery:
         -
             title: 'Gelbe Stellen'
             image: Rusca_2025-03-04_Gelbe-Stellen.jpeg
-            desc: 'Die Wiesen zeigen teilweise gelbe Farbetöne, mehr als in früheren Jahren. Luisa schreibt dies _Bild: Muri AG, 20. Februar 2025 (L. Rusca)_'
+            desc: 'Die Wiesen zeigen teilweise gelbe Farbetöne, mehr als in früheren Jahren. Luisa schreibt dies der längeren Kälteeinwirkung und der länger geschlossenen Schneedecke zu. _Bild: Muri AG, 20. Februar 2025 (L. Rusca)_'
         -
             title: 'Oder direkt in die Umtriebsweide starten?'
             image: Marti_2025-03-04_Erster-Umtrieb.jpeg

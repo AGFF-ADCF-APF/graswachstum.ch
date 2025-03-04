@@ -82,9 +82,7 @@ K√ºhle bis frostige Nachttemperaturen verhindern momentan noch, dass das Gras w√
 ## Aktuelle Messwerte
 Das aktuelle Graswachstum ...
 
-
-
-Das aktuelle Graswachstum ...
+folgt.
 
 
 

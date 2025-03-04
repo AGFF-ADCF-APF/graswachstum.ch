@@ -16,7 +16,7 @@ taxonomy:
         - wachstumsbericht
     author:
         - 'Zbinden Martin'
-author: 'Daniel Nyfeler, Arenenberg TG'
+author: 'Martin Zbinden, INFORAMA'
 sitemap:
     lastmod: '19-12-2024 07:07'
 shortcode-citation:
@@ -42,15 +42,15 @@ gallery:
         -
             title: 'Bei Nässen abwarten'
             image: Burger_2025-03-03_Weidestart.jpeg
-            desc: 'Unweit von den beiden vorangehenden Betrieben, hat der Burgerhof mit dem Weidestart bis am 4. März zugewartet. _Foto: Rudolfstetten AG, 4. März 2025 (A. Burger)'
+            desc: 'Unweit von den beiden vorangehenden Betrieben, hat der Burgerhof mit dem Weidestart bis am 4. März zugewartet. _Foto: Rudolfstetten AG, 4. März 2025 (A. Burger)_'
         -
             title: 'Gute Bodenbedingungen ausnützen'
             image: Sutter_2025_Kühe-Pflegeweide.jpeg
-            desc: 'Hier wurden letzten Sommer noch Leitungen verlegt (Spuren im Vordergrund). Die Wiesenpflege auf 700m ü.M. übernehmen auch hier die Kühe. _Bild: Bretzwil BL, 04. März 2025 (M. Sutter)'
+            desc: 'Hier wurden letzten Sommer noch Leitungen verlegt (Spuren im Vordergrund). Die Wiesenpflege auf 700m ü.M. übernehmen auch hier die Kühe. _Bild: Bretzwil BL, 04. März 2025 (M. Sutter)_'
         -
             title: 'Weidestart in Olsberg BL'
             image: Stohler_2025-03-04_Weidestart.jpeg
-            desc: 'Der Zeitpunkt für einen ersten Pflegeweidegang ist optimal, obwohl die Weiden noch gerade nicht durchstarten... _Foto: Olsberg BL, 04. März 2025 (A. Stohler)_'
+            desc: 'Der Zeitpunkt für einen ersten Pflegeweidegang ist optimal, obwohl die Weiden noch gerade nicht durchstarten...  _Foto: Olsberg BL, 04. März 2025 (A. Stohler)_'
         -
             title: 'Rohrschwingel braucht etwas höhere Temperaturen'
             image: Stohler_2025-03-04_Rohrschwingel.jpeg
@@ -62,7 +62,7 @@ gallery:
         -
             title: 'And the winner is... '
             image: Joss_2025-02-17_Weidestart.jpeg
-            desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht._Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
+            desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht. _Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
 ---
 
 # Weidestart

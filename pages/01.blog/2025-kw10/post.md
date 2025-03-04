@@ -4,7 +4,7 @@ date: '07-03-2023 08:00'
 hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: Sutter_2025_Hoflader-Weidezäune.jpeg
+    image: Rusca_2025-02-20_Weidestart.jpeg
     image_alignment: object-top
     text: auto
     display: true

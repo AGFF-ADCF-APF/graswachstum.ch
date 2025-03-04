@@ -15,7 +15,8 @@ summary:
   format: short
   size: 280
   delimiter: '==='
-redirects: null
+redirects:
+  /weideeingaenge: 'https://graswachstum.ch/de//blog/2024-12-weideeingaenge'
 routes: null
 blog:
   route: /home

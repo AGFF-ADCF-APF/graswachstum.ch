@@ -37,9 +37,9 @@ gallery:
             desc: 'Dieser Betrieb integriert seit zwei Jahrzehnten einen bestehenden Feldweg in seine Kurzrasenweide. Dieser dient als befestigter Auftriebsweg und zum Auffahren des Tränkefasses. Keine fest installierten Tränken, weil die Weiden auf Ackerland liegen, welches periodisch auch für den Kartoffelanbau genutzt wird). _Bild: Schüpbach, 2017 (M. Zbinden)_'
 ---
 
-# Die Weidesaison beginnt
+# Weidestart
 
-** Zusammenfassung
+**Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein gut sichtbares Graswachstum.
 **
 
 

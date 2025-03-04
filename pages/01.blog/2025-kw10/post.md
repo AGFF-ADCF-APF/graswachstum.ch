@@ -30,11 +30,19 @@ gallery:
         -
             title: '20. Februar: Die frühen Vollweidebetriebe starten.'
             image: Rusca_2025-02-20_Weidestart.jpeg
-            desc: 'Luisa und Rafael beginnen jeweils mit einer grossflächigen Überweidung. _Bild: Muri AG, 20. Februa 2025 (L. Rusca)'
+            desc: 'Luisa und Rafael beginnen jeweils mit einer grossflächigen Überweidung (1,5-2ha für 80 Tiere). _Bild: Muri AG, 20. Februar 2025 (L. Rusca)_'
         -
             title: 'Gelbe Stellen'
             image: Rusca_2025-03-04_Gelbe-Stellen.jpeg
-            desc: 'Die Wiesen seien teilweise gelber, als in früheren Jahren. Luisa schreibt dies _Bild: Schüpbach, 2017 (M. Zbinden)_'
+            desc: 'Die Wiesen zeigen teilweise gelbe Farbetöne, mehr als in früheren Jahren. Luisa schreibt dies _Bild: Muri AG, 20. Februar 2025 (L. Rusca)_'
+        -
+            title: 'Oder direkt in die Umtriebsweide starten?'
+            image: Marti_2025-03-04_Erster-Umtrieb.jpeg
+            desc: 'Der Betrieb Marti in Abtwil AG startet direkt mit der Umtriebsweide. Momentan wird jeden Tag 0.5ha Weidefläche für 80 Kühe zugeteilt (ca. 200kg nutzbares Gras). Der Anteil Stallfütterung beträgt noch rund 80%. _Bild: Abtwil AG, 20. Februar 2025 (N. Marti)'
+        -
+            title: 'Gute Bodenbedingungen ausnützen'
+            image: Sutter_2025_Kühe-Pflegeweide.jpeg
+            desc: 'Hier wurden letzten Sommer noch Leitungen verlegt (Spuren im Vordergrund). Die Wiesenplege auf 700m ü.M. übernehmen auch hier die Kühe. _Bild: Bretzwil BL, 04. März 2025 (M. Sutter)'
 ---
 
 # Weidestart
@@ -61,6 +69,5 @@ Gewisse Aspekte können als **Nachteil** ausgelegt werden:
 - Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
 - Frühe Beweidung kann Graswachstum etwas bremsen - kann aber im Hinblick auf den Futterberg im Frühling toleriert werden.
 
-1,5-2ha für 80 Tiere
 
 

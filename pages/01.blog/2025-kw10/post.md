@@ -28,13 +28,13 @@ gallery:
         height: 300
     items:
         -
-            title: 'Befestigte Umgebung von Tränkestellen und Eingängen'
-            image: TraenkeEingang_befestigt_2013-09-25.jpg
-            desc: 'Dauerhaft überbeanspruchte Stellen (Engstellen, Durchgänge, Tränkestellen) werden am besten mit Kies gekoffert. Die Deckschicht sollte klauenfreundlich gestaltet und gut gewalzt werden, damit die Tiere sich gerne darauf aufhalten. _Bild: Waldhof, Langenthal, 2013 (M. Zbinden)_'
+            title: '20. Februar: Die frühen Vollweidebetriebe starten.'
+            image: Rusca_2025-02-20_Weidestart.jpeg
+            desc: 'Luisa und Rafael beginnen jeweils mit einer grossflächigen Überweidung. _Bild: Muri AG, 20. Februa 2025 (L. Rusca)'
         -
-            title: 'Bestehende Feldwege geschickt integrieren'
-            image: Feldweg_Traenkefass_img_6964.jpg
-            desc: 'Dieser Betrieb integriert seit zwei Jahrzehnten einen bestehenden Feldweg in seine Kurzrasenweide. Dieser dient als befestigter Auftriebsweg und zum Auffahren des Tränkefasses. Keine fest installierten Tränken, weil die Weiden auf Ackerland liegen, welches periodisch auch für den Kartoffelanbau genutzt wird). _Bild: Schüpbach, 2017 (M. Zbinden)_'
+            title: 'Gelbe Stellen'
+            image: Rusca_2025-03-04_Gelbe-Stellen.jpeg
+            desc: 'Die Wiesen seien teilweise gelber, als in früheren Jahren. Luisa schreibt dies _Bild: Schüpbach, 2017 (M. Zbinden)_'
 ---
 
 # Weidestart
@@ -42,9 +42,25 @@ gallery:
 **Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein gut sichtbares Graswachstum.
 **
 
-
-
 ===
 
+
+## Der frühe Weidebeginn macht Sinn
+
+Wer seine Wiesen früh  beweidet, profitiert von einigen **Vorteilen**:
+- Vitamine und gute Gehalte vom jung gewachsenen Gras.
+- Bewegung und sauber Klauen, sofern die Bodenbedingungen gut sind.
+- Effektive Unkrautbekämpfung durch noch unselektives Fressverhalten. 
+- Gemeines Rispengras und andere Ungräser werden gefressen und damit auch zurückgedrängt, solange sie noch nicht mit Rispenschieben anfangen.
+- Früher und häufiger Verbiss fördert die Bestockung der Untergräser.
+- Mehr Triebe = Trittfestigkeit.
+
+
+Gewisse Aspekte können als **Nachteil** ausgelegt werden:
+- Weide muss bei Schnee oder viel Regen wieder pausiert werden.
+- Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
+- Frühe Beweidung kann Graswachstum etwas bremsen - kann aber im Hinblick auf den Futterberg im Frühling toleriert werden.
+
+1,5-2ha für 80 Tiere
 
 

@@ -106,7 +106,9 @@ Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 - Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
 - Frühe Beweidung kann Graswachstum etwas bremsen - kann aber im Hinblick auf den Futterberg im Frühling toleriert werden.
 
-## Weitere Pflegemassnahmen
+Gesamthaft betrachtet profitieren speziell Naturwiesen von einem sogenannten Pflegeweidegang im Frühjahr, weil er die Anteile der wertvollen Gräser fördert und die Verunkrautung hemmt. Auf sehr intensiven Schnittwiesen, vor allem auch gesäten, kann die Massnahme hingegen übers Jahr gesehen etwas Ertrag kosten. Auf Weideflächen ist ein früher Start ein muss, denn nur so kann eine dichte, trittfeste Grasnarbe herangezüchtet werden.
+
+## Weitere Pflegemassnahmen für Wiesen und Weiden
 Eine frühe Beweidung erspart oft weitere Massnahmen auf den betreffenden Parzellen. Ein Walzen bei leicht feuchtem Boden kann allfällige Unebenheiten weiter reduzieren. Mäusehaufen werden am effizientesten mit einer Wiesenegge verstrichen - sinnvoll kombiniert mit einer Übersaat. Diese Pflegemassnahmen sind speziell auf den Parzellen angebracht, auf denen eine Schnittnutzung folgt. 
 
 [Übersicht Pflegemassnahmen auf eAGFF.ch

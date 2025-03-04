@@ -67,7 +67,7 @@ gallery:
 
 # Weidestart jetzt!
 
-**Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben Mitte Februar mit dem Weidegang angefangen. Momentan verhindern Nachttemperaturen noch ein stärkeres sichtbares Graswachstum.
+**Zahlreiche Vollweidebetriebe der Tal- und Hügelregion haben seit Mitte Februar mit dem Weidegang angefangen. Momentan verhindern frostige Nächte ein stärkeres, gut sichtbares Graswachstum.
 **
 
 [TOC]

@@ -81,14 +81,15 @@ gallery:
 
 Für das ganze Schweizer Mittelland heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung gibt es bereits einen Grasvorrat, der genutzt werden will. Alle für die Weide vorgesehenen Flächen kurz bestossen (anfangs nur stundenweise). Von Beginn an auf die angestrebte Weideabtriebshöhe abfressen lassen.
 
-Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.
 
 
 
 ## Aktuelle Messwerte
-Die ersten Betriebe massen letzte Woche die erste Grashöhe. Erst mit der zweiten Messung lässt sich die Zunahme der Biomasse schätzen. Das aktuelle Graswachstum ...
+Erste Betriebe schliessen bereits die zweite Messung der Grashöhe ab und können daher bereits die Zunahme der Biomasse ermitteln. Seit Mitte Februar ist demnach zwischen 5 bis 15 kg TS/ha/Tag gewachsen – gerade in dieser Zeit mit noch tiefem Sonnenstand und viel Schattenwurf variieren die Wachstumsbedingungen noch sehr stark von Ort zu Ort. 
 
-Die teilnehmenden Betriebe melden durchschnittliche Grasvorräte zwischen 200 und 600 kg TS/ha, wobei dieser Wert sehr stark von der festgelegten ("theoretischen") Stoppelhöhe abhängt und mit Vorsicht zu vergleichen ist. 
+Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.
+
+Die teilnehmenden Betriebe melden durchschnittliche nutzbare Grasvorräte zwischen 100 und 300 kg TS/ha, wobei dieser Wert sehr stark von der festgelegten ("theoretischen") Stoppelhöhe abhängt und mit Vorsicht zu vergleichen ist. Auch werden die Grashöhen der einzelnen Parzellen momentan recht stark differieren, je nach Exposition und vorhandener Wärme. Wichtig ist auch zu wissen, dass bereits abgeweidete Koppeln in diesen Durchschnittswert einfliessen.
 
 
 ## Der frühe Weidebeginn macht Sinn

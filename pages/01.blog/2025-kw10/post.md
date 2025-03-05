@@ -106,8 +106,7 @@ Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 - Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
 
 
-[AGFF Merbklatt 1 "Die Weide"
-](https://www.agff.ch/online-shop/merkblaetter.html?class=button "Grundlagen der erfolgreichen Weideführung")
+[AGFF Merbklatt 1 "Die Weide"](https://www.agff.ch/online-shop/merkblaetter.html?class=button "Broschüre mit Grundlagen der erfolgreichen Weideführung bestellen")
 
 ## Pflegemassnahmen für Mähwiesen
 
@@ -115,8 +114,8 @@ Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 
 Eine frühe Beweidung erspart oft weitere Massnahmen auf den betreffenden Parzellen. Ein Walzen bei leicht feuchtem Boden kann allfällige Unebenheiten weiter reduzieren. Mäusehaufen werden am effizientesten mit einer Wiesenegge verstrichen - sinnvoll kombiniert mit einer Übersaat. Diese Pflegemassnahmen sind speziell auf den Parzellen angebracht, auf denen eine Schnittnutzung folgt. 
 
-[Übersicht Pflegemassnahmen auf eAGFF.ch
-](https://www.eagff.ch/problempflanzen-schaedlinge-krankheiten/unkrautregulierung-1/indirekte-massnahmen/pflegemassnahmen?class=button)
+[Übersicht Pflegemassnahmen (eAGFF.ch)
+](https://www.eagff.ch/problempflanzen-schaedlinge-krankheiten/unkrautregulierung-1/indirekte-massnahmen/pflegemassnahmen?class=button) [AGFF Infoblatt U5 Wiesen- und Weidepflege mit Striegel, Wiesenegge und Walze](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/AGFF_U5_Streigeln_usw_d_HSz1.pdf?class=button "PDF ansehen / herunterladen) 
 
 
 

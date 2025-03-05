@@ -79,7 +79,7 @@ gallery:
 
 ===
 
-Für die ganze Schweiz heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung, gibt es schon ein wenig Grasvorrat, der genutzt werden will. 
+Für das ganze Schweizer Mittelland heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung gibt es bereits einen Grasvorrat, der genutzt werden will. Alle für die Weide vorgesehenen Flächen kurz bestossen (anfangs nur stundenweise). Von Beginn an auf die angestrebte Weideabtriebshöhe abfressen lassen.
 
 Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.
 
@@ -93,23 +93,26 @@ Die teilnehmenden Betriebe melden durchschnittliche Grasvorräte zwischen 200 un
 
 ## Der frühe Weidebeginn macht Sinn
 
-Wer seine Wiesen früh  beweidet, profitiert von einigen **Vorteilen**:
-- Vitamine und gute Gehalte vom jung gewachsenen Gras.
-- Bewegung und sauber Klauen, sofern die Bodenbedingungen gut sind.
+Wer seine Wiesen früh intensiv beweidet, profitiert von einigen **Vorteilen**:
+- Der Futterberg während der Wachstumsspitze ist weniger ausgeprägt.
+- Es wird früh eine gute Staffelung der Weidekoppeln erreicht.
+- Vitamine und gute Gehalte vom jung gewachsenen Gras, die Bewegung und saubere Klauen sind gut für die Tiergesundheit und die Produktion.
 - Effektive Unkrautbekämpfung durch noch unselektives Fressverhalten. 
-- Gemeines Rispengras und andere Ungräser werden gefressen und damit auch zurückgedrängt, solange sie noch nicht mit Rispenschieben anfangen.
-- Früher und häufiger Verbiss fördert die Bestockung der Untergräser.
-- Mehr Triebe = Trittfestigkeit.
+- Früher und häufiger Verbiss fördert die Bestockung der Untergräser. Mehr Triebe = bessere Trittfestigkeit.
 
 
 Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 - Weide muss bei Schnee oder viel Regen wieder pausiert werden.
 - Bei mehrmaligen Wetterwechseln kann es mehrere Futterumstellungen für die Tiere bedeuten.
-- Frühe Beweidung kann Graswachstum etwas bremsen - kann aber im Hinblick auf den Futterberg im Frühling toleriert werden.
 
-Gesamthaft betrachtet profitieren speziell Naturwiesen von einem sogenannten Pflegeweidegang im Frühjahr, weil er die Anteile der wertvollen Gräser fördert und die Verunkrautung hemmt. Auf sehr intensiven Schnittwiesen, vor allem auch gesäten, kann die Massnahme hingegen übers Jahr gesehen etwas Ertrag kosten. Auf Weideflächen ist ein früher Start ein muss, denn nur so kann eine dichte, trittfeste Grasnarbe herangezüchtet werden.
 
-## Weitere Pflegemassnahmen für Wiesen und Weiden
+[AGFF Merbklatt 1 "Die Weide"
+](https://www.agff.ch/online-shop/merkblaetter.html?class=button "Grundlagen der erfolgreichen Weideführung")
+
+## Pflegemassnahmen für Mähwiesen
+
+Über die Weideflächen hinaus profitieren speziell Naturwiesen von einem sogenannten Pflegeweidegang im Frühjahr, weil er die Anteile der wertvollen Gräser fördert und die Verunkrautung hemmt.  Gemeines Rispengras und andere minderwertige Pflanzen werden gefressen und damit auch reguliert. Auf sehr intensiven Schnittwiesen, vor allem auch Ansaatwiesen in der Fruchtfolge, kann die Massnahme hingegen übers Jahr gesehen etwas Ertrag kosten. Aber auch dort nimmt man diesen Nachteil zu Gunsten einer dichteren Grasnarbe in Kauf, wenn im späteren Jahresverlauf auch geweidet werden soll.
+
 Eine frühe Beweidung erspart oft weitere Massnahmen auf den betreffenden Parzellen. Ein Walzen bei leicht feuchtem Boden kann allfällige Unebenheiten weiter reduzieren. Mäusehaufen werden am effizientesten mit einer Wiesenegge verstrichen - sinnvoll kombiniert mit einer Übersaat. Diese Pflegemassnahmen sind speziell auf den Parzellen angebracht, auf denen eine Schnittnutzung folgt. 
 
 [Übersicht Pflegemassnahmen auf eAGFF.ch

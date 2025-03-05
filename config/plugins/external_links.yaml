@@ -4,7 +4,10 @@ weight: 0
 exclude:
   classes:
     - exclude
-  domains: null
+  domains:
+    - eagff.ch
+    - agff.ch
+    - inforama.ch
 links:
   www: true
   redirects: true
@@ -23,7 +26,7 @@ links:
     - telnet
     - webcal
 process: true
-title: false
+title: true
 no_follow: true
 target: _blank
 mode: passive

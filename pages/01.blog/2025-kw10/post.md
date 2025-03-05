@@ -71,6 +71,7 @@ gallery:
             title: 'And the winner is... '
             image: Joss_2025-02-17_Weidestart.jpeg
             desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht. _Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
+media_order: 'Burger_2025-03-03_Grasnarbe.jpeg,Burger_2025-03-03_Grasnarbe2.jpeg,Burger_2025-03-03_Weidestart.jpeg,Janett_2025-03-05_FarmwalkNr1.jpeg,Janett_2025-03-05_Plantahofweiden.jpeg,Joss_2025-02-17_Weidestart.jpeg,Marti_2025-03-04_Erster-Umtrieb.jpeg,Rusca_2025-02-20_Weidestart.jpeg,Rusca_2025-03-04_Gelbe-Stellen.jpeg,Schnider_2025-03-03_Weidestart.jpeg,Stohler_2025-03-04_Rohrschwingel.jpeg,Stohler_2025-03-04_Weidestart.jpeg,Sutter_2025_Grasnarbe.jpeg,Sutter_2025_Hoflader-Weidezaeune.jpeg,Sutter_2025_Kühe-Pflegeweide.jpeg,Graswachstum_AFC_2025KW10.svg'
 ---
 
 # Weidestart jetzt!
@@ -95,6 +96,10 @@ Erste Betriebe schliessen bereits die zweite Messung der Grashöhe ab und könne
 
 
 Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.
+
+![Average Farm Cover](Graswachstum_AFC_2025KW10.svg "Average Farm Cover KW10.")
+
+
 
 Die teilnehmenden Betriebe melden durchschnittliche nutzbare Grasvorräte zwischen 100 und 300 kg TS/ha, wobei dieser Wert sehr stark von der festgelegten ("theoretischen") Stoppelhöhe abhängt und mit Vorsicht zu vergleichen ist. Auch werden die Grashöhen der einzelnen Parzellen momentan recht stark differieren, je nach Exposition und vorhandener Wärme. Wichtig ist auch zu wissen, dass bereits abgeweidete Koppeln in diesen Durchschnittswert einfliessen.
 

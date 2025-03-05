@@ -24,7 +24,16 @@ menu: Kurven
 hero:
     image: '2018-05-06 19.05.53.jpg'
     image_alignment: object-center
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '05-03-2025 21:42'
 ---
+
+![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
+
+
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>
 [Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html?target=_blank)
@@ -46,8 +55,6 @@ Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittel
 [/ui-accordion-item]
 [/ui-accordion]
 
-
-![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 
 [ui-accordion independent=true open=none]

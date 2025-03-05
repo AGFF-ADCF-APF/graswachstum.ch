@@ -23,7 +23,7 @@ links:
     - telnet
     - webcal
 process: true
-title: true
+title: false
 no_follow: true
 target: _blank
 mode: active

@@ -38,7 +38,7 @@ gallery:
         -
             title: 'Oder direkt in die Umtriebsweide starten?'
             image: Marti_2025-03-04_Erster-Umtrieb.jpeg
-            desc: 'Der Betrieb Marti in Abtwil AG hat direkt mit der Umtriebsweide gestartet. Momentan wird jeden Tag 0.5ha Weidefläche für 80 Kühe zugeteilt (ca. 200kg nutzbares Gras). Der Anteil Stallfütterung beträgt noch rund 80%. _Bild: Abtwil AG, 20. Februar 2025 (N. Marti)_'
+            desc: 'Der Betrieb Marti in Abtwil AG hat direkt mit der Umtriebsweide gestartet. Momentan wird jeden Tag 0.5ha Weidefläche für 58 Kühe zugeteilt (ca. 200kg nutzbares Gras). Der Anteil Stallfütterung beträgt noch rund 80%. _Bild: Abtwil AG, 20. Februar 2025 (N. Marti)_'
         -
             title: 'Bei Nässen abwarten'
             image: Burger_2025-03-03_Weidestart.jpeg

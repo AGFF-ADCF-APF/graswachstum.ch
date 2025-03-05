@@ -81,15 +81,14 @@ gallery:
 
 Für die ganze Schweiz heisst es seit anfangs März: Meist sonnig, Höchsttemperatur 12 bis 18 Grad. Ideale, trockene Bedingungen für den Weidestart. Je nach Grashöhe im Herbst und Überwinterung, gibt es schon ein wenig Grasvorrat, der genutzt werden will. 
 
-Kühle bis frostige Nachttemperaturen verhindern momentan noch, dass das Gras wächst: einzelne Betriebe messen aber bereits die Grashöhen ihrer Weiden und stellten für Ende Februar ein Graswachstum von ca. 10 kg TS/ha/Tag fest. Mit den erwarteten, milderen Nächten dürfte die Graszunahme am Wochenende bereits um die 20kg betragen.
+Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.
 
 
 
 ## Aktuelle Messwerte
-Das aktuelle Graswachstum ...
+Die ersten Betriebe massen letzte Woche die erste Grashöhe. Erst mit der zweiten Messung lässt sich die Zunahme der Biomasse schätzen. Das aktuelle Graswachstum ...
 
-folgt.
-
+Die teilnehmenden Betriebe melden durchschnittliche Grasvorräte zwischen 200 und 600 kg TS/ha, wobei dieser Wert sehr stark von der festgelegten ("theoretischen") Stoppelhöhe abhängt und mit Vorsicht zu vergleichen ist. 
 
 
 ## Der frühe Weidebeginn macht Sinn

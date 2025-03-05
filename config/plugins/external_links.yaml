@@ -29,4 +29,4 @@ process: true
 title: true
 no_follow: true
 target: _blank
-mode: passive
+mode: active

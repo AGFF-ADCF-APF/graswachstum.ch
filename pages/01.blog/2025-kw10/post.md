@@ -91,7 +91,7 @@ Für das ganze Schweizer Mittelland heisst es seit anfangs März: Meist sonnig, 
 ## Aktuelle Messwerte
 Erste Betriebe schliessen bereits die zweite Messung der Grashöhe ab und können daher bereits die Zunahme der Biomasse ermitteln. Seit Mitte Februar ist demnach zwischen 5 bis 15 kg TS/ha/Tag gewachsen – gerade in dieser Zeit mit noch tiefem Sonnenstand und viel Schattenwurf variieren die Wachstumsbedingungen noch sehr stark von Ort zu Ort. 
 
-![Graswachstumskarte_KW10](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte KW10. Wert 0 bedeutet, dass noch kein Wachstum ermittelt werden konnte.")
+![Graswachstumskarte_KW10](/uploads/archive/Graswachstumkarte_2025KW10.svg "Graswachstumskarte KW10. Wert 0 bedeutet, dass noch kein Wachstum ermittelt werden konnte.")
 
 
 Kühle bis frostige Nachttemperaturen bremsten in der vergangengen Woche das Graswachstum. Gemäss ersten Messungen waren Ende Februar Wachstumsraten von ca. 10 kg TS/ha/Tag möglich. Mit den erwarteten, milderen Nächten dürfte sich die Wachstumrate dieses Wochenende bereits gegen 20kg steigern.

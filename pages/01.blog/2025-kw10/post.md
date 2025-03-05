@@ -114,7 +114,7 @@ Gewisse Aspekte könnten als **Nachteil** ausgelegt werden:
 Eine frühe Beweidung erspart oft weitere Massnahmen auf den betreffenden Parzellen. Ein Walzen bei leicht feuchtem Boden kann allfällige Unebenheiten weiter reduzieren. Mäusehaufen werden am effizientesten mit einer Wiesenegge verstrichen - sinnvoll kombiniert mit einer Übersaat. Diese Pflegemassnahmen sind speziell auf den Parzellen angebracht, auf denen eine Schnittnutzung folgt. 
 
 [Übersicht Pflegemassnahmen (eAGFF.ch)
-](https://www.eagff.ch/problempflanzen-schaedlinge-krankheiten/unkrautregulierung-1/indirekte-massnahmen/pflegemassnahmen?class=button&target="_blank") [AGFF Infoblatt U5 Mechanische Wiesen- und Weidepflege](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/AGFF_U5_Streigeln_usw_d_HSz1.pdf?class=button&target="_blank" "PDF ansehen / herunterladen") 
+](https://www.eagff.ch/problempflanzen-schaedlinge-krankheiten/unkrautregulierung-1/indirekte-massnahmen/pflegemassnahmen?class=button&target="_blank") [AGFF Infoblatt U5 Wiesen- und Weidepflege](https://www.eagff.ch/files/images/bilder/Unkraut_Schaderreger/PDFs/AGFF_U5_Streigeln_usw_d_HSz1.pdf?class=button&target="_blank" "PDF ansehen / herunterladen") 
 
 
 

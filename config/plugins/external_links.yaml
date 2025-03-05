@@ -26,4 +26,4 @@ process: true
 title: false
 no_follow: true
 target: _blank
-mode: active
+mode: passive

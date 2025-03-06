@@ -60,6 +60,14 @@ gallery:
             image: Schnider_2025-03-03_Weidestart.jpeg
             desc: 'Mäuseschäden sind kein Grund, nicht ein erstes Mal zu überweiden. Mäusegänge werden zertrampelt. Mäusehaufen können später immer noch mit einer Egge verstrichen werden. _Foto: Benken SG, 03. März 2025 (T. Schnider)_'
         -
+            title: 'Salez SG am 25. Februar 2025'
+            filename: Salez_2025-02-25.JPG
+            desc: 'Der Standort Rheinhof in Salez ist neu auch beim Messnetz der AGFF dabei.'
+        -
+            title: 'Salez SG am 05. März 2025'
+            filename: Salez_2025-03-04.JPG
+            desc: 'Die wöchentlichen Veränderungen sind vor allem für den Betriebsleiter spannend und wichtig, um die richtigen Weideentscheidungen zu treffen.'
+        -
             title: 'Erster Farmwalk auf dem Plantahof'
             image: Janett_2025-03-05_FarmwalkNr1.jpeg
             desc: '"Morgen Donnerstag starten wir. Über die gesamte weidefläche haben wir in Schnitt 9.9 clicks gemessen." _Foto: Landquart GR, 05. März 2025 (R. Janett)_'

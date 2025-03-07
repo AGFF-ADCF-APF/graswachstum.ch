@@ -17,6 +17,8 @@ content:
         dir: desc
     pagination: true
     url_taxonomy_filters: true
+    filter:
+        published: true
 hide_post_summary: true
 post_icon: calendar-o
 hide_post_date: true

@@ -12,7 +12,7 @@ taxonomy:
     category:
         - blog
     tag:
-        - weide
+        - futterbau
         - wachstumsbericht
     author:
         - 'Zbinden Martin'

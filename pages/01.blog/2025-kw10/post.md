@@ -5,7 +5,7 @@ hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: Stohler_2025-03-04_Weidestart.jpeg
-    image_alignment: object-top
+    image_alignment: object-center
     text: auto
     display: true
     buttons:

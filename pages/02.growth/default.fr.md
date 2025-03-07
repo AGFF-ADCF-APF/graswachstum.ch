@@ -1,5 +1,5 @@
 ---
-title: Messwerte
+title: Données
 published: true
 twig_first: true
 process:

@@ -8,6 +8,11 @@ hero:
     image_alignment: object-top
     text: auto
     display: true
+    buttons:
+        -
+            text: 'Artikel Bauern Zeitung'
+            link: 'https://www.bauernzeitung.ch/dossier/tiere/startschuss-fuer-die-weidesaison-549258'
+            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

@@ -1,5 +1,5 @@
 ---
-title: Graswachstumskurve
+title: Messwerte
 published: true
 twig_first: true
 process:

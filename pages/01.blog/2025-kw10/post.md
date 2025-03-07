@@ -18,8 +18,8 @@ taxonomy:
         - blog
     tag:
         - weide
-        - wachstumsbericht
         - gallerie
+        - wachstumsbericht
     author:
         - 'Zbinden Martin'
 author: 'Martin Zbinden, INFORAMA'
@@ -86,6 +86,8 @@ gallery:
             image: Joss_2025-02-17_Weidestart.jpeg
             desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht. _Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
 media_order: 'Burger_2025-03-03_Grasnarbe.jpeg,Burger_2025-03-03_Grasnarbe2.jpeg,Burger_2025-03-03_Weidestart.jpeg,Janett_2025-03-05_FarmwalkNr1.jpeg,Janett_2025-03-05_Plantahofweiden.jpeg,Joss_2025-02-17_Weidestart.jpeg,Marti_2025-03-04_Erster-Umtrieb.jpeg,Rusca_2025-02-20_Weidestart.jpeg,Rusca_2025-03-04_Gelbe-Stellen.jpeg,Schnider_2025-03-03_Weidestart.jpeg,Stohler_2025-03-04_Rohrschwingel.jpeg,Stohler_2025-03-04_Weidestart.jpeg,Sutter_2025_Grasnarbe.jpeg,Sutter_2025_Hoflader-Weidezaeune.jpeg,Sutter_2025_Kühe-Pflegeweide.jpeg,Graswachstum_AFC_2025KW10.svg'
+seo-magic:
+    description: 'Ideale Bedingungen für den Weidestart 2025 im CH Mittelland. '
 ---
 
 # Weidestart jetzt!

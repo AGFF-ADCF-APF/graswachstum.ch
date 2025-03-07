@@ -4,36 +4,36 @@
         "page_rawroute": "\/blog",
         "page_title": "Wachstumsbericht"
     },
-    "updated": 1732392925,
+    "updated": 1741336120,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Wachstumsbericht",
         "grav-page-route": "\/",
         "grav-page-rawroute": "\/blog",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:25 GMT",
+        "expires": "Fri, 14 Mar 2025 08:28:40 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:24 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Fri, 07 Mar 2025 08:28:40 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392924.985187053680419921875,
-        "total_time": 0.0882010000000000016218137943724286742508411407470703125,
-        "namelookup_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "pretransfer_time": 5.3999999999999997979914512225008138557313941419124603271484375e-5,
-        "starttransfer_time": 0.0880890000000000006341593916658894158899784088134765625,
+        "start_time": 1741336120.7246570587158203125,
+        "total_time": 0.1846810000000000118181020525298663415014743804931640625,
+        "namelookup_time": 0.0003899999999999999929396754527743951257434673607349395751953125,
+        "connect_time": 0.000485999999999999995371757766093878672108985483646392822265625,
+        "pretransfer_time": 0.004586999999999999931554750531859099282883107662200927734375,
+        "starttransfer_time": 0.184182000000000012374101743262144736945629119873046875,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/de",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 517,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 518,
         "request_size": 111,
         "redirect_count": 0,
-        "size_download": 5847,
-        "speed_download": 66443,
+        "size_download": 9518,
+        "speed_download": 51537,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,28 +41,37 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 27419
+        "content_size": 51179
     },
     "content": {
-        "body": "weide\n        \n      \n      \n      \n      \n        <h3>\n           Woche 45 (11.11.-17.11.2024)\n        <\/h3>\n      \n            <h1>Weideende heisst nicht Grasende<\/h1>\n<p>Futterbau \/ Dieses Futterbaujahr war gepr&auml;gt von viel Wachstum, aber schwierigen Erntebedingungen. Nun hat das Graswachstum stark abgenommen.<\/p>\n\n    \n    \n      15th Nov 2024\n              - Nicolas Marti, Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           Woche 34 (19.08.-25.08.2024)\n        <\/h3>\n      \n            <h1>Die Weidesaison mit Reserven verl&auml;ngern<\/h1>\n<p>Futterbau \/ Durch die Niederschl&auml;ge wurde die N-Mineralisierung stark angekurbelt.<\/p>\n\n    \n    \n      15th Nov 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (29.04.-05.05.2024)\n        <\/h3>\n      \n            <h1>Wie umgehen mit Weideresten?<\/h1>\n<p>Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu&#776;hren kann.<\/p>\n\n    \n    \n      3rd May 2024\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n      \n      \n      \n        <h3>\n           Fr&uuml;hlingstagung IG Weidemilch 30.04.2024\n        <\/h3>\n      \n            <h1>Drei gute Ratschl&auml;ge<\/h1>\n<p>Weidemilch \/ Michael und Ruedi Sutter zeigen, wie sie ihre Fl&auml;chen optimal nutzen und Zeit sparen.<\/p>\n\n    \n    \n      3rd May 2024",
+        "body": "weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Woche 10 (03.03.-09.03.2025)\n        <\/h3>\n      \n            <h1>Weidestart jetzt!<\/h1>\n<p>Zahlreiche Vollweidebetriebe der Tal- und H&uuml;gelregion haben seit Mitte Februar mit dem Weidegang angefangen. Momentan verhindern frostige N&auml;chte ein st&auml;rkeres, gut sichtbares Graswachstum.\n<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Aktuelle Messwerte\n                    <\/li>\n                    <li>\n            Der fr&uuml;he Weidebeginn macht Sinn\n                    <\/li>\n                    <li>\n            Pflegemassnahmen f&uuml;r M&auml;hwiesen\n                    <\/li>\n                    <li>\n            Bildergallerie\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      6th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Neues Video: Ernte und Konservierung der Luzerne\n        <\/h3>\n      \n            <h1>Nie trocken bewegen<\/h1>\n<p>Grangeneuve hat k&uuml;rzlich ein kurzes Video zum Thema Ernte und Konservierung von Luzerne ver&ouml;ffentlicht: Darin kommen zwei Landwirte, S&eacute;bastien Berset und David H&auml;nni, zu Wort, die den Anbau und die Konservierung von Luzerne beherrschen.\n<\/p>\n\n\n    \n    \n      28th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            futterbau\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 9 (24.02.-02.03.2025)\n        <\/h3>\n      \n            <h1>G&uuml;lle nicht &laquo;entsorgen&raquo;<\/h1>\n<p>Sobald die Vegetationsruhe aufgehoben ist, k&ouml;nnen die Pflanzen wieder Stickstoff aufnehmen. Bis dahin m&uuml;ssen die F&auml;sser und Verteiler parkiert bleiben.\n<\/p>\n<p>Daniel Nyfeler vom Arenenberg (TG) schreibt &uuml;ber die sinnvolle G&uuml;lleverteilung auf Grasland.<\/p>\n<p>Artikel Bauern Zeitung<\/p>\n\n    \n    \n      24th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 7 (10.02.-16.02.2025)\n        <\/h3>\n      \n            <h1>Soll ich mit Weiden beginnen?<\/h1>\n<p>Grass10 Newsletter \/ Das Grass10-Team von Teagasc bringt jeden Dienstag Nachmittag den Grass10-Weide-Newsletter heraus.\nAchtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration f&uuml;r unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.<\/p>\n\n    \n    \n      11th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 6 (03.02.-09.02.2025)\n        <\/h3>\n      \n            <h1>Den Beginn der Weidesaison jetzt planen<\/h1>\n<p>Gr&uuml;nlandpflege \/ Bald schon geht es ans Austreiben der K&uuml;he auf die Wiesen. Kurz vor Vegetationsbeginn gilt es aber die Wiesenbest&auml;nde noch zu kontrollieren und allenfalls zu pflegen.\n <\/p>\n<p>Artikel Bauern Zeitung AGFF Merkblatt 5<\/p>\n<p>Hier gibts etwas Zusatzmaterial zu aktuellen Boden- und Lufttemperaturen (agrometeo.ch).<\/p>\n\n    \n    \n      6th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            kurse\n        \n      \n          \n        \n            konservierung\n        \n      \n      \n      \n      \n        <h3>\n           Unterlagen Raufuttermeisterschaft\n        <\/h3>\n      \n            <h1>Raufuttermeisterschaft<\/h1>\n<p>Diese Seite bietet Informationen und Unterlagen f&uuml;r die Durchf&uuml;hrung einer Raufuttermeisterschaft (auch bekannt unter Heumeisterschaft oder Silagemeisterschaft), beispielsweise im Rahmen von Unterrichtssequenzen oder Kursen.<\/p>\n\n    \n    \n      15th Nov 2024",
         "headers": {
             "h1": [
                 "Wachstumsbericht",
-                "Weideende heisst nicht Grasende",
-                "Die Weidesaison mit Reserven verl\u00e4ngern",
-                "Wie umgehen mit Weideresten?",
-                "Drei gute Ratschl\u00e4ge"
+                "Weidestart jetzt!",
+                "Nie trocken bewegen",
+                "G\u00fclle nicht \u00abentsorgen\u00bb",
+                "Soll ich mit Weiden beginnen?",
+                "Den Beginn der Weidesaison jetzt planen",
+                "Saubere K\u00fche = sauberes Gras",
+                "Raufuttermeisterschaft"
             ],
             "h2": [],
             "h3": [
-                "Woche 45 (11.11.-17.11.2024)",
-                "Woche 34 (19.08.-25.08.2024)",
-                "Woche 18 (29.04.-05.05.2024)",
-                "Fr\u00fchlingstagung IG Weidemilch 30.04.2024"
+                "Woche 10 (03.03.-09.03.2025)",
+                "Neues Video: Ernte und Konservierung der Luzerne",
+                "Woche 9 (24.02.-02.03.2025)",
+                "Woche 7 (10.02.-16.02.2025)",
+                "Woche 6 (03.02.-09.02.2025)",
+                "Weideeing\u00e4nge und Zugangswege",
+                "Unterlagen Raufuttermeisterschaft"
             ],
             "h4": [
+                "Inhaltsverzeichnis",
+                "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
-                "Archiv"
+                "Archiv",
+                "Abonnements"
             ],
             "h5": [],
             "h6": []
@@ -75,32 +84,62 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/csm_img_7352_f4e25fef1d.webp",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/csm_img_7352_f4e25fef1d.webp?g-2e80e807",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw45\/2024-11-15 Weideende heisst nicht Grasende - N. Marti M. Zbinden_header.jpg",
-                "alt": "Woche 45 (11.11.-17.11.2024)",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskarte_aktuell.svg?decoding=auto&fetchpriority=auto&g-2e80e807",
+                "alt": "Graswachstumskarte_aktuell",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-kw34\/2024-08-23 Weidesaison mit Reserven verla\u0308ngern - N. Marti_Header.jpg",
-                "alt": "Woche 34 (19.08.-25.08.2024)",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw10\/Rusca_2025-02-20_Weidestart.jpeg?g-2e80e807",
+                "alt": "Woche 10 (03.03.-09.03.2025)",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024kw18\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header2.jpg",
-                "alt": "Woche 18 (29.04.-05.05.2024)",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-video-luzerne-trocknung\/LuzerneSM323_IMG_20180629_182533.jpg?g-2e80e807",
+                "alt": "Neues Video: Ernte und Konservierung der Luzerne",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-04-30-weidetagung\/2024-05-03_Wie umgehen mit Weideresten + Fruehlingstagung IG Weidemilch - M. Zbinden, M. Sutter_header.jpg",
-                "alt": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw9-wiesenduengung\/NyfelerD_Schleppschlauch.webp?g-2e80e807",
+                "alt": "Woche 9 (24.02.-02.03.2025)",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw7\/PXL_20250209_144310976.jpg?g-2e80e807",
+                "alt": "Woche 7 (10.02.-16.02.2025)",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw6\/Temperatur Durchschnitt +2 m (\u00b0C) (1).png?g-2e80e807",
+                "alt": "Woche 6 (03.02.-09.02.2025)",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-12-weideeingaenge\/Nasse_Weide_PXL_20240601_155722580.jpg?g-2e80e807",
+                "alt": "Weideeing\u00e4nge und Zugangswege",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/kurse-raufuttermeisterschaft\/Futterproben.jpg?g-2e80e807",
+                "alt": "Unterlagen Raufuttermeisterschaft",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-2e80e807",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -111,126 +150,430 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 1,
-                "article": 4,
+                "article": 7,
                 "footer": 1
             }
         },
         "bad_tags": {
-            "iframes": 0,
+            "iframes": 1,
             "flash": 0
         },
         "links": {
             "\/de": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "\/de\/growth": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Kurven",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "\/de\/resources": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
-                "external": false
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-webinar-grasmessen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Grasmess-Webinar 2025",
+                "external": false,
+                "status": 200
             },
             "\/de\/about": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "\/de\/contact": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Kontakt",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "\/de\/blog\/2024-kw45": {
-                "count": 0,
+            "\/fr": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Woche 45 (11.11.-17.11.2024)",
-                "external": false
+                "text": "Fran\u00e7ais",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/blog\/2025-kw10": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Woche 10 (03.03.-09.03.2025)",
+                "external": false,
+                "status": 200
             },
             "\/de\/tag:weide#blog_list": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "weide",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "\/de\/blog\/2024-kw34": {
-                "count": 0,
+            "\/de\/tag:wachstumsbericht#blog_list": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Woche 34 (19.08.-25.08.2024)",
-                "external": false
+                "text": "wachstumsbericht",
+                "external": false,
+                "status": 200
             },
-            "\/de\/blog\/2024kw18": {
-                "count": 0,
+            "\/de\/tag:gallerie#blog_list": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Woche 18 (29.04.-05.05.2024)",
-                "external": false
+                "text": "gallerie",
+                "external": false,
+                "status": 200
             },
-            "\/de\/blog\/2024-04-30-weidetagung": {
-                "count": 0,
+            "#aktuelle-messwerte": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Fr\u00fchlingstagung IG Weidemilch 30.04.2024",
-                "external": false
+                "text": "Aktuelle Messwerte",
+                "external": false,
+                "status": 200
+            },
+            "#der-fruehe-weidebeginn-ma": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Der fr\u00fche Weidebeginn macht Sinn",
+                "external": false,
+                "status": 200
+            },
+            "#pflegemassnahmen-fuer-mae": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Pflegemassnahmen f\u00fcr M\u00e4hwiesen",
+                "external": false,
+                "status": 200
+            },
+            "#bildergallerie": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Bildergallerie",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/blog\/2025-video-luzerne-trocknung": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Neues Video: Ernte und Konservierung der Luzerne",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/blog\/2025-kw9-wiesenduengung": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Woche 9 (24.02.-02.03.2025)",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:futterbau#blog_list": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "futterbau",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.bauernzeitung.ch\/artikel\/pflanzen\/guelle-sinnvoll-nutzen-nicht-entsorgen-549036": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Artikel Bauern Zeitung",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/blog\/2025-kw7": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Woche 7 (10.02.-16.02.2025)",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Teagasc",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Grass10-Weide-Newsletter",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/blog\/2025-kw6": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Woche 6 (03.02.-09.02.2025)",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.bauernzeitung.ch\/dossier\/pflanzen\/den-beginn-der-weidesaison-jetzt-planen-548723": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Artikel Bauern Zeitung",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.eagff.ch\/files\/images\/bilder\/Unkraut_Schaderreger\/PDFs\/agff-merkblatt-5.pdf": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF Merkblatt 5",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/blog\/2024-12-weideeingaenge": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Weideeing\u00e4nge und Zugangswege",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:infrastruktur#blog_list": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/blog\/kurse-raufuttermeisterschaft": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Unterlagen Raufuttermeisterschaft",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:kurse#blog_list": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:konservierung#blog_list": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/page:2": {
+                "count": 1,
+                "target": "",
+                "rel": "next",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/random": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false,
+                "status": 200
             },
             "\/de\/tag:weide": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "weide",
-                "external": false
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:wachstumsbericht": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:gallerie": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:infrastruktur": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:kurse": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:konservierung": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:futterbau": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "futterbau",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/tag:betriebsportrait": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:mar_2025": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1\n                March 2025",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:feb_2025": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "4\n                February 2025",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2024": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1\n                December 2024",
+                "external": true,
+                "status": 200
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:nov_2024": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "2\n                November 2024",
-                "external": true
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:aug_2024": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1\n                August 2024",
+                "external": true,
+                "status": 200
             },
             "https:\/\/graswachstum.ch\/blog\/archives_month:may_2024": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "2\n                May 2024",
-                "external": true
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:dec_2021": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1\n                December 2021",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/blog.atom": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Atom",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/blog.rss": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "RSS",
+                "external": false,
+                "status": 200
             },
             "\/de\/legal": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Datenschutz und Rechtsausschluss",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "https:\/\/getgrav.org": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "graswachstum.ch",
-                "external": true
+                "external": true,
+                "status": 200
             },
-            "https:\/\/graswachstum.ch": {
-                "count": 0,
+            "https:\/\/agff.ch": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
-                "external": true
+                "text": "AGFF",
+                "external": true,
+                "status": 200
             }
         }
     },
@@ -240,13 +583,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "15th Nov 2024 weide Woche 18 (29.04.-05.05.2024) Wie umgehen mit Weideresten? Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308\u2026",
             "title": "Wachstumsbericht | graswachstum.ch",
+            "keywords": "weide,woche,2024,15th,fr\u00fchlingstagung,futterbau,weidemilch,29.04.-05.05.2024,11.11.-17.11.2024,19.08.-25.08.2024,",
             "image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de",
             "og:site_name": "graswachstum.ch",
             "og:title": "Wachstumsbericht | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "15th Nov 2024 weide Woche 18 (29.04.-05.05.2024) Wie umgehen mit Weideresten? Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308\u2026",
             "og:type": "website",
             "og:image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -254,15 +598,16 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Wachstumsbericht | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "15th Nov 2024 weide Woche 18 (29.04.-05.05.2024) Wie umgehen mit Weideresten? Graswachstum \/ Vielerorts sollte der zweite Umtrieb starten, was zum Dilemma fu\u0308\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "twitter:image:alt": "Wachstumsbericht | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
+            "\/user\/plugins\/vimeo\/css\/vimeo.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -280,7 +625,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -298,7 +655,25 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/langswitcher\/css\/langswitcher.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -351,6 +726,18 @@
                 "type": "text\/css",
                 "media": null,
                 "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-ui\/css\/ui-cslider.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/shortcode-ui\/css\/ui-accordion.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
             }
         },
         "scripts": {
@@ -364,12 +751,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -394,6 +786,11 @@
                 "defer": "defer",
                 "type": null
             },
+            "\/user\/plugins\/shortcode-ui\/js\/ui-cslider.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
             "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
                 "async": null,
                 "defer": null,
@@ -416,5 +813,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: f (easy handle 0x5600687f0800)\n> GET \/de HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:25 GMT\r\n* Added cookie grav-site-23a95d8=\"ff4389e85f06171de1ae2221616fb92e\" for domain graswachstum.ch, path \/, expire 1732394725\n< set-cookie: grav-site-23a95d8=ff4389e85f06171de1ae2221616fb92e; expires=Sat, 23 Nov 2024 20:45:25 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:24 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsbericht\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/blog\r\n< cache-control: max-age=604800\r\n< expires: Fri, 14 Mar 2025 08:28:40 GMT\r\n* Added cookie grav-site-23a95d8=\"534167d460869802bab320a929296e6d\" for domain graswachstum.ch, path \/, expire 1741337920\n< set-cookie: grav-site-23a95d8=534167d460869802bab320a929296e6d; expires=Fri, 07-Mar-2025 08:58:40 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 07 Mar 2025 08:28:40 GMT\r\n< server: Apache\r\n< \r\n"
 }

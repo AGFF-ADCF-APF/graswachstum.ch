@@ -37,7 +37,6 @@ hero:
             text: 'Graswachstumskurve (2024)'
             link: /growth
             classes: 'bg-primary text-white'
-    content: "![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg \"Graswachstumskarte_aktuell\")\n"
 show_breadcrumbs: true
 show_pagination: true
 author: 'Martin Zbinden'

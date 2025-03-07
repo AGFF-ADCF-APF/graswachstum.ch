@@ -19,6 +19,7 @@ taxonomy:
     tag:
         - weide
         - wachstumsbericht
+        - gallerie
     author:
         - 'Zbinden Martin'
 author: 'Martin Zbinden, INFORAMA'

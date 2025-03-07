@@ -4,26 +4,26 @@
         "page_rawroute": "\/blog\/2025-kw9-wiesenduengung",
         "page_title": "Woche 9 (24.02.-02.03.2025)"
     },
-    "updated": 1741102478,
+    "updated": 1741335992,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 9 (24.02.-02.03.2025)",
         "grav-page-route": "\/blog\/2025-kw9-wiesenduengung",
         "grav-page-rawroute": "\/blog\/2025-kw9-wiesenduengung",
         "cache-control": "max-age=604800",
-        "expires": "Tue, 11 Mar 2025 15:34:38 GMT",
+        "expires": "Fri, 14 Mar 2025 08:26:32 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Tue, 04 Mar 2025 15:34:38 GMT",
+        "date": "Fri, 07 Mar 2025 08:26:32 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1741102478.367391109466552734375,
-        "total_time": 0.21156900000000000705568936609779484570026397705078125,
-        "namelookup_time": 0.01069299999999999938038452995670013478957116603851318359375,
-        "connect_time": 0.01079100000000000024458213232492198585532605648040771484375,
-        "pretransfer_time": 0.01384299999999999940258899044920326559804379940032958984375,
-        "starttransfer_time": 0.2110440000000000093649532573181204497814178466796875,
+        "start_time": 1741335992.76019001007080078125,
+        "total_time": 0.165028000000000008018474773052730597555637359619140625,
+        "namelookup_time": 0.0003589999999999999983658904856298477170639671385288238525390625,
+        "connect_time": 0.000431999999999999983839316097800065108458511531352996826171875,
+        "pretransfer_time": 0.0034410000000000000482114348443474227678962051868438720703125,
+        "starttransfer_time": 0.1645040000000000113278275648553972132503986358642578125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 581,
         "request_size": 140,
         "redirect_count": 0,
-        "size_download": 8737,
-        "speed_download": 41296,
+        "size_download": 9003,
+        "speed_download": 54554,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,24 +41,25 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 43681
+        "content_size": 44733
     },
     "content": {
-        "body": "<h1>G&uuml;lle nicht &laquo;entsorgen&raquo;<\/h1>\n<p>Sobald die Vegetationsruhe aufgehoben ist, k&ouml;nnen die Pflanzen wieder Stickstoff aufnehmen. Bis dahin m&uuml;ssen die F&auml;sser und Verteiler parkiert bleiben.\n<\/p>\n<p>Daniel Nyfeler vom Arenenberg (TG) schreibt &uuml;ber die sinnvolle G&uuml;lleverteilung auf Grasland.<\/p>\n<p>Artikel Bauern Zeitung<\/p>\n\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 7 (10.02.-16.02.2025)\n        <\/h3>\n      \n            <h1>Soll ich mit Weiden beginnen?<\/h1>\n<p>Grass10 Newsletter \/ Das Grass10-Team von Teagasc bringt jeden Dienstag Nachmittag den Grass10-Weide-Newsletter heraus.\nAchtung Spoiler: jetzt wisst ihr, wo wir jeweils die Inspiration f&uuml;r unsere eigenen Artikel hernehmen. Ein Auszug aus dem heute erschienenen Newsletter.<\/p>\n\n    \n    \n      11th Feb 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            infrastruktur\n        \n      \n          \n        \n            gallerie\n        \n      \n      \n      \n      \n        <h3>\n           Weideeing&auml;nge und Zugangswege\n        <\/h3>\n      \n            <h1>Saubere K&uuml;he = sauberes Gras<\/h1>\n<p><em>Weideinfrastruktur \/ Bei den vielen Regentagen der letzten Weidesaison zeigte sich deutlich, ob die Weideinfrastruktur den betrieblichen Anforderungen gen&uuml;gten. Was gute Weidezug&auml;nge ausmacht und verschiedene spannende Ans&auml;tze von Betrieben in der ganzen Schweiz, erf&auml;hrst du in diesem Beitrag. Mit Bildergallerie.<\/em><\/p>\n\n    \n    \n      20th Dec 2024\n\n\n              - Martin Zbinden",
+        "body": "<h1>G&uuml;lle nicht &laquo;entsorgen&raquo;<\/h1>\n<p>Sobald die Vegetationsruhe aufgehoben ist, k&ouml;nnen die Pflanzen wieder Stickstoff aufnehmen. Bis dahin m&uuml;ssen die F&auml;sser und Verteiler parkiert bleiben.\n<\/p>\n<p>Daniel Nyfeler vom Arenenberg (TG) schreibt &uuml;ber die sinnvolle G&uuml;lleverteilung auf Grasland.<\/p>\n<p>Artikel Bauern Zeitung<\/p>\n\n    \t\n\t\n\n\n\n    \n                    \n    \n            \n\n\n\t\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\t\n\n            \n\t\t\n        \n      \n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 10 (03.03.-09.03.2025)\n        <\/h3>\n      \n            <h1>Weidestart jetzt!<\/h1>\n<p>Zahlreiche Vollweidebetriebe der Tal- und H&uuml;gelregion haben seit Mitte Februar mit dem Weidegang angefangen. Momentan verhindern frostige N&auml;chte ein st&auml;rkeres, gut sichtbares Graswachstum.\n<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Aktuelle Messwerte\n                    <\/li>\n                    <li>\n            Der fr&uuml;he Weidebeginn macht Sinn\n                    <\/li>\n                    <li>\n            Pflegemassnahmen f&uuml;r M&auml;hwiesen\n                    <\/li>\n                    <li>\n            Bildergallerie\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      6th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Neues Video: Ernte und Konservierung der Luzerne\n        <\/h3>\n      \n            <h1>Nie trocken bewegen<\/h1>\n<p>Grangeneuve hat k&uuml;rzlich ein kurzes Video zum Thema Ernte und Konservierung von Luzerne ver&ouml;ffentlicht: Darin kommen zwei Landwirte, S&eacute;bastien Berset und David H&auml;nni, zu Wort, die den Anbau und die Konservierung von Luzerne beherrschen.\n<\/p>\n\n\n    \n    \n      28th Feb 2025",
         "headers": {
             "h1": [
                 "Woche 9 (24.02.-02.03.2025)",
                 "G\u00fclle nicht \u00abentsorgen\u00bb",
-                "Soll ich mit Weiden beginnen?",
-                "Saubere K\u00fche = sauberes Gras"
+                "Weidestart jetzt!",
+                "Nie trocken bewegen"
             ],
             "h2": [],
             "h3": [
-                "Woche 7 (10.02.-16.02.2025)",
-                "Weideeing\u00e4nge und Zugangswege"
+                "Woche 10 (03.03.-09.03.2025)",
+                "Neues Video: Ernte und Konservierung der Luzerne"
             ],
             "h4": [
                 "Other Related Posts:",
+                "Inhaltsverzeichnis",
                 "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
                 "Archiv",
@@ -75,25 +76,25 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw9-wiesenduengung\/NyfelerD_Schleppschlauch.webp?g-237e2678",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw9-wiesenduengung\/NyfelerD_Schleppschlauch.webp?g-2e80e807",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw7\/PXL_20250209_144310976.jpg?g-237e2678",
-                "alt": "Woche 7 (10.02.-16.02.2025)",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-kw10\/Rusca_2025-02-20_Weidestart.jpeg?g-2e80e807",
+                "alt": "Woche 10 (03.03.-09.03.2025)",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2024-12-weideeingaenge\/Nasse_Weide_PXL_20240601_155722580.jpg?g-237e2678",
-                "alt": "Weideeing\u00e4nge und Zugangswege",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.blog\/2025-video-luzerne-trocknung\/LuzerneSM323_IMG_20180629_182533.jpg?g-2e80e807",
+                "alt": "Neues Video: Ernte und Konservierung der Luzerne",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-237e2678",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-2e80e807",
                 "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
@@ -110,7 +111,7 @@
             }
         },
         "bad_tags": {
-            "iframes": 0,
+            "iframes": 1,
             "flash": 0
         },
         "links": {
@@ -170,11 +171,11 @@
                 "external": false,
                 "status": 200
             },
-            "\/de\/tag:weide#blog_list": {
+            "\/de\/tag:futterbau#blog_list": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "weide",
+                "text": "futterbau",
                 "external": false,
                 "status": 200
             },
@@ -198,55 +199,63 @@
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Woche 7 (10.02.-16.02.2025)",
+                "text": "Vorheriger Beitrag",
                 "external": false,
                 "status": 200
             },
-            "\/de\/blog\/woche-10": {
+            "\/de\/blog\/2025-video-luzerne-trocknung": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "N\u00e4chster Beitrag",
+                "text": "Neues Video: Ernte und Konservierung der Luzerne",
                 "external": false,
                 "status": 200
             },
-            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Teagasc",
-                "external": true,
-                "status": 200
-            },
-            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Grass10-Weide-Newsletter",
-                "external": true,
-                "status": 200
-            },
-            "\/de\/blog\/2024-12-weideeingaenge": {
+            "\/de\/blog\/2025-kw10": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Weideeing\u00e4nge und Zugangswege",
+                "text": "Woche 10 (03.03.-09.03.2025)",
                 "external": false,
                 "status": 200
             },
-            "\/de\/tag:infrastruktur#blog_list": {
+            "\/de\/tag:weide#blog_list": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "infrastruktur",
+                "text": "weide",
                 "external": false,
                 "status": 200
             },
-            "\/de\/tag:gallerie#blog_list": {
+            "#aktuelle-messwerte": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "gallerie",
+                "text": "Aktuelle Messwerte",
+                "external": false,
+                "status": 200
+            },
+            "#der-fruehe-weidebeginn-ma": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Der fr\u00fche Weidebeginn macht Sinn",
+                "external": false,
+                "status": 200
+            },
+            "#pflegemassnahmen-fuer-mae": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Pflegemassnahmen f\u00fcr M\u00e4hwiesen",
+                "external": false,
+                "status": 200
+            },
+            "#bildergallerie": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Bildergallerie",
                 "external": false,
                 "status": 200
             },
@@ -306,6 +315,14 @@
                 "external": false,
                 "status": 200
             },
+            "\/de\/tag:futterbau": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "futterbau",
+                "external": false,
+                "status": 200
+            },
             "\/de\/tag:betriebsportrait": {
                 "count": 1,
                 "target": "",
@@ -314,11 +331,19 @@
                 "external": false,
                 "status": 200
             },
+            "https:\/\/graswachstum.ch\/blog\/archives_month:mar_2025": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1\n                March 2025",
+                "external": true,
+                "status": 200
+            },
             "https:\/\/graswachstum.ch\/blog\/archives_month:feb_2025": {
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "5\n                February 2025",
+                "text": "4\n                February 2025",
                 "external": true,
                 "status": 200
             },
@@ -410,13 +435,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
             "title": "Woche 9 (24.02.-02.03.2025) | graswachstum.ch",
+            "keywords": "weideinfrastruktur,weide,wachstumsbericht,betrieblichen,deutlich,infrastruktur,regentagen,gras,zeitung,inspiration,",
             "image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung",
             "og:site_name": "graswachstum.ch",
             "og:title": "Woche 9 (24.02.-02.03.2025) | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -424,12 +450,11 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Woche 9 (24.02.-02.03.2025) | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "11th Feb 2025 weide infrastruktur gallerie Weideeing\u00e4nge und Zugangswege Saubere K\u00fche = sauberes Gras Weideinfrastruktur \/ Bei den vielen Regentagen der letz\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\/seomagic-image.jpg",
             "twitter:image:alt": "Woche 9 (24.02.-02.03.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung",
@@ -553,18 +578,6 @@
                 "type": "text\/css",
                 "media": null,
                 "crossorigin": null
-            },
-            "\/user\/plugins\/shortcode-ui\/css\/ui-cslider.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
-            "\/user\/plugins\/shortcode-ui\/css\/ui-accordion.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
             }
         },
         "scripts": {
@@ -613,11 +626,6 @@
                 "defer": "defer",
                 "type": null
             },
-            "\/user\/plugins\/shortcode-ui\/js\/ui-cslider.js": {
-                "async": null,
-                "defer": null,
-                "type": null
-            },
             "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
                 "async": null,
                 "defer": null,
@@ -640,5 +648,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/blog\/2025-kw9-wiesenduengung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/blog\/2025-kw9-wiesenduengung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 9 (24.02.-02.03.2025)\r\n< grav-page-route: \/blog\/2025-kw9-wiesenduengung\r\n< grav-page-rawroute: \/blog\/2025-kw9-wiesenduengung\r\n< cache-control: max-age=604800\r\n< expires: Tue, 11 Mar 2025 15:34:38 GMT\r\n* Added cookie grav-site-23a95d8=\"58694dc619391da9ed1ccdc2c4b8284f\" for domain graswachstum.ch, path \/, expire 1741104278\n< set-cookie: grav-site-23a95d8=58694dc619391da9ed1ccdc2c4b8284f; expires=Tue, 04-Mar-2025 16:04:38 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Tue, 04 Mar 2025 15:34:38 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/blog\/2025-kw9-wiesenduengung\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/blog\/2025-kw9-wiesenduengung]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/blog\/2025-kw9-wiesenduengung HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 9 (24.02.-02.03.2025)\r\n< grav-page-route: \/blog\/2025-kw9-wiesenduengung\r\n< grav-page-rawroute: \/blog\/2025-kw9-wiesenduengung\r\n< cache-control: max-age=604800\r\n< expires: Fri, 14 Mar 2025 08:26:32 GMT\r\n* Added cookie grav-site-23a95d8=\"545fcfde80016be9e85723ea7f408d28\" for domain graswachstum.ch, path \/, expire 1741337792\n< set-cookie: grav-site-23a95d8=545fcfde80016be9e85723ea7f408d28; expires=Fri, 07-Mar-2025 08:56:32 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 07 Mar 2025 08:26:32 GMT\r\n< server: Apache\r\n< \r\n"
 }

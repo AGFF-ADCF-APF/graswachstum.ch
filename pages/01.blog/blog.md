@@ -1,5 +1,5 @@
 ---
-title: Wachstumsbericht
+title: Wachstumsberichte
 published: true
 visible: false
 hide_page_title: true

@@ -10,7 +10,10 @@
       {% include 'partials/simplesearch_searchbox.html.twig' with { sidebar: true } %}
     </div>
   {% endif %}
-  {{ page.media["/uploads/Graswachstumskarte_aktuell.svg"].resize(100, 100).html()|raw }}
+  <div class="sidebar-content">
+  {{ media["/uploads/Graswachstumskarte_aktuell.svg"].resize(100, 100).html()|raw }}
+  <a href="/growth" class="button">Aktuelle Messwerte</a>
+  </div>
   {% if config.plugins.random.enabled %}
     <div class="sidebar-content">
       <h4 class="text-xl font-bold mt-2 mb-3">{{ 'THEME_TYPHOON.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>

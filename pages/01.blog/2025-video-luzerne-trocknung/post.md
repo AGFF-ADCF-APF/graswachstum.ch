@@ -21,8 +21,8 @@ taxonomy:
     category:
         - blog
     tag:
-        - weide
-        - wachstumsbericht
+        - futterbau
+        - konservierung
     author:
         - 'Zbinden Martin'
 author: 'Pierre Aeby, pierre.aeby@fr.ch'

@@ -50,15 +50,19 @@ gallery:
         -
             title: 'Asphalt direkt auf Grasnarbe verlegt'
             image: Treibweg_Asphalt_1.jpeg
-            desc: 'Gute Erfahrungen haben einige Betriebe mit dem direkten Einbau einer ca. 10cm dicken Asphaltschicht direkt auf die Grasnarbe gemacht. Die Anfangskosten sind zwar relativ hoch, aber dafür hat man über Jahre einen sauberen, gern begangenen Triebweg ohne Unterhaltsbedarf. Frost und Nässe dürften  die Dauerhaftigkeit beeinträchtigen.  _Foto: zVg_'
+            desc: 'Eine relativ neue Idee ist die Verlegung einer ca. 10cm dicken Asphaltschicht direkt auf die Grasnarbe. Die Anfangskosten sind zwar relativ hoch, aber dafür hat man über Jahre einen sauberen, gern begangenen Triebweg ohne Unterhaltsbedarf. Frost und Nässe dürften  die Dauerhaftigkeit beeinträchtigen.  _Foto: zVg_'
         -
             title: 'Achtung: nur für geringe Belastungen '
             image: Treibweg_Asphalt_3.jpeg
-            desc: 'Achtung, ohne Kofferung darf nicht mit schwerem Gerät draufgefahren werden, was bei einer Breite von 1 bis 2 Metern auch nicht beabsichtigt werden sollte. Dafür kann ein einmal ausgedienter Weg auch relativ einfach wieder entfernt und entsorgt werden.  _Foto: zVg_'
+            desc: 'Achtung, ohne Kofferung darf nicht mit schwerem Gerät draufgefahren werden, was bei einer Breite von 1 bis 2 Metern auch nicht beabsichtigt wird. Dafür kann ein einmal ausgedienter Weg auch relativ einfach wieder entfernt und entsorgt werden.  _Foto: zVg_'
         -
             title: 'Achtung, Baubewilligung nötig!'
             image: Weideweg_IMG_20170302_140039.jpg
-            desc: 'Dauerhafte Massnahmen, oder solche die Erdverschiebungen beinhalten, sind in vielen Gemeinden Baubewilligungs-pflichtig. Aus Gründen des einfacheren Baus haben sich mittlerweile auch Systeme etabliert, welche ohne Aushub direkt auf die Grasnarbe verlegt werden können... _Bild: Untersteckholz, 2017 (M. Zbinden)_ '
+            desc: 'Dauerhafte Massnahmen, oder solche die Erdverschiebungen beinhalten, sind in vielen Gemeinden Baubewilligungs-pflichtig.  _Bild: Untersteckholz, 2017 (M. Zbinden)_ '
+        -
+            title: Gummi-Matten
+            image: null
+            desc: 'Wenn ein Weideweg nicht bewilligungsfähig ist, dann könnten alternativ Gummimatten direkt auf den gewachsenen Boden verlegt werden.'
         -
             title: 'Holzschnitzel für Provisorien'
             image: Triebweg_IMG_4121_S.Oehrli.JPG

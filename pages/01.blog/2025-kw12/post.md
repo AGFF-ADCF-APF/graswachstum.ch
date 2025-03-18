@@ -18,7 +18,6 @@ taxonomy:
         - blog
     tag:
         - weide
-        - gallerie
         - wachstumsbericht
     author:
         - 'Zbinden Martin'

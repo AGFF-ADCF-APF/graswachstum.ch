@@ -137,7 +137,7 @@ _Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte s
 
 
 
-## Grundlagen aus der Literatur
+## Planungsgrundlagen
 In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeigt. Es gilt wie so oft in der Landwirtschaft: Generelle Empfehlungen sind schwierig, der Austausch mit den Kollegen vor Ort und etwas Experimentierfreude zahlen sich aus. Nachfolgend ein paar Ratschläge, welche im AGFF Infoblatt W14 [cite=agff-2004 /] (wo nicht anders angegeben) oder in anderer Literatur zu finden sind:
 
 
@@ -160,6 +160,8 @@ In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeig
 ![Jahr 2015](Ober-Hinterberg_2015.jpg "Beispiel für einen neu angelegten Zugangsweg")
 [/ui-image-compare]
 
+
+## Praktische Umsetzung
 
 [notice]Zu beachten: Bauliche Massnahmen auf offenem Feld sind in der Regel baubewilligungspflichtig. Das Projekt muss mindestens bei der Gemeinde zur Prüfung eingereicht werden.[/notice]
 

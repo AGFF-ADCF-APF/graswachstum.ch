@@ -1,6 +1,6 @@
 ---
 title: 'Woche 12 (17.03.-24.03.2025)'
-date: '06-03-2025 21:43'
+date: '18-03-2025 21:41'
 hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
@@ -89,6 +89,7 @@ media_order: 'Stohler_2025-03-04_Weidestart.jpeg,Burger_2025-03-03_Grasnarbe.jpe
 seo-magic:
     description: 'Ideale Bedingungen für den Weidestart 2025 im CH Mittelland.'
 published: false
+publish_date: '18-03-2025 21:41'
 ---
 
 # Weidestart jetzt!

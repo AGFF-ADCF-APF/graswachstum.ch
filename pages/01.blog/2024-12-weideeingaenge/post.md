@@ -161,7 +161,7 @@ In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeig
 [/ui-image-compare]
 
 
-!!! Zu beachten: Bauliche Massnahmen auf offenem Feld sind in der Regel baubewilligungspflichtig. Das Projekt muss mindestens bei der Gemeinde zur Prüfung eingereicht werden.
+! Zu beachten: Bauliche Massnahmen auf offenem Feld sind in der Regel baubewilligungspflichtig. Das Projekt muss mindestens bei der Gemeinde zur Prüfung eingereicht werden.
 
 Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden Baubewilligung, die fachlich korrekte Ausführung beachtet werden:
 

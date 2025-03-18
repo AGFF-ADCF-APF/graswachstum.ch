@@ -4,7 +4,7 @@ date: '18-03-2025 21:41'
 hide_from_post_list: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: Stohler_2025-03-04_Weidestart.jpeg
+    image: widmer_wynau.webp
     image_alignment: object-center
     text: auto
     display: true
@@ -84,7 +84,7 @@ gallery:
             title: 'And the winner is... '
             image: Joss_2025-02-17_Weidestart.jpeg
             desc: 'Nein, Oscars fürs frühe Rauslassen der Tiere gibts nicht. Aber sichtlich haben alle Beteiligten viel Freude, wenn der Winter Pause macht. _Foto: Gysenstein BE, 18. Februar 2025 (R. Joss)_'
-media_order: 'Stohler_2025-03-04_Weidestart.jpeg,Burger_2025-03-03_Grasnarbe.jpeg,Burger_2025-03-03_Grasnarbe2.jpeg,Burger_2025-03-03_Weidestart.jpeg,Janett_2025-03-05_FarmwalkNr1.jpeg,Janett_2025-03-05_Plantahofweiden.jpeg,Joss_2025-02-17_Weidestart.jpeg,Marti_2025-03-04_Erster-Umtrieb.jpeg,Rusca_2025-02-20_Weidestart.jpeg,Rusca_2025-03-04_Gelbe-Stellen.jpeg,Schnider_2025-03-03_Weidestart.jpeg,Stohler_2025-03-04_Rohrschwingel.jpeg,Sutter_2025_Grasnarbe.jpeg,Sutter_2025_Hoflader-Weidezaeune.jpeg,Sutter_2025_Kühe-Pflegeweide.jpeg,Graswachstum_AFC_2025KW10.svg,Salez_2025-02-25.jpeg,Salez_2025-03-04.jpeg'
+media_order: widmer_wynau.webp
 seo-magic:
     description: 'Ideale Bedingungen für den Weidestart 2025 im CH Mittelland.'
 publish_date: '18-03-2025 21:41'

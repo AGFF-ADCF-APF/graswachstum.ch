@@ -72,7 +72,7 @@ gallery:
             image: Plantahof_Treibwegkreuzung_M.Zbinden.JPG
             desc: 'Grosse Vollweide-Herden (>40 Tiere) erfordern in jedem Fall geeignetes Wegnetz, damit die hofnäheren Flächen nicht überbeansprucht werden. Hier ein Beispiel vom Plantahof in Landquart. _Bild: Landquart, 2023 (M. Zbinden)_ '
             visible: true
-media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_IMG_20170302_140039.jpg,Strassenquerung_PXL_20240406_115058034.jpg,Weideweg_IMG_20170406_144020.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611.jpg,Holzschnitzel_IMG_20120418_090339.jpg,Weideeingang_2017-05-31.jpg,Trittschäden_Grasnarbe_IMG_20160424_185708.jpg,TraenkeEingang_befestigt_2013-09-25.jpg,Weideeingang_Waldhfo_2013-09-25 15.02.56.jpg,Weideweg_IMG_20170406_143433.jpg,Tränkefass_seitlich_IMG_20141101_133701.jpg,IMG_0562.JPG,Triebweg_IMG_4121_S.Oehrli.JPG,Weideeingang_Stromverbindung_IMG_20170406_110423.jpg,Weidewege_2017-05-24.jpg,Weideweg_IMG_20220502_151406.jpg,Schema_Weideweg.jpg,Ober-Hinterberg_2015.jpg,Ober-Hinterberg_2012.jpg,Feldweg_Traenkefass_img_6964.jpg,FlexibleEingaenge_IMG_20160414_085622.jpg,Nasse_Weide_PXL_20240601_155722580.jpg,hintergrund-textur-asphalt_cc-by-20.jpg,Treibweg_Asphalt_1.jpeg'
+media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_IMG_20170302_140039.jpg,Strassenquerung_PXL_20240406_115058034.jpg,Weideweg_IMG_20170406_144020.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611.jpg,Holzschnitzel_IMG_20120418_090339.jpg,Weideeingang_2017-05-31.jpg,Trittschäden_Grasnarbe_IMG_20160424_185708.jpg,TraenkeEingang_befestigt_2013-09-25.jpg,Weideeingang_Waldhfo_2013-09-25 15.02.56.jpg,Weideweg_IMG_20170406_143433.jpg,Tränkefass_seitlich_IMG_20141101_133701.jpg,IMG_0562.JPG,Triebweg_IMG_4121_S.Oehrli.JPG,Weideeingang_Stromverbindung_IMG_20170406_110423.jpg,Weidewege_2017-05-24.jpg,Weideweg_IMG_20220502_151406.jpg,Schema_Weideweg.jpg,Ober-Hinterberg_2015.jpg,Ober-Hinterberg_2012.jpg,Feldweg_Traenkefass_img_6964.jpg,FlexibleEingaenge_IMG_20160414_085622.jpg,Nasse_Weide_PXL_20240601_155722580.jpg,hintergrund-textur-asphalt_cc-by-20.jpg,Treibweg_Asphalt_1.jpeg,Treibweg_Asphalt_3.jpeg,Plantahof_Treibwegkreuzung_M.Zbinden.JPG'
 references:
     -
         id: steinwidder-2008
@@ -118,7 +118,7 @@ _Weideinfrastruktur / Bei den vielen Regentagen der letzten Weidesaison zeigte s
 
 [TOC]
 
-## 5 Gedanken zum Weideinfrastrukturen
+## 5 Gedanken zu Weideinfrastrukturen
 1. Zahlreiche Faktoren haben Einfluss auf das Ausmass von Trittschäden. Eine Auswahl findet sich in der nachfolgenden Tabelle, sortiert nach absteigender Wichtigkeit. Das heisst, das Tierverhalten wird als grösserer Einfluss als das Tiergewicht angeschaut. Wobei die einzelnen Faktoren auch nicht strikte getrennt werden können, weil zum Beispiel ein unpassendes oder ungewohntes Grasangebot (zu jung, zu alt) auch das Tierverhalten beeinflussen kann (Unruhe vs. zufrieden fressen).
 
 |  nicht veränderbar  |  beeinflussbar  |
@@ -161,8 +161,9 @@ In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeig
 [/ui-image-compare]
 
 
+!! Zu beachten: Bauliche Massnahmen auf offenem Feld sind in der Regel baubewilligungspflichtig. Das Projekt muss mindestens bei der Gemeinde zur Prüfung eingereicht werden.
 
-Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden Baubewilligung, die fachlich korrekte Ausführug beachtet werden:
+Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden Baubewilligung, die fachlich korrekte Ausführung beachtet werden:
 
 
 > Welche Arbeiten sind vor dem Legen des Belags zu erledigen? [cite=agff-2004 /] 

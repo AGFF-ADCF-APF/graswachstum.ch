@@ -100,3 +100,5 @@ Ausserdem: Bauern Zeitung hat Niklaus Widmer in Wynau besucht, der beim Weidegö
 [Artikel Bauern Zeitung](https://www.bauernzeitung.ch/hidden/ich-weiss-dass-ich-nicht-allein-bin-wenn-ein-problem-auftaucht?class=button)
 
 ===
+
+![Graswachstumskarte_KW12](/uploads/archive/Graswachstumkarte_2025KW12.svg "Graswachstumskarte KW10. Wert 0 bedeutet, dass wegen fehlender Messungen oder weil noch ganzflächig überweidet wird, kein Wachstum errechnet werden konnte.")

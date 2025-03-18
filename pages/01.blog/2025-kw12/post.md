@@ -99,3 +99,5 @@ publish_date: '18-03-2025 21:41'
 Ausserdem: Bauern Zeitung hat Niklaus Widmer in Wynau besucht, der beim Weidegötti-Projekt der IG Weidemilch mitmacht.
  
 [Artikel Bauern Zeitung](https://www.bauernzeitung.ch/hidden/ich-weiss-dass-ich-nicht-allein-bin-wenn-ein-problem-auftaucht?class=button)
+
+===

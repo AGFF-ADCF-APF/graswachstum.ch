@@ -31,7 +31,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
+published: false
 ---
 
 # Nie trocken bewegen

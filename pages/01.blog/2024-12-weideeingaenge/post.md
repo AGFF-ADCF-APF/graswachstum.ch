@@ -228,7 +228,7 @@ Nachteile:
 
 
 ### Asphalt
-![Treibweg_Asphalt_1](Treibweg_Asphalt_1.jpeg?lightbox "Treibweg_Asphalt_1")
+![Treibweg_Asphalt_1](Treibweg_Asphalt_1.jpeg?lightbox "Eine Asphaltspur direkt auf den gewachsenen Boden verlegt könnte gut für die Klauen und relativ günstig sein, aber könnte wahrscheinlich raumplanerisch nicht gewünscht/akzeptiert sein. ")
 
 1 cm / m2 = 24 kg verdichtet (Quelle [cite=macadam-2001 /] 
 

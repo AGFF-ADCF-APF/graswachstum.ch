@@ -1,7 +1,7 @@
 ---
 title: Wachstumsberichte
 published: true
-visible: false
+visible: true
 hide_page_title: true
 modular_content:
     items: '@self.modular'

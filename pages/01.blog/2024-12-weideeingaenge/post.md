@@ -209,7 +209,7 @@ Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und s
 
 ### Lochmatte 
 
-![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox "Gemäss Mitteilung des Landwirts werden in dieser Region nur diese Gummimatten toleriert, weil sie wohl nicht als "bauliche Massnahme" betrachtet werden.")
+![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox 'Gemäss Mitteilung des Landwirts werden in dieser Region nur diese Gummimatten toleriert, weil sie wohl nicht als "bauliche Massnahme" betrachtet werden.')
 
 [cite=belmondo-2025 /] 
 

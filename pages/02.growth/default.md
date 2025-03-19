@@ -31,9 +31,11 @@ sitemap:
     lastmod: '05-03-2025 21:42'
 ---
 
+## Karte
 ![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 
+## Graswachstumskurve
 
 <iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>
 [Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html?target=_blank)

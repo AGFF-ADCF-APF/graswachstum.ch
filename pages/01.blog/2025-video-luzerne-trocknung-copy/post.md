@@ -1,5 +1,5 @@
 ---
-title: 'Mobgrazing CH: aktuelle Literatur'
+title: 'Mobgrazing CH: '
 date: '28-02-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
@@ -10,12 +10,8 @@ hero:
     text: auto
     buttons:
         -
-            text: 'Luzerne auf eAGFF'
-            link: 'https://www.eagff.ch/wiesenpflanzen-kennen/kleearten/artspezifische-merkmale/luzerne'
-            classes: 'bg-primary text-white'
-        -
-            text: Original-Post
-            link: 'https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne'
+            text: 'Artikel Schweizer Bauer'
+            link: 'https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft'
             classes: 'bg-primary text-white'
 taxonomy:
     category:
@@ -32,16 +28,18 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 published: false
+media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2023-04-19_Riedackerhof_Mist.mp4'
 ---
 
 # Mobgrazing CH
 ## Ein Beitrag zum aktuellen Wissensstand
 
+**Was weidemilch.ch mit dem Weidegötti ( macht regenerativ.ch In der landwirtschaftlichen Presse wieder einmal allgegenwärtig, 
 **
+«…»
 
-**
-
-
+https://www.agricultura-regeneratio.ch/services-1
+„Weide der Zukunft“
 ===
 
 (nur mit Abo lesbar)

@@ -1,5 +1,5 @@
 ---
-title: Messwerte
+title: Wachstum
 published: true
 twig_first: true
 process:

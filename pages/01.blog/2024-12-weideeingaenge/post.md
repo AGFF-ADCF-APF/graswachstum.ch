@@ -108,6 +108,26 @@ references:
         journal: null
         volume: null
         pages: null
+    -
+        id: macadam-2001
+        type: web
+        title: 'Tabelle zur Berechnung der Mischgut-Bestell-Tonnage'
+        author: 'MACADAM AG, 4147 Aesch'
+        year: '2001'
+        url: 'https://www.grisard.ch/fileadmin/redaktion/macadam/Dokumente/Kalkulator.pdf'
+        journal: null
+        volume: null
+        pages: null
+    -
+        id: belmondo-2025
+        type: web
+        title: ' BELMONDO® Flix Die einfache Bodenstabilisierung'
+        author: 'Gummiwerk KRAIBURG Elastik GmbH & Co. KG, 84529 Tittmoning, Deutschland'
+        year: '2025'
+        url: 'https://kraiburg-belmondo.de/produkte/stallmatten-fuer-laufwege/belmondo-flix/'
+        journal: null
+        volume: null
+        pages: null
 shortcode-citation:
     items: all
     reorder_uncited: true
@@ -149,7 +169,7 @@ In der Fotogallerie ganz unten werden zahlreiche Beispiele aus der Praxis gezeig
 * Ein befestigter Weg soll mehr als 20 Jahre halten!
 * Lage des Weges gut planen: wie können möglichst viele Koppeln erschlossen werden?
 * **Je grösser die Herde, desto breiter der Weg.** Die Herde kommt auf schmalen Wegen langsamer voran. Im Anfangsbereich ist eine Wegbreite von 3 bis 5 Metern erforderlich (Gedränge, Überholen, brünstige Tiere). Nach einer gewissen Distanz genügt eine Breite von 1 Meter, da sich die Herde in die Länge zieht; für Herden mit mehr als 50 Kühen bleibt jedoch eine Breite von 3 oder gar 4 Metern erforderlich.
-* **Weiche Triebwege – die jedoch rasch abtrocknen** – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht. [cite=steinwidder-2008 /]
+* **Weiche Triebwege – die jedoch rasch abtrocknen** – sind grundsätzlich harten Bodenausführungen vorzuziehen. Diese schonen nicht nur die Klauen, sie werden auch von den Kühen bevorzugt aufgesucht. [cite=steinwidder-2008 /] 
 * Der Weg darf keine Steigung von mehr als 30% aufweisen; gegebenenfalls müssen Tritte gebaut oder der Weg verlängert werden.
 * Wird der Weg ebenfalls von Fahrzeugen benutzt, muess er genügend breit und gut gebaut sein; ansonsten können sich Spuren bilden.
 * Die Dauerhaftigkeit eines Weges hängt vom **Abfliessen des Wassers** ab: Bombierte Form, je nach Untergrund Drainage einbauen und tiefere Erdschichten vermeiden.
@@ -194,15 +214,14 @@ Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und s
 
 ### Asphalt
 
-1 cm / m2 = 24 kg verdichtet 
+1 cm / m2 = 24 kg verdichtet (Quelle [cite=macadam-2001 /] 
 
 Für einen 1m breiten Weg mit Schichtdicke 8cm reicht 1t Asphalt für 5m.
 
 
 
 ### Lochmatte 
-
-https://kraiburg-belmondo.de/produkte/stallmatten-fuer-laufwege/belmondo-flix/
+[cite=belmondo-2025 /] 
 
 
 

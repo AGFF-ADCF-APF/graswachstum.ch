@@ -36,8 +36,12 @@ hero:
     image: csm_img_7352_f4e25fef1d.webp
     buttons:
         -
-            text: 'Graswachstumskurve (2024)'
-            link: /growth
+            text: 'Karte Graswachstum'
+            link: '/growth#Karte'
+            classes: 'bg-primary text-white'
+        -
+            text: Graswachstumskurve
+            link: '/growth#Graswachstumskurve'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true
 show_pagination: true

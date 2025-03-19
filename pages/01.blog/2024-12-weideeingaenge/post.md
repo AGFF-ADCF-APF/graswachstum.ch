@@ -194,6 +194,9 @@ Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und s
 
 ### Asphalt
 
+1 cm / m2 = 24 kg verdichtet 
+
+Für einen 1m breiten Weg mit Schichtdicke 8cm reicht 1t Asphalt für 5m.
 
 
 

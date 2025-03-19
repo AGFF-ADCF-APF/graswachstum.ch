@@ -76,7 +76,7 @@ gallery:
             image: Plantahof_Treibwegkreuzung_M.Zbinden.JPG
             desc: 'Grosse Vollweide-Herden (>40 Tiere) erfordern in jedem Fall geeignetes Wegnetz, damit die hofnäheren Flächen nicht überbeansprucht werden. Hier ein Beispiel vom Plantahof in Landquart. _Bild: Landquart, 2023 (M. Zbinden)_ '
             visible: true
-media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_IMG_20170302_140039.jpg,Strassenquerung_PXL_20240406_115058034.jpg,Weideweg_IMG_20170406_144020.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611.jpg,Holzschnitzel_IMG_20120418_090339.jpg,Weideeingang_2017-05-31.jpg,Trittschäden_Grasnarbe_IMG_20160424_185708.jpg,TraenkeEingang_befestigt_2013-09-25.jpg,Weideeingang_Waldhfo_2013-09-25 15.02.56.jpg,Weideweg_IMG_20170406_143433.jpg,Tränkefass_seitlich_IMG_20141101_133701.jpg,IMG_0562.JPG,Triebweg_IMG_4121_S.Oehrli.JPG,Weideeingang_Stromverbindung_IMG_20170406_110423.jpg,Weidewege_2017-05-24.jpg,Weideweg_IMG_20220502_151406.jpg,Schema_Weideweg.jpg,Ober-Hinterberg_2015.jpg,Ober-Hinterberg_2012.jpg,Feldweg_Traenkefass_img_6964.jpg,FlexibleEingaenge_IMG_20160414_085622.jpg,Nasse_Weide_PXL_20240601_155722580.jpg,hintergrund-textur-asphalt_cc-by-20.jpg,Treibweg_Asphalt_1.jpeg,Treibweg_Asphalt_3.jpeg,Plantahof_Treibwegkreuzung_M.Zbinden.JPG'
+media_order: 'Tränke_2017-06-27 08.36.48.jpg,Weideweglein_Planie_2017-05-24 09.04.41.jpg,Weideweg_IMG_20170302_140039.jpg,Strassenquerung_PXL_20240406_115058034.jpg,Weideweg_IMG_20170406_144020.jpg,Weideweg_Baggerschaufel_IMG_20170927_160611.jpg,Holzschnitzel_IMG_20120418_090339.jpg,Weideeingang_2017-05-31.jpg,Trittschäden_Grasnarbe_IMG_20160424_185708.jpg,TraenkeEingang_befestigt_2013-09-25.jpg,Weideeingang_Waldhfo_2013-09-25 15.02.56.jpg,Weideweg_IMG_20170406_143433.jpg,Tränkefass_seitlich_IMG_20141101_133701.jpg,IMG_0562.JPG,Triebweg_IMG_4121_S.Oehrli.JPG,Weideeingang_Stromverbindung_IMG_20170406_110423.jpg,Weidewege_2017-05-24.jpg,Weideweg_IMG_20220502_151406.jpg,Schema_Weideweg.jpg,Ober-Hinterberg_2015.jpg,Ober-Hinterberg_2012.jpg,Feldweg_Traenkefass_img_6964.jpg,FlexibleEingaenge_IMG_20160414_085622.jpg,Nasse_Weide_PXL_20240601_155722580.jpg,hintergrund-textur-asphalt_cc-by-20.jpg,Treibweg_Asphalt_1.jpeg,Treibweg_Asphalt_3.jpeg,Plantahof_Treibwegkreuzung_M.Zbinden.JPG,Stallmatten-fuer-Laufwege_2025.jpg'
 references:
     -
         id: steinwidder-2008
@@ -214,14 +214,16 @@ Anstelle des oben skizzierten, bewährten und dauerhaften Wegaufbaus kann auch e
 
 
 ### Asphalt
+![Treibweg_Asphalt_1](Treibweg_Asphalt_1.jpeg?lightbox&resize=200 "Treibweg_Asphalt_1")
 
 1 cm / m2 = 24 kg verdichtet (Quelle [cite=macadam-2001 /] 
 
 Für einen 1m breiten Weg mit Schichtdicke 8cm reicht 1t Asphalt für 5m.
 
 
-
 ### Lochmatte 
+
+![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox&resize=200 "Stallmatten-fuer-Laufwege_2025")
 
 [cite=belmondo-2025 /] 
 

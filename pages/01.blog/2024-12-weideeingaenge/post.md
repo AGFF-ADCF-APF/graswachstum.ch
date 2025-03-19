@@ -207,9 +207,23 @@ Die Milchviehhaltung mit automatischem Melksystem (AMS) kombiniert mit automatis
 
 Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und sich nicht auf jedem Boden gleich gut bewähren könnten.
 
+### Lochmatte 
+
+![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox&resize=200 "Stallmatten-fuer-Laufwege_2025")
+
+[cite=belmondo-2025 /] 
+
+
 ### Mergel auf Geotextil auf gewachsenem Boden
 Anstelle des oben skizzierten, bewährten und dauerhaften Wegaufbaus kann auch eine Mergelschicht auf gewachsenem Boden aufgebracht werden. Als Trennlage wurde eine Geotextil auf den gewachsenen Boden ausgelegt. Durch die Bombierung und die Anhebung gegenüber der Umgebung kann das Wasser gut abfliessen. Für die tägliche Belastung durch die Kühe ist gemäss Berichten eine Mergelschicht von ca. 20cm ausreichend. 
 
+Vorteile:
++ keine problematischen, ortsfremden Stoffe (ausser allenfalls Geotextil)
++  Akzeptanz durch Kühe, bei geeignetem Material und guter Walzarbeit
++  Akzeptanz durch aussenstehende Personen
+
+Nachteile: 
+- eher ungeeignet für geneigte Weidewege (Ausschwemmgefahr)
 
 
 
@@ -221,11 +235,7 @@ Anstelle des oben skizzierten, bewährten und dauerhaften Wegaufbaus kann auch e
 Für einen 1m breiten Weg mit Schichtdicke 8cm reicht 1t Asphalt für 5m.
 
 
-### Lochmatte 
 
-![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox&resize=200 "Stallmatten-fuer-Laufwege_2025")
-
-[cite=belmondo-2025 /] 
 
 
 

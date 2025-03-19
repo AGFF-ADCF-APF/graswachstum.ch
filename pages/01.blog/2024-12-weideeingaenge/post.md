@@ -214,7 +214,7 @@ Anstelle des oben skizzierten, bewährten und dauerhaften Wegaufbaus kann auch e
 
 
 ### Asphalt
-![Treibweg_Asphalt_1](Treibweg_Asphalt_1.jpeg?lightbox&resize=200 "Treibweg_Asphalt_1")
+![Treibweg_Asphalt_1](Treibweg_Asphalt_1.jpeg?lightbox "Treibweg_Asphalt_1")
 
 1 cm / m2 = 24 kg verdichtet (Quelle [cite=macadam-2001 /] 
 

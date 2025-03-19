@@ -181,6 +181,28 @@ Wenn ein Weg neu angelegt werden soll, muss neben der allfällig einzuholenden B
 * In niederschlagsreichen Regionen eine Drainage entlang des Weges vorsehen (Drainagerohre von 10-12 cm vor dem Auffüllen legen).
 ![Schema_Weideweg](Schema_Weideweg.jpg?lightbox "Aufbau eines typischen Weideweg mit Kies/Schotter und einer Deckschicht aus Holzschnitzeln. (Grafik: AGFF W14)")
 
+## Neue Materialien (Kapitel in Bearbeitung)
+
+Die Milchviehhaltung mit automatischem Melksystem (AMS) kombiniert mit automatisierter Portionenbeweidung im ABC-System erfordert mindestens drei Haupt-Weidewege und eventuell weitere Verästelungen, damit die Kühe bei jedem Wetter problemlos auf die zugeteilten Weideflächen gehen können. Weil neue Weidewege wie alle baulichen Massnahmen auf offenem Feld grundsätzlich einer Baubewilligung bedürfen, suchen Betriebsleitende auch nach neuen Möglichkeiten für halb-permanente Weginstallationen. Im Vordergrund der Überlegungen stehen die einwandfreie Akzeptanz durch die selbständig zirkulierenden Tiere, ein guter Wasserabfluss und Selbstreinigungseffekt, und die Akzeptanz durch die Behörden. Aber auch die einfache Rückbaubarkeit bei einem späteren Systemwechsel sollte bedacht werden - wer weiss schon, welches Weidesystem die nächste Generation bevorzugt oder ob die Fläche überhaupt noch beweidet werden wird?
+
+Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und sich nicht auf jedem Boden gleich gut bewähren könnten.
+
+### Mergel auf Geotextil auf gewachsenem Boden
+
+
+
+
+### Asphalt
+
+
+
+
+### Lochmatte 
+
+https://kraiburg-belmondo.de/produkte/stallmatten-fuer-laufwege/belmondo-flix/
+
+
+
 
 ## Weitere Informationen
 [ui-accordion independent=true open=none]

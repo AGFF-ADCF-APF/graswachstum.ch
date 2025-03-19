@@ -209,7 +209,7 @@ Für die nachfolgende Ideen gilt, dass sie noch relativ wenig erprobt sind und s
 
 ### Lochmatte 
 
-![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox&resize=200 "Stallmatten-fuer-Laufwege_2025")
+![Stallmatten-fuer-Laufwege_2025](Stallmatten-fuer-Laufwege_2025.jpg?lightbox "Stallmatten-fuer-Laufwege_2025")
 
 [cite=belmondo-2025 /] 
 

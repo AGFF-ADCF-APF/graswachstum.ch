@@ -37,11 +37,11 @@ hero:
     buttons:
         -
             text: 'Karte Graswachstum'
-            link: '/growth#Karte'
+            link: '/growth#karte'
             classes: 'bg-primary text-white'
         -
             text: Graswachstumskurve
-            link: '/growth#Graswachstumskurve'
+            link: '/growth#graswachstumskurve'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true
 show_pagination: true

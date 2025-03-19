@@ -45,11 +45,11 @@ published: false
 ===
 
 (nur mit Abo lesbar)
-[Artikel ](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)
+[Artikel/Interview mit Pierre Aeby, Juni 2024 (Abo)](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)
 
 
-[](https://www.bauernzeitung.ch/artikel/tiere/familie-schreiber-hat-mob-grazing-als-hochgras-weide-fuer-sich-massgeschneidert-524465)
-
+[Artikel Hochgrasweide bei Familie Schreiber (Abo)](https://www.bauernzeitung.ch/artikel/tiere/familie-schreiber-hat-mob-grazing-als-hochgras-weide-fuer-sich-massgeschneidert-524465)
+[Video über Weidemanagement bei Familie Schreiber](https://youtu.be/gZXBf7ECxH4)
 
 [Bücher von A. Voisin (Downloads)](https://weidewelt.org/viewtopic.php?f=38&t=322?button)
 

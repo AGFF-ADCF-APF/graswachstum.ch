@@ -31,8 +31,3 @@ Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 ===
 
 ## Gallerie
-
-{% for image in page.media.images %}
-	{% set filename = image.filename %}
-    {% include 'partials/lightbox.html.twig' with {image: filename} %}
-{% endfor %}

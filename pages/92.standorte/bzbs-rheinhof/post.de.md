@@ -16,17 +16,12 @@ shortcode-citation:
     reorder_uncited: true
 sitemap:
     lastmod: '20-03-2025 12:30'
-media_order: agroscopehochsvg-74812f10.png
+media_order: 'agroscopehochsvg-74812f10.png,Salez_2025-02-25.jpeg,Salez_2025-03-18.JPG,Salez_2025-03-05.jpeg'
 ---
 
-## Standorte Posieux und Sorens 
-
-Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)
-Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum/erhebungsmethode.html))
+## Standort Salez
+Webseite: [https://www.bzbs.ch/weiterbildung/landwirtschaft]/
+Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 
 ===
 
-**Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb «Schulbauernhof Sorens» und stellt die aktuellen Wachstumszahlen als Referenzwerte für interessierte Kreise ins Netz.**
- ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
- 
-Die Messungen dieser beiden Messsttandorte sind besonders wertvoll, weil die langjährigen Daten Vergleich ermöglichen. Mit den beiden sehr unterschiedlichen Lagen (Höhe, Topographie, Lage) wird gut abgebildet, wie verschieden sich das Graswachstum zu verschiedenen Jahreszeiten entwickeln kann. 

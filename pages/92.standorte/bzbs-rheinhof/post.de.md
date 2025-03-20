@@ -25,3 +25,18 @@ Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 
 ===
 
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+{{ page.content|raw }}
+<div class="centeredgallery">
+    {% for image in page.media.images %}
+
+    {% set filename = image.filename %}
+    {% set title = filename|split('.')|first|titleize %}
+    <div class="image-surround">
+        {% set content = image.cropResize(300,300).html(title, title) %}
+        {% include 'partials/lightbox.html.twig' with {image: filename} %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

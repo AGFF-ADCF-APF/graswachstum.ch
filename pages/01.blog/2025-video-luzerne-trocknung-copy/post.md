@@ -80,9 +80,7 @@ Die Gruppen müssen die Koppeln nicht unbedingt in regelmäßiger Reihenfolgebe
 Um den Elektrozaun immer wieder an den alten Stellen zu installieren, empfiehlt sich die Anbringung von Markierungsp:flöcken. 53 
 10. Alle diese Grundregeln lassen sich in einem einzigen Satz unterbringen: Die Kunst der rationellen Weidewirtschaft besteht darin, das Wachsen des Grases zu beeinflussen und das Tier beim Weiden zu führen. Man muß endlich Schluß machen mit der alten Gewohnheit, daß man das Gras auf gut Glück wachsen und die Tiere willkürlich weiden läßt. 
 
-## Aktuelle Zeitungsartikel (2024)
-
-
+## Aktuelle Zeitungsartikel  (2024)
 [Artikel/Interview mit Pierre Aeby, Juni 2024 (Abo)](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)
 (nur mit Abo lesbar)
 
@@ -95,3 +93,15 @@ Um den Elektrozaun immer wieder an den alten Stellen zu installieren, empfiehlt 
 
 
 
+## Fazit
+
+> 
+**Nährstoffgehalte bei Mob grazing** 
+Bei dieser Art der Beweidung stehen die Weidetiere nur eine kurze Zeit auf der 
+zugeteilten Portion. Zudem sind die Ruhepausen zwischen Auftrieben sehr lang, teils sind 
+die Aufwüchse dann 50 – 70 Tage alt. Zur Anwendung kommt das System vor allem bei 
+Mutterkühen in Trockenregionen auf Ackerfutter. Werden nur die oberen Pflanzenteile 
+gefressen und verbleibt der Rest auf der Fläche, können die Nährstoffgehalte des 
+aufgenommenen Futters noch hoch liegen. Müssen die Tiere dagegen tiefer verbeißen, 
+nehmen sie auch viel wenig nährstoffreiches Futter auf. Bei Milchkühen ohne Zufütterung 
+kann die Jahresleistung dann bis auf 3.000 kg ECM/Kuh abfallen. 

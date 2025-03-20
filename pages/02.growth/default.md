@@ -37,7 +37,7 @@ sitemap:
 
 ## Graswachstumskurve
 
-<iframe src="/uploads/Graswachstumskurve_ohneLegende_2024.html" style="width:100%; height:600px;" ></iframe>
+<iframe src="/uploads/Graswachstumskurve_ohneLegende_2025.html" style="width:100%; height:600px;" ></iframe>
 [Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2024.html?target=_blank)
 
 
@@ -51,8 +51,10 @@ Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittel
 - Klick auf Standort: ein-/ausblenden
 - Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet
 - Kamerasymbol: angezeigte Grafik lokal speichern
+[ui-accordion-item title="Graswachtumskurve als SVG"]
+![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]
-[ui-accordion-item title="Graswachtumsdiagramm statisch (wie bisher)"]
+[ui-accordion-item title="Graswachtumskurve 2024"]
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]
 [/ui-accordion]

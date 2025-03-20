@@ -22,7 +22,7 @@ process:
     twig: false
 hero:
     image: Salez_header.JPG
-    gallery: null
+gallery:
     thumb:
         width: 400
         height: 300

@@ -34,13 +34,12 @@ media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-0
 # Mobgrazing CH
 ## Ein Beitrag zum aktuellen Wissensstand
 
-**Was weidemilch.ch mit dem Weidegötti ( macht regenerativ.ch In der landwirtschaftlichen Presse wieder einmal allgegenwärtig, 
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schweiz.
 **
-«…»
 
-https://www.agricultura-regeneratio.ch/services-1
-„Weide der Zukunft“
 ===
+
+[TOC]
 
 (nur mit Abo lesbar)
 [Artikel/Interview mit Pierre Aeby, Juni 2024 (Abo)](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)

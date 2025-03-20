@@ -4,26 +4,26 @@
         "page_rawroute": "\/standorte\/bzbs-rheinhof",
         "page_title": "BZBS Rheinhof"
     },
-    "updated": 1742472629,
+    "updated": 1742472732,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "BZBS Rheinhof",
         "grav-page-route": "\/standorte\/bzbs-rheinhof",
         "grav-page-rawroute": "\/standorte\/bzbs-rheinhof",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 27 Mar 2025 12:10:29 GMT",
+        "expires": "Thu, 27 Mar 2025 12:12:12 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 20 Mar 2025 12:10:29 GMT",
+        "date": "Thu, 20 Mar 2025 12:12:10 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1742472629.6238739490509033203125,
-        "total_time": 0.1874679999999999957527307969940011389553546905517578125,
-        "namelookup_time": 0.000382999999999999985421383907890913178562186658382415771484375,
-        "connect_time": 0.0004840000000000000009679756995950583586818538606166839599609375,
-        "pretransfer_time": 0.005590000000000000350552920025393177638761699199676513671875,
-        "starttransfer_time": 0.1868539999999999923208093832727172411978244781494140625,
+        "start_time": 1742472730.4683759212493896484375,
+        "total_time": 1.6339669999999999472350964424549601972103118896484375,
+        "namelookup_time": 0.00036600000000000000588418203051332966424524784088134765625,
+        "connect_time": 0.0004389999999999999913576076426835470556397922337055206298828125,
+        "pretransfer_time": 0.0035439999999999998413213742054495014599524438381195068359375,
+        "starttransfer_time": 1.633105000000000028848035071860067546367645263671875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 557,
         "request_size": 135,
         "redirect_count": 0,
-        "size_download": 8378,
-        "speed_download": 44690,
+        "size_download": 8546,
+        "speed_download": 5230,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,16 +41,17 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 41608
+        "content_size": 42836
     },
     "content": {
-        "body": "<h2>Standort Salez<\/h2>\n<p>Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n{% extends 'partials\/base.html.twig' %}\n{% block content %}\n{{ page.content|raw }}\n\n    {% for image in page.media.images %}\n\n    {% set filename = image.filename %}\n    {% set title = filename|split('.')|first|titleize %}\n    \n        {% set content = image.cropResize(300,300).html(title, title) %}\n        {% include 'partials\/lightbox.html.twig' with {image: filename} %}\n    \n    {% endfor %}\n\n{% endblock %}",
+        "body": "<h2>Standort Salez<\/h2>\n<p>Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n<h2>Gallerie<\/h2>\n<pre><code>\n&lt;div class=\"image-surround\"&gt;\n            \n\n    \n\n&lt;\/div&gt;\n\n&lt;div class=\"image-surround\"&gt;\n            \n\n    \n\n&lt;\/div&gt;\n\n&lt;div class=\"image-surround\"&gt;\n            \n\n    \n\n&lt;\/div&gt;\n\n&lt;div class=\"image-surround\"&gt;\n            \n\n    \n\n&lt;\/div&gt;\n<\/code><\/pre>",
         "headers": {
             "h1": [
                 "BZBS Rheinhof"
             ],
             "h2": [
-                "Standort Salez"
+                "Standort Salez",
+                "Gallerie"
             ],
             "h3": [],
             "h4": [
@@ -72,6 +73,30 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg?g-c9d38fc8",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/images\/a\/g\/r\/o\/s\/agroscopehochsvg-74812f10-9f6e2160.png?g-c9d38fc8",
+                "alt": "Agroscopehochsvg 74812F10",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/images\/s\/a\/l\/e\/z\/salez2025-02-25-f35d07c8.jpeg?g-c9d38fc8",
+                "alt": "Salez 2025 02 25",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/images\/f\/a\/l\/l\/b\/fallback.jpg?g-c9d38fc8",
+                "alt": "Salez 2025 03 18",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/images\/s\/a\/l\/e\/z\/salez2025-03-05-c65dcb9b.jpeg?g-c9d38fc8",
+                "alt": "Salez 2025 03 05",
                 "external": true,
                 "status": 200
             },
@@ -175,6 +200,46 @@
                 "rel": "nofollow noopener noreferrer",
                 "text": "https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft",
                 "external": true,
+                "status": 200
+            },
+            "#gallerie": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/images\/a\/g\/r\/o\/s\/agroscopehochsvg-74812f10-d4c8c1de.png?g-c9d38fc8": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/images\/s\/a\/l\/e\/z\/salez2025-02-25-bdb5b5ba.jpeg?g-c9d38fc8": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/images\/f\/a\/l\/l\/b\/fallback.jpg?g-c9d38fc8": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/images\/s\/a\/l\/e\/z\/salez2025-03-05-8999813a.jpeg?g-c9d38fc8": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
                 "status": 200
             },
             "\/de\/standorte\/agroscope-posieux": {
@@ -321,14 +386,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools )",
+            "description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools ) {% extends 'partials\/b\u2026",
             "title": "BZBS Rheinhof | graswachstum.ch",
-            "keywords": "webseite,https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft,methode,rising,plate,meter,salez,plattform,standort,grasslandtools,",
+            "keywords": "image,filename,title,image.filename,page.media.images,page.content|raw,include,image.cropresize(300,300).html(title,filename|split('.')|first|titleize,with,",
             "image": "https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof",
             "og:site_name": "graswachstum.ch",
             "og:title": "BZBS Rheinhof | graswachstum.ch",
-            "og:description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools )",
+            "og:description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools ) {% extends 'partials\/b\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -336,7 +401,7 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "BZBS Rheinhof | graswachstum.ch",
-            "twitter:description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools )",
+            "twitter:description": "Standort Salez Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/ Methode: Rising Plate Meter (mit Plattform Grasslandtools ) {% extends 'partials\/b\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\/seomagic-image.jpg",
             "twitter:image:alt": "BZBS Rheinhof | graswachstum.ch",
             "twitter:label1": "Est. reading time",
@@ -376,12 +441,6 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
-                "rel": "stylesheet",
-                "type": "text\/css",
-                "media": null,
-                "crossorigin": null
-            },
-            "\/user\/plugins\/form\/assets\/form-styles.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -454,6 +513,12 @@
                 "crossorigin": null
             },
             "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -550,5 +615,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte\/bzbs-rheinhof]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte\/bzbs-rheinhof HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: BZBS Rheinhof\r\n< grav-page-route: \/standorte\/bzbs-rheinhof\r\n< grav-page-rawroute: \/standorte\/bzbs-rheinhof\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 12:10:29 GMT\r\n* Added cookie grav-site-23a95d8=\"feb406ad1e4cb0c2ddfc69e7d76ed344\" for domain graswachstum.ch, path \/, expire 1742474429\n< set-cookie: grav-site-23a95d8=feb406ad1e4cb0c2ddfc69e7d76ed344; expires=Thu, 20-Mar-2025 12:40:29 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 12:10:29 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\/bzbs-rheinhof\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte\/bzbs-rheinhof]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte\/bzbs-rheinhof HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: BZBS Rheinhof\r\n< grav-page-route: \/standorte\/bzbs-rheinhof\r\n< grav-page-rawroute: \/standorte\/bzbs-rheinhof\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 12:12:12 GMT\r\n* Added cookie grav-site-23a95d8=\"37632f13e0ae1e47df28e458ce32d567\" for domain graswachstum.ch, path \/, expire 1742474532\n< set-cookie: grav-site-23a95d8=37632f13e0ae1e47df28e458ce32d567; expires=Thu, 20-Mar-2025 12:42:10 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 12:12:10 GMT\r\n< server: Apache\r\n< \r\n"
 }

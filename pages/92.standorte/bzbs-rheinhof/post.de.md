@@ -22,6 +22,20 @@ process:
     twig: false
 hero:
     image: Salez_header.JPG
+    gallery: null
+    thumb:
+        width: 400
+        height: 300
+    items:
+        -
+            title: '25. Februar 2025'
+            image: Salez_2025-02-25.jpeg
+        -
+            title: '3. März 2025'
+            image: Salez_2025-03-05.jpeg
+        -
+            title: '18. März 2025'
+            image: Salez_2025-03-18.jpeg
 ---
 
 ## Standort Salez
@@ -31,6 +45,7 @@ Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 ===
 
 ## Gallerie
+
 [lightbox image="Salez_2025-02-25.jpeg" gallery="gallery1" class="inline-block" desc=".dbs-1"]
     ![25. Februar 2025](Salez_2025-02-25.jpeg?cropZoom=200,200)
 [/lightbox]

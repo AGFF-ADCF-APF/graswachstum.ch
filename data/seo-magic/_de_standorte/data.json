@@ -4,26 +4,26 @@
         "page_rawroute": "\/standorte",
         "page_title": "Standorte"
     },
-    "updated": 1742470165,
+    "updated": 1742473508,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Standorte",
         "grav-page-route": "\/standorte",
         "grav-page-rawroute": "\/standorte",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 27 Mar 2025 11:29:25 GMT",
+        "expires": "Thu, 27 Mar 2025 12:25:08 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 20 Mar 2025 11:29:25 GMT",
+        "date": "Thu, 20 Mar 2025 12:25:07 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1742470165.44946002960205078125,
-        "total_time": 0.15550100000000000033395508580724708735942840576171875,
-        "namelookup_time": 0.0003269999999999999794851601730982793014845810830593109130859375,
-        "connect_time": 0.0005779999999999999547861673221404998912476003170013427734375,
-        "pretransfer_time": 0.00443200000000000017552626019323724904097616672515869140625,
-        "starttransfer_time": 0.1548960000000000059028337773270322941243648529052734375,
+        "start_time": 1742473507.9391520023345947265625,
+        "total_time": 0.1565390000000000114699361120074172504246234893798828125,
+        "namelookup_time": 0.0003589999999999999983658904856298477170639671385288238525390625,
+        "connect_time": 0.0004299999999999999894355340313012447950313799083232879638671875,
+        "pretransfer_time": 0.0035799999999999998490096686509787105023860931396484375,
+        "starttransfer_time": 0.1560040000000000037783109974043327383697032928466796875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 525,
         "request_size": 121,
         "redirect_count": 0,
-        "size_download": 6499,
-        "speed_download": 41793,
+        "size_download": 7272,
+        "speed_download": 46454,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,16 +41,22 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 35719
+        "content_size": 39283
     },
     "content": {
-        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          Blog\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nWachstum\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n        \n                          \n  \n  \n\n                      \n              <ul>\n              \n        \n            \n                \n    <li>\n      \n                          Grasmess-Webinar 2025\n                  <\/li>\n  \n        <\/ul>\n          <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Standorte\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \n  \n  \n  \nDE\n        \n                          \n  \n  \n\n                      \n              <ul>\n              \n        \n            \n                \n    <li>\n      \n                          Fran&ccedil;ais\n                  <\/li>\n  \n        <\/ul>\n          <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          Standorte\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n          \n              \n\n      \n      \n  \n\n  \n    \n      \n\n      \n      <ul>\n        \n          <li>\n            \n          <\/li>\n        \n      <\/ul>\n    \n  \n    \n    \n  \n  Aktuelle Messwerte\n  \n      \n      <h4>Zuf&auml;lliger Artikel<\/h4>\n      \n  \n  \n  \n  \n  \n  \n Auf gut Gl&uuml;ck!\n    \n  \n  \n      \n      <h4>H&auml;ufigste Tags<\/h4>\n      \n  \n          \n            \n                weide\n            \n        \n          \n            \n                wachstumsbericht\n            \n        \n          \n            \n                gallerie\n            \n        \n          \n            \n                infrastruktur\n            \n        \n          \n            \n                konservierung\n            \n        \n          \n            \n                futterbau\n            \n        \n          \n            \n                kurse\n            \n        \n          \n            \n                betriebsportrait\n            \n        \n    \n    \n        \n      <h4>Archiv<\/h4>\n      <ul>\n\n<\/ul>\n    \n        \n      <h4>Abonnements<\/h4>\n            \n  \n  \n  \n  \n Atom\n  \n  \n  \n  \n RSS    \n  \n          \n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch Messnetz der  AGFF<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          Blog\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nWachstum\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n        \n                          \n  \n  \n\n              \n  \n  \n  \n\n                      \n              <ul>\n              \n        \n            \n                \n    <li>\n      \n                          Grasmess-Webinar 2025\n                  <\/li>\n  \n        <\/ul>\n          <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Standorte\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \n  \n  \n  \nDE\n        \n                          \n  \n  \n\n              \n  \n  \n  \n\n                      \n              <ul>\n              \n        \n            \n                \n    <li>\n      \n                          Fran&ccedil;ais\n                  <\/li>\n  \n        <\/ul>\n          <\/li>\n  \n    <\/ul>",
+        "body": "<h3>\n           BZBS Rheinhof\n        <\/h3>\n      \n            <h2>Standort Salez<\/h2>\n<p>Webseite: [https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft]\/\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           Agroscope\n        <\/h3>\n      \n            <h2>Standorte Posieux und Sorens<\/h2>\n<p>Webseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n\n    \n    \n      20th Mar 2025",
         "headers": {
             "h1": [
                 "Standorte"
             ],
-            "h2": [],
-            "h3": [],
+            "h2": [
+                "Standort Salez",
+                "Standorte Posieux und Sorens"
+            ],
+            "h3": [
+                "BZBS Rheinhof",
+                "Agroscope"
+            ],
             "h4": [
                 "Zuf\u00e4lliger Artikel",
                 "H\u00e4ufigste Tags",
@@ -74,6 +80,18 @@
                 "status": 200
             },
             {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/92.standorte\/bzbs-rheinhof\/Salez_header.JPG?g-c9d38fc8",
+                "alt": "BZBS Rheinhof",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/92.standorte\/agroscope-posieux\/agroscopehochsvg-74812f10.png?g-c9d38fc8",
+                "alt": "Agroscope",
+                "external": true,
+                "status": 200
+            },
+            {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-c9d38fc8",
                 "alt": "Logo AGFF",
                 "external": true,
@@ -86,7 +104,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 1,
-                "article": 0,
+                "article": 2,
                 "footer": 1
             }
         },
@@ -157,6 +175,62 @@
                 "rel": "",
                 "text": "Fran\u00e7ais",
                 "external": false,
+                "status": 200
+            },
+            "\/de\/standorte\/bzbs-rheinhof": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "BZBS Rheinhof",
+                "external": false,
+                "status": 200
+            },
+            "#standort-salez": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/standorte\/agroscope-posieux": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Agroscope",
+                "external": false,
+                "status": 200
+            },
+            "#standorte-posieux-und-sor": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Agroscope - Graswachstum",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum\/erhebungsmethode.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link",
+                "external": true,
                 "status": 200
             },
             "": {
@@ -524,5 +598,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/standorte\r\n< grav-page-rawroute: \/standorte\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 11:29:25 GMT\r\n* Added cookie grav-site-23a95d8=\"69ba3eb45b264cd5768c6cbe3b5fed93\" for domain graswachstum.ch, path \/, expire 1742471965\n< set-cookie: grav-site-23a95d8=69ba3eb45b264cd5768c6cbe3b5fed93; expires=Thu, 20-Mar-2025 11:59:25 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 11:29:25 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/standorte\r\n< grav-page-rawroute: \/standorte\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 12:25:08 GMT\r\n* Added cookie grav-site-23a95d8=\"703926453eec11e77728772a16ea7104\" for domain graswachstum.ch, path \/, expire 1742475308\n< set-cookie: grav-site-23a95d8=703926453eec11e77728772a16ea7104; expires=Thu, 20-Mar-2025 12:55:07 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 12:25:07 GMT\r\n< server: Apache\r\n< \r\n"
 }

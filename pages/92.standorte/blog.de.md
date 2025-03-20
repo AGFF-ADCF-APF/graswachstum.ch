@@ -1,5 +1,5 @@
 ---
-title: Wachstumsberichte
+title: Standorte
 published: true
 visible: true
 hide_page_title: true

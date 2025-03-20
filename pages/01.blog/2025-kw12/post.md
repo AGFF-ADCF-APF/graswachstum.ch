@@ -90,7 +90,7 @@ seo-magic:
 publish_date: '18-03-2025 21:41'
 ---
 
-# Projekt Weidegötti in der Bauern Zeitung
+# Projekt Weidegötti
 
 **Die frühesten Weidebetriebe sind nach einem Monat gerade dabei, die erste Überweidung der gesamten Weidefläche abzuschliessen. Das Graswachstum zieht langsam an (10 bis 25kg TS/ha/Tag).
 **

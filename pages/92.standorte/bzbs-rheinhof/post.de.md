@@ -28,10 +28,8 @@ Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 
 ===
 
-{% extends 'partials/base.html.twig' %}
-{% block content %}
-{{ page.content|raw }}
-<div class="centeredgallery">
+## Gallerie
+
     {% for image in page.media.images %}
 
     {% set filename = image.filename %}
@@ -41,5 +39,3 @@ Methode: Rising Plate Meter (mit Plattform Grasslandtools )
         {% include 'partials/lightbox.html.twig' with {image: filename} %}
     </div>
     {% endfor %}
-</div>
-{% endblock %}

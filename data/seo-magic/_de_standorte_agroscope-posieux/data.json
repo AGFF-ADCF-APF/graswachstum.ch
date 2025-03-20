@@ -2,38 +2,38 @@
     "grav": {
         "page_route": "\/standorte\/agroscope-posieux",
         "page_rawroute": "\/standorte\/agroscope-posieux",
-        "page_title": "Agroscope Posieux"
+        "page_title": "Agroscope"
     },
-    "updated": 1742471383,
+    "updated": 1742471466,
     "response_headers": {
         "pragma": "no-cache",
-        "grav-page-title": "Agroscope Posieux",
+        "grav-page-title": "Agroscope",
         "grav-page-route": "\/standorte\/agroscope-posieux",
         "grav-page-rawroute": "\/standorte\/agroscope-posieux",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 27 Mar 2025 11:49:43 GMT",
+        "expires": "Thu, 27 Mar 2025 11:51:06 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 20 Mar 2025 11:49:43 GMT",
+        "date": "Thu, 20 Mar 2025 11:51:05 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1742471383.8197429180145263671875,
-        "total_time": 0.16108000000000000095923269327613525092601776123046875,
-        "namelookup_time": 0.0003719999999999999890955282300097906045266427099704742431640625,
-        "connect_time": 0.0004519999999999999820872453870634899431024678051471710205078125,
-        "pretransfer_time": 0.00490699999999999990352161916007389663718640804290771484375,
-        "starttransfer_time": 0.1605810000000000015152323840084136463701725006103515625,
+        "start_time": 1742471465.937429904937744140625,
+        "total_time": 0.177927000000000001822542117224656976759433746337890625,
+        "namelookup_time": 0.0003409999999999999945217432628652431958471424877643585205078125,
+        "connect_time": 0.000418999999999999993109678353420122220995835959911346435546875,
+        "pretransfer_time": 0.0038969999999999998564759184915828882367350161075592041015625,
+        "starttransfer_time": 0.177192999999999989402255096138105727732181549072265625,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux",
         "content_type": "text\/html; charset=utf-8",
-        "header_size": 569,
+        "header_size": 561,
         "request_size": 139,
         "redirect_count": 0,
-        "size_download": 7837,
-        "speed_download": 48652,
+        "size_download": 8304,
+        "speed_download": 46670,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,15 +41,17 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 40130
+        "content_size": 40988
     },
     "content": {
-        "body": "",
+        "body": "<h2>Standorte Posieux und Sorens<\/h2>\n<p>Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb &laquo;Schulbauernhof Sorens&raquo; und stellt die aktuellen Wachstumszahlen als Referenzwerte f&uuml;r interessierte Kreise ins Netz.<\/p>\n<p>Webseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\nAgroscope_hoch.svg",
         "headers": {
             "h1": [
-                "Agroscope Posieux"
+                "Agroscope"
             ],
-            "h2": [],
+            "h2": [
+                "Standorte Posieux und Sorens"
+            ],
             "h3": [],
             "h4": [
                 "Zuf\u00e4lliger Artikel",
@@ -72,6 +74,12 @@
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/standorte\/agroscope-posieux\/Agroscope_hoch.svg.png?resize=200,200",
+                "alt": "Agroscope_hoch.svg",
+                "external": true,
+                "status": 404
             },
             {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-c9d38fc8",
@@ -157,6 +165,30 @@
                 "rel": "",
                 "text": "Fran\u00e7ais",
                 "external": false,
+                "status": 200
+            },
+            "#standorte-posieux-und-sor": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Agroscope - Graswachstum",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum\/erhebungsmethode.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link",
+                "external": true,
                 "status": 200
             },
             "": {
@@ -290,19 +322,18 @@
         }
     },
     "head": {
-        "title": "Agroscope Posieux | graswachstum.ch",
+        "title": "Agroscope | graswachstum.ch",
         "meta": {
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Blog Wachstum Ressourcen Grasmess-Webinar 2025 \u00dcber uns Kontakt Standorte DE Fran\u00e7ais Agroscope Posieux Aktuelle Messwerte Zuf\u00e4lliger Artikel Auf gut Gl\u00fcck\u2026",
+            "description": "AGFF-Grasmessnetzwerk",
             "title": "Agroscope Posieux | graswachstum.ch",
-            "keywords": "ressourcen,grasmess-webinar,2025,kontakt,wachstum,standorte,blog,fran\u00e7ais,dark,agroscope,",
             "image": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux",
             "og:site_name": "graswachstum.ch",
             "og:title": "Agroscope Posieux | graswachstum.ch",
-            "og:description": "Blog Wachstum Ressourcen Grasmess-Webinar 2025 \u00dcber uns Kontakt Standorte DE Fran\u00e7ais Agroscope Posieux Aktuelle Messwerte Zuf\u00e4lliger Artikel Auf gut Gl\u00fcck\u2026",
+            "og:description": "AGFF-Grasmessnetzwerk",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -310,11 +341,12 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Agroscope Posieux | graswachstum.ch",
-            "twitter:description": "Blog Wachstum Ressourcen Grasmess-Webinar 2025 \u00dcber uns Kontakt Standorte DE Fran\u00e7ais Agroscope Posieux Aktuelle Messwerte Zuf\u00e4lliger Artikel Auf gut Gl\u00fcck\u2026",
+            "twitter:description": "AGFF-Grasmessnetzwerk",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\/seomagic-image.jpg",
             "twitter:image:alt": "Agroscope Posieux | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten"
+            "twitter:data1": "0 Minuten",
+            "keywords": ""
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux",
@@ -524,5 +556,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte\/agroscope-posieux]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte\/agroscope-posieux HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Agroscope Posieux\r\n< grav-page-route: \/standorte\/agroscope-posieux\r\n< grav-page-rawroute: \/standorte\/agroscope-posieux\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 11:49:43 GMT\r\n* Added cookie grav-site-23a95d8=\"32ebad5ea053e10501ae4c6a27be450d\" for domain graswachstum.ch, path \/, expire 1742473183\n< set-cookie: grav-site-23a95d8=32ebad5ea053e10501ae4c6a27be450d; expires=Thu, 20-Mar-2025 12:19:43 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 11:49:43 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\/agroscope-posieux\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte\/agroscope-posieux]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte\/agroscope-posieux HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Agroscope\r\n< grav-page-route: \/standorte\/agroscope-posieux\r\n< grav-page-rawroute: \/standorte\/agroscope-posieux\r\n< cache-control: max-age=604800\r\n< expires: Thu, 27 Mar 2025 11:51:06 GMT\r\n* Added cookie grav-site-23a95d8=\"f0138a09daf5920a0e7dc940de404432\" for domain graswachstum.ch, path \/, expire 1742473266\n< set-cookie: grav-site-23a95d8=f0138a09daf5920a0e7dc940de404432; expires=Thu, 20-Mar-2025 12:21:05 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 20 Mar 2025 11:51:05 GMT\r\n< server: Apache\r\n< \r\n"
 }

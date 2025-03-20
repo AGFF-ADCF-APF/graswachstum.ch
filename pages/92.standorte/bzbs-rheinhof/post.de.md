@@ -34,7 +34,7 @@ gallery:
             image: Salez_2025-03-05.jpeg
         -
             title: '18. März 2025'
-            image: Salez_2025-03-18.jpeg
+            image: Salez_2025-03-18.JPG
 ---
 
 ## Standort Salez

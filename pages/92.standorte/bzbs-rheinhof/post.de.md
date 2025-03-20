@@ -19,7 +19,7 @@ sitemap:
 media_order: 'Salez_2025-02-25.jpeg,Salez_2025-03-05.jpeg,Salez_header.JPG,Salez_2025-03-18.JPG'
 process:
     markdown: true
-    twig: true
+    twig: false
 hero:
     image: Salez_header.JPG
 ---

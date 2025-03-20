@@ -34,11 +34,18 @@ media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-0
 # Mobgrazing CH
 ## Ein Beitrag zum aktuellen Wissensstand
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schweiz.
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  
 **
 
+Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schweizer Weidewirtschaft.
 
 ===
+
+IMHO (in my humble opinon, engl. für "meiner bescheidenen Meinung nach"): 
+Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, einmal ist es der optimale Bodenschutz bei Nässe, meist geht es auch um den Aufbau und Schutz des Bodens. Manchmal bedrängt mich das Gefühl, dass mit dem neuen Weidetrend und den Argumenten bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen.
+
+Aber um das auch noch klar zu stellen: ich begrüsse es grundsätzlich sehr, dass sich immer mehr Weidebetriebe kritisch mit ihrer eigenen Praxis und auch mit dem Schulbuchwissen auseinandersetzen. Da sehe ich den Hauptnutzen jegwelcher Beratungsprojekte. 
+_Martin Zbinden_
 
 [TOC]
 

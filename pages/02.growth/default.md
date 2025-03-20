@@ -54,14 +54,14 @@ Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittel
 [ui-accordion-item title="Graswachtumskurve als SVG"]
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]
-[ui-accordion-item title="Graswachtumskurve 2024"]
-![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
-[/ui-accordion-item]
 [/ui-accordion]
 
 
 
 [ui-accordion independent=true open=none]
+[ui-accordion-item title="Graswachtumskurve 2024"]
+![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
+[/ui-accordion-item]
 [ui-accordion-item title="Vergangene Graswachstumskarten"]
 {% for key,image in page.find('/uploads/archive/').media %}
   {{ image.html() | raw }}

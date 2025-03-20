@@ -39,7 +39,7 @@ hero:
 ---
 
 ## Standort Salez
-Webseite: [https://www.bzbs.ch/weiterbildung/landwirtschaft]/
+Webseite: [BZBS.ch](https://www.bzbs.ch/weiterbildung/landwirtschaft)
 Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 
 ===

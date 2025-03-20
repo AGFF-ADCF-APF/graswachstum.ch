@@ -36,6 +36,83 @@ media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-0
 
 **Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schweiz.
 **
+KAPITEL 13
+Zehn Grundregeln,
+die man nie vergessen darf
+Zum Schluß sollen die Leitsätze der rationellen Weidewirtschaft ganz kurz
+zusammengefaßt werden:
+1. Eine rationelle Beweidung läßt sich sowohl bei Dauerweiden als auch
+bei Feldgrasschlägen anwenden.
+Der Umbruch alter Weiden befreit nicht von der Notwendigkeit, ,,gut"
+zu weiden. (247)
+2. Ebenso wie es einen passenden Zeitpunkt zum Mähen gibt, gibt es auch
+einen Zeitpunkt, zu dem das Gras gut ist zum Beweiden.
+3. Wenn man die notwendigen Ruhezeiten beachtet, die je nach Jahreszeit
+verschieden lang sein müssen, dann ermöglicht man es dem Grase, die für
+das Nachwachsen erforderlichen Reserven zu sammeln und einen „Wachstumsschuß"
+zu erreichen. (8, 12)
+Zur Zeit des „Wachstumsschusses" kann die Weide täglich 120 kg/ha
+Grünmasse produzieren gegenüber nur 40 kg zu Beginn des Nachwachsens.
+(14)
+Bei Einhaltung dieser Ruhezeiten läßt man das Gras nur fünfmal ( oder
+noch weniger) im Jahre vom Tiere ernten, anstatt zwanzigmal, wie bei der
+Standweide.
+Dadurch wird eine Ertragssteigerung erzielt, die man mit dem Mehrertrag
+an Luzerne vergleichen kann, die nur dreimal im Jahre anstatt
+zehnmal geschnitten wird. (265)
+4. Die Besatzzeiten müssen so kurz sein, daß ein Gras innerhalb derselben
+Besatzzeit nicht zum zweiten Male (nachdem es soeben mit. dem Nachwachsen
+begonnen hat) abgebissen werden kann. (16)
+5. Wenn man das Gras dank genügender Ruhezeiten lang genug werden
+läßt, dann ermöglicht man den Kühen die ausreichende Ernte eines ausgeglichenen
+Futters, das sich sowohl auf die Milchleistung als auch auf
+die Gesundheit der Tiere günstig auswirkt.
+6. Man verändert Ruhezeiten, um die zeitlichen Schwankungen im Grasnachwuchs
+auszugleichen. Dabei kann man sich der folgenden Möglichkeiten
+bedienen: (142-143)
+52
+a) Veränderung der Weidefläche durch Aus- und Einschalten von Koppeln
+-und Futterschlägen verschiedenster Art.
+b) Grasreserven auf dem Halm (halbtrocken).
+c) Erhöhung der N-Gaben bei nachlassender Wachstumskraft des Grases.
+d) Wenn man genötigt ist, beizufüttern oder den Tierbesatz zu verringern,
+wie es bei der Standweide üblich ist, dann muß man sich bewußt
+sein, daß diese Hilfsmittel im rationellen Weidebetrieb nicht Selbstzweck
+sind, sondern nur dazu beitragen sollen, die passenden Ruhezeiten
+für die Weide einzuhalten.
+7. Bei Aufstellung eines Weideplanes muß man zuerst aufgrund der beabsichtigten
+Aufenthaltszeiten (wir empfehlen 2 Tage) die Anzahl der Koppeln
+bestimmen, die es ermöglichen, die für Anfang Sommer ermittelten
+Ruhezeiten einzuhalten. Von der Koppelzahl wird die durchschnittliche
+Koppelgröße abgeleitet.
+Der Tierbesatz kann nur durch praktische Erfahrung bestimmt werden.
+Die Einteilung der Herde in drei Gruppen verlängert zu sehr die Besatzzeit.
+(140)
+Bei Konzentration der Herde in einer Gruppe besteht die Gefahr, daß die
+Leistung der anspruchsvollen Tiere (Milchkühe) abfällt, da sie im Verlaufe
+des Kahlweidens weniger Gras von geringerer Qualität ernten. (72)
+Ohne daraus eine zwingende Regel machen zu wollen, erscheint es doch
+angebracht, die Herde in zwei Gruppen zu teilen, besonders dann, wenn
+u. a. auch Milchkühe vorhanden sind. (141-142)
+8. Die Weideführung muß elastisch sein. Das Gras kommandiert, der Weidewirt
+handelt. Man muß es verstehen, eine noch nicht genügend nachgewachsene
+Koppel zu überspringen oder auf eine vorher ausgelassene
+Koppel zurückzukehren. (160)
+Die Gruppen müssen die Koppeln nicht unbedingt in regelmäßiger Reihenfolgebeweiden;
+deshalb benötigt man auch je Gruppe zwei Elektrodrähte.
+9. Die große Klippe jedes Weidesystems ist die „ unzeitige Beschleunigung"
+des Umtriebs, die darin besteht, daß die Ruhezeiten ausgerechnet
+dann verkürzt werden, wenn sie verlängert werden müßten. Dieser Fehler
+tritt bei den verschiedenen Systemen der Portionsweide noch viel leichter
+auf als bei dem alten System Warmbold-Hohenheim. (183)
+Um den Elektrozaun immer wieder an den alten Stellen zu installieren,
+empfiehlt sich die Anbringung von Markierungsp:flöcken.
+53
+10. Alle diese Grundregeln lassen sich in einem einzigen Satz unterbringen:
+Die Kunst der rationellen Weidewirtschaft besteht darin, das Wachsen des
+Grases zu beeinflussen und das Tier beim Weiden zu führen. Man muß
+endlich Schluß machen mit der alten Gewohnheit, daß man das Gras auf
+gut Glück wachsen und die Tiere willkürlich weiden läßt.
 
 ===
 

@@ -42,7 +42,7 @@ und:
 
 [TOC]
 
-## Graswachstumsbericht Kalenderwoche 13:
+## Graswachstumsbericht Kalenderwoche 13
 
 Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden verbreitet gemessen, in den besonders milden Tiefenlagen bereits gegen 60 kg TS. Gemäss dem Grass10-Newsletter soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt - das ist heute aber noch bei keinem Betrieb der Fall. Etwas kühlere Temperaturen (Durchschnitt unter 10°C) sprechen für ein etwas nachlassendes Graswachstum – je nach Region dürfte dafür etwas Niederschlag fallen und damit die Wachstumsbedingungen verbessern. 
 [[svg-icon icon="leaf" /]Agrometeo für ausgewählte Stationen](https://www.agrometeo.ch/de/meteorologie?stations=159,160,136,223,216,194,55,185,212,128&sensors=1%3Acumsum%3A0,3%3Aavg&from=2025-01-01&to=2025-12-31&scale=day&groupBy=sensor&measured=0&classes=button)
@@ -54,8 +54,8 @@ Gemäss dem aktuellen [Grass10-Newsletter](https://www.teagasc.ie/about/farm-adv
 
 
 
-### Weitere Tipps aus Irland: 
-- Der zweite Umtrieb soll beginnen, wenn die zuerst abgeweideten Koppeln wieder einen Grasvorrat von mehr als 800 kg TS/ha aufweisen (entspricht ca. 13 clics oder 6.5 cm RPM). Der durchschnittliche Grasvorrat (AFC) soll zu diesem Zeitpunkt wenigstens 650-700 kg TS/ha betragen.
+### Weitere Tipps von den Vollweideprofis aus Irland
+- Der zweite Umtrieb soll dann beginnen, wenn die zuerst abgeweideten Koppeln wieder einen Grasvorrat von mehr als 800 kg TS/ha aufweisen (entspricht ca. 13 clics oder 6.5 cm RPM). Der durchschnittliche Grasvorrat (AFC) soll zu diesem Zeitpunkt wenigstens 650-700 kg TS/ha betragen.
 - Wenn dies voraussichtlich nicht aufgeht, muss die erste Rotation verlangsamt werden (weniger Weidefläche zuteilen). 
 - Wenn möglich, soll Gras des ersten und zweiten Aufwuchses abwechselnd abgeweidet werden, um den Futterwechsel für die Tiere zu glätten.
 

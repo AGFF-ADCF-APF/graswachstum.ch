@@ -22,6 +22,8 @@ show_sidebar: false
 continue_link_as_button: true
 media_order: IMG_20190322_102544.jpg
 root_of_blog: true
+hero:
+    image: IMG_20190322_102544.jpg
 shortcode-citation:
     items: cited
     reorder_uncited: true

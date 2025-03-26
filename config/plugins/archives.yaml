@@ -1,6 +1,6 @@
 enabled: true
 built_in_css: true
-date_display_format: 'Y'
+date_display_format: 'F Y'
 show_count: true
 limit: 12
 taxonomy_names:

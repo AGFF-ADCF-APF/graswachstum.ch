@@ -1,5 +1,5 @@
 ---
-title: 'BZBS Rheinhof'
+title: '9465 Salez'
 date: '12:30 20-03-2025'
 root_of_blog: true
 content:
@@ -37,7 +37,7 @@ gallery:
             image: Salez_2025-03-18.JPG
 ---
 
-## 9465 Salez
+## BZBS Rheinhof
 Höhe ü.M.: 426
 Koordinaten: [47.23058,9.48630](https://map.geo.admin.ch/?swisssearch=47.23058,9.48630)
 Webseite: [BZBS.ch](https://www.bzbs.ch/weiterbildung/landwirtschaft)

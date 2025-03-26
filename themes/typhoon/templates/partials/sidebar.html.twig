@@ -10,26 +10,7 @@
       {% include 'partials/simplesearch_searchbox.html.twig' with { sidebar: true } %}
     </div>
   {% endif %}
-  <div class="sidebar-content">
-  {{ media["/uploads/Graswachstumskarte_aktuell.svg"].resize(100, 100).html()|raw }}
-  <a href="/growth" class="button">Aktuelle Messwerte</a>
-  </div>
-  {% if config.plugins.random.enabled %}
-    <div class="sidebar-content">
-      <h4 class="text-xl font-bold mt-2 mb-3">{{ 'THEME_TYPHOON.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
-      <a class="btn !px-4"
-         href="{{ base_url }}/random">{{ svg_icon('tabler/dice.svg', 'w-5 inline-block align-middle')|raw }} <span
-                class="align-middle">{{ 'THEME_TYPHOON.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</span></a>
-    </div>
-  {% endif %}
-
-  {% if embed_page %}
-    <div class="sidebar-content">
-      {{ embed_page.content|raw }}
-    </div>
-  {% endif %}
-
-  {% if config.plugins.taxonomylist.enabled %}
+    {% if config.plugins.taxonomylist.enabled %}
     <div class="sidebar-content">
       <h4 class="text-xl font-bold mt-2 mb-3">{{ 'THEME_TYPHOON.SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
       {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
@@ -41,6 +22,24 @@
       {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
     </div>
   {% endif %}
+    {% if config.plugins.random.enabled %}
+    <div class="sidebar-content">
+      <h4 class="text-xl font-bold mt-2 mb-3">{{ 'THEME_TYPHOON.SIDEBAR.RANDOM_ARTICLE.HEADLINE'|t }}</h4>
+      <a class="btn !px-4"
+         href="{{ base_url }}/random">{{ svg_icon('tabler/dice.svg', 'w-5 inline-block align-middle')|raw }} <span
+                class="align-middle">{{ 'THEME_TYPHOON.SIDEBAR.RANDOM_ARTICLE.FEELING_LUCKY'|t }}</span></a>
+    </div>
+  {% endif %}
+  <div class="sidebar-content">
+    	{{ page.find('/sidebar').content }}
+  </div>
+  {% if embed_page %}
+    <div class="sidebar-content">
+      {{ embed_page.content|raw }}
+    </div>
+  {% endif %}
+
+
   {% if config.plugins.feed.enabled %}
     <div class="sidebar-content syndicate">
       <h4 class="text-xl font-bold mt-2 mb-3">{{ 'THEME_TYPHOON.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>

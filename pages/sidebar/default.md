@@ -1,14 +1,15 @@
 ---
 title: Sidebar
-routable: false
-visible: false
-cache_enable: false
-hide_page_title: false
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '26-03-2025 15:52'
 ---
 
+![Karte Graswachstum](/uploads/Graswachstumskarte_aktuell.svg?resize(100))
 
-
-![](/images/Logo-Graswachstum-neu-2024-web.webp?resize=200)
+[[svg-icon icon="atom" /] Aktuelle Messwerte](/growth?classes=button)
 
 
 

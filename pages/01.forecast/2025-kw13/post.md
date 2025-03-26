@@ -33,7 +33,9 @@ publish_date: '27-03-2025 21:39'
 
 # Mobgrazing-Land CH?
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  Anbei eine Sammlung von aktuellen Beiträgen mit Bezug zur Schweizer Weidewirtschaft.** 
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». 
+
+und: 
 
 **Das Graswachstum hat angezogen. Ein paar Tipps.**
 
@@ -61,12 +63,14 @@ Die durch das Grasmessnetz erhobenen Daten werden zeigen, ob diese Regeln auch f
 Danke für eure Rückmeldungen, was ihr von den obigen Richtwerten haltet! [Mail me!](mailto:martin.zbinden@inforama.ch)
 [/notice]
  
+## Hauptthema: Weidesystem Mobgrazing
+Dieser Beitrag entstand, nachdem der Autor dieses Graswachstumsberichts von der Zeitung Schweizer Bauer für Bilder von Mobgrazing in der Schweiz angefragt wurde. Er sagte zu und schickte ein paar Aufnahmen, die in Richtung «Langgras-Beweidung» gehen. Am 19. März 2025 erschien dann der [Artikel](https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft), in welchem Daniel Bärtschi, Präsident von Agricultura Regeneratio, ein neues Beratungsangebot für Weidebetriebe vorstellt. Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.
 
 
 [TOC]
 
 
-## IMHO
+### IMHO
 (**i**n **m**y **h**umble **o**pinon, engl. für "meiner bescheidenen Meinung nach"): 
 Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, ein anderes Mal steht der optimale  Schutz des Bodens bei Nässe im Vordergrund, meist geht es auch um die Verbesserung der Bodenfruchtbarkeit. Manchmal bedrängt mich das Gefühl, dass mit diesem neuen Schlagwort bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen. Denn klar ist: gutes Weidemanagement ist immer "adaptiv" und passt sich den Wachstumsbedingungen an.
 
@@ -81,7 +85,7 @@ Gleichzeitig probiere ich gerade bei den Milchschafen gerne Neues aus. Die Weide
 Aber um das auch noch klar zu stellen: ich begrüsse es grundsätzlich sehr, dass sich immer mehr Weidebetriebe kritisch mit ihrer eigenen Praxis und auch mit dem Schulbuchwissen auseinandersetzen. Da sehe ich den Hauptnutzen jegwelcher Beratungsprojekte. 
 _Martin Zbinden_
 
-## Zehn Grundregeln nach A. Voisin (1958)
+### Zehn Grundregeln nach A. Voisin (1958)
 Schon in der etwas älteren Literatur von André Voisin sind ganz viele Gedanken drin, welche heute unter der Fahne des "Mobgrazing" wieder hochgehalten werden. Hier ein kurzer Auszug aus seinem Werk "Die Kuh und ihre Weide" (A. Voisin, 1958, übersetzt auf Deutsch im Jahr 1962 durch den Bayerischen Landwirtschaftsverlag).
 
 > 
@@ -111,24 +115,28 @@ Zum Schluß sollen die Leitsätze der rationellen Weidewirtschaft ganz kurz zusa
 > 9. Die große Klippe jedes Weidesystems ist die „ unzeitige Beschleunigung" des Umtriebs, die darin besteht, daß die Ruhezeiten ausgerechnet dann verkürzt werden, wenn sie verlängert werden müßten. Dieser Fehler tritt bei den verschiedenen Systemen der Portionsweide noch viel leichter auf als bei dem alten System Warmbold-Hohenheim. (183) 
 > Um den Elektrozaun immer wieder an den alten Stellen zu installieren, empfiehlt sich die Anbringung von Markierungsp:flöcken. 53 
 > 10. Alle diese Grundregeln lassen sich in einem einzigen Satz unterbringen: Die Kunst der rationellen Weidewirtschaft besteht darin, das Wachsen des Grases zu beeinflussen und das Tier beim Weiden zu führen. Man muß endlich Schluß machen mit der alten Gewohnheit, daß man das Gras auf gut Glück wachsen und die Tiere willkürlich weiden läßt. 
-> A. Voisin, 1958
+> _A. Voisin, 1958_
 
-## Aktuelle Zeitungsartikel  (2024)
+[Sämtliche Bücher von A. Voisin (Downloads)](https://weidewelt.org/viewtopic.php?f=38&t=322?button)
+
+
+### Aktuelle Zeitungsartikel  (2024)
 [Artikel/Interview mit Pierre Aeby, Juni 2024 (Abo)](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)
 (nur mit Abo lesbar)
-
 
 [Artikel Hochgrasweide bei Familie Schreiber (Abo)](https://www.bauernzeitung.ch/artikel/tiere/familie-schreiber-hat-mob-grazing-als-hochgras-weide-fuer-sich-massgeschneidert-524465)
 
 [Video über Weidemanagement bei Familie Schreiber](https://youtu.be/gZXBf7ECxH4)
 
-[Bücher von A. Voisin (Downloads)](https://weidewelt.org/viewtopic.php?f=38&t=322?button)
-
-
-
-## Fazit
 
 > 
+«
 **Nährstoffgehalte bei Mob grazing** 
-Bei dieser Art der Beweidung stehen die Weidetiere nur eine kurze Zeit auf der zugeteilten Portion. Zudem sind die Ruhepausen zwischen Auftrieben sehr lang, teils sind die Aufwüchse dann 50 – 70 Tage alt. Zur Anwendung kommt das System vor allem bei Mutterkühen in Trockenregionen auf Ackerfutter. Werden nur die oberen Pflanzenteile gefressen und verbleibt der Rest auf der Fläche, können die Nährstoffgehalte des aufgenommenen Futters noch hoch liegen. Müssen die Tiere dagegen tiefer verbeißen,  nehmen sie auch viel wenig nährstoffreiches Futter auf. Bei Milchkühen ohne Zufütterung kann die Jahresleistung dann bis auf 3.000 kg ECM/Kuh abfallen. 
-> 
+Bei dieser Art der Beweidung stehen die Weidetiere nur eine kurze Zeit auf der zugeteilten Portion. Zudem sind die Ruhepausen zwischen Auftrieben sehr lang, teils sind die Aufwüchse dann 50 – 70 Tage alt. Zur Anwendung kommt das System vor allem bei Mutterkühen in Trockenregionen auf Ackerfutter. Werden nur die oberen Pflanzenteile gefressen und verbleibt der Rest auf der Fläche, können die Nährstoffgehalte des aufgenommenen Futters noch hoch liegen. Müssen die Tiere dagegen tiefer verbeißen,  nehmen sie auch viel wenig nährstoffreiches Futter auf. Bei Milchkühen ohne Zufütterung kann die Jahresleistung dann bis auf 3.000 kg ECM/Kuh abfallen.»
+_Edmund Leisen, Ausschnitt aus dem Newsletter Öko-Netzwerk-Rind vom 20.03.2025 
+_> 
+
+
+
+### Fazit
+Anstatt hoch emotionale Diskussionen zu führen, sollten vielmehr selber Praxisversuche gemacht werden. Wichtig ist, eine zeitlang konsequent bei einem gewählten System zu bleiben. Ansonsten ist jedes Weidesystem wertlos und die Kuh als Gewohnheitstier am Ende überfordert. 

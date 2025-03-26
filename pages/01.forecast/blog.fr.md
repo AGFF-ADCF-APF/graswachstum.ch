@@ -1,5 +1,5 @@
 ---
-title: Wachstumsberichte
+title: 'Météo des prés'
 published: true
 visible: true
 hide_page_title: true
@@ -42,6 +42,10 @@ hero:
         -
             text: '[svg-icon icon="chart-area-line"] Graswachstumskurve'
             link: '/growth#graswachstumskurve'
+            classes: 'bg-primary text-white'
+        -
+            text: 'Météo des prés (Prométerre)'
+            link: 'https://www.prometerre.ch/meteodespres'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true
 show_pagination: true

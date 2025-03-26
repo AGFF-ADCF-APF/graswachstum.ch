@@ -20,7 +20,6 @@ content:
     order:
         by: date
         dir: desc
-menu: Wachstum
 hero:
     image: '2018-05-06 19.05.53.jpg'
     image_alignment: object-center

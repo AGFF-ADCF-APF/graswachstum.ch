@@ -10,10 +10,7 @@ sitemap:
 ![Karte Graswachstum](/uploads/Graswachstumskarte_aktuell.svg?resize(100))
 
 [[svg-icon icon="atom" /] Aktuelle Messwerte](/growth?classes=button)
-
-
-### 
-[[svg-icon icon="wa" /] Whatsapp-Gruppe "Graswachstumsberichte" ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr?classes=button) 
+[[svg-icon icon="brand-whatsapp" /] Whatsapp-Gruppe ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr?classes=button) 
  
  
 

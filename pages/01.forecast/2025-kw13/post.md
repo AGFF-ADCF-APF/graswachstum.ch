@@ -33,9 +33,9 @@ publish_date: '27-03-2025 08:00'
 
 # Mobgrazing-Land CH?
 
-**Was bei weidemilch.ch der [Weidegötti](/forecast/2025-kw12) nach dem Motto «Weide ist das Ziel» ist, heisst bei regenerativ.ch «Weide der Zukunft».** 
-und: 
-**Das Graswachstum hat angezogen. Ein paar Tipps.**
+**Was bei weidemilch.ch der [Weidegötti](/forecast/2025-kw12) nach dem Motto «Weide ist das Ziel» ist, heisst bei regenerativ.ch «Weide der Zukunft».**  Eine kleine Literaturübersicht und Erfahrungen des Autors.
+
+Ausserdem: Das Graswachstum hat angezogen. Ein paar Tipps von den neuseeländischen Weideprofis.
 
 ===
 

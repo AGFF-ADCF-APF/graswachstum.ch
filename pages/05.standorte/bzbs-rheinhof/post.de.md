@@ -36,6 +36,7 @@ gallery:
         -
             title: '18. März 2025'
             image: Salez_2025-03-18.JPG
+media_order: 'Salez_header.JPG,2025-03-18_Vernässung.JPG,Loewenzahn1.JPG,Salez_2025-02-25.jpeg,Salez_2025-03-05.jpeg,Salez_2025-03-18.JPG,Salez_2025-03-18_Löwenzahn.JPG'
 ---
 
 ## BZBS Rheinhof

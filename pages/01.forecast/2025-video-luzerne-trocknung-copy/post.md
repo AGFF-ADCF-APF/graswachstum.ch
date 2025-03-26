@@ -41,9 +41,21 @@ media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Ri
 
 ## Graswachstumsbericht Kalenderwoche 13:
 
-Das Graswachstum zieht in der ganzen Schweiz an. 30 kg TS/ha/Tag sind realistisc, in den besonders milden Tiefenlagen bereits gegen 60. Gemäss Irland soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt. Mehr als   
+Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden verbreitet gemessen, in den besonders milden Tiefenlagen bereits gegen 60 kg TS. Gemäss Irland soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt - das ist heute aber noch bei keinem Betrieb der Fall. 
+
+Gemäss dem aktuellen Grass10-Newsletter aus Irland muss aber aufgepasst werden: dort wird momentan verbreitet ein unterdurchschnittliches Graswachstum gemessen. Dies kann nebst dem Wetter auf die zu geringe Blattmasse zurückzuführen sein, in diesem Fall soll der Weideanteil gesenkt werden. Verzehr und Wachstum auf dem Betrieb müssen in Übereinstimmung gebracht werden. Erst wenn mehr 800kg TS/ha stehende Grasreserven stehen, kann gemäss dieser Quelle an die Vollweide gedacht werden.
 
 [/growth](https://graswachstum.ch/user/pages/uploads/Graswachstumskarte_aktuell.svg?lightbox)
+
+
+
+### Weitere Tipps: 
+- Der zweite Umtrieb soll beginnen, wenn die zuerst abgeweideten Koppeln wieder einen Grasvorrat von mehr als 800 kg TS/ha aufweisen (entspricht ca. 13 clics oder 6.5 cm RPM). Der durchschnittliche Grasvorrat soll zu diesem Zeitpunkt wenigstens 650-700 kg TS/ha betragen.
+- Wenn dies voraussichtlich nicht aufgeht, muss die erste Rotation verlangsamt werden (weniger Weidefläche zuteilen). 
+- Wenn möglich, soll Gras des ersten und zweiten Aufwuchs abwechselnd angeboten werden, um den Futterwechsel zu glätten.
+
+[notice]Danke für eure Rückmeldungen, ob diese Richtwerte auch auf CH-Verhältnisse bzw. euren Betrieb anwendbar sind! [/notice]
+ 
 
 
 [TOC]
@@ -94,6 +106,7 @@ Zum Schluß sollen die Leitsätze der rationellen Weidewirtschaft ganz kurz zusa
 > 9. Die große Klippe jedes Weidesystems ist die „ unzeitige Beschleunigung" des Umtriebs, die darin besteht, daß die Ruhezeiten ausgerechnet dann verkürzt werden, wenn sie verlängert werden müßten. Dieser Fehler tritt bei den verschiedenen Systemen der Portionsweide noch viel leichter auf als bei dem alten System Warmbold-Hohenheim. (183) 
 > Um den Elektrozaun immer wieder an den alten Stellen zu installieren, empfiehlt sich die Anbringung von Markierungsp:flöcken. 53 
 > 10. Alle diese Grundregeln lassen sich in einem einzigen Satz unterbringen: Die Kunst der rationellen Weidewirtschaft besteht darin, das Wachsen des Grases zu beeinflussen und das Tier beim Weiden zu führen. Man muß endlich Schluß machen mit der alten Gewohnheit, daß man das Gras auf gut Glück wachsen und die Tiere willkürlich weiden läßt. 
+> A. Voisin, 1958
 
 ## Aktuelle Zeitungsartikel  (2024)
 [Artikel/Interview mit Pierre Aeby, Juni 2024 (Abo)](https://www.bauernzeitung.ch/artikel/tiere/futterbau-im-klimastress-ist-mob-grazing-eine-antwort-524508)
@@ -112,11 +125,5 @@ Zum Schluß sollen die Leitsätze der rationellen Weidewirtschaft ganz kurz zusa
 
 > 
 **Nährstoffgehalte bei Mob grazing** 
-Bei dieser Art der Beweidung stehen die Weidetiere nur eine kurze Zeit auf der 
-zugeteilten Portion. Zudem sind die Ruhepausen zwischen Auftrieben sehr lang, teils sind 
-die Aufwüchse dann 50 – 70 Tage alt. Zur Anwendung kommt das System vor allem bei 
-Mutterkühen in Trockenregionen auf Ackerfutter. Werden nur die oberen Pflanzenteile 
-gefressen und verbleibt der Rest auf der Fläche, können die Nährstoffgehalte des 
-aufgenommenen Futters noch hoch liegen. Müssen die Tiere dagegen tiefer verbeißen, 
-nehmen sie auch viel wenig nährstoffreiches Futter auf. Bei Milchkühen ohne Zufütterung 
-kann die Jahresleistung dann bis auf 3.000 kg ECM/Kuh abfallen. 
+Bei dieser Art der Beweidung stehen die Weidetiere nur eine kurze Zeit auf der zugeteilten Portion. Zudem sind die Ruhepausen zwischen Auftrieben sehr lang, teils sind die Aufwüchse dann 50 – 70 Tage alt. Zur Anwendung kommt das System vor allem bei Mutterkühen in Trockenregionen auf Ackerfutter. Werden nur die oberen Pflanzenteile gefressen und verbleibt der Rest auf der Fläche, können die Nährstoffgehalte des aufgenommenen Futters noch hoch liegen. Müssen die Tiere dagegen tiefer verbeißen,  nehmen sie auch viel wenig nährstoffreiches Futter auf. Bei Milchkühen ohne Zufütterung kann die Jahresleistung dann bis auf 3.000 kg ECM/Kuh abfallen. 
+> 

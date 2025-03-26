@@ -13,7 +13,7 @@ content:
         - '@self.children'
     limit: 7
     order:
-        by: date
+        by: folder
         dir: desc
     pagination: true
     url_taxonomy_filters: true
@@ -24,8 +24,7 @@ post_icon: calendar-o
 hide_post_date: true
 hide_post_taxonomy: false
 feed:
-    description: Graswachstumsberichte
-    limit: 10
+    limit: 0
 show_sidebar: true
 hide_git_sync_repo_link: false
 hero_scroll: false

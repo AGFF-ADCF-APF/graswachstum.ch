@@ -1,0 +1,749 @@
+{
+    "grav": {
+        "page_route": "\/places",
+        "page_rawroute": "\/places",
+        "page_title": "Standorte"
+    },
+    "updated": 1743021953,
+    "response_headers": {
+        "pragma": "no-cache",
+        "grav-page-title": "Standorte",
+        "grav-page-route": "\/places",
+        "grav-page-rawroute": "\/places",
+        "cache-control": "max-age=604800",
+        "expires": "Wed, 02 Apr 2025 20:45:53 GMT",
+        "content-encoding": "gzip",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Wed, 26 Mar 2025 20:45:53 GMT",
+        "server": "Apache"
+    },
+    "timings": {
+        "start_time": 1743021953.26286792755126953125,
+        "total_time": 0.14186799999999999410960072054876945912837982177734375,
+        "namelookup_time": 0.0003550000000000000095583263526322070902097038924694061279296875,
+        "connect_time": 0.00042000000000000001741662369880714322789572179317474365234375,
+        "pretransfer_time": 0.00340500000000000004052314039881821372546255588531494140625,
+        "starttransfer_time": 0.141340999999999994418686810604413039982318878173828125,
+        "redirect_time": 0
+    },
+    "info": {
+        "url": "https:\/\/graswachstum.ch\/de\/places",
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 519,
+        "request_size": 118,
+        "redirect_count": 0,
+        "size_download": 8193,
+        "speed_download": 57750,
+        "download_content_length": -1,
+        "primary_ip": "85.13.141.84",
+        "certinfo": [],
+        "local_ip": "85.13.141.84",
+        "http_version": 3,
+        "ssl_verifyresult": 0,
+        "scheme": "HTTPS",
+        "content_size": 48846
+    },
+    "content": {
+        "body": "<h3>\n           9465 Salez\n        <\/h3>\n      \n            <h2>BZBS Rheinhof<\/h2>\n<p>H&ouml;he &uuml;.M.: 426\nKoordinaten: 47.23058,9.48630\nWebseite: BZBS.ch\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           1725 Posieux\n        <\/h3>\n      \n            <h2>Agroscope Posieux<\/h2>\n<p>H&ouml;he &uuml;.M.: 645\nKoordinaten: 46.76875, 7.10541 \nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n        \n      \n            \n      \n        <h3>\n           8268 Salenstein\n        <\/h3>\n      \n            <h2>Arenenberg<\/h2>\n<p>H&ouml;he &uuml;.M.: 460\nKoordinaten: 47.67097,9.06224\nWebseite:  []()\nMethode: Jenquip Rising Plate Meter und App <\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           1642 Sorens\n        <\/h3>\n      \n            <h2>Agroscope, Schulbetrieb Sorens<\/h2>\n<p>H&ouml;he &uuml;.M.: 827\nKoordinaten: 46.66269,7.05184\nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n        \n      \n            \n      \n        <h3>\n           1462 Yvonand\n        <\/h3>\n      \n            <h2>Prom&eacute;terre<\/h2>\n<p>H&ouml;he &uuml;.M.: 440\nKoordinaten: 46.80032,6.73310\nWebseite: Prom&eacute;terre\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n    \n    \n      20th Mar 2025",
+        "headers": {
+            "h1": [
+                "Standorte"
+            ],
+            "h2": [
+                "BZBS Rheinhof",
+                "Agroscope Posieux",
+                "Arenenberg",
+                "Agroscope, Schulbetrieb Sorens",
+                "Prom\u00e9terre",
+                "Partner"
+            ],
+            "h3": [
+                "9465 Salez",
+                "1725 Posieux",
+                "8268 Salenstein",
+                "1642 Sorens",
+                "1462 Yvonand"
+            ],
+            "h4": [
+                "H\u00e4ufigste Tags",
+                "Archiv",
+                "Zuf\u00e4lliger Artikel",
+                "Abonnements"
+            ],
+            "h5": [],
+            "h6": []
+        },
+        "images": [
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
+                "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/themes\/typhoon\/images\/headers\/sea-and-sky.jpg?g-b238f0ef",
+                "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/05.places\/bzbs-rheinhof\/Salez_header.JPG?g-b238f0ef",
+                "alt": "9465 Salez",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/05.places\/agroscope-posieux\/agroscopehochsvg-74812f10.png?g-b238f0ef",
+                "alt": "1725 Posieux",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/05.places\/1725-sorens-agroscope\/agroscopehochsvg-74812f10.png?g-b238f0ef",
+                "alt": "1642 Sorens",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskarte_aktuell.svg?resize(100,100)=1&crop(0,10,100,80)=1&decoding=auto&fetchpriority=auto&g-b238f0ef",
+                "alt": "Karte Graswachstum",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-b238f0ef",
+                "alt": "Logo AGFF",
+                "external": true,
+                "status": 200
+            }
+        ],
+        "good_tags": {
+            "semantic": {
+                "header": 1,
+                "nav": 1,
+                "section": 2,
+                "aside": 1,
+                "article": 5,
+                "footer": 1
+            }
+        },
+        "bad_tags": {
+            "iframes": 0,
+            "flash": 0
+        },
+        "links": {
+            "\/de": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Wachstumsberichte",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/growth": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Graswachstum",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Standorte",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-webinar-grasmessen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Grasmess-Webinar 2025",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/about": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/contact": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false,
+                "status": 200
+            },
+            "\/fr\/places": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Fran\u00e7ais",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/bzbs-rheinhof": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "9465 Salez",
+                "external": false,
+                "status": 200
+            },
+            "#bzbs-rheinhof": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/map.geo.admin.ch\/?swisssearch=47.23058%2C9.48630": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "47.23058,9.48630",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "BZBS.ch",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/places\/agroscope-posieux": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1725 Posieux",
+                "external": false,
+                "status": 200
+            },
+            "#agroscope-posieux": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/map.geo.admin.ch\/?swisssearch=46.76875%2C7.10541": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "46.76875, 7.10541",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Agroscope - Graswachstum",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agroscope.admin.ch\/agroscope\/de\/home\/services\/dienste\/futtermittel\/weidemanagement\/graswachstum\/erhebungsmethode.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/places\/8268-salenstein-arenenberg": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "8268 Salenstein",
+                "external": false,
+                "status": 200
+            },
+            "#arenenberg": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/map.geo.admin.ch\/?swisssearch=47.67097%2C9.06224": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "47.67097,9.06224",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/places\/1725-sorens-agroscope": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1642 Sorens",
+                "external": false,
+                "status": 200
+            },
+            "#agroscope-schulbetrieb-so": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/map.geo.admin.ch\/?swisssearch=46.66269%2C7.05184": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "46.66269,7.05184",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/places\/1462-yvonand-prometerre": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "1462 Yvonand",
+                "external": false,
+                "status": 200
+            },
+            "#prometerre": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/map.geo.admin.ch\/?swisssearch=46.80032%2C6.73310": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "46.80032,6.73310",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.prometerre.ch\/meteodespres": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Prom\u00e9terre",
+                "external": true,
+                "status": 200
+            },
+            "": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:weide": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "weide",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:wachstumsbericht": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "wachstumsbericht",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:gallerie": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "gallerie",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:infrastruktur": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "infrastruktur",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:konservierung": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "konservierung",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:futterbau": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "futterbau",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:kurse": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "kurse",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places\/tag:betriebsportrait": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "betriebsportrait",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/random": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Auf gut Gl\u00fcck!",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Whatsapp-Gruppe",
+                "external": true,
+                "status": 200
+            },
+            "#partner": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Bauernzeitung",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agff.ch": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.weidemilch.ch": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "IG Weidemilch",
+                "external": true,
+                "status": 200
+            },
+            "\/de\/places.atom": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Atom",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places.rss": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "RSS",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/legal": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Datenschutz und Rechtsausschluss",
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/getgrav.org": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/agff.ch": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF",
+                "external": true,
+                "status": 200
+            }
+        }
+    },
+    "head": {
+        "title": "Standorte | graswachstum.ch",
+        "meta": {
+            "charset": "utf-8",
+            "viewport": "width=device-width, initial-scale=1",
+            "generator": "GravCMS",
+            "description": "BZBS Rheinhof Standort Salez Webseite: BZBS.ch Methode: Rising Plate Meter (mit Plattform Grasslandtools ) 20th Mar 2025 Agroscope Standorte Posieux und Sorens\u2026",
+            "title": "Standorte",
+            "keywords": "2025,vereinfachte,methode,agroscope,20th,webseite,bzbs.ch,graswachstum,abgeleitet,rising,",
+            "image": "https:\/\/graswachstum.ch\/de\/places\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/de\/places",
+            "og:site_name": "graswachstum.ch",
+            "og:title": "Standorte",
+            "og:description": "BZBS Rheinhof Standort Salez Webseite: BZBS.ch Methode: Rising Plate Meter (mit Plattform Grasslandtools ) 20th Mar 2025 Agroscope Standorte Posieux und Sorens\u2026",
+            "og:type": "article",
+            "og:image": "https:\/\/graswachstum.ch\/de\/places\/seomagic-image.jpg",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:secure": "https:\/\/graswachstum.ch\/de\/places\/seomagic-image.jpg",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Standorte",
+            "twitter:description": "BZBS Rheinhof Standort Salez Webseite: BZBS.ch Methode: Rising Plate Meter (mit Plattform Grasslandtools ) 20th Mar 2025 Agroscope Standorte Posieux und Sorens\u2026",
+            "twitter:image": "https:\/\/graswachstum.ch\/de\/places\/seomagic-image.jpg",
+            "twitter:image:alt": "Standorte",
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten"
+        },
+        "icon": "\/user\/assets\/typhoon\/favicon.png",
+        "canonical": "https:\/\/graswachstum.ch\/de\/places",
+        "links": {
+            "\/user\/plugins\/vimeo\/css\/vimeo.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/form\/assets\/form-styles.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/image-captions\/css\/image-captions.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/langswitcher\/css\/langswitcher.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simplesearch\/css\/simplesearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/youtube\/css\/youtube.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/prism.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/pagination\/css\/pagination.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/login\/css\/login.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/themes\/typhoon\/build\/css\/site.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            }
+        },
+        "scripts": {
+            "\/system\/assets\/jquery\/jquery-2.1.4.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/tntsearch\/assets\/tntsearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/featherlight\/js\/featherlight.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/js-cookie.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/alpine.js": {
+                "async": null,
+                "defer": "defer",
+                "type": null
+            },
+            "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simplesearch\/js\/simplesearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/prism-highlight\/js\/prism.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/appearance.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/site.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/themes\/typhoon\/js\/simplesearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            }
+        }
+    },
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/places\r\n< grav-page-rawroute: \/places\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 20:45:53 GMT\r\n* Added cookie grav-site-23a95d8=\"f9d6297fc29978a451d6f9ad219746ec\" for domain graswachstum.ch, path \/, expire 1743023753\n< set-cookie: grav-site-23a95d8=f9d6297fc29978a451d6f9ad219746ec; expires=Wed, 26-Mar-2025 21:15:53 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 20:45:53 GMT\r\n< server: Apache\r\n< \r\n"
+}

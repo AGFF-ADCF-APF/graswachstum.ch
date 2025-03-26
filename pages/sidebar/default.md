@@ -13,7 +13,7 @@ sitemap:
 
 
 ### 
-[[svg-icon icon="wa" /] Whatsapp-Gruppe "Graswachstumsberichte" ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
+[[svg-icon icon="wa" /] Whatsapp-Gruppe "Graswachstumsberichte" ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr?classes=button) 
  
  
 

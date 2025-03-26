@@ -4,26 +4,26 @@
         "page_rawroute": "\/sidebar",
         "page_title": "Sidebar"
     },
-    "updated": 1743002260,
+    "updated": 1743002339,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Sidebar",
         "grav-page-route": "\/sidebar",
         "grav-page-rawroute": "\/sidebar",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 15:17:40 GMT",
+        "expires": "Wed, 02 Apr 2025 15:18:59 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 15:17:40 GMT",
+        "date": "Wed, 26 Mar 2025 15:18:59 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743002260.0250599384307861328125,
-        "total_time": 0.252329999999999998738786644025822170078754425048828125,
-        "namelookup_time": 0.0165219999999999984929832663738125120289623737335205078125,
-        "connect_time": 0.01660899999999999876454381819712580181658267974853515625,
-        "pretransfer_time": 0.0212399999999999984645615569434085045941174030303955078125,
-        "starttransfer_time": 0.250325999999999992962074202296207658946514129638671875,
+        "start_time": 1743002339.23859405517578125,
+        "total_time": 0.1613110000000000099351638027656008489429950714111328125,
+        "namelookup_time": 0.0004090000000000000210907680209260206538601778447628021240234375,
+        "connect_time": 0.000511999999999999976831033254853764447034336626529693603515625,
+        "pretransfer_time": 0.00462599999999999990374366376499892794527113437652587890625,
+        "starttransfer_time": 0.1607159999999999977493558844798826612532138824462890625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 519,
         "request_size": 119,
         "redirect_count": 0,
-        "size_download": 5929,
-        "speed_download": 23497,
+        "size_download": 5931,
+        "speed_download": 36767,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 31833
+        "content_size": 31886
     },
     "content": {
-        "body": "<p><\/p>\n<p>\n  \n  \n  \n  \n Aktuelle Messwerte<\/p>\n<p>Fragen, Vorschl&auml;ge, Bedenken?\nKontaktiere uns! <i><\/i><\/p>\n<h3>Whatsapp-Gruppe \"Graswachstumsberichte\"<\/h3>\n<p><i><\/i> Link zum Beitreten <\/p>\n<h2>Partner<\/h2>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>",
+        "body": "<p><\/p>\n<p>\n  \n  \n  \n  \n Aktuelle Messwerte<\/p>\n<h3><\/h3>\n<p> Whatsapp-Gruppe \"Graswachstumsberichte\"  <\/p>\n<h2>Partner<\/h2>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>",
         "headers": {
             "h1": [
                 "Sidebar"
@@ -52,9 +52,7 @@
             "h2": [
                 "Partner"
             ],
-            "h3": [
-                "Whatsapp-Gruppe \"Graswachstumsberichte\""
-            ],
+            "h3": [],
             "h4": [],
             "h5": [],
             "h6": []
@@ -164,20 +162,20 @@
                 "external": false,
                 "status": 200
             },
-            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Link zum Beitreten",
-                "external": true,
-                "status": 200
-            },
-            "#whatsapp-gruppe-graswachs": {
+            "#": {
                 "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "",
                 "external": false,
+                "status": 200
+            },
+            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Whatsapp-Gruppe \"Graswachstumsberichte\"",
+                "external": true,
                 "status": 200
             },
             "#partner": {
@@ -244,26 +242,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Sidebar",
+            "description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen",
+            "title": "Sidebar | graswachstum.ch",
+            "keywords": "link,fragen,beitreten,partner,bauernzeitung,agff,weidemilch,messwerte,vorschl\u00e4ge,graswachstumsberichte,",
             "image": "https:\/\/graswachstum.ch\/de\/sidebar\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/sidebar",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Sidebar",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Sidebar | graswachstum.ch",
+            "og:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/sidebar\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/sidebar\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Sidebar",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Sidebar | graswachstum.ch",
+            "twitter:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/sidebar\/seomagic-image.jpg",
-            "twitter:image:alt": "Sidebar",
+            "twitter:image:alt": "Sidebar | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/sidebar",
@@ -462,5 +460,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/sidebar\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/sidebar]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/sidebar HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Sidebar\r\n< grav-page-route: \/sidebar\r\n< grav-page-rawroute: \/sidebar\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:17:40 GMT\r\n* Added cookie grav-site-23a95d8=\"cb398fbefb1c3566f5ffde0b91055d19\" for domain graswachstum.ch, path \/, expire 1743004060\n< set-cookie: grav-site-23a95d8=cb398fbefb1c3566f5ffde0b91055d19; expires=Wed, 26-Mar-2025 15:47:40 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:17:40 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/sidebar\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/sidebar]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/sidebar HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Sidebar\r\n< grav-page-route: \/sidebar\r\n< grav-page-rawroute: \/sidebar\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:18:59 GMT\r\n* Added cookie grav-site-23a95d8=\"0d0b82421c79c1e0085cd8a758419135\" for domain graswachstum.ch, path \/, expire 1743004139\n< set-cookie: grav-site-23a95d8=0d0b82421c79c1e0085cd8a758419135; expires=Wed, 26-Mar-2025 15:48:59 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:18:59 GMT\r\n< server: Apache\r\n< \r\n"
 }

@@ -4,26 +4,26 @@
         "page_rawroute": "\/places",
         "page_title": "Standorte"
     },
-    "updated": 1743021992,
+    "updated": 1743022006,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Standorte",
         "grav-page-route": "\/places",
         "grav-page-rawroute": "\/places",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 20:46:32 GMT",
+        "expires": "Wed, 02 Apr 2025 20:46:46 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 20:46:32 GMT",
+        "date": "Wed, 26 Mar 2025 20:46:46 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743021992.715485095977783203125,
-        "total_time": 0.1773180000000000033910652064150781370699405670166015625,
-        "namelookup_time": 0.000404999999999999978073095263653158326633274555206298828125,
-        "connect_time": 0.0004929999999999999486799406867021389189176261425018310546875,
-        "pretransfer_time": 0.00462100000000000010746958878371515311300754547119140625,
-        "starttransfer_time": 0.1767869999999999996997956941413576714694499969482421875,
+        "start_time": 1743022006.03783893585205078125,
+        "total_time": 0.1488049999999999928324001530199893750250339508056640625,
+        "namelookup_time": 0.000302999999999999992429666750837213839986361563205718994140625,
+        "connect_time": 0.0003690000000000000245949094423991709845722652971744537353515625,
+        "pretransfer_time": 0.0034209999999999999957533969308087762328796088695526123046875,
+        "starttransfer_time": 0.148158000000000011908696251339279115200042724609375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 519,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 8180,
-        "speed_download": 46131,
+        "size_download": 6759,
+        "speed_download": 45421,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 48912
+        "content_size": 41738
     },
     "content": {
         "body": "<h3>\n           9465 Salez\n        <\/h3>\n      \n            <h2>BZBS Rheinhof<\/h2>\n<p>H&ouml;he &uuml;.M.: 426\nKoordinaten: 47.23058,9.48630\nWebseite: BZBS.ch\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           1725 Posieux\n        <\/h3>\n      \n            <h2>Agroscope Posieux<\/h2>\n<p>H&ouml;he &uuml;.M.: 645\nKoordinaten: 46.76875, 7.10541 \nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n        \n      \n            \n      \n        <h3>\n           8268 Salenstein\n        <\/h3>\n      \n            <h2>Arenenberg<\/h2>\n<p>H&ouml;he &uuml;.M.: 460\nKoordinaten: 47.67097,9.06224\nWebseite:  []()\nMethode: Jenquip Rising Plate Meter und App <\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n      \n        <h3>\n           1642 Sorens\n        <\/h3>\n      \n            <h2>Agroscope, Schulbetrieb Sorens<\/h2>\n<p>H&ouml;he &uuml;.M.: 827\nKoordinaten: 46.66269,7.05184\nWebseite:  Agroscope - Graswachstum\nMethode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  (Link)<\/p>\n\n    \n    \n      20th Mar 2025\n\n\n          \n\n  \n\n  \n        \n      \n            \n      \n        <h3>\n           1462 Yvonand\n        <\/h3>\n      \n            <h2>Prom&eacute;terre<\/h2>\n<p>H&ouml;he &uuml;.M.: 440\nKoordinaten: 46.80032,6.73310\nWebseite: Prom&eacute;terre\nMethode: Rising Plate Meter (mit Plattform Grasslandtools )<\/p>\n\n    \n    \n      20th Mar 2025",
@@ -54,8 +54,7 @@
                 "Agroscope Posieux",
                 "Arenenberg",
                 "Agroscope, Schulbetrieb Sorens",
-                "Prom\u00e9terre",
-                "Partner"
+                "Prom\u00e9terre"
             ],
             "h3": [
                 "9465 Salez",
@@ -64,12 +63,7 @@
                 "1642 Sorens",
                 "1462 Yvonand"
             ],
-            "h4": [
-                "H\u00e4ufigste Tags",
-                "Archiv",
-                "Zuf\u00e4lliger Artikel",
-                "Abonnements"
-            ],
+            "h4": [],
             "h5": [],
             "h6": []
         },
@@ -105,12 +99,6 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/Graswachstumskarte_aktuell.svg?resize(100,100)=1&crop(0,10,100,80)=1&decoding=auto&fetchpriority=auto&g-b238f0ef",
-                "alt": "Karte Graswachstum",
-                "external": true,
-                "status": 200
-            },
-            {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-b238f0ef",
                 "alt": "Logo AGFF",
                 "external": true,
@@ -122,7 +110,7 @@
                 "header": 1,
                 "nav": 1,
                 "section": 2,
-                "aside": 1,
+                "aside": 0,
                 "article": 5,
                 "footer": 1
             }
@@ -346,142 +334,6 @@
                 "rel": "nofollow noopener noreferrer",
                 "text": "Prom\u00e9terre",
                 "external": true,
-                "status": 200
-            },
-            "": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:weide": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "weide",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:wachstumsbericht": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "wachstumsbericht",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:gallerie": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "gallerie",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:infrastruktur": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "infrastruktur",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:konservierung": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "konservierung",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:futterbau": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "futterbau",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:kurse": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "kurse",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places\/tag:betriebsportrait": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "betriebsportrait",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/random": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "Auf gut Gl\u00fcck!",
-                "external": false,
-                "status": 200
-            },
-            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Whatsapp-Gruppe",
-                "external": true,
-                "status": 200
-            },
-            "#partner": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false,
-                "status": 200
-            },
-            "https:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Bauernzeitung",
-                "external": true,
-                "status": 200
-            },
-            "https:\/\/www.agff.ch": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "AGFF",
-                "external": true,
-                "status": 200
-            },
-            "https:\/\/www.weidemilch.ch": {
-                "count": 1,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "IG Weidemilch",
-                "external": true,
-                "status": 200
-            },
-            "\/de\/places.atom": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "Atom",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/places.rss": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "RSS",
-                "external": false,
                 "status": 200
             },
             "\/de\/legal": {
@@ -737,13 +589,8 @@
                 "async": null,
                 "defer": null,
                 "type": null
-            },
-            "\/user\/themes\/typhoon\/js\/simplesearch.js": {
-                "async": null,
-                "defer": null,
-                "type": null
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/places\r\n< grav-page-rawroute: \/places\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 20:46:32 GMT\r\n* Added cookie grav-site-23a95d8=\"6bb23143dc991f6d252c9ca98b06225e\" for domain graswachstum.ch, path \/, expire 1743023792\n< set-cookie: grav-site-23a95d8=6bb23143dc991f6d252c9ca98b06225e; expires=Wed, 26-Mar-2025 21:16:32 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 20:46:32 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/places\r\n< grav-page-rawroute: \/places\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 20:46:46 GMT\r\n* Added cookie grav-site-23a95d8=\"3923dd4df6bdc84b6c077ded44f00bd5\" for domain graswachstum.ch, path \/, expire 1743023806\n< set-cookie: grav-site-23a95d8=3923dd4df6bdc84b6c077ded44f00bd5; expires=Wed, 26-Mar-2025 21:16:46 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 20:46:46 GMT\r\n< server: Apache\r\n< \r\n"
 }

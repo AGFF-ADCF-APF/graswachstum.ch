@@ -49,12 +49,17 @@ Gemäss dem aktuellen Grass10-Newsletter aus Irland muss aber aufgepasst werden:
 
 
 
-### Weitere Tipps: 
-- Der zweite Umtrieb soll beginnen, wenn die zuerst abgeweideten Koppeln wieder einen Grasvorrat von mehr als 800 kg TS/ha aufweisen (entspricht ca. 13 clics oder 6.5 cm RPM). Der durchschnittliche Grasvorrat soll zu diesem Zeitpunkt wenigstens 650-700 kg TS/ha betragen.
-- Wenn dies voraussichtlich nicht aufgeht, muss die erste Rotation verlangsamt werden (weniger Weidefläche zuteilen). 
-- Wenn möglich, soll Gras des ersten und zweiten Aufwuchs abwechselnd angeboten werden, um den Futterwechsel zu glätten.
 
-[notice]Danke für eure Rückmeldungen, ob diese Richtwerte auch auf CH-Verhältnisse bzw. euren Betrieb anwendbar sind! [/notice]
+### Weitere Tipps aus Irland: 
+- Der zweite Umtrieb soll beginnen, wenn die zuerst abgeweideten Koppeln wieder einen Grasvorrat von mehr als 800 kg TS/ha aufweisen (entspricht ca. 13 clics oder 6.5 cm RPM). Der durchschnittliche Grasvorrat (AFC) soll zu diesem Zeitpunkt wenigstens 650-700 kg TS/ha betragen.
+- Wenn dies voraussichtlich nicht aufgeht, muss die erste Rotation verlangsamt werden (weniger Weidefläche zuteilen). 
+- Wenn möglich, soll Gras des ersten und zweiten Aufwuchses abwechselnd abgeweidet werden, um den Futterwechsel für die Tiere zu glätten.
+
+[notice]
+Die durch das Grasmessnetz erhobenen Daten werden zeigen, ob diese Regeln auch für die CH anwendbar sind. Wie ein Blick auf die letztjährige Graswachstumskurve zeigt, hatte der Standort Gampelen ein besonders gleichmässiges Graswachstum. Dieser Umstand dürfte nicht zuletzt einer sehr gleichbleibenden AFC geschuldet sein – also einer konstant vorhandenen Blattmasse über die Vegetationszeit. 
+
+Danke für eure Rückmeldungen, was ihr von den obigen Richtwerten haltet! [Mail me!](mailto:martin.zbinden@inforama.ch)
+[/notice]
  
 
 

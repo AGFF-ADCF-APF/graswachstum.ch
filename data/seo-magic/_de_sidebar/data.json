@@ -4,26 +4,26 @@
         "page_rawroute": "\/sidebar",
         "page_title": "Sidebar"
     },
-    "updated": 1743002353,
+    "updated": 1743002405,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Sidebar",
         "grav-page-route": "\/sidebar",
         "grav-page-rawroute": "\/sidebar",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 15:19:13 GMT",
+        "expires": "Wed, 02 Apr 2025 15:20:05 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 15:19:13 GMT",
+        "date": "Wed, 26 Mar 2025 15:20:05 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743002353.0629260540008544921875,
-        "total_time": 0.165198000000000011500134178277221508324146270751953125,
-        "namelookup_time": 0.000436999999999999996953825576184726742212660610675811767578125,
-        "connect_time": 0.00050799999999999998802346912185612382018007338047027587890625,
-        "pretransfer_time": 0.00360599999999999983046894413973859627731144428253173828125,
-        "starttransfer_time": 0.1646450000000000135624844688209122978150844573974609375,
+        "start_time": 1743002405.6996669769287109375,
+        "total_time": 0.13960600000000000786570808486430905759334564208984375,
+        "namelookup_time": 0.0003099999999999999999479582957206957871676422655582427978515625,
+        "connect_time": 0.0003730000000000000134024735753968116114265285432338714599609375,
+        "pretransfer_time": 0.0035119999999999999308608611414683764451183378696441650390625,
+        "starttransfer_time": 0.1389890000000000014335199693960021249949932098388671875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 519,
         "request_size": 119,
         "redirect_count": 0,
-        "size_download": 5918,
-        "speed_download": 35823,
+        "size_download": 5978,
+        "speed_download": 42820,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 31908
+        "content_size": 32331
     },
     "content": {
-        "body": "<p><\/p>\n<p>\n  \n  \n  \n  \n Aktuelle Messwerte<\/p>\n<h3><\/h3>\n<p> Whatsapp-Gruppe \"Graswachstumsberichte\"  <\/p>\n<h2>Partner<\/h2>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>",
+        "body": "<p><\/p>\n<p>\n  \n  \n  \n  \n Aktuelle Messwerte\n\n  \n  \n  \n Whatsapp-Gruppe  <\/p>\n<h2>Partner<\/h2>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>",
         "headers": {
             "h1": [
                 "Sidebar"
@@ -162,19 +162,11 @@
                 "external": false,
                 "status": 200
             },
-            "#": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false,
-                "status": 200
-            },
             "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
                 "count": 1,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
-                "text": "Whatsapp-Gruppe \"Graswachstumsberichte\"",
+                "text": "Whatsapp-Gruppe",
                 "external": true,
                 "status": 200
             },
@@ -460,5 +452,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/sidebar\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/sidebar]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/sidebar HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Sidebar\r\n< grav-page-route: \/sidebar\r\n< grav-page-rawroute: \/sidebar\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:19:13 GMT\r\n* Added cookie grav-site-23a95d8=\"afc6bb7f0c172d0ef249d4bb1a3e667c\" for domain graswachstum.ch, path \/, expire 1743004153\n< set-cookie: grav-site-23a95d8=afc6bb7f0c172d0ef249d4bb1a3e667c; expires=Wed, 26-Mar-2025 15:49:13 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:19:13 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/sidebar\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/sidebar]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/sidebar HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Sidebar\r\n< grav-page-route: \/sidebar\r\n< grav-page-rawroute: \/sidebar\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:20:05 GMT\r\n* Added cookie grav-site-23a95d8=\"6be64427d97812e5848b1ae6e5349f70\" for domain graswachstum.ch, path \/, expire 1743004205\n< set-cookie: grav-site-23a95d8=6be64427d97812e5848b1ae6e5349f70; expires=Wed, 26-Mar-2025 15:50:05 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:20:05 GMT\r\n< server: Apache\r\n< \r\n"
 }

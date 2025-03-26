@@ -28,7 +28,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 published: false
-media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2023-04-19_Riedackerhof_Mist.mp4'
+media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,2023-04-19_Riedackerhof_Mist.mp4'
 ---
 
 # Mobgrazing CH
@@ -41,13 +41,24 @@ Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schwei
 
 ===
 
-IMHO (in my humble opinon, engl. für "meiner bescheidenen Meinung nach"): 
-Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, einmal ist es der optimale Bodenschutz bei Nässe, meist geht es auch um den Aufbau und Schutz des Bodens. Manchmal bedrängt mich das Gefühl, dass mit dem neuen Weidetrend und den Argumenten bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen.
+
+[TOC]
+
+
+## IMHO
+(**i**n **m**y **h**umble **o**pinon, engl. für "meiner bescheidenen Meinung nach"): 
+Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, ein anderes Mal steht der optimale  Schutz des Bodens bei Nässe im Vordergrund, meist geht es auch um die Verbesserung der Bodenfruchtbarkeit. Manchmal bedrängt mich das Gefühl, dass mit diesem neuen Schlagwort bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen. Denn klar ist: gutes Weidemanagement ist immer "adaptiv" und passt sich den Wachstumsbedingungen an.
+
+Ich möchte hier klarstellen, dass trotz dem Titelbild im Artikel (welches nicht einmal eine Mobgrazing-typische Situation zeigt...) ich mich nicht als Mobgrazer betiteln möchte. Ich beginne früh mit dem Weidegang, sobald das Graswachstum einsetzt und (zumindest die ausreichend gedüngten) Wiesen schön dunkelgrün werden. Das fördert die Triebbildung und somit eine sehr dichte Grasnarbe. Die Stammweiden unserer Kühe werden sogar konsequent als Kurzrasenweide geführt - hier steht die Trittfestigkeit bei jeder Wetterlage klar im Vordergrund. Aber auch hier finde ich es wichtig: ab Juli ca. 8cm Grashöhe anstreben; wenn es trocken wird, ja nicht zu tief abfressen lassen, Weidefläche ausdehnen oder zufüttern.
+
+Gleichzeitig probiere ich gerade bei den Milchschafen gerne Neues aus. Die Weidemischung mit Weiderotklee, Chicorée und Spitzwegerich lädt ja auch geradezu zum experimentieren ein. Das kann dann so aussehen:
+![2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch](2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg?lightbox "2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch")
+![2024-06-21_Riedackerhof_Mobgrazing_Tag-danach](2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg?lightbox "2024-06-21_Riedackerhof_Mobgrazing_Tag-danach")
+![2023-04-19_Riedackerhof_Mist](2023-04-19_Riedackerhof_Mist.mp4 "2023-04-19_Riedackerhof_Mist")
+... und zu meinem Erstaunen konnte ich das Frühling-Futterloch im letzten Mai mit 1ha dieses Weideaufwuchses und ca. 50 Milchschafen während rund 4 Wochen füllen, über 80% Weidefütterung trotz andauerndem Hudelwetter erreichen, und dazu erst noch verhältnismässig  viel Milch produzieren. Ich war selber verblüfft.
 
 Aber um das auch noch klar zu stellen: ich begrüsse es grundsätzlich sehr, dass sich immer mehr Weidebetriebe kritisch mit ihrer eigenen Praxis und auch mit dem Schulbuchwissen auseinandersetzen. Da sehe ich den Hauptnutzen jegwelcher Beratungsprojekte. 
 _Martin Zbinden_
-
-[TOC]
 
 ## Zehn Grundregeln nach A. Voisin (1958)
 

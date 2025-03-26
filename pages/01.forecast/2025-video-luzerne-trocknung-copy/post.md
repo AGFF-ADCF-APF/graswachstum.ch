@@ -33,10 +33,9 @@ media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Ri
 
 # Mobgrazing-Land CH?
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  
-**
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  Anbei eine Sammlung von aktuellen Beiträgen mit Bezug zur Schweizer Weidewirtschaft.** 
 
-Anbei eine kleine Zusammenstellung von aktuellen Beiträgen mit Bezug zur Schweizer Weidewirtschaft.
+**Das Graswachstum hat angezogen. Ein paar Tipps.**
 
 ===
 

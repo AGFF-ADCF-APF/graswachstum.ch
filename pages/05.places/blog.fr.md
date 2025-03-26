@@ -32,8 +32,9 @@ hero_scroll: false
 continue_link_as_button: true
 media_order: IMG_20190322_102544.jpg
 root_of_blog: true
-hero: null
-shortcode-citation:
+hero:
+    image: IMG_20190322_102544.jpg
+    image_alignment: 'object-topshortcode-citation:'
     items: cited
     reorder_uncited: true
 sitemap:

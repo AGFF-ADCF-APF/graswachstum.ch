@@ -47,7 +47,7 @@ Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden ve
 
 Gemäss dem aktuellen Grass10-Newsletter aus Irland muss aber aufgepasst werden: dort wird momentan verbreitet ein unterdurchschnittliches Graswachstum gemessen. Dies kann nebst dem Wetter auf die zu geringe Blattmasse zurückzuführen sein, in diesem Fall soll der Weideanteil gesenkt werden. Verzehr und Wachstum auf dem Betrieb müssen in Übereinstimmung gebracht werden. Erst wenn mehr 800kg TS/ha stehende Grasreserven stehen, kann gemäss dieser Quelle an die Vollweide gedacht werden.
 
-![](https://graswachstum.ch/user/pages/uploads/Archiv/Graswachstumskarte_KW13.svg?lightbox)
+![](https://graswachstum.ch/user/pages/uploads/archive/Graswachstumskarte_2025KW13.svg?lightbox)
 
 
 

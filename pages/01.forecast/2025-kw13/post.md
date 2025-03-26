@@ -33,7 +33,7 @@ publish_date: '27-03-2025 21:39'
 
 # Mobgrazing-Land CH?
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft».** 
+**Was bei weidemilch.ch der [Weidegötti](/forecast/2025-kw12) nach dem Motto «Weide ist das Ziel» ist, heisst bei regenerativ.ch «Weide der Zukunft».** 
 und: 
 **Das Graswachstum hat angezogen. Ein paar Tipps.**
 
@@ -66,13 +66,13 @@ Danke für eure Rückmeldungen, was ihr von den obigen Richtwerten haltet! [Mail
 [/notice]
  
 ## Hauptthema: Weidesystem Mobgrazing
-Dieser Beitrag entstand, nachdem der Autor dieses Graswachstumsberichts von der Zeitung Schweizer Bauer für Bilder von Mobgrazing in der Schweiz angefragt wurde. Er sagte zu und schickte ein paar Aufnahmen, die in Richtung «Langgras-Beweidung» gehen. Am 19. März 2025 erschien dann der [Artikel](https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft), in welchem Daniel Bärtschi, Präsident von Agricultura Regeneratio, ein neues Beratungsangebot für Weidebetriebe vorstellt. Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.
+Dieser Beitrag entstand, nachdem der Autor dieses Graswachstumsberichts von der Zeitung Schweizer Bauer für Bilder von Mobgrazing in der Schweiz angefragt wurde. Er sagte zu und schickte ein paar Aufnahmen, die in Richtung «Langgras-Beweidung» gehen. Am 19. März 2025 erschien dann der [Artikel](https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft), in welchem Daniel Bärtschi, Präsident von Agricultura Regeneratio, sein neues Beratungsangebot «Weide der Zukunft» vorstellt. Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.  
 
 
 
 ### IMHO
 (**i**n **m**y **h**umble **o**pinon, engl. für "meiner bescheidenen Meinung nach"): 
-Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, ein anderes Mal steht der optimale  Schutz des Bodens bei Nässe im Vordergrund, meist geht es auch um die Verbesserung der Bodenfruchtbarkeit. Manchmal bedrängt mich das Gefühl, dass mit diesem neuen Schlagwort bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen. Denn klar ist: gutes Weidemanagement ist immer "adaptiv" und passt sich den Wachstumsbedingungen an.
+Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, ein anderes Mal steht der optimale  Schutz des Bodens bei Nässe im Vordergrund, meist geht es auch um die Verbesserung der Bodenfruchtbarkeit. Manchmal bedrängt mich das Gefühl, dass mit diesem neuen Schlagwort bisherige Versäumnisse beim Weidemanagement korrigiert werden sollen. Denn klar ist: gutes Weidemanagement ist immer "adaptiv" und passt sich den herrschenden Wachstumsbedingungen an. Das ist ein Hauptgrund, weshalb ich www.graswachstum.ch ins Leben gerufen habe. Deshalb reagiere ich zuweilen etwas misstrauisch, wenn  wieder einmal die «Weide der Zukunft» ausgerufen wird.
 
 Ich möchte hier klarstellen, dass trotz dem Titelbild im Artikel (welches nicht einmal eine Mobgrazing-typische Situation zeigt...), ich mich **nicht** als Mobgrazer betiteln möchte. Ich beginne früh mit dem Weidegang, sobald das Graswachstum einsetzt und (zumindest die ausreichend gedüngten) Wiesen schön dunkelgrün werden. Das fördert die Triebbildung und somit eine sehr dichte Grasnarbe. Die Stammweiden unserer Kühe werden sogar konsequent als Kurzrasenweide geführt - hier steht die Trittfestigkeit bei jeder Wetterlage klar im Vordergrund. Aber auch hier finde ich es wichtig: ab Juli ca. 8cm Grashöhe anstreben; wenn es trocken wird, ja nicht zu tief abfressen lassen, Weidefläche ausdehnen oder zufüttern.
 

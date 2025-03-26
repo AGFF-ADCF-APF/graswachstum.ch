@@ -40,7 +40,7 @@ hero:
             link: '/growth#karte'
             classes: 'bg-primary text-white'
         -
-            text: '[svg-icon icon="chart-area-line"]  Courbe de croissance de l''herbe'
+            text: '[svg-icon icon="chart-area-line"]  Courbe de croissance'
             link: '/growth#graswachstumskurve'
             classes: 'bg-primary text-white'
         -

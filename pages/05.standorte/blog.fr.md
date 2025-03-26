@@ -1,5 +1,5 @@
 ---
-title: emplacements
+title: Emplacements
 published: true
 visible: true
 hide_page_title: true

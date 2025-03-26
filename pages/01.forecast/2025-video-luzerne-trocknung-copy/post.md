@@ -26,8 +26,9 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-published: false
+published: true
 media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,2023-04-19_Riedackerhof_Mist.mp4'
+publish_date: '27-03-2025 21:39'
 ---
 
 # Mobgrazing-Land CH?

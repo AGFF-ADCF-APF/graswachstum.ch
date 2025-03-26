@@ -34,11 +34,14 @@ media_order: IMG_20190322_102544.jpg
 root_of_blog: true
 hero:
     image: IMG_20190322_102544.jpg
-    image_alignment: 'object-topshortcode-citation:'
+    image_alignment: object-center
     items: cited
     reorder_uncited: true
 sitemap:
     lastmod: '20-03-2025 12:26'
 menu_before_icon: tabler/map-pins.svg
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
 ---
 

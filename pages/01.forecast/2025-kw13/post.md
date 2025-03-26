@@ -33,7 +33,7 @@ publish_date: '27-03-2025 21:39'
 
 # Mobgrazing-Land CH?
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft». 
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft».**
 
 und: 
 

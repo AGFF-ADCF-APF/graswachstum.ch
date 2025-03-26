@@ -20,7 +20,7 @@ feed:
     limit: 0
 show_sidebar: false
 continue_link_as_button: true
-media_order: IMG_20190322_102544
+media_order: IMG_20190322_102544.jpg
 root_of_blog: true
 shortcode-citation:
     items: cited

@@ -7,9 +7,7 @@ sitemap:
     lastmod: '26-03-2025 15:52'
 ---
 
-
-
-[![Karte Graswachstum](/uploads/Graswachstumskarte_aktuell.svg?resize(100))](/growth?classes=button)
+[![Karte Graswachstum](/uploads/Graswachstumskarte_aktuell.svg?resize(100))](/growth)
 [[svg-icon icon="brand-whatsapp" /] Whatsapp-Gruppe ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr?classes=button) 
  
  

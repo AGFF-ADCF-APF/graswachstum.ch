@@ -19,7 +19,7 @@ sitemap:
 media_order: agroscopehochsvg-74812f10.png
 ---
 
-## Posieux
+## 1725 Posieux
 Höhe ü.M.: 645
 Koordinaten: [46.76875,	7.10541	](https://map.geo.admin.ch/?swisssearch=46.76875,7.10541)
 Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)

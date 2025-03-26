@@ -37,7 +37,9 @@ gallery:
             image: Salez_2025-03-18.JPG
 ---
 
-## Standort Salez
+## 9465 Salez
+Höhe ü.M.: 426
+Koordinaten: [47.23058,9.48630](https://map.geo.admin.ch/?swisssearch=47.23058,9.48630)
 Webseite: [BZBS.ch](https://www.bzbs.ch/weiterbildung/landwirtschaft)
 Methode: Rising Plate Meter (mit Plattform Grasslandtools )
 

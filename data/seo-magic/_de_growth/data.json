@@ -4,26 +4,26 @@
         "page_rawroute": "\/growth",
         "page_title": "Graswachstum"
     },
-    "updated": 1743004145,
+    "updated": 1743004157,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Graswachstum",
         "grav-page-route": "\/growth",
         "grav-page-rawroute": "\/growth",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 15:49:05 GMT",
+        "expires": "Wed, 02 Apr 2025 15:49:17 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 15:49:05 GMT",
+        "date": "Wed, 26 Mar 2025 15:49:17 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743004145.712420940399169921875,
-        "total_time": 0.141618999999999994887645016206079162657260894775390625,
-        "namelookup_time": 0.000302999999999999992429666750837213839986361563205718994140625,
-        "connect_time": 0.000375000000000000007806255641895631924853660166263580322265625,
-        "pretransfer_time": 0.0031909999999999998261668299193161146831698715686798095703125,
-        "starttransfer_time": 0.141106000000000009197975714414496906101703643798828125,
+        "start_time": 1743004157.711267948150634765625,
+        "total_time": 0.1529629999999999878657064300568890757858753204345703125,
+        "namelookup_time": 0.0003719999999999999890955282300097906045266427099704742431640625,
+        "connect_time": 0.000451000000000000011990408665951690636575222015380859375,
+        "pretransfer_time": 0.003621000000000000086652907071993467980064451694488525390625,
+        "starttransfer_time": 0.152476000000000000422772927777259610593318939208984375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 522,
         "request_size": 118,
         "redirect_count": 0,
-        "size_download": 6345,
-        "speed_download": 44803,
+        "size_download": 6327,
+        "speed_download": 41362,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 38023
+        "content_size": 38047
     },
     "content": {
         "body": "<h2>Karte<\/h2>\nGraswachstumskarte_aktuell\n<h2>Graswachstumskurve<\/h2>\n\n<p>Interaktive Grafik in neuem Tab &ouml;ffnen<\/p>\n\n                    \n            \n            Bedienung der interaktiven Graswachstumskurve\n            \n<p>Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres.\nDie rote, gestrichelte Linie ist ein langj&auml;hriger Mittelwert f&uuml;r das CH-Mittelland.<\/p>\n<h3>Tipps:<\/h3>\n<ul>\n<li>Klick auf Standort: ein-\/ausblenden<\/li>\n<li>Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet<\/li>\n<li>Kamerasymbol: angezeigte Grafik lokal speichern\n\nGraswachstumskurve_2024\n<\/li><\/ul>\n        \n    \n\n\n                    \n            \n            Graswachtumskurve 2024\n            \nGraswachstumskurve_2024\n\n        \n                    \n            \n            Vergangene Graswachstumskarten",
@@ -341,7 +341,7 @@
                 "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Wachstum",
+                "text": "Graswachstum",
                 "external": false,
                 "status": 200
             },
@@ -458,12 +458,12 @@
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "Karte Graswachstumskarte_aktuell Graswachstumskurve Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestric\u2026",
-            "title": "Wachstum | graswachstum.ch",
+            "title": "Graswachstum | graswachstum.ch",
             "keywords": "linie,gestrichelte,graswachstumskurve,interaktive,grafik,standort,graswachstumskurve_2024,schwarze,standorte,langj\u00e4hriger,",
             "image": "https:\/\/graswachstum.ch\/de\/growth\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/growth",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Wachstum | graswachstum.ch",
+            "og:title": "Graswachstum | graswachstum.ch",
             "og:description": "Karte Graswachstumskarte_aktuell Graswachstumskurve Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestric\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/growth\/seomagic-image.jpg",
@@ -471,10 +471,10 @@
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/growth\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Wachstum | graswachstum.ch",
+            "twitter:title": "Graswachstum | graswachstum.ch",
             "twitter:description": "Karte Graswachstumskarte_aktuell Graswachstumskurve Interaktive Grafik in neuem Tab \u00f6ffnen Bedienung der interaktiven Graswachstumskurve Die schwarze, gestric\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/growth\/seomagic-image.jpg",
-            "twitter:image:alt": "Wachstum | graswachstum.ch",
+            "twitter:image:alt": "Graswachstum | graswachstum.ch",
             "twitter:label1": "Est. reading time",
             "twitter:data1": "0 Minuten"
         },
@@ -681,5 +681,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstum\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:49:05 GMT\r\n* Added cookie grav-site-23a95d8=\"fd168295625f495c83268bf428701fc9\" for domain graswachstum.ch, path \/, expire 1743005945\n< set-cookie: grav-site-23a95d8=fd168295625f495c83268bf428701fc9; expires=Wed, 26-Mar-2025 16:19:05 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:49:05 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Graswachstum\r\n< grav-page-route: \/growth\r\n< grav-page-rawroute: \/growth\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:49:17 GMT\r\n* Added cookie grav-site-23a95d8=\"1b35c3c2ac14be18950ad71ccf39afe0\" for domain graswachstum.ch, path \/, expire 1743005957\n< set-cookie: grav-site-23a95d8=1b35c3c2ac14be18950ad71ccf39afe0; expires=Wed, 26-Mar-2025 16:19:17 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:49:17 GMT\r\n< server: Apache\r\n< \r\n"
 }

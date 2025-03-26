@@ -1,5 +1,5 @@
 ---
-title: 'Agroscope (Copy)'
+title: '1725 Sorens'
 date: '12:30 20-03-2025'
 root_of_blog: true
 content:
@@ -19,9 +19,9 @@ sitemap:
 media_order: agroscopehochsvg-74812f10.png
 ---
 
-## 1725 Posieux
-Höhe ü.M.: 645
-Koordinaten: [46.76875,	7.10541	](https://map.geo.admin.ch/?swisssearch=46.76875,7.10541)
+## Agroscope, Schulbetrieb Sorens
+Höhe ü.M.: 827
+Koordinaten: [46.66269,7.05184](https://map.geo.admin.ch/?swisssearch=46.66269,7.05184)
 Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)
 Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum/erhebungsmethode.html))
 

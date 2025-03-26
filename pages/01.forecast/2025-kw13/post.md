@@ -79,7 +79,7 @@ Ich möchte hier klarstellen, dass trotz dem Titelbild im Artikel (welches nicht
 Gleichzeitig probiere ich gerade bei den Milchschafen gerne Neues aus. Die Weidemischung mit Weiderotklee, Chicorée und Spitzwegerich lädt ja auch geradezu zum Experimentieren ein. Das kann dann so aussehen (realistischer als das Regenbogenbild vom Folgeaufwuchs im Juni, welcher aber dann viel schlechter gefressen wurde).
 [![2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch](2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg "2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch")
 ](PXL_20240621_190355535_web.mp4)
-... und zu meinem Erstaunen konnte ich so das ungewohnte Frühlings-Futterloch im letzten Mai stopfen. 1ha für ca. 50 Milchschafe während 4 Wochen.   80% Weideanteil trotz Hudelwetter, und dabei erst noch so viel Milch produziert wie in früheren Jahren mit jüngeren Aufwüchsen. Ich war selber verblüfft.
+... und zu meinem Erstaunen konnte ich so das ungewohnte Futterloch im letzten Juni stopfen. 1ha für ca. 50 Milchschafe während 4 Wochen.   80% Weideanteil trotz Hudelwetter, und dabei erst noch so viel Milch produziert wie in früheren Jahren mit jüngeren Aufwüchsen. Ich war selber verblüfft – und nahm die Weidereste gerne in Kauf, zumal Konservieren in dieser Zeit eh kein Thema war.
 
 Jeden Tag wurde zweimal ein Streifen von ca. 4m Breite nachgezäunt und für wenige Stunden beweidet. Nach der Beweidung sah es jeweils etwa so aus (nur ca. alle drei Tage wurde dann auch der hintere Zaun verschoben):
 ![2024-06-21_Riedackerhof_Mobgrazing_Tag-danach](2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg?lightbox "2024-06-21_Riedackerhof_Mobgrazing_Tag-danach")

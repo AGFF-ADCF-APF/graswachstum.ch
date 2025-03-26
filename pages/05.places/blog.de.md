@@ -25,7 +25,7 @@ hide_post_date: true
 hide_post_taxonomy: false
 feed:
     limit: 0
-show_sidebar: true
+show_sidebar: false
 hide_git_sync_repo_link: false
 hero_scroll: false
 continue_link_as_button: true

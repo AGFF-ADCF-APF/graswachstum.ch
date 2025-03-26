@@ -74,15 +74,18 @@ Dieser Beitrag entstand, nachdem der Autor dieses Graswachstumsberichts von der 
 (**i**n **m**y **h**umble **o**pinon, engl. für "meiner bescheidenen Meinung nach"): 
 Mobgrazing scheint in aller Munde, wenn man die landwirtschaftliche Presse in den letzten Tagen und Monaten durchsieht. Einmal soll damit die trockenheitsbedingte Wachstumsdepression bekämpft werden, ein anderes Mal steht der optimale  Schutz des Bodens bei Nässe im Vordergrund, meist geht es auch um die Verbesserung der Bodenfruchtbarkeit. Manchmal bedrängt mich das Gefühl, dass mit diesem neuen Schlagwort bisherige Versäumnisse beim Weidemanagement verdeckt werden sollen. Denn klar ist: gutes Weidemanagement ist immer "adaptiv" und passt sich den Wachstumsbedingungen an.
 
-Ich möchte hier klarstellen, dass trotz dem Titelbild im Artikel (welches nicht einmal eine Mobgrazing-typische Situation zeigt...) ich mich nicht als Mobgrazer betiteln möchte. Ich beginne früh mit dem Weidegang, sobald das Graswachstum einsetzt und (zumindest die ausreichend gedüngten) Wiesen schön dunkelgrün werden. Das fördert die Triebbildung und somit eine sehr dichte Grasnarbe. Die Stammweiden unserer Kühe werden sogar konsequent als Kurzrasenweide geführt - hier steht die Trittfestigkeit bei jeder Wetterlage klar im Vordergrund. Aber auch hier finde ich es wichtig: ab Juli ca. 8cm Grashöhe anstreben; wenn es trocken wird, ja nicht zu tief abfressen lassen, Weidefläche ausdehnen oder zufüttern.
+Ich möchte hier klarstellen, dass trotz dem Titelbild im Artikel (welches nicht einmal eine Mobgrazing-typische Situation zeigt...), ich mich **nicht** als Mobgrazer betiteln möchte. Ich beginne früh mit dem Weidegang, sobald das Graswachstum einsetzt und (zumindest die ausreichend gedüngten) Wiesen schön dunkelgrün werden. Das fördert die Triebbildung und somit eine sehr dichte Grasnarbe. Die Stammweiden unserer Kühe werden sogar konsequent als Kurzrasenweide geführt - hier steht die Trittfestigkeit bei jeder Wetterlage klar im Vordergrund. Aber auch hier finde ich es wichtig: ab Juli ca. 8cm Grashöhe anstreben; wenn es trocken wird, ja nicht zu tief abfressen lassen, Weidefläche ausdehnen oder zufüttern.
 
-Gleichzeitig probiere ich gerade bei den Milchschafen gerne Neues aus. Die Weidemischung mit Weiderotklee, Chicorée und Spitzwegerich lädt ja auch geradezu zum experimentieren ein. Das kann dann so aussehen:
+Gleichzeitig probiere ich gerade bei den Milchschafen gerne Neues aus. Die Weidemischung mit Weiderotklee, Chicorée und Spitzwegerich lädt ja auch geradezu zum Experimentieren ein. Das kann dann so aussehen (realistischer als das Regenbogenbild vom Folgeaufwuchs im Juni, welcher aber dann viel schlechter gefressen wurde).
 ![2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch](2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg?lightbox "2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch")
-![2024-06-21_Riedackerhof_Mobgrazing_Tag-danach](2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg?lightbox "2024-06-21_Riedackerhof_Mobgrazing_Tag-danach")
-![2023-04-19_Riedackerhof_Mist](2023-04-19_Riedackerhof_Mist.mp4 "2023-04-19_Riedackerhof_Mist")
-... und zu meinem Erstaunen konnte ich das Frühling-Futterloch im letzten Mai mit 1ha dieses Weideaufwuchses und ca. 50 Milchschafen während rund 4 Wochen füllen, über 80% Weidefütterung trotz andauerndem Hudelwetter erreichen, und dazu erst noch verhältnismässig  viel Milch produzieren. Ich war selber verblüfft.
+... und zu meinem Erstaunen konnte ich so das ungewohnte Frühlings-Futterloch im letzten Mai stopfen. 1ha für ca. 50 Milchschafe während 4 Wochen.   80% Weideanteil trotz Hudelwetter, und dabei erst noch so viel Milch produziert wie in früheren Jahren mit jüngeren Aufwüchsen. Ich war selber verblüfft.
 
-Aber um das auch noch klar zu stellen: ich begrüsse es grundsätzlich sehr, dass sich immer mehr Weidebetriebe kritisch mit ihrer eigenen Praxis und auch mit dem Schulbuchwissen auseinandersetzen. Da sehe ich den Hauptnutzen jegwelcher Beratungsprojekte. 
+Jeden Tag wurde zweimal ein Streifen von ca. 4m Breite nachgezäunt und für wenige Stunden beweidet. Nachher sah es etwa so aus:
+![2024-06-21_Riedackerhof_Mobgrazing_Tag-danach](2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg?lightbox "2024-06-21_Riedackerhof_Mobgrazing_Tag-danach")
+... und wenn man weiss, was nachher kommt – kein Wunder, dass der Nachwuchs ohne zusätzliche Düngergabe hervorragend war.
+![2023-04-19_Riedackerhof_Mist](2023-04-19_Riedackerhof_Mist.mp4 "2023-04-19_Riedackerhof_Mist")
+
+Ich begrüsse es grundsätzlich sehr, dass sich immer mehr Weidebetriebe kritisch mit ihrer eigenen Praxis und auch mit dem Schulbuchwissen auseinandersetzen. 
 _Martin Zbinden_
 
 ### Zehn Grundregeln nach A. Voisin (1958)
@@ -113,7 +116,6 @@ Zum Schluß sollen die Leitsätze der rationellen Weidewirtschaft ganz kurz zusa
 > 8. Die Weideführung muß elastisch sein. Das Gras kommandiert, der Weidewirt handelt. Man muß es verstehen, eine noch nicht genügend nachgewachsene Koppel zu überspringen oder auf eine vorher ausgelassene Koppel zurückzukehren. (160) 
 > Die Gruppen müssen die Koppeln nicht unbedingt in regelmäßiger Reihenfolgebeweiden; deshalb benötigt man auch je Gruppe zwei Elektrodrähte. 
 > 9. Die große Klippe jedes Weidesystems ist die „ unzeitige Beschleunigung" des Umtriebs, die darin besteht, daß die Ruhezeiten ausgerechnet dann verkürzt werden, wenn sie verlängert werden müßten. Dieser Fehler tritt bei den verschiedenen Systemen der Portionsweide noch viel leichter auf als bei dem alten System Warmbold-Hohenheim. (183) 
-> Um den Elektrozaun immer wieder an den alten Stellen zu installieren, empfiehlt sich die Anbringung von Markierungsp:flöcken. 53 
 > 10. Alle diese Grundregeln lassen sich in einem einzigen Satz unterbringen: Die Kunst der rationellen Weidewirtschaft besteht darin, das Wachsen des Grases zu beeinflussen und das Tier beim Weiden zu führen. Man muß endlich Schluß machen mit der alten Gewohnheit, daß man das Gras auf gut Glück wachsen und die Tiere willkürlich weiden läßt. 
 > _A. Voisin, 1958_
 

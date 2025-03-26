@@ -1,5 +1,5 @@
 ---
-title: Standorte
+title: emplacements
 published: true
 visible: true
 hide_page_title: true

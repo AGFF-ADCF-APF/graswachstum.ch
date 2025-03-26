@@ -12,12 +12,8 @@ sitemap:
 [[svg-icon icon="atom" /] Aktuelle Messwerte](/growth?classes=button)
 
 
-
-Fragen, Vorschläge, Bedenken?  
-[Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
-
-### Whatsapp-Gruppe "Graswachstumsberichte" 
-[[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
+### 
+[[svg-icon icon="wa" /] Whatsapp-Gruppe "Graswachstumsberichte" ](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
  
  
 

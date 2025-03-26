@@ -1,5 +1,5 @@
 ---
-title: Wachstum
+title: Graswachstum
 published: true
 twig_first: true
 process:

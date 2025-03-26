@@ -39,6 +39,9 @@ und:
 
 ===
 
+
+[TOC]
+
 ## Graswachstumsbericht Kalenderwoche 13:
 
 Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden verbreitet gemessen, in den besonders milden Tiefenlagen bereits gegen 60 kg TS. Gemäss dem Grass10-Newsletter soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt - das ist heute aber noch bei keinem Betrieb der Fall. Etwas kühlere Temperaturen (Durchschnitt unter 10°C) sprechen für ein etwas nachlassendes Graswachstum – je nach Region dürfte dafür etwas Niederschlag fallen und damit die Wachstumsbedingungen verbessern. 
@@ -65,8 +68,6 @@ Danke für eure Rückmeldungen, was ihr von den obigen Richtwerten haltet! [Mail
 ## Hauptthema: Weidesystem Mobgrazing
 Dieser Beitrag entstand, nachdem der Autor dieses Graswachstumsberichts von der Zeitung Schweizer Bauer für Bilder von Mobgrazing in der Schweiz angefragt wurde. Er sagte zu und schickte ein paar Aufnahmen, die in Richtung «Langgras-Beweidung» gehen. Am 19. März 2025 erschien dann der [Artikel](https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft), in welchem Daniel Bärtschi, Präsident von Agricultura Regeneratio, ein neues Beratungsangebot für Weidebetriebe vorstellt. Das für Landwirte kostenlose [Beratungsprojekt](https://www.agricultura-regeneratio.ch/services-1) in Zusammenarbeit mit "The Datamars Sustainability Foundation" (DMSF) richtet sich an Weidebetriebe, welche sich speziell für das sogenannte Mobgrazing interessieren.
 
-
-[TOC]
 
 
 ### IMHO

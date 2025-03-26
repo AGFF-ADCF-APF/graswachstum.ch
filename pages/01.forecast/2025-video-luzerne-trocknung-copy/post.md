@@ -17,11 +17,10 @@ taxonomy:
     category:
         - blog
     tag:
-        - futterbau
-        - konservierung
+        - weide
+        - wachstumsbericht
     author:
         - 'Zbinden Martin'
-author: 'Pierre Aeby, pierre.aeby@fr.ch'
 sitemap:
     lastmod: '19-12-2024 07:07'
 shortcode-citation:

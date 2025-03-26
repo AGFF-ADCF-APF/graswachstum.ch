@@ -4,26 +4,26 @@
         "page_rawroute": "\/places",
         "page_title": "Standorte"
     },
-    "updated": 1743022006,
+    "updated": 1743022031,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Standorte",
         "grav-page-route": "\/places",
         "grav-page-rawroute": "\/places",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 20:46:46 GMT",
+        "expires": "Wed, 02 Apr 2025 20:47:11 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 20:46:46 GMT",
+        "date": "Wed, 26 Mar 2025 20:47:11 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743022006.03783893585205078125,
-        "total_time": 0.1488049999999999928324001530199893750250339508056640625,
-        "namelookup_time": 0.000302999999999999992429666750837213839986361563205718994140625,
-        "connect_time": 0.0003690000000000000245949094423991709845722652971744537353515625,
-        "pretransfer_time": 0.0034209999999999999957533969308087762328796088695526123046875,
-        "starttransfer_time": 0.148158000000000011908696251339279115200042724609375,
+        "start_time": 1743022031.3673419952392578125,
+        "total_time": 0.132442000000000004167333145232987590134143829345703125,
+        "namelookup_time": 0.0002930000000000000204107564183431122728507034480571746826171875,
+        "connect_time": 0.000362000000000000017076617897515689037390984594821929931640625,
+        "pretransfer_time": 0.003403999999999999907795977804880749317817389965057373046875,
+        "starttransfer_time": 0.131985999999999992216004329748102463781833648681640625,
         "redirect_time": 0
     },
     "info": {
@@ -33,7 +33,7 @@
         "request_size": 118,
         "redirect_count": 0,
         "size_download": 6759,
-        "speed_download": 45421,
+        "speed_download": 51033,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -592,5 +592,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/places\r\n< grav-page-rawroute: \/places\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 20:46:46 GMT\r\n* Added cookie grav-site-23a95d8=\"3923dd4df6bdc84b6c077ded44f00bd5\" for domain graswachstum.ch, path \/, expire 1743023806\n< set-cookie: grav-site-23a95d8=3923dd4df6bdc84b6c077ded44f00bd5; expires=Wed, 26-Mar-2025 21:16:46 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 20:46:46 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/places\r\n< grav-page-rawroute: \/places\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 20:47:11 GMT\r\n* Added cookie grav-site-23a95d8=\"e9d36c72daf41a8d7e1af73a58885422\" for domain graswachstum.ch, path \/, expire 1743023831\n< set-cookie: grav-site-23a95d8=e9d36c72daf41a8d7e1af73a58885422; expires=Wed, 26-Mar-2025 21:17:11 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 20:47:11 GMT\r\n< server: Apache\r\n< \r\n"
 }

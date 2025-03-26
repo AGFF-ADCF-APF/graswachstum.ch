@@ -1,13 +1,6 @@
 ---
 title: Standorte
 published: true
-visible: true
-hide_page_title: true
-modular_content:
-    items: '@self.modular'
-    order:
-        by: folder
-        dir: asc
 content:
     items:
         - '@self.children'
@@ -26,12 +19,9 @@ hide_post_taxonomy: false
 feed:
     limit: 0
 show_sidebar: false
-hide_git_sync_repo_link: false
-hero_scroll: false
 continue_link_as_button: true
-media_order: csm_img_7352_f4e25fef1d.webp
+media_order: IMG_20190322_102544
 root_of_blog: true
-hero: null
 shortcode-citation:
     items: cited
     reorder_uncited: true

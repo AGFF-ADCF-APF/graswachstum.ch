@@ -53,7 +53,6 @@ aura:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-menu: Blog
 menu_before_icon: tabler/send.svg
 ---
 

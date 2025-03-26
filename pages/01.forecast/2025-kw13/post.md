@@ -33,17 +33,16 @@ publish_date: '27-03-2025 21:39'
 
 # Mobgrazing-Land CH?
 
-**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft».**
-
+**Was weidemilch.ch der [Weidegötti](/blog/2025-kw12) ist (Motto «Weide ist das Ziel»), heisst bei regenerativ.ch «Weide der Zukunft».** 
 und: 
-
 **Das Graswachstum hat angezogen. Ein paar Tipps.**
 
 ===
 
 ## Graswachstumsbericht Kalenderwoche 13:
 
-Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden verbreitet gemessen, in den besonders milden Tiefenlagen bereits gegen 60 kg TS. Gemäss Irland soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt - das ist heute aber noch bei keinem Betrieb der Fall. 
+Das Graswachstum zieht in der ganzen Schweiz an. Über 30 kg TS/ha/Tag wurden verbreitet gemessen, in den besonders milden Tiefenlagen bereits gegen 60 kg TS. Gemäss dem Grass10-Newsletter soll der Weideanteil auf ca. 50% erhöht werden, sobald der Grasvorrat über 600 kg TS/ha steigt - das ist heute aber noch bei keinem Betrieb der Fall. Etwas kühlere Temperaturen lassen für die laufende Woche - je nach Region dürfte dafür etwas Niederschlag fallen und damit die Wachstumsbedingungen 
+https://www.agrometeo.ch/de/meteorologie/grafik?stations=159%2C160%2C136%2C223%2C216%2C194%2C55%2C185%2C212%2C128&sensors=1%3Acumsum%3A0%2C3%3Aavg&from=2025-01-01&to=2025-02-16&scale=day&groupBy=sensor&measured=1
 
 Gemäss dem aktuellen Grass10-Newsletter aus Irland muss aber aufgepasst werden: dort wird momentan verbreitet ein unterdurchschnittliches Graswachstum gemessen. Dies kann nebst dem Wetter auf die zu geringe Blattmasse zurückzuführen sein, in diesem Fall soll der Weideanteil gesenkt werden. Verzehr und Wachstum auf dem Betrieb müssen in Übereinstimmung gebracht werden. Erst wenn mehr 800kg TS/ha stehende Grasreserven stehen, kann gemäss dieser Quelle an die Vollweide gedacht werden.
 

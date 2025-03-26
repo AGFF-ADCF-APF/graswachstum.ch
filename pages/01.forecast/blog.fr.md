@@ -36,15 +36,15 @@ hero:
     image: csm_img_7352_f4e25fef1d.webp
     buttons:
         -
-            text: '[svg-icon icon="world" /] Karte Graswachstum'
+            text: '[svg-icon icon="world" /] Carte de croissance'
             link: '/growth#karte'
             classes: 'bg-primary text-white'
         -
-            text: '[svg-icon icon="chart-area-line"] Graswachstumskurve'
+            text: '[svg-icon icon="chart-area-line"]  Courbe de croissance de l''herbe'
             link: '/growth#graswachstumskurve'
             classes: 'bg-primary text-white'
         -
-            text: 'Météo des prés (Prométerre)'
+            text: 'Original Météo des prés (Prométerre)'
             link: 'https://www.prometerre.ch/meteodespres'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true

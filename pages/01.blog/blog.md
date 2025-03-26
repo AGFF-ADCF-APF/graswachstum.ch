@@ -36,11 +36,11 @@ hero:
     image: csm_img_7352_f4e25fef1d.webp
     buttons:
         -
-            text: '[svg-icon icon="atom" /] Karte Graswachstum'
+            text: '[svg-icon icon="world" /] Karte Graswachstum'
             link: '/growth#karte'
             classes: 'bg-primary text-white'
         -
-            text: Graswachstumskurve
+            text: '[svg-icon icon="chart-area-line"] Graswachstumskurve'
             link: '/growth#graswachstumskurve'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true

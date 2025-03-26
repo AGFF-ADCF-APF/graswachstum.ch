@@ -21,6 +21,7 @@ process:
     twig: false
 hero:
     image: Salez_header.JPG
+    image_alignment: object-top
 gallery:
     thumb:
         width: 400

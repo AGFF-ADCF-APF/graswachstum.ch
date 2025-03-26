@@ -24,6 +24,7 @@ media_order: IMG_20190322_102544.jpg
 root_of_blog: true
 hero:
     image: IMG_20190322_102544.jpg
+    image_alignment: object-top
 shortcode-citation:
     items: cited
     reorder_uncited: true

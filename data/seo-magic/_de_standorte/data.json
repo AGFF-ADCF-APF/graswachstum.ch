@@ -4,26 +4,26 @@
         "page_rawroute": "\/standorte",
         "page_title": "Standorte"
     },
-    "updated": 1743002931,
+    "updated": 1743002946,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Standorte",
         "grav-page-route": "\/standorte",
         "grav-page-rawroute": "\/standorte",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 02 Apr 2025 15:28:51 GMT",
+        "expires": "Wed, 02 Apr 2025 15:29:06 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Wed, 26 Mar 2025 15:28:51 GMT",
+        "date": "Wed, 26 Mar 2025 15:29:06 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743002931.232501983642578125,
-        "total_time": 0.1359350000000000002753353101070388220250606536865234375,
-        "namelookup_time": 0.000393000000000000011650402864660236446070484817028045654296875,
-        "connect_time": 0.0004760000000000000233528474335997771049733273684978485107421875,
-        "pretransfer_time": 0.004627000000000000036470826358936392352916300296783447265625,
-        "starttransfer_time": 0.1353620000000000100914832046328228898346424102783203125,
+        "start_time": 1743002946.7830030918121337890625,
+        "total_time": 0.1494270000000000042650327714000013656914234161376953125,
+        "namelookup_time": 0.000353000000000000015154544286133386776782572269439697265625,
+        "connect_time": 0.0004249999999999999763210245529165831612772308290004730224609375,
+        "pretransfer_time": 0.004131000000000000123290266884623633814044296741485595703125,
+        "starttransfer_time": 0.1488770000000000093276497636907151900231838226318359375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 525,
         "request_size": 121,
         "redirect_count": 0,
-        "size_download": 7629,
-        "speed_download": 56122,
+        "size_download": 7633,
+        "speed_download": 51081,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -81,13 +81,13 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/06.standorte\/bzbs-rheinhof\/Salez_header.JPG?g-2e9a1509",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/05.standorte\/bzbs-rheinhof\/Salez_header.JPG?g-2e9a1509",
                 "alt": "BZBS Rheinhof",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/06.standorte\/agroscope-posieux\/agroscopehochsvg-74812f10.png?g-2e9a1509",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/05.standorte\/agroscope-posieux\/agroscopehochsvg-74812f10.png?g-2e9a1509",
                 "alt": "Agroscope",
                 "external": true,
                 "status": 200
@@ -136,6 +136,14 @@
                 "external": false,
                 "status": 200
             },
+            "\/de\/standorte": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Standorte",
+                "external": false,
+                "status": 200
+            },
             "\/de\/resources": {
                 "count": 1,
                 "target": "",
@@ -149,14 +157,6 @@
                 "target": "",
                 "rel": "",
                 "text": "Grasmess-Webinar 2025",
-                "external": false,
-                "status": 200
-            },
-            "\/de\/standorte": {
-                "count": 1,
-                "target": "",
-                "rel": "",
-                "text": "Standorte",
                 "external": false,
                 "status": 200
             },
@@ -206,7 +206,8 @@
                 "rel": "nofollow noopener noreferrer",
                 "text": "BZBS.ch",
                 "external": true,
-                "status": 200
+                "status": 404,
+                "message": "Idle timeout reached for \"https:\/\/www.bzbs.ch\/weiterbildung\/landwirtschaft\"."
             },
             "\/de\/standorte\/agroscope-posieux": {
                 "count": 1,
@@ -637,5 +638,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/standorte\r\n< grav-page-rawroute: \/standorte\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:28:51 GMT\r\n* Added cookie grav-site-23a95d8=\"906e9880f20b9e3261ca1847d06b6024\" for domain graswachstum.ch, path \/, expire 1743004731\n< set-cookie: grav-site-23a95d8=906e9880f20b9e3261ca1847d06b6024; expires=Wed, 26-Mar-2025 15:58:51 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:28:51 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/standorte\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/standorte]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/standorte HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Standorte\r\n< grav-page-route: \/standorte\r\n< grav-page-rawroute: \/standorte\r\n< cache-control: max-age=604800\r\n< expires: Wed, 02 Apr 2025 15:29:06 GMT\r\n* Added cookie grav-site-23a95d8=\"fc53468c66420fa44ae3949c413e779d\" for domain graswachstum.ch, path \/, expire 1743004746\n< set-cookie: grav-site-23a95d8=fc53468c66420fa44ae3949c413e779d; expires=Wed, 26-Mar-2025 15:59:06 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Wed, 26 Mar 2025 15:29:06 GMT\r\n< server: Apache\r\n< \r\n"
 }

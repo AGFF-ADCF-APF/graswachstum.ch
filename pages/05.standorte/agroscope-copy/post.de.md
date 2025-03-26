@@ -1,5 +1,5 @@
 ---
-title: 'Agroscope (Copy)'
+title: '8268 Salenstein'
 date: '12:30 20-03-2025'
 root_of_blog: true
 content:
@@ -19,15 +19,10 @@ sitemap:
 media_order: agroscopehochsvg-74812f10.png
 ---
 
-## 1725 Posieux
-Höhe ü.M.: 645
-Koordinaten: [46.76875,	7.10541	](https://map.geo.admin.ch/?swisssearch=46.76875,7.10541)
-Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)
-Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum/erhebungsmethode.html))
+## Arenenberg
+Höhe ü.M.: 460
+Koordinaten: [47.67097,9.06224](https://map.geo.admin.ch/?swisssearch=47.67097,9.06224)
+Webseite:  []()
+Methode: Jenquip Rising Plate Meter und App 
 
 ===
-
-**Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb «Schulbauernhof Sorens» und stellt die aktuellen Wachstumszahlen als Referenzwerte für interessierte Kreise ins Netz.**
- ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
- 
-Die Messungen dieser beiden Messsttandorte sind besonders wertvoll, weil die langjährigen Daten Vergleich ermöglichen. Mit den beiden sehr unterschiedlichen Lagen (Höhe, Topographie, Lage) wird gut abgebildet, wie verschieden sich das Graswachstum zu verschiedenen Jahreszeiten entwickeln kann. 

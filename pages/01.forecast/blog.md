@@ -44,7 +44,7 @@ hero:
             link: '/growth#graswachstumskurve'
             classes: 'bg-primary text-white'
         -
-            text: '[svg-icon icon="leaf" /] Agrometeo für ausgewählte Stationen'
+            text: '[svg-icon icon="leaf" /] Agrometeo'
             link: 'https://www.agrometeo.ch/de/meteorologie?stations=159,160,136,223,216,194,55,185,212,128&sensors=1%3Acumsum%3A0,3%3Aavg&from=2025-01-01&to=2025-12-31&scale=day&groupBy=sensor&classes=button'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true

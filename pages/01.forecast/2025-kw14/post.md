@@ -10,8 +10,8 @@ hero:
     text: auto
     buttons:
         -
-            text: 'Artikel Schweizer Bauer (Abo)'
-            link: 'https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft'
+            text: null
+            link: null
             classes: 'bg-primary text-white'
 taxonomy:
     category:
@@ -29,6 +29,17 @@ shortcode-citation:
 published: false
 media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,PXL_20240621_190355535_web.mp4,2023-04-19_Riedackerhof_Mist.mp4'
 publish_date: '27-03-2025 08:00'
+references:
+    -
+        id: Steinberger.2011
+        type: web
+        title: 'Kurzrasenweide - der Weideprofi misst seinen Grasaufwuchs'
+        author: 'Siegfried Steinberger (Institut für Tierernährung und  Futterwirtschaft, Grub)'
+        year: '2011'
+        url: 'https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf'
+        journal: null
+        volume: null
+        pages: null
 ---
 
 # Farmwalk mit Martin
@@ -47,8 +58,8 @@ Weitere Themen: Vielerorts wächst erstaunlich viel Gras - und das ist kein Apri
 
 ## Aufwuchshöhenmessung auf Kurzrasenweide
 Siegfried Steinberger vom Institut für Tierernährung und  Futterwirtschaft in Grub. 
-https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf
-
+[[svg-icon icon="pdf" /] Karte](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
+Steinberger.2011
 ## Fallbeispiel
 
 

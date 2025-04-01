@@ -31,16 +31,24 @@ media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Ri
 publish_date: '27-03-2025 08:00'
 ---
 
-# ...
+# Farmwalk mit Martin
 
-**Was bei ... Zukunft».**  Eine kleine Literaturübersicht und Erfahrungen des Autors.
+**Die Kurzrasenweide messen? Martin nimmt euch diese Woche mit auf einen Farmwalk.**  
 
-Ausserdem: Das Graswachstum h... 
+Weitere Themen: Vielerorts wächst erstaunlich viel Gras - und das ist kein April-Scherz!
 
 ===
 
 
 [TOC]
 
-## Graswachstumsbericht Kalenderwoche 13
+## Graswachstumsbericht Kalenderwoche 14
+
+
+## Aufwuchshöhenmessung auf Kurzrasenweide
+Siegfried Steinberger vom Institut für Tierernährung und  Futterwirtschaft in Grub. 
+https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf
+
+## Fallbeispiel
+
 

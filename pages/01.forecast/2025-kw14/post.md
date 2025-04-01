@@ -1,5 +1,5 @@
 ---
-title: 'Woche 14 (31.03.-06.04.2025)'
+title: 'ungWoche 14 (31.03.-06.04.2025)'
 date: '27-03-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
@@ -10,8 +10,6 @@ hero:
     text: auto
     buttons:
         -
-            text: null
-            link: null
             classes: 'bg-primary text-white'
 taxonomy:
     category:
@@ -57,9 +55,8 @@ Weitere Themen: Vielerorts wächst erstaunlich viel Gras - und das ist kein Apri
 
 
 ## Aufwuchshöhenmessung auf Kurzrasenweide
-Siegfried Steinberger vom Institut für Tierernährung und  Futterwirtschaft in Grub. 
-[[svg-icon icon="pdf" /] Karte](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
 Steinberger.2011
+[[svg-icon icon="pdf" /] Anleitung Grasaufwuchshöhenmessung](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
 ## Fallbeispiel
 
 

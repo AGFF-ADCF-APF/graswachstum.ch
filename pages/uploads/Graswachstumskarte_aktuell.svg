@@ -103,7 +103,7 @@
 <circle cx='255.44' cy='163.61' r='9.60' style='stroke-width: 2.13; fill: #E7E7E7;' />
 <circle cx='141.07' cy='319.02' r='9.60' style='stroke-width: 2.13; fill: #8B8B8B;' />
 <circle cx='462.11' cy='159.74' r='9.60' style='stroke-width: 2.13; fill: #E7E7E7;' />
-<circle cx='179.51' cy='240.45' r='9.60' style='stroke-width: 2.13; fill: #757575;' />
+<circle cx='179.51' cy='240.45' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <circle cx='512.73' cy='249.23' r='9.60' style='stroke-width: 2.13; fill: #757575;' />
 <circle cx='346.37' cy='188.33' r='9.60' style='stroke-width: 2.13; fill: #E7E7E7;' />
 <circle cx='275.15' cy='140.85' r='9.60' style='stroke-width: 2.13; fill: #8B8B8B;' />
@@ -117,7 +117,7 @@
 <text x='255.44' y='167.19' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>27</text>
 <text x='141.07' y='322.60' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>10</text>
 <text x='462.11' y='163.33' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>64</text>
-<text x='179.51' y='244.03' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>49</text>
+<text x='179.51' y='244.03' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>53</text>
 <text x='512.73' y='252.81' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>72</text>
 <text x='346.37' y='191.91' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>54</text>
 <text x='275.15' y='144.43' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.07px' lengthAdjust='spacingAndGlyphs'>28</text>

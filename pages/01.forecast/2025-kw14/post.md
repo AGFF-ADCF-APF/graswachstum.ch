@@ -59,6 +59,31 @@ references:
         journal: null
         volume: null
         pages: null
+gallery:
+    thumb:
+        width: 400
+        height: 300
+    items:
+        -
+            title: 'Ergebnisse einer Umfrage in der Gras-Mess-Gruppe'
+            image: Umfrage_Weideanteil.jpg
+            desc: null
+        -
+            title: 'Derzeit noch am weitesten verbreitet: Halbtagesweide'
+            image: Sutter_2025-04-01_Halbtagesweide.jpeg
+            desc: 'Die Milchkühe sind bei uns seit 4. März tagsüber auf der Weide und fressen rund 10kg Weidegras pro Kuh und Tag auf der Weide. In der Nacht wird mit Grassilage ergänzt. _Bild: Bretzwil BL, 01. April 2025 (M. Sutter)_'
+        -
+            title: 'Gras sehr ergiebig, Weideanteil steigend'
+            image: Rusca_2025-04-02_Umtrieb-2.jpeg
+            desc: 'Wachstum bei uns 54, Weideanteil ca. 70%. Beginn 2. Rotation am 17.03.25, AFC erst bei 300kg/ha. Allerdings waren die letzten weiden bei uns auch so ergiebig dass wir die Kühe abends nochmal für ca. 3 Stunden rausgelassen haben. Flächenzuteilung 90-100a für 80 Kühe, im Stall nachts zwei Rundballen Grassilage (ca. 500kg TS).  _Bild: Muri AG, 01. April 2025 (L. Rusca)_'
+        -
+            title: null
+            image: null
+            desc: null
+        -
+            title: null
+            image: null
+            desc: null
 ---
 
 # Graswachstum im Aufwind
@@ -84,8 +109,8 @@ Es sollte bereits jetzt an die Bewältigung des Futterbergs gedacht werden. Zieh
 ## Neuansaaten früh nutzen
 Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im ersten Hauptnutzungsjahr führt zu lückigen Beständen. Um die Grasnarbendichte zu fördern, sollten diese mit leichten Tieren beispielsweise mit jährigem Jungvieh beweidet werden. Beim Beweiden sollten die Keimlinge gut angewurzelt sein. Dies kann mit dem «Zupftest» [cite key="dairynz.2025" /] überprüft werden. Bei diesem Test zieht man am Blatt eines Keimlings. Reisst das Blatt von der Pflanze ist eine Beweidung möglich. Entwurtzelt man die Pflanze beim Test so ist die Fläche noch nicht beweidbar. Ist eine solche Beweidung nicht möglich sollten diese Flächen früh siliert werden. Die frühe Silonutzung generiert zwar höhere Kosten pro dt TS, leistet jedoch einen wichtigen Beitrag zur Pflege der Neuansaat. Nicht nur die Bestockung wird gefördert, auch einjährige Unkräuter werden bereits geköpft. Ein sehr früher Säuberungsschnitt ohne Ernte hilft ebenso bei der Pflege, das eigentlich hochwertige Futter geht jedoch dabei verloren.
 
-
-
 Hohenrain, 4. April 2025
 Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)
+
+## Gallerie
 

@@ -86,6 +86,5 @@ Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im e
 
 
 Hohenrain, 4. April 2025
-Nicolas Marti, BBZN
-Martin Zbinden, Inforama
+Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)
 

@@ -16,8 +16,8 @@ taxonomy:
         - blog
     tag:
         - weide
-        - wachstumsbericht
         - gallerie
+        - wachstumsbericht
     author:
         - 'Zbinden Martin'
 sitemap:
@@ -26,7 +26,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 published: false
-media_order: Rusca_2025-04-02_Umtrieb-2.jpeg
+media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-24h.jpeg,Sutter_2025-04-01_Halbtagesweide.jpeg,Riedackerhof_2025-04-01_R2-Tiefengraben.jpg,Riedackerhof_2025-04-01_Höhenmessung Kurzrasenweide.jpg,Riedackerhof_2025-04-01_OR2-Farmwalk.jpg,Riedackerhof_2025-04-01_R4.jpg,Riedackerhof_2025-04-01_OR2-10clics.jpg,Riedackerhof_2025-04-01_OR1-10clics.jpg'
 publish_date: '02-04-2025 18:00'
 references:
     -

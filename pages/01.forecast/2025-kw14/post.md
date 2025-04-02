@@ -103,6 +103,14 @@ gallery:
             image: Riedackerhof_2025-04-01_R4.jpg
             desc: 'Dieser Parzellenteil wird immer besonders tief verbissen, vermutlich bedingt durch die jüngere Anlagedauer und modernere Gräsersorten (SM 460 vor 12 Jahren gesät, Rest ca. 30 jährig). Der Übernutzung wird mit einer häufigeren Güllegabe entgegengewirkt.'
 author: 'Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)'
+seo-magic:
+    keywords:
+        - graswachstum
+        - weideanteil
+        - zupftest
+        - düngung
+        - bodentemperatur
+        - niederschlag
 ---
 
 # Graswachstum im Aufwind

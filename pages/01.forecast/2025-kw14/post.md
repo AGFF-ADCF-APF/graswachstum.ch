@@ -10,8 +10,8 @@ hero:
     text: auto
     buttons:
         -
-            text: 'Zupftest (engl.)'
-            link: null
+            text: 'Anleitung Zupftest (engl. "pluck test")'
+            link: 'https://www.dairynz.co.nz/feed/fundamentals/managing-new-pasture/'
             classes: 'bg-primary text-white'
 taxonomy:
     category:

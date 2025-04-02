@@ -8,9 +8,6 @@ hero:
     image: 2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg
     image_alignment: object-center
     text: auto
-    buttons:
-        -
-            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

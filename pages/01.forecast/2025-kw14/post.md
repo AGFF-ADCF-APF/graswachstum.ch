@@ -104,6 +104,9 @@ Ausserdem: Zupftest für Neuansaaten, Farmwalks auf verschiedenen Betrieben
 ## Wachtumsbericht
 Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 ° Celsius liegt. Die Bodentemperatur kurbelt das Graswachstum und die Stickstoffmineralisierung an. In der Talzone der Zentral- und Ostschweiz liegt der tägliche Zuwachs bereits zwischen 50 und 100 kg TS/ha. Der zweite Umtrieb wurde verbreitet schon vor 14 Tagen angefangen und erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte Nächte dürften das Wachstum nächste Woche aber noch einmal bremsen.
 
+![](https://graswachstum.ch/user/pages/uploads/archive/Graswachstumkarte_2025KW14.svg?lightbox)
+
+
 ### Weidefläche planen
 Mit steigenden Graswachstum kann der Weideanteil ausgedehnt oder die Weidefläche ver-kleinert werden. Bei einem Zuwachs von 50 kg TS/ha/Tag können mit einem Weideanteil von 10 kg TS (ca. 60% der Ration) bereits 5 Kühe/ha nachhaltig gefüttert werden. Nachhaltig heisst in dem Falle, dass diese Futtermenge täglich auch wieder nachwächst. Ist dies nicht (mehr) der Fall, kann die Weidefläche ausgedeht oder mehr zugefüttert werden.
 Die Düngungsplanung sollte ebenfalls berücksichtigt werden. Je höher das Wachstum, desto höher der Nährstoffbedarf der Pflanzen.

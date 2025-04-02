@@ -73,19 +73,19 @@ gallery:
         -
             title: 'Derzeit noch am weitesten verbreitet: Halbtagesweide'
             image: Sutter_2025-04-01_Halbtagesweide.jpeg
-            desc: 'Die Milchkühe sind bei uns seit 4. März tagsüber auf der Weide und fressen rund 10kg Weidegras pro Kuh und Tag auf der Weide. In der Nacht wird mit Grassilage ergänzt. _Bild: Bretzwil BL, 01. April 2025 (M. Sutter)_'
+            desc: '"Die Milchkühe sind bei uns seit 4. März tagsüber auf der Weide und fressen rund 10kg Weidegras pro Kuh und Tag auf der Weide. In der Nacht wird mit Grassilage ergänzt." (Zitat Michael) _Bild: Bretzwil BL, 01. April 2025 (M. Sutter)_'
         -
             title: 'Gras sehr ergiebig, Weideanteil steigend'
             image: Rusca_2025-04-02_Umtrieb-2.jpeg
-            desc: 'Wachstum bei uns 54, Weideanteil ca. 70%. Beginn 2. Rotation am 17.03.25, AFC erst bei 300kg/ha. Allerdings waren die letzten weiden bei uns auch so ergiebig dass wir die Kühe abends nochmal für ca. 3 Stunden rausgelassen haben. Flächenzuteilung 90-100a für 80 Kühe, im Stall nachts zwei Rundballen Grassilage (ca. 500kg TS).  _Bild: Muri AG, 01. April 2025 (L. Rusca)_'
+            desc: '"Wachstum bei uns 54, Weideanteil ca. 70%. Beginn 2. Rotation am 17.03.25, AFC erst bei 300kg/ha. Allerdings waren die letzten weiden bei uns auch so ergiebig dass wir die Kühe abends nochmal für ca. 3 Stunden rausgelassen haben. Flächenzuteilung 90-100a für 80 Kühe, im Stall nachts zwei Rundballen Grassilage (ca. 500kg TS)." (Zitat Luisa)  _Bild: Muri AG, 01. April 2025 (L. Rusca)_'
         -
-            title: null
-            image: null
-            desc: null
+            title: 'Grasmessen macht auch bei Kurzrasenweide Sinn'
+            image: Riedackerhof_2025-04-01_OR1-10clics.jpg
+            desc: '"Ich messe zwischen April und Mai ca. 4 Mal die Kurzrasenweide, um die Weidefläche rechtzeitig zu verkleinern. Bis Juni strebe ich eine durchschnittliche, komprimierte Grashöhe von 11 clics (5.5 cm RPM) an. Damit fördere ich eine dichte Grasnarbe und einen guten Nachwuchs, dabei produzieren wir keine Weidereste und viel Milch." (Zitat Martin Zbinden)_Bild: Rüschegg BE, 01. April 2025 (M. Zbinden)_'
         -
-            title: null
-            image: null
-            desc: null
+            title: 'Teilflächen spezifisch bewirtschafen bei Kurzrasenweide'
+            image: Riedackerhof_2025-04-01_R4.jpg
+            desc: 'Dieser Parzellenteil wird immer besonders tief verbissen, vermutlich bedingt durch die jüngere Anlagedauer und modernere Gräsersorten (SM 460 vor 12 Jahren gesät, Rest ca. 30 jährig). Der Übernutzung wird mit einer häufigeren Güllegabe entgegengewirkt.'
 author: 'Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)'
 ---
 

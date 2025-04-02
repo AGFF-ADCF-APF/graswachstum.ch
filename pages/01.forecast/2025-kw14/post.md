@@ -28,7 +28,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 published: true
-media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-24h.jpeg,Sutter_2025-04-01_Halbtagesweide.jpeg,Riedackerhof_2025-04-01_R2-Tiefengraben.jpg,Riedackerhof_2025-04-01_Höhenmessung Kurzrasenweide.jpg,Riedackerhof_2025-04-01_OR2-Farmwalk.jpg,Riedackerhof_2025-04-01_R4.jpg,Riedackerhof_2025-04-01_OR2-10clics.jpg,Riedackerhof_2025-04-01_OR1-10clics.jpg'
+media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-24h.jpeg,Sutter_2025-04-01_Halbtagesweide.jpeg,Riedackerhof_2025-04-01_R2-Tiefengraben.jpg,Riedackerhof_2025-04-01_Höhenmessung Kurzrasenweide.jpg,Riedackerhof_2025-04-01_OR2-Farmwalk.jpg,Riedackerhof_2025-04-01_R4.jpg,Riedackerhof_2025-04-01_OR2-10clics.jpg,Riedackerhof_2025-04-01_OR1-10clics.jpg,Umfrage_Weideanteil.jpg,Plantahof_2025-04-02_Grasmessen.jpeg,Plantahof_2025-04-02_Kuehe.jpeg,Gerber_2025-04-01_Kuehe2.jpeg,Gerber_2025-04-01_Kuehe1.jpeg,Plantahof_2025-04-02_80Prozent-Weide.jpeg,Riedackerhof_2025-04-01_R3-Botanik.webm'
 publish_date: '02-04-2025 18:00'
 references:
     -

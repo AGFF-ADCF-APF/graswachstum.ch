@@ -8,6 +8,11 @@ hero:
     image: Rusca_2025-04-02_Umtrieb-2.jpeg
     image_alignment: object-center
     text: auto
+    buttons:
+        -
+            text: 'Zupftest (engl.)'
+            link: null
+            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog
@@ -109,7 +114,7 @@ Es sollte bereits jetzt an die Bewältigung des Futterbergs gedacht werden. Zieh
 
 
 ### Neuansaaten früh nutzen
-Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im ersten Hauptnutzungsjahr führt zu lückigen Beständen. Um die Grasnarbendichte zu fördern, sollten diese mit leichten Tieren beispielsweise mit jährigem Jungvieh beweidet werden. Beim Beweiden sollten die Keimlinge gut angewurzelt sein. Dies kann mit dem «Zupftest» [cite=dairynz.2025" /] überprüft werden. Bei diesem Test zieht man am Blatt eines Keimlings. Reisst das Blatt von der Pflanze ist eine Beweidung möglich. Entwurtzelt man die Pflanze beim Test so ist die Fläche noch nicht beweidbar. Ist eine solche Beweidung nicht möglich sollten diese Flächen früh siliert werden. Die frühe Silonutzung generiert zwar höhere Kosten pro dt TS, leistet jedoch einen wichtigen Beitrag zur Pflege der Neuansaat. Nicht nur die Bestockung wird gefördert, auch einjährige Unkräuter werden bereits geköpft. Ein sehr früher Säuberungsschnitt ohne Ernte hilft ebenso bei der Pflege, das eigentlich hochwertige Futter geht jedoch dabei verloren.
+Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im ersten Hauptnutzungsjahr führt zu lückigen Beständen. Um die Grasnarbendichte zu fördern, sollten diese mit leichten Tieren beispielsweise mit jährigem Jungvieh beweidet werden. Beim Beweiden sollten die Keimlinge gut angewurzelt sein. Dies kann mit dem «Zupftest» [cite=dairynz.2025 /] überprüft werden. Bei diesem Test zieht man am Blatt eines Keimlings. Reisst das Blatt von der Pflanze ist eine Beweidung möglich. Entwurtzelt man die Pflanze beim Test so ist die Fläche noch nicht beweidbar. Ist eine solche Beweidung nicht möglich sollten diese Flächen früh siliert werden. Die frühe Silonutzung generiert zwar höhere Kosten pro dt TS, leistet jedoch einen wichtigen Beitrag zur Pflege der Neuansaat. Nicht nur die Bestockung wird gefördert, auch einjährige Unkräuter werden bereits geköpft. Ein sehr früher Säuberungsschnitt ohne Ernte hilft ebenso bei der Pflege, das eigentlich hochwertige Futter geht jedoch dabei verloren.
 
 _Hohenrain, 2. April 2025 
 Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)_

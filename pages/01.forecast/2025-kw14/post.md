@@ -1,5 +1,5 @@
 ---
-title: 'ungWoche 14 (31.03.-06.04.2025)'
+title: 'Woche 14 (31.03.-06.04.2025)'
 date: '27-03-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true

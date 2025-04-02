@@ -1,7 +1,7 @@
 ---
 title: 'Woche 14 (31.03.-06.04.2025)'
 date: '02-04-2025 12:00'
-hide_from_post_list: false
+hide_from_post_list: true
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
@@ -25,7 +25,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-published: false
+published: true
 media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-24h.jpeg,Sutter_2025-04-01_Halbtagesweide.jpeg,Riedackerhof_2025-04-01_R2-Tiefengraben.jpg,Riedackerhof_2025-04-01_Höhenmessung Kurzrasenweide.jpg,Riedackerhof_2025-04-01_OR2-Farmwalk.jpg,Riedackerhof_2025-04-01_R4.jpg,Riedackerhof_2025-04-01_OR2-10clics.jpg,Riedackerhof_2025-04-01_OR1-10clics.jpg'
 publish_date: '02-04-2025 18:00'
 references:

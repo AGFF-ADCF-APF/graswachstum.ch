@@ -91,9 +91,8 @@ author: 'Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)'
 
 # Graswachstum im Aufwind
 
-**Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 ° Celsius liegt. Erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte Nächte dürften das Wachstum nächste Woche aber noch einmal bremsen.**
-
-Ausserdem: Zupftest für Neuansaaten, Farmwalks auf verschiedenen Betrieben
+**Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 ° Celsius liegt. Erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte Nächte dürften das Wachstum nächste Woche aber noch einmal bremsen. 
+Ausserdem: Zupftest für Neuansaaten, Farmwalks auf verschiedenen Betrieben**
 
 ===
 

@@ -42,5 +42,13 @@ Ausserdem: Das Graswachstum h...
 
 [TOC]
 
+
+## Graswachstumsbericht Kalenderwoche 14
+
+
+## Aufwuchshöhenmessung auf Kurzrasenweide
+Steinberger.2011
+[[svg-icon icon="pdf" /] Anleitung Grasaufwuchshöhenmessung](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
+## Fallbeispiel
 ## Graswachstumsbericht Kalenderwoche 13
 

@@ -81,6 +81,7 @@ gallery:
             title: null
             image: null
             desc: null
+author: 'Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)'
 ---
 
 # Graswachstum im Aufwind

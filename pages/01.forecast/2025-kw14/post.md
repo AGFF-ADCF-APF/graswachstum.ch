@@ -40,9 +40,8 @@ references:
         pages: null
 ---
 
-# Farmwalk mit Martin
+# Farmwalks jetzt!
 
-**Die Kurzrasenweide messen? Martin nimmt euch diese Woche mit auf einen Farmwalk.**  
 
 Weitere Themen: Vielerorts wächst erstaunlich viel Gras - und das ist kein April-Scherz!
 
@@ -51,12 +50,6 @@ Weitere Themen: Vielerorts wächst erstaunlich viel Gras - und das ist kein Apri
 
 [TOC]
 
-## Graswachstumsbericht Kalenderwoche 14
 
-
-## Aufwuchshöhenmessung auf Kurzrasenweide
-Steinberger.2011
-[[svg-icon icon="pdf" /] Anleitung Grasaufwuchshöhenmessung](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
-## Fallbeispiel
 
 

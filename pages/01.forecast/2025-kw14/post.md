@@ -131,7 +131,7 @@ Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Tal
 
 
 ### Weidefläche planen
-Mit steigenden Graswachstum kann der Weideanteil ausgedehnt oder die Weidefläche ver-kleinert werden. Bei einem Zuwachs von 50 kg TS/ha/Tag können mit einem Weideanteil von 10 kg TS (ca. 60% der Ration) bereits 5 Kühe/ha nachhaltig gefüttert werden. Nachhaltig heisst in dem Falle, dass diese Futtermenge täglich auch wieder nachwächst. Ist dies nicht (mehr) der Fall, kann die Weidefläche ausgedeht oder mehr zugefüttert werden.
+Mit steigenden Graswachstum kann der Weideanteil ausgedehnt oder die Weidefläche ver-kleinert werden. Bei einem Zuwachs von 50 kg TS/ha/Tag können mit einem Weideverzehr von 10 kg TS (ca. 60% der Ration) bereits 5 Kühe/ha nachhaltig gefüttert werden. Nachhaltig heisst in dem Falle, dass diese Futtermenge täglich auch wieder nachwächst. Ist dies nicht (mehr) der Fall, kann die Weidefläche ausgedeht oder mehr zugefüttert werden.
 Die Düngungsplanung sollte ebenfalls berücksichtigt werden. Je höher das Wachstum, desto höher der Nährstoffbedarf der Pflanzen.
 
 

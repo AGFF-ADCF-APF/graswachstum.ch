@@ -107,7 +107,7 @@ seo-magic:
 published: true
 ---
 
-# Verschiedene Faktoren der Fermentation von Grassilagen unter der Lupe
+#  Fermentation von Grassilagen unter der Lupe
 
 Eine Studie von Agroscope hat die Faktoren untersucht, die die Fermentationsqualität von Grassilagen aus Dauerwiesen beeinflussen. Die Ergebnisse zeigen eine starke Variabilität in der Silagequalität, die durch verschiedene Faktoren wie den Vegetationszyklus, den Trockenmassegehalt und die botanische Zusammensetzung beeinflusst wird. Silagen aus den ersten Schnitten des Jahres neigen dazu, besser zu fermentieren, während die letzten Schnitte mehr Risiken bergen. Die Studie empfiehlt, gute Silierpraktiken anzuwenden, um eine qualitativ hochwertige Futterproduktion zu gewährleisten.
 

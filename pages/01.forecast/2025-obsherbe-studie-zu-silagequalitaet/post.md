@@ -1,6 +1,6 @@
 ---
 title: 'Obs''herbe: Studie zu Silagequalität '
-date: '02-04-2025 12:00'
+date: '03-04-2025 21:33'
 hide_from_post_list: true
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -23,7 +23,6 @@ shortcode-citation:
     items: all
     reorder_uncited: true
 media_order: 487064300_1105144768082932_1321046604963255733_n.jpg
-publish_date: '02-04-2025 18:00'
 references:
     -
         id: steinberger.2011
@@ -105,7 +104,7 @@ seo-magic:
         - düngung
         - bodentemperatur
         - niederschlag
-published: false
+published: true
 ---
 
 # Verschiedene Faktoren der Fermentation von Grassilagen unter der Lupe

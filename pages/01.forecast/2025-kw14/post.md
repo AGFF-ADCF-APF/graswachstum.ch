@@ -89,7 +89,7 @@ gallery:
         -
             title: 'Grasmessen macht auch bei Kurzrasenweide Sinn'
             image: Riedackerhof_2025-04-01_OR1-10clics.jpg
-            desc: '"Ich messe zwischen April und Mai ca. 4 Mal die Kurzrasenweide, um die Weidefläche rechtzeitig zu verkleinern. Bis Juni strebe ich eine durchschnittliche, komprimierte Grashöhe von 11 clics (5.5 cm RPM) an. Damit fördere ich eine dichte Grasnarbe und einen guten Nachwuchs, dabei produzieren wir keine Weidereste und viel Milch." (Martin Zbinden)_Bild: Rüschegg BE, 01. April 2025 (M. Zbinden)_'
+            desc: '"Ich messe zwischen April und Mai ca. 4 Mal die Kurzrasenweide, um die Weidefläche rechtzeitig zu verkleinern. Bis Juni strebe ich eine durchschnittliche, komprimierte Grashöhe von 11 clics (5.5 cm RPM) an. Damit fördere ich eine dichte Grasnarbe und einen guten Nachwuchs, gleichzeitig produzieren wir keine Weidereste und viel Milch." (Martin Zbinden)_Bild: Rüschegg BE, 01. April 2025 (M. Zbinden)_'
         -
             title: 'Gesucht: Regen im Rheintal'
             image: Plantahof_2025-04-02_Kuehe.jpeg

@@ -40,5 +40,4 @@ Interesse an einer Zusammenarbeit? [Schreib uns!](/contact?class=button)
 
 
 ## Medienpartner
-[Bauernzeitung – Serie Graswachstum](http://www.bauernzeitung.ch/graswachstum-serie) 
-![Logo-Graswachstum-neu-2024-web](Logo-Graswachstum-neu-2024-web.svg?resize=200,200 "Logo-Graswachstum-neu-2024-web")
+[Bauernzeitung – Serie Graswachstum](http://www.bauernzeitung.ch/graswachstum-serie) ![Logo-Graswachstum-neu-2024-web](Logo-Graswachstum-neu-2024-web.svg?resize=200,200 "Logo-Graswachstum-neu-2024-web")

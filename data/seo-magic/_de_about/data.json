@@ -4,36 +4,36 @@
         "page_rawroute": "\/about",
         "page_title": "\u00dcber uns"
     },
-    "updated": 1732392924,
+    "updated": 1743665296,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "\u00dcber uns",
         "grav-page-route": "\/about",
         "grav-page-rawroute": "\/about",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 30 Nov 2024 20:15:24 GMT",
+        "expires": "Thu, 10 Apr 2025 07:28:16 GMT",
         "content-encoding": "gzip",
-        "content-type": "text\/html;charset=UTF-8",
-        "date": "Sat, 23 Nov 2024 20:15:24 GMT",
+        "content-type": "text\/html; charset=utf-8",
+        "date": "Thu, 03 Apr 2025 07:28:16 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1732392924.794332981109619140625,
-        "total_time": 0.08893199999999999716404630589750013314187526702880859375,
-        "namelookup_time": 2.000000000000000163606107828062619091724627651274204254150390625e-5,
-        "connect_time": 2.099999999999999883795211153003634763081208802759647369384765625e-5,
-        "pretransfer_time": 6.4999999999999994305770190106130712592857889831066131591796875e-5,
-        "starttransfer_time": 0.08879099999999999492938940193198504857718944549560546875,
+        "start_time": 1743665296.732532978057861328125,
+        "total_time": 0.1582139999999999935287320340648875571787357330322265625,
+        "namelookup_time": 0.00037100000000000001899869150889799129799939692020416259765625,
+        "connect_time": 0.000442000000000000010068335054569388375966809689998626708984375,
+        "pretransfer_time": 0.0035449999999999999740485367993869658675976097583770751953125,
+        "starttransfer_time": 0.1574750000000000038635761256955447606742382049560546875,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/de\/about",
-        "content_type": "text\/html;charset=UTF-8",
-        "header_size": 516,
+        "content_type": "text\/html; charset=utf-8",
+        "header_size": 517,
         "request_size": 117,
         "redirect_count": 0,
-        "size_download": 4570,
-        "speed_download": 51931,
+        "size_download": 6171,
+        "speed_download": 39004,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,15 +41,19 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 20027
+        "content_size": 33962
     },
     "content": {
-        "body": "<ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n  <\/ul>\n          \n              \n    \n          \n        \n          \n  \n  \n  \n\n        \n      \n      \n\n  \n            \n  \n  \n  \n\n\n\n  \n  \n  \n    \n      \n\n        \n                        <h1>\n          &Uuml;ber uns\n                  <\/h1>\n\n        \n        \n\n              \n\n    \n  \n\n      \n    \n    \n              \n  \n  \n  \n  \n    \n            \n          \n  \n  \n\n  \n\n    \n      \n      \n              \n\n              \n          \n        \n      \n        \n\n    \n  \n\n  \n      \n    \n  \n\n    \n  \n\n      \n\n\n\n  \n\n    \n              \n                      Datenschutz und Rechtsausschluss\n                  \n      \n      \n    \n    \n      \n        <p>graswachstum.ch was \n  \n  \n  \n  \n with \n  \n  \n by M. Zbinden<\/p>\n      \n\n              \n          \n                \n                  \n                  \n  \n  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n  \n\n                  \n                  \n                  \n  \n  \n\n                  \n                \n            \n              System\n              Light\n              Dark\n            \n          \n        \n          \n  \n\n  \n            \n\n\n  \n\n\n\n  \n\n    <ul>\n          \n        \n            \n                \n    <li>\n      \n                          \n  \n  \n  \nKurven\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Ressourcen\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          &Uuml;ber uns\n                  <\/li>\n  \n        \n            \n                \n    <li>\n      \n                          Kontakt\n                  <\/li>\n  \n    <\/ul>",
+        "body": "<h2>Messtandorte<\/h2>\n<p>Die Standorte werden in der Unterseite Standorte beschrieben.<\/p>\n<h2>Datensammlung und Aufbereitung<\/h2>\n<ol>\n<li>Die beteiligten Stellen und Betriebe melden selbst&auml;ndig das Graswachstum mit einem vorbereiteten Google Formular. <\/li>\n<li>Die gesammelten Daten werden als Google Sheet im Internet publiziert.<\/li>\n<li>Ein R-Skript  ruft die Daten ab und erstellt die Grafiken. <\/li>\n<li>R l&auml;dt die Ergebnisse per FTP automatisch auf diese Internetseite hoch.<\/li>\n<\/ol>\n<p>Interesse an einer Zusammenarbeit? Schreib uns!<\/p>\n<h2>Medienpartner<\/h2>\nBauernzeitung &ndash; Serie GraswachstumLogo-Graswachstum-neu-2024-web",
         "headers": {
             "h1": [
                 "\u00dcber uns"
             ],
-            "h2": [],
+            "h2": [
+                "Messtandorte",
+                "Datensammlung und Aufbereitung",
+                "Medienpartner"
+            ],
             "h3": [],
             "h4": [],
             "h5": [],
@@ -63,8 +67,20 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/04.about\/IMG_20190322_102544.jpg",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/07.about\/IMG_20190322_102544.jpg?g-18f13af4",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/07.about\/Logo-Graswachstum-neu-2024-web.svg?decoding=auto&fetchpriority=auto&g-18f13af4",
+                "alt": "Logo-Graswachstum-neu-2024-web",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-18f13af4",
+                "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
             }
@@ -75,7 +91,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 0,
-                "article": 0,
+                "article": 1,
                 "footer": 1
             }
         },
@@ -84,61 +100,134 @@
             "flash": 0
         },
         "links": {
-            "\/de": {
+            "https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth": {
                 "count": 0,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "R-Skript",
+                "external": true,
+                "status": 302,
+                "status_msg": "whitelisted"
+            },
+            "\/de": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "",
-                "external": false
+                "text": "Wachstumsberichte",
+                "external": false,
+                "status": 200
             },
             "\/de\/growth": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Kurven",
-                "external": false
+                "text": "Graswachstum",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Standorte",
+                "external": false,
+                "status": 200
             },
             "\/de\/resources": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
-                "external": false
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-webinar-grasmessen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Grasmess-Webinar 2025",
+                "external": false,
+                "status": 200
             },
             "\/de\/about": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "\/de\/contact": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Kontakt",
-                "external": false
+                "external": false,
+                "status": 200
+            },
+            "\/fr\/about": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Fran\u00e7ais",
+                "external": false,
+                "status": 200
+            },
+            "#messtandorte": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#datensammlung-und-aufbere": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#medienpartner": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "http:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Bauernzeitung \u2013 Serie Graswachstum",
+                "external": true,
+                "status": 200
             },
             "\/de\/legal": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Datenschutz und Rechtsausschluss",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "https:\/\/getgrav.org": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "graswachstum.ch",
-                "external": true
+                "external": true,
+                "status": 200
             },
-            "https:\/\/graswachstum.ch": {
-                "count": 0,
+            "https:\/\/agff.ch": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "M. Zbinden",
-                "external": true
+                "text": "AGFF",
+                "external": true,
+                "status": 200
             }
         }
     },
@@ -148,13 +237,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "Kurven Ressourcen \u00dcber uns Kontakt \u00dcber uns Datenschutz und Rechtsausschluss graswachstum.ch was with by M. Zbinden System Light Dark Kurven Ressourcen \u00dcber\u2026",
             "title": "\u00dcber uns | graswachstum.ch",
+            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with,",
             "image": "https:\/\/graswachstum.ch\/de\/about\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/about",
             "og:site_name": "graswachstum.ch",
             "og:title": "\u00dcber uns | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "Kurven Ressourcen \u00dcber uns Kontakt \u00dcber uns Datenschutz und Rechtsausschluss graswachstum.ch was with by M. Zbinden System Light Dark Kurven Ressourcen \u00dcber\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/about\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -162,15 +252,16 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/about\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "\u00dcber uns | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "Kurven Ressourcen \u00dcber uns Kontakt \u00dcber uns Datenschutz und Rechtsausschluss graswachstum.ch was with by M. Zbinden System Light Dark Kurven Ressourcen \u00dcber\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/about\/seomagic-image.jpg",
             "twitter:image:alt": "\u00dcber uns | graswachstum.ch",
-            "keywords": "ressourcen,kurven,kontakt,datenschutz,dark,rechtsausschluss,light,graswachstum.ch,system,with"
+            "twitter:label1": "Est. reading time",
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/about",
         "links": {
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.css": {
+            "\/user\/plugins\/vimeo\/css\/vimeo.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -188,7 +279,19 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -206,7 +309,31 @@
                 "media": null,
                 "crossorigin": null
             },
+            "\/user\/plugins\/langswitcher\/css\/langswitcher.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null
+            },
+            "\/user\/plugins\/simplesearch\/css\/simplesearch.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
@@ -266,12 +393,17 @@
                 "defer": null,
                 "type": null
             },
-            "\/user\/plugins\/tingle-form\/assets\/tingle.min.js": {
+            "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.js": {
                 "async": null,
                 "defer": null,
                 "type": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simple-responsive-tables\/assets\/js\/simple-responsive-tables.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -301,6 +433,11 @@
                 "defer": null,
                 "type": null
             },
+            "\/user\/plugins\/simplesearch\/js\/simplesearch.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
             "\/user\/plugins\/prism-highlight\/js\/prism.js": {
                 "async": null,
                 "defer": null,
@@ -318,5 +455,5 @@
             }
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5600687192c0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 3 (easy handle 0x5600687f0800)\n> GET \/de\/about HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Sat, 30 Nov 2024 20:15:24 GMT\r\n* Added cookie grav-site-23a95d8=\"7ee6344bbd62a92d282981bb9d84e897\" for domain graswachstum.ch, path \/, expire 1732394724\n< set-cookie: grav-site-23a95d8=7ee6344bbd62a92d282981bb9d84e897; expires=Sat, 23 Nov 2024 20:45:24 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html;charset=UTF-8\r\n< date: Sat, 23 Nov 2024 20:15:24 GMT\r\n< server: Apache\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/about\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/about]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/about HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: \u00dcber uns\r\n< grav-page-route: \/about\r\n< grav-page-rawroute: \/about\r\n< cache-control: max-age=604800\r\n< expires: Thu, 10 Apr 2025 07:28:16 GMT\r\n* Added cookie grav-site-23a95d8=\"e7a49f8d52430e22186b4de13db52682\" for domain graswachstum.ch, path \/, expire 1743667096\n< set-cookie: grav-site-23a95d8=e7a49f8d52430e22186b4de13db52682; expires=Thu, 03-Apr-2025 07:58:16 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 03 Apr 2025 07:28:16 GMT\r\n< server: Apache\r\n< \r\n"
 }

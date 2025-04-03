@@ -95,7 +95,7 @@ gallery:
             image: Plantahof_2025-04-02_Kuehe.jpeg
             desc: '"Die Kurzrasenweiden vom Plantahof haben sich (über die leider mit 15 mm immer noch spärlichen) Niederschläge gefreut." (Rolf Hug)  _Bild: Landquart GR, 02. April 2025 (R. Hug)_ '
         -
-            title: 'Gefunden: der erste Schulleiter mit Herbometer der Schweiz!'
+            title: 'Gefunden: der erste Direktor mit Herbometer in der Schweiz!'
             image: Plantahof_2025-04-02_Grasmessen.jpeg
             desc: 'Der neue Plantahofdirektor Peter Vincenz wird vom Leiter Feldbau Andri Bonifazi in die Kunst des Grasmessens eingeweiht. _Bild: Landquart GR, 02. April 2025 (R. Hug)_ '
         -

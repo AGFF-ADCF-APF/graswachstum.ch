@@ -113,5 +113,52 @@ seo-magic:
 published: false
 ---
 
-# agrihebo
+# Verschiedene Faktoren der Fermentation von Grassilagen unter der Lupe
+
+Eine Studie von Agroscope hat die Faktoren untersucht, die die Fermentationsqualität von Grassilagen aus Dauerwiesen beeinflussen. Die Ergebnisse zeigen eine starke Variabilität in der Silagequalität, die durch verschiedene Faktoren wie den Vegetationszyklus, den Trockenmassegehalt und die botanische Zusammensetzung beeinflusst wird. Silagen aus den ersten Schnitten des Jahres neigen dazu, besser zu fermentieren, während die letzten Schnitte mehr Risiken bergen. Die Studie empfiehlt, gute Silierpraktiken anzuwenden, um eine qualitativ hochwertige Futterproduktion zu gewährleisten.
+
+Eine Übersetzung des Artikels aus Agri, Dossier Futterproduktion vom 7. März 2025.
+
+===
+
+[TOC]
+
+## Verschiedene Faktoren der Fermentation von Grassilagen unter der Lupe
+
+**Silagen aus Dauerwiesen variieren in der Qualität. Eine Agroscope-Studie analysiert die Faktoren, die ihre Fermentation beeinflussen. Vegetationszyklus, Trockenmasse und botanische Zusammensetzung stehen im Mittelpunkt der Studie.**
+
+In der Schweiz nehmen Dauerwiesen 58% der landwirtschaftlichen Nutzfläche ein. Sie stellen eine wichtige Futterquelle für Wiederkäuer dar. Aber nicht alle Grassilagen sind gleich. Einige behalten ihre Nährwerte gut, während andere unerwünschte Fermentationen entwickeln. Warum diese Variabilität? Ein Forscherteam von Agroscope unter der Leitung von Elisa Manzocchi versuchte zu verstehen, welche Faktoren die Fermentationsqualität von Silagen aus intensiv genutzten Dauerwiesen beeinflussen.
+
+Die Forscher entnahmen 159 Proben von Grünfutter vom ersten bis zum fünften Vegetationszyklus. Sie führten dann eine Vorwelkphase durch, bevor sie diese Proben in Laborsilos einsilierten. Nach neunzig Tagen Lagerung wurde die Qualität der Silagen anhand mehrerer Kriterien bewertet: chemische Zusammensetzung, pH-Wert, Gehalt an flüchtigen Fettsäuren und Ammoniak.
+
+Die Studie untersuchte auch die Auswirkungen des Wiesentyps auf die Qualität der Silagen. Die Wiesen wurden in mehrere ausgewogene Kategorien eingeteilt, ausgewogen mit Raygras-Dominanz, reich an Gräsern oder dominiert von Raygras. Die Ergebnisse zeigen, dass der botanische Typ keinen entscheidenden Einfluss auf die Fermentation hat. "Wir haben beobachtet, dass Raygras-reiche Wiesen wahrscheinlich aufgrund ihres höheren Gehalts an löslichen Zuckern eine bessere Fermentationsqualität aufweisen", betont Elisa Manzocchi. Dieser Effekt bleibt jedoch im Vergleich zu anderen Faktoren wie dem Vegetationszyklus und dem Trockenmassegehalt begrenzt.
+
+### Der Vegetationszyklus macht Unterschiede
+
+Die Ergebnisse bestätigen eine starke Variabilität in der Silagequalität. Einige konservieren gut, während andere Anzeichen unerwünschter Fermentation zeigen. Ein Schlüsselfaktor ist der Vegetationszyklus. "Silagen aus den ersten Schnitten des Jahres neigen dazu, besser zu fermentieren als die am Ende der Saison geernteten", bemerkt Elisa Manzocchi. Eine mögliche Erklärung liegt im Gehalt an löslichen Zuckern im Futter. Im Frühjahr höher, fördert er die Milchsäuregärung, die für eine gute Konservierung unerlässlich ist.
+
+Die letzten Schnitte des Jahres bergen dagegen mehr Risiken. Das im Herbst geerntete Gras ist aufgrund oft ungünstiger Vorwelkbedingungen und seines geringen Trockenmassegehalts schwieriger zu silieren, erklärt die Forscherin. Diese übermäßige Feuchtigkeit und Erdverschmutzungen können zur Entwicklung von Buttersäuregärungen führen, die für die Futterqualität und die Schmackhaftigkeit des Viehs schädlich sind.
+
+### Starke unerklärte Variabilität
+Trotz der Identifizierung einiger einflussreicher Parameter bleibt ein Großteil der Variabilität der Fermentationsqualität der Silagen unerklärt. "Wir wissen, dass viele Faktoren eine Rolle spielen: die chemische und morphologische Zusammensetzung des Futters, das Vorhandensein von epiphytischen Mikroorganismen, die Erntebedingungen, der Vorwelkgrad, die Siliertechnik und das Silomanagement", erklärt die Forscherin. "Die Wechselwirkung zwischen diesen Faktoren ist jedoch komplex zu entschlüsseln."
+
+### Perspektiven für die Zukunft
+Das Agroscope-Team plant mehrere Forschungsrichtungen, um diese Ergebnisse weiter zu vertiefen. "Wir möchten die Auswirkungen landwirtschaftlicher Praktiken auf die epiphytische Mikroflora von Wiesen und ihren Einfluss auf die Fermentation besser verstehen", sagt Elisa Manzocchi. Andere Studien könnten die Anpassung von Konservierungsstrategien an den Klimawandel sowie die Optimierung des Proteinerzeugung von Grassilagen untersuchen, um die Futterautonomie der Viehhaltung zu verbessern.
+
+In der Zwischenzeit erinnert Elisa Manzocchi an die Bedeutung guter Silierpraktiken, um qualitativ hochwertiges Futter zu gewährleisten und die Leistung der Viehhaltung zu optimieren. Der wichtigste Ratschlag ist, einen optimalen Trockenmassegehalt bei der Ernte anzustreben und daher das Vorwelken an die aktuellen Wetterbedingungen anzupassen. Es ist auch ratsam, die Qualität von Grassilagen regelmäßig zu bewerten, um mögliche Fehler im Silier- und Konservierungsprozess zu erkennen. Es ist entscheidend, sich der Qualität der Silagen bewusst zu sein, um potenzielle Hebel zu identifizieren, die ihre Konservierung verbessern können.
+
+Für weitere Details wird empfohlen, die technischen Datenblätter des Verbandes zur Förderung des Futterpflanzenanbaus (ADCF) zu konsultieren. Silage ist eine sehr effektive Konservierungstechnik, aber es reicht nicht aus, zu mähen, ein Silo zu füllen und zu warten. Die Schlüsselparameter müssen überwacht werden, um eine gute Futterqualität zu gewährleisten, erinnert Elisa Manzocchi.
+
+[notice]
+### Das Obs'herbe-Projekt zum Verständnis der Produktivität von Wiesen
+Zwischen 2017 und 2019 verfolgte Agroscope 32 Dauer- und Kunstwiesen in sechs Schweizer Kantonen, um die Schwankungen von Ertrag und Futterqualität zu analysieren (siehe Agri vom Freitag, 30. April 2021). Die Studie mit dem Namen Obs'herbe zeigt eine starke regionale und jährliche Variabilität. Ein gutes Jahr hier kann woanders schlecht sein, betont Massimiliano Probo, Forscher bei Agroscope. Die Ergebnisse zeigen, dass die Temperatur hauptsächlich den ersten Schnitt beeinflusst, während die Luftfeuchtigkeit für die folgenden Schnitte entscheidender wird. Um die Vorhersagen zu verfeinern, testete Agroscope die in Frankreich verwendete Methode der Gradtage. Dieser Indikator, der die für das Pflanzenwachstum nützlichen Tagestemperaturen kumuliert, erwies sich als zuverlässiger als die Phänologie. "Er ermöglicht eine bessere Schätzung des Ertrags und des Nährwerts", erklärt Pierre Mariotte, Forscher bei Agroscope. Die Integration von Gradtagen in Agrométéo bietet Landwirten nun ein zusätzliches Werkzeug, um ihr Wiesenmanagement zu optimieren und die Futterproduktion zu verbessern.
+[/notice]
+
+_Ein Artikel von Pauline Clerc_, veröffentlicht auf der [Facebook-Seite der ADCF](https://www.facebook.com/photo/?fbid=1111053327492076&set=a.495594059038009), automatisch übersetzt mit [Gemini](https://gemini.google.com/)
+
+**Bild 1:** Die Forschung basierte auf Futterproben, die auf 21 Dauerwiesen in der ganzen Schweiz gesammelt wurden. Diese Parzellen waren Teil des Obs'herbe-Projekts.
+
+**Bild 2:** Die grasreichen Wiesen haben laut der Studie eine bessere Fermentationsqualität.
+
+![agrihebdo_2025-04-03_silage-obsherbe-qualite](agrihebdo_2025-04-03_silage-obsherbe-qualite.jpg?lightbox "agrihebdo_2025-04-03_silage-obsherbe-qualite")
 

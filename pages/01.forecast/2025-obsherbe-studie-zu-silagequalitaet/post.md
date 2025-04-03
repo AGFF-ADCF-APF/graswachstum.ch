@@ -12,9 +12,8 @@ taxonomy:
     category:
         - blog
     tag:
-        - weide
-        - gallerie
-        - wachstumsbericht
+        - futterbau
+        - agff
     author:
         - 'Zbinden Martin'
 sitemap:

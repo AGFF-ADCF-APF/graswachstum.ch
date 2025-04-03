@@ -6,7 +6,7 @@ hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: Rusca_2025-04-02_Umtrieb-2.jpeg
-    image_alignment: object-center
+    image_alignment: object-top
     text: auto
     buttons:
         -

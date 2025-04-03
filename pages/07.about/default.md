@@ -16,18 +16,16 @@ content:
     order:
         by: date
         dir: desc
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '03-04-2025 09:22'
 ---
 
-## Über die Messtandorte
-### Standorte Posieux und Sorens
-Agroscope misst seit dem Jahr 2000 das Graswachstum auf dem Agroscope Versuchsbetrieb in Posieux und auf dem Biobetrieb «Schulbauernhof Sorens» und stellt die aktuellen Wachstumszahlen als Referenzwerte für interessierte Kreise ins Netz. 
-Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)
-Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum/erhebungsmethode.html))
+## Messtandorte
 
- ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
-
-### Beschreibungen weiterer Standorte  
-_**folgen bald**_
+Die Standorte werden in der Unterseite [Standorte](/places) beschrieben.
 
 
 ## Datensammlung und Aufbereitung

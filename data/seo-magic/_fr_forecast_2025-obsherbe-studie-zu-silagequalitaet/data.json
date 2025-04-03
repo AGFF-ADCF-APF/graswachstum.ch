@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast\/2025-obsherbe-studie-zu-silagequalitaet",
         "page_title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages"
     },
-    "updated": 1743709079,
+    "updated": 1743709099,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages",
         "grav-page-route": "\/forecast\/2025-obsherbe-studie-zu-silagequalitaet",
         "grav-page-rawroute": "\/forecast\/2025-obsherbe-studie-zu-silagequalitaet",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 10 Apr 2025 19:37:59 GMT",
+        "expires": "Thu, 10 Apr 2025 19:38:19 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 03 Apr 2025 19:37:59 GMT",
+        "date": "Thu, 03 Apr 2025 19:38:19 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1743709079.523499965667724609375,
-        "total_time": 0.19212499999999999023003738329862244427204132080078125,
-        "namelookup_time": 0.0003179999999999999775630865617159770408761687576770782470703125,
-        "connect_time": 0.000393000000000000011650402864660236446070484817028045654296875,
-        "pretransfer_time": 0.0044650000000000002187139358511558384634554386138916015625,
-        "starttransfer_time": 0.1913300000000000000710542735760100185871124267578125,
+        "start_time": 1743709099.191298961639404296875,
+        "total_time": 0.172146999999999994468424802107620052993297576904296875,
+        "namelookup_time": 0.00034800000000000000204003480774872514302842319011688232421875,
+        "connect_time": 0.0004169999999999999987058962869213019075687043368816375732421875,
+        "pretransfer_time": 0.003481999999999999852173804271160406642593443393707275390625,
+        "starttransfer_time": 0.171617999999999992777333090998581610620021820068359375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 639,
         "request_size": 160,
         "redirect_count": 0,
-        "size_download": 8895,
-        "speed_download": 46297,
+        "size_download": 8978,
+        "speed_download": 52153,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 47093
+        "content_size": 47920
     },
     "content": {
         "body": "<h1>Diff&eacute;rents facteurs de la fermentation des ensilages d'herbe sous la loupe<\/h1>\n<p>Agri Hebdo du vendredi 7 mars 2025<\/p>\n\nagrihebdo_2025-04-03_silage-obsherbe-qualite",
@@ -67,6 +67,12 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
                 "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.forecast\/2025-obsherbe-studie-zu-silagequalitaet\/agrihebdo_2025-04-03_silage-obsherbe-qualite.jpg?g-18f13af4",
+                "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
@@ -432,26 +438,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages",
+            "description": "Diff\u00e9rents facteurs de la fermentation des ensilages d'herbe sous la loupe Agri Hebdo du vendredi 7 mars 2025 agrihebdo_2025-04-03_silage-obsherbe-qualite",
+            "title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages | graswachstum.ch",
+            "keywords": "ensilages,d'herbe,loupe,agri,hebdo,vendredi,mars,fermentation,2025,facteurs,",
             "image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages | graswachstum.ch",
+            "og:description": "Diff\u00e9rents facteurs de la fermentation des ensilages d'herbe sous la loupe Agri Hebdo du vendredi 7 mars 2025 agrihebdo_2025-04-03_silage-obsherbe-qualite",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages | graswachstum.ch",
+            "twitter:description": "Diff\u00e9rents facteurs de la fermentation des ensilages d'herbe sous la loupe Agri Hebdo du vendredi 7 mars 2025 agrihebdo_2025-04-03_silage-obsherbe-qualite",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\/seomagic-image.jpg",
-            "twitter:image:alt": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages",
+            "twitter:image:alt": "Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 minutes",
-            "keywords": ""
+            "twitter:data1": "0 minutes"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet",
@@ -661,5 +667,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages\r\n< grav-page-route: \/forecast\/2025-obsherbe-studie-zu-silagequalitaet\r\n< grav-page-rawroute: \/forecast\/2025-obsherbe-studie-zu-silagequalitaet\r\n< cache-control: max-age=604800\r\n< expires: Thu, 10 Apr 2025 19:37:59 GMT\r\n* Added cookie grav-site-23a95d8=\"193c6673c888bfc58533b301c9741216\" for domain graswachstum.ch, path \/, expire 1743710879\n< set-cookie: grav-site-23a95d8=193c6673c888bfc58533b301c9741216; expires=Thu, 03-Apr-2025 20:07:59 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 03 Apr 2025 19:37:59 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 07:36:23 2025 GMT\n*  expire date: May 18 07:36:22 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R11\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/fr\/forecast\/2025-obsherbe-studie-zu-silagequalitaet HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Obs'herbe: \u00e9tude sur la qualit\u00e9 des silages\r\n< grav-page-route: \/forecast\/2025-obsherbe-studie-zu-silagequalitaet\r\n< grav-page-rawroute: \/forecast\/2025-obsherbe-studie-zu-silagequalitaet\r\n< cache-control: max-age=604800\r\n< expires: Thu, 10 Apr 2025 19:38:19 GMT\r\n* Added cookie grav-site-23a95d8=\"7361134fee5d54b36ef49ae55e550d91\" for domain graswachstum.ch, path \/, expire 1743710899\n< set-cookie: grav-site-23a95d8=7361134fee5d54b36ef49ae55e550d91; expires=Thu, 03-Apr-2025 20:08:19 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 03 Apr 2025 19:38:19 GMT\r\n< server: Apache\r\n< \r\n"
 }

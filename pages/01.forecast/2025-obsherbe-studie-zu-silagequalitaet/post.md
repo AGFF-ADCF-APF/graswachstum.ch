@@ -8,11 +8,6 @@ hero:
     image: Rusca_2025-04-02_Umtrieb-2.jpeg
     image_alignment: object-top
     text: auto
-    buttons:
-        -
-            text: 'Anleitung Zupftest (engl. "pluck test")'
-            link: 'https://www.dairynz.co.nz/feed/fundamentals/managing-new-pasture/'
-            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

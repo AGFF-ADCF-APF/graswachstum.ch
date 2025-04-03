@@ -32,7 +32,7 @@ media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-2
 publish_date: '02-04-2025 18:00'
 references:
     -
-        id: Steinberger.2011
+        id: steinberger.2011
         type: web
         title: 'Kurzrasenweide - der Weideprofi misst seinen Grasaufwuchs'
         author: 'Siegfried Steinberger (Institut für Tierernährung und  Futterwirtschaft, Grub)'
@@ -144,6 +144,10 @@ Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im e
 
 _Hohenrain, 2. April 2025 
 Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)_
+
+### Ausblick auf den nächsten Graswachstumsbericht
+- Anleitung für die Grashöhenmessung bei Kurzrasenweide [cite=steinberger.2011/]
+- Neue digitale Hilfsmittel für Weideplanung [cite=gruenlandzentrum.2025 /]
 
 ## Gallerie
 

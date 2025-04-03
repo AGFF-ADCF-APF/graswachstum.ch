@@ -110,6 +110,7 @@ seo-magic:
         - düngung
         - bodentemperatur
         - niederschlag
+published: false
 ---
 
 # Graswachstum im Aufwind

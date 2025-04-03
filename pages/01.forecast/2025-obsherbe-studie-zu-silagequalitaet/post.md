@@ -27,7 +27,7 @@ sitemap:
 shortcode-citation:
     items: all
     reorder_uncited: true
-media_order: 'Rusca_2025-04-02_Umtrieb-2.jpeg,Sutter_2025-04-01_Wiederaufwuchs-24h.jpeg,Sutter_2025-04-01_Halbtagesweide.jpeg,Riedackerhof_2025-04-01_R2-Tiefengraben.jpg,Riedackerhof_2025-04-01_Höhenmessung Kurzrasenweide.jpg,Riedackerhof_2025-04-01_OR2-Farmwalk.jpg,Riedackerhof_2025-04-01_R4.jpg,Riedackerhof_2025-04-01_OR2-10clics.jpg,Riedackerhof_2025-04-01_OR1-10clics.jpg,Umfrage_Weideanteil.jpg,Plantahof_2025-04-02_Grasmessen.jpeg,Plantahof_2025-04-02_Kuehe.jpeg,Gerber_2025-04-01_Kuehe2.jpeg,Gerber_2025-04-01_Kuehe1.jpeg,Plantahof_2025-04-02_80Prozent-Weide.jpeg,Riedackerhof_2025-04-01_R3-Botanik.webm'
+media_order: 487064300_1105144768082932_1321046604963255733_n.jpg
 publish_date: '02-04-2025 18:00'
 references:
     -
@@ -113,41 +113,5 @@ seo-magic:
 published: false
 ---
 
-# Graswachstum im Aufwind
-
-**Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 ° Celsius liegt. Erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte Nächte dürften das Wachstum nächste Woche aber noch einmal bremsen. 
-Ausserdem: Zupftest für Neuansaaten, Farmwalks auf verschiedenen Betrieben**
-
-===
-
-
-
-[TOC]
-
-## Wachtumsbericht
-Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 ° Celsius liegt. Die Bodentemperatur kurbelt das Graswachstum und die Stickstoffmineralisierung an. In der Talzone der Zentral- und Ostschweiz liegt der tägliche Zuwachs bereits zwischen 50 und 100 kg TS/ha. Der zweite Umtrieb wurde verbreitet schon vor 14 Tagen angefangen und erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte Nächte dürften das Wachstum nächste Woche aber noch einmal bremsen.
-
-![](https://graswachstum.ch/user/pages/uploads/archive/Graswachstumkarte_2025KW14.svg?lightbox)
-
-
-### Weidefläche planen
-Mit steigenden Graswachstum kann der Weideanteil ausgedehnt oder die Weidefläche ver-kleinert werden. Bei einem Zuwachs von 50 kg TS/ha/Tag können mit einem Weideverzehr von 10 kg TS (ca. 60% der Ration) bereits 5 Kühe/ha nachhaltig gefüttert werden. Nachhaltig heisst in dem Falle, dass diese Futtermenge täglich auch wieder nachwächst. Ist dies nicht (mehr) der Fall, kann die Weidefläche ausgedeht oder mehr zugefüttert werden.
-Die Düngungsplanung sollte ebenfalls berücksichtigt werden. Je höher das Wachstum, desto höher der Nährstoffbedarf der Pflanzen.
-
-
-### Futterstaffelung
-Es sollte bereits jetzt an die Bewältigung des Futterbergs gedacht werden. Zieht das Graswachstum stark an, besteht die Gefahr, dass nur noch Bestände mit zu hoher oder zu tiefer Eintriebshöhe zur Verfügung stehen. Somit sollte die Konservierung bereits geplant werden. Je früher einzelne überständige Koppeln geschnitten werden können, desto besser die Staffelung der Koppeln. Wird im ersten Schnitt viel Weidefläche ausgeschieden und gleichzeitig gemäht, sind diese gleichzeitig bereit zur Beweidung, was das Einhalten der Eintriebshöhe er-schwert und somit die Futterqualität bzw. Tierleistung reduziert.
-
-
-### Neuansaaten früh nutzen
-Neuansaaten vom Herbst werden häufig zu spät genutzt. Eine späte Nutzung im ersten Hauptnutzungsjahr führt zu lückigen Beständen. Um die Grasnarbendichte zu fördern, sollten diese mit leichten Tieren beispielsweise mit jährigem Jungvieh beweidet werden. Beim Beweiden sollten die Keimlinge gut angewurzelt sein. Dies kann mit dem «Zupftest» [cite=dairynz.2025 /] überprüft werden. Bei diesem Test zieht man am Blatt eines Keimlings. Reisst das Blatt von der Pflanze ist eine Beweidung möglich. Entwurtzelt man die Pflanze beim Test so ist die Fläche noch nicht beweidbar. Ist eine solche Beweidung nicht möglich sollten diese Flächen früh siliert werden. Die frühe Silonutzung generiert zwar höhere Kosten pro dt TS, leistet jedoch einen wichtigen Beitrag zur Pflege der Neuansaat. Nicht nur die Bestockung wird gefördert, auch einjährige Unkräuter werden bereits geköpft. Ein sehr früher Säuberungsschnitt ohne Ernte hilft ebenso bei der Pflege, das eigentlich hochwertige Futter geht jedoch dabei verloren.
-
-_Hohenrain, 2. April 2025 
-Nicolas Marti (BBZN), Martin Zbinden (INFORAMA)_
-
-### Ausblick auf den nächsten Graswachstumsbericht
-- Anleitung für die Grashöhenmessung bei Kurzrasenweide [cite=steinberger.2011/]
-- Neue digitale Hilfsmittel für Weideplanung [cite=gruenlandzentrum.2025 /]
-
-## Gallerie
+# agrihebo
 

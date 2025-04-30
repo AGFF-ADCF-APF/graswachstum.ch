@@ -30,9 +30,9 @@ publish_date: '01-05-2025 10:33'
 published: false
 ---
 
-# Wachstumsspitze erreicht
+# Wachstumsspitze erreicht?
 
-**Im Messnetzwerk der AGFF werden Wachstumsraten von über 100kg TS/ha gemeldet - der Duchschnitt sinkt nun aber bereits wieder.** Eine Ursachensuche.
+**Im Messnetzwerk der AGFF werden Wachstumsraten von über 100kg TS/ha gemeldet - der Duchschnitt liegt aber darunter.** Eine Ursachensuche.
 
 ===
 
@@ -42,15 +42,16 @@ published: false
 
 ## Graswachstumsbericht Kalenderwoche 18
 
+Der Regen ist in der ganzen Schweiz rechtzeitig gekommen, es ist angenehm warm – ideale Wachstumsbedingungen für das Gras. Die Weidebetriebe des Grasmessnetzwerkes melden ideale Bedingungen für die aktuelle Weidephase. Das gemessene Graswachstum liegt dennoch nur bei durchschnittlich 80kg TS/ha/Tag. Dies ist darauf zurückzuführen, dass die Weidefläche teilweise schon recht stark verkleinert wurde und Flächen wegkonserviert wurden. Weniger Blattmasse bedeutet weniger Graswachstum. 
 
+### Auf Weiden vegetatives Wachstum erhalten
+In Lagen unter 700 m ü.M. haben die Leitgräser auf den meisten Naturwiesen jetzt mit dem Rispenschieben begonnen. Der Nährwert des Wiesenfutters sinkt ab diesem Stadium rascher, gleichzeitig sinkt auf der Weide der Verzehr. Weidebetriebe werden versuchen deshalb, das generative Wachstum möglichst zu unterbrechen und die Weideflächen möglichst im vegetativen Wachstumsmodus zu halten. Dies kann gelingen, indem die Blütenstände der Gräser kurz vor dem Rispenschieben abgebissen werden. Damit dies klappt, muss auch sichergestellt werden, dass eine geringe Ausgangshöhe von unter 4cm eingehalten wird. All dies spricht für eine verkürzte Rotationsdauer in dieser Weidephase – auch wenn dadurch etwas Wachstumspotenzial verloren geht. 
 
+Auf Weidekoppeln, wo die Tiere beim letzten Umtrieb aber gerade oberhalb des sich entwickelnden Blütenstandes abgebissen haben, schieben die Rispe jetzt aber umso schneller. Solche Koppeln wenn möglich jetzt konservieren, damit in wenigen Wochen wieder Weidegras zur Verfügung steht. Wenn die Koppel in der Rotation bleiben soll, dann kann sie jetzt bei trockenem Wetter vorgemäht werden. Die Weidetiere nehmen dann das leicht angewelkte Gras ohne Selektion auf, und die Gräser kehren zum vegetativen Wachstum zurück. Die Futterqualität des Folgeaufwuchs wird damit gesichert.
 
-
-Wenn das Gras zu hoch über Blüte
-
-Vormähen. 
-
-Ausserdem: Das Graswachstum h... 
+### Gülledüngung
+Viel Graswachstum bedeutet auch hoher Nährstoffentzug aus dem Boden. Gleichzeitig ist jetzt gegenüber dem Hochsommer eine gute Düngerwirkung zu erwarten. Betriebe haben verschiedene Strategien entwickelt, um die Gülle auch auf Weideflächen bedarfsgerecht einzusetzen:
+- Verdünnnte, evtl. auch separierte Gülle, kann mit dem Schleppschlauchverteiler relativ flexibel 
 
 Gülle rasch, nicht zu hoch
 Tagsüber Waldrand oder Stall

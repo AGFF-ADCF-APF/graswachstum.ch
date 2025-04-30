@@ -26,7 +26,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,PXL_20240621_190355535_web.mp4,2023-04-19_Riedackerhof_Mist.mp4'
+media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,PXL_20240621_190355535_web.mp4'
 publish_date: '01-05-2025 10:33'
 published: false
 ---
@@ -37,18 +37,22 @@ published: false
 
 Ausserdem: Das Graswachstum h... 
 
+Gülle rasch, nicht zu hoch
+Tagsüber Waldrand oder Stall
+Portionen Abend+Morgen
+Kühe gut versorgt, genug Energie
+
+Ubersaaten weiterhin intensiv nutzen.
+
+
+
+
 ===
 
 
 [TOC]
 
 
-## Graswachstumsbericht Kalenderwoche 14
+## Graswachstumsbericht Kalenderwoche 18
 
-
-## Aufwuchshöhenmessung auf Kurzrasenweide
-Steinberger.2011
-[[svg-icon icon="pdf" /] Anleitung Grasaufwuchshöhenmessung](https://www.lfl.bayern.de/mam/cms07/ite/dateien/31061_anleitung_zur_grasaufwuchsmessung.pdf?class=button)
-## Fallbeispiel
-## Graswachstumsbericht Kalenderwoche 13
 

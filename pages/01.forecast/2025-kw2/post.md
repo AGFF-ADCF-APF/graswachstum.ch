@@ -49,11 +49,15 @@ In Lagen unter 700 m ü.M. haben die Leitgräser auf den meisten Naturwiesen jet
 
 Auf Weidekoppeln, wo die Tiere beim letzten Umtrieb aber gerade oberhalb des sich entwickelnden Blütenstandes abgebissen haben, schieben die Rispe jetzt aber umso schneller. Solche Koppeln wenn möglich jetzt konservieren, damit in wenigen Wochen wieder Weidegras zur Verfügung steht. Wenn die Koppel in der Rotation bleiben soll, dann kann sie jetzt bei trockenem Wetter vorgemäht werden. Die Weidetiere nehmen dann das leicht angewelkte Gras ohne Selektion auf, und die Gräser kehren zum vegetativen Wachstum zurück. Die Futterqualität des Folgeaufwuchs wird damit gesichert.
 
-### Gülledüngung
-Viel Graswachstum bedeutet auch hoher Nährstoffentzug aus dem Boden. Gleichzeitig ist jetzt gegenüber dem Hochsommer eine gute Düngerwirkung zu erwarten. Betriebe haben verschiedene Strategien entwickelt, um die Gülle auch auf Weideflächen bedarfsgerecht einzusetzen:
-- Verdünnnte, evtl. auch separierte Gülle, kann mit dem Schleppschlauchverteiler relativ flexibel 
+### Gülledüngung gut planen
+Viel Graswachstum bedeutet auch hoher Nährstoffentzug aus dem Boden. Gleichzeitig ist jetzt gegenüber dem Hochsommer eine bessere Düngerwirkung zu erwarten, speziell auch bei organischer Düngung. Betriebe haben verschiedene Strategien entwickelt, um Gülle auch auf Weideflächen bedarfsgerecht einzusetzen:
+- Normal verdünnte sollte auf Weideflächen innert weniger Tage nach dem Weidegang ausgebracht werden, damit die nachwachsenden Blätter nicht verschmutzt werden.  
+- Stark verdünnnte (2:1) oder separierte Gülle kann mit den bodennahen Ausbringmethoden relativ flexibel eingesetzt werden - grössere Weideflächen können so an einem Stück gedüngt werden.
+- Feuchte Witterung während und nach der Ausbringung kann die Wartezeit vor der nächsten Nutzung auf wenige Tage verkürzen.
 
-Gülle rasch, nicht zu hoch
+
+### Hitzeschutz für Weidetiere
+
 Tagsüber Waldrand oder Stall
 Portionen Abend+Morgen
 Kühe gut versorgt, genug Energie

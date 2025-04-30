@@ -26,14 +26,13 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-media_order: '2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,PXL_20240621_190355535_web.mp4'
 publish_date: '01-05-2025 10:33'
 published: false
 ---
 
 # Wachstumsspitze erreicht
 
-**Im Messnetzwerk der AGFF wurden Wachstumsraten von über 100kg TS/ha gemeldet - der Duchschnitt sinkt nun aber bereits wieder.** Eine Ursachensuche.
+**Im Messnetzwerk der AGFF werden Wachstumsraten von über 100kg TS/ha gemeldet - der Duchschnitt sinkt nun aber bereits wieder.** Eine Ursachensuche.
 
 ===
 
@@ -43,6 +42,13 @@ published: false
 
 ## Graswachstumsbericht Kalenderwoche 18
 
+
+
+
+
+Wenn das Gras zu hoch über Blüte
+
+Vormähen. 
 
 Ausserdem: Das Graswachstum h... 
 

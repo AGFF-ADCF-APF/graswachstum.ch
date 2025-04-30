@@ -1,5 +1,5 @@
 ---
-title: 'Woche 18 (07.04.-14.03.2025) (Copy)'
+title: 'Woche 18 (28.04.-06.05.2025)'
 date: '27-03-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true

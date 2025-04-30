@@ -27,7 +27,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 media_order: '2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg,2024-06-21_Riedackerhof_MobGrazing_MischungIGWeidemilch.jpg,2024-06-21_Riedackerhof_Mobgrazing_Tag-danach.jpg,PXL_20240621_190355535_web.mp4,2023-04-19_Riedackerhof_Mist.mp4'
-publish_date: '27-03-2025 08:00'
+publish_date: '08-05-2026 08:00'
 published: false
 ---
 

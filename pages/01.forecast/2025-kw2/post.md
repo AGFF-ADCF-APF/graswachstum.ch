@@ -31,9 +31,18 @@ publish_date: '01-05-2025 10:33'
 published: false
 ---
 
-# ...
+# Wachstumsspitze erreicht
 
-**Was bei ... Zukunft».**  Eine kleine Literaturübersicht und Erfahrungen des Autors.
+**Im Messnetzwerk der AGFF wurden Wachstumsraten von über 100kg TS/ha gemeldet - der Duchschnitt sinkt nun aber bereits wieder.** Eine Ursachensuche.
+
+===
+
+
+[TOC]
+
+
+## Graswachstumsbericht Kalenderwoche 18
+
 
 Ausserdem: Das Graswachstum h... 
 
@@ -44,15 +53,5 @@ Kühe gut versorgt, genug Energie
 
 Ubersaaten weiterhin intensiv nutzen.
 
-
-
-
-===
-
-
-[TOC]
-
-
-## Graswachstumsbericht Kalenderwoche 18
 
 

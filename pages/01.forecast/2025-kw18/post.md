@@ -10,8 +10,8 @@ hero:
     text: auto
     buttons:
         -
-            text: 'Artikel Schweizer Bauer (Abo)'
-            link: 'https://www.schweizerbauer.ch/pflanzen/futterbau/ist-dies-das-weidesystem-der-zukunft'
+            text: 'Artikel BauernZeitung'
+            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/weniger-verzehr-und-tiefere-naehrwerte-550344'
             classes: 'bg-primary text-white'
 taxonomy:
     category:
@@ -27,6 +27,7 @@ shortcode-citation:
     items: cited
     reorder_uncited: true
 publish_date: '02-05-2025 06:00'
+media_order: 'Sutter_2025-04-30_Vormaehen-2.jpeg,Sutter_2025-04-30_Vormaehen-3.jpeg,Sutter_2025-04-30_Vormaehen-1.jpeg'
 ---
 
 # Wachstumsspitze erreicht?

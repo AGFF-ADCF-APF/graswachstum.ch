@@ -6,7 +6,7 @@ hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
     image: Sutter_2025-04-30_Vormaehen-1.jpeg
-    image_alignment: object-top
+    image_alignment: object-center
     text: auto
     buttons:
         -

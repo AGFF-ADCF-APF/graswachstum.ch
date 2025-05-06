@@ -41,7 +41,7 @@ media_order: 'Sutter_2025-04-30_Vormaehen-2.jpeg,Sutter_2025-04-30_Vormaehen-3.j
 
 
 
-## Graswachstumsbericht Kalenderwoche 18
+### Graswachstumsbericht Kalenderwoche 18
 
 Der Regen ist in der ganzen Schweiz rechtzeitig gekommen, es ist angenehm warm – ideale Wachstumsbedingungen für das Gras. Die Weidebetriebe des Grasmessnetzwerkes melden ideale Bedingungen für die aktuelle Weidephase. Das gemessene Graswachstum liegt dennoch nur bei durchschnittlich 80kg TS/ha/Tag. Dies ist darauf zurückzuführen, dass die Weidefläche teilweise schon recht stark verkleinert wurde und Flächen wegkonserviert wurden. Weniger Blattmasse bedeutet in der Folge weniger Graswachstum. 
 

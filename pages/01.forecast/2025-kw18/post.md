@@ -5,8 +5,8 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: 2024-08-12_Riedackerhof_MobGrazing_Folgeaufwuchs.jpg
-    image_alignment: object-center
+    image: Sutter_2025-04-30_Vormaehen-1.jpeg
+    image_alignment: object-top
     text: auto
     buttons:
         -

@@ -46,6 +46,8 @@ Um die Bestockungskrise zu überbrücken, ist ein vorausschauendes Management �
 ### Graswachstumsbericht Kalenderwoche 22
 Nach der Wachstumsspitze folgt Ende Mai die Bestockungskrise. Im Grasmessnetz der AGFF wurden für die letzte Maiwoche verbreitet Wachstumsraten unter 70 kg TS/ha gemeldet. Dieser Rückgang ist in der Phase der Bestockungskrise normal: die Gräser bilden Ähren und Rispen, das Blattwachstum wird reduziert. Wenig Sonne und tiefere Temperaturen verstärken diesen Effekt. Für die kommende Woche ist mit einem ähnlichen Graswachstum zu rechnen. Deshalb sollten jetzt die Weideflächen vergrössert werden, um die Grashöhe im optimalen Bereich zu halten.
 
+[![](/uploads/archive/Graswachstumkarte_2025KW21.svg)](/growth)
+
 
 ### Die Weide gleicht einer riesigen Solaranlage
 Unsere Weiden lassen sich mit einer riesigen Solaranlage vergleichen: Je mehr Blätter vorhanden sind, desto mehr Sonnenlicht kann in Wachstum umgewandelt werden. Wird diese Blattmasse reduziert, sinkt die «Leistung» der Solaranlage. Das bedeutet weniger Wachstum. Der durchschnittliche Weidefuttervorrat (DWV bzw. AFC) ist vergleichbar mit der Motordrehzahl beim Traktor: Ist sie zu hoch, überdreht der Motor, das Gras wächst zu schnell. Ist sie zu tief, stirbt der Motor ab – das Graswachstum bricht ein.

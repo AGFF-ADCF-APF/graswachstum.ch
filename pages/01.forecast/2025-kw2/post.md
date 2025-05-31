@@ -31,7 +31,7 @@ media_order: 'Blattstadium und Ertrag.svg,Käch_2025_Pretopping.jpeg,Blattstadiu
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 ---
 
-# Mit dem Ähreschieben sinkt das Blattwachstum auf den Weiden
+# Mit dem Ähreschieben sinkt das Blattwachstum
 
 Ein hoher Weidedruck in den letzten Wochen zahlt sich jetzt mit einer höheren Grasqualität aus. Wenn hingegen viele Geilstellen vorhanden sind, sollte – bei trockenen Bedingungen – vorgemäht oder ein Säuberungsschnitt eingeplant werden.
 Um die Bestockungskrise zu überbrücken, ist ein vorausschauendes Management – wie beim Traktorfahren – wichtig. 

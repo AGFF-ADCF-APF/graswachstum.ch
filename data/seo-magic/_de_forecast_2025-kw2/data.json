@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast\/2025-kw2",
         "page_title": "Woche 22 (26.05.-01.06.2025)"
     },
-    "updated": 1748677482,
+    "updated": 1748677518,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 22 (26.05.-01.06.2025)",
         "grav-page-route": "\/forecast\/2025-kw2",
         "grav-page-rawroute": "\/forecast\/2025-kw2",
         "cache-control": "max-age=604800",
-        "expires": "Sat, 07 Jun 2025 07:44:42 GMT",
+        "expires": "Sat, 07 Jun 2025 07:45:18 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Sat, 31 May 2025 07:44:42 GMT",
+        "date": "Sat, 31 May 2025 07:45:18 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1748677482.2050549983978271484375,
-        "total_time": 0.2029090000000000060254023992456495761871337890625,
-        "namelookup_time": 0.000406000000000000002380040609040179333533160388469696044921875,
-        "connect_time": 0.00050799999999999998802346912185612382018007338047027587890625,
-        "pretransfer_time": 0.005913999999999999986066701040954285417683422565460205078125,
-        "starttransfer_time": 0.2023850000000000093347551910483161918818950653076171875,
+        "start_time": 1748677518.1899740695953369140625,
+        "total_time": 0.1873100000000000042721381987576023675501346588134765625,
+        "namelookup_time": 0.0003780000000000000265169830537814732451806776225566864013671875,
+        "connect_time": 0.0004620000000000000083162643438328132106107659637928009033203125,
+        "pretransfer_time": 0.00447000000000000001498801083243961329571902751922607421875,
+        "starttransfer_time": 0.186744999999999994333421682313201017677783966064453125,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 560,
         "request_size": 129,
         "redirect_count": 0,
-        "size_download": 11354,
-        "speed_download": 55956,
+        "size_download": 11401,
+        "speed_download": 60867,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 52672
+        "content_size": 52837
     },
     "content": {
         "body": "<h1>Mit dem &Auml;hreschieben sinkt das Blattwachstum auf den Weiden<\/h1>\n<p>Ein hoher Weidedruck in den letzten Wochen zahlt sich jetzt mit einer h&ouml;heren Grasqualit&auml;t aus. Wenn hingegen viele Geilstellen vorhanden sind, sollte &ndash; bei trockenen Bedingungen &ndash; vorgem&auml;ht oder ein S&auml;uberungsschnitt eingeplant werden.\nUm die Bestockungskrise zu &uuml;berbr&uuml;cken, ist ein vorausschauendes Management &ndash; wie beim Traktorfahren &ndash; wichtig. <\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 22\n                    <\/li>\n                    <li>\n            Die Weide gleicht einer riesigen Solaranlage\n                    <\/li>\n                    <li>\n            Neue Bl&auml;tter dank Reserven\n                    <\/li>\n                    <li>\n            Ein neues Blatt pro Woche\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n<h3>Graswachstumsbericht Kalenderwoche 22<\/h3>\n<p>Nach der Wachstumsspitze folgt Ende Mai die Bestockungskrise. Im Grasmessnetz der AGFF wurden f&uuml;r die letzte Maiwoche verbreitet Wachstumsraten unter 70 kg TS\/ha gemeldet. Dieser R&uuml;ckgang ist in der Phase der Bestockungskrise normal: die Gr&auml;ser bilden &Auml;hren und Rispen, das Blattwachstum wird reduziert. Wenig Sonne und tiefere Temperaturen verst&auml;rken diesen Effekt. F&uuml;r die kommende Woche ist mit einem &auml;hnlichen Graswachstum zu rechnen. Deshalb sollten jetzt die Weidefl&auml;chen vergr&ouml;ssert werden, um die Grash&ouml;he im optimalen Bereich zu halten.<\/p>\n<h3>Die Weide gleicht einer riesigen Solaranlage<\/h3>\n<p>Unsere Weiden lassen sich mit einer riesigen Solaranlage vergleichen: Je mehr Bl&auml;tter vorhanden sind, desto mehr Sonnenlicht kann in Wachstum umgewandelt werden. Wird diese Blattmasse reduziert, sinkt die &laquo;Leistung&raquo; der Solaranlage. Das bedeutet weniger Wachstum. Der durchschnittliche Weidefuttervorrat (DWV bzw. AFC) ist vergleichbar mit der Motordrehzahl beim Traktor: Ist sie zu hoch, &uuml;berdreht der Motor, das Gras w&auml;chst zu schnell. Ist sie zu tief, stirbt der Motor ab &ndash; das Graswachstum bricht ein.<\/p>\n<p>Wird der DWV zu stark abgesenkt (unter 550&#8239;kg TS\/ha), zum Beispiel weil viele Koppeln gleichzeitig abgeweidet oder gem&auml;ht wurden, sinkt das Wachstum rapide. Deshalb ist vorausschauendes Management gefragt &ndash; wie beim Traktorfahren: Bei starkem Wachstum im Fr&uuml;hling kann der DWV bewusst reduziert werden (ca. 550&#8239;kg TS\/ha). Fuss weg vom Gas vor der Einfahrt in einen abfallenden Strassenabschnitt. In Zeiten mit schwachem Wachstum (Sommer, Herbst, Trockenheit) sollte der DWV gezielt erh&ouml;ht werden, um Wachstum und Vorrat zu sichern. Drehzahl hoch vor dem Einfahren in einen steigenden Strassenabschnitt.<\/p>\n<h3>Neue Bl&auml;tter dank Reserven<\/h3>\n<p>Ein h&ouml;herer DWV bringt gleich zwei Vorteile:<\/p>\n<ul>\n<li>Es stehen mehr aktive Bl&auml;tter zur Verf&uuml;gung &ndash; das steigert das Wachstum.<\/li>\n<li>Es entsteht ein stehender Vorrat, mit dem in Trockenphasen die Weideaufnahme l&auml;nger hoch gehalten werden kann.<\/li>\n<\/ul>\n<p>Nach dem Abweiden oder M&auml;hen nutzt die Pflanze ihre Reserven in den Stoppeln dazu, neue Bl&auml;tter zu bilden. Vollst&auml;ndig aufgef&uuml;llt sind diese Reserven erst nach 2 &frac12; Bl&auml;ttern. Bei 250 kg TS\/ha hat das Gras etwa ein neues Blatt, bei 500 kg TS\/ha zwei Bl&auml;tter, beim dritten Blatt beginnt das Wachstum stark (exponentiell) zuzunehmen &ndash; dieses Blatt macht bis zu 50 Prozent des Ertrags aus.<\/p>\n<h3>Ein neues Blatt pro Woche<\/h3>\n<p>Bei guten Bedingungen bildet das Gras etwa ein neues Blatt pro Woche. Bei einer Umtriebsdauer von 21 Tagen entstehen so drei neue Bl&auml;tter &ndash; rund die H&auml;lfte des Ertrags entsteht in der dritten Woche.<\/p>\nBlattstadium%20und%20Ertrag\n<p>Wird eine Koppel zu fr&uuml;h &ndash; vor dem Dreiblattstadium oder 1200 bis 1400 kg TS\/ha nutzbares Gras &ndash; beweidet, wird das Wachstum stark gebremst. Es geht Ertrag verloren, und die Grasnarbe wird langfristig gesch&auml;digt. Einen Spezialfall bilden Best&auml;nde mit Rohrschwingel. Diese sollten bereits mit zirka 1000 kg TS\/ha bestossen werden, da die Tiere bei &uuml;ber 1200 kg TS\/ha nicht tief genug herunterfressen.<\/p>\n<p>Betriebe mit tiefem DWV sollten jetzt gegensteuern, indem sie die Weidefl&auml;che vergr&ouml;ssern und\/oder die Rotationsdauer durch Zuf&uuml;tterung verl&auml;ngern. Wichtig: Die Rotationsdauer darf nicht weiter verk&uuml;rzt werden, wenn das Gras knapp ist &ndash; sonst fehlt die Grundlage f&uuml;r neues Wachstum.<\/p>",
@@ -73,6 +73,12 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/assets\/typhoon\/Logo-Graswachstum-neu-2024-web.webp",
                 "alt": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.forecast\/2025-kw2\/K\u00e4ch_2025_Pretopping.jpeg?g-aaaf9dd6",
+                "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
@@ -190,7 +196,7 @@
                 "external": false,
                 "status": 200
             },
-            "https:\/\/www.bauernzeitung.ch\/dossier\/pflanzen\/weniger-verzehr-und-tiefere-naehrwerte-550344": {
+            "https:\/\/www.bauernzeitung.ch\/dossier\/pflanzen\/mit-dem-aehreschieben-sinkt-das-blattwachstum-auf-den-weiden-550792": {
                 "count": 1,
                 "target": "",
                 "rel": "",
@@ -486,14 +492,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Auf Weiden vegetatives Wachstum erhalten Graswachstumsbericht Kalenderwoche 22 Der Regen ist in der ga\u2026",
+            "description": "Bei 250 kg TS\/ha hat das Gras etwa ein neues Blatt, bei 500 kg TS\/ha zwei Bl\u00e4tter, beim dritten Blatt beginnt das Wachstum stark (exponentiell) zuzunehmen - d\u2026",
             "title": "Woche 22 (26.05.-01.06.2025) | graswachstum.ch",
-            "keywords": "vegetatives,wachstum,kalenderwoche,weiden,erhalten,graswachstumsbericht,ideale,bedingungen,regen,melden,",
+            "keywords": "neues,blatt,neue,bl\u00e4tter,ts\/ha,wachstum,woche,gras,dank,stark,",
             "image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2",
             "og:site_name": "graswachstum.ch",
             "og:title": "Woche 22 (26.05.-01.06.2025) | graswachstum.ch",
-            "og:description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Auf Weiden vegetatives Wachstum erhalten Graswachstumsbericht Kalenderwoche 22 Der Regen ist in der ga\u2026",
+            "og:description": "Bei 250 kg TS\/ha hat das Gras etwa ein neues Blatt, bei 500 kg TS\/ha zwei Bl\u00e4tter, beim dritten Blatt beginnt das Wachstum stark (exponentiell) zuzunehmen - d\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -501,11 +507,11 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Woche 22 (26.05.-01.06.2025) | graswachstum.ch",
-            "twitter:description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Auf Weiden vegetatives Wachstum erhalten Graswachstumsbericht Kalenderwoche 22 Der Regen ist in der ga\u2026",
+            "twitter:description": "Bei 250 kg TS\/ha hat das Gras etwa ein neues Blatt, bei 500 kg TS\/ha zwei Bl\u00e4tter, beim dritten Blatt beginnt das Wachstum stark (exponentiell) zuzunehmen - d\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\/seomagic-image.jpg",
             "twitter:image:alt": "Woche 22 (26.05.-01.06.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten"
+            "twitter:data1": "2 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2",
@@ -715,5 +721,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Apr 25 15:39:12 2025 GMT\n*  expire date: Jul 24 15:39:11 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* old SSL session ID is stale, removing\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw2]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw2 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 22 (26.05.-01.06.2025)\r\n< grav-page-route: \/forecast\/2025-kw2\r\n< grav-page-rawroute: \/forecast\/2025-kw2\r\n< cache-control: max-age=604800\r\n< expires: Sat, 07 Jun 2025 07:44:42 GMT\r\n* Added cookie grav-site-23a95d8=\"f4ed7a34272583c50803b740bf764e94\" for domain graswachstum.ch, path \/, expire 1748679282\n< set-cookie: grav-site-23a95d8=f4ed7a34272583c50803b740bf764e94; expires=Sat, 31-May-2025 08:14:42 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Sat, 31 May 2025 07:44:42 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Apr 25 15:39:12 2025 GMT\n*  expire date: Jul 24 15:39:11 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw2\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw2]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw2 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 22 (26.05.-01.06.2025)\r\n< grav-page-route: \/forecast\/2025-kw2\r\n< grav-page-rawroute: \/forecast\/2025-kw2\r\n< cache-control: max-age=604800\r\n< expires: Sat, 07 Jun 2025 07:45:18 GMT\r\n* Added cookie grav-site-23a95d8=\"39b1cbb88ac3c4ef7242a4f0b5991608\" for domain graswachstum.ch, path \/, expire 1748679318\n< set-cookie: grav-site-23a95d8=39b1cbb88ac3c4ef7242a4f0b5991608; expires=Sat, 31-May-2025 08:15:18 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Sat, 31 May 2025 07:45:18 GMT\r\n< server: Apache\r\n< \r\n"
 }

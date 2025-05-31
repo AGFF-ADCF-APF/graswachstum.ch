@@ -29,6 +29,8 @@ shortcode-citation:
 publish_date: '30-05-2025 06:00'
 media_order: 'Blattstadium und Ertrag.svg,Käch_2025_Pretopping.jpeg,Blattstadium-und-Ertrag.webp'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
+aura:
+    author: mani
 ---
 
 # Mit dem Ähreschieben sinkt das Blattwachstum
@@ -71,3 +73,6 @@ Wird eine Koppel zu früh – vor dem Dreiblattstadium oder 1200 bis 1400 kg TS/
 
 Betriebe mit tiefem DWV sollten jetzt gegensteuern, indem sie die Weidefläche vergrössern und/oder die Rotationsdauer durch Zufütterung verlängern. Wichtig: Die Rotationsdauer darf nicht weiter verkürzt werden, wenn das Gras knapp ist – sonst fehlt die Grundlage für neues Wachstum.
 
+Autoren: 
+Martin Zbinden, INFORAMA
+Michael Sutter

@@ -63,7 +63,7 @@ Nach dem Abweiden oder Mähen nutzt die Pflanze ihre Reserven in den Stoppeln da
 ### Ein neues Blatt pro Woche
 Bei guten Bedingungen bildet das Gras etwa ein neues Blatt pro Woche. Bei einer Umtriebsdauer von 21 Tagen entstehen so drei neue Blätter – rund die Hälfte des Ertrags entsteht in der dritten Woche.
 
-![Blattstadium%20und%20Ertrag](Blattstadium%20und%20Ertrag.svg "Blattstadium%20und%20Ertrag")
+![Blattstadium%20und%20Ertrag](Blattstadium%20und%20Ertrag.svg?lightbox "Blattstadium%20und%20Ertrag")
 
 Wird eine Koppel zu früh – vor dem Dreiblattstadium oder 1200 bis 1400 kg TS/ha nutzbares Gras – beweidet, wird das Wachstum stark gebremst. Es geht Ertrag verloren, und die Grasnarbe wird langfristig geschädigt. Einen Spezialfall bilden Bestände mit Rohrschwingel. Diese sollten bereits mit zirka 1000 kg TS/ha bestossen werden, da die Tiere bei über 1200 kg TS/ha nicht tief genug herunterfressen.
 

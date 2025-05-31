@@ -5,13 +5,13 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: Sutter_2025-04-30_Vormaehen-1.jpeg
+    image: Käch_2025_Pretopping.jpeg
     image_alignment: object-center
     text: auto
     buttons:
         -
             text: 'Artikel BauernZeitung'
-            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/weniger-verzehr-und-tiefere-naehrwerte-550344'
+            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/mit-dem-aehreschieben-sinkt-das-blattwachstum-auf-den-weiden-550792'
             classes: 'bg-primary text-white'
 taxonomy:
     category:

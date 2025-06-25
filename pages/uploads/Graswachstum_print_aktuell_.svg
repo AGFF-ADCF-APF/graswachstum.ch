@@ -107,20 +107,23 @@
 <circle cx='499.11' cy='149.42' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <circle cx='193.88' cy='236.59' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <circle cx='197.52' cy='189.81' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
+<circle cx='374.10' cy='180.30' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <circle cx='198.59' cy='286.79' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <circle cx='190.87' cy='309.13' r='9.60' style='stroke-width: 2.13; fill: #FFFFFF;' />
 <text x='275.89' y='157.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>37</text>
 <text x='499.11' y='152.99' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>65</text>
 <text x='193.88' y='240.16' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>55</text>
 <text x='197.52' y='193.38' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>70</text>
+<text x='374.10' y='183.86' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>38</text>
 <text x='198.59' y='290.35' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>85</text>
 <text x='190.87' y='312.70' text-anchor='middle' style='font-size: 9.96px; font-weight: bold; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>45</text>
-<text x='309.08' y='157.55' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.30px' lengthAdjust='spacingAndGlyphs'>Bretzwil</text>
-<text x='526.48' y='153.38' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='30.64px' lengthAdjust='spacingAndGlyphs'>Flawil</text>
-<text x='232.53' y='240.54' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='53.34px' lengthAdjust='spacingAndGlyphs'>Gampelen</text>
-<text x='244.72' y='193.76' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='70.53px' lengthAdjust='spacingAndGlyphs'>Les Reusilles</text>
-<text x='231.78' y='279.96' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.31px' lengthAdjust='spacingAndGlyphs'>Posieux</text>
-<text x='221.62' y='324.44' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='37.41px' lengthAdjust='spacingAndGlyphs'>Sorens</text>
+<text x='309.13' y='157.54' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.30px' lengthAdjust='spacingAndGlyphs'>Bretzwil</text>
+<text x='526.57' y='153.38' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='30.64px' lengthAdjust='spacingAndGlyphs'>Flawil</text>
+<text x='232.60' y='240.57' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='53.34px' lengthAdjust='spacingAndGlyphs'>Gampelen</text>
+<text x='244.83' y='193.78' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='70.53px' lengthAdjust='spacingAndGlyphs'>Les Reusilles</text>
+<text x='407.47' y='184.18' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.48px' lengthAdjust='spacingAndGlyphs'>Muri AG</text>
+<text x='227.69' y='275.35' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='42.31px' lengthAdjust='spacingAndGlyphs'>Posieux</text>
+<text x='220.04' y='328.44' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; font-family: "Arial";' textLength='37.41px' lengthAdjust='spacingAndGlyphs'>Sorens</text>
 </g>
 <g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NDAuMDA=)'>
 <text x='0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000016' y='41.28' style='font-size: 11.00px; font-family: "Arial";' textLength='294.00px' lengthAdjust='spacingAndGlyphs'>Zuwachs in kg TS/ha/Tag, Quelle: AGFF-Grasmessnetzwerk</text>

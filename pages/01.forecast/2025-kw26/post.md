@@ -33,7 +33,7 @@ published: true
 media_order: Trockenheitsprognose_2025-06-24.png
 ---
 
-# Trockenstress für Wiesen und Weiden
+# Trockenstress in den Voralpen
 
 In der jetzigen Phase ist ein haushälterischer Umgang mit den Grasreserven wichtig. Wo es in den letzten 3 Wochen nicht geregnet hat, hat das Graswachstum deutlich abgenommen und die Wiesenpflanzen zeigen zunehmend Stressanzeichen. Die [nationale Trockenheitsplattform](https://www.trockenheit.admin.ch/) des Bundes zeigt eine grobe Übersicht über die Situation.
 

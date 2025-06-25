@@ -58,23 +58,24 @@ Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und N
 ### Gestresste Wiesen schonen
 Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:
 * Boden ohne schattenspendende Vegetationsdecke heizt sich stärker auf (50 bis 60°C an der Oberfläche).
-* Gute Futtergräser können gehen zurück, die Grasnarbe wird lückiger.
-* Der heisse Boden begünstigt die Keimung und die Etablierung von unerwünschten Hirsearten.
+* Der heisse Boden begünstigt die Keimung und die Etablierung von unerwünschten Hirsearten. 
+* Gute Futtergräser nehmen Schaden, die Grasnarbe wird lückiger. 
+* Lückenfüller wie Hirtentäschelkraut, Gemeines Rispengras oder Löwenzahn nehmen zu.
 * Feldmaikäfer legen ihre Eier bevorzugt an lückigen und gräserarmen Stellen ab.
-* usw.
-
+* Engerlinge und andere negative Einflüsse verschlechtern den Wiesenzustand weiter.
 
 Diese Abwärtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:
 - Schnittnutzung vor dem Trockenstress, oder kurz vor dessen Ende, damit der gute Nachwuchs nach dem Schneiden sichergestellt ist.
-- Kein vorzeitige Nutzung: Weide vor dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition)[AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
+- Kein vorzeitige Nutzung: Weide vor dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition),  [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
 - Wenn eine Schnittnutzung angezeigt ist, besonders auf eine hohe Schnitthöhe (>8cm) achten.
+- Grasnarbe nicht mit schweren Überfahrten oder Güllegaben bei heissen Bedingungen schädigen. 
 
 Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 
 
 
 
 ### Intensität anpassen
-Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte eine weitere Nutzung bereits vor der anhaltenden Hitzephase vorgenommen werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass eine minimale Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist ein Anstieg des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden. 
+Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. Während einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass die angestrebte Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist eine Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden. 
 
 
 Autoren: 

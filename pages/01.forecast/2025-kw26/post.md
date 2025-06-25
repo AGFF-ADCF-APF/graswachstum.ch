@@ -50,7 +50,7 @@ Gerade in den nördlichen Voralpen sind die Bedingungen derzeit aber zu trocken 
 ![Trockenheitsprognose_2025-06-24](Trockenheitsprognose_2025-06-24.png "Quelle: https://www.trockenheit.admin.ch/de, aufgerufen am 25. Juni 2025")
 
 Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der [nationalen Trockenheitsplattform (www.trockenheit.admin.ch)](https://www.trockenheit.admin.ch/)  für diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Grössen zusammen. Ein hoher CDI-Wert deutet auf ein für diese Saison ungewöhnlich hohes Wasserdefizit hin. 
-Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein, oder sterben im Extremfall bei zu viel Stress ganz ab.
+Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
 
 
 ### Gestresste Wiesen schonen
@@ -73,7 +73,6 @@ Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/e
 
 
 ### Intensität reduzieren
-Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. Während einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass die angestrebte Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist eine Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden. 
 
 
 Autoren: 

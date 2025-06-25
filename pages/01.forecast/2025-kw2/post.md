@@ -31,6 +31,7 @@ media_order: 'Blattstadium und Ertrag.svg,Käch_2025_Pretopping.jpeg,Blattstadiu
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
+published: false
 ---
 
 # Trockenstress für Wiesen und Weiden

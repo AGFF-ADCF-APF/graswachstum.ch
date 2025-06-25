@@ -68,7 +68,7 @@ Diese Abwärtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:
 - Wenn eine Schnittnutzung angezeigt ist, besonders auf eine hohe Schnitthöhe (>8cm) achten.
 - Grasnarbe nicht mit schweren Überfahrten oder Güllegaben bei heissen Bedingungen schädigen. 
 
-Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 
+Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 
 
 
 

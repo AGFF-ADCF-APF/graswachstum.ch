@@ -44,21 +44,18 @@ In der jetzigen Phase ist ein haushälterischer Umgang mit den Grasreserven wich
 ===
 
 ### Graswachstumsbericht Kalenderwoche 26
-Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  Rückgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen über dem Optimalbereich von 15 bis 25° C liegt. Weil es vielerorts zu Gewitter-Ereignissen kam, ist die Wasserversorgung im Grasland derzeit an den meisten Orten noch gewährleistet. Standortfaktoren wie Exposition und Wasserspeichervermögen der Böden und bewirtschaftungsbedingte Einflüsse dominieren derzeit das Wachstumsgeschehen.
+Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  Rückgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen über dem Optimalbereich von 15 bis 25° C liegt. Wo es in den letzten Wochen ergiebige Gewitter-Ereignisse gab, ist die Wasserversorgung im Grasland derzeit noch gewährleistet. Standortfaktoren wie Exposition und Wasserspeichervermögen der Böden und bewirtschaftungsbedingte Einflüsse dominieren dort derzeit das Wachstumsgeschehen. 
 
 [![](/uploads/archive/Graswachstumkarte_2025KW26.svg)](/growth)
 
 ### Trockenheit: aktuelle Situation
-Bei Trockenheit können die Pflanzen nur noch erschwert
+Gerade in den nördlichen Voralpen sind die Bedingungen aber zu trocken für das Graswachstum.  Greyerzland, Berner Oberland, Emmental, Zentralschweiz und der Alpstein - dieses Band quer über die Schweiz hat in den letzten 3 Wochen keinen  Niederschlag erhalten. Gleichzeitig sorgen hohe Temperaturen um 30°C und teilweise die Bise für eine starke Verdunstung. 
 
-Zusammenspiel von Niederschlag, Wasserspeichervermögen
-
-ein  gemessen, indem die Faktoren  
-Derzeit weist die Trocken
+Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der [nationalen Trockenheitsplattform (www.trockenheit.admin.ch)](https://www.trockenheit.admin.ch/)  für diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Grössen zusammen. Ein hoher CDI-Wert deutet auf ein für diese Saison ungewöhnlich hohes Wasserdefizit hin. 
+Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein, oder sterben im Extremfall bei zu viel Stress ganz ab.
 
 
-
+### 
 
 Autoren: 
 Martin Zbinden, INFORAMA
-Michael Sutter

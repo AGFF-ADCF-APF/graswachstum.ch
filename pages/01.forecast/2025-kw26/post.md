@@ -1,6 +1,6 @@
 ---
 title: 'Woche 26 (23.06.-29.06.2025)'
-date: '30-05-2025 06:00'
+date: '27-06-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -11,7 +11,6 @@ hero:
     buttons:
         -
             text: 'Artikel BauernZeitung'
-            link: null
             classes: 'bg-primary text-white'
 taxonomy:
     category:
@@ -26,11 +25,11 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-publish_date: '30-05-2025 06:00'
+publish_date: '27-06-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-published: false
+published: true
 media_order: Trockenheitsprognose_2025-06-24.png
 ---
 

@@ -8,10 +8,6 @@ hero:
     image: Trockenheitsprognose_2025-06-24.png
     image_alignment: object-center
     text: auto
-    buttons:
-        -
-            text: 'Artikel BauernZeitung'
-            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

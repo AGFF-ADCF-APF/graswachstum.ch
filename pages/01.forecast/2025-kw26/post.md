@@ -11,7 +11,7 @@ hero:
     buttons:
         -
             text: 'Artikel BauernZeitung'
-            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/mit-dem-aehreschieben-sinkt-das-blattwachstum-auf-den-weiden-550792'
+            link: null
             classes: 'bg-primary text-white'
 taxonomy:
     category:

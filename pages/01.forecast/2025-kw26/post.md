@@ -77,7 +77,6 @@ Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/e
 ### Intensität anpassen
 Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte eine weitere Nutzung bereits vor der anhaltenden Hitzephase vorgenommen werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass eine minimale Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist ein Anstieg des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden. 
 
-Es wird einmal mehr sichtbar, wie wichtig
 
 Autoren: 
 Martin Zbinden, INFORAMA

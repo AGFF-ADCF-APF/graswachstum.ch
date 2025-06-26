@@ -26,7 +26,7 @@ author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
 published: true
-media_order: Trockenheitsprognose_2025-06-24.png
+media_order: 'Trockenheitsprognose_2025-06-24.png,Gerber_2025-06-25_Trockene-Wiese.jpeg'
 ---
 
 # Trockenstress in den Voralpen
@@ -53,6 +53,8 @@ Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CD
 Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
 
 
+![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Diese Wiese zeigt Anzeichen von Trocken- und Hitzestress. (Bild: O. Gerber)")
+
 ### Gestresste Wiesen schonen
 Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:
 * Boden ohne schattenspendende Vegetationsdecke heizt sich stärker auf (50 bis 60°C an der Oberfläche).
@@ -73,7 +75,7 @@ Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/e
 
 
 ### Intensität reduzieren
-
+Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. Während einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass die angestrebte Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist eine rasche Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden.
 
 Autoren: 
 Martin Zbinden, INFORAMA

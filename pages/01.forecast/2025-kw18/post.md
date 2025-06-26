@@ -50,6 +50,8 @@ In Lagen unter 700 m ü.M. haben die Leitgräser auf den meisten Naturwiesen jet
 
 Auf Weidekoppeln, wo die Tiere die Gräser gerade oberhalb des sich entwickelnden Blütenstandes abgebissen haben, schieben die Rispen von Englisch Raigras, Rohrschwingel und anderen Gräsern unvermindert weiter. Solche Koppeln wenn möglich jetzt wegkonservieren, damit in wenigen Wochen wieder Weidegras zur Verfügung steht. Wenn die Koppel in der Rotation bleiben soll, dann kann sie jetzt bei trockenem Wetter vorgemäht werden. Die Weidetiere nehmen dann das leicht angewelkte Gras ohne Selektion auf, und die Gräser kehren zum vegetativen Wachstum zurück. Die Futterqualität des Folgeaufwuchs wird damit gesichert.
 
+![Sutter_2025-04-30_Vormaehen-1](Sutter_2025-04-30_Vormaehen-1.jpeg?lightbox "Sutter_2025-04-30_Vormaehen-1")
+
 ### Gülledüngung gut planen
 Viel Graswachstum bedeutet auch hoher Nährstoffentzug aus dem Boden. Gleichzeitig ist jetzt gegenüber dem Hochsommer eine bessere Düngerwirkung zu erwarten, speziell auch bei organischer Düngung. Betriebe haben verschiedene Strategien entwickelt, um Gülle auch auf Weideflächen bedarfsgerecht einzusetzen:
 - Normal verdünnte sollte auf Weideflächen innert weniger Tage nach dem Weidegang ausgebracht werden, damit die nachwachsenden Blätter nicht verschmutzt werden.  

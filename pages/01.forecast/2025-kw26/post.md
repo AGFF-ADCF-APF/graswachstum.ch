@@ -53,7 +53,7 @@ Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CD
 Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
 
 
-![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox&cropResize=600,400 "Jura bernois, letzter Regen 15mm am 15. Juni. Jetzt wird es sehr schnell trocken. (Bild: O. Gerber)")
+![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Jura bernois, letzter Regen 15mm am 15. Juni. Jetzt wird es sehr schnell trocken. (Bild: O. Gerber)")
 
 ### Gestresste Wiesen schonen
 Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:

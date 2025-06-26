@@ -64,8 +64,8 @@ Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige
 
 Diese Abwärtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:
 - Schnittnutzung vor dem Trockenstress, oder kurz vor dessen Ende, damit der gute Nachwuchs nach dem Schneiden sichergestellt ist.
-- Kein vorzeitige Nutzung: Weide vor dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition),  [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
-- Wenn eine Schnittnutzung angezeigt ist, besonders auf eine hohe Schnitthöhe (>8cm) achten.
+- Kein vorzeitige Nutzung : Weidegang ab dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage ab 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition),  [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
+- Wenn eine Schnittnutzung angezeigt ist, auf eine hohe Schnitthöhe (>8cm) achten.
 - Grasnarbe nicht mit schweren Überfahrten oder Güllegaben bei heissen Bedingungen schädigen. 
 
 Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 

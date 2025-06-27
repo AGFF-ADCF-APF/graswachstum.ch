@@ -8,6 +8,10 @@ hero:
     image: Trockenheitsprognose_2025-06-24.png
     image_alignment: object-center
     text: auto
+    buttons:
+        -
+            text: 'Artikel BauernZeitung'
+            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/hohe-temperaturen-setzen-die-weide-unter-stress-551331'
 taxonomy:
     category:
         - blog

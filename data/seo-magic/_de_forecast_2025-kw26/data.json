@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast\/2025-kw26",
         "page_title": "Woche 26 (23.06.-29.06.2025)"
     },
-    "updated": 1750916019,
+    "updated": 1751001701,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Woche 26 (23.06.-29.06.2025)",
         "grav-page-route": "\/forecast\/2025-kw26",
         "grav-page-rawroute": "\/forecast\/2025-kw26",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 03 Jul 2025 05:33:39 GMT",
+        "expires": "Fri, 04 Jul 2025 05:21:41 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 26 Jun 2025 05:33:39 GMT",
+        "date": "Fri, 27 Jun 2025 05:21:40 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1750916019.4869520664215087890625,
-        "total_time": 0.2769909999999999872244416110333986580371856689453125,
-        "namelookup_time": 0.0004409999999999999857613897091823673690669238567352294921875,
-        "connect_time": 0.000537000000000000042403580646777072615805082023143768310546875,
-        "pretransfer_time": 0.005590999999999999615918344630927094840444624423980712890625,
-        "starttransfer_time": 0.2764670000000000182893700184649787843227386474609375,
+        "start_time": 1751001700.87154293060302734375,
+        "total_time": 0.4038880000000000247695197685970924794673919677734375,
+        "namelookup_time": 0.01944099999999999994759747323769261129200458526611328125,
+        "connect_time": 0.01955099999999999893507407477954984642565250396728515625,
+        "pretransfer_time": 0.0265600000000000002753353101070388220250606536865234375,
+        "starttransfer_time": 0.40334999999999998632205233661807142198085784912109375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 562,
         "request_size": 130,
         "redirect_count": 0,
-        "size_download": 12143,
-        "speed_download": 43838,
+        "size_download": 12302,
+        "speed_download": 30458,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 54932
+        "content_size": 55524
     },
     "content": {
         "body": "<h1>Trockenstress in den Voralpen<\/h1>\n<p>In der jetzigen Phase ist ein haush&auml;lterischer Umgang mit den Grasreserven wichtig. Wo es in den letzten 3 Wochen nicht geregnet hat, hat das Graswachstum deutlich abgenommen und die Wiesenpflanzen zeigen zunehmend Stressanzeichen. Die nationale Trockenheitsplattform des Bundes zeigt eine grobe &Uuml;bersicht &uuml;ber die Situation.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 26\n                    <\/li>\n                    <li>\n            Trockenheit: aktuelle Situation\n                    <\/li>\n                    <li>\n            Gestresste Wiesen schonen\n                    <\/li>\n                    <li>\n            Intensit&auml;t reduzieren\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n<h3>Graswachstumsbericht Kalenderwoche 26<\/h3>\n<p>Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  R&uuml;ckgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen &uuml;ber dem Optimalbereich von 15 bis 25&deg; C liegt. Wo es in den letzten Wochen ergiebige Gewitter-Ereignisse gab, ist die Wasserversorgung im Grasland derzeit noch gew&auml;hrleistet. Standortfaktoren wie Exposition und Wasserspeicherverm&ouml;gen der B&ouml;den und bewirtschaftungsbedingte Einfl&uuml;sse dominieren dort derzeit das Wachstumsgeschehen. <\/p>\n<p>\n  \n<\/p>\n<h3>Trockenheit: aktuelle Situation<\/h3>\n<p>Gerade in den n&ouml;rdlichen Voralpen sind die Bedingungen derzeit aber zu trocken f&uuml;r das Graswachstum.  Greyerzland, Berner Oberland, Emmental, Zentralschweiz und der Alpstein - dieses Band quer &uuml;ber die Schweiz hat in den letzten 3 Wochen kaum Niederschlag erhalten. Gleichzeitig sorgen hohe Temperaturen um 30&deg;C und teilweise die Bise f&uuml;r eine starke Verdunstung. <\/p>\nQuelle: https:\/\/www.trockenheit.admin.ch\/de, aufgerufen am 25. Juni 2025\n<p>Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der nationalen Trockenheitsplattform (www.trockenheit.admin.ch)  f&uuml;r diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Gr&ouml;ssen zusammen. Ein hoher CDI-Wert deutet auf ein f&uuml;r diese Saison ungew&ouml;hnlich hohes Wasserdefizit hin.\nF&uuml;r den Sektor Landwirtschaft d&uuml;rften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. F&uuml;r den einzelnen Betrieb fliessen f&uuml;r die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Bl&auml;tter ein oder sterben im Extremfall bei zu viel Stress ganz ab.<\/p>\nJura bernois, letzter Regen 15mm am 15. Juni. Jetzt wird es sehr schnell trocken. (Bild: O. Gerber)\n<h3>Gestresste Wiesen schonen<\/h3>\n<p>Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. &Uuml;bernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:<\/p>\n<ul>\n<li>Boden ohne schattenspendende Vegetationsdecke heizt sich st&auml;rker auf (50 bis 60&deg;C an der Oberfl&auml;che).<\/li>\n<li>Der heisse Boden beg&uuml;nstigt die Keimung und die Etablierung von unerw&uuml;nschten Hirsearten. <\/li>\n<li>Gute Futtergr&auml;ser nehmen Schaden, die Grasnarbe wird l&uuml;ckiger. <\/li>\n<li>L&uuml;ckenf&uuml;ller wie Hirtent&auml;schelkraut, Gemeines Rispengras oder L&ouml;wenzahn nehmen zu.<\/li>\n<li>Feldmaik&auml;fer legen ihre Eier bevorzugt an l&uuml;ckigen und gr&auml;serarmen Stellen ab.<\/li>\n<li>Engerlinge und andere negative Einfl&uuml;sse verschlechtern den Wiesenzustand weiter.<\/li>\n<\/ul>\n<p>Diese Abw&auml;rtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:<\/p>\n<ul>\n<li>Schnittnutzung vor dem Trockenstress, oder kurz vor dessen Ende, damit der gute Nachwuchs nach dem Schneiden sichergestellt ist.<\/li>\n<li>Kein vorzeitige Nutzung : Weidegang ab dem 3-Blatt-Stadium der Leitgr&auml;ser oder ab ca. 15cm Wuchsh&ouml;he, Schnitt ab Stadium 2 bzw. je nach Lage ab 4 bis 6 Wochen. (eAGFF - Entwicklungsstadien der Gr&auml;ser,  AGFF Merkblatt 3<\/li>\n<li>Wenn eine Schnittnutzung angezeigt ist, auf eine hohe Schnitth&ouml;he (&gt;8cm) achten.<\/li>\n<li>Grasnarbe nicht mit schweren &Uuml;berfahrten oder G&uuml;llegaben bei heissen Bedingungen sch&auml;digen. <\/li>\n<\/ul>\n<p>Nicht jeder Wiesentyp reagiert gleich empfindlich auf St&ouml;rungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-M&auml;hweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gr&auml;sern k&ouml;nnen hingegen rasch degradieren, wenn Nutzung und D&uuml;ngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. <\/p>\n<h3>Intensit&auml;t reduzieren<\/h3>\n<p>Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. W&auml;hrend einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefl&auml;che jetzt zu vergr&ouml;ssern und die Rotationsdauer zu verl&auml;ngern, so dass die angestrebte Eintriebsh&ouml;he eingehalten werden kann. Notfalls soll im Stall zugef&uuml;ttert werden. Sobald das Wasserdefizit in den B&ouml;den wieder aufgef&uuml;llt wird und die Temperaturen nicht zu heiss sind, ist eine rasche Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann m&ouml;glich werden.<\/p>\n<p>Autoren:\nMartin Zbinden, INFORAMA<\/p>",
@@ -206,6 +206,14 @@
                 "rel": "",
                 "text": "wachstumsbericht",
                 "external": false,
+                "status": 200
+            },
+            "https:\/\/www.bauernzeitung.ch\/dossier\/pflanzen\/hohe-temperaturen-setzen-die-weide-unter-stress-551331": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Artikel BauernZeitung",
+                "external": true,
                 "status": 200
             },
             "https:\/\/www.trockenheit.admin.ch\/": {
@@ -773,5 +781,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Jun 23 22:44:17 2025 GMT\n*  expire date: Sep 21 22:44:16 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw26\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw26]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw26 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 26 (23.06.-29.06.2025)\r\n< grav-page-route: \/forecast\/2025-kw26\r\n< grav-page-rawroute: \/forecast\/2025-kw26\r\n< cache-control: max-age=604800\r\n< expires: Thu, 03 Jul 2025 05:33:39 GMT\r\n* Added cookie grav-site-23a95d8=\"9d506ae49995ac390a11e3fb0772f32e\" for domain graswachstum.ch, path \/, expire 1750917819\n< set-cookie: grav-site-23a95d8=9d506ae49995ac390a11e3fb0772f32e; expires=Thu, 26-Jun-2025 06:03:39 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 26 Jun 2025 05:33:39 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Jun 23 22:44:17 2025 GMT\n*  expire date: Sep 21 22:44:16 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R10\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw26\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw26]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw26 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Woche 26 (23.06.-29.06.2025)\r\n< grav-page-route: \/forecast\/2025-kw26\r\n< grav-page-rawroute: \/forecast\/2025-kw26\r\n< cache-control: max-age=604800\r\n< expires: Fri, 04 Jul 2025 05:21:41 GMT\r\n* Added cookie grav-site-23a95d8=\"063b3c9ed3d79cd150bda272f62403ef\" for domain graswachstum.ch, path \/, expire 1751003501\n< set-cookie: grav-site-23a95d8=063b3c9ed3d79cd150bda272f62403ef; expires=Fri, 27-Jun-2025 05:51:40 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 27 Jun 2025 05:21:40 GMT\r\n< server: Apache\r\n< \r\n"
 }

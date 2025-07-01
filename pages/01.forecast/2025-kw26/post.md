@@ -12,6 +12,7 @@ hero:
         -
             text: 'Artikel BauernZeitung'
             link: 'https://www.bauernzeitung.ch/dossier/pflanzen/hohe-temperaturen-setzen-die-weide-unter-stress-551331'
+            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog

@@ -29,7 +29,7 @@ media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Graswachstumskurven-m
 published: true
 ---
 
-# WIE WASSER ZU MILCH WIRD
+# Wie Wasser zu Milch wird
 
 Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Zuwachsraten von 80 kg TS/ha/Tag und mehr werden im Graswachstum-Messnetz der AGFF registriert. Wie wichtig eine ausreichende Wasserversorgung für Wiesen ist, wird in Gampelen BE deutlich.
 

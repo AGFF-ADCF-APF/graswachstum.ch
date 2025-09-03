@@ -8,11 +8,6 @@ hero:
     image: Trockenheitsprognose_2025-06-24.png
     image_alignment: object-center
     text: auto
-    buttons:
-        -
-            text: 'Artikel BauernZeitung'
-            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/hohe-temperaturen-setzen-die-weide-unter-stress-551331'
-            classes: 'bg-primary text-white'
 taxonomy:
     category:
         - blog
@@ -30,56 +25,66 @@ publish_date: '27-06-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-media_order: 'Trockenheitsprognose_2025-06-24.png,Gerber_2025-06-25_Trockene-Wiese.jpeg'
+media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg'
 ---
 
-# Trockenstress in den Voralpen
+# WIE WASSER ZU MILCH WIRD
 
-In der jetzigen Phase ist ein haushälterischer Umgang mit den Grasreserven wichtig. Wo es in den letzten 3 Wochen nicht geregnet hat, hat das Graswachstum deutlich abgenommen und die Wiesenpflanzen zeigen zunehmend Stressanzeichen. Die [nationale Trockenheitsplattform](https://www.trockenheit.admin.ch/) des Bundes zeigt eine grobe Übersicht über die Situation.
-
+Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Zuwachsraten von 80 kg TS/ha/Tag und mehr werden im Graswachstum-Messnetz der AGFF registriert. Wie wichtig eine ausreichende Wasserversorgung für Wiesen ist, wird in Gampelen BE deutlich.
 
 
 [TOC]
 
 ===
 
-### Graswachstumsbericht Kalenderwoche 26
-Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  Rückgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen über dem Optimalbereich von 15 bis 25° C liegt. Wo es in den letzten Wochen ergiebige Gewitter-Ereignisse gab, ist die Wasserversorgung im Grasland derzeit noch gewährleistet. Standortfaktoren wie Exposition und Wasserspeichervermögen der Böden und bewirtschaftungsbedingte Einflüsse dominieren dort derzeit das Wachstumsgeschehen. 
-
-[![](/uploads/archive/Graswachstumkarte_2025KW26.svg)](/growth)
-
-### Trockenheit: aktuelle Situation
-Gerade in den nördlichen Voralpen sind die Bedingungen derzeit aber zu trocken für das Graswachstum.  Greyerzland, Berner Oberland, Emmental, Zentralschweiz und der Alpstein - dieses Band quer über die Schweiz hat in den letzten 3 Wochen kaum Niederschlag erhalten. Gleichzeitig sorgen hohe Temperaturen um 30°C und teilweise die Bise für eine starke Verdunstung. 
-
-![Trockenheitsprognose_2025-06-24](Trockenheitsprognose_2025-06-24.png "Quelle: https://www.trockenheit.admin.ch/de, aufgerufen am 25. Juni 2025")
-
-Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der [nationalen Trockenheitsplattform (www.trockenheit.admin.ch)](https://www.trockenheit.admin.ch/)  für diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Grössen zusammen. Ein hoher CDI-Wert deutet auf ein für diese Saison ungewöhnlich hohes Wasserdefizit hin. 
-Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
+### Graswachstumsbericht Kalenderwoche 36
+Die neusten Messwerte zeigen, dass das Graswachstum derzeit anzieht. Flawil zeigt generell sehr hohe Wachstumsraten und ist derzeit Spitzenreiter (96 kg TS/ha/Tag), aber auch Gampelen im Seeland (87) und Les Reusilles (55) im Berner Jura zeigen derzeit hohe tägliche Graszuwüchse. Ein Blick in die Wiesen bestätigt den Trend vielerorts. Posieux und Sorens fallen in der Statistik deutlich zurück, was aber auf die Messmethode und den so erhobenen 4-Wochen-Durchschnitt zurückgeführt werden kann. Solange die Temperaturen nachts nicht deutlich unter 10 Grad Celsius fallen, ist in den nächsten Wochen mit einem soliden Graswachstum zu rechnen.
 
 
-![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Jura bernois, letzter Regen 15mm am 15. Juni. Jetzt wird es sehr schnell trocken. (Bild: O. Gerber)")
+[![](/uploads/archive/Graswachstumkarte_2025KW36.svg)](/growth)
 
-### Gestresste Wiesen schonen
-Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:
-* Boden ohne schattenspendende Vegetationsdecke heizt sich stärker auf (50 bis 60°C an der Oberfläche).
-* Der heisse Boden begünstigt die Keimung und die Etablierung von unerwünschten Hirsearten. 
-* Gute Futtergräser nehmen Schaden, die Grasnarbe wird lückiger. 
-* Lückenfüller wie Hirtentäschelkraut, Gemeines Rispengras oder Löwenzahn nehmen zu.
-* Feldmaikäfer legen ihre Eier bevorzugt an lückigen und gräserarmen Stellen ab.
-* Engerlinge und andere negative Einflüsse verschlechtern den Wiesenzustand weiter.
+### Vergleich Graswachstum an verschiedenen Standorten
+Welche Zwischenbilanz ist im Futterbaujahr 2025 zu ziehen? Wenn die Graswachstumskurven von verschiedenen Standorten des Grasmessnetzwerks verglichen werden, zeigen sich sofort deutliche Unterschiede. Teilweise ist eine deutliche Sommerdepression erkennbar, im westlichen Teil der Schweiz lagen die Zuwachsraten teilweise sogar mehrere Monate unterhalb von 50kg TS/ha. Gampelen sticht besonders hervor, weil dort wie in früheren Jahren fast durchgehend ein Graswachstum von 60kg TS/ha oder mehr registriert wurde. Das gleichbleibende Graswachstum ist ein Indiz dafür, dass alle Wachstumsfaktoren ausreichend verfügbar waren – zwei kurzfristige Wachstumsrückgänge sind auf besonders heisse Tagestemperaturen zurückzuführen.
 
-Diese Abwärtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:
-- Schnittnutzung vor dem Trockenstress, oder kurz vor dessen Ende, damit der gute Nachwuchs nach dem Schneiden sichergestellt ist.
-- Kein vorzeitige Nutzung : Weidegang ab dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage ab 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition),  [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
-- Wenn eine Schnittnutzung angezeigt ist, auf eine hohe Schnitthöhe (>8cm) achten.
-- Grasnarbe nicht mit schweren Überfahrten oder Güllegaben bei heissen Bedingungen schädigen. 
+![Graswachstumskurven-mit-Ertrag_2025_bis-KW36](Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg "Graswachstumskurven Ertragsschätzungen 2025 (bis KW36)")
 
-Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 
+Interessieren dürfte auch der Gesamtertrag. Wird das gemessene Graswachstum während der laufenden Messperiode tageweise aufaddiert, ergibt sich der Flächenertrag pro Hektar. Oder anders ausgedrückt: Die schraffierte Fläche unter der Graswachstumskurve entspricht dem kumulierten Ertrag von Anfang Jahr bis zum aktuellen Datenstand (Anfang September). Dieser reicht von 57 dt TS/ha in Carrouge, bis 122 dt TS/ha in Flawil.
+
+Der Sommer 2025 war rückblickend an den meisten Standorten nicht besonders trocken. Hitze und Wasserknappheit waren weniger ausgeprägt als in früheren Sommern. 
+
+! Achtung:  die absoluten Messwerte müssen vorsichtig interpretiert werden. Die Messmethode ist nicht überall ganz dieselbe. Zudem hat die durchschnittliche Grashöhe auf den gemessenen Parzellen einen grossen Einfluss auf das Ertragspotenzial: viel Blattmass heisst meist meistens mehr Wachstum. Eingeschobene Schnittnutzungen könnten beispielsweise am Standort Flawil für zwei tiefe Messwerte im Mai und Juli verantwortlich sein. 
+
+
+## Wasser, der wichtigste Nährstoff für Wiesen
+Grasland gehört zu den am meisten wasserbedürftigen Kulturen. Für die Bildung von einem Kilogramm Trockensubstanz werden rund 650 bis 850 Liter Wasser benötigt, welche hauptsächlich der Transpiration der Pflanzen dienen und damit die Nährstoffaufnahme und -transport erst ermöglichen.  Pro Tag kann eine intensiv geführte Wiese bis zu 7mm Wasser verdunsten, was 7L pro Quadratmeter entspricht.
+Das Grasland Schweiz zeichnet sich meist durch eine genügende Wasserverfügbarkeit aus. In trockenen Bergtälern wird aber traditionell schon seit Generationen bewässert – dort fliesst das Wasser ja mit der Schwerkraft quasi gratis zum Verwendungsort. Gemäss einer Schätzung von Agroscope werden derzeit rund 2 bis 3% der Wiesen in der Schweiz bewässert. An den meisten Standorten sind entsprechende Infrastrukturen und Wasserverkommen derzeit aber nicht vorhanden. 
+
+
+### Milchwirtschaft auf Sandböden dank Bewässerung
+Wie gut künstliche Bewässerung im Futterbau wirken kann, zeigt das Graswachstum in Gampelen im Berner Seeland. Der vollweidebasierte Milchwirtschaftsbetrieb im Grossen Moos bewirtschaftet fast reine Sandböden: 95% Sand, wenig Ton und Schluff, 3 bis 6% Humus je nach Parzelle. Die sehr leichten Böden speichern nur wenig Wasser und leiten Niederschlagswasser rasch in die Kanäle ab. Das Graswachstum würde schon nach 2 bis 3 Wochen ohne Niederschlag zusammenbrechen. Dank des vorhandenen Bewässerungssystems kann Wasser aus dem Kanal den Wiesen später wieder zugeführt werden. Wenn es nicht regnet, werden die Hauptweideflächen im Wochenrhythmus mit 30 mm beregnet. Die sorgfältig bewirtschafteten Weideflächen danken es mit einem gleichbleibend guten Graszuwachs um 60 kg TS/ha/Tag während der ganzen Vegetationszeit.
 
 
 
-### Intensität reduzieren
-Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. Während einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass die angestrebte Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist eine rasche Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden.
+### Technische Einrichtungen und Kosten
+Wie viele Betriebe im Grossen Moos verwendet der Betrieb für die Beregnung einen Beregnungsautomaten mit einem selbsteinziehenden Schlauchhaspel. Eine stationäre, elektrische angetriebene Pumpe saugt Wasser aus dem nahegelegenen Kanal an und verteilt es durch 125-mm-Rohre zu allen Parzellen. Das Wasser wird durch eine eher grobe 28-mm-Düse gedrückt, was bei 4 bar Gegendruck eine Reichweite von rund 50 m ergibt. 
+Der Betriebsleiter erklärt den Ablauf einer Beregnung so: Der Rollomat wird zu einem Bodenleitungs-Anschlusspunkt auf der Weide gefahren und der Regner mit dem Traktor bis zu 300m weit ausgezogen. Die Arbeitsbreite beträgt mit der oben genannten Düse 100 m, also können mit einem Auszug bis zu 3 ha Wiesen bewässert werden. Die Pumpe wird per Fernbedienung gestartet, die korrekte Funktionsweise des Regners überprüft, dann läuft die Beregnung vollautomatisch. Pro Hektar braucht es 300 m³ Wasser, was bei der derzeitigen Pumpleistung von 55m³/h einer Dauer von 5.5h pro Hektar entspricht. Der Arbeitsaufwand für einen Auszug beläuft sich auf rund 1 Stunde.
+
+![Haspel](Haspel.jpg "Automatischer Schlauchhaspel, der angetrieben durch den Wasserfluss den Schlauch langsam aufrollt und den Regnerwagen über die Wiese zieht.")
+
+![Du%CC%88se](Du%CC%88se.jpg "Je nach Düse und Druck kann das Wasser auf einer Breite von 100 m und mehr verteilt werden.  ")
+
+Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit Solarstrom. Die oft auch verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte. 
+
+|     Pumpe                      |     Schöpfleistung m3/h     (bei 12 bar)    |     Verbrauch pro Stunde     |     CHF pro m3    |     CHF pro ha    |
+|--------------------------------|---------------------------------------------|------------------------------|-------------------|-------------------|
+|     Kolbenpumpe elektrisch     |     55                                      |     18kW (0.27 CHF/kWh)      |     0.09          |     27            |
+|     Zentrifugalpumpe Diesel    |     90                                      |     10L Diesel (CHF 1.70)    |     0.18          |     56            |
+
+
+Die Beregnung hat zur Folge, dass in ca. 10 Minuten unglaubliche 30mm Niederschlag auf den Boden niederprassen – mehr kann der Boden in so kurzer Zeit nicht aufnehmen. Eine langsamere und häufiger erfolgende Wasserverteilung könnte die Effizienz der Bewässerung verbessern. Eine HAFL-Studienarbeit über das alternative K-Line-System mit mehreren verketteten Sprinklern kommt jedoch zum Schluss, dass deren Einsatz im intensiven Koppelweidesystem sich schwierig gestaltet und den Arbeitsaufwand in die Höhe treibt. Es wird bestimmt nicht die letzte Studie bleiben, denn gemäss ausländischen Quellen können häufigere Wassergaben oder spezielle Tröpfchenbewässerungen das Graswachstum noch einmal befördern, nämlich auf bis zu 80 bis 100 kg TS/ha/Tag. Vorausgesetzt, die anderen Wachstumsfaktoren können mit der Wasserversorgung mithalten.
+
+![Regner%20Nahaufnahme](Regner%20Nahaufnahme.jpg "Die automatische Schwenkdüse schwenkt hin und her und verteilt das Wasser so in einem Halbkreis. Die «Niederschlagsintensität» ist enorm, werden 30mm doch in nur ca. 10 Minuten appliziert.")
+
 
 Autoren: 
 Martin Zbinden, INFORAMA

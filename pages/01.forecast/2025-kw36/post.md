@@ -74,12 +74,13 @@ Der Betriebsleiter erklärt den Ablauf einer Beregnung so: Der Rollomat wird zu 
 
 ![Du%CC%88se](Du%CC%88se.jpg?lightbox "Je nach Düse und Druck kann das Wasser auf einer Breite von 100 m und mehr verteilt werden.  ")
 
-Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit Solarstrom. Die oft auch verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte. 
+Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit selbst produziertem Solarstrom bewässert werden - bei 5.5h pro Hektar wird die Pumpe aber oft auch nachts laufen müssen. Die gängigen verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte für die gleiche Wassermenge. 
 
 |     Pumpe                      |     Schöpfleistung m3/h     (bei 12 bar)    |     Verbrauch pro Stunde     |     CHF pro m3    |     CHF pro ha    |
 |--------------------------------|---------------------------------------------|------------------------------|-------------------|-------------------|
 |     Kolbenpumpe elektrisch     |     55                                      |     18kW (0.27 CHF/kWh)      |     0.09          |     27            |
 |     Zentrifugalpumpe Diesel    |     90                                      |     10L Diesel (CHF 1.70)    |     0.18          |     56            |
+
 
 
 Die Beregnung hat zur Folge, dass in ca. 10 Minuten unglaubliche 30mm Niederschlag auf den Boden niederprassen – mehr kann der Boden in so kurzer Zeit nicht aufnehmen. Eine langsamere und häufiger erfolgende Wasserverteilung könnte die Effizienz der Bewässerung verbessern. Eine HAFL-Studienarbeit über das alternative K-Line-System mit mehreren verketteten Sprinklern kommt jedoch zum Schluss, dass deren Einsatz im intensiven Koppelweidesystem sich schwierig gestaltet und den Arbeitsaufwand in die Höhe treibt. Es wird bestimmt nicht die letzte Studie bleiben, denn gemäss ausländischen Quellen können häufigere Wassergaben oder spezielle Tröpfchenbewässerungen das Graswachstum noch einmal befördern, nämlich auf bis zu 80 bis 100 kg TS/ha/Tag. Vorausgesetzt, die anderen Wachstumsfaktoren können mit der Wasserversorgung mithalten.

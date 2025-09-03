@@ -5,7 +5,7 @@ hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
 hero:
-    image: Trockenheitsprognose_2025-06-24.png
+    image: Düse.jpg
     image_alignment: object-center
     text: auto
 taxonomy:

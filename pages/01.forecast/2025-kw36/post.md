@@ -26,6 +26,7 @@ author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
 media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg'
+published: true
 ---
 
 # WIE WASSER ZU MILCH WIRD

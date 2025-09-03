@@ -38,7 +38,7 @@ Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachst
 
 ===
 
-### Graswachstumsbericht Kalenderwoche 36
+## Graswachstumsbericht Kalenderwoche 36
 Die neusten Messwerte zeigen, dass das Graswachstum derzeit anzieht. Flawil zeigt generell sehr hohe Wachstumsraten und ist derzeit Spitzenreiter (96 kg TS/ha/Tag), aber auch Gampelen im Seeland (87) und Les Reusilles (55) im Berner Jura zeigen derzeit hohe tägliche Graszuwüchse. Ein Blick in die Wiesen bestätigt den Trend vielerorts. Posieux und Sorens fallen in der Statistik deutlich zurück, was aber auf die Messmethode und den so erhobenen 4-Wochen-Durchschnitt zurückgeführt werden kann. Solange die Temperaturen nachts nicht deutlich unter 10 Grad Celsius fallen, ist in den nächsten Wochen mit einem soliden Graswachstum zu rechnen.
 
 

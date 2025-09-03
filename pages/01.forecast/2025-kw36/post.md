@@ -70,9 +70,9 @@ Wie gut künstliche Bewässerung im Futterbau wirken kann, zeigt das Graswachstu
 Wie viele Betriebe im Grossen Moos verwendet der Betrieb für die Beregnung einen Beregnungsautomaten mit einem selbsteinziehenden Schlauchhaspel. Eine stationäre, elektrische angetriebene Pumpe saugt Wasser aus dem nahegelegenen Kanal an und verteilt es durch 125-mm-Rohre zu allen Parzellen. Das Wasser wird durch eine eher grobe 28-mm-Düse gedrückt, was bei 4 bar Gegendruck eine Reichweite von rund 50 m ergibt. 
 Der Betriebsleiter erklärt den Ablauf einer Beregnung so: Der Rollomat wird zu einem Bodenleitungs-Anschlusspunkt auf der Weide gefahren und der Regner mit dem Traktor bis zu 300m weit ausgezogen. Die Arbeitsbreite beträgt mit der oben genannten Düse 100 m, also können mit einem Auszug bis zu 3 ha Wiesen bewässert werden. Die Pumpe wird per Fernbedienung gestartet, die korrekte Funktionsweise des Regners überprüft, dann läuft die Beregnung vollautomatisch. Pro Hektar braucht es 300 m³ Wasser, was bei der derzeitigen Pumpleistung von 55m³/h einer Dauer von 5.5h pro Hektar entspricht. Der Arbeitsaufwand für einen Auszug beläuft sich auf rund 1 Stunde.
 
-![Haspel](Haspel.jpg "Automatischer Schlauchhaspel, der angetrieben durch den Wasserfluss den Schlauch langsam aufrollt und den Regnerwagen über die Wiese zieht.")
+![Haspel](Haspel.jpg?lightbox "Automatischer Schlauchhaspel, der angetrieben durch den Wasserfluss den Schlauch langsam aufrollt und den Regnerwagen über die Wiese zieht.")
 
-![Du%CC%88se](Du%CC%88se.jpg "Je nach Düse und Druck kann das Wasser auf einer Breite von 100 m und mehr verteilt werden.  ")
+![Du%CC%88se](Du%CC%88se.jpg?lightbox "Je nach Düse und Druck kann das Wasser auf einer Breite von 100 m und mehr verteilt werden.  ")
 
 Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit Solarstrom. Die oft auch verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte. 
 
@@ -84,7 +84,7 @@ Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuel
 
 Die Beregnung hat zur Folge, dass in ca. 10 Minuten unglaubliche 30mm Niederschlag auf den Boden niederprassen – mehr kann der Boden in so kurzer Zeit nicht aufnehmen. Eine langsamere und häufiger erfolgende Wasserverteilung könnte die Effizienz der Bewässerung verbessern. Eine HAFL-Studienarbeit über das alternative K-Line-System mit mehreren verketteten Sprinklern kommt jedoch zum Schluss, dass deren Einsatz im intensiven Koppelweidesystem sich schwierig gestaltet und den Arbeitsaufwand in die Höhe treibt. Es wird bestimmt nicht die letzte Studie bleiben, denn gemäss ausländischen Quellen können häufigere Wassergaben oder spezielle Tröpfchenbewässerungen das Graswachstum noch einmal befördern, nämlich auf bis zu 80 bis 100 kg TS/ha/Tag. Vorausgesetzt, die anderen Wachstumsfaktoren können mit der Wasserversorgung mithalten.
 
-![Regner%20Nahaufnahme](Regner%20Nahaufnahme.jpg "Die automatische Schwenkdüse schwenkt hin und her und verteilt das Wasser so in einem Halbkreis. Die «Niederschlagsintensität» ist enorm, werden 30mm doch in nur ca. 10 Minuten appliziert.")
+![Regner%20Nahaufnahme](Regner%20Nahaufnahme.jpg?lightbox "Die automatische Schwenkdüse schwenkt hin und her und verteilt das Wasser so in einem Halbkreis. Die «Niederschlagsintensität» ist enorm, werden 30mm doch in nur ca. 10 Minuten appliziert.")
 
 
 Autoren: 

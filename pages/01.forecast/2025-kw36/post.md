@@ -78,8 +78,9 @@ Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuel
 
 |     Pumpe                      |     Schöpfleistung m3/h     (bei 12 bar)    |     Verbrauch pro Stunde     |     CHF pro m3    |     CHF pro ha    |
 |--------------------------------|---------------------------------------------|------------------------------|-------------------|-------------------|
-|     Kolbenpumpe elektrisch     |     55                                      |     18kW (0.27 CHF/kWh)      |     0.09          |     27            |
-|     Zentrifugalpumpe Diesel    |     90                                      |     10L Diesel (CHF 1.70)    |     0.18          |     56            |
+|     Kolbenpumpe elektrisch     |     55                                      |     18kWh (0.27 CHF/kWh)      |     0.09          |     27            |
+|     Zentrifugalpumpe Diesel    |     70                                      |     10L Diesel (CHF 1.70)    |     0.24          |     73           |
+Quelle: Joss Pitt, eigene Berechnungen
 
 
 ### Verbesserungen sind immer möglich

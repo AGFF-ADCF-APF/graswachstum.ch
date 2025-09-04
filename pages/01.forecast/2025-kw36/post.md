@@ -53,7 +53,7 @@ Interessieren dürfte auch der Gesamtertrag. Wird das gemessene Graswachstum wä
 
 Der Sommer 2025 war rückblickend an den meisten Standorten nicht besonders trocken. Hitze und Wasserknappheit waren weniger ausgeprägt als in früheren Sommern. 
 
-! Achtung:  die absoluten Messwerte müssen vorsichtig interpretiert werden. Die Messmethode ist nicht überall ganz dieselbe. Zudem hat die durchschnittliche Grashöhe auf den gemessenen Parzellen einen grossen Einfluss auf das Ertragspotenzial: viel Blattmass heisst meist meistens mehr Wachstum. Eingeschobene Schnittnutzungen könnten beispielsweise am Standort Flawil für zwei tiefe Messwerte im Mai und Juli verantwortlich sein. 
+[notice]Achtung:  die absoluten Messwerte müssen vorsichtig interpretiert werden. Die Messmethode ist nicht überall ganz dieselbe. Zudem hat die durchschnittliche Grashöhe auf den gemessenen Parzellen einen grossen Einfluss auf das Ertragspotenzial: viel Blattmass heisst meist meistens mehr Wachstum. Eingeschobene Schnittnutzungen könnten beispielsweise am Standort Flawil für zwei tiefe Messwerte im Mai und Juli verantwortlich sein. [/notice]
 
 
 ## Wasser, der wichtigste Nährstoff für Wiesen

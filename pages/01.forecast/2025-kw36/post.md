@@ -74,7 +74,7 @@ Der Betriebsleiter erklärt den Ablauf einer Beregnung so: Der Rollomat wird zu 
 
 ![Du%CC%88se](Du%CC%88se.jpg?lightbox "Je nach Düse und Druck kann das Wasser auf einer Breite von 100 m und mehr verteilt werden.  ")
 
-Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit selbst produziertem Solarstrom bewässert werden - bei 5.5h pro Hektar wird die Pumpe aber oft auch nachts laufen müssen. Die gängigen verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte für die gleiche Wassermenge. 
+Der grösste Kostenpunkt bei der Bewässerung sind die Energiekosten. Die aktuell verwendete Kolbenpumpe schöpft 55m³/h bei einem Verbrauch von 18kW, was bei einem Strompreis von 27 Rp./kWh Kosten von ca. 9 Rp./m³ oder 30 Franken pro ha verursacht. Wenn vorhanden, kann tagsüber mit selbst produziertem Solarstrom bewässert werden - bei 5.5h pro Hektar muss die Pumpe aber oft auch nachts laufen. Die gängigen verwendeten Dieselpumpen sind war leistungsstärker und flexibler einsetzbar, der Treibstoff kostet aber rund das Doppelte für die gleiche Wassermenge. Bei entsprechend starker Stromzuleitung können  auch leistungsstärkere elektrische Pumpen eingesetzt werden.
 
 |     Pumpe                      |     Schöpfleistung m3/h     (bei 12 bar)    |     Verbrauch pro Stunde     |     CHF pro m3    |     CHF pro ha    |
 |--------------------------------|---------------------------------------------|------------------------------|-------------------|-------------------|

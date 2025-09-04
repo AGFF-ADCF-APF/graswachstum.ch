@@ -25,7 +25,7 @@ publish_date: '05-09-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg'
+media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg,Iselerenhölzli_Bewässerung.jpeg'
 published: true
 ---
 
@@ -64,7 +64,7 @@ Das Grasland Schweiz zeichnet sich meist durch eine genügende Wasserverfügbark
 ### Milchwirtschaft auf Sandböden dank Bewässerung
 Wie gut künstliche Bewässerung im Futterbau wirken kann, zeigt das Graswachstum in Gampelen im Berner Seeland. Der vollweidebasierte Milchwirtschaftsbetrieb im Grossen Moos bewirtschaftet fast reine Sandböden: 95% Sand, wenig Ton und Schluff, 3 bis 6% Humus je nach Parzelle. Die sehr leichten Böden speichern nur wenig Wasser und leiten Niederschlagswasser rasch in die Kanäle ab. Das Graswachstum würde schon nach 2 bis 3 Wochen ohne Niederschlag zusammenbrechen. Dank des vorhandenen Bewässerungssystems kann Wasser aus dem Kanal den Wiesen später wieder zugeführt werden. Wenn es nicht regnet, werden die Hauptweideflächen im Wochenrhythmus mit 30 mm beregnet. Die sorgfältig bewirtschafteten Weideflächen danken es mit einem gleichbleibend guten Graszuwachs um 60 kg TS/ha/Tag während der ganzen Vegetationszeit.
 
-
+![Iselerenho%CC%88lzli_Bewa%CC%88sserung](Iselerenho%CC%88lzli_Bewa%CC%88sserung.jpeg "Iselerenho%CC%88lzli_Bewa%CC%88sserung")
 
 ### Technische Einrichtungen und Kosten
 Wie viele Betriebe im Grossen Moos verwendet der Betrieb für die Beregnung einen Beregnungsautomaten mit einem selbsteinziehenden Schlauchhaspel. Eine stationäre, elektrische angetriebene Pumpe saugt Wasser aus dem nahegelegenen Kanal an und verteilt es durch 125-mm-Rohre zu allen Parzellen. Das Wasser wird durch eine eher grobe 28-mm-Düse gedrückt, was bei 4 bar Gegendruck eine Reichweite von rund 50 m ergibt. 

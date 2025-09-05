@@ -31,3 +31,9 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
  ![Agroscope_hoch.svg](Agroscope_hoch.svg.png?resize=200,200 "Agroscope_hoch.svg")
  
 Die Messungen dieser beiden Messsttandorte sind besonders wertvoll, weil die langjährigen Daten Vergleich ermöglichen. Mit den beiden sehr unterschiedlichen Lagen (Höhe, Topographie, Lage) wird gut abgebildet, wie verschieden sich das Graswachstum zu verschiedenen Jahreszeiten entwickeln kann. 
+
+## Botanische Zusammensetzung
+Verteilung der Pflanzenbestandstypen auf den Weiden in Posieux:
+|         | GR   | A    | AR   | G    | DF  |
+|---------|------|------|------|------|-----|
+| Posieux | 37 % | 32 % | 18 % | 10 % | 3 % |

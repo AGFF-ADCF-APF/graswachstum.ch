@@ -25,7 +25,7 @@ publish_date: '05-09-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Iselerenhölzli_Bewässerung.jpeg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg'
+media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Iselerenhölzli_Bewässerung.jpeg'
 published: true
 seo-magic:
     description: 'Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Bewässerung von Weideland in Gampelen im Bernischen Grossen Moos.'

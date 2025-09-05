@@ -27,6 +27,8 @@ aura:
     author: mani
 media_order: 'Düse.jpg,Haspel.jpg,Regner Nahaufnahme.jpg,Iselerenhölzli_Bewässerung.jpeg,Graswachstumskurven-mit-Ertrag_2025_bis-KW36.svg'
 published: true
+seo-magic:
+    description: 'Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Wie wichtig eine ausreichende Wasserversorgung für Wiesen ist, wird in Gampelen BE deutlich.'
 ---
 
 # Wie Wasser zu Milch wird

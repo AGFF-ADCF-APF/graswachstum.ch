@@ -33,7 +33,7 @@ Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](
 Die Messungen dieser beiden Messsttandorte sind besonders wertvoll, weil die langjährigen Daten Vergleich ermöglichen. Mit den beiden sehr unterschiedlichen Lagen (Höhe, Topographie, Lage) wird gut abgebildet, wie verschieden sich das Graswachstum zu verschiedenen Jahreszeiten entwickeln kann. 
 
 ## Botanische Zusammensetzung
-Verteilung der Pflanzenbestandstypen auf den Weiden in Posieux:
-|         | GR   | A    | AR   | G    | DF  |
-|---------|------|------|------|------|-----|
-| Posieux | 37 % | 32 % | 18 % | 10 % | 3 % |
+Verteilung der Pflanzenbestandstypen auf den Weiden in Sorens:
+|        | GR  | A    | AR  | G    | DF   |
+|--------|-----|------|-----|------|------|
+| Sorens | 5 % | 21 % | 1 % | 56 % | 18 % |

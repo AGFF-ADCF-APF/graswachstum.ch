@@ -35,7 +35,7 @@ media_order: 'Trockenheitsprognose_2025-06-24.png,Gerber_2025-06-25_Trockene-Wie
 
 # Trockenstress in den Voralpen
 
-In der jetzigen Phase ist ein haushälterischer Umgang mit den Grasreserven wichtig. Wo es in den letzten 3 Wochen nicht geregnet hat, hat das Graswachstum deutlich abgenommen und die Wiesenpflanzen zeigen zunehmend Stressanzeichen. Die [nationale Trockenheitsplattform](https://www.trockenheit.admin.ch/) des Bundes zeigt eine grobe Übersicht über die Situation.
+
 
 
 
@@ -43,7 +43,7 @@ In der jetzigen Phase ist ein haushälterischer Umgang mit den Grasreserven wich
 
 ===
 
-### Graswachstumsbericht Kalenderwoche 26
+### Graswachstumsbericht Kalenderwoche 30
 Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  Rückgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen über dem Optimalbereich von 15 bis 25° C liegt. Wo es in den letzten Wochen ergiebige Gewitter-Ereignisse gab, ist die Wasserversorgung im Grasland derzeit noch gewährleistet. Standortfaktoren wie Exposition und Wasserspeichervermögen der Böden und bewirtschaftungsbedingte Einflüsse dominieren dort derzeit das Wachstumsgeschehen. 
 
 [![](/uploads/archive/Graswachstumkarte_2025KW26.svg)](/growth)
@@ -56,8 +56,7 @@ Gerade in den nördlichen Voralpen sind die Bedingungen derzeit aber zu trocken 
 Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der [nationalen Trockenheitsplattform (www.trockenheit.admin.ch)](https://www.trockenheit.admin.ch/)  für diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Grössen zusammen. Ein hoher CDI-Wert deutet auf ein für diese Saison ungewöhnlich hohes Wasserdefizit hin. 
 Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
 
-
-![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Jura bernois, letzter Regen 15mm am 15. Juni. Jetzt wird es sehr schnell trocken. (Bild: O. Gerber)")
+![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Im Sommer und Herbst neigen viele Bestände dazu, in einen höheren Kleeanteil abzudriften. Regelmässige Stickstoffgaben helfen, den Gräseranteil zu fördern. Bild: N. Marti")
 
 ### Gestresste Wiesen schonen
 Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:

@@ -29,6 +29,7 @@ shortcode-citation:
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
+media_order: Kühe-Weissklee_Marti_2025.webp
 ---
 
 # Gräseranteil mit Stickstoff fördern
@@ -50,6 +51,7 @@ Durch die Niederschläge und die gesunkenen Temperaturen hat sich die Graswachst
 ### Güllewetter nutzen
 Die tieferen Temperaturen und die Niederschläge bieten optimale Bedingungen, die Weiden wieder mit Gülle zu düngen. Viele Bestände neigen im Sommer und Herbst dazu, in einen höheren Kleeanteil abzudriften. Um dies zu verhindern, sind regelmässige Stickstoffgaben wichtig, die den Gräseranteil fördern. Nach einer trockeneren Phase kann jedoch auch mit einer Nachlieferung durch die Stickstoffmineralisierung gerechnet werden.
 
+![Kuehe-Weissklee_Marti_2025](Kuehe-Weissklee_Marti_2025.webp "Im Sommer und Herbst neigen viele Bestände dazu, in einen höheren Kleeanteil abzudriften. Regelmässige Stickstoffgaben helfen, den Gräseranteil zu fördern. (Bild: N. Marti)")
 
 Trotz des steigenden Graswachstums sollen die Grasreserven weiterhin aufrechterhalten werden. Das Englische Raigras bildet nun nur noch selten Stängel aus. Somit können Grasreserven von hoher Qualität aufgebaut werden. Auch das Eingrasen von betriebsfernen Flächen bietet sich als Möglichkeit, das Futterangebot zu steuern und den Verbrauch von Futterkonserven möglichst tief zu halten.
 

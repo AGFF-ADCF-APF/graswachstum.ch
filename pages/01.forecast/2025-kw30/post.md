@@ -1,6 +1,6 @@
 ---
-title: 'Woche 30 (23.06.-29.06.2025) (Copy)'
-date: '27-06-2025 08:00'
+title: 'Woche 30 (21.07.-27.07.2025)'
+date: '26-07-2025 08:00'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -26,7 +26,6 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-publish_date: '27-06-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani

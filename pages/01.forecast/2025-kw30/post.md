@@ -29,11 +29,11 @@ shortcode-citation:
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-media_order: 'Trockenheitsprognose_2025-06-24.png,Gerber_2025-06-25_Trockene-Wiese.jpeg'
 ---
 
-# Trockenstress in den Voralpen
+# Gräseranteil mit Stickstoff fördern
 
+Der Regen der vergangenen Woche brachte Entspannung im Grünland. Es bieten sich optimale Bedingungen zum Düngen der Weiden mit Gülle.
 
 
 
@@ -43,41 +43,21 @@ media_order: 'Trockenheitsprognose_2025-06-24.png,Gerber_2025-06-25_Trockene-Wie
 ===
 
 ### Graswachstumsbericht Kalenderwoche 30
-Wie so oft in dieser Jahreszeit, tut sich beim Graswachstum die Schere zwischen Gunstlagen und trockenen Standorten auf.  Generell ist ein  Rückgang des Graswachstums zu beobachten, weil die Tagestemperaturen seit Tagen über dem Optimalbereich von 15 bis 25° C liegt. Wo es in den letzten Wochen ergiebige Gewitter-Ereignisse gab, ist die Wasserversorgung im Grasland derzeit noch gewährleistet. Standortfaktoren wie Exposition und Wasserspeichervermögen der Böden und bewirtschaftungsbedingte Einflüsse dominieren dort derzeit das Wachstumsgeschehen. 
+Durch die Niederschläge und die gesunkenen Temperaturen hat sich die Graswachstumsdepression in vielen Regionen entspannt. Die anhaltende Feuchte hat das Graswachstum kräftig angekurbelt. Es sollte bereits jetzt an den Herbst gedacht werden.
 
-[![](/uploads/archive/Graswachstumkarte_2025KW26.svg)](/growth)
+[![](/uploads/archive/Graswachstumkarte_2025KW30.svg)](/growth "Die  gesunkenen Temperaturen und die Niederschläge haben das Graswachstum kräftig angekubelt.")
 
-### Trockenheit: aktuelle Situation
-Gerade in den nördlichen Voralpen sind die Bedingungen derzeit aber zu trocken für das Graswachstum.  Greyerzland, Berner Oberland, Emmental, Zentralschweiz und der Alpstein - dieses Band quer über die Schweiz hat in den letzten 3 Wochen kaum Niederschlag erhalten. Gleichzeitig sorgen hohe Temperaturen um 30°C und teilweise die Bise für eine starke Verdunstung. 
-
-![Trockenheitsprognose_2025-06-24](Trockenheitsprognose_2025-06-24.png "Quelle: https://www.trockenheit.admin.ch/de, aufgerufen am 25. Juni 2025")
-
-Entsprechend zeigt der kombinierte Trockenheitsindex (combined drought index, CDI) auf der [nationalen Trockenheitsplattform (www.trockenheit.admin.ch)](https://www.trockenheit.admin.ch/)  für diese Gebiete die Trockenheitsstufen 4 (sehr trocken) bis 5 (extrem trocken). Der CDI fasst Aspekte wie Niederschlag, modellierte Bodenfeuchte und hydrologische Grössen zusammen. Ein hoher CDI-Wert deutet auf ein für diese Saison ungewöhnlich hohes Wasserdefizit hin. 
-Für den Sektor Landwirtschaft dürften jedoch die Angaben zu Bodenfeuchte und Niederschlag fast wichtiger sein. Für den einzelnen Betrieb fliessen für die Lagebeurteilung eigene Beobachtungen ein: gestresste Pflanzen reduzieren ihr Wachstum, rollen die Blätter ein oder sterben im Extremfall bei zu viel Stress ganz ab.
-
-![Gerber_2025-06-25_Trockene-Wiese](Gerber_2025-06-25_Trockene-Wiese.jpeg?lightbox "Im Sommer und Herbst neigen viele Bestände dazu, in einen höheren Kleeanteil abzudriften. Regelmässige Stickstoffgaben helfen, den Gräseranteil zu fördern. Bild: N. Marti")
-
-### Gestresste Wiesen schonen
-Sobald Naturwiesen von Hitze und Trockenheit geplagt werden, ist eine umsichtige  Bewirtschaftung angezeigt. Übernutzung kann in dieser Situation besonders negative Folgen nach sich ziehen:
-* Boden ohne schattenspendende Vegetationsdecke heizt sich stärker auf (50 bis 60°C an der Oberfläche).
-* Der heisse Boden begünstigt die Keimung und die Etablierung von unerwünschten Hirsearten. 
-* Gute Futtergräser nehmen Schaden, die Grasnarbe wird lückiger. 
-* Lückenfüller wie Hirtentäschelkraut, Gemeines Rispengras oder Löwenzahn nehmen zu.
-* Feldmaikäfer legen ihre Eier bevorzugt an lückigen und gräserarmen Stellen ab.
-* Engerlinge und andere negative Einflüsse verschlechtern den Wiesenzustand weiter.
-
-Diese Abwärtsspirale kann mit einigen Gegenmassnahmen durchbrochen werden:
-- Schnittnutzung vor dem Trockenstress, oder kurz vor dessen Ende, damit der gute Nachwuchs nach dem Schneiden sichergestellt ist.
-- Kein vorzeitige Nutzung : Weidegang ab dem 3-Blatt-Stadium der Leitgräser oder ab ca. 15cm Wuchshöhe, Schnitt ab Stadium 2 bzw. je nach Lage ab 4 bis 6 Wochen. ([eAGFF - Entwicklungsstadien der Gräser](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition),  [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf)
-- Wenn eine Schnittnutzung angezeigt ist, auf eine hohe Schnitthöhe (>8cm) achten.
-- Grasnarbe nicht mit schweren Überfahrten oder Güllegaben bei heissen Bedingungen schädigen. 
-
-Nicht jeder [Wiesentyp](https://www.eagff.ch/wiesenpflanzen-kennen/wiesentypen/einleitung-uebersicht) reagiert gleich empfindlich auf Störungen: Wiesenfuchsschwanz-Wiesen und Englisch-Raigras-Wiesenrispengras-Mähweiden gelten als besonders robust. Knaulgraswiesen und Italienisch-Raigras-Wiesen mit  den horstbildenden Gräsern können hingegen rasch degradieren, wenn Nutzung und Düngung nicht den jeweiligen Standortbedingungen angepasst erfolgen. 
+### Güllewetter nutzen
+Die tieferen Temperaturen und die Niederschläge bieten optimale Bedingungen, die Weiden wieder mit Gülle zu düngen. Viele Bestände neigen im Sommer und Herbst dazu, in einen höheren Kleeanteil abzudriften. Um dies zu verhindern, sind regelmässige Stickstoffgaben wichtig, die den Gräseranteil fördern. Nach einer trockeneren Phase kann jedoch auch mit einer Nachlieferung durch die Stickstoffmineralisierung gerechnet werden.
 
 
+Trotz des steigenden Graswachstums sollen die Grasreserven weiterhin aufrechterhalten werden. Das Englische Raigras bildet nun nur noch selten Stängel aus. Somit können Grasreserven von hoher Qualität aufgebaut werden. Auch das Eingrasen von betriebsfernen Flächen bietet sich als Möglichkeit, das Futterangebot zu steuern und den Verbrauch von Futterkonserven möglichst tief zu halten.
 
-### Intensität reduzieren
-Nachdem anfangs Mai der erste Schnitt vielerorts bereits konserviert war, konnte verbreitet eine weitere Nutzung vor der anhaltenden Hitzephase vorgenommen werden. Während einer Trockenphase sollte nicht am gewohnten Nutzungsintervall festgehalten werden. Von Trockenheit betroffene Vollweidebetriebe tun gut, die Weidefläche jetzt zu vergrössern und die Rotationsdauer zu verlängern, so dass die angestrebte Eintriebshöhe eingehalten werden kann. Notfalls soll im Stall zugefüttert werden. Sobald das Wasserdefizit in den Böden wieder aufgefüllt wird und die Temperaturen nicht zu heiss sind, ist eine rasche Erholung des Graswachstums zu erwarten - weitere Konservierungsschnitte sollten dann möglich werden.
+### Bestände selektieren
+Grünlandbestände gilt es erneut zu beurteilen. Bei älteren, sanierungswürdigen Beständen sollte bald mit geeigneten Massnahmen begonnen werden. Auch die Bekämpfung von Problemunkräutern ist bereits jetzt zu planen. Eine aufkommende Massnahme ist die kameragesteuerte selektive Bekämpfung von Blacken. Die optimale Wirkung bedingt jedoch einer gewissen Planung.
+
+
+Obwohl die Behandlung erst im Herbst gemacht wird, sind die Schnittzeitpunkte darauf abzustimmen. Um ein zufriedenstellendes Ergebnis zu erreichen, müssen die Blacken einige grössere Blätter besitzen, damit sie genügend Wirkstoff aufnehmen können. Dementsprechend brauchen die Pflanzen mindestens 10 bis 14 Tage Entwicklungszeit von Schnittnutzung bis zur Behandlung. 
 
 Autoren: 
-Martin Zbinden, INFORAMA
+Nicolas Marti, BBZN Hohenrain

@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast\/2025-kw30",
         "page_title": "Woche 30 (21.07.-27.07.2025)"
     },
-    "updated": 1760338204,
+    "updated": 1760338307,
     "response_headers": {
         "server": "nginx",
-        "date": "Mon, 13 Oct 2025 06:50:04 GMT",
+        "date": "Mon, 13 Oct 2025 06:51:47 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "Woche 30 (21.07.-27.07.2025)",
         "grav-page-route": "\/forecast\/2025-kw30",
         "grav-page-rawroute": "\/forecast\/2025-kw30",
         "cache-control": "max-age=604800",
-        "expires": "Mon, 20 Oct 2025 06:50:04 GMT",
+        "expires": "Mon, 20 Oct 2025 06:51:47 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1760338204.519629001617431640625,
-        "total_time": 0.324048999999999975951681108199409209191799163818359375,
-        "namelookup_time": 0.000586000000000000040821512836686224545701406896114349365234375,
-        "connect_time": 0.000746000000000000026804947150793623222853057086467742919921875,
-        "pretransfer_time": 0.0043119999999999998607780327120053698308765888214111328125,
-        "starttransfer_time": 0.323355999999999976779463395359925925731658935546875,
+        "start_time": 1760338307.470149993896484375,
+        "total_time": 0.2337780000000000135695898961785132996737957000732421875,
+        "namelookup_time": 0.0003629999999999999871734546186274883439182303845882415771484375,
+        "connect_time": 0.0004400000000000000156645529880705680625396780669689178466796875,
+        "pretransfer_time": 0.004372000000000000018152146452621309435926377773284912109375,
+        "starttransfer_time": 0.23332100000000000061817218011128716170787811279296875,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 561,
         "request_size": 130,
         "redirect_count": 0,
-        "size_download": 10556,
-        "speed_download": 32575,
+        "size_download": 10727,
+        "speed_download": 45885,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 51241
+        "content_size": 52447
     },
     "content": {
-        "body": "<h1>Gr&auml;seranteil mit Stickstoff f&ouml;rdern<\/h1>\n<p>Der Regen der vergangenen Woche brachte Entspannung im Gr&uuml;nland. Es bieten sich optimale Bedingungen zum D&uuml;ngen der Weiden mit G&uuml;lle.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 30\n                    <\/li>\n                    <li>\n            G&uuml;llewetter nutzen\n                    <\/li>\n                    <li>\n            Best&auml;nde selektieren\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n<h3>Graswachstumsbericht Kalenderwoche 30<\/h3>\n<p>Durch die Niederschl&auml;ge und die gesunkenen Temperaturen hat sich die Graswachstumsdepression in vielen Regionen entspannt. Die anhaltende Feuchte hat das Graswachstum kr&auml;ftig angekurbelt. Es sollte bereits jetzt an den Herbst gedacht werden.<\/p>\n<p>\n  \n<\/p>\n<h3>G&uuml;llewetter nutzen<\/h3>\n<p>Die tieferen Temperaturen und die Niederschl&auml;ge bieten optimale Bedingungen, die Weiden wieder mit G&uuml;lle zu d&uuml;ngen. Viele Best&auml;nde neigen im Sommer und Herbst dazu, in einen h&ouml;heren Kleeanteil abzudriften. Um dies zu verhindern, sind regelm&auml;ssige Stickstoffgaben wichtig, die den Gr&auml;seranteil f&ouml;rdern. Nach einer trockeneren Phase kann jedoch auch mit einer Nachlieferung durch die Stickstoffmineralisierung gerechnet werden.<\/p>\n<p>Trotz des steigenden Graswachstums sollen die Grasreserven weiterhin aufrechterhalten werden. Das Englische Raigras bildet nun nur noch selten St&auml;ngel aus. Somit k&ouml;nnen Grasreserven von hoher Qualit&auml;t aufgebaut werden. Auch das Eingrasen von betriebsfernen Fl&auml;chen bietet sich als M&ouml;glichkeit, das Futterangebot zu steuern und den Verbrauch von Futterkonserven m&ouml;glichst tief zu halten.<\/p>\n<h3>Best&auml;nde selektieren<\/h3>\n<p>Gr&uuml;nlandbest&auml;nde gilt es erneut zu beurteilen. Bei &auml;lteren, sanierungsw&uuml;rdigen Best&auml;nden sollte bald mit geeigneten Massnahmen begonnen werden. Auch die Bek&auml;mpfung von Problemunkr&auml;utern ist bereits jetzt zu planen. Eine aufkommende Massnahme ist die kameragesteuerte selektive Bek&auml;mpfung von Blacken. Die optimale Wirkung bedingt jedoch einer gewissen Planung.<\/p>\n<p>Obwohl die Behandlung erst im Herbst gemacht wird, sind die Schnittzeitpunkte darauf abzustimmen. Um ein zufriedenstellendes Ergebnis zu erreichen, m&uuml;ssen die Blacken einige gr&ouml;ssere Bl&auml;tter besitzen, damit sie gen&uuml;gend Wirkstoff aufnehmen k&ouml;nnen. Dementsprechend brauchen die Pflanzen mindestens 10 bis 14 Tage Entwicklungszeit von Schnittnutzung bis zur Behandlung. <\/p>\n<p>Autoren:\nNicolas Marti, BBZN Hohenrain<\/p>",
+        "body": "<h1>Gr&auml;seranteil mit Stickstoff f&ouml;rdern<\/h1>\n<p>Der Regen der vergangenen Woche brachte Entspannung im Gr&uuml;nland. Es bieten sich optimale Bedingungen zum D&uuml;ngen der Weiden mit G&uuml;lle.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 30\n                    <\/li>\n                    <li>\n            G&uuml;llewetter nutzen\n                    <\/li>\n                    <li>\n            Best&auml;nde selektieren\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n<h3>Graswachstumsbericht Kalenderwoche 30<\/h3>\n<p>Durch die Niederschl&auml;ge und die gesunkenen Temperaturen hat sich die Graswachstumsdepression in vielen Regionen entspannt. Die anhaltende Feuchte hat das Graswachstum kr&auml;ftig angekurbelt. Es sollte bereits jetzt an den Herbst gedacht werden.<\/p>\n<p>\n  \n<\/p>\n<h3>G&uuml;llewetter nutzen<\/h3>\n<p>Die tieferen Temperaturen und die Niederschl&auml;ge bieten optimale Bedingungen, die Weiden wieder mit G&uuml;lle zu d&uuml;ngen. Viele Best&auml;nde neigen im Sommer und Herbst dazu, in einen h&ouml;heren Kleeanteil abzudriften. Um dies zu verhindern, sind regelm&auml;ssige Stickstoffgaben wichtig, die den Gr&auml;seranteil f&ouml;rdern. Nach einer trockeneren Phase kann jedoch auch mit einer Nachlieferung durch die Stickstoffmineralisierung gerechnet werden.<\/p>\nIm Sommer und Herbst neigen viele Best&auml;nde dazu, in einen h&ouml;heren Kleeanteil abzudriften. Regelm&auml;ssige Stickstoffgaben helfen, den Gr&auml;seranteil zu f&ouml;rdern. (Bild: N. Marti)\n<p>Trotz des steigenden Graswachstums sollen die Grasreserven weiterhin aufrechterhalten werden. Das Englische Raigras bildet nun nur noch selten St&auml;ngel aus. Somit k&ouml;nnen Grasreserven von hoher Qualit&auml;t aufgebaut werden. Auch das Eingrasen von betriebsfernen Fl&auml;chen bietet sich als M&ouml;glichkeit, das Futterangebot zu steuern und den Verbrauch von Futterkonserven m&ouml;glichst tief zu halten.<\/p>\n<h3>Best&auml;nde selektieren<\/h3>\n<p>Gr&uuml;nlandbest&auml;nde gilt es erneut zu beurteilen. Bei &auml;lteren, sanierungsw&uuml;rdigen Best&auml;nden sollte bald mit geeigneten Massnahmen begonnen werden. Auch die Bek&auml;mpfung von Problemunkr&auml;utern ist bereits jetzt zu planen. Eine aufkommende Massnahme ist die kameragesteuerte selektive Bek&auml;mpfung von Blacken. Die optimale Wirkung bedingt jedoch einer gewissen Planung.<\/p>\n<p>Obwohl die Behandlung erst im Herbst gemacht wird, sind die Schnittzeitpunkte darauf abzustimmen. Um ein zufriedenstellendes Ergebnis zu erreichen, m&uuml;ssen die Blacken einige gr&ouml;ssere Bl&auml;tter besitzen, damit sie gen&uuml;gend Wirkstoff aufnehmen k&ouml;nnen. Dementsprechend brauchen die Pflanzen mindestens 10 bis 14 Tage Entwicklungszeit von Schnittnutzung bis zur Behandlung. <\/p>\n<p>Autoren:\nNicolas Marti, BBZN Hohenrain<\/p>",
         "headers": {
             "h1": [
                 "Woche 30 (21.07.-27.07.2025)",
@@ -78,6 +78,12 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/uploads\/archive\/Graswachstumkarte_2025KW30.svg?decoding=auto&fetchpriority=auto&g-aaaf9dd6",
                 "alt": "",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/01.forecast\/2025-kw30\/Kuehe-Weissklee_Marti_2025.webp?g-aaaf9dd6",
+                "alt": "Kuehe-Weissklee_Marti_2025",
                 "external": true,
                 "status": 200
             },
@@ -509,26 +515,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Woche 30 (21.07.-27.07.2025)",
+            "description": "G\u00fcllewetter nutzen Die tieferen Temperaturen und die Niederschl\u00e4ge bieten optimale Bedingungen, die Weiden wieder mit G\u00fclle zu d\u00fcngen. Viele Best\u00e4nde neig\u2026",
+            "title": "Woche 30 (21.07.-27.07.2025) | graswachstum.ch",
+            "keywords": "bedingungen,optimale,kalenderwoche,bieten,best\u00e4nde,selektieren,graswachstumsbericht,niederschl\u00e4ge,weiden,nutzen,",
             "image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Woche 30 (21.07.-27.07.2025)",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Woche 30 (21.07.-27.07.2025) | graswachstum.ch",
+            "og:description": "G\u00fcllewetter nutzen Die tieferen Temperaturen und die Niederschl\u00e4ge bieten optimale Bedingungen, die Weiden wieder mit G\u00fclle zu d\u00fcngen. Viele Best\u00e4nde neig\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Woche 30 (21.07.-27.07.2025)",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Woche 30 (21.07.-27.07.2025) | graswachstum.ch",
+            "twitter:description": "G\u00fcllewetter nutzen Die tieferen Temperaturen und die Niederschl\u00e4ge bieten optimale Bedingungen, die Weiden wieder mit G\u00fclle zu d\u00fcngen. Viele Best\u00e4nde neig\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\/seomagic-image.jpg",
-            "twitter:image:alt": "Woche 30 (21.07.-27.07.2025)",
+            "twitter:image:alt": "Woche 30 (21.07.-27.07.2025) | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "1 Minute"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30",
@@ -738,5 +744,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Aug 22 21:57:02 2025 GMT\n*  expire date: Nov 20 21:57:01 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw30]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw30 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Mon, 13 Oct 2025 06:50:04 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Woche 30 (21.07.-27.07.2025)\r\n< grav-page-route: \/forecast\/2025-kw30\r\n< grav-page-rawroute: \/forecast\/2025-kw30\r\n< cache-control: max-age=604800\r\n< expires: Mon, 20 Oct 2025 06:50:04 GMT\r\n* Added cookie grav-site-23a95d8=\"cd6519f095181897644351e950320111\" for domain graswachstum.ch, path \/, expire 1760340004\n< set-cookie: grav-site-23a95d8=cd6519f095181897644351e950320111; expires=Mon, 13-Oct-2025 07:20:04 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Aug 22 21:57:02 2025 GMT\n*  expire date: Nov 20 21:57:01 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/forecast\/2025-kw30\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/forecast\/2025-kw30]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/forecast\/2025-kw30 HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Mon, 13 Oct 2025 06:51:47 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Woche 30 (21.07.-27.07.2025)\r\n< grav-page-route: \/forecast\/2025-kw30\r\n< grav-page-rawroute: \/forecast\/2025-kw30\r\n< cache-control: max-age=604800\r\n< expires: Mon, 20 Oct 2025 06:51:47 GMT\r\n* Added cookie grav-site-23a95d8=\"75b40f50407eab3d6a5be752027398e3\" for domain graswachstum.ch, path \/, expire 1760340107\n< set-cookie: grav-site-23a95d8=75b40f50407eab3d6a5be752027398e3; expires=Mon, 13-Oct-2025 07:21:47 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n"
 }

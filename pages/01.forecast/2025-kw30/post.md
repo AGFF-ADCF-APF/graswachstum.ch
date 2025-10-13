@@ -11,7 +11,7 @@ hero:
     buttons:
         -
             text: 'Artikel BauernZeitung'
-            link: 'https://www.bauernzeitung.ch/dossier/pflanzen/hohe-temperaturen-setzen-die-weide-unter-stress-551331'
+            link: 'https://www.bauernzeitung.ch/dossier/tiere/graeseranteil-mit-stickstoff-foerdern-551878'
             classes: 'bg-primary text-white'
 taxonomy:
     category:

@@ -44,7 +44,7 @@ So auch diesmal: die aktuellen Bodentemperaturen sind mit 5 bis 7°C in Irland b
 ![Grass10_Week](Grass10_Week.png?lightbox&resize=600 "Empfehlungen für Irische Weidebetriebe, Woche 7. Quelle: Teagasc Grass10 Newsletter vom 11.02.2025")
 
 Übersetzung der 4 Merkpunkte aus der Grafik:
-1. Can grazing begin on your farm?
+1. Kann auf Ihrem Betrieb die Weide starten? 
 2. Frühlings-Weide-Vormittage in deiner Nähe (Werbung für Flurgänge der Beratung)
 3. Düngerapplikation diesen Frühling
 4. Erstellen der ersten Grasvorrats-Messung und des Gras-Budgets

@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast\/2025-ferme-la-naz",
         "page_title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne"
     },
-    "updated": 1760537921,
+    "updated": 1760538109,
     "response_headers": {
         "server": "nginx",
-        "date": "Wed, 15 Oct 2025 14:18:41 GMT",
+        "date": "Wed, 15 Oct 2025 14:21:49 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
         "grav-page-route": "\/forecast\/2025-ferme-la-naz",
         "grav-page-rawroute": "\/forecast\/2025-ferme-la-naz",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 22 Oct 2025 14:18:41 GMT",
+        "expires": "Wed, 22 Oct 2025 14:21:49 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1760537921.3567850589752197265625,
-        "total_time": 0.27898699999999998500044284810428507626056671142578125,
-        "namelookup_time": 0.017187000000000000887734330490275169722735881805419921875,
-        "connect_time": 0.01726199999999999956656893118633888661861419677734375,
-        "pretransfer_time": 0.0201460000000000007125411372044254676438868045806884765625,
-        "starttransfer_time": 0.27717300000000000270716782324598170816898345947265625,
+        "start_time": 1760538109.4800970554351806640625,
+        "total_time": 0.227322999999999997289279463075217790901660919189453125,
+        "namelookup_time": 0.000398000000000000024764912343044898079824633896350860595703125,
+        "connect_time": 0.0004850000000000000252749210449820793655817396938800811767578125,
+        "pretransfer_time": 0.004801999999999999844957354611096889129839837551116943359375,
+        "starttransfer_time": 0.2267959999999999975983655531308613717555999755859375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 595,
         "request_size": 138,
         "redirect_count": 0,
-        "size_download": 9914,
-        "speed_download": 35535,
+        "size_download": 10101,
+        "speed_download": 44434,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 49256
+        "content_size": 50145
     },
     "content": {
-        "body": "<h1>Lait bas carbone<\/h1>\n<h2>G&eacute;rer es p&acirc;turages avec l'herbom&egrave;tre<\/h2>\n<p>F&uuml;r die Umtriebsweide mit 150 K&uuml;hen auf dem Hof La Naz in Carrouge (Schweiz, Kanton Waadt, 700 m &uuml;.M.) z&auml;hlt vor allem eines: die Milchleistung pro Hektar Weideland. Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, erz&auml;hlen Sabine und Flavien im Video.\n<\/p>\n\n\n<p>Sabine Bourgeois-Bach und Flavien Bach geben Auskunft &uuml;ber die Weidef&uuml;hrung auf ihrem Betrieb \"Ferme Comex du Borgeau\". Ein paar Fakten:<\/p>\n<ul>\n<li>Mit 60 Milchk&uuml;hen und genug Weidefl&auml;che wurde fr&uuml;her eine Kurzrasenweide umgesetzt.<\/li>\n<li>Seit der Kuhbestand vor 15 Jahren auf 150 Milchk&uuml;he mehr als verdoppelt wurde, wird die Weide nach dem System der intensiven Umtriebsweide organisiert. <\/li>\n<li>Grundprinzip: t&auml;glich ca. 1 Are frisches Gras pro Kuh anbieten. Die ganze Herde geht jeden Tag auf eine neue Fl&auml;che. <\/li>\n<li>Durch die kurze Beweidungsdauer fressen die &uuml;he viel und es bleiben wenig Weidereste zur&uuml;ck.<\/li>\n<li>Die w&ouml;chentliche Grasmessung mit dem Herbometer bildet die Grundlage f&uuml;r das genaue Mangement des Graswachtums.<\/li>\n<li>Feldertrag und Futterqualit&auml;t konnten deutlich verbessert werden. F&uuml;r die Vollweidehaltung an diesem Standort sind 7500kg Milch pro Kuh und 12'000kg pro Hektar sehr gute Werte.<\/li>\n<li>\n<\/li>\n<li>ibt es zwei Leistungsgruppen, um das Gras m&ouml;glichst effizienz zu nutzen. Die hochlaktierenden K&uuml;he bekomme<\/li>\n<li>\n<\/li>\n<\/ul>",
+        "body": "<h1>Lait bas carbone<\/h1>\n<h2>G&eacute;rer es p&acirc;turages avec l'herbom&egrave;tre<\/h2>\n<p>F&uuml;r die Umtriebsweide mit 150 K&uuml;hen auf dem Hof La Naz in Carrouge (Schweiz, Kanton Waadt, 700 m &uuml;.M.) z&auml;hlt vor allem eines: die Milchleistung pro Hektar Weideland. Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, erz&auml;hlen Sabine und Flavien im Video.\n<\/p>\n\n\n<p>Sabine Bourgeois-Bach und Flavien Bach geben Auskunft &uuml;ber die Weidef&uuml;hrung auf ihrem Betrieb \"Ferme Comex du Borgeau\". Ein paar Fakten:<\/p>\n<ul>\n<li>Mit 60 Milchk&uuml;hen und genug Weidefl&auml;che wurde fr&uuml;her eine Kurzrasenweide umgesetzt.<\/li>\n<li>Seit der Kuhbestand vor 15 Jahren auf 150 Milchk&uuml;he mehr als verdoppelt wurde, wird die Weide nach dem System der intensiven Umtriebsweide organisiert. <\/li>\n<li>Grundprinzip: t&auml;glich ca. 1 Are frisches Gras pro Kuh anbieten. Die ganze Herde geht jeden Tag auf eine neue Fl&auml;che. <\/li>\n<li>Durch die kurze Beweidungsdauer fressen die &uuml;he viel und es bleiben wenig Weidereste zur&uuml;ck.<\/li>\n<li>Die w&ouml;chentliche Grasmessung mit dem Herbometer bildet die Grundlage f&uuml;r das genaue Management des Graswachtums. Dank dieser Daten kann die Rotationsdauer exakt gesteuert und  optimiert werden.<\/li>\n<li>Situationen mit Futtermangel oder &Uuml;bersch&uuml;ssen k&ouml;nnen rechtzeitig erkannt werden, um mit geeigneten Gegenmassnahmen wie M&auml;hen oder Zuf&uuml;ttern im Stall entgegenzuwirken.<\/li>\n<li>Feldertrag und Futterqualit&auml;t konnten deutlich verbessert werden. F&uuml;r die Vollweidehaltung an diesem Standort sind 7500kg Milch pro Kuh und 12'000kg pro Hektar sehr gute Werte.<\/li>\n<li>\n<\/li>\n<li>ibt es zwei Leistungsgruppen, um das Gras m&ouml;glichst effizienz zu nutzen. Die hochlaktierenden K&uuml;he bekomme<\/li>\n<li>\n<\/li>\n<\/ul>",
         "headers": {
             "h1": [
                 "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
@@ -443,26 +443,26 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
+            "description": "Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, er\u2026",
+            "title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne | graswachstum.ch",
+            "keywords": "umtriebsweide,f\u00fcr,kurzrasenweide,herbometer,eine,intensiven,system,fr\u00fcher,flavien,sabine,",
             "image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne | graswachstum.ch",
+            "og:description": "Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, er\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Nouvelle vid\u00e9o: Conditionnement de la luzerne | graswachstum.ch",
+            "twitter:description": "Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, er\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\/seomagic-image.jpg",
-            "twitter:image:alt": "Nouvelle vid\u00e9o: Conditionnement de la luzerne",
+            "twitter:image:alt": "Nouvelle vid\u00e9o: Conditionnement de la luzerne | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 minutes",
-            "keywords": ""
+            "twitter:data1": "1 minute"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz",
@@ -672,5 +672,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Aug 22 21:57:02 2025 GMT\n*  expire date: Nov 20 21:57:01 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/fr\/forecast\/2025-ferme-la-naz]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/fr\/forecast\/2025-ferme-la-naz HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 15 Oct 2025 14:18:41 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Nouvelle vid\u00e9o: Conditionnement de la luzerne\r\n< grav-page-route: \/forecast\/2025-ferme-la-naz\r\n< grav-page-rawroute: \/forecast\/2025-ferme-la-naz\r\n< cache-control: max-age=604800\r\n< expires: Wed, 22 Oct 2025 14:18:41 GMT\r\n* Added cookie grav-site-23a95d8=\"4df36268544129b9d3ab8a821acff49d\" for domain graswachstum.ch, path \/, expire 1760539721\n< set-cookie: grav-site-23a95d8=4df36268544129b9d3ab8a821acff49d; expires=Wed, 15-Oct-2025 14:48:41 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Aug 22 21:57:02 2025 GMT\n*  expire date: Nov 20 21:57:01 2025 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/fr\/forecast\/2025-ferme-la-naz\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/fr\/forecast\/2025-ferme-la-naz]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/fr\/forecast\/2025-ferme-la-naz HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 15 Oct 2025 14:21:49 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Nouvelle vid\u00e9o: Conditionnement de la luzerne\r\n< grav-page-route: \/forecast\/2025-ferme-la-naz\r\n< grav-page-rawroute: \/forecast\/2025-ferme-la-naz\r\n< cache-control: max-age=604800\r\n< expires: Wed, 22 Oct 2025 14:21:49 GMT\r\n* Added cookie grav-site-23a95d8=\"7c462968683ed3a01e50d81790d4dd50\" for domain graswachstum.ch, path \/, expire 1760539909\n< set-cookie: grav-site-23a95d8=7c462968683ed3a01e50d81790d4dd50; expires=Wed, 15-Oct-2025 14:51:49 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n"
 }

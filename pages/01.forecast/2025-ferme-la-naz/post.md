@@ -1,6 +1,6 @@
 ---
 title: 'Neues Video über Betrieb La Naz'
-date: '05-09-2025 08:00'
+date: '15-10-2025 13:43'
 hide_from_post_list: false
 hide_git_sync_repo_link: true
 header_image_credit: 'Martin Zbinden, riedackerhof.ch'
@@ -21,7 +21,6 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-publish_date: '05-09-2025 08:00'
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani

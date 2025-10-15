@@ -26,6 +26,7 @@ aura:
     author: mani
 seo-magic:
     description: 'Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Bewässerung von Weideland in Gampelen im Bernischen Grossen Moos.'
+published: false
 ---
 
 # Umtriebsweidesystem für 150 Milchkühe

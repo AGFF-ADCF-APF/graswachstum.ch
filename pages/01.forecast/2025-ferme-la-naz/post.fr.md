@@ -49,7 +49,8 @@ Sabine Bourgeois-Bach und Flavien Bach geben Auskunft über die Weideführung au
 - Seit der Kuhbestand vor 15 Jahren auf 150 Milchkühe mehr als verdoppelt wurde, wird die Weide nach dem System der intensiven Umtriebsweide organisiert. 
 - Grundprinzip: täglich ca. 1 Are frisches Gras pro Kuh anbieten. Die ganze Herde geht jeden Tag auf eine neue Fläche. 
 - Durch die kurze Beweidungsdauer fressen die ühe viel und es bleiben wenig Weidereste zurück.
-- Die wöchentliche Grasmessung mit dem Herbometer bildet die Grundlage für das genaue Mangement des Graswachtums.
+- Die wöchentliche Grasmessung mit dem Herbometer bildet die Grundlage für das genaue Management des Graswachtums. Dank dieser Daten kann die Rotationsdauer exakt gesteuert und  optimiert werden.
+- Situationen mit Futtermangel oder Überschüssen können rechtzeitig erkannt werden, um mit geeigneten Gegenmassnahmen wie Mähen oder Zufüttern im Stall entgegenzuwirken.
 - Feldertrag und Futterqualität konnten deutlich verbessert werden. Für die Vollweidehaltung an diesem Standort sind 7500kg Milch pro Kuh und 12'000kg pro Hektar sehr gute Werte.
 - 
 - ibt es zwei Leistungsgruppen, um das Gras möglichst effizienz zu nutzen. Die hochlaktierenden Kühe bekomme

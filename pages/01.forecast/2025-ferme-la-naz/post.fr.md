@@ -34,28 +34,27 @@ shortcode-citation:
 media_order: 'Luzerne SM323_IMG_20180629_182533.jpg'
 ---
 
-# Jamais bouger sec
+# Lait bas carbone
+## Gérer es pâturages avec l'herbomètre
 
-**Grangeneuve a récemment publié une petite vidéo sur le sujet du conditionnement de la luzerne : elle donne la parole à deux éleveurs, Sébastien Berset et David Hänni, qui en maîtrisent la culture et la conservation. 
+**Für die Umtriebsweide mit 150 Kühen auf dem Hof La Naz in Carrouge (Schweiz, Kanton Waadt, 700 m ü.M.) zählt vor allem eines: die Milchleistung pro Hektar Weideland. Wieso sie mit dem Wachstum des Betriebs von Kurzrasenweide auf Umtriebsweide umgestellt haben und wie sie dieses System mit dem Herbometer effektiv managen, erzählen Sabine und Flavien im Video.
 **
 
 [plugin:vimeo](https://vimeo.com/1052313303)
 
 ===
 
-Parmi les légumineuses fourragères, la luzerne tient une position un peu à part : sa tolérance à la chaleur, ses capacités à faire ruminer des animaux, ses apports en bêtacarotènes. La luzerne présente également des teneurs intéressantes en protéines, tout en étant inférieures à celles du trèfle blanc, voire du trèfle violet.
+Sabine Bourgeois-Bach und Flavien Bach geben Auskunft über die Weideführung auf ihrem Betrieb "Ferme Comex du Borgeau". Ein paar Fakten:
+- Mit 60 Milchkühen und genug Weidefläche wurde früher eine Kurzrasenweide umgesetzt.
+- Seit der Kuhbestand vor 15 Jahren auf 150 Milchkühe mehr als verdoppelt wurde, wird die Weide nach dem System der intensiven Umtriebsweide organisiert. 
+- Grundprinzip: täglich ca. 1 Are frisches Gras pro Kuh anbieten. Die ganze Herde geht jeden Tag auf eine neue Fläche. 
+- Durch die kurze Beweidungsdauer fressen die ühe viel und es bleiben wenig Weidereste zurück.
+- Die wöchentliche Grasmessung mit dem Herbometer bildet die Grundlage für das genaue Mangement des Graswachtums.
+- Feldertrag und Futterqualität konnten deutlich verbessert werden. Für die Vollweidehaltung an diesem Standort sind 7500kg Milch pro Kuh und 12'000kg pro Hektar sehr gute Werte.
+- 
+- ibt es zwei Leistungsgruppen, um das Gras möglichst effizienz zu nutzen. Die hochlaktierenden Kühe bekomme
+- 
 
-Les protéines se trouvent majoritairement dans les feuilles de la luzerne : les teneurs dépassent 25 % de MA. Les tiges ont moins de 15%. Il faut donc tout faire pour maintenir les feuilles lors du conditionnement. Quelques étapes-clé indispensables :
-* Faucher assez jeune pour assurer une part élevée de feuilles.
-* Faucher à plus de 8 cm de haut.
-* Étendre immédiatement, soit avec un conditionneur qui épand large, soit grâce à un passage de pirouette.
-* Pirouetter, andainer ou charger uniquement aux heures où les feuilles sont molles et adhèrent aux tiges, tôt le matin ou tard le soir, et jamais en plein après-midi.
-* Charger dire juste avant que les feuilles ne se brisent toutes seules entre les doigts.
-* Ne pas comprimer dans l’autochargeuse.
-* Finir de sécher en grange.
-
-
-Original-Publikation: https://grangeneuve-conseil.ch/index.php/de/themen/pflanzenbau/1013-ernte-und-konservierung-der-luzerne
 
 
 

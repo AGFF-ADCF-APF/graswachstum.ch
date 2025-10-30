@@ -15,7 +15,12 @@ content:
     order:
         by: date
         dir: desc
-media_order: '20230921_142411.JPG,2018-04-24 15.44.34.jpg,IMG_20190129_093805.jpg'
+media_order: '20230921_142411.JPG,IMG_20190509_061615.jpg'
+shortcode-citation:
+    items: cited
+    reorder_uncited: true
+sitemap:
+    lastmod: '30-10-2025 14:03'
 ---
 
 ## Grasland bewirtschaften
@@ -35,4 +40,7 @@ media_order: '20230921_142411.JPG,2018-04-24 15.44.34.jpg,IMG_20190129_093805.jp
 ## Graswachstum messen
 
 * [Github.com: R-Skript für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
-* 
+
+
+## Werkzeugküche (nicht getestet!)
+[Prototyp App Gehaltsbestimmung](agff-mb03.html)

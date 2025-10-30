@@ -43,4 +43,4 @@ sitemap:
 
 
 ## Werkzeugküche (nicht getestet!)
-* [Prototyp App Gehaltsbestimmung](agff-mb03.html)
+* [Prototyp App Gehaltsbestimmung](https://graswachstum.ch/resources/tools/agff-mb03.html)

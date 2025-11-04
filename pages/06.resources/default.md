@@ -42,5 +42,6 @@ sitemap:
 * [Github.com: R-Skript für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
 
 
-## Werkzeugküche (nicht getestet!)
+## Apps (Prototyp-Stadium)
 * [Prototyp App Gehaltsbestimmung](https://graswachstum.ch/resources/tools/agff-mb03.html)
+Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf),  [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856), 

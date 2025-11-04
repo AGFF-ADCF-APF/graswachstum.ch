@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGFF Futterbewertung</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jsPDF CDN for PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Firebase Libraries -->
+    <script type="module">
+        // Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- GLOBALE VARIABLEN ---
+        let futterWerte = {};
+        let aktuellesStadiumLabel = "Nicht bestimmt";
+        let db, auth;
+        const PB_NEL = 3.14; // Produktionsbedarf NEL pro kg ECM (Seite 12)
+        const PB_PROTEIN = 50; // Produktionsbedarf APDE/APDN pro kg ECM (Seite 12)
+
+        // --- DATENLADEN & FIREBASE INIT ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            showLoading(true);
+            try {
+                // 1. Firebase initialisieren
+                const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+                
+                if (firebaseConfig.apiKey) {
+                    const app = initializeApp(firebaseConfig);
+                    auth = getAuth(app);
+                    db = getFirestore(app);
+                    setLogLevel('debug'); // Firestore Debug-Logs aktivieren
+
+                    // 2. Anonym oder mit Token anmelden
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                    console.log("Firebase Auth & Firestore initialisiert. User ID:", auth.currentUser?.uid);
+                } else {
+                    console.warn("Firebase Konfiguration nicht gefunden. Cloud-Speicherung ist deaktiviert.");
+                }
+
+                // 3. Futterwerte laden von externer URL
+                const response = await fetch('https://graswachstum.ch/resources/tools/futterwerte.json');
+                if (!response.ok) throw new Error('futterwerte.json konnte nicht geladen werden.');
+                futterWerte = await response.json();
+                
+                // 4. UI-Listener initialisieren
+                setupEventListeners();
+                showLoading(false);
+
+            } catch (error) {
+                console.error("Initialisierungsfehler:", error);
+                showLoading(false);
+                document.getElementById('app-body').innerHTML = `<p class="text-red-500 text-center">Fehler beim Laden der App-Daten von graswachstum.ch. Bitte versuchen Sie es erneut.</p>`;
+            }
+        });
+        
+        // --- UI FUNKTIONEN ---
+
+        function showLoading(isLoading) {
+            const loader = document.getElementById('loader');
+            const app = document.getElementById('app-body');
+            if (isLoading) {
+                loader.classList.remove('hidden');
+                app.classList.add('hidden');
+            } else {
+                loader.classList.add('hidden');
+                app.classList.remove('hidden');
+            }
+        }
+
+        function setupEventListeners() {
+            // Schritt 1: Aufwuchsart
+            document.getElementById('aufwuchsart').addEventListener('change', (e) => {
+                const isErster = e.target.value === 'erster';
+                document.getElementById('step2-bestand').classList.remove('opacity-50', 'pointer-events-none');
+                document.getElementById('step3-stadium-btn').classList.remove('opacity-50', 'pointer-events-none');
+                
+                // Zurücksetzen, wenn sich die Aufwuchsart ändert
+                resetStep2();
+                resetStep3();
+                resetResults();
+            });
+
+            // Schritt 2: Bestandestyp
+            document.getElementById('bestandestyp').addEventListener('change', () => {
+                validateBerechnungsButtons();
+            });
+
+            // Schritt 3: Stadium (Modal-Öffner)
+            document.getElementById('step3-stadium-btn').addEventListener('click', openStadiumModal);
+
+            // Modal: Schliessen
+            document.getElementById('closeModalBtn').addEventListener('click', closeStadiumModal);
+
+            // Modal: Auswahl
+            document.getElementById('modalContent').addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON' && e.target.dataset.stadium) {
+                    const stadium = e.target.dataset.stadium;
+                    const label = e.target.textContent;
+                    
+                    document.getElementById('stadiumValue').value = stadium;
+                    document.getElementById('step3-stadium-btn').textContent = label;
+                    aktuellesStadiumLabel = label;
+                    
+                    closeStadiumModal();
+                    validateBerechnungsButtons();
+                }
+            });
+
+            // Schritt 4: Berechnungs-Buttons
+            document.querySelectorAll('.calc-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const konservierung = e.target.dataset.konservierung;
+                    document.getElementById('konservierungValue').value = konservierung;
+                    calculateFutterQualitaet();
+                });
+            });
+
+            // Akkordeon: Parameter
+            document.getElementById('accordion-toggle').addEventListener('click', () => {
+                const content = document.getElementById('accordion-content');
+                const icon = document.getElementById('accordion-icon');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+
+            // Parameter-Änderungen (lösen Neuberechnung aus)
+            document.getElementById('kuhGewicht').addEventListener('input', () => {
+                if (!document.getElementById('result').classList.contains('hidden')) {
+                    applyCorrections(); 
+                }
+            });
+            document.getElementById('tsvOverride').addEventListener('input', () => {
+                if (!document.getElementById('result').classList.contains('hidden')) {
+                    applyCorrections();
+                }
+            });
+            
+            // Neue Buttons: PDF und Cloud
+            document.getElementById('savePdfButton').addEventListener('click', handleSavePDF);
+            document.getElementById('saveCloudButton').addEventListener('click', handleSaveCloud);
+        }
+
+        // --- STADIUMS-MODAL ---
+
+        function openStadiumModal() {
+            const aufwuchsart = document.getElementById('aufwuchsart').value;
+            const modalContent = document.getElementById('modalContent');
+            
+            let html = '';
+            if (aufwuchsart === 'erster') {
+                html = `
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Stadium (Erster Aufwuchs)</h3>
+                    <p class="mb-4 text-sm text-gray-600">Bestimmen Sie das Stadium anhand der Entwicklung der Leitpflanzen (Gräser/Kräuter) gemäss Merkblatt 3, Seite 2-4.</p>
+                    <div class="space-y-2">
+                        <button data-stadium="1" class="modal-btn">Stadium 1: Bestockung / Beginn Schossen</button>
+                        <button data-stadium="2" class="modal-btn">Stadium 2: Schossen (Weidestadium)</button>
+                        <button data-stadium="3" class="modal-btn">Stadium 3: Beginn Rispenschieben (10%)</button>
+                        <button data-stadium="4" class="modal-btn">Stadium 4: Volles Rispenschieben (50%)</button>
+                        <button data-stadium="5" class="modal-btn">Stadium 5: Ende Rispenschieben (90%)</button>
+                        <button data-stadium="6" class="modal-btn">Stadium 6: Blüte</button>
+                        <button data-stadium="7" class="modal-btn">Stadium 7: Samenreife</button>
+                    </div>
+                `;
+            } else if (aufwuchsart === 'folge') {
+                 html = `
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Stadium (Folgeaufwüchse)</h3>
+                    <p class="mb-4 text-sm text-gray-600">Bestimmen Sie das Stadium anhand des Alters des Futters und der Höhenlage gemäss Merkblatt 3, Seite 2.</p>
+                    <div class="space-y-2">
+                        <h4 class="font-semibold text-gray-700">Talgebiet (bis 600 m)</h4>
+                        <button data-stadium="1" class="modal-btn">Stadium 1 (sehr früh): 3-4 Wochen</button>
+                        <button data-stadium="2" class="modal-btn">Stadium 2 (früh): 5-7 Wochen (Sommer) / 4 Wo. (Herbst)</button>
+                        <button data-stadium="3" class="modal-btn">Stadium 3 (mittelfrüh): 8-9 Wochen (Sommer) / 5-6 Wo. (Herbst)</button>
+                        <button data-stadium="4" class="modal-btn">Stadium 4 (mittel): 10+ Wochen (Sommer) / 7-8 Wo. (Herbst)</button>
+                        
+                        <h4 class="font-semibold text-gray-700 mt-4">Berggebiet (über 600 m)</h4>
+                        <button data-stadium="1" class="modal-btn">Stadium 1 (sehr früh): 3-4 Wochen</button>
+                        <button data-stadium="2" class="modal-btn">Stadium 2 (früh): 5-7 Wochen</button>
+                        <button data-stadium="3" class="modal-btn">Stadium 3 (mittelfrüh): 8-9 Wochen</button>
+                        <button data-stadium="4" class="modal-btn">Stadium 4 (mittel): 10+ Wochen</button>
+                    </div>
+                `;
+            } else {
+                html = `<p class="text-red-500">Bitte wählen Sie zuerst eine Aufwuchsart in Schritt 1.</p>`;
+            }
+            
+            modalContent.innerHTML = html;
+            document.getElementById('stadiumModal').classList.remove('hidden');
+        }
+
+        function closeStadiumModal() {
+            document.getElementById('stadiumModal').classList.add('hidden');
+        }
+
+        // --- ZURÜCKSETZ-FUNKTIONEN ---
+
+        function resetStep2() {
+            document.getElementById('bestandestyp').value = "";
+        }
+        
+        function resetStep3() {
+            document.getElementById('stadiumValue').value = "";
+            document.getElementById('step3-stadium-btn').textContent = "Stadium bestimmen";
+            aktuellesStadiumLabel = "Nicht bestimmt";
+        }
+
+        function resetResults() {
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('corrections-container').classList.add('hidden');
+            document.getElementById('accordion-wrapper').classList.add('hidden');
+            document.getElementById('save-section').classList.add('hidden'); // Auch Save-Sektion ausblenden
+            document.getElementById('personName').value = '';
+            document.getElementById('probeNummer').value = '';
+            document.getElementById('saveFeedback').classList.add('hidden');
+        }
+
+        // --- VALIDIERUNG ---
+
+        function validateBerechnungsButtons() {
+            const bestand = document.getElementById('bestandestyp').value;
+            const stadium = document.getElementById('stadiumValue').value;
+            const buttons = document.querySelectorAll('.calc-btn');
+
+            if (bestand && stadium) {
+                buttons.forEach(btn => btn.disabled = false);
+            } else {
+                buttons.forEach(btn => btn.disabled = true);
+            }
+        }
+        
+        // --- KORREKTUR-FAKTOREN (Seite 5) ---
+        const CorrectionFactors = {
+            silage: [
+                { id: "ts_low", label: "Trockensubstanz (TS) < 20%", nel: -0.01, apde: -0.06, apdn: 0 },
+                { id: "ts_high", label: "Trockensubstanz (TS) > 50%", nel: -0.01, apde: 0.06, apdn: 0.05 },
+                { id: "gaer_bad", label: "Gärqualität fehlerhaft", nel: -0.02, apde: -0.06, apdn: -0.05 },
+                { id: "gaer_vbad", label: "Gärqualität schlecht (nicht verfüttern!)", nel: -0.05, apde: -0.15, apdn: -0.12 },
+                { id: "nachgaer", label: "Nachgärung (leicht warm)", nel: -0.04, apde: -0.15, apdn: -0.12 }
+            ],
+            hay: [
+                { id: "boden", label: "Bodentrocknung", nel: -0.04, apde: -0.03, apdn: -0.03 },
+                { id: "regen1", label: "1 Tag Regen", nel: -0.05, apde: -0.08, apdn: -0.07 },
+                { id: "regen2", label: "2+ Tage Regen", nel: -0.08, apde: -0.15, apdn: -0.13 },
+                { id: "ueberhitz_leicht", label: "Futter leicht braun", nel: 0, apde: 0.03, apdn: 0.03 },
+                { id: "ueberhitz_brand", label: "Futter braun, brandig", nel: -0.05, apde: -0.01, apdn: -0.01 }
+            ]
+        };
+
+        function generateCorrectionInputs() {
+            const konservierung = document.getElementById('konservierungValue').value;
+            const container = document.getElementById('corrections-list');
+            const wrapper = document.getElementById('corrections-container');
+            
+            container.innerHTML = ''; // Leeren
+            
+            if (konservierung === 'silage' || konservierung === 'hay') {
+                const factors = CorrectionFactors[konservierung];
+                factors.forEach(factor => {
+                    const label = document.createElement('label');
+                    label.className = "flex items-center space-x-2 text-sm text-gray-700 p-2 rounded-md hover:bg-green-50";
+                    
+                    const nelPct = (factor.nel * 100).toFixed(0);
+                    const apdePct = (factor.apde * 100).toFixed(0);
+                    const apdnPct = (factor.apdn * 100).toFixed(0);
+
+                    label.innerHTML = `
+                        <input type="checkbox" class="correction-check form-checkbox h-4 w-4 text-green-600 rounded" data-id="${factor.id}">
+                        <span>${factor.label} (NEL: ${nelPct}%, APDE: ${apdePct > 0 ? '+' : ''}${apdePct}%, APDN: ${apdnPct > 0 ? '+' : ''}${apdnPct}%)</span>
+                    `;
+                    container.appendChild(label);
+                });
+                
+                // Event Listener für die neuen Checkboxen
+                document.querySelectorAll('.correction-check').forEach(box => {
+                    box.addEventListener('change', applyCorrections);
+                });
+                wrapper.classList.remove('hidden');
+            } else {
+                wrapper.classList.add('hidden');
+            }
+        }
+        
+        // --- HAUPTBERECHNUNG ---
+
+        function getFutterWert(aufwuchs, konservierung, bestand, stadium) {
+            try {
+                // Stadium 5, 6, 7 für Folgeaufwüchse existieren nicht in der Logik (nur 1-4)
+                if(aufwuchs === 'folge' && parseInt(stadium) > 4) {
+                   stadium = '4'; 
+                   console.warn("Stadium für Folgeaufwuchs auf 4 korrigiert (max)");
+                }
+                
+                const data = futterWerte[aufwuchs]?.[konservierung]?.[bestand]?.[stadium];
+                if (!data) throw new Error("Keine Daten gefunden");
+                return data;
+
+            } catch (e) {
+                console.error("Daten nicht gefunden für:", aufwuchs, konservierung, bestand, stadium, e);
+                return { nel: 0, apde: 0, apdn: 0, tsv: 0 };
+            }
+        }
+
+        function calculateFutterQualitaet() {
+            resetResults(); // Ergebnisse und Korrekturen zurücksetzen
+            
+            const aufwuchs = document.getElementById('aufwuchsart').value;
+            const bestand = document.getElementById('bestandestyp').value;
+            const stadium = document.getElementById('stadiumValue').value;
+            const konservierung = document.getElementById('konservierungValue').value;
+
+            if (!aufwuchs || !bestand || !stadium || !konservierung) {
+                // Sollte durch Button-Validierung verhindert werden, aber sicher ist sicher.
+                return; 
+            }
+
+            const werte = getFutterWert(aufwuchs, konservierung, bestand, stadium);
+
+            // Basiswerte in globalem Scope speichern, damit Korrekturen sie lesen können
+            window.currentBaseValues = werte;
+
+            // Korrektur-Checkboxen generieren (falls nötig)
+            generateCorrectionInputs();
+            
+            // Ergebnisse anzeigen (wird durch applyCorrections erledigt)
+            // KORREKTUR: applyCorrections MUSS hier gerufen werden, 
+            // damit auch Grünfutter (ohne Checkboxen) berechnet wird.
+            applyCorrections(); 
+
+            // Ergebnis-Container anzeigen
+            document.getElementById('result').classList.remove('hidden');
+            document.getElementById('accordion-wrapper').classList.remove('hidden');
+            document.getElementById('save-section').classList.remove('hidden'); // Speichern Sektion anzeigen
+        }
+
+        // --- KORREKTUR- & PARAMETER-BERECHNUNG ---
+
+        function applyCorrections() {
+            let werte = { ...window.currentBaseValues }; // Kopie der Basiswerte
+            if (!werte || typeof werte.nel === 'undefined') {
+                console.log("applyCorrections Abbruch: Keine Basiswerte.");
+                return;
+            }
+
+            const konservierung = document.getElementById('konservierungValue').value;
+            
+            let totalKorrektur = { nel: 0, apde: 0, apdn: 0 };
+            let appliedCorrectionsList = [];
+
+            // 1. Korrekturen anwenden (falls Silage/Dürrfutter)
+            if (konservierung === 'silage' || konservierung === 'hay') {
+                const factors = CorrectionFactors[konservierung];
+                document.querySelectorAll('.correction-check:checked').forEach(box => {
+                    const factor = factors.find(f => f.id === box.dataset.id);
+                    if (factor) {
+                        totalKorrektur.nel += factor.nel;
+                        totalKorrektur.apde += factor.apde;
+                        totalKorrektur.apdn += factor.apdn;
+                        appliedCorrectionsList.push(factor.label.split(' (')[0]); // Nur der Label-Text
+                    }
+                });
+            }
+
+            // Korrigierte Werte berechnen
+            let korrigierteWerte = {
+                nel: werte.nel * (1 + totalKorrektur.nel),
+                apde: werte.apde * (1 + totalKorrektur.apde),
+                apdn: werte.apdn * (1 + totalKorrektur.apdn)
+            };
+            
+            // 2. Parameter (Gewicht, TSV) anwenden
+            const gewicht = parseFloat(document.getElementById('kuhGewicht').value) || 630;
+            const tsvOverride = parseFloat(document.getElementById('tsvOverride').value);
+            // KORREKTUR: Sicherstellen, dass werte.tsv ein numerischer Wert ist
+            const basisTsv = parseFloat(werte.tsv) || 0;
+            const tsv = tsvOverride || basisTsv;
+            
+            // 3. MPP berechnen
+            const mppResult = calculateMpp(korrigierteWerte, gewicht, tsv);
+
+            // 4. Ergebnisse im UI darstellen
+            displayResults(werte, korrigierteWerte, mppResult, tsv, appliedCorrectionsList);
+        }
+
+        function calculateMpp(werte, gewicht, tsv) {
+            if (tsv === 0 || !werte.nel) { // Fallback für ungültige Stadien
+                return { mpp: 0, limit: "Keine Daten", mpp_nel: 0, mpp_apde: 0, mpp_apdn: 0 };
+            }
+            
+            // Erhaltungsbedarf (EB) berechnen (Basis 630kg = 40.5 MJ NEL, 409g Protein)
+            // Formeln basierend auf Agroscope-Merkblatt (S. 12, +10% Aktivität)
+            const eb_nel = (0.293 * Math.pow(gewicht, 0.75)) * 1.10;
+            const eb_protein = (3.25 * Math.pow(gewicht, 0.75)) * 1.10;
+
+            // Nährstoffaufnahme (NA)
+            const na_nel = werte.nel * tsv;
+            const na_apde = werte.apde * tsv;
+            const na_apdn = werte.apdn * tsv;
+
+            // Verfügbar für Produktion (VP)
+            const vp_nel = na_nel - eb_nel;
+            const vp_apde = na_apde - eb_protein;
+            const vp_apdn = na_apdn - eb_protein;
+
+            // MPP pro Nährstoff
+            const mpp_nel = vp_nel / PB_NEL;
+            const mpp_apde = vp_apde / PB_PROTEIN;
+            const mpp_apdn = vp_apdn / PB_PROTEIN;
+
+            // Limitierenden Faktor finden
+            const mpp = Math.max(0, Math.min(mpp_nel, mpp_apde, mpp_apdn));
+            let limit = "NEL";
+            if (mpp_apde < mpp_nel && mpp_apde < mpp_apdn) limit = "APDE";
+            if (mpp_apdn < mpp_nel && mpp_apdn < mpp_apde) limit = "APDN";
+            
+            // Fallback, wenn alle negativ sind
+            if (mpp === 0) {
+                if (mpp_nel < 0) limit = "NEL (Erhaltung nicht gedeckt)";
+                if (mpp_apde < 0 && mpp_apde < mpp_nel) limit = "APDE (Erhaltung nicht gedeckt)";
+                if (mpp_apdn < 0 && mpp_apdn < mpp_apde) limit = "APDN (Erhaltung nicht gedeckt)";
+            }
+            
+            return { mpp, limit, mpp_nel, mpp_apde, mpp_apdn };
+        }
+        
+        // --- ERGEBNIS-ANZEIGE & SPEICHER-LOGIK ---
+
+        function displayResults(basis, korrigiert, mpp, tsv, correctionsList) {
+            // MPP
+            document.getElementById('mppValue').textContent = mpp.mpp.toFixed(1);
+            document.getElementById('mppLimit').textContent = `(Limitiert durch: ${mpp.limit})`;
+            
+            // TSV
+            document.getElementById('tsvValue').textContent = tsv.toFixed(1);
+
+            // NEL
+            document.getElementById('nelBase').textContent = (basis.nel || 0).toFixed(2);
+            document.getElementById('nelKorr').textContent = (korrigiert.nel - (basis.nel || 0)).toFixed(2);
+            document.getElementById('nelEff').textContent = korrigiert.nel.toFixed(2);
+
+            // APDE
+            document.getElementById('apdeBase').textContent = (basis.apde || 0).toFixed(0);
+            document.getElementById('apdeKorr').textContent = (korrigiert.apde - (basis.apde || 0)).toFixed(0);
+            document.getElementById('apdeEff').textContent = korrigiert.apde.toFixed(0);
+
+            // APDN
+            document.getElementById('apdnBase').textContent = (basis.apdn || 0).toFixed(0);
+            document.getElementById('apdnKorr').textContent = (korrigiert.apdn - (basis.apdn || 0)).toFixed(0);
+            document.getElementById('apdnEff').textContent = korrigiert.apdn.toFixed(0);
+            
+            // Angewandte Korrekturen auflisten
+            const korrText = correctionsList.length > 0 ? correctionsList.join(', ') : 'Keine';
+            document.getElementById('korrAngewandt').textContent = korrText;
+        }
+        
+        // Helper für PDF/Cloud
+        function getCurrentInputsAsText() {
+            const aufwuchs = document.getElementById('aufwuchsart').selectedOptions[0].text;
+            const bestand = document.getElementById('bestandestyp').selectedOptions[0].text;
+            const stadium = aktuellesStadiumLabel;
+            const konserv = document.getElementById('konservierungValue').value;
+            
+            const gewicht = document.getElementById('kuhGewicht').value;
+            const tsvOverride = document.getElementById('tsvOverride').value;
+            const tsv = tsvOverride || document.getElementById('tsvValue').textContent;
+
+            let text = `--- EINGABEN ---\n`;
+            text += `Aufwuchs: ${aufwuchs}\n`;
+            text += `Bestandestyp: ${bestand}\n`;
+            text += `Stadium: ${stadium}\n`;
+            text += `Konservierung: ${konserv}\n\n`;
+            text += `--- PARAMETER (Optional) ---\n`;
+            text += `Kuhgewicht: ${gewicht} kg\n`;
+            text += `TSV: ${tsv} kg (${tsvOverride ? 'Manuell' : 'Automatisch'})\n\n`;
+            
+            text += `--- KORREKTUREN ---\n`;
+            text += `${document.getElementById('korrAngewandt').textContent}\n\n`;
+            
+            text += `--- ERGEBNISSE ---\n`;
+            text += `MPP ${document.getElementById('mppLimit').textContent}: ${document.getElementById('mppValue').textContent} kg\n\n`;
+            
+            text += `NEL (MJ/kg TS): ${document.getElementById('nelEff').textContent} (Basis: ${document.getElementById('nelBase').textContent})\n`;
+            text += `APDE (g/kg TS): ${document.getElementById('apdeEff').textContent} (Basis: ${document.getElementById('apdeBase').textContent})\n`;
+            text += `APDN (g/kg TS): ${document.getElementById('apdnEff').textContent} (Basis: ${document.getElementById('apdnBase').textContent})\n`;
+            
+            return text;
+        }
+        
+        function getCurrentDataAsObject() {
+            const korrigierteWerte = {
+                nel: parseFloat(document.getElementById('nelEff').textContent),
+                apde: parseFloat(document.getElementById('apdeEff').textContent),
+                apdn: parseFloat(document.getElementById('apdnEff').textContent)
+            };
+            const mppResult = {
+                mpp: parseFloat(document.getElementById('mppValue').textContent),
+                limit: document.getElementById('mppLimit').textContent.replace(/[()]/g, '').split(': ')[1]
+            };
+            const tsvOverride = document.getElementById('tsvOverride').value;
+            
+            return {
+                inputs: {
+                    aufwuchs: document.getElementById('aufwuchsart').value,
+                    aufwuchsLabel: document.getElementById('aufwuchsart').selectedOptions[0].text,
+                    bestand: document.getElementById('bestandestyp').value,
+                    bestandLabel: document.getElementById('bestandestyp').selectedOptions[0].text,
+                    stadium: document.getElementById('stadiumValue').value,
+                    stadiumLabel: aktuellesStadiumLabel,
+                    konservierung: document.getElementById('konservierungValue').value
+                },
+                parameters: {
+                    kuhGewicht: parseFloat(document.getElementById('kuhGewicht').value) || 630,
+                    tsvOverride: tsvOverride ? parseFloat(tsvOverride) : null,
+                    tsvBerechnet: parseFloat(document.getElementById('tsvValue').textContent)
+                },
+                corrections: Array.from(document.querySelectorAll('.correction-check:checked')).map(cb => {
+                    const factor = CorrectionFactors[document.getElementById('konservierungValue').value].find(f => f.id === cb.dataset.id);
+                    return factor ? factor.label.split(' (')[0] : cb.dataset.id;
+                }),
+                baseValues: window.currentBaseValues,
+                correctedValues: korrigierteWerte,
+                result: mppResult
+            };
+        }
+
+        // PDF SPEICHERN
+        async function handleSavePDF() {
+            // Prüfen ob jsPDF geladen ist
+            if (typeof window.jspdf === 'undefined' || typeof window.jspdf.jsPDF === 'undefined') {
+                console.error("jsPDF nicht geladen.");
+                alert("Fehler: PDF-Bibliothek konnte nicht geladen werden.");
+                return;
+            }
+            
+            const person = document.getElementById('personName').value || 'Unbekannt';
+            const probe = document.getElementById('probeNummer').value || 'N/A';
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            doc.setFontSize(18);
+            doc.text("Futterbewertung Bericht", 14, 22);
+
+            doc.setFontSize(11);
+            doc.text(`Prüfer: ${person}`, 14, 32);
+            doc.text(`Proben-Nr: ${probe}`, 14, 38);
+            
+            doc.setFontSize(10);
+            const reportText = getCurrentInputsAsText();
+            // splitTextToSize ist wichtig für lange Textblöcke
+            const lines = doc.splitTextToSize(reportText, 180);
+            doc.text(lines, 14, 50);
+
+            doc.save(`Futterbericht_${probe.replace(/[^a-z0-9]/gi, '_') || 'Bericht'}.pdf`);
+        }
+
+        // CLOUD SPEICHERN
+        async function handleSaveCloud() {
+            const personName = document.getElementById('personName').value;
+            const probeNummer = document.getElementById('probeNummer').value;
+            const feedbackEl = document.getElementById('saveFeedback');
+
+            if (!personName || !probeNummer) {
+                feedbackEl.textContent = "Bitte Name und Proben-Nr. für die Cloud-Speicherung angeben.";
+                feedbackEl.className = "feedback-message text-red-600";
+                feedbackEl.classList.remove('hidden');
+                return;
+            }
+            
+            if (!db || !auth) {
+                 feedbackEl.textContent = "Firebase ist nicht initialisiert. Speichern nicht möglich.";
+                 feedbackEl.className = "feedback-message text-red-600";
+                 feedbackEl.classList.remove('hidden');
+                 return;
+            }
+
+            feedbackEl.textContent = "Speichern...";
+            feedbackEl.className = "feedback-message text-blue-600";
+            feedbackEl.classList.remove('hidden');
+
+            try {
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+                const userId = auth.currentUser?.uid || crypto.randomUUID();
+                
+                const probeData = getCurrentDataAsObject();
+                
+                const docData = {
+                    ...probeData,
+                    personName,
+                    probeNummer,
+                    createdAt: serverTimestamp(),
+                    createdBy: userId,
+                    appId: appId // appId mitspeichern für spätere Filterung
+                };
+
+                // Speichern in öffentlicher Sammlung
+                const colRef = collection(db, 'artifacts', appId, 'public', 'data', 'futterproben');
+                const docRef = await addDoc(colRef, docData);
+
+                feedbackEl.textContent = `Probe ${probeNummer} erfolgreich gespeichert (ID: ${docRef.id})`;
+                feedbackEl.className = "feedback-message text-green-600";
+                
+            } catch (error) {
+                console.error("Fehler beim Speichern in Firestore:", error);
+                feedbackEl.textContent = "Fehler beim Speichern. Details siehe Konsole.";
+                feedbackEl.className = "feedback-message text-red-600";
+            }
+        }
+
+    </script>
+    <style>
+        body { background-color: #f4f7f6; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        .app-container { max-width: 640px; margin: 2rem auto; }
+        .step-box { background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+        .calc-btn { transition: all 0.2s ease; }
+        .calc-btn:disabled { background-color: #e0e0e0; border-color: #e0e0e0; color: #9e9e9e; cursor: not-allowed; }
+        .modal-btn { 
+            display: block; width: 100%; text-align: left;
+            padding: 0.75rem 1rem; border-radius: 8px; 
+            background-color: #f8f9fa; border: 1px solid #e0e0e0;
+            color: #333; transition: all 0.15s ease;
+        }
+        .modal-btn:hover { background-color: #e9ecef; border-color: #ced4da; }
+        .mpp-highlight { color: #166534; /* dark green */ }
+        .limit-highlight { color: #b91c1c; /* dark red */ }
+        .result-grid { display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 0.5rem; }
+        .result-grid > span { padding: 0.25rem 0.5rem; }
+        .result-grid > .font-semibold { background-color: #f4f7f6; border-radius: 4px; }
+        .feedback-message { 
+            font-size: 0.875rem; font-weight: 500; 
+            padding: 0.75rem 1rem; border-radius: 6px; 
+            margin-top: 1rem;
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .feedback-message.hidden { opacity: 0; }
+        .feedback-message.text-green-600 { background-color: #d1fae5; color: #065f46; }
+        .feedback-message.text-red-600 { background-color: #fee2e2; color: #991b1b; }
+        .feedback-message.text-blue-600 { background-color: #dbeafe; color: #1e40af; }
+    </style>
+</head>
+<body class="antialiased text-gray-900">
+
+    <!-- Lade-Indikator -->
+    <div id="loader" class="app-container p-6 text-center">
+        <p class="text-lg font-semibold text-green-700">Lade Futter-Rechner...</p>
+    </div>
+
+    <!-- App-Body -->
+    <div id="app-body" class="app-container p-4 md:p-6 space-y-6 hidden">
+        
+        <header class="text-center">
+            <h1 class="text-3xl font-bold text-green-800">Futterbewertung</h1>
+            <p class="text-lg text-gray-600">basierend auf AGFF Merkblatt 3 & Agroscope 2017</p>
+        </header>
+
+        <!-- Eingabe-Container -->
+        <div class="step-box p-5 md:p-6 space-y-5">
+            <!-- Schritt 1: Aufwuchsart -->
+            <div>
+                <label for="aufwuchsart" class="block text-sm font-semibold text-gray-700 mb-1.5">Schritt 1: Aufwuchsart</label>
+                <select id="aufwuchsart" class="w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    <option value="" disabled selected>Bitte wählen...</option>
+                    <option value="erster">1. Aufwuchs (Frühling)</option>
+                    <option value="folge">Folgeaufwüchse (Sommer/Herbst)</option>
+                </select>
+            </div>
+            
+            <!-- Schritt 2: Bestandestyp -->
+            <div id="step2-bestand" class="opacity-50 pointer-events-none transition-opacity">
+                <label for="bestandestyp" class="block text-sm font-semibold text-gray-700 mb-1.5">Schritt 2: Bestandestyp</label>
+                <select id="bestandestyp" class="w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500 focus:border-green-500">
+                    <option value="" disabled selected>Bitte wählen...</option>
+                    <option value="G">G - Gräserreich (andere)</option>
+                    <option value="GR">GR - Gräserreich (Raigräser)</option>
+                    <option value="A">A - Ausgewogen (andere)</option>
+                    <option value="AR">AR - Ausgewogen (Raigräser)</option>
+                    <option value="L">L - Leguminosenreich</option>
+                    <option value="KF">KF - Kräuterreich (fein)</option>
+                    <option value="KG">KG - Kräuterreich (grob)</option>
+                </select>
+            </div>
+
+            <!-- Schritt 3: Stadium -->
+            <div id="step3-stadium" class="opacity-50 pointer-events-none transition-opacity">
+                <label class_model="block text-sm font-semibold text-gray-700 mb-1.5">Schritt 3: Stadium</label>
+                <button id="step3-stadium-btn" class="w-full text-left p-2.5 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-50 focus:ring-2 focus:ring-green-500">
+                    Stadium bestimmen
+                </button>
+                <input type="hidden" id="stadiumValue">
+                <input type="hidden" id="konservierungValue">
+            </div>
+
+            <!-- Schritt 4: Berechnung -->
+            <div>
+                 <label class="block text-sm font-semibold text-gray-700 mb-1.5">Schritt 4: Berechnung</label>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    <button data-konservierung="greenfeed" disabled class="calc-btn w-full px-4 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 border border-green-700">
+                        Grünfutter
+                    </button>
+                    <button data-konservierung="silage" disabled class="calc-btn w-full px-4 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 border border-green-700">
+                        Silage
+                    </button>
+                    <button data-konservierung="hay" disabled class="calc-btn w-full px-4 py-2.5 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75 border border-green-700">
+                        Dürrfutter
+                    </button>
+                 </div>
+            </div>            
+        </div> <!-- Ende Eingabe-Container -->
+
+
+        <!-- Ergebnis-Container -->
+        <div id="result" class="step-box p-5 md:p-6 space-y-4 hidden">
+            <h2 class="text-2xl font-bold text-green-800">Ergebnis der Schätzung</h2>
+            
+            <!-- MPP Resultat -->
+            <div class="text-center bg-green-50 p-4 rounded-lg border border-green-200">
+                <span class="block text-sm font-medium text-gray-600">Milchproduktionspotenzial (MPP)</span>
+                <span id="mppValue" class="block text-5xl font-bold mpp-highlight">0.0</span>
+                <span class="block text-sm text-gray-500">kg ECM / Kuh & Tag</span>
+                <span id="mppLimit" class="block text-xs font-semibold limit-highlight mt-1">(Limitiert durch: ...)</span>
+            </div>
+            
+            <div class="text-center bg-gray-50 p-3 rounded-lg border border-gray-200">
+                <span class="block text-sm font-medium text-gray-600">Möglicher Verzehr (TSV)</span>
+                <span id="tsvValue" class="block text-2xl font-bold text-gray-800">0.0</span>
+                <span class="block text-sm text-gray-500">kg TS / Kuh & Tag</span>
+            </div>
+
+            <!-- Nährwert-Details -->
+            <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Nährwert-Details (pro kg TS)</h3>
+                <div class="result-grid text-sm">
+                    <!-- Header -->
+                    <span class="font-semibold">Nährstoff</span>
+                    <span class="font-semibold text-right">Basis</span>
+                    <span class="font-semibold text-right">Korr.</span>
+                    <span class="font-semibold text-right">Effektiv</span>
+                    
+                    <!-- NEL -->
+                    <span class="font-medium">NEL (MJ)</span>
+                    <span id="nelBase" class="text-right text-gray-600">0.00</span>
+                    <span id="nelKorr" class="text-right text-gray-600">0.00</span>
+                    <span id="nelEff" class="text-right font-bold text-gray-900">0.00</span>
+                    
+                    <!-- APDE -->
+                    <span class="font-medium">APDE (g)</span>
+                    <span id="apdeBase" class="text-right text-gray-600">0</span>
+                    <span id="apdeKorr" class="text-right text-gray-600">0</span>
+                    <span id="apdeEff" class="text-right font-bold text-gray-900">0</span>
+                    
+                    <!-- APDN -->
+                    <span class="font-medium">APDN (g)</span>
+                    <span id="apdnBase" class="text-right text-gray-600">0</span>
+                    <span id="apdnKorr" class="text-right text-gray-600">0</span>
+                    <span id="apdnEff" class="text-right font-bold text-gray-900">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schritt 5: Korrekturen -->
+        <div id="corrections-container" class="step-box p-5 md:p-6 space-y-4 hidden">
+             <h3 class="text-lg font-semibold text-gray-800">Schritt 5: Konservierungs-Korrekturen</h3>
+             <p class="text-sm text-gray-600">Wählen Sie zutreffende Mängel (gem. Merkblatt S. 5). Die Werte werden live angepasst.</p>
+             <div id="corrections-list" class="space-y-2">
+                 <!-- Checkboxen werden hier dynamisch eingefügt -->
+             </div>
+             <div>
+                <span class="text-sm font-semibold">Angewandt: </span>
+                <span id="korrAngewandt" class="text-sm text-gray-700">Keine</span>
+             </div>
+        </div>
+        
+        <!-- Akkordeon: Parameter (Optionale Anpassungen) -->
+        <div id="accordion-wrapper" class="hidden">
+            <div class="step-box overflow-hidden">
+                <button id="accordion-toggle" class="w-full flex justify-between items-center p-4 bg-gray-50 hover:bg-gray-100 border-b border-gray-200">
+                    <span class="text-base font-semibold text-gray-700">Optionale Parameter anpassen</span>
+                    <svg id="accordion-icon" class="w-5 h-5 text-gray-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="accordion-content" class="p-5 space-y-4 hidden">
+                    <div>
+                        <label for="kuhGewicht" class="block text-sm font-medium text-gray-700 mb-1">Kuhgewicht (kg)</label>
+                        <input type="number" id="kuhGewicht" value="630" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm">
+                        <p class="text-xs text-gray-500 mt-1">Standardwert: 630 kg. Passt den Erhaltungsbedarf an.</p>
+                    </div>
+                    <div>
+                        <label for="tsvOverride" class="block text-sm font-medium text-gray-700 mb-1">TSV überschreiben (kg TS)</label>
+                        <input type="number" id="tsvOverride" placeholder="Automatisch" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm">
+                        <p class="text-xs text-gray-500 mt-1">Standard: TSV-Wert aus Tabelle.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sektion Speichern (nur sichtbar mit Resultat) -->
+        <div id="save-section" class="step-box p-5 md:p-6 space-y-4 hidden">
+            <h3 class="text-lg font-semibold text-gray-800">Bericht speichern</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
+                <input type="text" id="personName" placeholder="Ihr Name (für Cloud)" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500">
+                <input type="text" id="probeNummer" placeholder="Proben-Nr. (für Cloud)" class="w-full p-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="flex flex-col md:flex-row gap-4">
+                <button id="savePdfButton" class="w-full md:w-1/2 px-4 py-2.5 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                    PDF Speichern
+                </button>
+                <button id="saveCloudButton" class="w-full md:w-1/2 px-4 py-2.5 bg-gray-700 text-white font-semibold rounded-lg shadow-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-75">
+                    In Cloud Speichern
+                </button>
+            </div>
+            <div id="saveFeedback" class="feedback-message hidden"></div>
+        </div>
+
+    </div> <!-- Ende App-Body -->
+    
+    <!-- Stadium Bestimmen Modal -->
+    <div id="stadiumModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4 hidden">
+        <div class="bg-white rounded-lg shadow-xl w-full max-w-lg max-h-[80vh] overflow-y-auto">
+            <div class="p-5 border-b border-gray-200 flex justify-between items-center">
+                 <h2 class="text-xl font-semibold text-gray-800">Stadium bestimmen</h2>
+                 <button id="closeModalBtn" class="text-gray-400 hover:text-gray-600">&times;</button>
+            </div>
+            <div id="modalContent" class="p-5">
+                <!-- Inhalt wird dynamisch geladen -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

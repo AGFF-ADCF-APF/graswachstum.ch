@@ -1,0 +1,355 @@
+{
+  "erster": {
+    "greenfeed": {
+      "G": {
+        "1": { "nev": 7.5, "nel": 7.1, "apde": 154, "apdn": 121, "tsv": 18, "rp": 172, "rf": 231, "ndf": 387, "adf": 202, "zucker": 209, "vos": 84, "ra": 96 },
+        "2": { "nev": 6.9, "nel": 7.3, "apde": 132, "apdn": 115, "tsv": 18, "rp": 200, "rf": 197, "ndf": 416, "adf": 224, "zucker": 164, "vos": 83, "ra": 95 },
+        "3": { "nev": 6.5, "nel": 6.3, "apde": 102, "apdn": 99, "tsv": 16, "rp": 149, "rf": 237, "ndf": 469, "adf": 260, "zucker": 161, "vos": 78, "ra": 89 },
+        "4": { "nev": 5.9, "nel": 5.8, "apde": 81, "apdn": 92, "tsv": 15, "rp": 122, "rf": 275, "ndf": 516, "adf": 302, "zucker": 124, "vos": 72, "ra": 88 },
+        "5": { "nev": 5.1, "nel": 5.2, "apde": 68, "apdn": 82, "tsv": 13, "rp": 104, "rf": 294, "ndf": 539, "adf": 324, "zucker": 121, "vos": 66, "ra": 85 },
+        "6": { "nev": 4.6, "nel": 4.7, "apde": 56, "apdn": 73, "tsv": 12, "rp": 89, "rf": 313, "ndf": 569, "adf": 349, "zucker": 100, "vos": 61, "ra": 81 },
+        "7": { "nev": 4.1, "nel": 4.3, "apde": 48, "apdn": 67, "tsv": 11, "rp": 79, "rf": 328, "ndf": 591, "adf": 368, "zucker": 85, "vos": 56, "ra": 78 }
+      },
+      "GR": {
+        "1": { "nev": 7.3, "nel": 6.9, "apde": 115, "apdn": 129, "tsv": 18, "rp": 157, "rf": 194, "ndf": 345, "adf": 184, "zucker": 290, "vos": 83, "ra": 92 },
+        "2": { "nev": 7.4, "nel": 7, "apde": 122, "apdn": 114, "tsv": 18, "rp": 182, "rf": 177, "ndf": 366, "adf": 201, "zucker": 233, "vos": 84, "ra": 91 },
+        "3": { "nev": 6.7, "nel": 7, "apde": 95, "apdn": 104, "tsv": 17, "rp": 142, "rf": 207, "ndf": 406, "adf": 230, "zucker": 241, "vos": 82, "ra": 86 },
+        "4": { "nev": 6.4, "nel": 6.6, "apde": 73, "apdn": 94, "tsv": 16, "rp": 111, "rf": 242, "ndf": 459, "adf": 270, "zucker": 201, "vos": 78, "ra": 84 },
+        "5": { "nev": 5.7, "nel": 5.8, "apde": 60, "apdn": 84, "tsv": 15, "rp": 92, "rf": 273, "ndf": 498, "adf": 302, "zucker": 175, "vos": 71, "ra": 81 },
+        "6": { "nev": 5.2, "nel": 5.2, "apde": 47, "apdn": 75, "tsv": 13, "rp": 78, "rf": 296, "ndf": 530, "adf": 327, "zucker": 146, "vos": 66, "ra": 77 },
+        "7": { "nev": 4.7, "nel": 4.8, "apde": 42, "apdn": 68, "tsv": 12, "rp": 70, "rf": 313, "ndf": 554, "adf": 347, "zucker": 127, "vos": 61, "ra": 74 }
+      },
+      "A": {
+        "1": { "nev": 7, "nel": 7.4, "apde": 151, "apdn": 120, "tsv": 18, "rp": 156, "rf": 227, "ndf": 337, "adf": 188, "zucker": 203, "vos": 83, "ra": 99 },
+        "2": { "nev": 6.8, "nel": 7.2, "apde": 133, "apdn": 115, "tsv": 18, "rp": 182, "rf": 200, "ndf": 365, "adf": 210, "zucker": 162, "vos": 82, "ra": 98 },
+        "3": { "nev": 6.4, "nel": 6.7, "apde": 106, "apdn": 105, "tsv": 17, "rp": 159, "rf": 213, "ndf": 409, "adf": 242, "zucker": 155, "vos": 79, "ra": 94 },
+        "4": { "nev": 5.9, "nel": 6.1, "apde": 95, "apdn": 88, "tsv": 15, "rp": 132, "rf": 247, "ndf": 450, "adf": 281, "zucker": 127, "vos": 75, "ra": 94 },
+        "5": { "nev": 5.4, "nel": 5.4, "apde": 87, "apdn": 77, "tsv": 14, "rp": 116, "rf": 264, "ndf": 471, "adf": 301, "zucker": 118, "vos": 69, "ra": 93 },
+        "6": { "nev": 4.9, "nel": 5, "apde": 76, "apdn": 66, "tsv": 13, "rp": 101, "rf": 281, "ndf": 497, "adf": 325, "zucker": 101, "vos": 64, "ra": 90 },
+        "7": { "nev": 4.5, "nel": 4.6, "apde": 68, "apdn": 59, "tsv": 12, "rp": 92, "rf": 296, "ndf": 517, "adf": 344, "zucker": 89, "vos": 59, "ra": 88 }
+      },
+      "AR": {
+        "1": { "nev": 7.5, "nel": 7, "apde": 117, "apdn": 135, "tsv": 18, "rp": 145, "rf": 202, "ndf": 307, "adf": 174, "zucker": 259, "vos": 84, "ra": 96 },
+        "2": { "nev": 7.4, "nel": 7, "apde": 126, "apdn": 114, "tsv": 18, "rp": 166, "rf": 188, "ndf": 329, "adf": 194, "zucker": 211, "vos": 84, "ra": 96 },
+        "3": { "nev": 7.1, "nel": 6.7, "apde": 102, "apdn": 107, "tsv": 17, "rp": 153, "rf": 192, "ndf": 364, "adf": 220, "zucker": 213, "vos": 83, "ra": 92 },
+        "4": { "nev": 6.7, "nel": 6.4, "apde": 82, "apdn": 98, "tsv": 17, "rp": 124, "rf": 224, "ndf": 408, "adf": 258, "zucker": 183, "vos": 79, "ra": 92 },
+        "5": { "nev": 5.9, "nel": 5.8, "apde": 88, "apdn": 71, "tsv": 15, "rp": 107, "rf": 248, "ndf": 439, "adf": 284, "zucker": 160, "vos": 73, "ra": 90 },
+        "6": { "nev": 5.3, "nel": 5.2, "apde": 75, "apdn": 59, "tsv": 14, "rp": 93, "rf": 268, "ndf": 469, "adf": 309, "zucker": 140, "vos": 68, "ra": 87 },
+        "7": { "nev": 4.9, "nel": 4.8, "apde": 67, "apdn": 52, "tsv": 13, "rp": 84, "rf": 284, "ndf": 492, "adf": 329, "zucker": 124, "vos": 63, "ra": 85 }
+      },
+      "L": {
+        "1": { "nev": 7.5, "nel": 7.1, "apde": 123, "apdn": 167, "tsv": 18, "rp": 250, "rf": 125, "ndf": 259, "adf": 163, "zucker": 165, "vos": 84, "ra": 107 },
+        "2": { "nev": 7.4, "nel": 7, "apde": 154, "apdn": 120, "tsv": 18, "rp": 231, "rf": 148, "ndf": 282, "adf": 186, "zucker": 139, "vos": 84, "ra": 106 },
+        "3": { "nev": 7.3, "nel": 6.9, "apde": 116, "apdn": 139, "tsv": 18, "rp": 208, "rf": 166, "ndf": 303, "adf": 204, "zucker": 139, "vos": 83, "ra": 103 },
+        "4": { "nev": 6.8, "nel": 6.5, "apde": 122, "apdn": 109, "tsv": 17, "rp": 196, "rf": 183, "ndf": 333, "adf": 237, "zucker": 137, "vos": 80, "ra": 103 },
+        "5": { "nev": 6.2, "nel": 6.1, "apde": 109, "apdn": 102, "tsv": 16, "rp": 221, "rf": 163, "ndf": 364, "adf": 268, "zucker": 114, "vos": 75, "ra": 95 },
+        "6": { "nev": 5.6, "nel": 5.6, "apde": 95, "apdn": 91, "tsv": 15, "rp": 201, "rf": 180, "ndf": 388, "adf": 293, "zucker": 100, "vos": 71, "ra": 90 },
+        "7": { "nev": 5.1, "nel": 5.1, "apde": 84, "apdn": 82, "tsv": 14, "rp": 187, "rf": 191, "ndf": 407, "adf": 313, "zucker": 89, "vos": 66, "ra": 87 }
+      },
+      "KF": {
+        "1": { "nev": 7.3, "nel": 6.9, "apde": 114, "apdn": 129, "tsv": 18, "rp": 194, "rf": 124, "ndf": 236, "adf": 159, "zucker": 236, "vos": 83, "ra": 102 },
+        "2": { "nev": 7.2, "nel": 6.8, "apde": 123, "apdn": 112, "tsv": 18, "rp": 141, "rf": 184, "ndf": 251, "adf": 173, "zucker": 192, "vos": 83, "ra": 105 },
+        "3": { "nev": 6.9, "nel": 6.6, "apde": 104, "apdn": 100, "tsv": 17, "rp": 151, "rf": 161, "ndf": 282, "adf": 200, "zucker": 169, "vos": 82, "ra": 105 },
+        "4": { "nev": 6.6, "nel": 6.3, "apde": 97, "apdn": 84, "tsv": 16, "rp": 127, "rf": 183, "ndf": 305, "adf": 228, "zucker": 144, "vos": 80, "ra": 109 },
+        "5": { "nev": 6.4, "nel": 6.1, "apde": 93, "apdn": 78, "tsv": 16, "rp": 117, "rf": 189, "ndf": 312, "adf": 238, "zucker": 125, "vos": 78, "ra": 113 },
+        "6": { "nev": 5.9, "nel": 5.7, "apde": 84, "apdn": 68, "tsv": 15, "rp": 104, "rf": 203, "ndf": 329, "adf": 257, "zucker": 111, "vos": 75, "ra": 111 },
+        "7": { "nev": 5.5, "nel": 5.4, "apde": 76, "apdn": 60, "tsv": 14, "rp": 94, "rf": 213, "ndf": 341, "adf": 271, "zucker": 101, "vos": 72, "ra": 110 }
+      },
+      "KG": {
+        "1": { "nev": 6.7, "nel": 6.4, "apde": 108, "apdn": 123, "tsv": 17, "rp": 185, "rf": 144, "ndf": 255, "adf": 182, "zucker": 207, "vos": 80, "ra": 121 },
+        "2": { "nev": 6.5, "nel": 6.3, "apde": 114, "apdn": 104, "tsv": 16, "rp": 171, "rf": 155, "ndf": 272, "adf": 195, "zucker": 191, "vos": 79, "ra": 121 },
+        "3": { "nev": 6.2, "nel": 6, "apde": 102, "apdn": 100, "tsv": 15, "rp": 168, "rf": 153, "ndf": 294, "adf": 212, "zucker": 189, "vos": 77, "ra": 120 },
+        "4": { "nev": 5.6, "nel": 5.6, "apde": 93, "apdn": 93, "tsv": 14, "rp": 181, "rf": 140, "ndf": 304, "adf": 223, "zucker": 179, "vos": 72, "ra": 119 },
+        "5": { "nev": 5.1, "nel": 5, "apde": 87, "apdn": 87, "tsv": 13, "rp": 187, "rf": 131, "ndf": 316, "adf": 235, "zucker": 178, "vos": 67, "ra": 119 },
+        "6": { "nev": 4.6, "nel": 4.5, "apde": 80, "apdn": 80, "tsv": 12, "rp": 188, "rf": 126, "ndf": 328, "adf": 248, "zucker": 174, "vos": 62, "ra": 118 },
+        "7": { "nev": 4.1, "nel": 4, "apde": 74, "apdn": 74, "tsv": 11, "rp": 186, "rf": 124, "ndf": 337, "adf": 258, "zucker": 171, "vos": 57, "ra": 118 }
+      }
+    },
+    "silage": {
+      "G": {
+        "1": { "nev": 6.9, "nel": 7.3, "apde": 91, "apdn": 151, "tsv": 17, "rp": 183, "rf": 242, "ndf": 361, "adf": 220, "zucker": 76, "vos": 83, "ra": 103 },
+        "2": { "nev": 6.7, "nel": 7.1, "apde": 88, "apdn": 130, "tsv": 17, "rp": 212, "rf": 207, "ndf": 387, "adf": 242, "zucker": 59, "vos": 81, "ra": 102 },
+        "3": { "nev": 6.1, "nel": 6.3, "apde": 82, "apdn": 99, "tsv": 15, "rp": 157, "rf": 250, "ndf": 436, "adf": 280, "zucker": 58, "vos": 76, "ra": 96 },
+        "4": { "nev": 5.5, "nel": 5.5, "apde": 81, "apdn": 74, "tsv": 14, "rp": 128, "rf": 290, "ndf": 478, "adf": 322, "zucker": 45, "vos": 70, "ra": 94 },
+        "5": { "nev": 4.8, "nel": 4.8, "apde": 67, "apdn": 68, "tsv": 12, "rp": 108, "rf": 308, "ndf": 497, "adf": 342, "zucker": 43, "vos": 64, "ra": 91 },
+        "6": { "nev": 4.3, "nel": 4.3, "apde": 56, "apdn": 59, "tsv": 11, "rp": 93, "rf": 326, "ndf": 524, "adf": 366, "zucker": 38, "vos": 59, "ra": 87 },
+        "7": { "nev": 3.9, "nel": 3.9, "apde": 48, "apdn": 53, "tsv": 10, "rp": 83, "rf": 340, "ndf": 544, "adf": 383, "zucker": 33, "vos": 54, "ra": 85 }
+      },
+      "GR": {
+        "1": { "nev": 6.8, "nel": 7.1, "apde": 89, "apdn": 128, "tsv": 17, "rp": 167, "rf": 204, "ndf": 323, "adf": 201, "zucker": 111, "vos": 82, "ra": 99 },
+        "2": { "nev": 6.8, "nel": 7.2, "apde": 89, "apdn": 121, "tsv": 17, "rp": 188, "rf": 192, "ndf": 343, "adf": 219, "zucker": 89, "vos": 83, "ra": 98 },
+        "3": { "nev": 6.5, "nel": 6.8, "apde": 85, "apdn": 94, "tsv": 16, "rp": 150, "rf": 221, "ndf": 378, "adf": 249, "zucker": 92, "vos": 80, "ra": 93 },
+        "4": { "nev": 6.1, "nel": 6.3, "apde": 78, "apdn": 73, "tsv": 15, "rp": 116, "rf": 255, "ndf": 427, "adf": 290, "zucker": 76, "vos": 76, "ra": 90 },
+        "5": { "nev": 5.5, "nel": 5.5, "apde": 61, "apdn": 70, "tsv": 14, "rp": 97, "rf": 286, "ndf": 460, "adf": 322, "zucker": 67, "vos": 69, "ra": 87 },
+        "6": { "nev": 4.9, "nel": 4.9, "apde": 51, "apdn": 60, "tsv": 13, "rp": 83, "rf": 308, "ndf": 490, "adf": 346, "zucker": 58, "vos": 64, "ra": 83 },
+        "7": { "nev": 4.5, "nel": 4.5, "apde": 46, "apdn": 53, "tsv": 11, "rp": 75, "rf": 324, "ndf": 512, "adf": 364, "zucker": 52, "vos": 59, "ra": 80 }
+      },
+      "A": {
+        "1": { "nev": 6.8, "nel": 7.2, "apde": 90, "apdn": 149, "tsv": 17, "rp": 168, "rf": 239, "ndf": 316, "adf": 206, "zucker": 74, "vos": 82, "ra": 105 },
+        "2": { "nev": 6.7, "nel": 7, "apde": 88, "apdn": 131, "tsv": 17, "rp": 194, "rf": 210, "ndf": 341, "adf": 229, "zucker": 60, "vos": 81, "ra": 105 },
+        "3": { "nev": 6.2, "nel": 6.4, "apde": 83, "apdn": 105, "tsv": 16, "rp": 166, "rf": 225, "ndf": 382, "adf": 260, "zucker": 57, "vos": 77, "ra": 101 },
+        "4": { "nev": 5.7, "nel": 5.7, "apde": 77, "apdn": 87, "tsv": 14, "rp": 139, "rf": 261, "ndf": 419, "adf": 301, "zucker": 47, "vos": 72, "ra": 101 },
+        "5": { "nev": 5.1, "nel": 5.1, "apde": 70, "apdn": 76, "tsv": 13, "rp": 121, "rf": 277, "ndf": 436, "adf": 320, "zucker": 43, "vos": 67, "ra": 100 },
+        "6": { "nev": 4.6, "nel": 4.6, "apde": 62, "apdn": 66, "tsv": 12, "rp": 106, "rf": 294, "ndf": 461, "adf": 343, "zucker": 38, "vos": 62, "ra": 96 },
+        "7": { "nev": 4.2, "nel": 4.2, "apde": 55, "apdn": 59, "tsv": 11, "rp": 96, "rf": 308, "ndf": 480, "adf": 361, "zucker": 33, "vos": 57, "ra": 94 }
+      },
+      "AR": {
+        "1": { "nev": 6.9, "nel": 7.3, "apde": 90, "apdn": 133, "tsv": 17, "rp": 155, "rf": 213, "ndf": 290, "adf": 192, "zucker": 98, "vos": 83, "ra": 103 },
+        "2": { "nev": 6.9, "nel": 7.2, "apde": 89, "apdn": 124, "tsv": 17, "rp": 177, "rf": 198, "ndf": 310, "adf": 213, "zucker": 80, "vos": 83, "ra": 104 },
+        "3": { "nev": 6.6, "nel": 6.9, "apde": 86, "apdn": 101, "tsv": 17, "rp": 161, "rf": 204, "ndf": 341, "adf": 239, "zucker": 80, "vos": 81, "ra": 99 },
+        "4": { "nev": 6.2, "nel": 6.4, "apde": 80, "apdn": 82, "tsv": 16, "rp": 130, "rf": 237, "ndf": 381, "adf": 278, "zucker": 70, "vos": 78, "ra": 97 },
+        "5": { "nev": 5.6, "nel": 5.6, "apde": 73, "apdn": 71, "tsv": 14, "rp": 113, "rf": 261, "ndf": 408, "adf": 303, "zucker": 60, "vos": 71, "ra": 97 },
+        "6": { "nev": 5, "nel": 5, "apde": 63, "apdn": 61, "tsv": 13, "rp": 99, "rf": 280, "ndf": 436, "adf": 326, "zucker": 52, "vos": 66, "ra": 94 },
+        "7": { "nev": 4.6, "nel": 4.6, "apde": 57, "apdn": 55, "tsv": 12, "rp": 90, "rf": 295, "ndf": 457, "adf": 345, "zucker": 46, "vos": 61, "ra": 92 }
+      },
+      "L": {
+        "1": { "nev": 7.4, "nel": 7, "apde": 91, "apdn": 164, "tsv": 18, "rp": 264, "rf": 135, "ndf": 247, "adf": 182, "zucker": 63, "vos": 83, "ra": 116 },
+        "2": { "nev": 7.2, "nel": 6.9, "apde": 90, "apdn": 152, "tsv": 17, "rp": 243, "rf": 159, "ndf": 268, "adf": 205, "zucker": 52, "vos": 82, "ra": 113 },
+        "3": { "nev": 7.1, "nel": 6.7, "apde": 88, "apdn": 137, "tsv": 17, "rp": 219, "rf": 177, "ndf": 286, "adf": 223, "zucker": 51, "vos": 82, "ra": 110 },
+        "4": { "nev": 6.6, "nel": 6.3, "apde": 84, "apdn": 120, "tsv": 16, "rp": 192, "rf": 207, "ndf": 313, "adf": 255, "zucker": 51, "vos": 78, "ra": 110 },
+        "5": { "nev": 6, "nel": 5.9, "apde": 80, "apdn": 108, "tsv": 15, "rp": 172, "rf": 233, "ndf": 339, "adf": 285, "zucker": 40, "vos": 73, "ra": 102 },
+        "6": { "nev": 5.4, "nel": 5.3, "apde": 73, "apdn": 95, "tsv": 14, "rp": 154, "rf": 255, "ndf": 364, "adf": 312, "zucker": 35, "vos": 68, "ra": 98 },
+        "7": { "nev": 4.9, "nel": 4.8, "apde": 67, "apdn": 85, "tsv": 13, "rp": 141, "rf": 272, "ndf": 384, "adf": 333, "zucker": 30, "vos": 63, "ra": 95 }
+      },
+      "KF": {
+        "1": { "nev": 7.1, "nel": 6.7, "apde": 88, "apdn": 128, "tsv": 17, "rp": 135, "rf": 204, "ndf": 226, "adf": 178, "zucker": 88, "vos": 82, "ra": 109 },
+        "2": { "nev": 7, "nel": 6.7, "apde": 87, "apdn": 121, "tsv": 17, "rp": 153, "rf": 193, "ndf": 240, "adf": 193, "zucker": 71, "vos": 82, "ra": 113 },
+        "3": { "nev": 6.7, "nel": 6.4, "apde": 84, "apdn": 100, "tsv": 16, "rp": 174, "rf": 159, "ndf": 268, "adf": 221, "zucker": 63, "vos": 80, "ra": 112 },
+        "4": { "nev": 6.4, "nel": 6.1, "apde": 84, "apdn": 80, "tsv": 15, "rp": 197, "rf": 133, "ndf": 288, "adf": 250, "zucker": 54, "vos": 78, "ra": 117 },
+        "5": { "nev": 6.1, "nel": 5.9, "apde": 77, "apdn": 78, "tsv": 15, "rp": 201, "rf": 123, "ndf": 293, "adf": 258, "zucker": 47, "vos": 76, "ra": 121 },
+        "6": { "nev": 5.6, "nel": 5.6, "apde": 70, "apdn": 68, "tsv": 14, "rp": 196, "rf": 128, "ndf": 310, "adf": 275, "zucker": 41, "vos": 73, "ra": 119 },
+        "7": { "nev": 5.2, "nel": 5.2, "apde": 64, "apdn": 61, "tsv": 13, "rp": 191, "rf": 131, "ndf": 322, "adf": 289, "zucker": 37, "vos": 70, "ra": 119 }
+      },
+      "KG": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 83, "apdn": 122, "tsv": 16, "rp": 156, "rf": 194, "ndf": 243, "adf": 203, "zucker": 77, "vos": 79, "ra": 130 },
+        "2": { "nev": 6.3, "nel": 6.1, "apde": 81, "apdn": 113, "tsv": 15, "rp": 168, "rf": 180, "ndf": 259, "adf": 217, "zucker": 73, "vos": 78, "ra": 130 },
+        "3": { "nev": 6, "nel": 5.9, "apde": 78, "apdn": 101, "tsv": 14, "rp": 181, "rf": 161, "ndf": 279, "adf": 234, "zucker": 71, "vos": 75, "ra": 129 },
+        "4": { "nev": 5.4, "nel": 5.4, "apde": 74, "apdn": 93, "tsv": 13, "rp": 193, "rf": 147, "ndf": 287, "adf": 243, "zucker": 67, "vos": 70, "ra": 129 },
+        "5": { "nev": 4.9, "nel": 4.7, "apde": 68, "apdn": 86, "tsv": 12, "rp": 198, "rf": 137, "ndf": 296, "adf": 252, "zucker": 67, "vos": 65, "ra": 128 },
+        "6": { "nev": 4.3, "nel": 4.3, "apde": 61, "apdn": 79, "tsv": 11, "rp": 199, "rf": 132, "ndf": 305, "adf": 262, "zucker": 65, "vos": 60, "ra": 127 },
+        "7": { "nev": 3.9, "nel": 3.9, "apde": 55, "apdn": 73, "tsv": 10, "rp": 197, "rf": 130, "ndf": 312, "adf": 269, "zucker": 63, "vos": 55, "ra": 127 }
+      }
+    },
+    "hay": {
+      "G": {
+        "1": { "nev": 6.6, "nel": 6.4, "apde": 108, "apdn": 131, "tsv": 18, "rp": 187, "rf": 204, "ndf": 404, "adf": 218, "zucker": 167, "vos": 78, "ra": 94 },
+        "2": { "nev": 6.5, "nel": 6.3, "apde": 103, "apdn": 113, "tsv": 18, "rp": 216, "rf": 176, "ndf": 433, "adf": 240, "zucker": 131, "vos": 77, "ra": 93 },
+        "3": { "nev": 5.9, "nel": 5.8, "apde": 86, "apdn": 92, "tsv": 16, "rp": 135, "rf": 254, "ndf": 488, "adf": 278, "zucker": 128, "vos": 73, "ra": 88 },
+        "4": { "nev": 5.3, "nel": 5.3, "apde": 70, "apdn": 83, "tsv": 15, "rp": 111, "rf": 294, "ndf": 535, "adf": 321, "zucker": 98, "vos": 68, "ra": 86 },
+        "5": { "nev": 4.8, "nel": 4.6, "apde": 59, "apdn": 74, "tsv": 13, "rp": 94, "rf": 313, "ndf": 557, "adf": 342, "zucker": 98, "vos": 62, "ra": 83 },
+        "6": { "nev": 4.4, "nel": 4.1, "apde": 47, "apdn": 65, "tsv": 12, "rp": 75, "rf": 342, "ndf": 597, "adf": 379, "zucker": 73, "vos": 57, "ra": 79 },
+        "7": { "nev": 4, "nel": 3.7, "apde": 40, "apdn": 60, "tsv": 11, "rp": 65, "rf": 365, "ndf": 629, "adf": 412, "zucker": 56, "vos": 53, "ra": 76 }
+      },
+      "GR": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 111, "apdn": 103, "tsv": 18, "rp": 171, "rf": 173, "ndf": 362, "adf": 198, "zucker": 232, "vos": 78, "ra": 90 },
+        "2": { "nev": 6.6, "nel": 6.4, "apde": 102, "apdn": 105, "tsv": 18, "rp": 193, "rf": 164, "ndf": 384, "adf": 217, "zucker": 187, "vos": 79, "ra": 90 },
+        "3": { "nev": 6.4, "nel": 6.2, "apde": 82, "apdn": 94, "tsv": 18, "rp": 129, "rf": 225, "ndf": 423, "adf": 247, "zucker": 194, "vos": 76, "ra": 84 },
+        "4": { "nev": 6, "nel": 5.9, "apde": 63, "apdn": 85, "tsv": 16, "rp": 100, "rf": 260, "ndf": 477, "adf": 288, "zucker": 161, "vos": 73, "ra": 82 },
+        "5": { "nev": 5.3, "nel": 5.3, "apde": 53, "apdn": 77, "tsv": 15, "rp": 85, "rf": 291, "ndf": 515, "adf": 321, "zucker": 140, "vos": 67, "ra": 79 },
+        "6": { "nev": 4.7, "nel": 4.7, "apde": 42, "apdn": 67, "tsv": 13, "rp": 69, "rf": 319, "ndf": 553, "adf": 353, "zucker": 115, "vos": 61, "ra": 75 },
+        "7": { "nev": 4.3, "nel": 4.3, "apde": 38, "apdn": 61, "tsv": 12, "rp": 61, "rf": 339, "ndf": 580, "adf": 376, "zucker": 99, "vos": 57, "ra": 72 }
+      },
+      "A": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 107, "apdn": 129, "tsv": 18, "rp": 172, "rf": 202, "ndf": 354, "adf": 203, "zucker": 161, "vos": 78, "ra": 97 },
+        "2": { "nev": 6.4, "nel": 6.2, "apde": 102, "apdn": 114, "tsv": 18, "rp": 198, "rf": 178, "ndf": 382, "adf": 227, "zucker": 130, "vos": 77, "ra": 95 },
+        "3": { "nev": 6, "nel": 5.9, "apde": 94, "apdn": 90, "tsv": 17, "rp": 142, "rf": 230, "ndf": 428, "adf": 258, "zucker": 124, "vos": 74, "ra": 92 },
+        "4": { "nev": 5.5, "nel": 5.5, "apde": 75, "apdn": 86, "tsv": 15, "rp": 119, "rf": 266, "ndf": 469, "adf": 299, "zucker": 101, "vos": 70, "ra": 92 },
+        "5": { "nev": 4.9, "nel": 5, "apde": 66, "apdn": 78, "tsv": 14, "rp": 105, "rf": 281, "ndf": 488, "adf": 319, "zucker": 94, "vos": 64, "ra": 91 },
+        "6": { "nev": 4.4, "nel": 4.4, "apde": 55, "apdn": 71, "tsv": 13, "rp": 87, "rf": 307, "ndf": 522, "adf": 353, "zucker": 89, "vos": 60, "ra": 88 },
+        "7": { "nev": 4.1, "nel": 4.1, "apde": 48, "apdn": 66, "tsv": 12, "rp": 77, "rf": 326, "ndf": 548, "adf": 384, "zucker": 89, "vos": 57, "ra": 86 }
+      },
+      "AR": {
+        "1": { "nev": 6.6, "nel": 6.4, "apde": 104, "apdn": 115, "tsv": 18, "rp": 159, "rf": 180, "ndf": 324, "adf": 189, "zucker": 207, "vos": 78, "ra": 94 },
+        "2": { "nev": 6.6, "nel": 6.4, "apde": 107, "apdn": 102, "tsv": 18, "rp": 181, "rf": 168, "ndf": 347, "adf": 209, "zucker": 169, "vos": 79, "ra": 94 },
+        "3": { "nev": 6.4, "nel": 6.2, "apde": 88, "apdn": 96, "tsv": 17, "rp": 138, "rf": 209, "ndf": 381, "adf": 236, "zucker": 169, "vos": 77, "ra": 89 },
+        "4": { "nev": 6.1, "nel": 5.9, "apde": 71, "apdn": 88, "tsv": 17, "rp": 112, "rf": 242, "ndf": 426, "adf": 276, "zucker": 147, "vos": 74, "ra": 90 },
+        "5": { "nev": 5.4, "nel": 5.3, "apde": 62, "apdn": 80, "tsv": 15, "rp": 98, "rf": 266, "ndf": 457, "adf": 302, "zucker": 128, "vos": 68, "ra": 88 },
+        "6": { "nev": 4.8, "nel": 4.8, "apde": 51, "apdn": 71, "tsv": 14, "rp": 83, "rf": 288, "ndf": 490, "adf": 331, "zucker": 111, "vos": 63, "ra": 84 },
+        "7": { "nev": 4.4, "nel": 4.4, "apde": 45, "apdn": 65, "tsv": 13, "rp": 74, "rf": 305, "ndf": 515, "adf": 354, "zucker": 99, "vos": 59, "ra": 82 }
+      },
+      "L": {
+        "1": { "nev": 6.7, "nel": 6.5, "apde": 142, "apdn": 110, "tsv": 18, "rp": 222, "rf": 140, "ndf": 276, "adf": 178, "zucker": 137, "vos": 79, "ra": 105 },
+        "2": { "nev": 6.6, "nel": 6.4, "apde": 132, "apdn": 108, "tsv": 18, "rp": 206, "rf": 163, "ndf": 299, "adf": 202, "zucker": 111, "vos": 78, "ra": 104 },
+        "3": { "nev": 6.5, "nel": 6.3, "apde": 104, "apdn": 120, "tsv": 18, "rp": 182, "rf": 187, "ndf": 320, "adf": 220, "zucker": 111, "vos": 78, "ra": 101 },
+        "4": { "nev": 6.1, "nel": 6, "apde": 98, "apdn": 105, "tsv": 17, "rp": 164, "rf": 212, "ndf": 349, "adf": 254, "zucker": 110, "vos": 75, "ra": 100 },
+        "5": { "nev": 5.6, "nel": 5.5, "apde": 94, "apdn": 92, "tsv": 16, "rp": 147, "rf": 237, "ndf": 379, "adf": 285, "zucker": 91, "vos": 70, "ra": 93 },
+        "6": { "nev": 5, "nel": 5, "apde": 85, "apdn": 82, "tsv": 15, "rp": 132, "rf": 258, "ndf": 408, "adf": 315, "zucker": 78, "vos": 65, "ra": 89 },
+        "7": { "nev": 4.5, "nel": 4.5, "apde": 76, "apdn": 74, "tsv": 14, "rp": 119, "rf": 276, "ndf": 431, "adf": 340, "zucker": 69, "vos": 61, "ra": 86 }
+      },
+      "KF": {
+        "1": { "nev": 6.4, "nel": 6.2, "apde": 102, "apdn": 110, "tsv": 17, "rp": 139, "rf": 172, "ndf": 252, "adf": 174, "zucker": 189, "vos": 78, "ra": 100 },
+        "2": { "nev": 6.4, "nel": 6.2, "apde": 100, "apdn": 105, "tsv": 17, "rp": 158, "rf": 165, "ndf": 267, "adf": 189, "zucker": 153, "vos": 77, "ra": 103 },
+        "3": { "nev": 6.2, "nel": 6, "apde": 86, "apdn": 93, "tsv": 17, "rp": 179, "rf": 135, "ndf": 300, "adf": 217, "zucker": 136, "vos": 76, "ra": 102 },
+        "4": { "nev": 6, "nel": 5.8, "apde": 87, "apdn": 72, "tsv": 16, "rp": 202, "rf": 114, "ndf": 322, "adf": 246, "zucker": 114, "vos": 74, "ra": 107 },
+        "5": { "nev": 5.8, "nel": 5.7, "apde": 78, "apdn": 84, "tsv": 16, "rp": 206, "rf": 107, "ndf": 327, "adf": 255, "zucker": 100, "vos": 73, "ra": 110 },
+        "6": { "nev": 5.5, "nel": 5.5, "apde": 67, "apdn": 80, "tsv": 15, "rp": 215, "rf": 88, "ndf": 341, "adf": 277, "zucker": 94, "vos": 71, "ra": 116 },
+        "7": { "nev": 5.4, "nel": 5.3, "apde": 74, "apdn": 46, "tsv": 15, "rp": 218, "rf": 74, "ndf": 349, "adf": 294, "zucker": 92, "vos": 70, "ra": 122 }
+      },
+      "KG": {
+        "1": { "nev": 5.9, "nel": 5.8, "apde": 105, "apdn": 96, "tsv": 16, "rp": 161, "rf": 164, "ndf": 272, "adf": 198, "zucker": 165, "vos": 75, "ra": 120 },
+        "2": { "nev": 5.8, "nel": 5.7, "apde": 97, "apdn": 93, "tsv": 16, "rp": 173, "rf": 153, "ndf": 290, "adf": 212, "zucker": 154, "vos": 74, "ra": 120 },
+        "3": { "nev": 5.5, "nel": 5.5, "apde": 89, "apdn": 87, "tsv": 15, "rp": 186, "rf": 137, "ndf": 313, "adf": 230, "zucker": 151, "vos": 72, "ra": 119 },
+        "4": { "nev": 5.1, "nel": 5, "apde": 80, "apdn": 83, "tsv": 14, "rp": 198, "rf": 126, "ndf": 322, "adf": 240, "zucker": 143, "vos": 67, "ra": 117 },
+        "5": { "nev": 4.6, "nel": 4.4, "apde": 75, "apdn": 77, "tsv": 13, "rp": 202, "rf": 118, "ndf": 331, "adf": 250, "zucker": 143, "vos": 62, "ra": 117 },
+        "6": { "nev": 4.5, "nel": 4.3, "apde": 70, "apdn": 75, "tsv": 13, "rp": 208, "rf": 111, "ndf": 336, "adf": 259, "zucker": 134, "vos": 61, "ra": 114 },
+        "7": { "nev": 4.5, "nel": 4.3, "apde": 74, "apdn": 68, "tsv": 13, "rp": 210, "rf": 107, "ndf": 337, "adf": 265, "zucker": 129, "vos": 60, "ra": 112 }
+      }
+    }
+  },
+  "folge": {
+    "greenfeed": {
+      "G": {
+        "1": { "nev": 6.2, "nel": 6.1, "apde": 107, "apdn": 129, "tsv": 16, "rp": 193, "rf": 234, "ndf": 446, "adf": 269, "zucker": 88, "vos": 75, "ra": 111 },
+        "2": { "nev": 6, "nel": 5.9, "apde": 102, "apdn": 117, "tsv": 15, "rp": 175, "rf": 240, "ndf": 454, "adf": 275, "zucker": 94, "vos": 74, "ra": 105 },
+        "3": { "nev": 5.6, "nel": 5.6, "apde": 96, "apdn": 100, "tsv": 14, "rp": 151, "rf": 259, "ndf": 486, "adf": 295, "zucker": 88, "vos": 71, "ra": 102 },
+        "4": { "nev": 5.4, "nel": 5.3, "apde": 91, "apdn": 88, "tsv": 14, "rp": 133, "rf": 269, "ndf": 505, "adf": 313, "zucker": 83, "vos": 69, "ra": 97 },
+        "5": { "nev": 4.8, "nel": 4.9, "apde": 82, "apdn": 74, "tsv": 12, "rp": 112, "rf": 296, "ndf": 553, "adf": 346, "zucker": 72, "vos": 64, "ra": 96 }
+      },
+      "GR": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 107, "apdn": 123, "tsv": 16, "rp": 185, "rf": 214, "ndf": 404, "adf": 248, "zucker": 123, "vos": 78, "ra": 113 },
+        "2": { "nev": 6.4, "nel": 6.2, "apde": 114, "apdn": 105, "tsv": 16, "rp": 171, "rf": 218, "ndf": 414, "adf": 254, "zucker": 138, "vos": 77, "ra": 106 },
+        "3": { "nev": 6, "nel": 5.9, "apde": 101, "apdn": 99, "tsv": 15, "rp": 151, "rf": 232, "ndf": 444, "adf": 272, "zucker": 126, "vos": 74, "ra": 102 },
+        "4": { "nev": 5.5, "nel": 5.5, "apde": 92, "apdn": 89, "tsv": 14, "rp": 134, "rf": 246, "ndf": 475, "adf": 293, "zucker": 115, "vos": 70, "ra": 92 },
+        "5": { "nev": 5.2, "nel": 5.1, "apde": 85, "apdn": 75, "tsv": 13, "rp": 114, "rf": 272, "ndf": 518, "adf": 323, "zucker": 85, "vos": 66, "ra": 100 }
+      },
+      "A": {
+        "1": { "nev": 6.3, "nel": 6.1, "apde": 133, "apdn": 108, "tsv": 16, "rp": 199, "rf": 208, "ndf": 390, "adf": 249, "zucker": 86, "vos": 76, "ra": 117 },
+        "2": { "nev": 6.1, "nel": 6, "apde": 121, "apdn": 104, "tsv": 15, "rp": 181, "rf": 215, "ndf": 398, "adf": 255, "zucker": 97, "vos": 75, "ra": 111 },
+        "3": { "nev": 5.7, "nel": 5.7, "apde": 98, "apdn": 107, "tsv": 14, "rp": 160, "rf": 233, "ndf": 427, "adf": 274, "zucker": 89, "vos": 72, "ra": 108 },
+        "4": { "nev": 5.5, "nel": 5.5, "apde": 93, "apdn": 96, "tsv": 14, "rp": 144, "rf": 244, "ndf": 445, "adf": 292, "zucker": 83, "vos": 70, "ra": 102 },
+        "5": { "nev": 5, "nel": 5.1, "apde": 86, "apdn": 83, "tsv": 13, "rp": 125, "rf": 271, "ndf": 490, "adf": 323, "zucker": 74, "vos": 66, "ra": 100 }
+      },
+      "AR": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 108, "apdn": 128, "tsv": 16, "rp": 195, "rf": 192, "ndf": 360, "adf": 234, "zucker": 112, "vos": 78, "ra": 119 },
+        "2": { "nev": 6.4, "nel": 6.2, "apde": 119, "apdn": 105, "tsv": 16, "rp": 200, "rf": 178, "ndf": 371, "adf": 240, "zucker": 128, "vos": 77, "ra": 112 },
+        "3": { "nev": 6, "nel": 5.9, "apde": 106, "apdn": 100, "tsv": 15, "rp": 160, "rf": 215, "ndf": 398, "adf": 259, "zucker": 115, "vos": 75, "ra": 107 },
+        "4": { "nev": 5.7, "nel": 5.7, "apde": 95, "apdn": 96, "tsv": 14, "rp": 144, "rf": 229, "ndf": 426, "adf": 280, "zucker": 106, "vos": 72, "ra": 98 },
+        "5": { "nev": 5.3, "nel": 5.2, "apde": 83, "apdn": 88, "tsv": 13, "rp": 125, "rf": 255, "ndf": 466, "adf": 307, "zucker": 97, "vos": 68, "ra": 94 }
+      },
+      "L": {
+        "1": { "nev": 6.7, "nel": 6.5, "apde": 114, "apdn": 152, "tsv": 17, "rp": 228, "rf": 168, "ndf": 289, "adf": 214, "zucker": 88, "vos": 79, "ra": 124 },
+        "2": { "nev": 6.5, "nel": 6.3, "apde": 110, "apdn": 140, "tsv": 16, "rp": 210, "rf": 179, "ndf": 307, "adf": 225, "zucker": 103, "vos": 77, "ra": 117 },
+        "3": { "nev": 6, "nel": 6.1, "apde": 130, "apdn": 106, "tsv": 15, "rp": 197, "rf": 195, "ndf": 332, "adf": 247, "zucker": 99, "vos": 75, "ra": 113 },
+        "4": { "nev": 5.9, "nel": 5.8, "apde": 102, "apdn": 121, "tsv": 15, "rp": 215, "rf": 181, "ndf": 356, "adf": 272, "zucker": 88, "vos": 73, "ra": 105 },
+        "5": { "nev": 5.3, "nel": 5.2, "apde": 94, "apdn": 107, "tsv": 13, "rp": 160, "rf": 251, "ndf": 413, "adf": 305, "zucker": 78, "vos": 67, "ra": 99 }
+      },
+      "KF": {
+        "1": { "nev": 6.4, "nel": 6.2, "apde": 123, "apdn": 105, "tsv": 16, "rp": 158, "rf": 184, "ndf": 282, "adf": 210, "zucker": 132, "vos": 78, "ra": 90 },
+        "2": { "nev": 6.3, "nel": 6.1, "apde": 117, "apdn": 104, "tsv": 16, "rp": 162, "rf": 175, "ndf": 286, "adf": 215, "zucker": 128, "vos": 78, "ra": 110 },
+        "3": { "nev": 6.2, "nel": 6, "apde": 107, "apdn": 101, "tsv": 15, "rp": 169, "rf": 161, "ndf": 296, "adf": 222, "zucker": 126, "vos": 77, "ra": 93 },
+        "4": { "nev": 6.1, "nel": 6, "apde": 101, "apdn": 99, "tsv": 15, "rp": 151, "rf": 176, "ndf": 306, "adf": 231, "zucker": 121, "vos": 76, "ra": 86 },
+        "5": { "nev": 5.7, "nel": 5.6, "apde": 93, "apdn": 94, "tsv": 14, "rp": 140, "rf": 191, "ndf": 325, "adf": 245, "zucker": 119, "vos": 73, "ra": 83 }
+      },
+      "KG": {
+        "1": { "nev": 6.4, "nel": 6.2, "apde": 125, "apdn": 106, "tsv": 16, "rp": 172, "rf": 187, "ndf": 306, "adf": 222, "zucker": 132, "vos": 78, "ra": 103 },
+        "2": { "nev": 6, "nel": 5.9, "apde": 114, "apdn": 101, "tsv": 15, "rp": 171, "rf": 176, "ndf": 312, "adf": 226, "zucker": 129, "vos": 75, "ra": 106 },
+        "3": { "nev": 5.6, "nel": 5.5, "apde": 98, "apdn": 113, "tsv": 14, "rp": 186, "rf": 169, "ndf": 340, "adf": 237, "zucker": 126, "vos": 71, "ra": 104 },
+        "4": { "nev": 5.3, "nel": 5.2, "apde": 107, "apdn": 94, "tsv": 13, "rp": 192, "rf": 160, "ndf": 352, "adf": 246, "zucker": 123, "vos": 68, "ra": 102 },
+        "5": { "nev": 4.7, "nel": 4.5, "apde": 87, "apdn": 101, "tsv": 12, "rp": 152, "rf": 204, "ndf": 379, "adf": 260, "zucker": 98, "vos": 61, "ra": 121 }
+      }
+    },
+    "silage": {
+      "G": {
+        "1": { "nev": 6, "nel": 5.9, "apde": 80, "apdn": 127, "tsv": 15, "rp": 203, "rf": 248, "ndf": 417, "adf": 292, "zucker": 32, "vos": 74, "ra": 119 },
+        "2": { "nev": 5.8, "nel": 5.8, "apde": 79, "apdn": 115, "tsv": 14, "rp": 184, "rf": 254, "ndf": 422, "adf": 297, "zucker": 34, "vos": 72, "ra": 113 },
+        "3": { "nev": 5.4, "nel": 5.4, "apde": 75, "apdn": 100, "tsv": 13, "rp": 159, "rf": 273, "ndf": 452, "adf": 317, "zucker": 32, "vos": 69, "ra": 109 },
+        "4": { "nev": 5.2, "nel": 5.1, "apde": 72, "apdn": 88, "tsv": 13, "rp": 140, "rf": 284, "ndf": 469, "adf": 333, "zucker": 30, "vos": 67, "ra": 105 },
+        "5": { "nev": 4.6, "nel": 4.4, "apde": 65, "apdn": 74, "tsv": 11, "rp": 117, "rf": 310, "ndf": 510, "adf": 365, "zucker": 26, "vos": 61, "ra": 102 }
+      },
+      "GR": {
+        "1": { "nev": 6.3, "nel": 6.1, "apde": 82, "apdn": 122, "tsv": 15, "rp": 227, "rf": 194, "ndf": 379, "adf": 272, "zucker": 47, "vos": 77, "ra": 122 },
+        "2": { "nev": 6.2, "nel": 6.1, "apde": 82, "apdn": 113, "tsv": 15, "rp": 181, "rf": 232, "ndf": 387, "adf": 276, "zucker": 53, "vos": 76, "ra": 113 },
+        "3": { "nev": 5.8, "nel": 5.7, "apde": 78, "apdn": 100, "tsv": 14, "rp": 159, "rf": 247, "ndf": 413, "adf": 295, "zucker": 48, "vos": 73, "ra": 109 },
+        "4": { "nev": 5.4, "nel": 5.3, "apde": 74, "apdn": 89, "tsv": 13, "rp": 141, "rf": 259, "ndf": 442, "adf": 315, "zucker": 44, "vos": 69, "ra": 99 },
+        "5": { "nev": 5, "nel": 4.8, "apde": 68, "apdn": 75, "tsv": 12, "rp": 119, "rf": 286, "ndf": 480, "adf": 343, "zucker": 38, "vos": 64, "ra": 91 }
+      },
+      "A": {
+        "1": { "nev": 6.1, "nel": 6, "apde": 81, "apdn": 131, "tsv": 15, "rp": 223, "rf": 209, "ndf": 365, "adf": 271, "zucker": 32, "vos": 75, "ra": 125 },
+        "2": { "nev": 5.9, "nel": 5.8, "apde": 79, "apdn": 119, "tsv": 14, "rp": 229, "rf": 190, "ndf": 373, "adf": 278, "zucker": 36, "vos": 73, "ra": 119 },
+        "3": { "nev": 5.5, "nel": 5.5, "apde": 76, "apdn": 105, "tsv": 13, "rp": 168, "rf": 246, "ndf": 399, "adf": 296, "zucker": 33, "vos": 70, "ra": 115 },
+        "4": { "nev": 5.3, "nel": 5.2, "apde": 73, "apdn": 95, "tsv": 13, "rp": 151, "rf": 257, "ndf": 415, "adf": 313, "zucker": 31, "vos": 68, "ra": 109 },
+        "5": { "nev": 4.9, "nel": 4.7, "apde": 68, "apdn": 82, "tsv": 12, "rp": 130, "rf": 284, "ndf": 454, "adf": 343, "zucker": 27, "vos": 64, "ra": 108 }
+      },
+      "AR": {
+        "1": { "nev": 6.3, "nel": 6.1, "apde": 82, "apdn": 127, "tsv": 15, "rp": 203, "rf": 208, "ndf": 340, "adf": 258, "zucker": 43, "vos": 77, "ra": 126 },
+        "2": { "nev": 6.2, "nel": 6, "apde": 81, "apdn": 118, "tsv": 15, "rp": 187, "rf": 214, "ndf": 349, "adf": 264, "zucker": 49, "vos": 76, "ra": 120 },
+        "3": { "nev": 5.8, "nel": 5.8, "apde": 78, "apdn": 106, "tsv": 14, "rp": 168, "rf": 229, "ndf": 373, "adf": 282, "zucker": 44, "vos": 73, "ra": 115 },
+        "4": { "nev": 5.5, "nel": 5.5, "apde": 76, "apdn": 95, "tsv": 14, "rp": 151, "rf": 243, "ndf": 398, "adf": 301, "zucker": 40, "vos": 70, "ra": 104 },
+        "5": { "nev": 5.1, "nel": 4.9, "apde": 70, "apdn": 83, "tsv": 13, "rp": 131, "rf": 268, "ndf": 434, "adf": 327, "zucker": 36, "vos": 66, "ra": 104 }
+      },
+      "L": {
+        "1": { "nev": 6.5, "nel": 6.3, "apde": 84, "apdn": 150, "tsv": 16, "rp": 241, "rf": 181, "ndf": 276, "adf": 239, "zucker": 34, "vos": 78, "ra": 134 },
+        "2": { "nev": 6.3, "nel": 6.1, "apde": 82, "apdn": 138, "tsv": 15, "rp": 221, "rf": 193, "ndf": 291, "adf": 248, "zucker": 38, "vos": 76, "ra": 126 },
+        "3": { "nev": 5.9, "nel": 5.8, "apde": 79, "apdn": 129, "tsv": 14, "rp": 210, "rf": 206, "ndf": 313, "adf": 269, "zucker": 36, "vos": 73, "ra": 121 },
+        "4": { "nev": 5.6, "nel": 5.6, "apde": 78, "apdn": 119, "tsv": 14, "rp": 190, "rf": 228, "ndf": 334, "adf": 293, "zucker": 33, "vos": 71, "ra": 113 },
+        "5": { "nev": 5.1, "nel": 5.1, "apde": 72, "apdn": 106, "tsv": 12, "rp": 169, "rf": 265, "ndf": 385, "adf": 325, "zucker": 28, "vos": 65, "ra": 107 }
+      },
+      "KF": {
+        "1": { "nev": 6.2, "nel": 6, "apde": 80, "apdn": 121, "tsv": 15, "rp": 194, "rf": 171, "ndf": 270, "adf": 236, "zucker": 34, "vos": 77, "ra": 142 },
+        "2": { "nev": 6.1, "nel": 6, "apde": 80, "apdn": 116, "tsv": 15, "rp": 184, "rf": 175, "ndf": 273, "adf": 240, "zucker": 41, "vos": 76, "ra": 139 },
+        "3": { "nev": 6, "nel": 5.9, "apde": 79, "apdn": 106, "tsv": 15, "rp": 169, "rf": 182, "ndf": 281, "adf": 245, "zucker": 35, "vos": 76, "ra": 135 },
+        "4": { "nev": 5.9, "nel": 5.8, "apde": 78, "apdn": 100, "tsv": 14, "rp": 188, "rf": 159, "ndf": 289, "adf": 253, "zucker": 32, "vos": 75, "ra": 129 },
+        "5": { "nev": 5.5, "nel": 5.5, "apde": 75, "apdn": 93, "tsv": 13, "rp": 203, "rf": 147, "ndf": 305, "adf": 265, "zucker": 31, "vos": 71, "ra": 127 }
+      },
+      "KG": {
+        "1": { "nev": 6.2, "nel": 6, "apde": 80, "apdn": 123, "tsv": 15, "rp": 197, "rf": 187, "ndf": 292, "adf": 248, "zucker": 39, "vos": 77, "ra": 142 },
+        "2": { "nev": 5.8, "nel": 5.7, "apde": 77, "apdn": 113, "tsv": 14, "rp": 180, "rf": 190, "ndf": 298, "adf": 251, "zucker": 40, "vos": 73, "ra": 139 },
+        "3": { "nev": 5.4, "nel": 5.4, "apde": 74, "apdn": 112, "tsv": 13, "rp": 200, "rf": 178, "ndf": 322, "adf": 261, "zucker": 39, "vos": 70, "ra": 135 },
+        "4": { "nev": 5.1, "nel": 5, "apde": 71, "apdn": 106, "tsv": 13, "rp": 206, "rf": 168, "ndf": 332, "adf": 268, "zucker": 38, "vos": 66, "ra": 132 },
+        "5": { "nev": 4.5, "nel": 4.2, "apde": 65, "apdn": 100, "tsv": 11, "rp": 159, "rf": 216, "ndf": 355, "adf": 279, "zucker": 37, "vos": 60, "ra": 130 }
+      }
+    },
+    "hay": {
+      "G": {
+        "1": { "nev": 5.5, "nel": 5.5, "apde": 110, "apdn": 94, "tsv": 15, "rp": 172, "rf": 254, "ndf": 466, "adf": 290, "zucker": 70, "vos": 70, "ra": 109 },
+        "2": { "nev": 5.3, "nel": 5.3, "apde": 100, "apdn": 91, "tsv": 15, "rp": 156, "rf": 259, "ndf": 472, "adf": 294, "zucker": 75, "vos": 69, "ra": 103 },
+        "3": { "nev": 5.1, "nel": 5, "apde": 87, "apdn": 85, "tsv": 14, "rp": 136, "rf": 278, "ndf": 506, "adf": 315, "zucker": 70, "vos": 66, "ra": 99 },
+        "4": { "nev": 4.8, "nel": 4.9, "apde": 77, "apdn": 81, "tsv": 14, "rp": 121, "rf": 288, "ndf": 525, "adf": 332, "zucker": 66, "vos": 64, "ra": 95 },
+        "5": { "nev": 4.5, "nel": 4.3, "apde": 64, "apdn": 73, "tsv": 13, "rp": 102, "rf": 315, "ndf": 572, "adf": 365, "zucker": 58, "vos": 59, "ra": 93 }
+      },
+      "GR": {
+        "1": { "nev": 5.7, "nel": 5.7, "apde": 105, "apdn": 95, "tsv": 16, "rp": 165, "rf": 233, "ndf": 424, "adf": 267, "zucker": 98, "vos": 73, "ra": 111 },
+        "2": { "nev": 5.7, "nel": 5.6, "apde": 98, "apdn": 93, "tsv": 16, "rp": 154, "rf": 237, "ndf": 434, "adf": 273, "zucker": 111, "vos": 72, "ra": 103 },
+        "3": { "nev": 5.4, "nel": 5.3, "apde": 87, "apdn": 88, "tsv": 15, "rp": 137, "rf": 252, "ndf": 463, "adf": 291, "zucker": 101, "vos": 69, "ra": 100 },
+        "4": { "nev": 5.1, "nel": 5, "apde": 77, "apdn": 83, "tsv": 14, "rp": 122, "rf": 264, "ndf": 494, "adf": 313, "zucker": 92, "vos": 65, "ra": 89 },
+        "5": { "nev": 4.8, "nel": 4.6, "apde": 66, "apdn": 76, "tsv": 13, "rp": 105, "rf": 291, "ndf": 537, "adf": 342, "zucker": 80, "vos": 62, "ra": 83 }
+      },
+      "A": {
+        "1": { "nev": 5.5, "nel": 5.5, "apde": 113, "apdn": 95, "tsv": 15, "rp": 177, "rf": 229, "ndf": 409, "adf": 268, "zucker": 69, "vos": 71, "ra": 114 },
+        "2": { "nev": 5.4, "nel": 5.4, "apde": 103, "apdn": 92, "tsv": 15, "rp": 162, "rf": 234, "ndf": 418, "adf": 275, "zucker": 78, "vos": 69, "ra": 108 },
+        "3": { "nev": 5.1, "nel": 5, "apde": 91, "apdn": 87, "tsv": 14, "rp": 143, "rf": 252, "ndf": 447, "adf": 293, "zucker": 71, "vos": 66, "ra": 105 },
+        "4": { "nev": 5, "nel": 4.8, "apde": 83, "apdn": 83, "tsv": 14, "rp": 130, "rf": 262, "ndf": 464, "adf": 311, "zucker": 67, "vos": 65, "ra": 100 },
+        "5": { "nev": 4.7, "nel": 4.5, "apde": 72, "apdn": 77, "tsv": 13, "rp": 113, "rf": 288, "ndf": 509, "adf": 342, "zucker": 59, "vos": 62, "ra": 98 }
+      },
+      "AR": {
+        "1": { "nev": 5.7, "nel": 5.7, "apde": 110, "apdn": 96, "tsv": 16, "rp": 172, "rf": 213, "ndf": 380, "adf": 253, "zucker": 90, "vos": 72, "ra": 116 },
+        "2": { "nev": 5.6, "nel": 5.6, "apde": 102, "apdn": 94, "tsv": 16, "rp": 159, "rf": 219, "ndf": 391, "adf": 259, "zucker": 102, "vos": 72, "ra": 109 },
+        "3": { "nev": 5.4, "nel": 5.3, "apde": 91, "apdn": 89, "tsv": 15, "rp": 143, "rf": 234, "ndf": 417, "adf": 278, "zucker": 92, "vos": 69, "ra": 104 },
+        "4": { "nev": 5.2, "nel": 5.1, "apde": 83, "apdn": 85, "tsv": 14, "rp": 131, "rf": 248, "ndf": 445, "adf": 299, "zucker": 85, "vos": 67, "ra": 96 },
+        "5": { "nev": 4.8, "nel": 4.7, "apde": 72, "apdn": 79, "tsv": 14, "rp": 114, "rf": 273, "ndf": 485, "adf": 326, "zucker": 76, "vos": 63, "ra": 95 }
+      },
+      "L": {
+        "1": { "nev": 5.9, "nel": 5.8, "apde": 130, "apdn": 102, "tsv": 16, "rp": 202, "rf": 187, "ndf": 309, "adf": 234, "zucker": 72, "vos": 74, "ra": 122 },
+        "2": { "nev": 5.7, "nel": 5.7, "apde": 120, "apdn": 98, "tsv": 16, "rp": 187, "rf": 198, "ndf": 324, "adf": 244, "zucker": 82, "vos": 72, "ra": 115 },
+        "3": { "nev": 5.4, "nel": 5.4, "apde": 112, "apdn": 94, "tsv": 15, "rp": 175, "rf": 216, "ndf": 351, "adf": 266, "zucker": 79, "vos": 69, "ra": 111 },
+        "4": { "nev": 5.3, "nel": 5.2, "apde": 104, "apdn": 92, "tsv": 15, "rp": 163, "rf": 233, "ndf": 373, "adf": 291, "zucker": 70, "vos": 68, "ra": 103 },
+        "5": { "nev": 4.8, "nel": 4.6, "apde": 92, "apdn": 84, "tsv": 14, "rp": 144, "rf": 270, "ndf": 431, "adf": 324, "zucker": 62, "vos": 62, "ra": 97 }
+      },
+      "KF": {
+        "1": { "nev": 5.6, "nel": 5.6, "apde": 105, "apdn": 93, "tsv": 16, "rp": 176, "rf": 164, "ndf": 301, "adf": 231, "zucker": 72, "vos": 72, "ra": 130 },
+        "2": { "nev": 5.6, "nel": 5.5, "apde": 100, "apdn": 92, "tsv": 15, "rp": 181, "rf": 157, "ndf": 305, "adf": 234, "zucker": 88, "vos": 72, "ra": 126 },
+        "3": { "nev": 5.5, "nel": 5.4, "apde": 92, "apdn": 90, "tsv": 15, "rp": 188, "rf": 144, "ndf": 315, "adf": 241, "zucker": 74, "vos": 71, "ra": 122 },
+        "4": { "nev": 5.4, "nel": 5.4, "apde": 87, "apdn": 88, "tsv": 15, "rp": 193, "rf": 136, "ndf": 323, "adf": 249, "zucker": 68, "vos": 71, "ra": 118 },
+        "5": { "nev": 5.1, "nel": 5.1, "apde": 81, "apdn": 84, "tsv": 14, "rp": 207, "rf": 127, "ndf": 341, "adf": 262, "zucker": 67, "vos": 68, "ra": 115 }
+      },
+      "KG": {
+        "1": { "nev": 5.7, "nel": 5.6, "apde": 106, "apdn": 94, "tsv": 16, "rp": 193, "rf": 166, "ndf": 327, "adf": 243, "zucker": 82, "vos": 73, "ra": 130 },
+        "2": { "nev": 5.3, "nel": 5.3, "apde": 97, "apdn": 90, "tsv": 15, "rp": 196, "rf": 153, "ndf": 333, "adf": 246, "zucker": 85, "vos": 70, "ra": 127 },
+        "3": { "nev": 5, "nel": 4.9, "apde": 96, "apdn": 87, "tsv": 14, "rp": 206, "rf": 169, "ndf": 361, "adf": 257, "zucker": 83, "vos": 66, "ra": 124 },
+        "4": { "nev": 4.7, "nel": 4.6, "apde": 92, "apdn": 83, "tsv": 13, "rp": 211, "rf": 160, "ndf": 372, "adf": 265, "zucker": 81, "vos": 63, "ra": 121 },
+        "5": { "nev": 4.2, "nel": 3.9, "apde": 87, "apdn": 77, "tsv": 12, "rp": 221, "rf": 137, "ndf": 398, "adf": 277, "zucker": 79, "vos": 57, "ra": 119 }
+      }
+    }
+  }
+}
+

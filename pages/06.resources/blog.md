@@ -44,4 +44,6 @@ sitemap:
 
 ## Apps (Prototyp-Stadium)
 * [Prototyp App Gehaltsbestimmung](https://graswachstum.ch/resources/tools/agff-mb03.html)
+[qrcode]https://graswachstum.ch/resources/tools/agff-mb03.html[/qrcode]
+
 Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf),  [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856), 

@@ -1,4 +1,4 @@
-last_checked: 1762266043
+last_checked: 1762372067
 data:
   -
     title: 'TailwindCSS 4.0 upgrade for Typhoon Premium Theme'
@@ -24,7 +24,7 @@ data:
     title: 'Instagram Feed Plugin is deprecated'
     url: 'https://getgrav.org/blog/instagram-feed-deprecated'
     date: 1732107600
-    nicetime: '11 Monate her'
+    nicetime: '12 Monate her'
   -
     title: 'macOS 15.0 Sequoia Apache Setup: Upgrading Homebrew'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-upgrade-homebrew'

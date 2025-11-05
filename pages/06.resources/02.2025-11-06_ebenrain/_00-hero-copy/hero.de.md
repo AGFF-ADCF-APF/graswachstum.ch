@@ -7,7 +7,7 @@ shortcode-citation:
     reorder_uncited: true
 hero:
     subtitle: Webinar
-    content: "Herausforderungen, Highlights und was das Grasmessen im 2024 gebracht hat.\n\n"
+    content: 'Herausforderungen, Highlights und was das Grasmessen im 2024 gebracht hat.'
     buttons:
         -
             text: 'Webinar-Aufzeichnung anfordern'

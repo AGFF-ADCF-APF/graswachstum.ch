@@ -4,26 +4,26 @@
         "page_rawroute": "\/resources",
         "page_title": "Ressourcen"
     },
-    "updated": 1762372312,
+    "updated": 1762372406,
     "response_headers": {
         "server": "nginx",
-        "date": "Wed, 05 Nov 2025 19:51:52 GMT",
+        "date": "Wed, 05 Nov 2025 19:53:26 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "Ressourcen",
         "grav-page-route": "\/resources",
         "grav-page-rawroute": "\/resources",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 12 Nov 2025 19:51:52 GMT",
+        "expires": "Wed, 12 Nov 2025 19:53:26 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1762372312.7994930744171142578125,
-        "total_time": 0.1718969999999999942463801971825887449085712432861328125,
-        "namelookup_time": 0.0004350000000000000025500435096859064287855289876461029052734375,
-        "connect_time": 0.000600999999999999971744824023289766046218574047088623046875,
-        "pretransfer_time": 0.0057730000000000003534950110406498424708843231201171875,
-        "starttransfer_time": 0.1711950000000000138289379947309498675167560577392578125,
+        "start_time": 1762372406.0610439777374267578125,
+        "total_time": 0.1706729999999999913828929720693849958479404449462890625,
+        "namelookup_time": 0.0003510000000000000207507622196345664633554406464099884033203125,
+        "connect_time": 0.000436999999999999996953825576184726742212660610675811767578125,
+        "pretransfer_time": 0.00341900000000000016397994073713562102057039737701416015625,
+        "starttransfer_time": 0.17017199999999998993871486163698136806488037109375,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 525,
         "request_size": 121,
         "redirect_count": 0,
-        "size_download": 7432,
-        "speed_download": 43235,
+        "size_download": 7446,
+        "speed_download": 43627,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 36450
+        "content_size": 36728
     },
     "content": {
         "body": "<h2>Grasland bewirtschaften<\/h2>\n<ul>\n<li>eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen<\/li>\n<li>Wurzelbilder von Futtergr&auml;sern<\/li>\n<li>AGFF.ch: AGFF-Merkbl&auml;tter bestellen bzw. AGFF-Mitglied werden<\/li>\n<li>Raumberg-Gumpenstein.at: PODCASTS :\/&gt; AGRAR SCIENCE - WISSEN KOMPAKT<\/li>\n<\/ul>\n<h2>Futter konservieren<\/h2>\n<ul>\n<li>Zuckergehalt von Wiesen bestimmen<\/li>\n<\/ul>\n<h2>Professionelles Weidemanagement<\/h2>\n<ul>\n<li>eAGFF.ch: Weideplaner (Exceldatei mit Makros)<\/li>\n<li>Teagasc.ie: Grass10 Newsletter<\/li>\n<\/ul>\n<h2>Graswachstum messen<\/h2>\n<ul>\n<li>Github.com: R-Skript f&uuml;r automatische Darstellung von Graswachstum auf CH-Karte<\/li>\n<\/ul>\n<h2>Apps (Prototyp-Stadium)<\/h2>\n<ul>\n<li>Prototyp App Gehaltsbestimmung\n<\/li>\n<\/ul>\n<p>Quellen: AGFF Merkblatt 3,  Agridea, Wegleitung zum Fu&#776;tterungsplan fu&#776;r Milchku&#776;he, <\/p>",
@@ -75,7 +75,7 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/de\/resources\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHfSURBVFiF7ZjLjcMwDEQp6KCjS3Ap6syfzlyKSvDRB8PcGVJOgmwDTBDCCAw9XWgOfxH52Zeb0raTr1W1pWNcip0Fpjwftrzz\/ZLxKk3wiMyR6aDnsMGdvNcERw6ZSpu1xae6VxlUii6CKHwGPSmbzb4\/AxGdmnLw+U\/7vYRReNNVNNozdOADXyY+\/\/I3GJV+xwPRZqhd3i0aPZ\/iET1GFkPL0zk0ZT0Byvz08GhcD8GFJTS1853XklEIPh3PKASk2XQNijzF4Ux3GmqLBqdWvZmUpdEpKic0deWg3cApNV9WE48EplYGeyCQmGiUK2p46WqPSdnQpXphgXIoHvp1W0hqxUQRC\/EMVU59yNPlYylHbq+TTAfXladwXAp3sg0qNhP2pr\/eHsWk1owqB0LuCxAVc4HTbGB67zg164Ydp+8Lx9sGFItm+lJtYtmSDSqsk3ffj0m1G2dCKX24Si+6ikh38YXd9KPqheWxL4SkwtzcrPWzH3nfv4JTM\/YjqThEICauZncPDUldNnAH9TCZR9NLx4lJvar4Ne+S9EgeM2FI6kvZwGkWwxU3Mn2ZYwNT1ENl9bY\/GeyOhKeepEZ9jm2hqSkHHuFJ3BS4Sz4sJr3bjand+qO7M38s\/dkX2x8RwBMhqB7L5AAAAABJRU5ErkJggg==",
+                "src": "https:\/\/graswachstum.ch\/de\/resources\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHTSURBVFiF7ZjBkYMwDEXF+OAjJVCKOyOkM5dCCRx9YNDqSybZZRv4ZOJhWQ\/Plx\/JX7JFvuPDh2JU3YpIUV2HNi3ZvxHT3f7GmrTa5JDJFkhe7duDmY66j1VGTVsxOdpkzutDV36KX31UybqIReEe1N6WP\/7hDtQzx1DoWgRRuOQVG40d6qLqkdcZz3X\/slHpsainq8gs18FG90geKVDX4CqDyWnvGBHSZPMNC2yCKMj0bDJ4CtFSCUuRYqIG25ghqp1hoKTJzSRBVAXtaFJiGq6yo1CqfTeKitO46Yj\/ljx4rKxH5pxR4KSCsg45FgjbmOI2uOR3thNS7M2t71PvRpDtLzPkpCnKjZeeQUMOvGW5LfXGO4IFn+x5hQQjplsxFa5LwycPLDgVUdIdru4+CXXmk+qImsbm7c5jqPtkr\/ucFMjzx96DnyUPtN\/vroCQuqV3q5R8jQIrLa\/+qmfOL5\/kpP2AExP3E1tw\/Mp2RurDe+\/iNRRy5leFpaReZKAIC7Kfcby\/YqbnfY7fjcC9cS6b\/\/axdDTuRrz39uYKmYOOhZ6KF504s8caoadW2e05BH3sU6MtIaaROVtJ3sc+\/90zENLYof5WUO0heNyWfscHjx+nmywg\/HjKJAAAAABJRU5ErkJggg==",
                 "alt": "",
                 "external": false,
                 "status": 404
@@ -279,7 +279,7 @@
                 "external": false,
                 "status": 200
             },
-            "https:\/\/graswachstum.ch\/resources\/tools\/agff-mb03.html": {
+            "https:\/\/graswachstum.ch\/resources\/agff-app-fodder-value\/": {
                 "count": 1,
                 "target": "",
                 "rel": "",
@@ -335,14 +335,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Grasmess-Webinar 2025 R\u00fcckblick Messkampagne 2024 und Ausblick 12th Feb 2025",
+            "description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
             "title": "Ressourcen | graswachstum.ch",
-            "keywords": "2025,r\u00fcckblick,12th,messkampagne,2024,ausblick,grasmess-webinar,",
+            "keywords": "graswachstum,newsletter,ch-karte,darstellung,messen,eagff.ch,github.com,weideplaner,exceldatei,makros,",
             "image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/resources",
             "og:site_name": "graswachstum.ch",
             "og:title": "Ressourcen | graswachstum.ch",
-            "og:description": "Grasmess-Webinar 2025 R\u00fcckblick Messkampagne 2024 und Ausblick 12th Feb 2025",
+            "og:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -350,7 +350,7 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Ressourcen | graswachstum.ch",
-            "twitter:description": "Grasmess-Webinar 2025 R\u00fcckblick Messkampagne 2024 und Ausblick 12th Feb 2025",
+            "twitter:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "twitter:image:alt": "Ressourcen | graswachstum.ch",
             "twitter:label1": "Est. reading time",
@@ -553,5 +553,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/resources\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/resources]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/resources HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 05 Nov 2025 19:51:52 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Wed, 12 Nov 2025 19:51:52 GMT\r\n* Added cookie grav-site-23a95d8=\"a8e2c8ed46e4668c84b42d2c74a64d0a\" for domain graswachstum.ch, path \/, expire 1762374112\n< set-cookie: grav-site-23a95d8=a8e2c8ed46e4668c84b42d2c74a64d0a; expires=Wed, 05-Nov-2025 20:21:52 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/resources\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/resources]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/resources HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 05 Nov 2025 19:53:26 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Wed, 12 Nov 2025 19:53:26 GMT\r\n* Added cookie grav-site-23a95d8=\"4809ac4966c16a45f6ee495c6124de12\" for domain graswachstum.ch, path \/, expire 1762374206\n< set-cookie: grav-site-23a95d8=4809ac4966c16a45f6ee495c6124de12; expires=Wed, 05-Nov-2025 20:23:26 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n"
 }

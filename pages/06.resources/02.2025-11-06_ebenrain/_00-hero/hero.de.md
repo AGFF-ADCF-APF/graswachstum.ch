@@ -8,5 +8,6 @@ shortcode-citation:
 hero:
     subtitle: 'Grundfutterpotenzial ausnützen'
     content: 'Unterlagen des Weiterbildungstages vom 06.11.2025'
+published: true
 ---
 

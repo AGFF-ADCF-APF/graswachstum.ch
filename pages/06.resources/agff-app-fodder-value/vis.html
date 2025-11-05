@@ -20,16 +20,14 @@
         let alleProben = []; // Speichert alle Proben aus Firebase
         
         // Dieselbe Firebase-Konfiguration wie in Ihrer Erfassungs-App
-
-        
         const firebaseConfig = {
-                  apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
-                  authDomain: "agff-apps.firebaseapp.com",
-                  projectId: "agff-apps",
-                  storageBucket: "agff-apps.firebasestorage.app",
-                  messagingSenderId: "963390091539",
-                  appId: "1:963390091539:web:eff9117033c24eda21eae6"
-                };
+          apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
+          authDomain: "agff-apps.firebaseapp.com",
+          projectId: "agff-apps",
+          storageBucket: "agff-apps.firebasestorage.app",
+          messagingSenderId: "963390091539",
+          appId: "1:963390091539:web:eff9117033c24eda21eae6"
+        };
         
         // Dieselbe App-ID für den Datenbankpfad
         const appId = "agff-futter-app-public"; 
@@ -103,8 +101,13 @@
             });
             
             console.log(`Erfolgreich ${alleProben.length} Proben geladen.`);
+            
+            // KORREKTUR: Wir werfen keinen Fehler mehr, wenn keine Proben gefunden werden.
+            // Stattdessen lassen wir die App laden und das Diagramm zeigt
+            // eine "Keine Daten"-Nachricht an (via updateChart), was korrekt ist.
             if (alleProben.length === 0) {
-                 throw new Error("Keine Proben in der Datenbank gefunden.");
+                 // throw new Error("Keine Proben in der Datenbank gefunden.");
+                 console.warn("Keine Proben in der Datenbank gefunden unter Pfad:", collectionPath);
             }
         }
 
@@ -390,4 +393,5 @@
 
 </body>
 </html>
+
 

@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGFF Futterbewertung</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- jsPDF CDN for PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- Firebase Libraries -->
+    <script type="module">
+        // Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- GLOBALE VARIABLEN ---
+        let futterWerte = {};
+        let aktuellesStadiumLabel = "Nicht bestimmt";
+        let db, auth;
+        const PB_NEL = 3.14; // Produktionsbedarf NEL pro kg ECM (Seite 12)
+        const PB_PROTEIN = 50; // Produktionsbedarf APDE/APDN pro kg ECM (Seite 12)
+
+        // --- DATENLADEN & FIREBASE INIT ---
+        document.addEventListener('DOMContentLoaded', () => {
+            showLoading(true);
+            try {
+                // 1. Firebase initialisieren (als separate async Funktion)
+                initializeFirebase();
+
+                // 3. Futterwerte direkt laden (um file:// Protokoll-Fehler zu vermeiden)
+                futterWerte = {
+                  
+                
+                  "erster": {
+                    "greenfeed": {
+                      "G": {
+                        "1": { "nel": 7.5, "nev": 7.1, "apde": 154, "apdn": 121, "tsv": 18, "rp": 172, "rf": 231, "ndf": 387, "adf": 202, "zucker": 209, "vos": 84, "ra": 96 },
+                        "2": { "nel": 6.9, "nev": 7.3, "apde": 132, "apdn": 115, "tsv": 18, "rp": 200, "rf": 197, "ndf": 416, "adf": 224, "zucker": 164, "vos": 83, "ra": 95 },
+                        "3": { "nel": 6.5, "nev": 6.3, "apde": 102, "apdn": 99, "tsv": 16, "rp": 149, "rf": 237, "ndf": 469, "adf": 260, "zucker": 161, "vos": 78, "ra": 89 },
+                        "4": { "nel": 5.9, "nev": 5.8, "apde": 81, "apdn": 92, "tsv": 15, "rp": 122, "rf": 275, "ndf": 516, "adf": 302, "zucker": 124, "vos": 72, "ra": 88 },
+                        "5": { "nel": 5.1, "nev": 5.2, "apde": 68, "apdn": 82, "tsv": 13, "rp": 104, "rf": 294, "ndf": 539, "adf": 324, "zucker": 121, "vos": 66, "ra": 85 },
+                        "6": { "nel": 4.6, "nev": 4.7, "apde": 56, "apdn": 73, "tsv": 12, "rp": 89, "rf": 313, "ndf": 569, "adf": 349, "zucker": 100, "vos": 61, "ra": 81 },
+                        "7": { "nel": 4.1, "nev": 4.3, "apde": 48, "apdn": 67, "tsv": 11, "rp": 79, "rf": 328, "ndf": 591, "adf": 368, "zucker": 85, "vos": 56, "ra": 78 }
+                      },
+                      "GR": {
+                        "1": { "nel": 7.3, "nev": 6.9, "apde": 115, "apdn": 129, "tsv": 18, "rp": 157, "rf": 194, "ndf": 345, "adf": 184, "zucker": 290, "vos": 83, "ra": 92 },
+                        "2": { "nel": 7.4, "nev": 7, "apde": 122, "apdn": 114, "tsv": 18, "rp": 182, "rf": 177, "ndf": 366, "adf": 201, "zucker": 233, "vos": 84, "ra": 91 },
+                        "3": { "nel": 7, "nev": 6.7, "apde": 95, "apdn": 104, "tsv": 17, "rp": 142, "rf": 207, "ndf": 406, "adf": 230, "zucker": 241, "vos": 82, "ra": 86 },
+                        "4": { "nel": 6.6, "nev": 6.4, "apde": 73, "apdn": 94, "tsv": 16, "rp": 111, "rf": 242, "ndf": 459, "adf": 270, "zucker": 201, "vos": 78, "ra": 84 },
+                        "5": { "nel": 5.8, "nev": 5.7, "apde": 60, "apdn": 84, "tsv": 15, "rp": 92, "rf": 273, "ndf": 498, "adf": 302, "zucker": 175, "vos": 71, "ra": 81 },
+                        "6": { "nel": 5.2, "nev": 5.2, "apde": 47, "apdn": 75, "tsv": 13, "rp": 78, "rf": 296, "ndf": 530, "adf": 327, "zucker": 146, "vos": 66, "ra": 77 },
+                        "7": { "nel": 4.8, "nev": 4.7, "apde": 42, "apdn": 68, "tsv": 12, "rp": 70, "rf": 313, "ndf": 554, "adf": 347, "zucker": 127, "vos": 61, "ra": 74 }
+                      },
+                      "A": {
+                        "1": { "nel": 7, "nev": 7.4, "apde": 151, "apdn": 120, "tsv": 18, "rp": 156, "rf": 227, "ndf": 337, "adf": 188, "zucker": 203, "vos": 83, "ra": 99 },
+                        "2": { "nel": 6.8, "nev": 7.2, "apde": 133, "apdn": 115, "tsv": 18, "rp": 182, "rf": 200, "ndf": 365, "adf": 210, "zucker": 162, "vos": 82, "ra": 98 },
+                        "3": { "nel": 6.7, "nev": 6.4, "apde": 106, "apdn": 105, "tsv": 17, "rp": 159, "rf": 213, "ndf": 409, "adf": 242, "zucker": 155, "vos": 79, "ra": 94 },
+                        "4": { "nel": 5.9, "nev": 6.1, "apde": 95, "apdn": 88, "tsv": 15, "rp": 132, "rf": 247, "ndf": 450, "adf": 281, "zucker": 127, "vos": 75, "ra": 94 },
+                        "5": { "nel": 5.4, "nev": 5.4, "apde": 87, "apdn": 77, "tsv": 14, "rp": 116, "rf": 264, "ndf": 471, "adf": 301, "zucker": 118, "vos": 69, "ra": 93 },
+                        "6": { "nel": 4.9, "nev": 5, "apde": 76, "apdn": 66, "tsv": 13, "rp": 101, "rf": 281, "ndf": 497, "adf": 325, "zucker": 101, "vos": 64, "ra": 90 },
+                        "7": { "nel": 4.5, "nev": 4.6, "apde": 68, "apdn": 59, "tsv": 12, "rp": 92, "rf": 296, "ndf": 517, "adf": 344, "zucker": 89, "vos": 59, "ra": 88 }
+                      },
+                      "AR": {
+                        "1": { "nel": 7.5, "nev": 7, "apde": 117, "apdn": 135, "tsv": 18, "rp": 145, "rf": 202, "ndf": 307, "adf": 174, "zucker": 259, "vos": 84, "ra": 96 },
+                        "2": { "nel": 7, "nev": 7.4, "apde": 126, "apdn": 114, "tsv": 18, "rp": 166, "rf": 188, "ndf": 329, "adf": 194, "zucker": 211, "vos": 84, "ra": 96 },
+                        "3": { "nel": 6.7, "nev": 7.1, "apde": 102, "apdn": 107, "tsv": 17, "rp": 153, "rf": 192, "ndf": 364, "adf": 220, "zucker": 213, "vos": 83, "ra": 92 },
+                        "4": { "nel": 6.4, "nev": 6.7, "apde": 82, "apdn": 98, "tsv": 17, "rp": 124, "rf": 224, "ndf": 408, "adf": 258, "zucker": 183, "vos": 79, "ra": 92 },
+                        "5": { "nel": 5.8, "nev": 5.9, "apde": 88, "apdn": 71, "tsv": 15, "rp": 107, "rf": 248, "ndf": 439, "adf": 284, "zucker": 160, "vos": 73, "ra": 90 },
+                        "6": { "nel": 5.2, "nev": 5.3, "apde": 75, "apdn": 59, "tsv": 14, "rp": 93, "rf": 268, "ndf": 469, "adf": 309, "zucker": 140, "vos": 68, "ra": 87 },
+                        "7": { "nel": 4.8, "nev": 4.9, "apde": 67, "apdn": 52, "tsv": 13, "rp": 84, "rf": 284, "ndf": 492, "adf": 329, "zucker": 124, "vos": 63, "ra": 85 }
+                      },
+                      "L": {
+                        "1": { "nel": 7.5, "nev": 7.1, "apde": 123, "apdn": 167, "tsv": 18, "rp": 250, "rf": 125, "ndf": 259, "adf": 163, "zucker": 165, "vos": 84, "ra": 107 },
+                        "2": { "nel": 7, "nev": 7.4, "apde": 154, "apdn": 120, "tsv": 18, "rp": 231, "rf": 148, "ndf": 282, "adf": 186, "zucker": 139, "vos": 84, "ra": 106 },
+                        "3": { "nel": 7.3, "nev": 6.9, "apde": 116, "apdn": 139, "tsv": 18, "rp": 208, "rf": 166, "ndf": 303, "adf": 204, "zucker": 139, "vos": 83, "ra": 103 },
+                        "4": { "nel": 6.8, "nev": 6.5, "apde": 122, "apdn": 109, "tsv": 17, "rp": 196, "rf": 183, "ndf": 333, "adf": 237, "zucker": 137, "vos": 80, "ra": 103 },
+                        "5": { "nel": 6.2, "nev": 6.1, "apde": 109, "apdn": 102, "tsv": 16, "rp": 221, "rf": 163, "ndf": 364, "adf": 268, "zucker": 114, "vos": 75, "ra": 95 },
+                        "6": { "nel": 5.6, "nev": 5.6, "apde": 95, "apdn": 91, "tsv": 15, "rp": 201, "rf": 180, "ndf": 388, "adf": 293, "zucker": 100, "vos": 71, "ra": 90 },
+                        "7": { "nel": 5.1, "nev": 5.1, "apde": 84, "apdn": 82, "tsv": 14, "rp": 187, "rf": 191, "ndf": 407, "adf": 313, "zucker": 89, "vos": 66, "ra": 87 }
+                      },
+                      "KF": {
+                        "1": { "nel": 7.3, "nev": 6.9, "apde": 114, "apdn": 129, "tsv": 18, "rp": 194, "rf": 124, "ndf": 236, "adf": 159, "zucker": 236, "vos": 83, "ra": 102 },
+                        "2": { "nel": 7.2, "nev": 6.8, "apde": 123, "apdn": 112, "tsv": 18, "rp": 141, "rf": 184, "ndf": 251, "adf": 173, "zucker": 192, "vos": 83, "ra": 105 },
+                        "3": { "nel": 6.9, "nev": 6.6, "apde": 104, "apdn": 100, "tsv": 17, "rp": 151, "rf": 161, "ndf": 282, "adf": 200, "zucker": 169, "vos": 82, "ra": 105 },
+                        "4": { "nel": 6.6, "nev": 6.3, "apde": 97, "apdn": 84, "tsv": 16, "rp": 127, "rf": 183, "ndf": 305, "adf": 228, "zucker": 144, "vos": 80, "ra": 109 },
+                        "5": { "nel": 6.4, "nev": 6.1, "apde": 93, "apdn": 78, "tsv": 16, "rp": 117, "rf": 189, "ndf": 312, "adf": 238, "zucker": 125, "vos": 78, "ra": 113 },
+                        "6": { "nel": 5.9, "nev": 5.7, "apde": 84, "apdn": 68, "tsv": 15, "rp": 104, "rf": 203, "ndf": 329, "adf": 257, "zucker": 111, "vos": 75, "ra": 111 },
+                        "7": { "nel": 5.5, "nev": 5.4, "apde": 76, "apdn": 60, "tsv": 14, "rp": 94, "rf": 213, "ndf": 341, "adf": 271, "zucker": 101, "vos": 72, "ra": 110 }
+                      },
+                      "KG": {
+                        "1": { "nel": 6.7, "nev": 6.4, "apde": 108, "apdn": 123, "tsv": 17, "rp": 185, "rf": 144, "ndf": 255, "adf": 182, "zucker": 207, "vos": 80, "ra": 121 },
+                        "2": { "nel": 6.5, "nev": 6.3, "apde": 114, "apdn": 104, "tsv": 16, "rp": 171, "rf": 155, "ndf": 272, "adf": 195, "zucker": 191, "vos": 79, "ra": 121 },
+                        "3": { "nel": 6.2, "nev": 6, "apde": 102, "apdn": 100, "tsv": 15, "rp": 168, "rf": 153, "ndf": 294, "adf": 212, "zucker": 189, "vos": 77, "ra": 120 },
+                        "4": { "nel": 5.6, "nev": 5.6, "apde": 93, "apdn": 93, "tsv": 14, "rp": 181, "rf": 140, "ndf": 304, "adf": 223, "zucker": 179, "vos": 72, "ra": 119 },
+                        "5": { "nel": 5.1, "nev": 5, "apde": 87, "apdn": 87, "tsv": 13, "rp": 187, "rf": 131, "ndf": 316, "adf": 235, "zucker": 178, "vos": 67, "ra": 119 },
+                        "6": { "nel": 4.6, "nev": 4.5, "apde": 80, "apdn": 80, "tsv": 12, "rp": 188, "rf": 126, "ndf": 328, "adf": 248, "zucker": 174, "vos": 62, "ra": 118 },
+                        "7": { "nel": 4.1, "nev": 4, "apde": 74, "apdn": 74, "tsv": 11, "rp": 186, "rf": 124, "ndf": 337, "adf": 258, "zucker": 171, "vos": 57, "ra": 118 }
+                      }
+                    },
+                    "silage": {
+                      "G": {
+                        "1": { "nel": 6.9, "nev": 7.3, "apde": 91, "apdn": 151, "tsv": 17, "rp": 183, "rf": 242, "ndf": 361, "adf": 220, "zucker": 76, "vos": 83, "ra": 103 },
+                        "2": { "nel": 6.7, "nev": 7.1, "apde": 88, "apdn": 130, "tsv": 17, "rp": 212, "rf": 207, "ndf": 387, "adf": 242, "zucker": 59, "vos": 81, "ra": 102 },
+                        "3": { "nel": 6.1, "nev": 6.3, "apde": 82, "apdn": 99, "tsv": 15, "rp": 157, "rf": 250, "ndf": 436, "adf": 280, "zucker": 58, "vos": 76, "ra": 96 },
+                        "4": { "nel": 5.5, "nev": 5.5, "apde": 81, "apdn": 74, "tsv": 14, "rp": 128, "rf": 290, "ndf": 478, "adf": 322, "zucker": 45, "vos": 70, "ra": 94 },
+                        "5": { "nel": 4.8, "nev": 4.8, "apde": 67, "apdn": 68, "tsv": 12, "rp": 108, "rf": 308, "ndf": 497, "adf": 342, "zucker": 43, "vos": 64, "ra": 91 },
+                        "6": { "nel": 4.3, "nev": 4.3, "apde": 56, "apdn": 59, "tsv": 11, "rp": 93, "rf": 326, "ndf": 524, "adf": 366, "zucker": 38, "vos": 59, "ra": 87 },
+                        "7": { "nel": 3.9, "nev": 3.9, "apde": 48, "apdn": 53, "tsv": 10, "rp": 83, "rf": 340, "ndf": 544, "adf": 383, "zucker": 33, "vos": 54, "ra": 85 }
+                      },
+                      "GR": {
+                        "1": { "nel": 6.8, "nev": 7.1, "apde": 89, "apdn": 128, "tsv": 17, "rp": 167, "rf": 204, "ndf": 323, "adf": 201, "zucker": 111, "vos": 82, "ra": 99 },
+                        "2": { "nel": 6.8, "nev": 7.2, "apde": 89, "apdn": 121, "tsv": 17, "rp": 188, "rf": 192, "ndf": 343, "adf": 219, "zucker": 89, "vos": 83, "ra": 98 },
+                        "3": { "nel": 6.5, "nev": 6.8, "apde": 85, "apdn": 94, "tsv": 16, "rp": 150, "rf": 221, "ndf": 378, "adf": 249, "zucker": 92, "vos": 80, "ra": 93 },
+                        "4": { "nel": 6.1, "nev": 6.3, "apde": 78, "apdn": 73, "tsv": 15, "rp": 116, "rf": 255, "ndf": 427, "adf": 290, "zucker": 76, "vos": 76, "ra": 90 },
+                        "5": { "nel": 5.5, "nev": 5.5, "apde": 61, "apdn": 70, "tsv": 14, "rp": 97, "rf": 286, "ndf": 460, "adf": 322, "zucker": 67, "vos": 69, "ra": 87 },
+                        "6": { "nel": 4.9, "nev": 4.9, "apde": 51, "apdn": 60, "tsv": 13, "rp": 83, "rf": 308, "ndf": 490, "adf": 346, "zucker": 58, "vos": 64, "ra": 83 },
+                        "7": { "nel": 4.5, "nev": 4.5, "apde": 46, "apdn": 53, "tsv": 11, "rp": 75, "rf": 324, "ndf": 512, "adf": 364, "zucker": 52, "vos": 59, "ra": 80 }
+                      },
+                      "A": {
+                        "1": { "nel": 6.8, "nev": 7.2, "apde": 90, "apdn": 149, "tsv": 17, "rp": 168, "rf": 239, "ndf": 316, "adf": 206, "zucker": 74, "vos": 82, "ra": 105 },
+                        "2": { "nel": 6.7, "nev": 7, "apde": 88, "apdn": 131, "tsv": 17, "rp": 194, "rf": 210, "ndf": 341, "adf": 229, "zucker": 60, "vos": 81, "ra": 105 },
+                        "3": { "nel": 6.2, "nev": 6.4, "apde": 83, "apdn": 105, "tsv": 16, "rp": 166, "rf": 225, "ndf": 382, "adf": 260, "zucker": 57, "vos": 77, "ra": 101 },
+                        "4": { "nel": 5.7, "nev": 5.7, "apde": 77, "apdn": 87, "tsv": 14, "rp": 139, "rf": 261, "ndf": 419, "adf": 301, "zucker": 47, "vos": 72, "ra": 101 },
+                        "5": { "nel": 5.1, "nev": 5.1, "apde": 70, "apdn": 76, "tsv": 13, "rp": 121, "rf": 277, "ndf": 436, "adf": 320, "zucker": 43, "vos": 67, "ra": 100 },
+                        "6": { "nel": 4.6, "nev": 4.6, "apde": 62, "apdn": 66, "tsv": 12, "rp": 106, "rf": 294, "ndf": 461, "adf": 343, "zucker": 38, "vos": 62, "ra": 96 },
+                        "7": { "nel": 4.2, "nev": 4.2, "apde": 55, "apdn": 59, "tsv": 11, "rp": 96, "rf": 308, "ndf": 480, "adf": 361, "zucker": 33, "vos": 57, "ra": 94 }
+                      },
+                      "AR": {
+                        "1": { "nel": 6.9, "nev": 7.3, "apde": 90, "apdn": 133, "tsv": 17, "rp": 155, "rf": 213, "ndf": 290, "adf": 192, "zucker": 98, "vos": 83, "ra": 103 },
+                        "2": { "nel": 6.9, "nev": 7.2, "apde": 89, "apdn": 124, "tsv": 17, "rp": 177, "rf": 198, "ndf": 310, "adf": 213, "zucker": 80, "vos": 83, "ra": 104 },
+                        "3": { "nel": 6.6, "nev": 6.9, "apde": 86, "apdn": 101, "tsv": 17, "rp": 161, "rf": 204, "ndf": 341, "adf": 239, "zucker": 80, "vos": 81, "ra": 99 },
+                        "4": { "nel": 6.2, "nev": 6.4, "apde": 80, "apdn": 82, "tsv": 16, "rp": 130, "rf": 237, "ndf": 381, "adf": 278, "zucker": 70, "vos": 78, "ra": 97 },
+                        "5": { "nel": 5.6, "nev": 5.6, "apde": 73, "apdn": 71, "tsv": 14, "rp": 113, "rf": 261, "ndf": 408, "adf": 303, "zucker": 60, "vos": 71, "ra": 97 },
+                        "6": { "nel": 5, "nev": 5, "apde": 63, "apdn": 61, "tsv": 13, "rp": 99, "rf": 280, "ndf": 436, "adf": 326, "zucker": 52, "vos": 66, "ra": 94 },
+                        "7": { "nel": 4.6, "nev": 4.6, "apde": 57, "apdn": 55, "tsv": 12, "rp": 90, "rf": 295, "ndf": 457, "adf": 345, "zucker": 46, "vos": 61, "ra": 92 }
+                      },
+                      "L": {
+                        "1": { "nel": 7.4, "nev": 7, "apde": 91, "apdn": 164, "tsv": 18, "rp": 264, "rf": 135, "ndf": 247, "adf": 182, "zucker": 63, "vos": 83, "ra": 116 },
+                        "2": { "nel": 7.2, "nev": 6.9, "apde": 90, "apdn": 152, "tsv": 17, "rp": 243, "rf": 159, "ndf": 268, "adf": 205, "zucker": 52, "vos": 82, "ra": 113 },
+                        "3": { "nel": 7.1, "nev": 6.7, "apde": 88, "apdn": 137, "tsv": 17, "rp": 219, "rf": 177, "ndf": 286, "adf": 223, "zucker": 51, "vos": 82, "ra": 110 },
+                        "4": { "nel": 6.6, "nev": 6.3, "apde": 84, "apdn": 120, "tsv": 16, "rp": 192, "rf": 207, "ndf": 313, "adf": 255, "zucker": 51, "vos": 78, "ra": 110 },
+                        "5": { "nel": 6, "nev": 5.9, "apde": 80, "apdn": 108, "tsv": 15, "rp": 172, "rf": 233, "ndf": 339, "adf": 285, "zucker": 40, "vos": 73, "ra": 102 },
+                        "6": { "nel": 5.4, "nev": 5.3, "apde": 73, "apdn": 95, "tsv": 14, "rp": 154, "rf": 255, "ndf": 364, "adf": 312, "zucker": 35, "vos": 68, "ra": 98 },
+                        "7": { "nel": 4.9, "nev": 4.8, "apde": 67, "apdn": 85, "tsv": 13, "rp": 141, "rf": 272, "ndf": 384, "adf": 333, "zucker": 30, "vos": 63, "ra": 95 }
+                      },
+                      "KF": {
+                        "1": { "nel": 7.1, "nev": 6.7, "apde": 88, "apdn": 128, "tsv": 17, "rp": 135, "rf": 204, "ndf": 226, "adf": 178, "zucker": 88, "vos": 82, "ra": 109 },
+                        "2": { "nel": 7, "nev": 6.7, "apde": 87, "apdn": 121, "tsv": 17, "rp": 153, "rf": 193, "ndf": 240, "adf": 193, "zucker": 71, "vos": 82, "ra": 113 },
+                        "3": { "nel": 6.7, "nev": 6.4, "apde": 84, "apdn": 100, "tsv": 16, "rp": 174, "rf": 159, "ndf": 268, "adf": 221, "zucker": 63, "vos": 80, "ra": 112 },
+                        "4": { "nel": 6.4, "nev": 6.1, "apde": 84, "apdn": 80, "tsv": 15, "rp": 197, "rf": 133, "ndf": 288, "adf": 250, "zucker": 54, "vos": 78, "ra": 117 },
+                        "5": { "nel": 6.1, "nev": 5.9, "apde": 77, "apdn": 78, "tsv": 15, "rp": 201, "rf": 123, "ndf": 293, "adf": 258, "zucker": 47, "vos": 76, "ra": 121 },
+                        "6": { "nel": 5.6, "nev": 5.6, "apde": 70, "apdn": 68, "tsv": 14, "rp": 196, "rf": 128, "ndf": 310, "adf": 275, "zucker": 41, "vos": 73, "ra": 119 },
+                        "7": { "nel": 5.2, "nev": 5.2, "apde": 64, "apdn": 61, "tsv": 13, "rp": 191, "rf": 131, "ndf": 322, "adf": 289, "zucker": 37, "vos": 70, "ra": 119 }
+                      },
+                      "KG": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 83, "apdn": 122, "tsv": 16, "rp": 156, "rf": 194, "ndf": 243, "adf": 203, "zucker": 77, "vos": 79, "ra": 130 },
+                        "2": { "nel": 6.3, "nev": 6.1, "apde": 81, "apdn": 113, "tsv": 15, "rp": 168, "rf": 180, "ndf": 259, "adf": 217, "zucker": 73, "vos": 78, "ra": 130 },
+                        "3": { "nel": 6, "nev": 5.9, "apde": 78, "apdn": 101, "tsv": 14, "rp": 181, "rf": 161, "ndf": 279, "adf": 234, "zucker": 71, "vos": 75, "ra": 129 },
+                        "4": { "nel": 5.4, "nev": 5.4, "apde": 74, "apdn": 93, "tsv": 13, "rp": 193, "rf": 147, "ndf": 287, "adf": 243, "zucker": 67, "vos": 70, "ra": 129 },
+                        "5": { "nel": 4.9, "nev": 4.7, "apde": 68, "apdn": 86, "tsv": 12, "rp": 198, "rf": 137, "ndf": 296, "adf": 252, "zucker": 67, "vos": 65, "ra": 128 },
+                        "6": { "nel": 4.3, "nev": 4.3, "apde": 61, "apdn": 79, "tsv": 11, "rp": 199, "rf": 132, "ndf": 305, "adf": 262, "zucker": 65, "vos": 60, "ra": 127 },
+                        "7": { "nel": 3.9, "nev": 3.9, "apde": 55, "apdn": 73, "tsv": 10, "rp": 197, "rf": 130, "ndf": 312, "adf": 269, "zucker": 63, "vos": 55, "ra": 127 }
+                      }
+                    },
+                    "hay": {
+                      "G": {
+                        "1": { "nel": 6.6, "nev": 6.4, "apde": 108, "apdn": 131, "tsv": 18, "rp": 187, "rf": 204, "ndf": 404, "adf": 218, "zucker": 167, "vos": 78, "ra": 94 },
+                        "2": { "nel": 6.5, "nev": 6.3, "apde": 103, "apdn": 113, "tsv": 18, "rp": 216, "rf": 176, "ndf": 433, "adf": 240, "zucker": 131, "vos": 77, "ra": 93 },
+                        "3": { "nel": 5.9, "nev": 5.8, "apde": 86, "apdn": 92, "tsv": 16, "rp": 135, "rf": 254, "ndf": 488, "adf": 278, "zucker": 128, "vos": 73, "ra": 88 },
+                        "4": { "nel": 5.3, "nev": 5.3, "apde": 70, "apdn": 83, "tsv": 15, "rp": 111, "rf": 294, "ndf": 535, "adf": 321, "zucker": 98, "vos": 68, "ra": 86 },
+                        "5": { "nel": 4.8, "nev": 4.6, "apde": 59, "apdn": 74, "tsv": 13, "rp": 94, "rf": 313, "ndf": 557, "adf": 342, "zucker": 98, "vos": 62, "ra": 83 },
+                        "6": { "nel": 4.4, "nev": 4.1, "apde": 47, "apdn": 65, "tsv": 12, "rp": 75, "rf": 342, "ndf": 597, "adf": 379, "zucker": 73, "vos": 57, "ra": 79 },
+                        "7": { "nel": 4, "nev": 3.7, "apde": 40, "apdn": 60, "tsv": 11, "rp": 65, "rf": 365, "ndf": 629, "adf": 412, "zucker": 56, "vos": 53, "ra": 76 }
+                      },
+                      "GR": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 111, "apdn": 103, "tsv": 18, "rp": 171, "rf": 173, "ndf": 362, "adf": 198, "zucker": 232, "vos": 78, "ra": 90 },
+                        "2": { "nel": 6.6, "nev": 6.4, "apde": 102, "apdn": 105, "tsv": 18, "rp": 193, "rf": 164, "ndf": 384, "adf": 217, "zucker": 187, "vos": 79, "ra": 90 },
+                        "3": { "nel": 6.4, "nev": 6.2, "apde": 82, "apdn": 94, "tsv": 18, "rp": 129, "rf": 225, "ndf": 423, "adf": 247, "zucker": 194, "vos": 76, "ra": 84 },
+                        "4": { "nel": 6, "nev": 5.9, "apde": 63, "apdn": 85, "tsv": 16, "rp": 100, "rf": 260, "ndf": 477, "adf": 288, "zucker": 161, "vos": 73, "ra": 82 },
+                        "5": { "nel": 5.3, "nev": 5.3, "apde": 53, "apdn": 77, "tsv": 15, "rp": 85, "rf": 291, "ndf": 515, "adf": 321, "zucker": 140, "vos": 67, "ra": 79 },
+                        "6": { "nel": 4.7, "nev": 4.7, "apde": 42, "apdn": 67, "tsv": 13, "rp": 69, "rf": 319, "ndf": 553, "adf": 353, "zucker": 115, "vos": 61, "ra": 75 },
+                        "7": { "nel": 4.3, "nev": 4.3, "apde": 38, "apdn": 61, "tsv": 12, "rp": 61, "rf": 339, "ndf": 580, "adf": 376, "zucker": 99, "vos": 57, "ra": 72 }
+                      },
+                      "A": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 107, "apdn": 129, "tsv": 18, "rp": 172, "rf": 202, "ndf": 354, "adf": 203, "zucker": 161, "vos": 78, "ra": 97 },
+                        "2": { "nel": 6.4, "nev": 6.2, "apde": 102, "apdn": 114, "tsv": 18, "rp": 198, "rf": 178, "ndf": 382, "adf": 227, "zucker": 130, "vos": 77, "ra": 95 },
+                        "3": { "nel": 6, "nev": 5.9, "apde": 94, "apdn": 90, "tsv": 17, "rp": 142, "rf": 230, "ndf": 428, "adf": 258, "zucker": 124, "vos": 74, "ra": 92 },
+                        "4": { "nel": 5.5, "nev": 5.5, "apde": 75, "apdn": 86, "tsv": 15, "rp": 119, "rf": 266, "ndf": 469, "adf": 299, "zucker": 101, "vos": 70, "ra": 92 },
+                        "5": { "nel": 4.9, "nev": 5, "apde": 66, "apdn": 78, "tsv": 14, "rp": 105, "rf": 281, "ndf": 488, "adf": 319, "zucker": 94, "vos": 64, "ra": 91 },
+                        "6": { "nel": 4.4, "nev": 4.4, "apde": 55, "apdn": 71, "tsv": 13, "rp": 87, "rf": 307, "ndf": 522, "adf": 353, "zucker": 89, "vos": 60, "ra": 88 },
+                        "7": { "nel": 4.1, "nev": 4.1, "apde": 48, "apdn": 66, "tsv": 12, "rp": 77, "rf": 326, "ndf": 548, "adf": 384, "zucker": 89, "vos": 57, "ra": 86 }
+                      },
+                      "AR": {
+                        "1": { "nel": 6.6, "nev": 6.4, "apde": 104, "apdn": 115, "tsv": 18, "rp": 159, "rf": 180, "ndf": 324, "adf": 189, "zucker": 207, "vos": 78, "ra": 94 },
+                        "2": { "nel": 6.6, "nev": 6.4, "apde": 107, "apdn": 102, "tsv": 18, "rp": 181, "rf": 168, "ndf": 347, "adf": 209, "zucker": 169, "vos": 79, "ra": 94 },
+                        "3": { "nel": 6.4, "nev": 6.2, "apde": 88, "apdn": 96, "tsv": 17, "rp": 138, "rf": 209, "ndf": 381, "adf": 236, "zucker": 169, "vos": 77, "ra": 89 },
+                        "4": { "nel": 6.1, "nev": 5.9, "apde": 71, "apdn": 88, "tsv": 17, "rp": 112, "rf": 242, "ndf": 426, "adf": 276, "zucker": 147, "vos": 74, "ra": 90 },
+                        "5": { "nel": 5.4, "nev": 5.3, "apde": 62, "apdn": 80, "tsv": 15, "rp": 98, "rf": 266, "ndf": 457, "adf": 302, "zucker": 128, "vos": 68, "ra": 88 },
+                        "6": { "nel": 4.8, "nev": 4.8, "apde": 51, "apdn": 71, "tsv": 14, "rp": 83, "rf": 288, "ndf": 490, "adf": 331, "zucker": 111, "vos": 63, "ra": 84 },
+                        "7": { "nel": 4.4, "nev": 4.4, "apde": 45, "apdn": 65, "tsv": 13, "rp": 74, "rf": 305, "ndf": 515, "adf": 354, "zucker": 99, "vos": 59, "ra": 82 }
+                      },
+                      "L": {
+                        "1": { "nel": 6.7, "nev": 6.5, "apde": 142, "apdn": 110, "tsv": 18, "rp": 222, "rf": 140, "ndf": 276, "adf": 178, "zucker": 137, "vos": 79, "ra": 105 },
+                        "2": { "nel": 6.6, "nev": 6.4, "apde": 132, "apdn": 108, "tsv": 18, "rp": 206, "rf": 163, "ndf": 299, "adf": 202, "zucker": 111, "vos": 78, "ra": 104 },
+                        "3": { "nel": 6.5, "nev": 6.3, "apde": 104, "apdn": 120, "tsv": 18, "rp": 182, "rf": 187, "ndf": 320, "adf": 220, "zucker": 111, "vos": 78, "ra": 101 },
+                        "4": { "nel": 6.1, "nev": 6, "apde": 98, "apdn": 105, "tsv": 17, "rp": 164, "rf": 212, "ndf": 349, "adf": 254, "zucker": 110, "vos": 75, "ra": 100 },
+                        "5": { "nel": 5.6, "nev": 5.5, "apde": 94, "apdn": 92, "tsv": 16, "rp": 147, "rf": 237, "ndf": 379, "adf": 285, "zucker": 91, "vos": 70, "ra": 93 },
+                        "6": { "nel": 5, "nev": 5, "apde": 85, "apdn": 82, "tsv": 15, "rp": 132, "rf": 258, "ndf": 408, "adf": 315, "zucker": 78, "vos": 65, "ra": 89 },
+                        "7": { "nel": 4.5, "nev": 4.5, "apde": 76, "apdn": 74, "tsv": 14, "rp": 119, "rf": 276, "ndf": 431, "adf": 340, "zucker": 69, "vos": 61, "ra": 86 }
+                      },
+                      "KF": {
+                        "1": { "nel": 6.4, "nev": 6.2, "apde": 102, "apdn": 110, "tsv": 17, "rp": 139, "rf": 172, "ndf": 252, "adf": 174, "zucker": 189, "vos": 78, "ra": 100 },
+                        "2": { "nel": 6.4, "nev": 6.2, "apde": 100, "apdn": 105, "tsv": 17, "rp": 158, "rf": 165, "ndf": 267, "adf": 189, "zucker": 153, "vos": 77, "ra": 103 },
+                        "3": { "nel": 6.2, "nev": 6, "apde": 86, "apdn": 93, "tsv": 17, "rp": 179, "rf": 135, "ndf": 300, "adf": 217, "zucker": 136, "vos": 76, "ra": 102 },
+                        "4": { "nel": 6, "nev": 5.8, "apde": 87, "apdn": 72, "tsv": 16, "rp": 202, "rf": 114, "ndf": 322, "adf": 246, "zucker": 114, "vos": 74, "ra": 107 },
+                        "5": { "nel": 5.8, "nev": 5.7, "apde": 78, "apdn": 84, "tsv": 16, "rp": 206, "rf": 107, "ndf": 327, "adf": 255, "zucker": 100, "vos": 73, "ra": 110 },
+                        "6": { "nel": 5.5, "nev": 5.5, "apde": 67, "apdn": 80, "tsv": 15, "rp": 215, "rf": 88, "ndf": 341, "adf": 277, "zucker": 94, "vos": 71, "ra": 116 },
+                        "7": { "nel": 5.4, "nev": 5.3, "apde": 74, "apdn": 46, "tsv": 15, "rp": 218, "rf": 74, "ndf": 349, "adf": 294, "zucker": 92, "vos": 70, "ra": 122 }
+                      },
+                      "KG": {
+                        "1": { "nel": 5.9, "nev": 5.8, "apde": 105, "apdn": 96, "tsv": 16, "rp": 161, "rf": 164, "ndf": 272, "adf": 198, "zucker": 165, "vos": 75, "ra": 120 },
+                        "2": { "nel": 5.8, "nev": 5.7, "apde": 97, "apdn": 93, "tsv": 16, "rp": 173, "rf": 153, "ndf": 290, "adf": 212, "zucker": 154, "vos": 74, "ra": 120 },
+                        "3": { "nel": 5.5, "nev": 5.5, "apde": 89, "apdn": 87, "tsv": 15, "rp": 186, "rf": 137, "ndf": 313, "adf": 230, "zucker": 151, "vos": 72, "ra": 119 },
+                        "4": { "nel": 5.1, "nev": 5, "apde": 80, "apdn": 83, "tsv": 14, "rp": 198, "rf": 126, "ndf": 322, "adf": 240, "zucker": 143, "vos": 67, "ra": 117 },
+                        "5": { "nel": 4.6, "nev": 4.4, "apde": 75, "apdn": 77, "tsv": 13, "rp": 202, "rf": 118, "ndf": 331, "adf": 250, "zucker": 143, "vos": 62, "ra": 117 },
+                        "6": { "nel": 4.5, "nev": 4.3, "apde": 70, "apdn": 75, "tsv": 13, "rp": 208, "rf": 111, "ndf": 336, "adf": 259, "zucker": 134, "vos": 61, "ra": 114 },
+                        "7": { "nel": 4.5, "nev": 4.3, "apde": 74, "apdn": 68, "tsv": 13, "rp": 210, "rf": 107, "ndf": 337, "adf": 265, "zucker": 129, "vos": 60, "ra": 112 }
+                      }
+                    }
+                  },
+                  "folge": {
+                    "greenfeed": {
+                      "G": {
+                        "1": { "nel": 6.2, "nev": 6.1, "apde": 107, "apdn": 129, "tsv": 16, "rp": 193, "rf": 234, "ndf": 446, "adf": 269, "zucker": 88, "vos": 75, "ra": 111 },
+                        "2": { "nel": 6, "nev": 5.9, "apde": 102, "apdn": 117, "tsv": 15, "rp": 175, "rf": 240, "ndf": 454, "adf": 275, "zucker": 94, "vos": 74, "ra": 105 },
+                        "3": { "nel": 5.6, "nev": 5.6, "apde": 96, "apdn": 100, "tsv": 14, "rp": 151, "rf": 259, "ndf": 486, "adf": 295, "zucker": 88, "vos": 71, "ra": 102 },
+                        "4": { "nel": 5.4, "nev": 5.3, "apde": 91, "apdn": 88, "tsv": 14, "rp": 133, "rf": 269, "ndf": 505, "adf": 313, "zucker": 83, "vos": 69, "ra": 97 },
+                        "5": { "nel": 4.8, "nev": 4.9, "apde": 82, "apdn": 74, "tsv": 12, "rp": 112, "rf": 296, "ndf": 553, "adf": 346, "zucker": 72, "vos": 64, "ra": 96 }
+                      },
+                      "GR": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 107, "apdn": 123, "tsv": 16, "rp": 185, "rf": 214, "ndf": 404, "adf": 248, "zucker": 123, "vos": 78, "ra": 113 },
+                        "2": { "nel": 6.4, "nev": 6.2, "apde": 114, "apdn": 105, "tsv": 16, "rp": 171, "rf": 218, "ndf": 414, "adf": 254, "zucker": 138, "vos": 77, "ra": 106 },
+                        "3": { "nel": 6, "nev": 5.9, "apde": 101, "apdn": 99, "tsv": 15, "rp": 151, "rf": 232, "ndf": 444, "adf": 272, "zucker": 126, "vos": 74, "ra": 102 },
+                        "4": { "nel": 5.5, "nev": 5.5, "apde": 92, "apdn": 89, "tsv": 14, "rp": 134, "rf": 246, "ndf": 475, "adf": 293, "zucker": 115, "vos": 70, "ra": 92 },
+                        "5": { "nel": 5.2, "nev": 5.1, "apde": 85, "apdn": 75, "tsv": 13, "rp": 114, "rf": 272, "ndf": 518, "adf": 323, "zucker": 85, "vos": 66, "ra": 100 }
+                      },
+                      "A": {
+                        "1": { "nel": 6.3, "nev": 6.1, "apde": 133, "apdn": 108, "tsv": 16, "rp": 199, "rf": 208, "ndf": 390, "adf": 249, "zucker": 86, "vos": 76, "ra": 117 },
+                        "2": { "nel": 6.1, "nev": 6, "apde": 121, "apdn": 104, "tsv": 15, "rp": 181, "rf": 215, "ndf": 398, "adf": 255, "zucker": 97, "vos": 75, "ra": 111 },
+                        "3": { "nel": 5.7, "nev": 5.7, "apde": 98, "apdn": 107, "tsv": 14, "rp": 160, "rf": 233, "ndf": 427, "adf": 274, "zucker": 89, "vos": 72, "ra": 108 },
+                        "4": { "nel": 5.5, "nev": 5.5, "apde": 93, "apdn": 96, "tsv": 14, "rp": 144, "rf": 244, "ndf": 445, "adf": 292, "zucker": 83, "vos": 70, "ra": 102 },
+                        "5": { "nel": 5, "nev": 5.1, "apde": 86, "apdn": 83, "tsv": 13, "rp": 125, "rf": 271, "ndf": 490, "adf": 323, "zucker": 74, "vos": 66, "ra": 100 }
+                      },
+                      "AR": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 108, "apdn": 128, "tsv": 16, "rp": 195, "rf": 192, "ndf": 360, "adf": 234, "zucker": 112, "vos": 78, "ra": 119 },
+                        "2": { "nel": 6.4, "nev": 6.2, "apde": 119, "apdn": 105, "tsv": 16, "rp": 200, "rf": 178, "ndf": 371, "adf": 240, "zucker": 128, "vos": 77, "ra": 112 },
+                        "3": { "nel": 6, "nev": 5.9, "apde": 106, "apdn": 100, "tsv": 15, "rp": 160, "rf": 215, "ndf": 398, "adf": 259, "zucker": 115, "vos": 75, "ra": 107 },
+                        "4": { "nel": 5.7, "nev": 5.7, "apde": 95, "apdn": 96, "tsv": 14, "rp": 144, "rf": 229, "ndf": 426, "adf": 280, "zucker": 106, "vos": 72, "ra": 98 },
+                        "5": { "nel": 5.3, "nev": 5.2, "apde": 83, "apdn": 88, "tsv": 13, "rp": 125, "rf": 255, "ndf": 466, "adf": 307, "zucker": 97, "vos": 68, "ra": 94 }
+                      },
+                      "L": {
+                        "1": { "nel": 6.7, "nev": 6.5, "apde": 114, "apdn": 152, "tsv": 17, "rp": 228, "rf": 168, "ndf": 289, "adf": 214, "zucker": 88, "vos": 79, "ra": 124 },
+                        "2": { "nel": 6.5, "nev": 6.3, "apde": 110, "apdn": 140, "tsv": 16, "rp": 210, "rf": 179, "ndf": 307, "adf": 225, "zucker": 103, "vos": 77, "ra": 117 },
+                        "3": { "nel": 6, "nev": 6.1, "apde": 130, "apdn": 106, "tsv": 15, "rp": 197, "rf": 195, "ndf": 332, "adf": 247, "zucker": 99, "vos": 75, "ra": 113 },
+                        "4": { "nel": 5.9, "nev": 5.8, "apde": 102, "apdn": 121, "tsv": 15, "rp": 215, "rf": 181, "ndf": 356, "adf": 272, "zucker": 88, "vos": 73, "ra": 105 },
+                        "5": { "nel": 5.3, "nev": 5.2, "apde": 94, "apdn": 107, "tsv": 13, "rp": 160, "rf": 251, "ndf": 413, "adf": 305, "zucker": 78, "vos": 67, "ra": 99 }
+                      },
+                      "KF": {
+                        "1": { "nel": 6.4, "nev": 6.2, "apde": 123, "apdn": 105, "tsv": 16, "rp": 158, "rf": 184, "ndf": 282, "adf": 210, "zucker": 132, "vos": 78, "ra": 90 },
+                        "2": { "nel": 6.3, "nev": 6.1, "apde": 117, "apdn": 104, "tsv": 16, "rp": 162, "rf": 175, "ndf": 286, "adf": 215, "zucker": 128, "vos": 78, "ra": 110 },
+                        "3": { "nel": 6.2, "nev": 6, "apde": 107, "apdn": 101, "tsv": 15, "rp": 169, "rf": 161, "ndf": 296, "adf": 222, "zucker": 126, "vos": 77, "ra": 93 },
+                        "4": { "nel": 6.1, "nev": 6, "apde": 101, "apdn": 99, "tsv": 15, "rp": 151, "rf": 176, "ndf": 306, "adf": 231, "zucker": 121, "vos": 76, "ra": 86 },
+                        "5": { "nel": 5.7, "nev": 5.6, "apde": 93, "apdn": 94, "tsv": 14, "rp": 140, "rf": 191, "ndf": 325, "adf": 245, "zucker": 119, "vos": 73, "ra": 83 }
+                      },
+                      "KG": {
+                        "1": { "nel": 6.4, "nev": 6.2, "apde": 125, "apdn": 106, "tsv": 16, "rp": 172, "rf": 187, "ndf": 306, "adf": 222, "zucker": 132, "vos": 78, "ra": 103 },
+                        "2": { "nel": 6, "nev": 5.9, "apde": 114, "apdn": 101, "tsv": 15, "rp": 171, "rf": 176, "ndf": 312, "adf": 226, "zucker": 129, "vos": 75, "ra": 106 },
+                        "3": { "nel": 5.6, "nev": 5.5, "apde": 98, "apdn": 113, "tsv": 14, "rp": 186, "rf": 169, "ndf": 340, "adf": 237, "zucker": 126, "vos": 71, "ra": 104 },
+                        "4": { "nel": 5.3, "nev": 5.2, "apde": 107, "apdn": 94, "tsv": 13, "rp": 192, "rf": 160, "ndf": 352, "adf": 246, "zucker": 123, "vos": 68, "ra": 102 },
+                        "5": { "nel": 4.7, "nev": 4.5, "apde": 87, "apdn": 101, "tsv": 12, "rp": 152, "rf": 204, "ndf": 379, "adf": 260, "zucker": 98, "vos": 61, "ra": 121 }
+                      }
+                    },
+                    "silage": {
+                      "G": {
+                        "1": { "nel": 6, "nev": 5.9, "apde": 80, "apdn": 127, "tsv": 15, "rp": 203, "rf": 248, "ndf": 417, "adf": 292, "zucker": 32, "vos": 74, "ra": 119 },
+                        "2": { "nel": 5.8, "nev": 5.8, "apde": 79, "apdn": 115, "tsv": 14, "rp": 184, "rf": 254, "ndf": 422, "adf": 297, "zucker": 34, "vos": 72, "ra": 113 },
+                        "3": { "nel": 5.4, "nev": 5.4, "apde": 75, "apdn": 100, "tsv": 13, "rp": 159, "rf": 273, "ndf": 452, "adf": 317, "zucker": 32, "vos": 69, "ra": 109 },
+                        "4": { "nel": 5.2, "nev": 5.1, "apde": 72, "apdn": 88, "tsv": 13, "rp": 140, "rf": 284, "ndf": 469, "adf": 333, "zucker": 30, "vos": 67, "ra": 105 },
+                        "5": { "nel": 4.6, "nev": 4.4, "apde": 65, "apdn": 74, "tsv": 11, "rp": 117, "rf": 310, "ndf": 510, "adf": 365, "zucker": 26, "vos": 61, "ra": 102 }
+                      },
+                      "GR": {
+                        "1": { "nel": 6.3, "nev": 6.1, "apde": 82, "apdn": 122, "tsv": 15, "rp": 227, "rf": 194, "ndf": 379, "adf": 272, "zucker": 47, "vos": 77, "ra": 122 },
+                        "2": { "nel": 6.2, "nev": 6.1, "apde": 82, "apdn": 113, "tsv": 15, "rp": 181, "rf": 232, "ndf": 387, "adf": 276, "zucker": 53, "vos": 76, "ra": 113 },
+                        "3": { "nel": 5.8, "nev": 5.7, "apde": 78, "apdn": 100, "tsv": 14, "rp": 159, "rf": 247, "ndf": 413, "adf": 295, "zucker": 48, "vos": 73, "ra": 109 },
+                        "4": { "nel": 5.4, "nev": 5.3, "apde": 74, "apdn": 89, "tsv": 13, "rp": 141, "rf": 259, "ndf": 442, "adf": 315, "zucker": 44, "vos": 69, "ra": 99 },
+                        "5": { "nel": 5, "nev": 4.8, "apde": 68, "apdn": 75, "tsv": 12, "rp": 119, "rf": 286, "ndf": 480, "adf": 343, "zucker": 38, "vos": 64, "ra": 91 }
+                      },
+                      "A": {
+                        "1": { "nel": 6.1, "nev": 6, "apde": 81, "apdn": 131, "tsv": 15, "rp": 223, "rf": 209, "ndf": 365, "adf": 271, "zucker": 32, "vos": 75, "ra": 125 },
+                        "2": { "nel": 5.9, "nev": 5.8, "apde": 79, "apdn": 119, "tsv": 14, "rp": 229, "rf": 190, "ndf": 373, "adf": 278, "zucker": 36, "vos": 73, "ra": 119 },
+                        "3": { "nel": 5.5, "nev": 5.5, "apde": 76, "apdn": 105, "tsv": 13, "rp": 168, "rf": 246, "ndf": 399, "adf": 296, "zucker": 33, "vos": 70, "ra": 115 },
+                        "4": { "nel": 5.3, "nev": 5.2, "apde": 73, "apdn": 95, "tsv": 13, "rp": 151, "rf": 257, "ndf": 415, "adf": 313, "zucker": 31, "vos": 68, "ra": 109 },
+                        "5": { "nel": 4.9, "nev": 4.7, "apde": 68, "apdn": 82, "tsv": 12, "rp": 130, "rf": 284, "ndf": 454, "adf": 343, "zucker": 27, "vos": 64, "ra": 108 }
+                      },
+                      "AR": {
+                        "1": { "nel": 6.3, "nev": 6.1, "apde": 82, "apdn": 127, "tsv": 15, "rp": 203, "rf": 208, "ndf": 340, "adf": 258, "zucker": 43, "vos": 77, "ra": 126 },
+                        "2": { "nel": 6.2, "nev": 6, "apde": 81, "apdn": 118, "tsv": 15, "rp": 187, "rf": 214, "ndf": 349, "adf": 264, "zucker": 49, "vos": 76, "ra": 120 },
+                        "3": { "nel": 5.8, "nev": 5.8, "apde": 78, "apdn": 106, "tsv": 14, "rp": 168, "rf": 229, "ndf": 373, "adf": 282, "zucker": 44, "vos": 73, "ra": 115 },
+                        "4": { "nel": 5.5, "nev": 5.5, "apde": 76, "apdn": 95, "tsv": 14, "rp": 151, "rf": 243, "ndf": 398, "adf": 301, "zucker": 40, "vos": 70, "ra": 104 },
+                        "5": { "nel": 5.1, "nev": 4.9, "apde": 70, "apdn": 83, "tsv": 13, "rp": 131, "rf": 268, "ndf": 434, "adf": 327, "zucker": 36, "vos": 66, "ra": 104 }
+                      },
+                      "L": {
+                        "1": { "nel": 6.5, "nev": 6.3, "apde": 84, "apdn": 150, "tsv": 16, "rp": 241, "rf": 181, "ndf": 276, "adf": 239, "zucker": 34, "vos": 78, "ra": 134 },
+                        "2": { "nel": 6.3, "nev": 6.1, "apde": 82, "apdn": 138, "tsv": 15, "rp": 221, "rf": 193, "ndf": 291, "adf": 248, "zucker": 38, "vos": 76, "ra": 126 },
+                        "3": { "nel": 5.9, "nev": 5.8, "apde": 79, "apdn": 129, "tsv": 14, "rp": 210, "rf": 206, "ndf": 313, "adf": 269, "zucker": 36, "vos": 73, "ra": 121 },
+                        "4": { "nel": 5.6, "nev": 5.6, "apde": 78, "apdn": 119, "tsv": 14, "rp": 190, "rf": 228, "ndf": 334, "adf": 293, "zucker": 33, "vos": 71, "ra": 113 },
+                        "5": { "nel": 5.1, "nev": 5.1, "apde": 72, "apdn": 106, "tsv": 12, "rp": 169, "rf": 265, "ndf": 385, "adf": 325, "zucker": 28, "vos": 65, "ra": 107 }
+                      },
+                      "KF": {
+                        "1": { "nel": 6.2, "nev": 6, "apde": 80, "apdn": 121, "tsv": 15, "rp": 194, "rf": 171, "ndf": 270, "adf": 236, "zucker": 34, "vos": 77, "ra": 142 },
+                        "2": { "nel": 6.1, "nev": 6, "apde": 80, "apdn": 116, "tsv": 15, "rp": 184, "rf": 175, "ndf": 273, "adf": 240, "zucker": 41, "vos": 76, "ra": 139 },
+                        "3": { "nel": 6, "nev": 5.9, "apde": 79, "apdn": 106, "tsv": 15, "rp": 169, "rf": 182, "ndf": 281, "adf": 245, "zucker": 35, "vos": 76, "ra": 135 },
+                        "4": { "nel": 5.9, "nev": 5.8, "apde": 78, "apdn": 100, "tsv": 14, "rp": 188, "rf": 159, "ndf": 289, "adf": 253, "zucker": 32, "vos": 75, "ra": 129 },
+                        "5": { "nel": 5.5, "nev": 5.5, "apde": 75, "apdn": 93, "tsv": 13, "rp": 203, "rf": 147, "ndf": 305, "adf": 265, "zucker": 31, "vos": 71, "ra": 127 }
+                      },
+                      "KG": {
+                        "1": { "nel": 6.2, "nev": 6, "apde": 80, "apdn": 123, "tsv": 15, "rp": 197, "rf": 187, "ndf": 292, "adf": 248, "zucker": 39, "vos": 77, "ra": 142 },
+                        "2": { "nel": 5.8, "nev": 5.7, "apde": 77, "apdn": 113, "tsv": 14, "rp": 180, "rf": 190, "ndf": 298, "adf": 251, "zucker": 40, "vos": 73, "ra": 139 },
+                        "3": { "nel": 5.4, "nev": 5.4, "apde": 74, "apdn": 112, "tsv": 13, "rp": 200, "rf": 178, "ndf": 322, "adf": 261, "zucker": 39, "vos": 70, "ra": 135 },
+                        "4": { "nel": 5.1, "nev": 5, "apde": 71, "apdn": 106, "tsv": 13, "rp": 206, "rf": 168, "ndf": 332, "adf": 268, "zucker": 38, "vos": 66, "ra": 132 },
+                        "5": { "nel": 4.5, "nev": 4.2, "apde": 65, "apdn": 100, "tsv": 11, "rp": 159, "rf": 216, "ndf": 355, "adf": 279, "zucker": 37, "vos": 60, "ra": 130 }
+                      }
+                    },
+                    "hay": {
+                      "G": {
+                        "1": { "nel": 5.5, "nev": 5.5, "apde": 110, "apdn": 94, "tsv": 15, "rp": 172, "rf": 254, "ndf": 466, "adf": 290, "zucker": 70, "vos": 70, "ra": 109 },
+                        "2": { "nel": 5.3, "nev": 5.3, "apde": 100, "apdn": 91, "tsv": 15, "rp": 156, "rf": 259, "ndf": 472, "adf": 294, "zucker": 75, "vos": 69, "ra": 103 },
+                        "3": { "nel": 5.1, "nev": 5, "apde": 87, "apdn": 85, "tsv": 14, "rp": 136, "rf": 278, "ndf": 506, "adf": 315, "zucker": 70, "vos": 66, "ra": 99 },
+                        "4": { "nel": 4.8, "nev": 4.9, "apde": 77, "apdn": 81, "tsv": 14, "rp": 121, "rf": 288, "ndf": 525, "adf": 332, "zucker": 66, "vos": 64, "ra": 95 },
+                        "5": { "nel": 4.5, "nev": 4.3, "apde": 64, "apdn": 73, "tsv": 13, "rp": 102, "rf": 315, "ndf": 572, "adf": 365, "zucker": 58, "vos": 59, "ra": 93 }
+                      },
+                      "GR": {
+                        "1": { "nel": 5.7, "nev": 5.7, "apde": 105, "apdn": 95, "tsv": 16, "rp": 165, "rf": 233, "ndf": 424, "adf": 267, "zucker": 98, "vos": 73, "ra": 111 },
+                        "2": { "nel": 5.7, "nev": 5.6, "apde": 98, "apdn": 93, "tsv": 16, "rp": 154, "rf": 237, "ndf": 434, "adf": 273, "zucker": 111, "vos": 72, "ra": 103 },
+                        "3": { "nel": 5.4, "nev": 5.3, "apde": 87, "apdn": 88, "tsv": 15, "rp": 137, "rf": 252, "ndf": 463, "adf": 291, "zucker": 101, "vos": 69, "ra": 100 },
+                        "4": { "nel": 5.1, "nev": 5, "apde": 77, "apdn": 83, "tsv": 14, "rp": 122, "rf": 264, "ndf": 494, "adf": 313, "zucker": 92, "vos": 65, "ra": 89 },
+                        "5": { "nel": 4.8, "nev": 4.6, "apde": 66, "apdn": 76, "tsv": 13, "rp": 105, "rf": 291, "ndf": 537, "adf": 342, "zucker": 80, "vos": 62, "ra": 83 }
+                      },
+                      "A": {
+                        "1": { "nel": 5.5, "nev": 5.5, "apde": 113, "apdn": 95, "tsv": 15, "rp": 177, "rf": 229, "ndf": 409, "adf": 268, "zucker": 69, "vos": 71, "ra": 114 },
+                        "2": { "nel": 5.4, "nev": 5.4, "apde": 103, "apdn": 92, "tsv": 15, "rp": 162, "rf": 234, "ndf": 418, "adf": 275, "zucker": 78, "vos": 69, "ra": 108 },
+                        "3": { "nel": 5.1, "nev": 5, "apde": 91, "apdn": 87, "tsv": 14, "rp": 143, "rf": 252, "ndf": 447, "adf": 293, "zucker": 71, "vos": 66, "ra": 105 },
+                        "4": { "nel": 5, "nev": 4.8, "apde": 83, "apdn": 83, "tsv": 14, "rp": 130, "rf": 262, "ndf": 464, "adf": 311, "zucker": 67, "vos": 65, "ra": 100 },
+                        "5": { "nel": 4.7, "nev": 4.5, "apde": 72, "apdn": 77, "tsv": 13, "rp": 113, "rf": 288, "ndf": 509, "adf": 342, "zucker": 59, "vos": 62, "ra": 98 }
+                      },
+                      "AR": {
+                        "1": { "nel": 5.7, "nev": 5.7, "apde": 110, "apdn": 96, "tsv": 16, "rp": 172, "rf": 213, "ndf": 380, "adf": 253, "zucker": 90, "vos": 72, "ra": 116 },
+                        "2": { "nel": 5.6, "nev": 5.6, "apde": 102, "apdn": 94, "tsv": 16, "rp": 159, "rf": 219, "ndf": 391, "adf": 259, "zucker": 102, "vos": 72, "ra": 109 },
+                        "3": { "nel": 5.4, "nev": 5.3, "apde": 91, "apdn": 89, "tsv": 15, "rp": 143, "rf": 234, "ndf": 417, "adf": 278, "zucker": 92, "vos": 69, "ra": 104 },
+                        "4": { "nel": 5.2, "nev": 5.1, "apde": 83, "apdn": 85, "tsv": 14, "rp": 131, "rf": 248, "ndf": 445, "adf": 299, "zucker": 85, "vos": 67, "ra": 96 },
+                        "5": { "nel": 4.8, "nev": 4.7, "apde": 72, "apdn": 79, "tsv": 14, "rp": 114, "rf": 273, "ndf": 485, "adf": 326, "zucker": 76, "vos": 63, "ra": 95 }
+                      },
+                      "L": {
+                        "1": { "nel": 5.9, "nev": 5.8, "apde": 130, "apdn": 102, "tsv": 16, "rp": 202, "rf": 187, "ndf": 309, "adf": 234, "zucker": 72, "vos": 74, "ra": 122 },
+                        "2": { "nel": 5.7, "nev": 5.7, "apde": 120, "apdn": 98, "tsv": 16, "rp": 187, "rf": 198, "ndf": 324, "adf": 244, "zucker": 82, "vos": 72, "ra": 115 },
+                        "3": { "nel": 5.4, "nev": 5.4, "apde": 112, "apdn": 94, "tsv": 15, "rp": 175, "rf": 216, "ndf": 351, "adf": 266, "zucker": 79, "vos": 69, "ra": 111 },
+                        "4": { "nel": 5.3, "nev": 5.2, "apde": 104, "apdn": 92, "tsv": 15, "rp": 163, "rf": 233, "ndf": 373, "adf": 291, "zucker": 70, "vos": 68, "ra": 103 },
+                        "5": { "nel": 4.8, "nev": 4.6, "apde": 92, "apdn": 84, "tsv": 14, "rp": 144, "rf": 270, "ndf": 431, "adf": 324, "zucker": 62, "vos": 62, "ra": 97 }
+                      },
+                      "KF": {
+                        "1": { "nel": 5.6, "nev": 5.6, "apde": 105, "apdn": 93, "tsv": 16, "rp": 176, "rf": 164, "ndf": 301, "adf": 231, "zucker": 72, "vos": 72, "ra": 130 },
+                        "2": { "nel": 5.6, "nev": 5.5, "apde": 100, "apdn": 92, "tsv": 15, "rp": 181, "rf": 157, "ndf": 305, "adf": 234, "zucker": 88, "vos": 72, "ra": 126 },
+                        "3": { "nel": 5.5, "nev": 5.4, "apde": 92, "apdn": 90, "tsv": 15, "rp": 188, "rf": 144, "ndf": 315, "adf": 241, "zucker": 74, "vos": 71, "ra": 122 },
+                        "4": { "nel": 5.4, "nev": 5.4, "apde": 87, "apdn": 88, "tsv": 15, "rp": 193, "rf": 136, "ndf": 323, "adf": 249, "zucker": 68, "vos": 71, "ra": 118 },
+                        "5": { "nel": 5.1, "nev": 5.1, "apde": 81, "apdn": 84, "tsv": 14, "rp": 207, "rf": 127, "ndf": 341, "adf": 262, "zucker": 67, "vos": 68, "ra": 115 }
+                      },
+                      "KG": {
+                        "1": { "nel": 5.7, "nev": 5.6, "apde": 106, "apdn": 94, "tsv": 16, "rp": 193, "rf": 166, "ndf": 327, "adf": 243, "zucker": 82, "vos": 73, "ra": 130 },
+                        "2": { "nel": 5.3, "nev": 5.3, "apde": 97, "apdn": 90, "tsv": 15, "rp": 196, "rf": 153, "ndf": 333, "adf": 246, "zucker": 85, "vos": 70, "ra": 127 },
+                        "3": { "nel": 5, "nev": 4.9, "apde": 96, "apdn": 87, "tsv": 14, "rp": 206, "rf": 169, "ndf": 361, "adf": 257, "zucker": 83, "vos": 66, "ra": 124 },
+                        "4": { "nel": 4.7, "nev": 4.6, "apde": 92, "apdn": 83, "tsv": 13, "rp": 211, "rf": 160, "ndf": 372, "adf": 265, "zucker": 81, "vos": 63, "ra": 121 },
+                        "5": { "nel": 4.2, "nev": 3.9, "apde": 87, "apdn": 77, "tsv": 12, "rp": 221, "rf": 137, "ndf": 398, "adf": 277, "zucker": 79, "vos": 57, "ra": 119 }
+                      }
+                    }
+                  }
+                
+
+
+
+
+                
+
+
+                };
+
+                // 4. UI-Listener initialisieren
+                setupEventListeners();
+                showLoading(false);
+
+            } catch (error) {
+                console.error("Initialisierungsfehler:", error);
+                showLoading(false);
+                document.getElementById('app-body').innerHTML = `<p class="text-red-500 text-center">Fehler: App konnte nicht initialisiert werden.</p>`;
+            }
+        });
+        
+        async function initializeFirebase() {
+            try {
+            // START ERSETZUNG: Ersetzen Sie den alten 'try'-Block durch diesen:
+
+            // 1. Fügen Sie hier Ihr firebaseConfig-Objekt von Firebase ein:
+            const firebaseConfig = {
+              apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
+              authDomain: "agff-apps.firebaseapp.com",
+              projectId: "agff-apps",
+              storageBucket: "agff-apps.firebasestorage.app",
+              messagingSenderId: "963390091539",
+              appId: "1:963390091539:web:eff9117033c24eda21eae6"
+            };
+
+            // 2. Setzen Sie eine eindeutige App-ID (wichtig für den DB-Pfad)
+            const appId = "agff-futter-app-public"; // Oder ein eigener Name
+
+            // 3. Der Rest der Funktion initialisiert Firebase
+            if (firebaseConfig.apiKey) {
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+                setLogLevel('debug'); 
+
+                // Wir verwenden nur noch anonyme Anmeldung
+                await signInAnonymously(auth);
+
+                console.log("Firebase Auth & Firestore initialisiert. User ID:", auth.currentUser?.uid);
+            } else {
+                console.warn("Firebase Konfiguration nicht gefunden. Cloud-Speicherung ist deaktiviert.");
+                document.getElementById('saveCloudButton').disabled = true;
+                document.getElementById('saveCloudButton').title = "Cloud-Speicherung nicht konfiguriert";
+            }
+
+            // ENDE ERSETZUNG
+        } catch (error) {
+            console.error("Firebase Initialisierungsfehler:", error);
+            document.getElementById('saveCloudButton').disabled = true;
+            document.getElementById('saveCloudButton').title = "Cloud-Speicherung fehlgeschlagen";
+        }
+    }
+        
+        // --- UI FUNKTIONEN ---
+
+        function showLoading(isLoading) {
+            const spinner = document.getElementById('loading-spinner');
+            if (isLoading) {
+                spinner.classList.remove('hidden');
+            } else {
+                spinner.classList.add('hidden');
+            }
+        }
+
+        function setupEventListeners() {
+            // Schritt 1: Aufwuchsart
+            document.getElementById('aufwuchsart').addEventListener('change', () => {
+                resetSelections('step1');
+                document.getElementById('step2-bestand').disabled = false;
+                document.getElementById('step2-bestand').classList.remove('opacity-50', 'cursor-not-allowed');
+            });
+
+            // Schritt 2: Bestand
+            document.getElementById('step2-bestand').addEventListener('change', () => {
+                resetSelections('step2');
+                document.getElementById('step3-stadium-button').disabled = false;
+                document.getElementById('step3-stadium-button').classList.remove('opacity-50', 'cursor-not-allowed');
+            });
+
+            // Schritt 3: Stadium Modal
+            document.getElementById('step3-stadium-button').addEventListener('click', openStadiumModal);
+            document.getElementById('closeModalButton').addEventListener('click', closeStadiumModal);
+
+            // Schritt 4: Berechnung
+            document.querySelectorAll('#step4-buttons input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    document.querySelectorAll('#step4-buttons label').forEach(label => {
+                        label.classList.replace('bg-green-700', 'bg-green-600');
+                        label.classList.remove('ring-2', 'ring-offset-2', 'ring-green-400');
+                    });
+                    const selectedLabel = document.querySelector(`label[for="${e.target.id}"]`);
+                    selectedLabel.classList.replace('bg-green-600', 'bg-green-700');
+                    selectedLabel.classList.add('ring-2', 'ring-offset-2', 'ring-green-400');
+                    
+                    calculateFutterQualitaet();
+                });
+            });
+
+            // Akkordeon (Parameter)
+            document.getElementById('param-accordion-toggle').addEventListener('click', () => {
+                const content = document.getElementById('param-accordion-content');
+                const icon = document.getElementById('param-accordion-icon');
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+
+            // Parameter-Inputs (lösen Neuberechnung aus)
+            document.getElementById('kuhgewicht').addEventListener('input', applyCorrections);
+            document.getElementById('kuh-tsv').addEventListener('input', applyCorrections);
+
+            // Speichern
+            document.getElementById('savePdfButton').addEventListener('click', handleSavePdf);
+            document.getElementById('saveCloudButton').addEventListener('click', handleSaveCloud);
+        }
+
+        // --- STADIUMS-MODAL ---
+
+        function openStadiumModal() {
+            const aufwuchs = document.getElementById('aufwuchsart').value;
+            const modalContent = document.getElementById('modalContent');
+            
+            if (aufwuchs === 'erster') {
+                modalContent.innerHTML = `
+                    <h3 class="text-lg font-bold mb-4 text-gray-800">Schritt 3: Stadium bestimmen (Erster Aufwuchs)</h3>
+                    <p class="mb-4 text-sm text-gray-600">Bestimmen Sie das Entwicklungsstadium gemäss den Leitpflanzen (Knaulgras, Engl. Raigras, Wiesen-Löwenzahn) oder der Zeitperiode (Tabelle S. 2).</p>
+                    <div class="space-y-2">
+                        <button onclick="selectStadium(1, 'Stadium 1: Bestockung / Beginn Schossen')" class="stadium-btn"><b>Stadium 1:</b> Bestockung / Beginn Schossen</button>
+                        <button onclick="selectStadium(2, 'Stadium 2: Schossen (Weidestadium)')" class="stadium-btn"><b>Stadium 2:</b> Schossen (Weidestadium)</button>
+                        <button onclick="selectStadium(3, 'Stadium 3: Beginn Rispenschieben (10%)')" class="stadium-btn"><b>Stadium 3:</b> Beginn Rispenschieben (10%)</button>
+                        <button onclick="selectStadium(4, 'Stadium 4: Volles Rispenschieben (50%)')" class="stadium-btn"><b>Stadium 4:</b> Volles Rispenschieben (50%)</button>
+                        <button onclick="selectStadium(5, 'Stadium 5: Ende Rispenschieben (90%)')" class="stadium-btn"><b>Stadium 5:</b> Ende Rispenschieben (90%)</button>
+                        <button onclick="selectStadium(6, 'Stadium 6: Blüte')" class="stadium-btn"><b>Stadium 6:</b> Blüte</button>
+                        <button onclick="selectStadium(7, 'Stadium 7: Samenreife')" class="stadium-btn"><b>Stadium 7:</b> Samenreife</button>
+                    </div>
+                `;
+            } else if (aufwuchs === 'folge') {
+                 modalContent.innerHTML = `
+                    <h3 class="text-lg font-bold mb-4 text-gray-800">Schritt 3: Stadium bestimmen (Folgeaufwuchs)</h3>
+                    <p class="mb-4 text-sm text-gray-600">Bestimmen Sie das Alter des Futters in Wochen (Tabelle S. 2). Dies ergibt das Futterstadium.</p>
+                    <div class="space-y-2">
+                        <button onclick="selectStadium(1, 'Stadium 1: 3-4 Wochen (Tal) / 3-4 Wochen (Berg)')" class="stadium-btn"><b>Stadium 1:</b> 3-4 Wochen (Tal) / 3-4 Wochen (Berg)</button>
+                        <button onclick="selectStadium(2, 'Stadium 2: 5-7 Wochen (Tal) / 5-7 Wochen (Berg)')" class="stadium-btn"><b>Stadium 2:</b> 5-7 Wochen (Tal) / 5-7 Wochen (Berg)</button>
+                        <button onclick="selectStadium(3, 'Stadium 3: 8-9 Wochen (Tal) / 8-9 Wochen (Berg)')" class="stadium-btn"><b>Stadium 3:</b> 8-9 Wochen (Tal) / 8-9 Wochen (Berg)</button>
+                        <button onclick="selectStadium(4, 'Stadium 4: 10+ Wochen (Tal) / 10+ Wochen (Berg)')" class="stadium-btn"><b>Stadium 4:</b> 10+ Wochen (Tal) / 10+ Wochen (Berg)</button>
+                    </div>
+                `;
+            }
+            document.getElementById('stadiumModal').classList.remove('hidden');
+        }
+
+        // Globale Fensterfunktion, da sie von onclick im HTML aufgerufen wird
+        window.selectStadium = (stadiumNr, stadiumLabel) => {
+            document.getElementById('stadium').value = stadiumNr;
+            aktuellesStadiumLabel = stadiumLabel; // Für Bericht speichern
+            
+            const button = document.getElementById('step3-stadium-button');
+            button.textContent = stadiumLabel;
+            button.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+            button.classList.add('bg-green-100', 'text-green-800', 'font-semibold', 'ring-2', 'ring-green-300');
+            
+            closeStadiumModal();
+            resetSelections('step3');
+            validateForm(); // Prüfen, ob Buttons freigeschaltet werden können
+        }
+
+        function closeStadiumModal() {
+            document.getElementById('stadiumModal').classList.add('hidden');
+        }
+
+        // --- ZURÜCKSETZ-FUNKTIONEN ---
+
+        function resetSelections(step) {
+            if (step === 'step1') {
+                // Setze Bestand zurück
+                document.getElementById('step2-bestand').value = "";
+                // Setze Stadium zurück
+                const stadiumButton = document.getElementById('step3-stadium-button');
+                stadiumButton.textContent = "Stadium bestimmen";
+                stadiumButton.classList.remove('bg-green-100', 'text-green-800', 'font-semibold', 'ring-2', 'ring-green-300');
+                stadiumButton.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                stadiumButton.disabled = true;
+                stadiumButton.classList.add('opacity-50', 'cursor-not-allowed');
+                document.getElementById('stadium').value = "";
+                aktuellesStadiumLabel = "Nicht bestimmt";
+            }
+            if (step === 'step1' || step === 'step2') {
+                // Setze Stadium zurück
+                const stadiumButton = document.getElementById('step3-stadium-button');
+                stadiumButton.textContent = "Stadium bestimmen";
+                stadiumButton.classList.remove('bg-green-100', 'text-green-800', 'font-semibold', 'ring-2', 'ring-green-300');
+                stadiumButton.classList.add('bg-gray-200', 'hover:bg-gray-300');
+                document.getElementById('stadium').value = "";
+                aktuellesStadiumLabel = "Nicht bestimmt";
+            }
+            
+            // Setze Buttons, Ergebnisse und Korrekturen immer zurück
+            document.querySelectorAll('#step4-buttons input[type="radio"]').forEach(radio => radio.checked = false);
+            document.querySelectorAll('#step4-buttons label').forEach(label => {
+                label.classList.replace('bg-green-700', 'bg-green-600');
+                label.classList.remove('ring-2', 'ring-offset-2', 'ring-green-400');
+                label.classList.add('opacity-50', 'cursor-not-allowed');
+            });
+            
+            resetResults();
+        }
+
+        function resetResults() {
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('step5-corrections').classList.add('hidden');
+            document.getElementById('param-accordion').classList.add('hidden');
+            document.getElementById('save-section').classList.add('hidden');
+            document.getElementById('saveFeedback').classList.add('hidden');
+        }
+
+        // --- VALIDIERUNG ---
+
+        function validateForm() {
+            const aufwuchs = document.getElementById('aufwuchsart').value;
+            const bestand = document.getElementById('step2-bestand').value;
+            const stadium = document.getElementById('stadium').value;
+
+            const isValid = aufwuchs && bestand && stadium;
+            
+            document.querySelectorAll('#step4-buttons label').forEach(label => {
+                if (isValid) {
+                    label.classList.remove('opacity-50', 'cursor-not-allowed');
+                } else {
+                    label.classList.add('opacity-50', 'cursor-not-allowed');
+                }
+            });
+             document.querySelectorAll('#step4-buttons input').forEach(input => {
+                input.disabled = !isValid;
+            });
+        }
+        
+        // --- KORREKTUR-FAKTOREN (Seite 5) ---
+        // Faktoren als Dezimalzahlen für Multiplikation (z.B. -0.01 für -1%)
+        const CorrectionFactors = {
+            silage: [
+                { id: "ts_low", label: "Trockensubstanz (TS) < 20%", nel: -0.01, apde: -0.06, apdn: 0 },
+                { id: "ts_high", label: "Trockensubstanz (TS) > 50%", nel: -0.01, apde: 0.06, apdn: 0 }, // Korrigiert auf +6% APDE
+                { id: "gaer_fehlerhaft", label: "Gärqualität fehlerhaft", nel: -0.02, apde: -0.06, apdn: 0 },
+                { id: "gaer_schlecht", label: "Gärqualität schlecht", nel: -0.05, apde: -0.15, apdn: -0.03 },
+                { id: "nachgaerung", label: "Nachgärung (leicht warm)", nel: -0.04, apde: -0.15, apdn: -0.03 }
+            ],
+            hay: [
+                { id: "boden", label: "Bodentrocknung", nel: -0.04, apde: -0.03, apdn: 0 },
+                { id: "regen_1d", label: "1 Tag Regen", nel: -0.05, apde: -0.08, apdn: -0.02 },
+                { id: "regen_2d", label: "2+ Tage Regen", nel: -0.08, apde: -0.15, apdn: -0.03 },
+                { id: "ueberhitz_leicht", label: "Überhitzung/Futter leicht braun", nel: 0, apde: 0.03, apdn: 0 },
+                { id: "ueberhitz_braun", label: "Überhitzung/Futter braun, brandig", nel: -0.05, apde: -0.01, apdn: -0.02 }
+            ]
+        };
+
+        function generateCorrectionInputs() {
+            const konserv = document.querySelector('input[name="konservierung"]:checked').value;
+            const container = document.getElementById('step5-corrections-list');
+            container.innerHTML = ''; // Zurücksetzen
+
+            if (konserv === 'greenfeed') {
+                document.getElementById('step5-corrections').classList.add('hidden');
+                return; // Keine Korrekturen für Grünfutter
+            }
+
+            const factors = CorrectionFactors[konserv];
+            if (!factors) return;
+
+            factors.forEach(factor => {
+                const nelTxt = factor.nel === 0 ? '0%' : (factor.nel > 0 ? `+${factor.nel * 100}%` : `${factor.nel * 100}%`);
+                const apdeTxt = factor.apde === 0 ? '0%' : (factor.apde > 0 ? `+${factor.apde * 100}%` : `${factor.apde * 100}%`);
+                const apdnTxt = factor.apdn === 0 ? '0%' : (factor.apdn > 0 ? `+${factor.apdn * 100}%` : `${factor.apdn * 100}%`);
+
+                const div = document.createElement('div');
+                div.className = "flex items-center";
+                div.innerHTML = `
+                    <input id="${factor.id}" name="correction" type="checkbox" value="${factor.id}" class="h-4 w-4 text-green-600 border-gray-300 rounded focus:ring-green-500 correction-check">
+                    <label for="${factor.id}" class="ml-3 block text-sm text-gray-700">
+                        ${factor.label} <span class="text-xs text-gray-500">(NEL: ${nelTxt}, APDE: ${apdeTxt}, APDN: ${apdnTxt})</span>
+                    </label>
+                `;
+                container.appendChild(div);
+            });
+
+            // Event listener für die neuen Checkboxen hinzufügen
+            document.querySelectorAll('.correction-check').forEach(check => {
+                check.addEventListener('change', applyCorrections);
+            });
+
+            document.getElementById('step5-corrections').classList.remove('hidden');
+        }
+        
+        // --- HAUPTBERECHNUNG ---
+
+        function calculateFutterQualitaet() {
+            const aufwuchs = document.getElementById('aufwuchsart').value;
+            const bestand = document.getElementById('step2-bestand').value;
+            const stadium = document.getElementById('stadium').value;
+            const konserv = document.querySelector('input[name="konservierung"]:checked').value;
+
+            if (!futterWerte[aufwuchs] || !futterWerte[aufwuchs][konserv] || !futterWerte[aufwuchs][konserv][bestand] || !futterWerte[aufwuchs][konserv][bestand][stadium]) {
+                alert("Für diese Auswahl existieren keine Referenzdaten.");
+                resetResults();
+                return;
+            }
+
+            const basisWerte = futterWerte[aufwuchs][konserv][bestand][stadium];
+
+            // Basiswerte im UI speichern (für Korrekturen)
+            const resultsDiv = document.getElementById('result');
+            resultsDiv.dataset.baseNel = basisWerte.nel;
+            resultsDiv.dataset.baseApde = basisWerte.apde;
+            resultsDiv.dataset.baseApdn = basisWerte.apdn;
+            resultsDiv.dataset.baseTsv = basisWerte.tsv;
+
+            // UI für Korrekturen generieren (falls nötig)
+            generateCorrectionInputs();
+            
+            // Parameter-Akkordeon anzeigen
+            document.getElementById('param-accordion').classList.remove('hidden');
+
+            // Erste Berechnung (ohne Korrekturen) durchführen
+            // Dies ruft auch displayResults auf
+            applyCorrections();
+        }
+
+        // --- KORREKTUR- & PARAMETER-BERECHNUNG ---
+
+        // Diese Funktion wird bei Klick auf Berechnen, bei Änderung der Korrekturen
+        // und bei Änderung der Parameter aufgerufen.
+        function applyCorrections() {
+            const resultsDiv = document.getElementById('result');
+            const konserv = document.querySelector('input[name="konservierung"]:checked').value;
+
+            // 1. Basiswerte holen
+            let base = {
+                nel: parseFloat(resultsDiv.dataset.baseNel),
+                apde: parseFloat(resultsDiv.dataset.baseApde),
+                apdn: parseFloat(resultsDiv.dataset.baseApdn),
+                tsv: parseFloat(resultsDiv.dataset.baseTsv)
+            };
+
+            // 2. Korrekturen anwenden (multiplikativ)
+            let korrFaktoren = { nel: 1, apde: 1, apdn: 1 };
+            let angewandteKorrekturen = [];
+            
+            if (konserv !== 'greenfeed') {
+                document.querySelectorAll('.correction-check:checked').forEach(check => {
+                    const factors = CorrectionFactors[konserv];
+                    const factor = factors.find(f => f.id === check.value);
+                    if (factor) {
+                        korrFaktoren.nel *= (1 + factor.nel);
+                        korrFaktoren.apde *= (1 + factor.apde);
+                        korrFaktoren.apdn *= (1 + factor.apdn);
+                        angewandteKorrekturen.push(factor.label);
+                    }
+                });
+            }
+
+            let korrWerte = {
+                nel: base.nel * korrFaktoren.nel,
+                apde: base.apde * korrFaktoren.apde,
+                apdn: base.apdn * korrFaktoren.apdn,
+                tsv: base.tsv // TSV wird (noch) nicht korrigiert
+            };
+
+            // 3. Parameter (Gewicht, TSV) holen
+            let kuhGewicht = parseFloat(document.getElementById('kuhgewicht').value) || 630;
+            let kuhTsv = parseFloat(document.getElementById('kuh-tsv').value) || korrWerte.tsv; // Priorisiere User-Input
+
+            // 4. MPP Berechnen (mit korrigierten Werten und Parametern)
+            const mppResult = calculateMpp(korrWerte, kuhGewicht, kuhTsv);
+
+            // 5. Ergebnisse anzeigen
+            displayResults(base, korrWerte, mppResult, angewandteKorrekturen, kuhTsv);
+        }
+
+        function calculateMpp(werte, gewicht, tsv) {
+            // Erhaltungsbedarf (EB) berechnen, gemäss Formeln die 40.5 MJ NEL / 409g APD bei 630kg ergeben
+            // EB NEL = (0.293 * LG^0.75) * 1.10 (Aktivitätszuschlag 10%)
+            // EB APD = (3.25 * LG^0.75) * 1.10 (Aktivitätszuschlag 10%)
+            const eb_nel = (0.293 * Math.pow(gewicht, 0.75)) * 1.10;
+            const eb_protein = (3.25 * Math.pow(gewicht, 0.75)) * 1.10;
+            
+            // Verfügbare Nährstoffe für Produktion (Gesamtaufnahme - Erhaltungsbedarf)
+            const verf_nel = (werte.nel * tsv) - eb_nel;
+            const verf_apde = (werte.apde * tsv) - eb_protein;
+            const verf_apdn = (werte.apdn * tsv) - eb_protein;
+
+            // MPP (Milchproduktionspotenzial) pro Komponente
+            const mpp_nel = verf_nel / PB_NEL;
+            const mpp_apde = verf_apde / PB_PROTEIN;
+            const mpp_apdn = verf_apdn / PB_PROTEIN;
+
+            // Der tiefste Wert ist limitierend
+            const mpp = Math.max(0, Math.min(mpp_nel, mpp_apde, mpp_apdn));
+            
+            let limit = "NEL";
+            if (mpp_apde < mpp_nel && mpp_apde < mpp_apdn) limit = "APDE";
+            else if (mpp_apdn < mpp_nel && mpp_apdn < mpp_apde) limit = "APDN";
+
+            return { mpp, limit, mpp_nel, mpp_apde, mpp_apdn, eb_nel, eb_protein };
+        }
+        
+        // --- ERGEBNIS-ANZEIGE & SPEICHER-LOGIK ---
+
+        function displayResults(base, korr, mppResult, korrLabels, finalTsv) {
+            const resultsDiv = document.getElementById('result');
+            resultsDiv.classList.remove('hidden');
+
+            const limitHighlight = (key) => mppResult.limit === key ? 'text-red-600 font-bold' : '';
+
+            document.getElementById('res-mpp').textContent = mppResult.mpp.toFixed(1);
+            document.getElementById('res-limit').textContent = mppResult.limit;
+            
+            // NEL
+            document.getElementById('base-nel').textContent = base.nel.toFixed(2);
+            document.getElementById('korr-nel').textContent = (korr.nel - base.nel).toFixed(2);
+            document.getElementById('eff-nel').textContent = korr.nel.toFixed(2);
+            document.getElementById('mpp-nel').textContent = mppResult.mpp_nel.toFixed(1);
+            document.getElementById('mpp-nel-label').className = limitHighlight('NEL');
+
+            // APDE
+            document.getElementById('base-apde').textContent = base.apde.toFixed(0);
+            document.getElementById('korr-apde').textContent = (korr.apde - base.apde).toFixed(0);
+            document.getElementById('eff-apde').textContent = korr.apde.toFixed(0);
+            document.getElementById('mpp-apde').textContent = mppResult.mpp_apde.toFixed(1);
+            document.getElementById('mpp-apde-label').className = limitHighlight('APDE');
+            
+            // APDN
+            document.getElementById('base-apdn').textContent = base.apdn.toFixed(0);
+            document.getElementById('korr-apdn').textContent = (korr.apdn - base.apdn).toFixed(0);
+            document.getElementById('eff-apdn').textContent = korr.apdn.toFixed(0);
+            document.getElementById('mpp-apdn').textContent = mppResult.mpp_apdn.toFixed(1);
+            document.getElementById('mpp-apdn-label').className = limitHighlight('APDN');
+
+            // TSV populieren
+            document.getElementById('base-tsv').textContent = base.tsv.toFixed(1); 
+            document.getElementById('eff-tsv').textContent = finalTsv.toFixed(1); // Zeigt den Wert an, der für MPP verwendet wurde
+
+            // Korrektur-Labels
+            const korrList = document.getElementById('korrAngewandt');
+            if (korrLabels.length > 0) {
+                korrList.innerHTML = '<b>Angewandte Korrekturen:</b><ul class="list-disc list-inside text-sm">' + korrLabels.map(l => `<li>${l}</li>`).join('') + '</ul>';
+                korrList.classList.remove('hidden');
+            } else {
+                korrList.classList.add('hidden');
+            }
+            
+            // Speichern Sektion anzeigen
+            document.getElementById('save-section').classList.remove('hidden');
+        }
+        
+        // Helper für PDF/Cloud
+        function getCurrentState() {
+            const aufwuchs = document.getElementById('aufwuchsart');
+            const bestand = document.getElementById('step2-bestand');
+            const konservRadio = document.querySelector('input[name="konservierung"]:checked');
+            
+            const korrChecks = document.querySelectorAll('.correction-check:checked');
+            const korrekturLabels = Array.from(korrChecks).map(check => {
+                const label = document.querySelector(`label[for="${check.id}"]`);
+                return label ? label.textContent.split(' (NEL:')[0].trim() : check.id;
+            });
+            
+            const resultsDiv = document.getElementById('result');
+            
+            return {
+                // Eingaben
+                aufwuchsLabel: aufwuchs.options[aufwuchs.selectedIndex].text,
+                bestandLabel: bestand.options[bestand.selectedIndex].text,
+                stadiumLabel: aktuellesStadiumLabel,
+                konservLabel: konservRadio ? document.querySelector(`label[for="${konservRadio.id}"]`).textContent.trim() : 'N/A',
+                // Parameter
+                kuhGewicht: document.getElementById('kuhgewicht').value,
+                kuhTsv: document.getElementById('kuh-tsv').value,
+                // Korrekturen
+                korrekturen: korrekturLabels,
+                // Ergebnisse
+                basis: {
+                    nel: parseFloat(resultsDiv.dataset.baseNel).toFixed(2),
+                    apde: parseFloat(resultsDiv.dataset.baseApde).toFixed(0),
+                    apdn: parseFloat(resultsDiv.dataset.baseApdn).toFixed(0),
+                },
+                effektiv: {
+                    nel: document.getElementById('eff-nel').textContent,
+                    apde: document.getElementById('eff-apde').textContent,
+                    apdn: document.getElementById('eff-apdn').textContent,
+                },
+                mpp: {
+                    final: document.getElementById('res-mpp').textContent,
+                    limit: document.getElementById('res-limit').textContent,
+                    mpp_nel: document.getElementById('mpp-nel').textContent,
+                    mpp_apde: document.getElementById('mpp-apde').textContent,
+                    mpp_apdn: document.getElementById('mpp-apdn').textContent,
+                },
+                // Meta
+                person: document.getElementById('personName').value || 'Unbekannt',
+                probe: document.getElementById('probeNr').value || 'N/A',
+                datum: new Date().toLocaleString('de-CH')
+            };
+        }
+
+        // PDF SPEICHERN
+        function handleSavePdf() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const state = getCurrentState();
+            
+            let y = 15;
+            doc.setFontSize(18);
+            doc.text(`Futterbewertung AGFF: Probe ${state.probe}`, 10, y);
+            y += 10;
+            doc.setFontSize(10);
+            doc.text(`Beurteilt von: ${state.person} am ${state.datum}`, 10, y);
+            
+            y += 15;
+            doc.setFontSize(12);
+            doc.text("EINGABEN", 10, y);
+            y += 7;
+            doc.setFontSize(10);
+            doc.text(`- Aufwuchsart: ${state.aufwuchsLabel}`, 14, y); y += 6;
+            doc.text(`- Bestandestyp: ${state.bestandLabel}`, 14, y); y += 6;
+            doc.text(`- Stadium: ${state.stadiumLabel}`, 14, y); y += 6;
+            doc.text(`- Konservierung: ${state.konservLabel}`, 14, y);
+            
+            y += 10;
+            doc.setFontSize(12);
+            doc.text("BERECHNUNGSPARAMETER", 10, y);
+            y += 7;
+            doc.setFontSize(10);
+            doc.text(`- Kuhgewicht: ${state.kuhGewicht} kg`, 14, y); y += 6;
+
+            // Logik, um den korrekten TSV zu ermitteln (da state.kuhTsv nur den Override enthält)
+            const resultsDiv = document.getElementById('result');
+            // Der finale TSV ist der (überschriebene) state.kuhTsv ODER (||) der Basiswert aus den Daten
+            const finalTsv = state.kuhTsv || (resultsDiv.dataset.baseTsv ? parseFloat(resultsDiv.dataset.baseTsv).toFixed(2) : 'N/A');
+            doc.text(`- Berücks. Futterverzehr: ${finalTsv} kg TS`, 14, y); y += 6;
+            
+            if (state.korrekturen.length > 0) {
+                y += 10;
+                doc.setFontSize(12);
+                doc.text("KORREKTUREN", 10, y);
+                y += 7;
+                doc.setFontSize(10);
+                state.korrekturen.forEach(k => {
+                    doc.text(`- ${k}`, 14, y); y += 6;
+                });
+            }
+
+            y += 10;
+            doc.setFontSize(12);
+            doc.text("ERGEBNISSE", 10, y);
+            y += 7;
+            doc.setFontSize(16);
+            doc.setFont(undefined, 'bold');
+            doc.text(`MPP: ${state.mpp.final} kg`, 14, y);
+            doc.setFont(undefined, 'normal');
+            doc.setFontSize(10);
+            doc.text(`(Limitiert durch ${state.mpp.limit})`, 16, y + 5);
+            
+            y += 12;
+            // Tabelle
+            doc.setFontSize(10);
+            doc.setFont(undefined, 'bold');
+            doc.text("Nährwert", 14, y);
+            doc.text("Basiswert", 60, y);
+            doc.text("Effektivwert", 90, y);
+            doc.text("MPP (kg)", 120, y);
+            doc.setFont(undefined, 'normal');
+            y += 7;
+            
+            const isLimitNEL = state.mpp.limit === 'NEL';
+            doc.setTextColor(isLimitNEL ? 220 : 0, 0, 0);
+            doc.setFont(undefined, isLimitNEL ? 'bold' : 'normal');
+            doc.text("NEL (MJ/kg TS)", 14, y);
+            doc.text(state.basis.nel, 60, y);
+            doc.text(state.effektiv.nel, 90, y);
+            doc.text(state.mpp.mpp_nel, 120, y);
+            y += 7;
+            
+            const isLimitAPDE = state.mpp.limit === 'APDE';
+            doc.setTextColor(isLimitAPDE ? 220 : 0, 0, 0);
+            doc.setFont(undefined, isLimitAPDE ? 'bold' : 'normal');
+            doc.text("APDE (g/kg TS)", 14, y);
+            doc.text(state.basis.apde, 60, y);
+            doc.text(state.effektiv.apde, 90, y);
+            doc.text(state.mpp.mpp_apde, 120, y);
+            y += 7;
+
+            const isLimitAPDN = state.mpp.limit === 'APDN';
+            doc.setTextColor(isLimitAPDN ? 220 : 0, 0, 0);
+            doc.setFont(undefined, isLimitAPDN ? 'bold' : 'normal');
+            doc.text("APDN (g/kg TS)", 14, y);
+            doc.text(state.basis.apdn, 60, y);
+            doc.text(state.effektiv.apdn, 90, y);
+            doc.text(state.mpp.mpp_apdn, 120, y);
+            
+            doc.setTextColor(0, 0, 0);
+            doc.setFont(undefined, 'normal');
+            
+            doc.save(`Futterbericht_${state.probe.replace(/[^a-z0-9]/gi, '_') || 'Bericht'}.pdf`);
+        }
+
+        // CLOUD SPEICHERN
+        async function handleSaveCloud() {
+            if (!db || !auth.currentUser) {
+                alert("Cloud-Speicherung ist nicht initialisiert.");
+                return;
+            }
+            
+            const state = getCurrentState();
+            if (!state.person || !state.probe) {
+                alert("Bitte geben Sie einen Namen und eine Proben-Nummer für die Speicherung an.");
+                return;
+            }
+
+            const feedbackEl = document.getElementById('saveFeedback');
+            feedbackEl.classList.remove('hidden');
+            feedbackEl.textContent = "Speichern...";
+            feedbackEl.className = "feedback-message text-gray-700";
+
+            try {
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+                const userId = auth.currentUser.uid;
+                
+                // Speichern in einer öffentlichen Sammlung
+                const collectionPath = `/artifacts/${appId}/public/data/futterproben`;
+                
+                const docRef = await addDoc(collection(db, collectionPath), {
+                    ...state,
+                    userId: userId, // ID des Erstellers
+                    createdAt: serverTimestamp() // Zeitstempel
+                });
+
+                console.log("Dokument gespeichert mit ID: ", docRef.id);
+                feedbackEl.textContent = `Probe ${state.probe} erfolgreich in der Cloud gespeichert!`;
+                feedbackEl.className = "feedback-message text-blue-600";
+                
+            } catch (error) {
+                console.error("Fehler beim Speichern in Firestore: ", error);
+                feedbackEl.textContent = "Fehler beim Speichern. (Details in Konsole)";
+                feedbackEl.className = "feedback-message text-red-600";
+            }
+        }
+
+    </script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            background-color: #f8f9fa;
+        }
+        .step-card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: all 0.2s ease-in-out;
+        }
+        .step-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 600;
+            color: #374151; /* gray-700 */
+        }
+        .select-input {
+            width: 100%;
+            border-radius: 0.5rem; /* 8px */
+            border: 1px solid #D1D5DB; /* gray-300 */
+            padding: 0.75rem 1rem; /* 12px 16px */
+            font-size: 1rem; /* 16px */
+            background-color: #F9FAFB; /* gray-50 */
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+        .select-input:focus {
+            outline: none;
+            border-color: #2563EB; /* blue-600 */
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+        }
+        .select-input:disabled {
+            background-color: #E5E7EB; /* gray-200 */
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        .calc-button {
+            display: inline-block;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem; /* 16px */
+            font-weight: 600;
+            text-align: center;
+            color: white;
+            border-radius: 0.5rem; /* 8px */
+            transition: all 0.2s;
+            cursor: pointer;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        .calc-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .calc-button.opacity-50 {
+            cursor: not-allowed;
+            background-color: #9CA3AF; /* gray-400 */
+        }
+        .calc-button.opacity-50:hover {
+            transform: none;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Visuelles Verstecken für Radio-Buttons */
+        .radio-hidden {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .result-box {
+            background: linear-gradient(145deg, #ffffff, #e6eef4);
+            border: 1px solid #d1d5db;
+        }
+        
+        .limit-label {
+            background-color: #FEE2E2; /* red-100 */
+            color: #991B1B; /* red-800 */
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem; /* 12px */
+            font-weight: 600;
+        }
+        
+        .stadium-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background-color: #f3f4f6; /* gray-100 */
+            color: #1f2937; /* gray-800 */
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        .stadium-btn:hover {
+            background-color: #e5e7eb; /* gray-200 */
+            transform: translateX(2px);
+        }
+        .stadium-btn b {
+            color: #15803d; /* green-700 */
+        }
+        
+        .feedback-message {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+        .feedback-message.text-red-600 { background-color: #fef2f2; color: #dc2626; }
+        .feedback-message.text-blue-600 { background-color: #dbeafe; color: #1e40af; }
+    </style>
+</head>
+<body class="antialiased text-gray-900">
+
+    <!-- Lade-Spinner -->
+    <div id="loading-spinner" class="hidden fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+        <svg class="animate-spin h-12 w-12 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+    </div>
+
+    <!-- Hauptcontainer -->
+    <div id="app-body" class="max-w-xl mx-auto p-4 md:p-6 lg:p-8">
+        
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl font-bold text-green-800">Futterbewertung</h1>
+            <p class="text-lg text-gray-600">nach AGFF Merkblatt 3</p>
+        </header>
+
+        <!-- Schritt 1: Aufwuchsart -->
+        <div class="step-card p-5 mb-4">
+            <label for="aufwuchsart" class="step-label">Schritt 1: Aufwuchsart</label>
+            <select id="aufwuchsart" class="select-input">
+                <option value="" disabled selected>Bitte wählen...</option>
+                <option value="erster">Erster Aufwuchs (Frühling)</option>
+                <option value="folge">Folgeaufwuchs (Sommer/Herbst)</option>
+            </select>
+        </div>
+
+        <!-- Schritt 2: Bestandestyp -->
+        <div class="step-card p-5 mb-4">
+            <label for="step2-bestand" class="step-label">Schritt 2: Bestandestyp</label>
+            <select id="step2-bestand" class="select-input opacity-50 cursor-not-allowed" disabled>
+                <option value="" disabled selected>Bitte wählen...</option>
+                <option value="G">G: Gräserreich (andere Gräser)</option>
+                <option value="GR">GR: Gräserreich (Raigräser)</option>
+                <option value="A">A: Ausgewogen (andere Gräser)</option>
+                <option value="AR">AR: Ausgewogen (Raigräser)</option>
+                <option value="L">L: Leguminosenreich</option>
+                <option value="KF">KF: Kräuterreich (fein)</option>
+                <option value="KG">KG: Kräuterreich (grob)</option>
+            </select>
+        </div>
+
+        <!-- Schritt 3: Stadium -->
+        <div class="step-card p-5 mb-4">
+            <label for="step3-stadium-button" class="step-label">Schritt 3: Entwicklungsstadium</label>
+            <input type="hidden" id="stadium">
+            <button id="step3-stadium-button" class="w-full text-left px-4 py-3 bg-gray-200 text-gray-700 rounded-lg font-medium hover:bg-gray-300 transition opacity-50 cursor-not-allowed" disabled>
+                Stadium bestimmen
+            </button>
+        </div>
+
+        <!-- Schritt 4: Berechnung (Konservierung) -->
+        <div class="step-card p-5 mb-4">
+            <label class="step-label">Schritt 4: Konservierungsart & Berechnung</label>
+            <div id="step4-buttons" class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <!-- Grünfutter -->
+                <div>
+                    <input type="radio" name="konservierung" id="konserv-greenfeed" value="greenfeed" class="radio-hidden" disabled>
+                    <label for="konserv-greenfeed" class="calc-button bg-green-600 hover:bg-green-700 opacity-50 cursor-not-allowed">
+                        Grünfutter
+                    </label>
+                </div>
+                <!-- Silage -->
+                <div>
+                    <input type="radio" name="konservierung" id="konserv-silage" value="silage" class="radio-hidden" disabled>
+                    <label for="konserv-silage" class="calc-button bg-green-600 hover:bg-green-700 opacity-50 cursor-not-allowed">
+                        Silage
+                    </label>
+                </div>
+                <!-- Dürrfutter -->
+                <div>
+                    <input type="radio" name="konservierung" id="konserv-hay" value="hay" class="radio-hidden" disabled>
+                    <label for="konserv-hay" class="calc-button bg-green-600 hover:bg-green-700 opacity-50 cursor-not-allowed">
+                        Dürrfutter
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Schritt 5: Korrekturen -->
+        <div id="step5-corrections" class="step-card p-5 mb-4 hidden">
+             <label class="step-label">Schritt 5: Konservierungs-Korrekturen (optional)</label>
+             <p class="text-sm text-gray-500 mb-3">Wählen Sie zutreffende Mängel (gem. Merkblatt S. 5).</p>
+             <div id="step5-corrections-list" class="space-y-3">
+                 <!-- Checkboxen werden dynamisch generiert -->
+             </div>
+        </div>
+
+        <!-- Resultate -->
+        <div id="result" class="step-card result-box p-5 mb-4 hidden">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Ergebnis der Schätzung</h3>
+            
+            <div class="text-center mb-4 p-4 bg-white rounded-lg shadow-inner">
+                <label class="block text-sm font-medium text-gray-500">Milchproduktionspotenzial (MPP)</label>
+                <div class="text-5xl font-extrabold text-green-700 my-1">
+                    <span id="res-mpp">0.0</span> <span class="text-3xl">kg</span>
+                </div>
+                <div class="text-sm text-gray-600">
+                    Limitiert durch: <span id="res-limit" class="limit-label">NEL</span>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <!-- Tabelle -->
+                <div class="grid grid-cols-4 gap-2 text-sm">
+                    <div class="font-bold text-gray-600">Nährwert</div>
+                    <div class="font-bold text-gray-600 text-right">Basiswert</div>
+                    <div class="font-bold text-gray-600 text-right">Korrektur</div>
+                    <div class="font-bold text-gray-600 text-right">Effektiv</div>
+                    
+                    <!-- NEL Zeile -->
+                    <div id="mpp-nel-label" class="">NEL (MJ)</div>
+                    <div id="base-nel" class="text-right">0.00</div>
+                    <div id="korr-nel" class="text-right">0.00</div>
+                    <div id="eff-nel" class="text-right font-medium">0.00</div>
+                    
+                    <!-- APDE Zeile -->
+                    <div id="mpp-apde-label" class="">APDE (g)</div>
+                    <div id="base-apde" class="text-right">0</div>
+                    <div id="korr-apde" class="text-right">0</div>
+                    <div id="eff-apde" class="text-right font-medium">0</div>
+                    
+                    <!-- APDN Zeile -->
+                    <div id="mpp-apdn-label" class="">APDN (g)</div>
+                    <div id="base-apdn" class="text-right">0</div>
+                    <div id="korr-apdn" class="text-right">0</div>
+                    <div id="eff-apdn" class="text-right font-medium">0</div>
+                    
+                    <!-- TSV Zeile -->
+                    <div class="font-bold border-t pt-2">TSV (kg TS)</div>
+                    <div id="base-tsv" class="text-right border-t pt-2">0.0</div>
+                    <div class="text-right border-t pt-2 text-gray-400">--</div> <!-- Keine Korrektur für TSV -->
+                    <div id="eff-tsv" class="text-right font-medium border-t pt-2">0.0</div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-3 text-sm">
+                    <div class="font-bold text-gray-600">MPP pro Nährstoff</div>
+                    <div class="grid grid-cols-3 gap-2 text-center mt-1">
+                        <div>
+                            <span id="mpp-nel" class="font-medium">0.0</span>
+                            <span class="block text-xs text-gray-500">kg (NEL)</span>
+                        </div>
+                        <div>
+                            <span id="mpp-apde" class="font-medium">0.0</span>
+                            <span class="block text-xs text-gray-500">kg (APDE)</span>
+                        </div>
+                         <div>
+                            <span id="mpp-apdn" class="font-medium">0.0</span>
+                            <span class="block text-xs text-gray-500">kg (APDN)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="korrAngewandt" class="hidden text-gray-600 border-t border-gray-200 pt-3 mt-3">
+                    <!-- Angewandte Korrekturen -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Parameter Akkordeon -->
+        <div id="param-accordion" class="step-card mb-4 hidden">
+            <button id="param-accordion-toggle" class="flex justify-between items-center w-full p-4 text-left font-medium text-gray-700">
+                <span>Optionale Parameter anpassen</span>
+                <svg id="param-accordion-icon" class="w-5 h-5 transform transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div id="param-accordion-content" class="hidden p-5 border-t border-gray-200">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label for="kuhgewicht" class="step-label">Kuhgewicht (kg)</label>
+                        <input type="number" id="kuhgewicht" value="630" class="select-input">
+                    </div>
+                    <div>
+                        <label for="kuh-tsv" class="step-label">TS-Verzehr (kg TS)</label>
+                        <input type="number" id="kuh-tsv" placeholder="Automatisch (Basis)" class="select-input">
+                    </div>
+                </div>
+                <p class="text-xs text-gray-500 mt-3">Hinweis: Der Erhaltungsbedarf wird basierend auf dem Kuhgewicht berechnet. Der TS-Verzehr wird vom Basiswert übernommen, kann hier aber überschrieben werden.</p>
+            </div>
+        </div>
+        
+        <!-- Speichern Sektion -->
+        <div id="save-section" class="step-card p-5 mb-4 hidden">
+            <h3 class="step-label">Beurteilung speichern</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                 <div>
+                    <label for="personName" class="block text-sm font-medium text-gray-700">Ihr Name</label>
+                    <input type="text" id="personName" class="select-input mt-1" placeholder="Max Mustermann">
+                </div>
+                <div>
+                    <label for="probeNr" class="block text-sm font-medium text-gray-700">Probe-Nr. / Schlag</label>
+                    <input type="text" id="probeNr" class="select-input mt-1" placeholder="Wiese 1 / 2024-05-10">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button id="savePdfButton" class="calc-button bg-blue-600 hover:bg-blue-700">
+                    PDF-Bericht speichern
+                </button>
+                <button id="saveCloudButton" class="calc-button bg-gray-700 hover:bg-gray-800">
+                    In Cloud speichern
+                </button>
+            </div>
+            <div id="saveFeedback" class="feedback-message hidden mt-3"></div>
+        </div>
+
+    </div> <!-- Ende app-body -->
+    
+    <!-- Modal-Hintergrund -->
+    <div id="stadiumModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-30">
+        <!-- Modal-Container -->
+        <div class="relative top-20 mx-auto p-5 border w-full max-w-lg shadow-lg rounded-xl bg-white">
+            <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-bold text-gray-900">Stadium wählen</h3>
+                <button id="closeModalButton" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <div id="modalContent" class="p-5">
+                <!-- Inhalt wird dynamisch geladen -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+

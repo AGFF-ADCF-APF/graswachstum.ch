@@ -21,6 +21,8 @@ shortcode-citation:
     reorder_uncited: true
 sitemap:
     lastmod: '30-10-2025 14:03'
+feed:
+    limit: 10
 ---
 
 ## Grasland bewirtschaften

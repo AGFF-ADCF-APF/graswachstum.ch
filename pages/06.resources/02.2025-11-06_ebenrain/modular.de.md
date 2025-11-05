@@ -1,5 +1,5 @@
 ---
-title: '06.11.2025 Weiterbildungstag Ebenrain '
+title: '06.11.2025 Ebenrain '
 date: '00:38 06-11-2025'
 shortcode-citation:
     items: cited

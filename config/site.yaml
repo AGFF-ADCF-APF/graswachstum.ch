@@ -16,7 +16,7 @@ summary:
   size: 280
   delimiter: '==='
 redirects:
-  /weideeingaenge: 'https://graswachstum.ch/de//blog/2024-12-weideeingaenge'
-routes: null
+  /weideeingaenge: 'https://graswachstum.ch/de/blog/2024-12-weideeingaenge'
+  /agff-mb3: /resources/agff-app-fodder-value/index.html
 blog:
   route: /home

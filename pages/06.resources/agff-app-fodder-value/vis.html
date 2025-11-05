@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGFF Futter-Analyse-Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Plotly.js (für die Diagramme) - KORRIGIERT: Auf eine neuere, spezifische Version aktualisiert, um Warnung zu beheben -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    
+    <script type="module">
+        // Firebase SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, getDocs, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- GLOBALE VARIABLEN ---
+        let db, auth;
+        let alleProben = []; // Speichert alle Proben aus Firebase
+        
+        // Dieselbe Firebase-Konfiguration wie in Ihrer Erfassungs-App
+
+        
+        const firebaseConfig = {
+                  apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
+                  authDomain: "agff-apps.firebaseapp.com",
+                  projectId: "agff-apps",
+                  storageBucket: "agff-apps.firebasestorage.app",
+                  messagingSenderId: "963390091539",
+                  appId: "1:963390091539:web:eff9117033c24eda21eae6"
+                };
+        
+        // Dieselbe App-ID für den Datenbankpfad
+        const appId = "agff-futter-app-public"; 
+
+        // --- INITIALISIERUNG ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            showLoading(true, "Verbinde mit Firebase...");
+            try {
+                await initializeFirebase();
+                showLoading(true, "Lade Futterproben...");
+                
+                await loadFirebaseData();
+                
+                showLoading(true, "Zeichne Diagramm...");
+                populateFilters();
+                updateChart();
+                setupEventListeners();
+                
+                showLoading(false, "");
+            } catch (error) {
+                console.error("Initialisierungsfehler:", error);
+                showLoading(false, "Ein Fehler ist aufgetreten: " + error.message, true);
+            }
+        });
+
+        /**
+         * Initialisiert Firebase und meldet den Benutzer anonym an.
+         */
+        async function initializeFirebase() {
+            try {
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+                setLogLevel('debug'); 
+                
+                // const initialToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+                // KORREKTUR: Der 'auth/custom-token-mismatch'-Fehler ist aufgetreten,
+                // weil __initial_auth_token für die Canvas-Umgebung gilt, aber
+                // diese App sich mit dem 'agff-apps'-Projekt verbindet.
+                // Für ein öffentliches Dashboard ist die anonyme Anmeldung korrekt.
+                // if (initialToken) {
+                //     await signInWithCustomToken(auth, initialToken);
+                // } else {
+                //     await signInAnonymously(auth);
+                // }
+                
+                await signInAnonymously(auth);
+
+                console.log("Firebase Auth & Firestore initialisiert (Anonym). User ID:", auth.currentUser?.uid);
+            } catch (error) {
+                console.error("Firebase Initialisierungsfehler:", error);
+                throw new Error("Firebase konnte nicht initialisiert werden.");
+            }
+        }
+
+        /**
+         * Lädt alle 'futterproben' aus der Firestore-Datenbank.
+         */
+        async function loadFirebaseData() {
+            if (!db) {
+                throw new Error("Firestore ist nicht initialisiert.");
+            }
+            
+            const collectionPath = `artifacts/${appId}/public/data/futterproben`;
+            const querySnapshot = await getDocs(collection(db, collectionPath));
+            
+            alleProben = [];
+            querySnapshot.forEach((doc) => {
+                alleProben.push(doc.data());
+            });
+            
+            console.log(`Erfolgreich ${alleProben.length} Proben geladen.`);
+            if (alleProben.length === 0) {
+                 throw new Error("Keine Proben in der Datenbank gefunden.");
+            }
+        }
+
+        /**
+         * Füllt die Filter-Dropdowns dynamisch basierend auf den geladenen Daten.
+         */
+        function populateFilters() {
+            const aufwuchsSelect = document.getElementById('filter-aufwuchs');
+            const konservSelect = document.getElementById('filter-konservierung');
+            const bestandSelect = document.getElementById('filter-bestand');
+
+            // Eindeutige Werte mittels Set sammeln
+            const aufwuechse = [...new Set(alleProben.map(p => p.aufwuchs))].filter(Boolean);
+            const konservierungen = [...new Set(alleProben.map(p => p.konservierung))].filter(Boolean);
+            const bestande = [...new Set(alleProben.map(p => p.bestandLabel))].filter(Boolean);
+            
+            // Helper-Funktion zum Füllen der Selects
+            const createOptions = (selectEl, options, labels) => {
+                options.forEach(optionValue => {
+                    const option = document.createElement('option');
+                    option.value = optionValue;
+                    // Verwende Label, falls vorhanden (z.B. für 'erster' -> '1. Aufwuchs')
+                    option.textContent = labels?.[optionValue] || optionValue;
+                    selectEl.appendChild(option);
+                });
+            };
+
+            createOptions(aufwuchsSelect, aufwuechse, { 'erster': '1. Aufwuchs', 'folge': 'Folgeaufwuchs' });
+            createOptions(konservSelect, konservierungen, { 'greenfeed': 'Grünfutter', 'silage': 'Silage', 'hay': 'Dürrfutter' });
+            createOptions(bestandSelect, bestande.sort());
+        }
+
+        /**
+         * Richtet die Event Listeners für alle Filter-Dropdowns ein.
+         */
+        function setupEventListeners() {
+            const filterIds = [
+                'filter-metrik', 'filter-gruppe', 'filter-plotart', 
+                'filter-aufwuchs', 'filter-konservierung', 'filter-bestand'
+            ];
+            
+            filterIds.forEach(id => {
+                document.getElementById(id).addEventListener('change', updateChart);
+            });
+        }
+
+        /**
+         * Hauptfunktion: Filtert die Daten und zeichnet das Diagramm neu.
+         */
+        function updateChart() {
+            const chartContainer = document.getElementById('chart-container');
+            
+            // 1. Aktuelle Filterwerte auslesen
+            const metrikKey = document.getElementById('filter-metrik').value;
+            const gruppeKey = document.getElementById('filter-gruppe').value;
+            const plotArt = document.getElementById('filter-plotart').value;
+            
+            const aufwuchsFilter = document.getElementById('filter-aufwuchs').value;
+            const konservFilter = document.getElementById('filter-konservierung').value;
+            const bestandFilter = document.getElementById('filter-bestand').value;
+
+            // 2. Daten filtern
+            let gefilterteProben = alleProben.filter(probe => {
+                const aufwuchsMatch = (aufwuchsFilter === 'alle') || (probe.aufwuchs === aufwuchsFilter);
+                const konservMatch = (konservFilter === 'alle') || (probe.konservierung === konservFilter);
+                const bestandMatch = (bestandFilter === 'alle') || (probe.bestandLabel === bestandFilter);
+                return aufwuchsMatch && konservMatch && bestandMatch;
+            });
+            
+            // 3. Prüfen, ob Daten vorhanden sind
+            if (gefilterteProben.length === 0) {
+                chartContainer.innerHTML = `<div class="p-8 text-center text-gray-500">Keine Daten für die aktuelle Filterauswahl gefunden.</div>`;
+                return;
+            }
+
+            // 4. Daten für Plotly vorbereiten
+            
+            // Helper, um auch verschachtelte Werte zu erhalten (z.B. 'effektiveWerte.nel')
+            const getValue = (obj, path) => path.split('.').reduce((acc, part) => acc && acc[part], obj);
+
+            // Labels für die X-Achse (z.B. "G: Gräserreich...", "AR: Ausgewogen...")
+            const xValues = gefilterteProben.map(p => p[gruppeKey]); 
+            // Y-Werte (z.B. 10.5, 12.1, 9.8)
+            const yValues = gefilterteProben.map(p => getValue(p, metrikKey));
+            
+            // Aussagekräftige Hover-Infos
+            const hoverText = gefilterteProben.map(p => 
+                `<b>Probe: ${p.probeNr || 'N/A'}</b><br>` +
+                `Beurteiler: ${p.beurteiler || 'N/A'}<br>` +
+                `MPP: ${p.mpp?.toFixed(2)} kg<br>` +
+                `NEL: ${p.effektiveWerte?.nel?.toFixed(2)} MJ<br>` +
+                `APDE: ${p.effektiveWerte?.apde?.toFixed(0)} g<br>` +
+                `Bestand: ${p.bestandLabel}<br>` +
+                `Stadium: ${p.stadiumLabel}`
+            );
+            
+            // 5. Plotly-Trace (Daten-Serie) definieren
+            const trace = {
+                y: yValues,
+                x: xValues,
+                text: hoverText,
+                hoverinfo: 'text',
+                type: plotArt,         // 'violin' oder 'box'
+                points: 'all',         // Zeigt alle Einzelpunkte
+                jitter: 0.3,           // Verhindert Überlappung der Punkte
+                pointpos: 0,           // Zentriert die Punkte
+                
+                // Styling
+                marker: { color: '#10B981' }, // Grüner Akzent
+                
+                // Boxplot-Optionen (wird von 'violin' auch genutzt)
+                box: {
+                    visible: true
+                },
+                // ----- IHR WUNSCH: -----
+                // Zeigt den Durchschnitt (mean) als durchgezogene Linie
+                meanline: {
+                    visible: true 
+                }
+            };
+
+            // 6. Plotly-Layout definieren
+            const layout = {
+                title: `Analyse: ${document.getElementById('filter-metrik').options[document.getElementById('filter-metrik').selectedIndex].text}`,
+                yaxis: { 
+                    title: document.getElementById('filter-metrik').options[document.getElementById('filter-metrik').selectedIndex].text,
+                    zeroline: false
+                },
+                xaxis: { 
+                    title: document.getElementById('filter-gruppe').options[document.getElementById('filter-gruppe').selectedIndex].text
+                },
+                margin: { l: 60, r: 30, b: 80, t: 60 },
+                hovermode: 'closest'
+            };
+
+            // 7. Diagramm zeichnen
+            Plotly.newPlot('chart-container', [trace], layout, { responsive: true, displaylogo: false });
+        }
+
+        /**
+         * Steuert die Ladeanzeige (Spinner).
+         */
+        function showLoading(isLoading, message, isError = false) {
+            const spinnerWrapper = document.getElementById('loading-spinner-wrapper');
+            const spinner = document.getElementById('loading-spinner');
+            const messageEl = document.getElementById('loading-message');
+            const mainContent = document.getElementById('main-content');
+            
+            if (isLoading) {
+                messageEl.textContent = message;
+                spinnerWrapper.classList.remove('hidden');
+                mainContent.classList.add('hidden');
+                
+                if (isError) {
+                    spinner.classList.add('hidden');
+                    messageEl.classList.add('text-red-500');
+                } else {
+                    spinner.classList.remove('hidden');
+                    messageEl.classList.remove('text-red-500');
+                }
+            } else if (isError) {
+                // Bei Fehler Lade-Overlay anzeigen, aber Spinner ausblenden
+                messageEl.textContent = message;
+                spinnerWrapper.classList.remove('hidden');
+                mainContent.classList.add('hidden');
+                spinner.classList.add('hidden');
+                messageEl.classList.add('text-red-500');
+            } else {
+                // Erfolgreich geladen
+                spinnerWrapper.classList.add('hidden');
+                mainContent.classList.remove('hidden');
+            }
+        }
+
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans">
+
+    <!-- Lade-Overlay -->
+    <div id="loading-spinner-wrapper" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div class="flex flex-col items-center">
+            <svg id="loading-spinner" class="animate-spin h-10 w-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p id="loading-message" class="mt-4 text-gray-600">Lade...</p>
+        </div>
+    </div>
+
+    <!-- Hauptinhalt (wird nach Laden sichtbar) -->
+    <div id="main-content" class="hidden">
+        
+        <header class="bg-white shadow-sm sticky top-0 z-30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center h-16">
+                    <span class="text-3xl">📊</span>
+                    <div class="ml-3">
+                        <h1 class="text-2xl font-semibold text-gray-800">Futter-Analyse-Dashboard</h1>
+                        <p class="text-sm text-gray-500">Daten aus der AGFF Futterbewertungs-App</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+                <!-- Linke Spalte: Filter -->
+                <aside class="lg:col-span-1 p-5 bg-white rounded-2xl shadow-lg space-y-6 h-fit sticky top-24">
+                    <h2 class="text-xl font-semibold text-gray-700 border-b pb-2">Filter & Ansicht</h2>
+                    
+                    <!-- Ansichts-Einstellungen -->
+                    <div class="space-y-2">
+                        <label for="filter-metrik" class="block text-sm font-medium text-gray-600">Metrik (Y-Achse)</label>
+                        <select id="filter-metrik" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="mpp">Milchproduktionspotenzial (MPP)</option>
+                            <option value="effektiveWerte.nel">NEL (effektiv)</option>
+                            <option value="effektiveWerte.apde">APDE (effektiv)</option>
+                            <option value="effektiveWerte.apdn">APDN (effektiv)</option>
+                            <option value="effektiverTSV">Futterverzehr (TSV)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="filter-gruppe" class="block text-sm font-medium text-gray-600">Gruppierung (X-Achse)</label>
+                        <select id="filter-gruppe" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="bestandLabel">Nach Bestandestyp</option>
+                            <option value="konservierung">Nach Konservierung</option>
+                            <option value="stadiumLabel">Nach Stadium</option>
+                            <option value="aufwuchs">Nach Aufwuchs</option>
+                            <option value="probeNr">Nach Proben-Nr.</option>
+                            <option value="beurteiler">Nach Beurteiler</option>
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="filter-plotart" class="block text-sm font-medium text-gray-600">Diagramm-Typ</label>
+                        <select id="filter-plotart" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="violin">Violin-Plot (empfohlen)</option>
+                            <option value="box">Box-Plot</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Daten-Filter -->
+                    <h3 class="text-lg font-semibold text-gray-700 border-t pt-4">Daten filtern</h3>
+                    
+                    <div class="space-y-2">
+                        <label for="filter-aufwuchs" class="block text-sm font-medium text-gray-600">Aufwuchs</label>
+                        <select id="filter-aufwuchs" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="alle">Alle Aufwüchse</option>
+                            <!-- Optionen werden dynamisch gefüllt -->
+                        </select>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="filter-konservierung" class="block text-sm font-medium text-gray-600">Konservierung</label>
+                        <select id="filter-konservierung" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="alle">Alle Konservierungen</option>
+                            <!-- Optionen werden dynamisch gefüllt -->
+                        </select>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label for="filter-bestand" class="block text-sm font-medium text-gray-600">Bestandestyp</label>
+                        <select id="filter-bestand" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <option value="alle">Alle Bestandestypen</option>
+                            <!-- Optionen werden dynamisch gefüllt -->
+                        </select>
+                    </div>
+                    
+                </aside>
+
+                <!-- Rechte Spalte: Diagramm -->
+                <div class="lg:col-span-3 p-5 bg-white rounded-2xl shadow-lg min-h-[600px]">
+                    <div id="chart-container" class="w-full h-full min-h-[550px]">
+                        <!-- Plotly-Diagramm wird hier eingefügt -->
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
+

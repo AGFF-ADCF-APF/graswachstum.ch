@@ -9,5 +9,6 @@ sitemap:
 media_order: 'Gras-messen.jpg,Boden-schonen.jpg,Gräser-kennen.jpg,Kühe-jäten.jpg,Samenbildung-steuern.png,Vormähen.jpg,Rundballen-Heu.jpg,Sternradrechen.jpg'
 hero:
     image: Rundballen-Heu.jpg
+menu: 'Ebenrain 06.11.2025 '
 ---
 

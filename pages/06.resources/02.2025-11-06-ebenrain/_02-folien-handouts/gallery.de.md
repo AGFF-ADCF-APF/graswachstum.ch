@@ -27,3 +27,4 @@ gallery:
 [Futterbeurteilungs-App](https://graswachstum.ch/resources/agff-app-fodder-value/index.html?class=btn)
 
 [![06_Huguenin_Ebenrain_2025_Dungung.pdf](06_Huguenin_Ebenrain_2025_Dungung.pdf.webp "06_Huguenin_Ebenrain_2025_Dungung.pdf")](06_Huguenin_Ebenrain_2025_Dungung.pdf)
+

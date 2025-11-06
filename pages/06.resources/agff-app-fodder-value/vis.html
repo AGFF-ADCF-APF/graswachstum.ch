@@ -30,7 +30,11 @@
         };
         
         // Dieselbe App-ID für den Datenbankpfad
-        const appId = "agff-futter-app-public"; 
+        // const appId = "agff-futter-app-public"; // ALT
+        
+        // KORREKTUR: Dieselbe App-ID-Logik wie in der Erfassungs-App verwenden
+        // (fällt auf 'default-agff-app-public' zurück, wenn __app_id nicht definiert ist)
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
 
         // --- INITIALISIERUNG ---
         document.addEventListener('DOMContentLoaded', async () => {
@@ -393,5 +397,6 @@
 
 </body>
 </html>
+
 
 

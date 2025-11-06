@@ -13,5 +13,16 @@ features:
         icon: tabler/file-type-pdf.svg
         link: ./02_Huguenin_Ebenrain_2025_Ertrag.pdf
 media_order: '02_Huguenin_Ebenrain_2025_Ertrag.pdf,03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf,06_Huguenin_Ebenrain_2025_Dungung.pdf,08_Huguenin_Ebenrain_2025_Uebersaaten.pdf'
+gallery:
+    grid_classes: 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-2 gap-x-2'
+    thumb:
+        width: 600
+        height: 450
+    items:
+        -
+            title: 'Ertragspotential in der Region Nordwestschweiz '
+            image: null
+            desc: 'Olivier Huguenin (Agroscope)'
+            video: 02_Huguenin_Ebenrain_2025_Ertrag.pdf
 ---
 

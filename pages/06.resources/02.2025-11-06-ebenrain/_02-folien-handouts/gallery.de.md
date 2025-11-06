@@ -25,3 +25,5 @@ gallery:
 [![03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf](03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf.webp "03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf")](03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf)
 
 [Futterbeurteilungs-App](https://graswachstum.ch/resources/agff-app-fodder-value/index.html?class=btn)
+
+[![06_Huguenin_Ebenrain_2025_Dungung.pdf](06_Huguenin_Ebenrain_2025_Dungung.pdf.webp "06_Huguenin_Ebenrain_2025_Dungung.pdf")](06_Huguenin_Ebenrain_2025_Dungung.pdf)

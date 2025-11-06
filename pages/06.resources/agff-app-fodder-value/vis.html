@@ -219,18 +219,36 @@
                 jitter: 0.3,           // Verhindert Überlappung der Punkte
                 pointpos: 0,           // Zentriert die Punkte
                 
-                // Styling
-                marker: { color: '#10B981' }, // Grüner Akzent
+                // --- KORREKTUR: Styling für Hervorhebung des Mittelwerts ---
                 
-                // Boxplot-Optionen (wird von 'violin' auch genutzt)
-                box: {
-                    visible: true
+                // 1. Punkte (Einzelwerte) verblassen lassen
+                marker: { 
+                    color: '#10B981', // Basis-Grün
+                    opacity: 0.3,      // Stark transparent
+                    size: 6
                 },
-                // ----- IHR WUNSCH: -----
-                // Zeigt den Durchschnitt (mean) als durchgezogene Linie
+                
+                // 2. Violin/Box-Körper verblassen lassen
+                fillcolor: 'rgba(16, 185, 129, 0.1)', // Sehr transparenter Füll-Grünton
+                line: {
+                    color: 'rgba(107, 114, 128, 0.3)' // Schwache graue Kontur (statt grün)
+                },
+
+                // 3. Box-Elemente (Median-Linie) ebenfalls verblassen
+                box: {
+                    visible: true,
+                    line: {
+                        color: 'rgba(107, 114, 128, 0.3)' // Schwache graue Kontur
+                    }
+                },
+                
+                // 4. Mittelwert (Mean) hervorheben (dicker, dunkler Strich)
                 meanline: {
-                    visible: true 
+                    visible: true,
+                    color: '#047857', // Dunkles, kräftiges Grün (Tailwind Green-700)
+                    width: 4           // Dicker Strich
                 }
+                // --- ENDE KORREKTUR ---
             };
 
             // 6. Plotly-Layout definieren
@@ -397,6 +415,7 @@
 
 </body>
 </html>
+
 
 
 

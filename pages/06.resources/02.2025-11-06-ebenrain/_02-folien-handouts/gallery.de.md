@@ -20,7 +20,7 @@ gallery:
         height: 450
 ---
 
-[![02_Huguenin_Ebenrain_2025_Ertrag.pdf](02_Huguenin_Ebenrain_2025_Ertrag.pdf.webp "02_Huguenin_Ebenrain_2025_Ertrag.pdf")](02_Huguenin_Ebenrain_2025_Ertrag.pdf)
+[![02_Huguenin_Ebenrain_2025_Ertrag.pdf](02_Huguenin_Ebenrain_2025_Ertrag.pdf.webp "02_Huguenin_Ebenrain_2025_Ertrag.pdf [svg-icon="file-type-pdf" /]")](02_Huguenin_Ebenrain_2025_Ertrag.pdf)
 
 [![03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf](03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf.webp "03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf")](03a_Schaffner_Ebenrain_2025_Betriebsspiegel_06.11.2025.pdf)
 

@@ -26,3 +26,4 @@ gallery:
             video: 02_Huguenin_Ebenrain_2025_Ertrag.pdf
 ---
 
+[![02_Huguenin_Ebenrain_2025_Ertrag.pdf](02_Huguenin_Ebenrain_2025_Ertrag.pdf.webp "02_Huguenin_Ebenrain_2025_Ertrag.pdf")](02_Huguenin_Ebenrain_2025_Ertrag.pdf)

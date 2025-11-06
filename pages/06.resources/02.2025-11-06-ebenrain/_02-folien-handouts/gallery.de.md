@@ -21,7 +21,7 @@ gallery:
     items:
         -
             title: 'Ertragspotential in der Region Nordwestschweiz '
-            image: null
+            image: 02_Huguenin_Ebenrain_2025_Ertrag.pdf.webp
             desc: 'Olivier Huguenin (Agroscope)'
             video: 02_Huguenin_Ebenrain_2025_Ertrag.pdf
 ---

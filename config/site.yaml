@@ -18,5 +18,7 @@ summary:
 redirects:
   /weideeingaenge: 'https://graswachstum.ch/de/blog/2024-12-weideeingaenge'
   /agff-mb3: /resources/agff-app-fodder-value/index.html
+  /ebenrain2025: ''
+routes: null
 blog:
   route: /home

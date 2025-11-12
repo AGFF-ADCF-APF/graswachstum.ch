@@ -21,7 +21,7 @@ sitemap:
 shortcode-citation:
     items: cited
     reorder_uncited: true
-author: 'Martin Zbinden (Inforama), Michael Sutter'
+author: 'Martin Zbinden (Inforama)'
 aura:
     author: mani
 seo-magic: null

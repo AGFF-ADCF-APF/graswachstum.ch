@@ -18,7 +18,7 @@ sitemap:
     lastmod: '20-03-2025 12:30'
 ---
 
-## Ferme la Naz
+## Ferme de la Naz
 Höhe ü.M.: 690
 Koordinaten: [46.60420, 6.78499](https://map.geo.admin.ch/?swisssearch=46.60420,6.78499)
 Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)

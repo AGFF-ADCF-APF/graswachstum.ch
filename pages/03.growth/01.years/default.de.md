@@ -21,6 +21,7 @@ media_order: 'Graswachstumskurven-mit-Ertrag_2025.svg,Graswachstumskurven-mit-Er
 
 ![Graswachstumskurven-mit-Ertrag_2025](Graswachstumskurven-mit-Ertrag_2025.svg "Graswachstumskurven-mit-Ertrag_2025")
 
-[notice]**Achtung, die absoluten Zahlen sind mit vorsicht zu betrachten und keine direkten Vergleiche zu machen.** Das gemessene Graswachstum ist nur repräsentativ für die gemessene Fläche (meist Weidekoppeln) und wird durch die Messmethode, der Bewirtschaftung und weitere Faktoren beeinflusst. [/notice]
+
+! **Achtung, die absoluten Zahlen sind mit vorsicht zu betrachten und keine direkten Vergleiche zu machen.** Das gemessene Graswachstum ist nur repräsentativ für die gemessene Fläche (meist Weidekoppeln) und wird durch die Messmethode, der Bewirtschaftung und weitere Faktoren beeinflusst. 
 
 ![Graswachstumskurven-mit-Ertrag_2024](Graswachstumskurven-mit-Ertrag_2024.svg "Graswachstumskurven-mit-Ertrag_2024")

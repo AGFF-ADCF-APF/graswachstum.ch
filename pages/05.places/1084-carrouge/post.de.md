@@ -22,7 +22,7 @@ sitemap:
 Höhe ü.M.: 690
 Koordinaten: [46.60420, 6.78499](https://map.geo.admin.ch/?swisssearch=46.60420,6.78499)
 Webseite:  [Agroscope - Graswachstum](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum.html)
-Methode: vereinfachte Methode abgeleitet von Corrall and Fenlon (1978)  ([Link](https://www.agroscope.admin.ch/agroscope/de/home/services/dienste/futtermittel/weidemanagement/graswachstum/erhebungsmethode.html))
+Methode: Herbometer
 
 ===
 

@@ -2,38 +2,38 @@
     "grav": {
         "page_route": "\/growth\/years",
         "page_rawroute": "\/growth\/years",
-        "page_title": "years"
+        "page_title": "Jahresauswertungen"
     },
-    "updated": 1762952360,
+    "updated": 1762954903,
     "response_headers": {
         "server": "nginx",
-        "date": "Wed, 12 Nov 2025 12:59:20 GMT",
+        "date": "Wed, 12 Nov 2025 13:41:43 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
-        "grav-page-title": "years",
+        "grav-page-title": "Jahresauswertungen",
         "grav-page-route": "\/growth\/years",
         "grav-page-rawroute": "\/growth\/years",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 19 Nov 2025 12:59:20 GMT",
+        "expires": "Wed, 19 Nov 2025 13:41:43 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1762952360.2688009738922119140625,
-        "total_time": 0.1620669999999999888462554054058273322880268096923828125,
-        "namelookup_time": 0.00042299999999999998191724248641776284785009920597076416015625,
-        "connect_time": 0.0005720000000000000257849297469192606513388454914093017578125,
-        "pretransfer_time": 0.0048950000000000000455191440096314181573688983917236328125,
-        "starttransfer_time": 0.160714999999999996749266983897541649639606475830078125,
+        "start_time": 1762954903.176927089691162109375,
+        "total_time": 0.204141999999999990134114113971008919179439544677734375,
+        "namelookup_time": 0.0003730000000000000134024735753968116114265285432338714599609375,
+        "connect_time": 0.00048200000000000000656419363309623804525472223758697509765625,
+        "pretransfer_time": 0.004844000000000000215327755626049111015163362026214599609375,
+        "starttransfer_time": 0.20175799999999999290167806975659914314746856689453125,
         "redirect_time": 0
     },
     "info": {
         "url": "https:\/\/graswachstum.ch\/de\/growth\/years",
         "content_type": "text\/html; charset=utf-8",
-        "header_size": 526,
+        "header_size": 539,
         "request_size": 124,
         "redirect_count": 0,
-        "size_download": 5454,
-        "speed_download": 33652,
+        "size_download": 5584,
+        "speed_download": 27353,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,13 +41,13 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 32296
+        "content_size": 33378
     },
     "content": {
-        "body": "",
+        "body": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2025\nGraswachstumskurven-mit-Ertrag_2024",
         "headers": {
             "h1": [
-                "years"
+                "Jahresauswertungen"
             ],
             "h2": [],
             "h3": [],
@@ -65,6 +65,24 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/2018-05-06 19.05.53.jpg?g-80c17edb",
                 "alt": "Hero Image",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/years\/Graswachstumskurven-mit-Ertrag_2025.svg?decoding=auto&fetchpriority=auto&g-80c17edb",
+                "alt": "Graswachstumskurven-mit-Ertrag_2025",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/years\/Graswachstumskurven-mit-Ertrag_2025.svg?decoding=auto&fetchpriority=auto&g-80c17edb",
+                "alt": "Graswachstumskurven-mit-Ertrag_2025",
+                "external": true,
+                "status": 200
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/years\/Graswachstumskurven-mit-Ertrag_2024.svg?decoding=auto&fetchpriority=auto&g-80c17edb",
+                "alt": "Graswachstumskurven-mit-Ertrag_2024",
                 "external": true,
                 "status": 200
             },
@@ -189,17 +207,17 @@
         }
     },
     "head": {
-        "title": "years | graswachstum.ch",
+        "title": "Jahresauswertungen | graswachstum.ch",
         "meta": {
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
             "description": "AGFF-Grasmessnetzwerk",
-            "title": "years",
+            "title": "years | graswachstum.ch",
             "image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/growth\/years",
             "og:site_name": "graswachstum.ch",
-            "og:title": "years",
+            "og:title": "years | graswachstum.ch",
             "og:description": "AGFF-Grasmessnetzwerk",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
@@ -207,10 +225,10 @@
             "og:image:height": "630",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
-            "twitter:title": "years",
+            "twitter:title": "years | graswachstum.ch",
             "twitter:description": "AGFF-Grasmessnetzwerk",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
-            "twitter:image:alt": "years",
+            "twitter:image:alt": "years | graswachstum.ch",
             "twitter:label1": "Est. reading time",
             "twitter:data1": "0 Minuten",
             "keywords": ""
@@ -412,5 +430,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* old SSL session ID is stale, removing\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\/years\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth\/years]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth\/years HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 12:59:20 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: years\r\n< grav-page-route: \/growth\/years\r\n< grav-page-rawroute: \/growth\/years\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 12:59:20 GMT\r\n* Added cookie grav-site-23a95d8=\"d6267f1e34fbd7d0b121b953a4bcf1ae\" for domain graswachstum.ch, path \/, expire 1762954160\n< set-cookie: grav-site-23a95d8=d6267f1e34fbd7d0b121b953a4bcf1ae; expires=Wed, 12-Nov-2025 13:29:20 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\/years\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth\/years]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth\/years HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 13:41:43 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Jahresauswertungen\r\n< grav-page-route: \/growth\/years\r\n< grav-page-rawroute: \/growth\/years\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 13:41:43 GMT\r\n* Added cookie grav-site-23a95d8=\"0e5b4567b46f2082f53d01793672f588\" for domain graswachstum.ch, path \/, expire 1762956703\n< set-cookie: grav-site-23a95d8=0e5b4567b46f2082f53d01793672f588; expires=Wed, 12-Nov-2025 14:11:43 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

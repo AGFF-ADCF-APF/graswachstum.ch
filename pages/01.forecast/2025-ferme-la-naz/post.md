@@ -24,8 +24,7 @@ shortcode-citation:
 author: 'Martin Zbinden (Inforama), Michael Sutter'
 aura:
     author: mani
-seo-magic:
-    description: 'Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Bewässerung von Weideland in Gampelen im Bernischen Grossen Moos.'
+seo-magic: null
 published: false
 ---
 

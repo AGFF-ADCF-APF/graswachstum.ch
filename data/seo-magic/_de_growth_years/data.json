@@ -4,26 +4,26 @@
         "page_rawroute": "\/growth\/years",
         "page_title": "Jahresauswertungen"
     },
-    "updated": 1762954918,
+    "updated": 1762954997,
     "response_headers": {
         "server": "nginx",
-        "date": "Wed, 12 Nov 2025 13:41:58 GMT",
+        "date": "Wed, 12 Nov 2025 13:43:17 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "Jahresauswertungen",
         "grav-page-route": "\/growth\/years",
         "grav-page-rawroute": "\/growth\/years",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 19 Nov 2025 13:41:58 GMT",
+        "expires": "Wed, 19 Nov 2025 13:43:17 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1762954918.3575229644775390625,
-        "total_time": 0.163800000000000001154631945610162802040576934814453125,
-        "namelookup_time": 0.0004000000000000000191686944095437183932517655193805694580078125,
-        "connect_time": 0.0004840000000000000009679756995950583586818538606166839599609375,
-        "pretransfer_time": 0.0035109999999999997981336985475309120374731719493865966796875,
-        "starttransfer_time": 0.16326499999999999346300683100707828998565673828125,
+        "start_time": 1762954996.938745021820068359375,
+        "total_time": 0.188636999999999999122479721336276270449161529541015625,
+        "namelookup_time": 0.000418999999999999993109678353420122220995835959911346435546875,
+        "connect_time": 0.000497000000000000045907722068250222946517169475555419921875,
+        "pretransfer_time": 0.004152000000000000308475467392099744756706058979034423828125,
+        "starttransfer_time": 0.1867620000000000113349329922129982151091098785400390625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 539,
         "request_size": 124,
         "redirect_count": 0,
-        "size_download": 5652,
-        "speed_download": 34505,
+        "size_download": 5667,
+        "speed_download": 30041,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 36265
+        "content_size": 36334
     },
     "content": {
-        "body": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2025\nGraswachstumskurven-mit-Ertrag_2024",
+        "body": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2024",
         "headers": {
             "h1": [
                 "Jahresauswertungen"
@@ -65,12 +65,6 @@
             {
                 "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/2018-05-06 19.05.53.jpg?g-80c17edb",
                 "alt": "Hero Image",
-                "external": true,
-                "status": 200
-            },
-            {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.growth\/01.years\/Graswachstumskurven-mit-Ertrag_2025.svg?decoding=auto&fetchpriority=auto&g-80c17edb",
-                "alt": "Graswachstumskurven-mit-Ertrag_2025",
                 "external": true,
                 "status": 200
             },
@@ -220,13 +214,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
+            "description": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2025 Graswachstumskurven-mit-Ertrag_2024",
             "title": "Jahresauswertungen | graswachstum.ch",
+            "keywords": "graswachstumskurven-mit-ertrag_2025graswachstumskurven-mit-ertrag_2025,graswachstumskurven-mit-ertrag_2024,",
             "image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/growth\/years",
             "og:site_name": "graswachstum.ch",
             "og:title": "Jahresauswertungen | graswachstum.ch",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:description": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2025 Graswachstumskurven-mit-Ertrag_2024",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -234,12 +229,11 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "Jahresauswertungen | graswachstum.ch",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:description": "Graswachstumskurven-mit-Ertrag_2025Graswachstumskurven-mit-Ertrag_2025 Graswachstumskurven-mit-Ertrag_2024",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/growth\/years\/seomagic-image.jpg",
             "twitter:image:alt": "Jahresauswertungen | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "0 Minuten"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de\/growth\/years",
@@ -438,5 +432,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\/years\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth\/years]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth\/years HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 13:41:58 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Jahresauswertungen\r\n< grav-page-route: \/growth\/years\r\n< grav-page-rawroute: \/growth\/years\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 13:41:58 GMT\r\n* Added cookie grav-site-23a95d8=\"96344f561f9767126d50db4689d122bb\" for domain graswachstum.ch, path \/, expire 1762956718\n< set-cookie: grav-site-23a95d8=96344f561f9767126d50db4689d122bb; expires=Wed, 12-Nov-2025 14:11:58 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/growth\/years\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/growth\/years]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/growth\/years HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 13:43:17 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Jahresauswertungen\r\n< grav-page-route: \/growth\/years\r\n< grav-page-rawroute: \/growth\/years\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 13:43:17 GMT\r\n* Added cookie grav-site-23a95d8=\"03b03caf91bcbe5182502a17bf55644a\" for domain graswachstum.ch, path \/, expire 1762956797\n< set-cookie: grav-site-23a95d8=03b03caf91bcbe5182502a17bf55644a; expires=Wed, 12-Nov-2025 14:13:16 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

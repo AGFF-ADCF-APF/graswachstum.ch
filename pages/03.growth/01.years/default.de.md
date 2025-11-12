@@ -20,4 +20,5 @@ media_order: 'Graswachstumskurven-mit-Ertrag_2025.svg,Graswachstumskurven-mit-Er
 ---
 
 ![Graswachstumskurven-mit-Ertrag_2025](Graswachstumskurven-mit-Ertrag_2025.svg "Graswachstumskurven-mit-Ertrag_2025")
+
 ![Graswachstumskurven-mit-Ertrag_2024](Graswachstumskurven-mit-Ertrag_2024.svg "Graswachstumskurven-mit-Ertrag_2024")

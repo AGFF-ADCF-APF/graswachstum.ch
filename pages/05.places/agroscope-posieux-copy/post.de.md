@@ -16,7 +16,6 @@ shortcode-citation:
     reorder_uncited: true
 sitemap:
     lastmod: '20-03-2025 12:30'
-media_order: agroscopehochsvg-74812f10.png
 ---
 
 ## Agroscope Posieux

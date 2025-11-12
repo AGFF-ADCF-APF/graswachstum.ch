@@ -26,9 +26,10 @@ Methode: Herbometer
 
 ===
 
-Artikel über den Betrieb: https://idele.fr/detail-article/pas-de-trous-dans-lorganisation-de-la-ferme-du-borgeau
+### Artikel über den Betrieb
+https://idele.fr/detail-article/pas-de-trous-dans-lorganisation-de-la-ferme-du-borgeau
 
-Video über das Weidemanagement des Betriebes
+### Video über das Weidemanagement des Betriebes
 [plugin:youtube](https://www.youtube.com/watch?v=-vBdgs3OOOY)
 
 

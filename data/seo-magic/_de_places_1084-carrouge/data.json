@@ -4,26 +4,26 @@
         "page_rawroute": "\/places\/1084-carrouge",
         "page_title": "1084 Carrouge VD"
     },
-    "updated": 1762952157,
+    "updated": 1762952179,
     "response_headers": {
         "server": "nginx",
-        "date": "Wed, 12 Nov 2025 12:55:57 GMT",
+        "date": "Wed, 12 Nov 2025 12:56:19 GMT",
         "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "1084 Carrouge VD",
         "grav-page-route": "\/places\/1084-carrouge",
         "grav-page-rawroute": "\/places\/1084-carrouge",
         "cache-control": "max-age=604800",
-        "expires": "Wed, 19 Nov 2025 12:55:57 GMT",
+        "expires": "Wed, 19 Nov 2025 12:56:19 GMT",
         "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1762952157.575150966644287109375,
-        "total_time": 0.161938999999999999612754209010745398700237274169921875,
-        "namelookup_time": 0.000514000000000000025444923945627806460834108293056488037109375,
-        "connect_time": 0.00060300000000000002035871471406380806001834571361541748046875,
-        "pretransfer_time": 0.004400000000000000265065747129256124026142060756683349609375,
-        "starttransfer_time": 0.1614210000000000089226404043074580840766429901123046875,
+        "start_time": 1762952179.44979000091552734375,
+        "total_time": 0.1971880000000000021653789872289053164422512054443359375,
+        "namelookup_time": 0.0004040000000000000079762585425413590201060287654399871826171875,
+        "connect_time": 0.000491000000000000008486267244478540305863134562969207763671875,
+        "pretransfer_time": 0.00444600000000000029898306053155465633608400821685791015625,
+        "starttransfer_time": 0.1964789999999999869917388650719658471643924713134765625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 553,
         "request_size": 132,
         "redirect_count": 0,
-        "size_download": 7367,
-        "speed_download": 45492,
+        "size_download": 7326,
+        "speed_download": 37152,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,16 +41,16 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 38826
+        "content_size": 38683
     },
     "content": {
-        "body": "<h2>Ferme la Naz<\/h2>\n<p>H&ouml;he &uuml;.M.: 690\nKoordinaten: 46.60420, 6.78499\nWebseite:  Agroscope - Graswachstum\nMethode: Herbometer<\/p>",
+        "body": "<h2>Ferme de la Naz<\/h2>\n<p>H&ouml;he &uuml;.M.: 690\nKoordinaten: 46.60420, 6.78499\nWebseite:  Agroscope - Graswachstum\nMethode: Herbometer<\/p>",
         "headers": {
             "h1": [
                 "1084 Carrouge VD"
             ],
             "h2": [
-                "Ferme la Naz"
+                "Ferme de la Naz"
             ],
             "h3": [],
             "h4": [],
@@ -164,7 +164,7 @@
                 "external": false,
                 "status": 200
             },
-            "#ferme-la-naz": {
+            "#ferme-de-la-naz": {
                 "count": 1,
                 "target": "",
                 "rel": "",
@@ -228,14 +228,14 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "Agroscope Posieux H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer Agroscope misst seit dem Jahr 2000 das\u2026",
+            "description": "Ferme la Naz H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer",
             "title": "1084 Carrouge VD | graswachstum.ch",
-            "keywords": "posieux,agroscope,graswachstum,versuchsbetrieb,h\u00f6he,biobetrieb,misst,herbometer,weiden,webseite,",
+            "keywords": "\u00fc.m,koordinaten,46.60420,6.78499,webseite,agroscope,graswachstum,h\u00f6he,methode,ferme,",
             "image": "https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de\/places\/1084-carrouge",
             "og:site_name": "graswachstum.ch",
             "og:title": "1084 Carrouge VD | graswachstum.ch",
-            "og:description": "Agroscope Posieux H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer Agroscope misst seit dem Jahr 2000 das\u2026",
+            "og:description": "Ferme la Naz H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer",
             "og:type": "article",
             "og:image": "https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\/seomagic-image.jpg",
             "og:image:width": "1200",
@@ -243,7 +243,7 @@
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\/seomagic-image.jpg",
             "twitter:card": "summary_large_image",
             "twitter:title": "1084 Carrouge VD | graswachstum.ch",
-            "twitter:description": "Agroscope Posieux H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer Agroscope misst seit dem Jahr 2000 das\u2026",
+            "twitter:description": "Ferme la Naz H\u00f6he \u00fc.M.: 690 Koordinaten: 46.60420, 6.78499 Webseite: Agroscope - Graswachstum Methode: Herbometer",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\/seomagic-image.jpg",
             "twitter:image:alt": "1084 Carrouge VD | graswachstum.ch",
             "twitter:label1": "Est. reading time",
@@ -452,5 +452,5 @@
             }
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places\/1084-carrouge]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places\/1084-carrouge HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 12:55:57 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: 1084 Carrouge VD\r\n< grav-page-route: \/places\/1084-carrouge\r\n< grav-page-rawroute: \/places\/1084-carrouge\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 12:55:57 GMT\r\n* Added cookie grav-site-23a95d8=\"fc762e7f0f1f37ee4bc6998966a89c55\" for domain graswachstum.ch, path \/, expire 1762953957\n< set-cookie: grav-site-23a95d8=fc762e7f0f1f37ee4bc6998966a89c55; expires=Wed, 12-Nov-2025 13:25:57 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Oct 20 22:49:10 2025 GMT\n*  expire date: Jan 18 22:49:09 2026 GMT\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify result: unable to get local issuer certificate (20), continuing anyway.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/places\/1084-carrouge\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/places\/1084-carrouge]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/places\/1084-carrouge HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Wed, 12 Nov 2025 12:56:19 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: 1084 Carrouge VD\r\n< grav-page-route: \/places\/1084-carrouge\r\n< grav-page-rawroute: \/places\/1084-carrouge\r\n< cache-control: max-age=604800\r\n< expires: Wed, 19 Nov 2025 12:56:19 GMT\r\n* Added cookie grav-site-23a95d8=\"c09988f20c81fa0196bd0018d05310db\" for domain graswachstum.ch, path \/, expire 1762953979\n< set-cookie: grav-site-23a95d8=c09988f20c81fa0196bd0018d05310db; expires=Wed, 12-Nov-2025 13:26:19 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n* Connection #0 to host graswachstum.ch left intact\n"
 }

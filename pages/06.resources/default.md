@@ -45,7 +45,8 @@ feed:
 
 
 ## AGFF-Apps (BETA)
-!!!! Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
+[notice]Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
+[/notice] 
 
 * [Prototyp App Gehaltsbestimmung](https://graswachstum.ch/resources/agff-app-fodder-value/index.html)
 [qrcode]https://graswachstum.ch/resources/agff-app-fodder-value/index.html[/qrcode]

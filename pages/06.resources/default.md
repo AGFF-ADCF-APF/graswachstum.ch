@@ -48,7 +48,6 @@ feed:
 [notice]Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
 [/notice] 
 
-*
 
 [ui-accordion independent=true open=none]
 [ui-accordion-item title="App Futterwert bestimmen (AGFF Merkblatt 3)"]

@@ -17,20 +17,19 @@
         let futterWerte = {}; // Wird aus CSV geladen
         let aktuellesStadiumLabel = "Nicht bestimmt";
         let db, auth;
-        const PB_NEL = 3.14; // Produktionsbedarf NEL pro kg ECM (Seite 12) [cite: 259]
-        const PB_PROTEIN = 50; // Produktionsbedarf APDE/APDN pro kg ECM (Seite 12) [cite: 259]
+        const PB_NEL = 3.14; // Produktionsbedarf NEL pro kg ECM (Seite 12)
+        const PB_PROTEIN = 50; // Produktionsbedarf APDE/APDN pro kg ECM (Seite 12)
 
         // --- DATENLADEN & FIREBASE INIT ---
         document.addEventListener('DOMContentLoaded', () => {
             showLoading(true);
             
-            // NEU: Gespeicherte Werte aus localStorage laden
+            // Gespeicherte Werte aus localStorage laden
             try {
                 const gespeicherterName = localStorage.getItem('agffBeurteilerName');
                 if (gespeicherterName) {
                     document.getElementById('personName').value = gespeicherterName;
                 }
-                // Bonus: Dasselbe für die Proben-Nummer
                 const gespeicherteProbeNr = localStorage.getItem('agffProbenNr');
                 if (gespeicherteProbeNr) {
                     document.getElementById('probeNr').value = gespeicherteProbeNr;
@@ -51,10 +50,6 @@
 
         async function initializeFirebase() {
             try {
-                // Diese globalen Variablen werden von der Hosting-Umgebung (z.B. Canvas) bereitgestellt
-                //const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
-                //const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
-                
                 // 1. Fügen Sie hier Ihr firebaseConfig-Objekt von Firebase ein:
                 const firebaseConfig = {
                   apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
@@ -66,8 +61,7 @@
                 };
     
                 // 2. Setzen Sie eine eindeutige App-ID (wichtig für den DB-Pfad)
-                const appId = "agff-futter-app-public"; // Oder ein eigener Name
-                
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
             
                 const initialToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
@@ -75,7 +69,7 @@
                     const app = initializeApp(firebaseConfig);
                     auth = getAuth(app);
                     db = getFirestore(app);
-                    setLogLevel('debug'); 
+                    // setLogLevel('debug'); // (Optional: für Debugging)
 
                     // Anonym anmelden, wenn kein Token vorhanden ist
                     if (initialToken) {
@@ -117,11 +111,6 @@
 
         /**
          * Parst den CSV-Text und baut das `futterWerte`-Objekt auf.
-         * Diese Funktion ersetzt die alte `mergeData`-Funktion.
-         */
-/**
-         * Parst den CSV-Text und baut das `futterWerte`-Objekt auf.
-         * Diese Funktion ersetzt die alte `mergeData`-Funktion.
          */
         function parseCSV(csvText) {
             const lines = csvText.split('\n').filter(line => line.trim() !== '');
@@ -154,7 +143,7 @@
             const requiredCols = ['futterart', 'bestand', 'aufwuchs', 'stadium', 'nel', 'nev', 'apde', 'apdn'];
             for (const col of requiredCols) {
                 if (colIdx[col] === -1) {
-                    throw new Error(`Erforderliche Spalte "${col}" nicht in futterwerte.csv gefunden.`);
+                    throw new Error(`Erforderliche Spalte "${col}" nicht in futterwerte.csv gefunden. Gefundene Header: ${headers.join(', ')}`);
                 }
             }
 
@@ -173,9 +162,6 @@
                 let konservierung, aufwuchs;
 
                 // 1. Aufwuchs-Schlüssel (erster / folge)
-                // --- KORREKTUR HIER ---
-                // Wir prüfen, ob der Text 'erster' oder 'folge' ENTHÄLT,
-                // um "1. Aufwuchs" oder "Folgeaufwuchs" ebenfalls zu erfassen.
                 if (aufwuchsDE.includes('erster') || aufwuchsDE.startsWith('1')) {
                     aufwuchs = 'erster';
                 } else if (aufwuchsDE.includes('folge')) {
@@ -183,12 +169,11 @@
                 } else {
                     continue; // Zeile überspringen, wenn Aufwuchs unklar
                 }
-                // --- ENDE KORREKTUR ---
 
                 // 2. Konservierungs-Schlüssel (greenfeed / silage / hay)
-                if (futterartDE === 'grünfutter') konservierung = 'greenfeed';
-                else if (futterartDE === 'silage') konservierung = 'silage';
-                else if (futterartDE === 'dürrfutter') konservierung = 'hay';
+                if (futterartDE.startsWith('grünfutter')) konservierung = 'greenfeed';
+                else if (futterartDE.startsWith('silage')) konservierung = 'silage';
+                else if (futterartDE.startsWith('dürrfutter')) konservierung = 'hay';
                 else continue; // Zeile überspringen, wenn Futterart unklar
 
                 // 3. Bestand- & Stadium-Schlüssel
@@ -218,10 +203,9 @@
                     zucker: getVal(colIdx.zucker),
                     vos: getVal(colIdx.vos),
                     ra: getVal(colIdx.ra)
-                    // TSV wird jetzt dynamisch berechnet
                 };
             }
-            console.log("CSV-Daten erfolgreich verarbeitet und in futterWerte-Objekt umgewandelt.");
+            console.log("CSV-Daten erfolgreich verarbeitet.");
         }
 
 
@@ -233,7 +217,7 @@
                 radio.addEventListener('change', () => {
                     document.getElementById('step2-bestand').classList.remove('opacity-20', 'pointer-events-none');
                     
-                    // NEU: Steuerung der Lage-Anzeige
+                    // Steuerung der Lage-Anzeige
                     const lageWrapper = document.getElementById('step1-5-lage');
                     if (radio.value === 'folge') {
                         lageWrapper.classList.remove('hidden');
@@ -245,7 +229,7 @@
                 });
             });
 
-            // NEU: Schritt 1.5: Lage (Tal/Berg)
+            // Schritt 1.5: Lage (Tal/Berg)
             document.querySelectorAll('input[name="lage"]').forEach(radio => {
                 radio.addEventListener('change', () => {
                     const aufwuchs = document.querySelector('input[name="aufwuchs"]:checked')?.value;
@@ -265,7 +249,7 @@
                 checkAllInputs(); // Überprüft, ob Berechnungsbuttons freigeschaltet werden können
             });
             
-            // NEU: Schritt 2: Hilfe-Button Bestand
+            // Schritt 2: Hilfe-Button Bestand
             document.getElementById('bestandHelpToggle').addEventListener('click', (e) => {
                 e.preventDefault();
                 document.getElementById('bestandHelpContent').classList.toggle('hidden');
@@ -293,13 +277,33 @@
                 }
             });
             
-            // NEU: Schritt 3: Hilfe-Button im Stadium-Modal
+            // Schritt 3: Hilfe-Button im Stadium-Modal (Info-Link)
             document.getElementById('toggleStadiumHelp').addEventListener('click', (e) => {
+                e.preventDefault(); // Verhindert Springen
                 const content = document.getElementById('stadiumHelpContent');
-                const isHidden = content.classList.contains('hidden');
                 content.classList.toggle('hidden');
-                e.target.textContent = isHidden ? 'Hilfe ausblenden' : 'Hilfe zur Stadium-Bestimmung anzeigen';
             });
+            
+            // NEU: Schritt 3: Lightbox (Bilder-Popup) Event Listener
+            const lightbox = document.getElementById('imageLightbox');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const helpContent = document.getElementById('stadiumHelpContent');
+
+            // Klick auf Hilfebilder -> Popup öffnen
+            helpContent.addEventListener('click', (e) => {
+                // Prüfen, ob auf ein Bild (IMG) in einer Figure geklickt wurde
+                if (e.target.tagName === 'IMG' && e.target.closest('figure')) {
+                    lightboxImg.src = e.target.src; // Bildquelle setzen
+                    lightbox.classList.remove('hidden'); // Popup anzeigen
+                }
+            });
+
+            // Klick auf Popup -> Popup schließen
+            lightbox.addEventListener('click', () => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = ''; // Bildquelle zurücksetzen
+            });
+
 
             // Schritt 4: Berechnungsbuttons (ehemals 5)
             document.querySelectorAll('input[name="konservierung"]').forEach(radio => {
@@ -314,7 +318,7 @@
                 icon.classList.toggle('rotate-180');
             });
             
-            // Akkordeon (Datenquelle) - NEU HINZUGEFÜGT
+            // Akkordeon (Datenquelle)
             document.getElementById('data-accordion-toggle').addEventListener('click', () => {
                 const content = document.getElementById('data-accordion-content');
                 const icon = document.getElementById('data-accordion-icon');
@@ -332,7 +336,7 @@
                 });
             });
             
-            // NEU: Event Listeners, um Beurteiler und Proben-Nr. im localStorage zu speichern
+            // Event Listeners, um Beurteiler und Proben-Nr. im localStorage zu speichern
             document.getElementById('personName').addEventListener('input', (e) => {
                 try {
                     localStorage.setItem('agffBeurteilerName', e.target.value);
@@ -340,6 +344,14 @@
                     console.warn("Speichern im localStorage fehlgeschlagen:", e);
                 }
             });
+             document.getElementById('probeNr').addEventListener('input', (e) => {
+                try {
+                    localStorage.setItem('agffProbenNr', e.target.value);
+                } catch (e) {
+                    console.warn("Speichern im localStorage fehlgeschlagen:", e);
+                }
+            });
+
 
             // PDF- & Cloud-Speicher-Buttons
             document.getElementById('savePdfButton').addEventListener('click', handleSavePdf);
@@ -361,8 +373,8 @@
         }
 
         /**
-         * Ändert die Optionen im Stadium-Modal basierend auf der Aufwuchsart (S. 2 im Merkblatt)
-         * NEU: Berücksichtigt die Lage (Tal/Berg) beim Folgeaufwuchs
+         * Ändert die Optionen im Stadium-Modal basierend auf der Aufwuchsart
+         * Steuert den Info-Link
          */
         function updateStadiumModalOptions(aufwuchsart) {
             const container = document.getElementById('stadium-options');
@@ -371,20 +383,20 @@
             document.getElementById('openStadiumModal').dataset.selectedStadium = '';
             checkAllInputs();
             
-            // NEU: Modal-Hilfen steuern
-            const helpWrapper = document.getElementById('stadiumHelpWrapper');
+            // Modal-Hilfen (Info-Link) steuern
+            const helpToggle = document.getElementById('toggleStadiumHelp');
             const helpContent = document.getElementById('stadiumHelpContent');
+            helpContent.classList.add('hidden'); // Standardmässig einklappen
+            
             const subtitle = document.getElementById('stadiumModalSubtitle');
             subtitle.textContent = ""; // Subtitle zurücksetzen
 
-            // --- HIER EINFÜGEN (1/2) ---
             const hinweisContainer = document.getElementById('folgeHinweisContainer');
             hinweisContainer.innerHTML = ''; // Hinweis zurücksetzen
-            // --- ENDE EINFÜGUNG ---
 
             let options = [];
             if (aufwuchsart === 'erster') {
-                helpWrapper.classList.remove('hidden'); // Bild-Hilfe anzeigen
+                helpToggle.classList.remove('hidden'); // Info-Link anzeigen
                 
                 options = [
                     { val: '1', label: 'Stadium 1 (Bestockung / Beginn Schossen)' },
@@ -397,26 +409,21 @@
                 ];
                 document.getElementById('stadiumModalTitle').textContent = "Stadium 1. Aufwuchs (Leitpflanze)";
             } else { // 'folge'
-                helpWrapper.classList.add('hidden'); // Bild-Hilfe ausblenden
-                helpContent.classList.add('hidden');
-                document.getElementById('toggleStadiumHelp').textContent = 'Hilfe zur Stadium-Bestimmung anzeigen';
+                helpToggle.classList.add('hidden'); // Info-Link ausblenden
 
-                // --- HIER EINFÜGEN (2/2) ---
-                // NEU: Hinweis für Raigras bei Folgeaufwuchs
+                // Hinweis für Raigras bei Folgeaufwuchs
                 hinweisContainer.innerHTML = `
                     <div class="p-3 bg-yellow-50 text-yellow-800 text-sm rounded-lg border border-yellow-200">
                         <strong>Hinweis:</strong> Bei Wiesen mit einem hohen Anteil an italienischem Raigras oder Bastard-Raigras wird das Stadium anhand des Stadiums des Raigrases wie im ersten Aufwuchs bestimmt.
                     </div>
                 `;
-                // --- ENDE EINFÜGUNG ---
 
-                // NEUE LOGIK: Lage (Berg/Tal) prüfen 
+                // Logik: Lage (Berg/Tal) prüfen 
                 const lage = document.querySelector('input[name="lage"]:checked')?.value || 'tal'; // Standard auf Tal
                 
                 document.getElementById('stadiumModalTitle').textContent = "Stadium Folgeaufwuchs (Alter)";
                 
                 if (lage === 'tal') {
-                    // Logik aus index-old.html, basierend auf PDF 
                     subtitle.textContent = "Talgebiet (bis 600m) Sommeraufwüchse (Juli bis August).";
                     options = [
                         { val: '1', label: '3 Wochen (1 sehr früh)' },
@@ -427,14 +434,12 @@
                         { val: '6', label: '11+ Wochen (6 spät)' }
                     ];
                 } else { // 'berg'
-                    // Logik aus index-old.html, basierend auf PDF 
                     subtitle.textContent = "Berggebiet (über 600m) oder späte Tal-Aufwüchse (ab Sept.).";
                     options = [
                         { val: '1', label: '3-4 Wochen (1 sehr früh)' },
                         { val: '2', label: '5-7 Wochen (2 früh)' },
                         { val: '3', label: '8-9 Wochen (3 mittelfrüh)' },
                         { val: '4', label: '10+ Wochen (4 mittel)' }
-                        // Stadien 5-7 sind für Folgeaufwüchse (Berg) nicht vorgesehen
                     ];
                 }
             }
@@ -481,8 +486,6 @@
                 return;
             }
             
-            // NEU: Beim Folgeaufwuchs prüfen, ob das gewählte Stadium für die Daten existiert
-            // (z.B. Tal hat 5 Stadien, Berg nur 4)
             const basisWerteCheck = futterWerte[aufwuchs]?.[konservierung]?.[bestand];
             if (!basisWerteCheck || !basisWerteCheck[stadium]) {
                  console.error("Keine Daten für diese Kombination gefunden (z.B. Stadium 5 im Berggebiet):", aufwuchs, konservierung, bestand, stadium);
@@ -502,7 +505,6 @@
             resultWrapper.dataset.baseNev = basisWerte.nev;
             resultWrapper.dataset.baseApde = basisWerte.apde;
             resultWrapper.dataset.baseApdn = basisWerte.apdn;
-            // Alle zusätzlichen Werte speichern
             resultWrapper.dataset.baseRp = basisWerte.rp;
             resultWrapper.dataset.baseRf = basisWerte.rf;
             resultWrapper.dataset.baseNdf = basisWerte.ndf;
@@ -519,13 +521,11 @@
             generateCorrectionInputs(konservierung);
             
             // 2. Berechnung und Anzeige der (ggf. korrigierten) Werte
-            // Diese Funktion wird nun immer aufgerufen, auch wenn keine Korrekturen gewählt sind
             applyCorrections();
         }
 
         /**
          * Wendet Korrekturen an, berechnet den TSV dynamisch und berechnet das MPP neu.
-         * Wird bei "Berechnen" UND bei jeder Korrektur-/Parameter-Änderung aufgerufen.
          */
         function applyCorrections() {
             const resultWrapper = document.getElementById('result-wrapper');
@@ -534,7 +534,6 @@
                 nev: parseFloat(resultWrapper.dataset.baseNev),
                 apde: parseFloat(resultWrapper.dataset.baseApde),
                 apdn: parseFloat(resultWrapper.dataset.baseApdn),
-                // Zusätzliche Werte für die Anzeige
                 rp: parseFloat(resultWrapper.dataset.baseRp),
                 rf: parseFloat(resultWrapper.dataset.baseRf),
                 ndf: parseFloat(resultWrapper.dataset.baseNdf),
@@ -544,9 +543,7 @@
                 ra: parseFloat(resultWrapper.dataset.baseRa)
             };
             
-            // Prüfen, ob die Basiswerte gültig sind (relevant, falls applyCorrections nach einer ungültigen Auswahl aufgerufen wird)
             if (isNaN(basisWerte.nel) || basisWerte.nel === 0) {
-                // Verhindert NaN-Berechnungen, falls die Basiswerte leer sind
                 return; 
             }
 
@@ -564,13 +561,13 @@
             // 2. Effektive Nährwerte berechnen
             const effektiveWerte = {
                 nel: basisWerte.nel * korrFaktoren.nel,
-                nev: basisWerte.nev * korrFaktoren.nel, // NEV wird analog zu NEL korrigiert
+                nev: basisWerte.nev * korrFaktoren.nel, 
                 apde: basisWerte.apde * korrFaktoren.apde,
                 apdn: basisWerte.apdn * korrFaktoren.apdn
             };
 
-            // 3. TSV dynamisch berechnen (Basis 16kg @ 5.6 NEL, +/- 0.3kg pro 0.1 MJ NEL)
-            const nelAbweichung = (effektiveWerte.nel - 5.6) / 0.1; // Anzahl 0.1 MJ-Schritte
+            // 3. TSV dynamisch berechnen
+            const nelAbweichung = (effektiveWerte.nel - 5.6) / 0.1; 
             const automatischTSV = 16.0 + (nelAbweichung * 0.3);
 
             // 4. Manuelle TSV-Überschreibung prüfen
@@ -588,24 +585,19 @@
          * Berechnet das MPP basierend auf den effektiven Nährwerten und dem TSV.
          */
         function calculateMpp(effektiveWerte, tsv) {
-            // Parameter holen (Kuhgewicht)
             const kuhGewicht = parseFloat(document.getElementById('kuhgewicht').value) || 630;
             
-            // Erhaltungsbedarf dynamisch berechnen (Basis: Formeln aus Merkblatt S. 12, +10% Aktivität) [cite: 258, 260]
-            const EB_NEL = (0.293 * Math.pow(kuhGewicht, 0.75)) * 1.1; // +10% [cite: 260]
-            const EB_PROTEIN = (3.25 * Math.pow(kuhGewicht, 0.75)) * 1.1; // +10% [cite: 260]
+            const EB_NEL = (0.293 * Math.pow(kuhGewicht, 0.75)) * 1.1; 
+            const EB_PROTEIN = (3.25 * Math.pow(kuhGewicht, 0.75)) * 1.1; 
 
-            // Nährstoffaufnahme berechnen
             const aufnahmeNEL = effektiveWerte.nel * tsv;
             const aufnahmeAPDE = effektiveWerte.apde * tsv;
             const aufnahmeAPDN = effektiveWerte.apdn * tsv;
 
-            // Milchproduktionspotenzial (MPP) für jeden Nährstoff
-            const mppNEL = (aufnahmeNEL - EB_NEL) / PB_NEL; // [cite: 259]
-            const mppAPDE = (aufnahmeAPDE - EB_PROTEIN) / PB_PROTEIN; // [cite: 259]
-            const mppAPDN = (aufnahmeAPDN - EB_PROTEIN) / PB_PROTEIN; // [cite: 259]
+            const mppNEL = (aufnahmeNEL - EB_NEL) / PB_NEL; 
+            const mppAPDE = (aufnahmeAPDE - EB_PROTEIN) / PB_PROTEIN; 
+            const mppAPDN = (aufnahmeAPDN - EB_PROTEIN) / PB_PROTEIN; 
 
-            // Limitierenden Faktor finden
             const mpp = Math.max(0, Math.min(mppNEL, mppAPDE, mppAPDN));
             let limitierenderFaktor = "NEL";
             if (mppAPDE < mppNEL && mppAPDE < mppAPDN) limitierenderFaktor = "APDE";
@@ -622,11 +614,9 @@
         function displayResults(basis, korrigiert, tsv, autoTSV, mpp, limit, korrLabels) {
             const content = document.getElementById('result-content');
             
-            // Helper für die Tabellenzeilen
             const createRow = (label, basisVal, korrVal, einheit, bold = false) => {
                 const korrektur = korrVal - basisVal;
                 const korrText = korrektur === 0 ? '-' : (korrektur > 0 ? `+${korrektur.toFixed(2)}` : korrektur.toFixed(2));
-                // NEU: Werte für die getResultData() Hilfsfunktion in span-Elemente mit IDs packen
                 const basisText = isNaN(basisVal) ? '-' : basisVal.toFixed(2);
                 const effText = isNaN(korrVal) ? '-' : korrVal.toFixed(2);
                 const effId = `eff-${label.toLowerCase()}`;
@@ -641,7 +631,6 @@
                 </tr>`;
             };
 
-            // TSV-Anzeige (speziell, da es 'automatisch' vs 'effektiv' gibt)
             const tsvBasisText = autoTSV.toFixed(2);
             const tsvKorrektur = tsv - autoTSV;
             const tsvKorrText = tsvKorrektur.toFixed(0) === '0' ? '-' : (tsvKorrektur > 0 ? `+${tsvKorrektur.toFixed(2)}` : tsvKorrektur.toFixed(2));
@@ -708,23 +697,21 @@
         
         /**
          * Generiert die Checkboxen für die Korrekturen (Schritt 5)
-         * Basierend auf Merkblatt S. 5 [cite: 188, 192]
          */
         function generateCorrectionInputs(konservierung) {
             const container = document.getElementById('correction-inputs');
             container.innerHTML = '';
             const stepWrapper = document.getElementById('step5-corrections');
             
-            // Korrekturfaktoren (prozentual)
             const correctionFactors = {
-                silage: [ // [cite: 188]
+                silage: [ 
                     { id: "ts_low", label: "Trockensubstanz (TS) < 20%", nel: -0.01, apde: -0.06, apdn: 0 },
-                    { id: "ts_high", label: "Trockensubstanz (TS) > 50%", nel: -0.01, apde: 0.06, apdn: 0.05 }, // PDF hat +5% APDN
-                    { id: "gaer_bad", label: "Gärqualität fehlerhaft", nel: -0.02, apde: -0.06, apdn: -0.05 }, // PDF hat -5% APDN
-                    { id: "gaer_vbad", label: "Gärqualität schlecht", nel: -0.05, apde: -0.15, apdn: -0.12 }, // PDF hat -12% APDN
+                    { id: "ts_high", label: "Trockensubstanz (TS) > 50%", nel: -0.01, apde: 0.06, apdn: 0.05 },
+                    { id: "gaer_bad", label: "Gärqualität fehlerhaft", nel: -0.02, apde: -0.06, apdn: -0.05 },
+                    { id: "gaer_vbad", label: "Gärqualität schlecht", nel: -0.05, apde: -0.15, apdn: -0.12 },
                     { id: "nachgaer", label: "Nachgärung (leicht warm)", nel: -0.04, apde: -0.15, apdn: -0.03 }
                 ],
-                hay: [ // [cite: 192]
+                hay: [ 
                     { id: "boden", label: "Bodentrocknung", nel: -0.04, apde: -0.03, apdn: 0 },
                     { id: "regen_1", label: "Witterung: 1 Tag Regen", nel: -0.05, apde: -0.08, apdn: -0.02 },
                     { id: "regen_2", label: "Witterung: 2+ Tage Regen", nel: -0.08, apde: -0.15, apdn: -0.03 },
@@ -733,10 +720,9 @@
                 ]
             };
             
-            // Korrektur der Korrekturfaktoren gemäss PDF S. 5
-            correctionFactors.silage[1].apdn = 0.05; // TS > 50%
-            correctionFactors.silage[2].apdn = -0.05; // Gärqualität fehlerhaft
-            correctionFactors.silage[3].apdn = -0.12; // Gärqualität schlecht
+            correctionFactors.silage[1].apdn = 0.05; 
+            correctionFactors.silage[2].apdn = -0.05; 
+            correctionFactors.silage[3].apdn = -0.12; 
 
             const factors = correctionFactors[konservierung];
             if (!factors) {
@@ -777,13 +763,11 @@
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
 
-            // Zustand holen
             const formData = getFormData();
             const results = getResultData();
             
-            // Prüfen, ob Ergebnisse vorhanden sind
             if (!results || isNaN(results.mpp)) {
-                alert("Bitte führen Sie zuerst eine gültige Berechnung durch.");
+                console.warn("PDF: Bitte zuerst eine gültige Berechnung durchführen.");
                 return;
             }
 
@@ -830,7 +814,6 @@
             doc.setTextColor(0, 0, 0);
             doc.text(`Aufwuchs: ${formData.aufwuchsLabel}`, 25, y);
             y += 7;
-            // NEU: Lage (Tal/Berg) hinzufügen, falls Folgeaufwuchs
             if (formData.aufwuchs === 'folge') {
                 doc.text(`Lage: ${formData.lageLabel}`, 25, y);
                 y += 7;
@@ -860,7 +843,7 @@
                 doc.setTextColor(100, 100, 100);
                 y += 5;
                 doc.text(`(Manuell überschrieben. Automatisch berechneter TSV wäre: ${results.automatischTSV.toFixed(2)} kg TS)`, 25, y);
-                y += 3; // Ausgleich für kleinere Schriftgrösse
+                y += 3; 
             }
             
             y += 12;
@@ -874,7 +857,6 @@
             doc.setFont('helvetica', 'normal');
             doc.setFontSize(12);
             
-            // Manuelle Tabelle
             doc.setFont('helvetica', 'bold');
             doc.text('Parameter', 25, y);
             doc.text('Basis', 70, y, { align: 'right' });
@@ -945,7 +927,7 @@
          */
         async function handleSaveCloud() {
             if (!db || !auth.currentUser) {
-                alert("Cloud-Speicherung ist nicht initialisiert.");
+                console.warn("Cloud: Speicherung nicht initialisiert.");
                 return;
             }
 
@@ -953,12 +935,12 @@
             const results = getResultData();
             
             if (isNaN(results.mpp)) {
-                 alert("Bitte führen Sie zuerst eine gültige Berechnung durch.");
+                 console.warn("Cloud: Bitte zuerst Berechnung durchführen.");
                 return;
             }
 
             if (!formData.personName || !formData.probeNr) {
-                alert("Bitte geben Sie einen Namen und eine Proben-Nummer an, um in der Cloud zu speichern.");
+                console.warn("Cloud: Name oder Proben-Nr. fehlt.");
                 document.getElementById('personName').focus();
                 return;
             }
@@ -968,18 +950,16 @@
             saveButton.textContent = "Speichern...";
 
             try {
-                // Pfad: /artifacts/{appId}/public/data/{collection}
                 const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
                 const collectionPath = `artifacts/${appId}/public/data/futterproben`;
                 
                 const dataToSave = {
-                    // Eingaben
                     beurteiler: formData.personName,
                     probeNr: formData.probeNr,
                     aufwuchs: formData.aufwuchs,
                     aufwuchsLabel: formData.aufwuchsLabel,
-                    lage: formData.lage, // NEU
-                    lageLabel: formData.lageLabel, // NEU
+                    lage: formData.lage, 
+                    lageLabel: formData.lageLabel, 
                     bestand: formData.bestand,
                     bestandLabel: formData.bestandLabel,
                     stadium: formData.stadium,
@@ -988,10 +968,8 @@
                     konservierungLabel: formData.konservierungLabel,
                     kuhGewicht: formData.kuhGewicht,
                     
-                    // Korrekturen
                     angewendeteKorrekturen: formData.korrekturen,
 
-                    // Ergebnisse
                     mpp: results.mpp,
                     limitierenderFaktor: results.limit,
                     effektiverTSV: results.effektiverTSV,
@@ -1002,12 +980,10 @@
                     basisWerte: results.basis,
                     korrekturWerte: results.korr,
                     
-                    // Metadaten
                     erstelltAm: serverTimestamp(),
                     userId: auth.currentUser.uid
                 };
                 
-                // Entferne undefined/null Werte, falls 'lage' nicht gesetzt wurde
                 Object.keys(dataToSave).forEach(key => (dataToSave[key] === undefined || dataToSave[key] === null) && delete dataToSave[key]);
 
                 await addDoc(collection(db, collectionPath), dataToSave);
@@ -1025,7 +1001,6 @@
 
             } catch (error) {
                 console.error("Fehler beim Speichern in Firestore:", error);
-                alert("Fehler beim Speichern der Daten. Details siehe Konsole.");
                 saveButton.disabled = false;
                 saveButton.textContent = "In Cloud speichern";
             }
@@ -1038,7 +1013,7 @@
             const bestandSelect = document.getElementById('bestandestyp');
             const aufwuchsSelect = document.querySelector('input[name="aufwuchs"]:checked');
             const konservSelect = document.querySelector('input[name="konservierung"]:checked');
-            const lageSelect = document.querySelector('input[name="lage"]:checked'); // NEU
+            const lageSelect = document.querySelector('input[name="lage"]:checked'); 
             
             const korrekturen = [];
             document.querySelectorAll('#correction-inputs input:checked').forEach(cb => {
@@ -1050,8 +1025,8 @@
                 probeNr: document.getElementById('probeNr').value,
                 aufwuchs: aufwuchsSelect?.value,
                 aufwuchsLabel: aufwuchsSelect?.value === 'erster' ? '1. Aufwuchs' : 'Folgeaufwuchs',
-                lage: lageSelect?.value, // NEU (kann undefined sein)
-                lageLabel: lageSelect?.labels[0].textContent.trim(), // NEU (kann undefined sein)
+                lage: lageSelect?.value, 
+                lageLabel: lageSelect?.labels[0].textContent.trim(), 
                 bestand: bestandSelect.value,
                 bestandLabel: bestandSelect.options[bestandSelect.selectedIndex]?.text,
                 stadium: document.getElementById('openStadiumModal').dataset.selectedStadium,
@@ -1071,7 +1046,6 @@
             const basisNEL = parseFloat(resultWrapper.dataset.baseNel);
             const effNEL = parseFloat(document.getElementById('eff-nel')?.textContent || 0);
             
-            // TSV-Werte holen
             const automatischTSV = 16.0 + ((effNEL - 5.6) / 0.1 * 0.3);
             const tsvOverride = parseFloat(document.getElementById('tsvOverride').value);
             const effektiverTSV = isNaN(tsvOverride) || tsvOverride <= 0 ? automatischTSV : tsvOverride;
@@ -1079,9 +1053,8 @@
             const effAPDE = parseFloat(document.getElementById('eff-apde')?.textContent || 0);
             const effAPDN = parseFloat(document.getElementById('eff-apdn')?.textContent || 0);
             
-            // Verhindern, dass calculateMpp mit 0/NaN aufgerufen wird, wenn keine Berechnung stattgefunden hat
             if (isNaN(effNEL) || effNEL === 0) {
-                return { mpp: NaN }; // Signalisiert, dass keine Daten vorhanden sind
+                return { mpp: NaN }; 
             }
 
             const { mpp, limitierenderFaktor } = calculateMpp(
@@ -1124,7 +1097,6 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        /* Versteckt den Spinner bei number-Inputs */
         input[type='number']::-webkit-inner-spin-button,
         input[type='number']::-webkit-outer-spin-button {
             -webkit-appearance: none;
@@ -1132,6 +1104,16 @@
         }
         input[type='number'] {
             -moz-appearance: textfield;
+        }
+        
+        /* NEU: Styling für die Lightbox (Bilder-Popup) */
+        #imageLightbox {
+            transition: opacity 0.2s ease-in-out;
+        }
+        #lightboxImage {
+            transition: transform 0.2s ease-in-out;
+            max-width: 90vw;
+            max-height: 90vh;
         }
     </style>
 </head>
@@ -1159,16 +1141,14 @@
                             <h1 class="text-2xl font-semibold text-gray-800">Futterwert-Schätzung</h1>
                             
                             <div class="flex items-center text-sm text-gray-500">
-                                basierend auf der AGFF-Schätzmethode 
-                              
-                                <a href="https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition" target="_blank" rel="noopener noreferrer" class="ml-2 hover:text-blue-600 hover:underline">
-                                 www.eagff.ch
-                                </a> 
-                                 
+                                <a href="https://www.eagff.ch/wiesenpflanzen-kennen/graeser/entwicklungsstadien/einleitung-definition" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 hover:underline">
+                                    basierend auf AGFF Merkblatt Nr. 3
+                                </a>
+                                
                                 <a href="https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf" target="_blank" rel="noopener noreferrer" class="ml-2 transition-transform duration-150 ease-in-out hover:scale-110" title="AGFF-Merkblatt 3 als PDF öffnen"> 
                                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"  /> 
-                                    </svg> PDF
+                                    </svg>
                                 </a>
                             </div>
                             </div>
@@ -1180,6 +1160,7 @@
         <main class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
+                <!-- Linke Spalte -->
                 <div class="space-y-6">
                     
                     <div class="p-5 bg-white rounded-2xl shadow-lg space-y-4">
@@ -1193,8 +1174,6 @@
                             <input type="text" id="probeNr" placeholder="Wiese 3" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                         </div>
                     </div>
-                    
-                    
 
                     <div class="p-5 bg-white rounded-2xl shadow-lg">
                         <label class="text-lg font-semibold text-gray-700">Schritt 1: Aufwuchsart</label>
@@ -1239,11 +1218,11 @@
                             <p class="font-medium">Hilfe zur Einschätzung (gem. Merkblatt S. 1):</p>
                             <ul class="list-disc list-inside">
                                 <li><strong>G/GR (Gräserreich):</strong> > 70% Gräser </li>
-                                <li><strong>A/AR (Ausgewogen):</strong> 50-70% Gräser [cite: 26]</li>
-                                <li><strong>L (Leguminosenreich):</strong> > 50% Kleearten [cite: 29]</li>
-                                <li><strong>KF/KG (Kräuterreich):</strong> > 50% Kräuter [cite: 36]</li>
+                                <li><strong>A/AR (Ausgewogen):</strong> 50-70% Gräser</li>
+                                <li><strong>L (Leguminosenreich):</strong> > 50% Kleearten</li>
+                                <li><strong>KF/KG (Kräuterreich):</strong> > 50% Kräuter</li>
                             </ul>
-                            <p class="text-xs">Der Zusatz <strong>'R' (Raigräser)</strong> wird gewählt, wenn > 50% der Gräser Raigräser sind[cite: 32, 34].</p>
+                            <p class="text-xs">Der Zusatz <strong>'R' (Raigräser)</strong> wird gewählt, wenn > 50% der Gräser Raigräser sind.</p>
                         </div>
                         
                         <select id="bestandestyp" class="mt-4 w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
@@ -1277,13 +1256,13 @@
 
                             <input type="radio" name="konservierung" id="kons-silage" value="silage" data-label="Silage" class="sr-only peer/silage">
                             <label for="kons-silage" class="flex items-center justify-center p-4 rounded-lg cursor-pointer bg-blue-600 text-white font-semibold shadow-md hover:bg-blue-700 transition-all peer-checked/silage:ring-2 peer-checked/silage:ring-offset-2 peer-checked/silage:ring-blue-500">
-                              <span class="text-xl mr-2">🚜</span>
+                              <span class="text-xl mr-2">⚪</span>
                                 Silage Qualität berechnen
                             </label>
                             
                             <input type="radio" name="konservierung" id="kons-hay" value="hay" data-label="Dürrfutter" class="sr-only peer/hay">
                             <label for="kons-hay" class="flex items-center justify-center p-4 rounded-lg cursor-pointer bg-yellow-600 text-white font-semibold shadow-md hover:bg-yellow-700 transition-all peer-checked/hay:ring-2 peer-checked/hay:ring-offset-2 peer-checked/hay:ring-yellow-500">
-                              <span class="text-xl mr-2">🌾</span>
+                              <span class="text-xl mr-2">🟨</span>
 
                                 Dürrfutter Qualität berechnen
                             </label>
@@ -1291,6 +1270,7 @@
                     </div>
                 </div>
 
+                <!-- Rechte Spalte -->
                 <div class="space-y-6">
                     <div id="result-wrapper" class="p-5 bg-white rounded-2xl shadow-lg hidden"
                          data-base-nel="0" data-base-nev="0" data-base-apde="0" data-base-apdn="0"
@@ -1310,7 +1290,7 @@
                             <div>
                                 <label for="kuhgewicht" class="block text-sm font-medium text-gray-600 mb-1">Kuhgewicht (LG) in kg</label>
                                 <input type="number" id="kuhgewicht" value="630" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                                <p class="text-xs text-gray-500 mt-1">Standardwert gem. Merkblatt: 630 kg[cite: 257].</p>
+                                <p class="text-xs text-gray-500 mt-1">Standardwert gem. Merkblatt: 630 kg.</p>
                             </div>
                             <div>
                                 <label for="tsvOverride" class="block text-sm font-medium text-gray-600 mb-1">Futterverzehr (kg TS) überschreiben</label>
@@ -1375,64 +1355,73 @@
         </main>
     </div>
 
+    <!-- Stadium-Modal -->
     <div id="stadiumModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-40 p-4 hidden">
         <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+            
             <div class="flex justify-between items-center p-5 border-b">
-                <div>
-                    <h3 id="stadiumModalTitle" class="text-lg font-semibold text-gray-800">Stadium bestimmen</h3>
+                <div class="flex-1"> 
+                    <div class="flex justify-between items-start">
+                        <h3 id="stadiumModalTitle" class="text-lg font-semibold text-gray-800">Stadium bestimmen</h3>
+                        <!-- Info-Link (wie in Schritt 2) -->
+                        <button id="toggleStadiumHelp" class="ml-2 text-sm text-blue-600 hover:text-blue-800 focus:outline-none hidden flex-shrink-0">Info</button>
+                    </div>
                     <p id="stadiumModalSubtitle" class="text-sm text-gray-500 mt-1"></p>
                     
                     <div id="folgeHinweisContainer" class="mt-3"></div>
                 </div>
-                <button id="closeStadiumModal" class="text-gray-400 hover:text-gray-600">
+                <button id="closeStadiumModal" class="ml-4 text-gray-400 hover:text-gray-600 flex-shrink-0">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
             
-            <div id="stadiumHelpWrapper" class="p-5 border-b">
-                <button id="toggleStadiumHelp" class="w-full text-sm text-blue-600 hover:text-blue-800 focus:outline-none">
-                    Hilfe zur Stadium-Bestimmung anzeigen
-                </button>
-                <div id="stadiumHelpContent" class="hidden mt-4 space-y-3 max-h-[40vh] overflow-y-auto">
-                    <p class="text-sm text-gray-600">Bestimmen Sie das Stadium der Leitpflanze (Gräser) gemäss AGFF Merkblatt 3 (S. 1, 3-4).</p>
-                    
-                    <img src="stadien-uebersicht.webp" alt="Entwicklungsstadien 1-7 von Wiesengräsern" class="w-full rounded-lg border border-gray-200">
-                    
-                    <ul class="list-disc list-inside text-sm space-y-1">
-                         <li><strong>Stadium 1:</strong> Bestockung - Beginn Schossen [cite: 47]</li>
-                         <li><strong>Stadium 2:</strong> Schossen (Weidestadium, 10 cm-Punkt) [cite: 48]</li>
-                         <li><strong>Stadium 3:</strong> Beginn Rispenschieben (10% der Rispen sichtbar) [cite: 49, 50]</li>
-                         <li><strong>Stadium 4:</strong> Volles Rispenschieben (50% der Rispen sichtbar) [cite: 51, 52]</li>
-                         <li><strong>Stadium 5:</strong> Ende Rispenschieben (90% der Rispen sichtbar) [cite: 53, 54]</li>
-                         <li><strong>Stadium 6:</strong> Blüte (Staubbeutel auf allen Rispen sichtbar) [cite: 55]</li>
-                         <li><strong>Stadium 7:</strong> Samenreife [cite: 56]</li>
-                    </ul>
-                    <p class="text-sm text-gray-600 mt-2"><strong>Beispielbilder (Leitpflanzen):</strong></p>
-                    <div class="grid grid-cols-2 gap-2">
-                        <figure>
-                            <img src="knaulgras.webp" alt="Knaulgras Blüte (Std. 6)" class="w-full rounded border border-gray-200">
-                            <figcaption class="text-xs text-center text-gray-500 mt-1">Knaulgras </figcaption>
-                        </figure>
-                        <figure>
-                            <img src="rotklee.webp" alt="Rotklee Vollblüte (Std. 5)" class="w-full rounded border border-gray-200">
-                            <figcaption class="text-xs text-center text-gray-500 mt-1">Rotklee </figcaption>
-                        </figure>
-                        <figure>
-                             <img src="eng-raigras.webp" alt="Eng. Raigras Rispenschieben (Std. 3)" class="w-full rounded border border-gray-200">
-                            <figcaption class="text-xs text-center text-gray-500 mt-1">Eng. Raigras </figcaption>
-                        </figure>
-                        <figure>
-                             <img src="loewenzahn.webp" alt="Löwenzahn Samenstände (Std. 5)" class="w-full rounded border border-gray-200">
-                            <figcaption class="text-xs text-center text-gray-500 mt-1">Löwenzahn</figcaption>
-                        </figure>
-                    </div>
-                </div>
+            <div id="stadiumHelpContent" class="hidden p-5 border-b max-h-[40vh] overflow-y-auto">
+                <p class="text-sm text-gray-600">Bestimmen Sie das Stadium der Leitpflanze (Gräser) gemäss AGFF Merkblatt 3 (S. 1, 3-4).</p>
+                
+                <!-- NEU: cursor-pointer für Lightbox -->
+                <img src="stadien-uebersicht.webp" alt="Entwicklungsstadien 1-7 von Wiesengräsern" class="w-full rounded-lg border border-gray-200 mt-3 cursor-pointer">
+                
+                <ul class="list-disc list-inside text-sm space-y-1 mt-3">
+                     <li><strong>Stadium 1:</strong> Bestockung - Beginn Schossen</li>
+                     <li><strong>Stadium 2:</strong> Schossen (Weidestadium, 10 cm-Punkt)</li>
+                     <li><strong>Stadium 3:</strong> Beginn Rispenschieben (10% der Rispen sichtbar)</li>
+                     <li><strong>Stadium 4:</strong> Volles Rispenschieben (50% der Rispen sichtbar)</li>
+                     <li><strong>Stadium 5:</strong> Ende Rispenschieben (90% der Rispen sichtbar)</li>
+                     <li><strong>Stadium 6:</strong> Blüte (Staubbeutel auf allen Rispen sichtbar)</li>
+                     <li><strong>Stadium 7:</strong> Samenreife</li>
+                </ul>
+                <p class="text-sm text-gray-600 mt-2"><strong>Beispielbilder (Leitpflanzen):</strong></p>
+                
+                <!-- NEU: cursor-pointer für Lightbox -->
+                <div class="grid grid-cols-2 gap-2 mt-2">
+                    <figure>
+                        <img src="knaulgras.webp" alt="Knaulgras Blüte (Std. 6)" class="w-full rounded border border-gray-200 cursor-pointer">
+                        <figcaption class="text-xs text-center text-gray-500 mt-1">Knaulgras </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="rotklee.webp" alt="Rotklee Vollblüte (Std. 5)" class="w-full rounded border border-gray-200 cursor-pointer">
+                        <figcaption class="text-xs text-center text-gray-500 mt-1">Rotklee </figcaption>
+                    </figure>
+                    <figure>
+                         <img src="eng-raigras.webp" alt="Eng. Raigras Rispenschieben (Std. 3)" class="w-full rounded border border-gray-200 cursor-pointer">
+                        <figcaption class="text-xs text-center text-gray-500 mt-1">Eng. Raigras </figcaption>
+                    </figure>
+                    <figure>
+                         <img src="loewenzahn.webp" alt="Löwenzahn Samenstände (Std. 5)" class="w-full rounded border border-gray-200 cursor-pointer">
+                        <figcaption class="text-xs text-center text-gray-500 mt-1">Löwenzahn</figcaption>
+                    </figure>
                 </div>
             </div>
             
             <div id="stadium-options" class="p-5 space-y-2 max-h-[40vh] overflow-y-auto">
-                </div>
+                <!-- Inhalt wird von JS (updateStadiumModalOptions) generiert -->
+            </div>
         </div>
+    </div>
+    
+    <!-- NEU: Lightbox-Container (Bilder-Popup) -->
+    <div id="imageLightbox" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4 hidden cursor-pointer">
+        <img id="lightboxImage" src="" alt="Vergrösserte Ansicht" class="rounded-lg shadow-2xl">
     </div>
 
 </body>

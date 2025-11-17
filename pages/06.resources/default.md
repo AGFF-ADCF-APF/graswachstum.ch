@@ -41,10 +41,12 @@ feed:
 
 ## Graswachstum messen
 
-* [Github.com: R-Skript für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
+* [Github.com: R-Skripts für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
 
 
-## Apps (Prototyp-Stadium)
+## AGFF-Apps (BETA)
+!!!! Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
+
 * [Prototyp App Gehaltsbestimmung](https://graswachstum.ch/resources/agff-app-fodder-value/index.html)
 [qrcode]https://graswachstum.ch/resources/agff-app-fodder-value/index.html[/qrcode]
 

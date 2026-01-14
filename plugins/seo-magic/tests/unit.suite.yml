@@ -1,0 +1,5 @@
+suite_namespace: Unit
+actor: UnitTester
+modules:
+  enabled:
+    - Asserts

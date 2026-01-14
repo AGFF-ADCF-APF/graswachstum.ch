@@ -1,3 +1,15 @@
+# v5.3.0
+## 08/25/2025
+
+1. [](#new)
+    * Editor Pro (upcoming premium plugin) support for all core shortcodes
+
+# v5.2.1
+## 01/06/2025
+
+1. [](#improved)
+    * Updated to latest Shortcode library v0.7.6 with PHP 8.4 support
+
 # v5.2.0
 ## 06/02/2024
 

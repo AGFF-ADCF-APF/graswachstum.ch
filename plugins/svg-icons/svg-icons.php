@@ -55,6 +55,8 @@ class SVGIconsPlugin extends Plugin
      */
     public function onPluginsInitialized()
     {
+        $this->registerIconStreams();
+
         // Don't proceed if we are in the admin plugin
         if ($this->isAdmin()) {
             return;
@@ -65,17 +67,6 @@ class SVGIconsPlugin extends Plugin
             // Put your main events here
         ]);
 
-        /** @var UniformResourceLocator $locator */
-        $locator = $this->grav['locator'];
-        $icon_paths = [];
-
-        $custom_icon_path = $this->config->get('plugins.svg-icons.custom_icon_path');
-        if ($custom_icon_path) {
-            $icon_paths[] = $custom_icon_path;
-        }
-
-        $icon_paths[] = 'plugins://svg-icons/icons/';
-        $locator->addPath('svgicons', '', $icon_paths);
     }
 
     // Access plugin events in this class
@@ -109,6 +100,27 @@ class SVGIconsPlugin extends Plugin
     {
         $path = Grav::instance()['locator']->findResource('svgicons://' . $path, true);
         return TwigExtension::svgImageFunction($path, $classes);
+    }
+
+    protected function registerIconStreams(): void
+    {
+        /** @var UniformResourceLocator $locator */
+        $locator = $this->grav['locator'];
+
+        // Avoid re-registering paths if svgicons scheme already exists.
+        if (method_exists($locator, 'schemeExists') && $locator->schemeExists('svgicons')) {
+            return;
+        }
+
+        $icon_paths = [];
+
+        $custom_icon_path = $this->config->get('plugins.svg-icons.custom_icon_path');
+        if ($custom_icon_path) {
+            $icon_paths[] = $custom_icon_path;
+        }
+
+        $icon_paths[] = 'plugins://svg-icons/icons/';
+        $locator->addPath('svgicons', '', $icon_paths);
     }
 
 }

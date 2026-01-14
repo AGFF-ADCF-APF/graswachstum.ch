@@ -50,6 +50,9 @@ class SEOScore
         $this->metaScore();
         $this->headIconScore();
         $this->headCanonicalScore();
+        $this->headHreflangScore();
+        $this->headJsonLdScore();
+        $this->headOgImageQualityScore();
         $this->headLinksScore();
         $this->headScriptScore();
     }
@@ -120,7 +123,9 @@ class SEOScore
         
         $this->scores->set('items.head.items.meta.items.title', $this->lengthScore('head.meta.title', $this->lang->translate('PLUGIN_SEOMAGIC.METADATA_TITLE'), ['weight'=>5, 'min'=>7, 'max'=>60]));
         $this->scores->set('items.head.items.meta.items.description', $this->lengthScore('head.meta.description', $this->lang->translate('PLUGIN_SEOMAGIC.METADATA_DESCRIPTION'), ['weight'=>3, 'min'=>50, 'max'=>160, 'max_factor'=>.15, 'max_offset'=>123]));
-        $this->scores->set('items.head.items.meta.items.keywords', $this->itemsScore('head.meta.keywords', $this->lang->translate('PLUGIN_SEOMAGIC.METADATA_KEYWORDS'), ['weight'=>.5, 'min'=>5, 'max'=>10]));
+        // Drop meta keywords from contributing to score
+        $kw = $this->itemsScore('head.meta.keywords', $this->lang->translate('PLUGIN_SEOMAGIC.METADATA_KEYWORDS'), ['weight'=>0, 'min'=>5, 'max'=>10]);
+        $this->scores->set('items.head.items.meta.items.keywords', $kw);
 
         if ($this->data->get('head.meta.image')) {
             $msg = $this->lang->translate('PLUGIN_SEOMAGIC.META_SCORE_MSG_1');
@@ -185,14 +190,96 @@ class SEOScore
 
     protected function headCanonicalScore()
     {
-        $this->scores->set('items.head.items.icon.weight', .8);
+        $this->scores->set('items.head.items.canonical.weight', .8);
 
-        if ($this->data->get('head.canonical')) {
+        $config = \Grav\Common\Grav::instance()['config'];
+        $consider = (bool)$config->get('plugins.seo-magic.score.consider_injection', false);
+        $ok = (bool)$this->data->get('head.canonical');
+        if (!$ok) {
+            $ok = (bool)$this->data->get('head.meta.canonical');
+        }
+        if ($consider) {
+            $injectAlways = (bool)$config->get('plugins.seo-magic.inject.canonical_always', true);
+            $injectIfMissing = (bool)$config->get('plugins.seo-magic.inject.canonical_if_missing', true);
+            $missingFlag = (bool)$this->data->get('head.flags.missing_canonical');
+            $ok = $ok || $injectAlways || ($injectIfMissing && $missingFlag);
+        }
+
+        if ($ok) {
             $msg = $this->lang->translate('PLUGIN_SEOMAGIC.HEAD_CANONICAL_SCORE_MSG_1');
             $this->scores->set('items.head.items.canonical',  ['weight'=>1, 'score'=>100, 'msg'=>$msg]);
         } else {
             $msg = $this->lang->translate('PLUGIN_SEOMAGIC.HEAD_CANONICAL_SCORE_MSG_2');
             $this->scores->set('items.head.items.canonical', ['weight'=>.5, 'score'=>0, 'msg'=>$msg]);
+        }
+    }
+
+    protected function headHreflangScore()
+    {
+        $this->scores->set('items.head.items.hreflang.weight', .6);
+        $links = $this->data->get('head.links', []);
+        $alternates = 0;
+        foreach ($links as $href => $attrs) {
+            if (($attrs['rel'] ?? null) === 'alternate' && !empty($attrs['hreflang'])) {
+                $alternates++;
+            }
+        }
+        $config = \Grav\Common\Grav::instance()['config'];
+        $ok = $alternates > 0;
+        if ((bool)$config->get('plugins.seo-magic.score.consider_injection', false)) {
+            $injectAlways = (bool)$config->get('plugins.seo-magic.inject.hreflang_always', true);
+            $injectIfMissing = (bool)$config->get('plugins.seo-magic.inject.hreflang_if_missing', true);
+            $missingFlag = (bool)$this->data->get('head.flags.missing_hreflang');
+            $ok = $ok || $injectAlways || ($injectIfMissing && $missingFlag);
+        }
+
+        if ($ok) {
+            $msg = sprintf('Found %d hreflang alternates', $alternates);
+            $this->scores->set('items.head.items.hreflang', ['weight'=>1, 'score'=>100, 'msg'=>$msg]);
+        } else {
+            $msg = 'No hreflang alternates found; add <link rel="alternate" hreflang="…"> for translations';
+            $this->scores->set('items.head.items.hreflang', ['weight'=>.5, 'score'=>0, 'msg'=>$msg]);
+        }
+    }
+
+    protected function headJsonLdScore()
+    {
+        $this->scores->set('items.head.items.jsonld.weight', .5);
+        $scripts = $this->data->get('head.scripts', []);
+        $found = false;
+        foreach ($scripts as $key => $attrs) {
+            if (strtolower((string)($attrs['type'] ?? '')) === 'application/ld+json') { $found = true; break; }
+            if (strpos($key, 'inline:ldjson:') === 0) { $found = true; break; }
+        }
+        $config = \Grav\Common\Grav::instance()['config'];
+        $ok = $found;
+        if ((bool)$config->get('plugins.seo-magic.score.consider_injection', false)) {
+            $autoInject = (bool)$config->get('plugins.seo-magic.structured_data.enabled', true) && (bool)$config->get('plugins.seo-magic.structured_data.auto_inject', true);
+            $ok = $ok || $autoInject;
+        }
+        if ($ok) {
+            $this->scores->set('items.head.items.jsonld', ['weight'=>.5, 'score'=>100, 'msg'=>'Found JSON-LD structured data']);
+        } else {
+            $this->scores->set('items.head.items.jsonld', ['weight'=>.3, 'score'=>0, 'msg'=>'No JSON-LD found; enable Structured Data in SEO-Magic or theme']);
+        }
+    }
+
+    protected function headOgImageQualityScore()
+    {
+        $this->scores->set('items.head.items.ogimage.weight', .7);
+        $width = (int)($this->data->get('head.meta.og:image:width') ?? 0);
+        $height = (int)($this->data->get('head.meta.og:image:height') ?? 0);
+        $image = $this->data->get('head.meta.og:image') ?? $this->data->get('head.meta.image');
+        if (empty($image)) {
+            $this->scores->set('items.head.items.ogimage', ['weight'=>.5, 'score'=>0, 'msg'=>'No OpenGraph image found']);
+            return;
+        }
+        $okSize = ($width >= 1200 && $height >= 630);
+        if ($okSize) {
+            $this->scores->set('items.head.items.ogimage', ['weight'=>1, 'score'=>100, 'msg'=>sprintf('OG image size looks good (%dx%d)', $width, $height)]);
+        } else {
+            $msg = $width && $height ? sprintf('OG image is smaller than recommended (got %dx%d, want ≥1200x630)', $width, $height) : 'OG image width/height not provided';
+            $this->scores->set('items.head.items.ogimage', ['weight'=>.7, 'score'=>50, 'msg'=>$msg]);
         }
     }
 
@@ -406,7 +493,7 @@ class SEOScore
     protected function lengthScore($attribute, $name, $options)
     {
         $weight = $options['weight'] ?? 10;
-        $min = $otpions['min'] ?? 7;
+        $min = $options['min'] ?? 7;
         $max = $options['max'] ?? 20;
         $max_factor = $options['max_factor'] ?? (100 / (100 - $max));
         $max_offset = $options['max_offset'] ?? ($max_factor * 100);

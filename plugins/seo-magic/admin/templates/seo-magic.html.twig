@@ -1,0 +1,413 @@
+{% extends 'partials/base.html.twig' %}
+
+{# Build correct Admin base and page URL #}
+{% set admin_base = (admin.base is defined and admin.base) ? admin.base : '/admin' %}
+{% set dashboard_base = (base_url|slice(-6) == '/admin')
+  ? base_url ~ '/seo-magic'
+  : base_url ~ admin_base ~ '/seo-magic' %}
+
+{% block titlebar %}
+  <div class="button-bar">
+    <a class="button" href="{{ base_url }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMIN.BACK"|tu }}</a>
+    <div class="button-group" style="margin-left:.5rem;">
+      <button id="seomagic-reindex-full" class="button hx-btn" data-mode="full">
+        <i class="fa fa-magic icon-default"></i>
+        <i id="spin-full" class="fa fa-refresh fa-spin icon-spinner" aria-hidden="true"></i>
+        Re‑crawl
+      </button>
+      <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More crawl options">
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a id="seomagic-reindex-changed" class="button" href="#">Re‑crawl (changed)</a></li>
+      </ul>
+    </div>
+    <div class="button-group">
+      <button type="button" class="button" id="seomagic-export-csv"><i class="fa fa-table"></i> Export CSV</button>
+      <button type="button" class="button dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="More export options">
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="button" href="#" id="seomagic-export-json"><i class="fa fa-download"></i> Export JSON</a></li>
+      </ul>
+    </div>
+    <form id="seomagic-export-csv-form" method="post" action="{{ admin.adminRoute('/task.json') }}" style="display:none;">
+      <input type="hidden" name="task" value="exportSEOMagic" />
+      <input type="hidden" name="format" value="csv" />
+      <input type="hidden" name="admin-nonce" value="{{ admin.getNonce }}" />
+    </form>
+    <form id="seomagic-export-json-form" method="post" action="{{ admin.adminRoute('/task.json') }}" style="display:none;">
+      <input type="hidden" name="task" value="exportSEOMagic" />
+      <input type="hidden" name="format" value="json" />
+      <input type="hidden" name="admin-nonce" value="{{ admin.getNonce }}" />
+    </form>
+  </div>
+  <h1><i class="fa fa-chart-line"></i> SEO‑Magic Dashboard</h1>
+  <div id="seomagic-progress" class="seomagic-progress" style="display:none; margin:8px 0;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="flex:1; background:#eee; height:10px; border-radius:6px; overflow:hidden;">
+        <div id="seomagic-progress-bar" style="height:10px; width:0; background:#3B8AD9;"></div>
+      </div>
+      <span id="seomagic-progress-text" style="min-width:140px; text-align:right; font-size:90%; opacity:.8;">0 / 0</span>
+      <button id="seomagic-cancel" class="button danger hx-btn" style="display:none;">
+        <i class="fa fa-stop icon-default"></i>
+        <i id="spin-cancel" class="fa fa-refresh fa-spin icon-spinner" aria-hidden="true"></i>
+        Cancel
+      </button>
+    </div>
+    <div id="seomagic-progress-last" style="margin-top:4px; font-size:90%; opacity:.9;"></div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% include 'partials/seo-magic-dashboard.html.twig' %}
+
+  <script>
+  (function(){
+    var adminRoute = function(p){ return '{{ admin.adminRoute('/')|e('js') }}'.replace(/\/$/, '') + p; };
+    // No external dependency needed; we manage our own XHR + spinner
+    var nonce = '{{ admin.getNonce|e('js') }}';
+    function postTask(task, data, cb) {
+      data = data || {}; data.task = task; data['admin-nonce'] = nonce;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', adminRoute('/task.json'));
+      xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
+      xhr.onreadystatechange = function(){ if (xhr.readyState===4){ cb && cb(xhr); } };
+      var body = Object.keys(data).map(function(k){ return encodeURIComponent(k)+'='+encodeURIComponent(data[k]); }).join('&');
+      xhr.send(body);
+    }
+
+    function fmt(n){ return (n||0).toString(); }
+    var pollState = { running: false, everRan: false };
+    var activeBtn = null;
+    function refreshPartial(){
+      if (window.htmx) {
+        htmx.ajax('POST', adminRoute('/task.json'), { values: { task: 'SEOMagicPartial', 'admin-nonce': nonce }, target: '#seomagic-dashboard', swap: 'outerHTML' }).then(function(){ setTimeout(attachBehaviors, 0); });
+      } else {
+        postTask('SEOMagicPartial', {}, function(xhr){ if (xhr.status===200){ var el = document.getElementById('seomagic-dashboard'); if (el) { el.outerHTML = xhr.responseText; setTimeout(attachBehaviors, 0); } } });
+      }
+    }
+
+    function pollStatus(){
+      postTask('SEOMagicStatus', {}, function(xhr){
+        var ok = xhr.status===200; if (!ok) return;
+        var resp = {}; try{ resp = JSON.parse(xhr.responseText); }catch(e){}
+        var data = resp.data || {};
+        var wrap = document.getElementById('seomagic-progress');
+        var bar = document.getElementById('seomagic-progress-bar');
+        var txt = document.getElementById('seomagic-progress-text');
+        var last = document.getElementById('seomagic-progress-last');
+        var cancel = document.getElementById('seomagic-cancel');
+        var running = !!data.running;
+        wrap.style.display = running ? '' : 'none';
+        cancel.style.display = running ? '' : 'none';
+        if (running && activeBtn) { activeBtn.classList.add('busy'); activeBtn.setAttribute('disabled','disabled'); }
+        var total = data.total||0, done = data.processed||0; var pct = total>0? Math.round(done*100/total):0;
+        bar.style.width = pct+'%';
+        txt.textContent = fmt(done)+' / '+fmt(total)+' ('+pct+'%)' + (data.mode? ' — '+data.mode:'' );
+        if (data.last){ last.textContent = 'Last: ['+data.last.code+'] '+(data.last.route||'')+' '+(data.last.score? (data.last.score+'%'):''); }
+        // Determine if we should keep polling for a short grace period after starting
+        var grace = (Date.now() - pendingStartAt) < 6000; // 6s after user initiated
+        if (!running) {
+          if (pollState.running && (data.state==='done' || data.state==='error' || (done>=total && total>0))) {
+            stopPolling();
+            if (activeBtn) { activeBtn.classList.remove('busy'); activeBtn.removeAttribute('disabled'); activeBtn = null; }
+            setTimeout(function(){ refreshPartial(); }, 300);
+          } else if (!pollState.running && !grace) {
+            // idle and not within grace period — stop silently
+            stopPolling(); if (activeBtn) { activeBtn.classList.remove('busy'); activeBtn.removeAttribute('disabled'); activeBtn = null; }
+          }
+        }
+        pollState.running = running;
+      });
+    }
+
+    var interval = null;
+    var pendingStartAt = 0; // ms timestamp when we initiated a scan
+    function beginPolling(){
+      pendingStartAt = Date.now();
+      if (interval) return; interval = setInterval(pollStatus, 1200); pollStatus();
+    }
+    function stopPolling(){ if (!interval) return; clearInterval(interval); interval = null; }
+
+    function send(btn, task, data){
+      if (!btn) return;
+      activeBtn = btn;
+      btn.classList.add('busy'); btn.setAttribute('disabled','disabled');
+      postTask(task, data, function(){ /* keep spinner until polling completes via status */ });
+    }
+    document.getElementById('seomagic-reindex-full').addEventListener('click', function(){ beginPolling(); send(this, 'processSEOMagic', {mode:'full'}); });
+    document.getElementById('seomagic-reindex-changed').addEventListener('click', function(e){ e.preventDefault(); beginPolling(); var mainBtn = document.getElementById('seomagic-reindex-full'); send(mainBtn, 'processSEOMagic', {mode:'changed'}); });
+    document.getElementById('seomagic-cancel').addEventListener('click', function(){ send(this, 'SEOMagicCancel', {}); });
+
+    // kick once to restore any running state
+    pollStatus();
+
+    function attachBehaviors(){
+      var table = document.getElementById('seo-table');
+      if (!table) return;
+      var tbody = document.getElementById('seo-table-body');
+      var q = document.getElementById('filter-q');
+      var onlyBroken = document.getElementById('only-broken');
+      var langSel = document.getElementById('lang-filter');
+      var perPageSel = document.getElementById('per-page');
+      var prev = document.getElementById('prev');
+      var next = document.getElementById('next');
+      var pageInfo = document.getElementById('page-info');
+      var expCsvBtn = document.getElementById('seomagic-export-csv');
+      var expJsonBtn = document.getElementById('seomagic-export-json');
+
+      var state = {
+        page: parseInt(table.getAttribute('data-page') || '1', 10) || 1,
+        pages: parseInt(table.getAttribute('data-pages') || '1', 10) || 1,
+        per: perPageSel ? (parseInt(perPageSel.value, 10) || 25) : 25,
+        mode: table.getAttribute('data-mode') || 'all',
+        q: q ? q.value.trim() : '',
+        lang: langSel ? (langSel.value || '') : '',
+        sortKey: table.getAttribute('data-sort') || 'updated',
+        sortDir: table.getAttribute('data-dir') === 'asc' ? 'asc' : 'desc',
+        total: parseInt(table.getAttribute('data-total') || '0', 10) || 0
+      };
+      var pending = null;
+      var debounceTimer = null;
+      var loading = false;
+
+      function defaultDirFor(key){ return (key === 'title' || key === 'lang') ? 'asc' : 'desc'; }
+
+      function updateHeaderSort(){
+        var ths = table.querySelectorAll('thead th.sortable');
+        ths.forEach(function(th){
+          th.classList.remove('sorted-asc','sorted-desc');
+          if (th.getAttribute('data-sort') === state.sortKey) {
+            th.classList.add(state.sortDir === 'asc' ? 'sorted-asc' : 'sorted-desc');
+          }
+        });
+      }
+
+      function updatePageInfo(){
+        if (!pageInfo) return;
+        if (state.total > 0) {
+          pageInfo.textContent = 'Page ' + state.page + ' / ' + state.pages + ' — ' + state.total + ' rows';
+        } else {
+          pageInfo.textContent = 'No results';
+        }
+        if (prev) { prev.disabled = loading || state.page <= 1; }
+        if (next) { next.disabled = loading || state.page >= state.pages || state.total === 0; }
+      }
+
+      function setLoading(on){
+        loading = !!on;
+        if (loading) {
+          table.classList.add('is-loading');
+          table.setAttribute('aria-busy','true');
+        } else {
+          table.classList.remove('is-loading');
+          table.removeAttribute('aria-busy');
+        }
+        updatePageInfo();
+      }
+
+      function updateModeUI(){
+        ['metric-issues','metric-links','metric-images'].forEach(function(id){
+          var el = document.getElementById(id);
+          if (!el) return;
+          el.classList.remove('metric--active');
+          if ((id === 'metric-issues' && state.mode === 'issues') ||
+              (id === 'metric-links' && state.mode === 'links') ||
+              (id === 'metric-images' && state.mode === 'images')) {
+            el.classList.add('metric--active');
+          }
+        });
+        if (onlyBroken) {
+          if (!onlyBroken.disabled) {
+            onlyBroken.checked = (state.mode === 'links');
+          } else {
+            onlyBroken.checked = false;
+          }
+        }
+      }
+
+      function setTableMeta(meta){
+        state.page = Math.max(1, parseInt(meta.page, 10) || 1);
+        state.pages = Math.max(1, parseInt(meta.pages, 10) || 1);
+        state.total = parseInt(meta.total, 10) || 0;
+        state.sortKey = meta.sort || state.sortKey;
+        state.sortDir = meta.dir === 'asc' ? 'asc' : 'desc';
+        if (typeof meta.per_page !== 'undefined') {
+          state.per = parseInt(meta.per_page, 10) || state.per;
+          if (perPageSel) { perPageSel.value = String(state.per); }
+        }
+        if (typeof meta.mode === 'string' && meta.mode) {
+          state.mode = meta.mode;
+        }
+        if (typeof meta.query !== 'undefined' && q) {
+          state.q = meta.query;
+          q.value = meta.query;
+        }
+        if (typeof meta.lang !== 'undefined' && langSel) {
+          state.lang = meta.lang;
+          var found = false;
+          for (var i = 0; i < langSel.options.length; i++) {
+            if (langSel.options[i].value === meta.lang) { found = true; break; }
+          }
+          langSel.value = found ? meta.lang : '';
+        }
+        table.setAttribute('data-total', state.total);
+        table.setAttribute('data-page', state.page);
+        table.setAttribute('data-pages', state.pages);
+        table.setAttribute('data-sort', state.sortKey);
+        table.setAttribute('data-dir', state.sortDir);
+        table.setAttribute('data-mode', state.mode);
+      }
+
+      function fetchRows(){
+        if (!tbody) return;
+        if (pending) { pending.abort(); pending = null; }
+        var controller = new AbortController();
+        pending = controller;
+        var params = new URLSearchParams();
+        params.append('task','SEOMagicTable');
+        params.append('admin-nonce', nonce);
+        params.append('page', state.page);
+        params.append('per_page', state.per);
+        params.append('sort', state.sortKey);
+        params.append('dir', state.sortDir);
+        if (state.q) { params.append('q', state.q); }
+        if (state.lang) { params.append('lang', state.lang); }
+        if (state.mode && state.mode !== 'all') { params.append('mode', state.mode); }
+        setLoading(true);
+        fetch(adminRoute('/task.json'), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+          body: params.toString(),
+          signal: controller.signal
+        }).then(function(res){
+          if (!res.ok) { throw new Error('Failed to load table'); }
+          return res.json();
+        }).then(function(json){
+          if (!json || json.status !== 'success') { throw new Error('Invalid response'); }
+          tbody.innerHTML = json.html || '';
+          setTableMeta(json);
+          updateModeUI();
+          updateHeaderSort();
+          updatePageInfo();
+        }).catch(function(err){
+          if (err.name !== 'AbortError') { console.error(err); }
+        }).finally(function(){
+          if (pending === controller) { pending = null; }
+          setLoading(false);
+        });
+      }
+
+      function scheduleFetch(){
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(fetchRows, 180);
+      }
+
+      function setMode(mode){
+        mode = mode || 'all';
+        state.mode = mode;
+        state.page = 1;
+        updateModeUI();
+        fetchRows();
+      }
+
+      if (q) {
+        q.addEventListener('input', function(){
+          state.q = q.value.trim();
+          state.page = 1;
+          scheduleFetch();
+        });
+      }
+      if (onlyBroken) {
+        onlyBroken.addEventListener('change', function(){
+          if (onlyBroken.disabled) return;
+          setMode(onlyBroken.checked ? 'links' : 'all');
+        });
+      }
+      if (langSel) {
+        langSel.addEventListener('change', function(){
+          state.lang = langSel.value || '';
+          state.page = 1;
+          fetchRows();
+        });
+      }
+      if (perPageSel) {
+        perPageSel.addEventListener('change', function(){
+          state.per = parseInt(perPageSel.value, 10) || state.per;
+          state.page = 1;
+          fetchRows();
+        });
+      }
+      if (expCsvBtn) expCsvBtn.addEventListener('click', function(e){ e.preventDefault(); var f=document.getElementById('seomagic-export-csv-form'); if (f) f.submit(); });
+      if (expJsonBtn) expJsonBtn.addEventListener('click', function(e){ e.preventDefault(); var f=document.getElementById('seomagic-export-json-form'); if (f) f.submit(); });
+
+      var ths = table.querySelectorAll('thead th.sortable');
+      ths.forEach(function(th){
+        th.addEventListener('click', function(){
+          var key = th.getAttribute('data-sort');
+          if (!key) return;
+          if (state.sortKey === key) {
+            state.sortDir = (state.sortDir === 'asc') ? 'desc' : 'asc';
+          } else {
+            state.sortKey = key;
+            state.sortDir = defaultDirFor(key);
+          }
+          state.page = 1;
+          updateHeaderSort();
+          fetchRows();
+        });
+      });
+
+      if (prev) {
+        prev.addEventListener('click', function(){
+          if (state.page > 1) {
+            state.page -= 1;
+            fetchRows();
+          }
+        });
+      }
+      if (next) {
+        next.addEventListener('click', function(){
+          if (state.page < state.pages) {
+            state.page += 1;
+            fetchRows();
+          }
+        });
+      }
+
+      var mIssues = document.getElementById('metric-issues');
+      var mLinks = document.getElementById('metric-links');
+      var mImages = document.getElementById('metric-images');
+      if (mIssues) mIssues.addEventListener('click', function(){ setMode('issues'); });
+      if (mLinks && !mLinks.classList.contains('metric--disabled')) mLinks.addEventListener('click', function(){ setMode('links'); });
+      if (mImages && !mImages.classList.contains('metric--disabled')) mImages.addEventListener('click', function(){ setMode('images'); });
+
+      updateModeUI();
+      updateHeaderSort();
+      updatePageInfo();
+
+      try {
+        var issuesCount = parseInt(document.querySelector('#metric-issues .h1').textContent.trim()||'0',10);
+        if (issuesCount > 0 && state.mode === 'all') { setMode('issues'); }
+      } catch(e) {}
+    }
+
+    attachBehaviors();
+
+    // If QuickTray redirected here with ?start=full|changed, auto-start scan
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var start = params.get('start');
+      if (start === 'full' || start === 'changed') {
+        beginPolling();
+        var btn = document.getElementById(start === 'full' ? 'seomagic-reindex-full' : 'seomagic-reindex-changed');
+        send(btn, 'processSEOMagic', {mode: start});
+        // clean URL
+        var clean = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, document.title, clean);
+      }
+    } catch (e) {}
+  })();
+  </script>
+{% endblock %}

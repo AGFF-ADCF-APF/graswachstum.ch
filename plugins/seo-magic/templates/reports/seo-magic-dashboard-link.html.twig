@@ -1,0 +1,18 @@
+<div class="seomagic-report seomagic-report__padding">
+  <h2 style="margin-top:0;">SEO‑Magic Dashboard</h2>
+  <p>The full report has moved to the new Dashboard for better filtering and pagination.</p>
+  <p>
+    <a class="button" href="{{ dashboard_url }}"><i class="fa fa-chart-line"></i> Open Dashboard</a>
+  </p>
+  {% if summary.pages > 0 %}
+    <ul>
+      <li><strong>Pages:</strong> {{ summary.pages }}</li>
+      <li><strong>Average score:</strong> {{ summary.avg }}%</li>
+      <li><strong>Pages with broken links:</strong> {{ summary.broken_pages }}</li>
+      <li><strong>Total broken links:</strong> {{ summary.broken_links }}</li>
+    </ul>
+  {% else %}
+    <div class="alert warning">No data yet. Use the QuickTray magic wand to run a crawl.</div>
+  {% endif %}
+</div>
+

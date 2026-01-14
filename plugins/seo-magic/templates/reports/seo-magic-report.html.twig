@@ -1,6 +1,21 @@
 {% if seodata is empty %}
   <div class="alert warning"> No SEO Data found.  Please click the (<i class="fa fa-fw fa-magic"></i>) icon in the quicktray to <strong>generate the SEO-Magic data</strong></div>
 {% else %}
+<div class="button-bar" style="margin-bottom:10px; display:flex; gap:10px; align-items:center;">
+  <form method="post" action="{{ base_url_relative }}/admin/task.json" style="display:inline;">
+    <input type="hidden" name="task" value="exportSEOMagic"/>
+    <input type="hidden" name="format" value="json"/>
+    <button class="button"><i class="fa fa-download"></i> Export JSON</button>
+  </form>
+  <form method="post" action="{{ base_url_relative }}/admin/task.json" style="display:inline;">
+    <input type="hidden" name="task" value="exportSEOMagic"/>
+    <input type="hidden" name="format" value="csv"/>
+    <button class="button"><i class="fa fa-table"></i> Export CSV</button>
+  </form>
+  <label style="margin-left:auto;">
+    <input type="checkbox" id="seomagic-only-broken" /> Show only pages with broken links
+  </label>
+</div>
 <table class="regular-table seomagic-report">
   <thead>
   <tr>
@@ -12,7 +27,8 @@
   </thead>
   <tbody>
   {% for data in seodata %}
-  <tr>
+  {% set broken_link_count = data.broken_links|count %}
+  <tr data-broken="{{ broken_link_count > 0 ? '1' : '0' }}">
     <td class="total-score">
       <div class="percent seomagic-score__badge score-{{ just_grade(data.score.score)|lower }}">
         <span class="grade">{{ data.score.score }}%</span>
@@ -41,7 +57,6 @@
 
     </td>
     <td class="broken-links">
-      {% set broken_link_count = data.broken_links|count %}
       Found <strong>{{ data.total_links }}</strong> Links.
       {% if broken_link_count > 0 %}
         <strong>{{ broken_link_count }}</strong> of these are broken.
@@ -59,4 +74,19 @@
   {% endfor %}
   </tbody>
 </table>
+<script>
+(function(){
+  var cb = document.getElementById('seomagic-only-broken');
+  if (!cb) return;
+  function applyFilter(){
+    var only = cb.checked;
+    var rows = document.querySelectorAll('table.seomagic-report tbody tr');
+    rows.forEach(function(r){
+      var broken = r.getAttribute('data-broken') === '1';
+      r.style.display = (!only || broken) ? '' : 'none';
+    });
+  }
+  cb.addEventListener('change', applyFilter);
+})();
+</script>
 {% endif %}

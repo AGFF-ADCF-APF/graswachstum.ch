@@ -11,6 +11,8 @@ PLUGIN_SEOMAGIC:
   ENABLE_SEO_REPORT_HELP: "Displays an SEO-Magic report when editing a page"
   ENABLE_SITE_SEO_REPORT: "Enable Site-wide SEO Report"
   ENABLE_SITE_SEO_REPORT_HELP: "Displays the summary SEO report in the 'Tools -> Reports' page"
+  DETAILED_LOGGING: "Detailed Logging"
+  DETAILED_LOGGING_HELP: "When enabled, log additional diagnostic information for background scans (errors and warnings are always logged)."
   USER_AGENT_STRING: "User Agent String"
   USER_AGENT_STRING_HELP: "Used for the SEO-Magic data crawler"
   ROBOTS_STRING: "Robots String"
@@ -33,6 +35,14 @@ PLUGIN_SEOMAGIC:
   FACEBOOK_CARD_ENABLED: "Facebook Card Enabled"
   FACEBOOK_APP: "Facebook App"
   FACEBOOK_APP_HELP: "Find this in your Facebook Dashboard (https://developers.facebook.com/apps/redirect/dashboard)"
+  INJECT_CANONICAL_IF_MISSING: "Inject Canonical Link If Missing"
+  INJECT_CANONICAL_IF_MISSING_HELP: "When enabled, adds <link rel=\"canonical\"> if the last crawl detected it was missing."
+  INJECT_HREFLANG_IF_MISSING: "Inject Hreflang Links If Missing"
+  INJECT_HREFLANG_IF_MISSING_HELP: "When enabled, adds alternate hreflang links if the last crawl detected none and the page has translations."
+  INJECT_CANONICAL_ALWAYS: "Always Inject Canonical"
+  INJECT_CANONICAL_ALWAYS_HELP: "When enabled, always adds a canonical link using the page absolute URL."
+  INJECT_HREFLANG_ALWAYS: "Always Inject Hreflang"
+  INJECT_HREFLANG_ALWAYS_HELP: "When enabled, always injects alternate hreflang links for all available translations."
   META_IMAGES: "Meta Images"
   IMAGE_TYPE: "Image Type"
   IMAGE_TYPE_HELP: 'SEO Magic will fallback through the following image type list until an image is found: "Image Name" → "Image Attribut"e → "OG-Image" → "First image found in Page" → "Default URL"'
@@ -59,10 +69,36 @@ PLUGIN_SEOMAGIC:
   DEFAULT_IMAGE_HELP: "When using a \"Default Image URL\" for Image Type, this is the URL of the image to use"
   IMAGE_SIZE_X: "Image Size X"
   IMAGE_SIZE_Y: "Image Size Y"
+  STRUCTURED_DATA: "Structured Data"
+  STRUCTURED_DATA_ENABLED: "Structured Data Enabled"
+  STRUCTURED_ORG_ENABLED: "Organization JSON-LD Enabled"
+  STRUCTURED_ORG_NAME: "Organization Name"
+  STRUCTURED_ORG_LOGO: "Organization Logo"
+  STRUCTURED_ORG_SAMEAS: "Organization SameAs URLs"
+  STRUCTURED_WEBSITE_ENABLED: "Website JSON-LD Enabled"
+  STRUCTURED_WEBSITE_SEARCH_URL: "SearchAction Target URL"
+  STRUCTURED_WEBSITE_SEARCH_URL_HELP: "Use {query} placeholder, e.g., /search?q={query}"
+  STRUCTURED_AUTO_INJECT: "Automatically Inject JSON-LD"
+  STRUCTURED_AUTO_INJECT_HELP: "If disabled, use the Twig partial or function to render JSON-LD in your theme."
+  STRUCTURED_BREADCRUMB_ENABLED: "BreadcrumbList Enabled"
+  STRUCTURED_ARTICLE_ENABLED: "Article/BlogPosting Enabled"
+  STRUCTURED_PRODUCT_ENABLED: "Product Enabled (Optional)"
+  STRUCTURED_EVENT_ENABLED: "Event Enabled (Optional)"
+  SCORING: "Scoring"
+  SCORING_CONSIDER_INJECTION: "Consider Injection When Scoring"
+  SCORING_CONSIDER_INJECTION_HELP: "If enabled, canonical/hreflang/JSON‑LD checks pass when configured to be injected; otherwise, only explicit tags found by crawler count."
+  ALT_FIX: "Alt Text Fix"
+  ALT_FIX_AUTO: "Auto-Persist Missing Alts"
+  ALT_FIX_AUTO_HELP: "On save, create image .meta.yaml files for page images missing alt; sets alt using the selected strategy."
+  ALT_FIX_STRATEGY: "Alt Generation Strategy"
+  ALT_FIX_FILENAME: "From filename (title case)"
+  ALT_FIX_TITLE: "From page title"
   META_AUTOGENERATION: "Meta Auto-Generation"
   GLOBAL_KEYWORDS: "Global Keywords"
   GLOBAL_KEYWORDS_HELP: "A set of global keywords to be included before any auto-generated keywords"
   GENERATE_KEYWORDS: "Generate Keywords"
+  WRITE_KEYWORDS_META: "Write <meta name=\"keywords\">"
+  WRITE_KEYWORDS_META_HELP: "De-emphasize meta keywords by default. When enabled, writes the keywords meta tag if non-empty."
   GENERATE_DESC: "Generate Description"
   DESC_SUMMARIZATION: "Description Auto-Summarization"
   DESC_SUMMARIZATION_HELP: "How should the description be generated, either from the first content found on the page, or via a smart Textrank algorithm"
@@ -112,6 +148,8 @@ PLUGIN_SEOMAGIC:
   PAGE_URL: 'Page URL'
   PAGE_TITLE: 'Page Title'
   CANONICAL: 'Canonical'
+  LINKS: 'Links'
+  ITEMS: 'Items'
   CONTENT_HEADERS: 'Content Headers'
   CONTENT_LINKS: 'Content Links'
   CONTENT_ITEMS: 'Content Items'
@@ -168,6 +206,11 @@ PLUGIN_SEOMAGIC:
   TEXT: 'Text'
   HEADERS: 'Headers'
   TITLE: 'Title'
+  HREFLANG: 'Hreflang'
+  JSON_LD: 'JSON-LD'
+  'JSON-LD': 'JSON-LD'
+  OG_IMAGE: 'OG Image'
+  'OG IMAGE': 'OG Image'
   NO_LINKS_FOUND: 'No links found'
   SELECTED_BODY_TEXT: 'Seo-Magic Selected Body Text'
   SELECTED_BODY_TEXT_INFO: 'This is the body that is selected based on the <strong>Body selector</strong> configuration option.  It is used to determine automatically generate <strong>Metadata Keywords</strong> and <strong>Metadata Descriptions</strong>. The current <strong>Metadata Keywords</strong> are highlighted.'
@@ -255,6 +298,12 @@ PLUGIN_SEOMAGIC:
   LINK_MAX_RETRIES_HELP: "Number of times to retry a link that is broken or unreachable"
   LINK_CHECK_WHITELIST: "Whitelist URLs"
   LINK_CHECK_WHITELIST_HELP: "Ignore links for these URLs"
+  LINK_IGNORE_PATTERNS: "Link Ignore Patterns"
+  LINK_IGNORE_PATTERNS_HELP: "Regex or substring patterns to ignore when collecting/checking links (e.g., ^/admin, ?preview=1)"
+  LINK_RESPECT_ROBOTS: "Respect robots.txt"
+  LINK_RESPECT_ROBOTS_HELP: "When enabled, internal links matching Disallow rules for User-agent are ignored"
+  LINK_ROBOTS_UA: "Robots User-agent"
+  LINK_ROBOTS_UA_HELP: "User-agent name to match in robots.txt groups (e.g., * or SEO-Magic). Fallbacks to * if not found"
   ENABLE_IMAGE_CHECKER: "Enable Image Checker"
   ENABLE_IMAGE_CHECKER_HELP: "This will check ever image found on teh page to enture it's valid."
   AUTO_ORDER: "Automatic Ordering"

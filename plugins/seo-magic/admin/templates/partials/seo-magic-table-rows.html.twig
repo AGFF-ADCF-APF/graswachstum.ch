@@ -1,0 +1,39 @@
+{% set rows = rows ?? [] %}
+{% if rows is empty %}
+  <tr class="no-results">
+    <td colspan="4" style="text-align:center; padding:20px; color:#64748b;">No results match the current filters.</td>
+  </tr>
+{% else %}
+  {% for row in rows %}
+    {% set bcount = row.broken_links|length %}
+    {% set icount = row.broken_images|length %}
+    <tr data-title="{{ row.title|e }}" data-url="{{ row.url|e }}" data-lang="{{ row.lang|default('default') }}" data-updated="{{ row.updated|default(0) }}" data-score="{{ row.score.score|default(0) }}" data-total-links="{{ row.total_links|default(0) }}" data-broken="{{ bcount > 0 ? '1' : '0' }}" data-broken-links="{{ bcount }}" data-broken-images="{{ icount }}" data-issues="{{ (bcount > 0 or icount > 0) ? '1' : '0' }}">
+      <td class="total-score">
+        <div class="percent seomagic-score__badge score-{{ just_grade(row.score.score)|lower }}">
+          <span class="grade">{{ row.score.score }}%</span>
+        </div>
+      </td>
+      <td class="lang" style="white-space:nowrap; color:#64748b;">{{ row.lang|default('default') }}</td>
+      <td class="page-info truncate">
+        <a href="{{ admin_route('/pages' ~ row.rawroute) }}">
+          <strong>{{ row.title }}</strong>
+          <span>{{ parseurl(row.url, 5) }}</span>
+        </a>
+      </td>
+      <td class="broken-links">
+        Found <strong>{{ row.total_links }}</strong> Links.
+        {% if bcount > 0 %}
+          <strong>{{ bcount }}</strong> broken.
+          <ul>
+          {% for href, info in row.broken_links %}
+            <li><div><span class="code code__{{ info.status|first }}">{{ info.status }}</span> <code>{{ href }}</code></div>{% if info.message %}<div class="message">{{ info.message }}</div>{% endif %}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+        {% if icount > 0 %}
+          <div style="margin-top:6px;">Images: <strong>{{ icount }}</strong> broken.</div>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+{% endif %}

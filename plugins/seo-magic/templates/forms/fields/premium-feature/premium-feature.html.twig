@@ -7,11 +7,9 @@
 {% block group %}
 
   {% block stylesheets %}
-    {{ parent() }}
     {% do assets.addCss('plugin://' ~ field_path ~ '/premium-feature.css') %}
   {% endblock %}
   {% block javascripts %}
-    {{ parent() }}
     {% do assets.addJs('plugin://' ~ field_path ~ '/premium-feature.js', { group: 'bottom' }) %}
   {% endblock %}
 

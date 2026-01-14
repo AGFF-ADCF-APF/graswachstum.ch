@@ -1,3 +1,112 @@
+# v6.2.0
+## 11/27/2025
+
+1. [](#bugfix)
+   * Fixed problems with CLI `link-checker` command
+
+# v6.1.3
+## 11/17/2025
+
+1. [](#bugfix)
+   * Better handling for null pages
+
+# v6.1.2
+## 09/22/2025
+
+1. [](#bugfix)
+    * Better guards for canonical injection to only inject into HTML with `<head></head>` tags
+
+# v6.1.1
+## 09/22/2025
+
+1. [](#bugfix)
+    * More canonical injection fixes
+
+# v6.1.0
+## 09/20/2025
+
+1. [](#new)
+    * Generate a new pre-calculated report for reach page for memory and speed improvements
+1. [](#improved)
+    * Performance improvements for indexing
+    * More reliable indexing with large page counts
+1. [](#bugfix)
+    * Link and Image checking fixes
+
+# v6.0.2
+## 09/19/2025
+
+1. [](#bugfix)
+   * Resolved dashboard re-crawl stalls by detaching the background CLI process and syncing its environment with the admin poller so progress now runs through all pages
+
+# v6.0.1
+## 09/19/2025
+
+1. [](#bugfix)
+   * Fixed canonical functionality triggering `open_basedir` restriction
+   * Fixed error when links were null
+
+# v6.0.0
+## 09/15/2025
+
+1. [](#new)
+   * Added Admin SERP preview block with desktop/mobile widths in the page SEO report
+   * Added `og:image:alt` support (falls back to page title; override with `header.seo-magic.opengraph.image_alt`)
+   * Added `og:locale` hint derived from current language (e.g., `en_US`)
+   * New configuration toggle `write_keywords_meta` (default: disabled) to de‑emphasize `<meta name="keywords">`
+   * Structured Data (JSON‑LD): Organization, WebSite + SearchAction, BreadcrumbList, Article/BlogPosting (with toggles in Admin). Optional Product/Event toggles (off by default)
+   * Admin Dashboard at `/admin/seo-magic` with a modern summary UI (Pages, Avg Score, Pages with Issues, Broken Links, Broken Images, Trend)
+   * In-dashboard progress bar with live polling while a crawl is running (full or changed-only)
+   * New Admin tasks for progress + control: `taskSEOMagicStatus`, `taskSEOMagicCancel`, and `taskSEOMagicPartial` (HTML fragment swap)
+   * “Re‑crawl” split button with a dropdown action for “Re‑crawl (changed)”
+1. [](#improved)
+   * Hardened HTTP client defaults: TLS verification enabled by default with opt‑out `insecure_tls: false`
+   * Always inject a canonical link if missing (defaults to page absolute URL)
+   * Faster, more resilient crawling: falls back to enumerating routable/published Grav pages when JSON sitemap is unavailable
+   * Link checker concurrency and throttling tuned; internal/external batching with retries and backoff
+   * CLI commands rely on Grav bootstrap; removed redundant autoloading
+   * Multilingual: generates `<link rel="alternate" hreflang="…">` tags for translated routes (frontend)
+   * Multilingual: sets `og:locale` and `og:locale:alternate` from current and translated languages
+   * Multilingual: expanded TextRank stop‑words support (Dutch, Turkish)
+   * Admin: better defaults for brand‑new pages without SEO data (summary/keywords based on page content)
+   * Injection toggles: `inject.canonical_always`, `inject.canonical_if_missing`, `inject.hreflang_always`, `inject.hreflang_if_missing` (both "always" enabled by default)
+   * Crawl flags stored per page: `head.flags.missing_canonical`, `head.flags.missing_hreflang`, and `head.alternates`
+   * Scoring Model v2: dropped `meta keywords` from score; added checks for canonical, hreflang, JSON‑LD presence, and OG image quality; fixed canonical weighting
+   * Link checker: respects `robots.txt` Disallow for configured User‑agent (defaults to `*`), supports `link_ignore_patterns` filters
+   * Link checker: improved status messages (429/4xx/5xx) and clearer broken link summaries
+   * Site report: export buttons for JSON and CSV (CSV includes first broken link column) + filter to show only pages with broken links
+   * Scheduler integration: optional cron jobs to run crawl/link checker periodically
+   * Sitemap check: switched Admin validation to GET (more compatible than HEAD for JSON endpoints)
+   * AI‑Pro Integration (optional): Admin buttons to generate Title/Description using AI Pro default provider; results applied directly to form fields
+   * Partial HTML refresh of the dashboard on completion (no full page reload). Uses HTMX if present, otherwise a bundled lightweight `htmx-lite.js` fallback
+   * Metrics wording clarified: replaces ambiguous “Pages w/ Broken” with explicit “Pages with Issues”, plus separate counters for “Broken Links” and “Broken Images”
+   * Admin QuickTray “SEO‑Magic Process” redirects to the dashboard to provide a consistent progress view
+   * Better compatibility with mod_php: releases the PHP session lock before long crawls, enabling concurrent status polling
+   * Safer template rendering for Admin tasks by explicitly registering the plugin’s admin template path
+   * Added unit tests for scoring, metadata generation, and URL utilities (Codeception unit suite under `user/plugins/seo-magic/tests`)
+1. [](#bugfix)
+   * Fixed Admin route resolution by adding the plugin’s admin page stub (`admin/pages/seo-magic.md`) so `/admin/seo-magic` no longer 404s
+
+# v5.3.2
+## 05/10/2025
+
+1. [](#bugfix)
+    * More fixes for webshot issues on some servers - part 2
+
+# v5.3.1
+## 05/10/2025
+
+1. [](#bugfix)
+    * More fixes for webshot issues on some servers
+
+# v5.3.0
+## 05/10/2025
+
+1. [](#improved)
+   * Better PHP 8.4 support
+1. [](#bugfix)
+   * Fixed an issue with **webshot** not working properly on some servers
+
 # v5.2.1
 ## 03/08/2024
 

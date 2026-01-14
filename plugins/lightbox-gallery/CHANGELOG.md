@@ -1,3 +1,18 @@
+# v1.1.1
+## 11/23/2025
+
+1. [](#bugfix)
+    * Fixed some bad logic in the lightbox shortcode that was not properly detecting content vs image accurately and was fallign back to using full size image.
+
+# v1.1.0
+## 11/23/2025
+
+1. [](#new)
+    * Much improved shortcode support with parent/child `[lightbox-gallery]` → `[lightbox]` shortcodes (see docs for details)
+    * Editor-Pro support of new shortcodes for true WYSIWG editor
+1. [](#improved)
+   * Updated GLightbox to `v3.3.1`
+   
 # v1.0.6
 ## 08/24/2023
 

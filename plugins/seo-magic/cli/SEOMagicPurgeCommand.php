@@ -49,5 +49,7 @@ class SEOMagicPurgeCommand extends ConsoleCommand
         Folder::create($data_path);
 
         $io->success("Deleted all SEO Magic data in user-data://seo-magic folder");
+
+        return 0;
     }
 }

@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGFF Futterbewertung (Angereichert)</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐮</text></svg>">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     
@@ -11,7 +14,7 @@
         // Firebase SDKs
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, query, where, getDocs } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // --- GLOBALE VARIABLEN ---
         let futterWerte = {}; 
@@ -147,7 +150,7 @@
 
         function setupEventListeners() {
             document.querySelectorAll('input[name="aufwuchs"]').forEach(r => r.addEventListener('change', () => {
-                document.getElementById('step2-bestand').classList.remove('opacity-20', 'pointer-events-none');
+                document.getElementById('step2-bestand').classList.remove('opacity-50', 'pointer-events-none');
                 const lageWrapper = document.getElementById('step1-5-lage');
                 r.value === 'folge' ? lageWrapper.classList.remove('hidden') : lageWrapper.classList.add('hidden');
                 updateStadiumModalOptions(r.value);
@@ -160,7 +163,7 @@
 
             document.getElementById('bestandestyp').addEventListener('change', (e) => {
                 const step3 = document.getElementById('step3-stadium');
-                e.target.value ? step3.classList.remove('opacity-20', 'pointer-events-none') : step3.classList.add('opacity-20', 'pointer-events-none');
+                e.target.value ? step3.classList.remove('opacity-50', 'pointer-events-none') : step3.classList.add('opacity-50', 'pointer-events-none');
                 checkAllInputs();
             });
             
@@ -212,8 +215,10 @@
                 document.getElementById('data-accordion-icon').classList.toggle('rotate-180');
             });
 
-            ['kuhgewicht', 'tsvOverride'].forEach(id => {
-                document.getElementById(id).addEventListener('input', () => {
+            const paramIds = ['kuhgewicht', 'tsvOverride', 'check_ration_silage', 'check_ration_hay'];
+            paramIds.forEach(id => {
+                const el = document.getElementById(id);
+                if(el) el.addEventListener('input', () => {
                     if (!document.getElementById('result-wrapper').classList.contains('hidden')) applyCorrections();
                 });
             });
@@ -222,7 +227,26 @@
             document.getElementById('probeNr').addEventListener('input', (e) => localStorage.setItem('agffProbenNr', e.target.value));
 
             document.getElementById('savePdfButton').addEventListener('click', handleSavePdf);
+            
+            // --- NEU: Button-Logik für Dropdown und Speichern ---
             document.getElementById('saveCloudButton').addEventListener('click', handleSaveCloud);
+            document.getElementById('saveJsonButton').addEventListener('click', handleSaveJson);
+            
+            // Dropdown Toggle
+            const dropTrigger = document.getElementById('dropdownTrigger');
+            const dropMenu = document.getElementById('saveDropdownMenu');
+            
+            dropTrigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropMenu.classList.toggle('hidden');
+            });
+
+            // Schliessen wenn ausserhalb geklickt wird
+            document.addEventListener('click', (e) => {
+                if (!dropTrigger.contains(e.target) && !dropMenu.contains(e.target)) {
+                    dropMenu.classList.add('hidden');
+                }
+            });
         }
 
         function showLoading(isLoading) {
@@ -292,7 +316,7 @@
             const bestand = document.getElementById('bestandestyp').value;
             const stadium = document.getElementById('openStadiumModal').dataset.selectedStadium;
             const btns = document.getElementById('step4-calculate-buttons');
-            (aufwuchs && bestand && stadium) ? btns.classList.remove('opacity-20', 'pointer-events-none') : btns.classList.add('opacity-20', 'pointer-events-none');
+            (aufwuchs && bestand && stadium) ? btns.classList.remove('opacity-50', 'pointer-events-none') : btns.classList.add('opacity-50', 'pointer-events-none');
         }
 
         function calculateFutterQualitaet() {
@@ -319,6 +343,19 @@
             wrapper.classList.remove('hidden');
             document.getElementById('report-buttons').classList.remove('hidden');
             generateCorrectionInputs(konservierung);
+            
+            const checkSilage = document.getElementById('check_ration_silage');
+            const checkHay = document.getElementById('check_ration_hay');
+
+            if(checkSilage) checkSilage.checked = false;
+            if(checkHay) checkHay.checked = false;
+
+            if (konservierung === 'silage') {
+                if(checkSilage) checkSilage.checked = true;
+            } else if (konservierung === 'hay') {
+                if(checkHay) checkHay.checked = true;
+            }
+
             applyCorrections();
         }
 
@@ -343,9 +380,20 @@
                 factors.nel *= (1 + parseFloat(cb.dataset.nel));
                 factors.apde *= (1 + parseFloat(cb.dataset.apde));
                 factors.apdn *= (1 + parseFloat(cb.dataset.apdn));
-                tsvCorrectionsSum += parseFloat(cb.dataset.tsv || 0); // Summiere TSV-Korrekturen
+                tsvCorrectionsSum += parseFloat(cb.dataset.tsv || 0); 
                 labels.push(cb.dataset.label);
             });
+            
+            const rationSilage = document.getElementById('check_ration_silage');
+            if (rationSilage && rationSilage.checked) {
+                tsvCorrectionsSum += parseFloat(rationSilage.dataset.tsv);
+                labels.push("Ration: Hoher Silageanteil");
+            }
+            const rationHay = document.getElementById('check_ration_hay');
+            if (rationHay && rationHay.checked) {
+                tsvCorrectionsSum += parseFloat(rationHay.dataset.tsv);
+                labels.push("Technik: Fütterungsbeginn Heu");
+            }
 
             const eff = {
                 nel: base.nel * factors.nel,
@@ -354,18 +402,13 @@
                 apdn: base.apdn * factors.apdn
             };
 
-            // --- TSV BERECHNUNG (NEU: Inklusive manueller Checkbox-Korrekturen) ---
-            // Basis: 16kg. 
-            // Korrektur 1: Energie (+/- 0.3kg pro +/- 0.1 MJ NEL Abweichung von 5.6)
             const nelAbweichung = (eff.nel - 5.6) / 0.1;
             const tsvKorrEnergie = nelAbweichung * 0.3;
 
-            // Korrektur 2: Lebendgewicht (+/- 0.1kg TS pro +/- 10kg Abweichung von 650kg)
             const inputGewicht = parseFloat(document.getElementById('kuhgewicht').value) || 650;
             const gewichtAbweichung = (inputGewicht - 650) / 10;
             const tsvKorrGewicht = gewichtAbweichung * 0.1;
 
-            // Korrektur 3: Checkboxen (tsvCorrectionsSum)
             const automatischTSV = 16.0 + tsvKorrEnergie + tsvKorrGewicht + tsvCorrectionsSum;
 
             const override = parseFloat(document.getElementById('tsvOverride').value);
@@ -430,7 +473,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
                     ${[['Rohprotein',base.rp,'g/kg'],['Rohfaser',base.rf,'g/kg'],['NDF',base.ndf,'g/kg'],['ADF',base.adf,'g/kg'],['Zucker',base.zucker,'g/kg'],['vOS',base.vos,'%'],['Rohasche',base.ra,'g/kg']].map(x=>`<div class="p-2 bg-gray-50 rounded"><span class="font-medium">${x[0]}:</span> ${x[1].toFixed(0)} ${x[2]}</div>`).join('')}
                 </div>
-                ${labels.length?`<div class="mt-6"><h4 class="font-semibold text-gray-700">Angewendete Abzüge/Korrekturen:</h4><ul class="list-disc list-inside text-sm text-red-600 pl-2">${labels.map(l=>`<li>${l}</li>`).join('')}</ul></div>`:''}
+                ${labels.length?`<div class="mt-6"><h4 class="font-semibold text-gray-700">Angewendete Faktoren:</h4><ul class="list-disc list-inside text-sm text-red-600 pl-2">${labels.map(l=>`<li>${l}</li>`).join('')}</ul></div>`:''}
             `;
         }
 
@@ -445,18 +488,14 @@
                     { id: "ts_high", label: "TS > 50%", nel: -0.01, apde: 0.06, apdn: 0.05, tsv: 0 },
                     { id: "gaer_bad", label: "Gärqualität fehlerhaft", nel: -0.02, apde: -0.06, apdn: -0.05, tsv: -1.0 },
                     { id: "gaer_vbad", label: "Gärqualität schlecht", nel: -0.05, apde: -0.15, apdn: -0.12, tsv: -2.0 },
-                    { id: "nachgaer", label: "Nachgärung (leicht warm)", nel: -0.04, apde: -0.15, apdn: -0.03, tsv: -1.0 },
-                    // NEU: Rationsanteil Silage
-                    { id: "ration_silage_high", label: "Gesamtsilage in Ration > 3/4", nel: 0, apde: 0, apdn: 0, tsv: -1.0 }
+                    { id: "nachgaer", label: "Nachgärung (leicht warm)", nel: -0.04, apde: -0.15, apdn: -0.03, tsv: -1.0 }
                 ],
                 hay: [ 
                     { id: "boden", label: "Bodentrocknung", nel: -0.04, apde: -0.03, apdn: 0, tsv: 0 },
                     { id: "regen_1", label: "Witterung: 1 Tag Regen", nel: -0.05, apde: -0.08, apdn: -0.02, tsv: 0 },
                     { id: "regen_2", label: "Witterung: 2+ Tage Regen", nel: -0.08, apde: -0.15, apdn: -0.03, tsv: 0 },
                     { id: "ueber_leicht", label: "Überhitzung: leicht braun", nel: 0, apde: 0.03, apdn: 0, tsv: 0 },
-                    { id: "ueber_stark", label: "Überhitzung: braun/brandig", nel: -0.05, apde: -0.01, apdn: -0.02, tsv: 0 },
-                    // NEU: Fütterungsbeginn
-                    { id: "start_hay", label: "Fütterungsbeginn mit Heu/Emd", nel: 0, apde: 0, apdn: 0, tsv: 0.5 }
+                    { id: "ueber_stark", label: "Überhitzung: braun/brandig", nel: -0.05, apde: -0.01, apdn: -0.02, tsv: 0 }
                 ]
             };
             const list = map[konservierung];
@@ -504,25 +543,107 @@
             doc.save('Futterbericht.pdf');
         }
 
+        // --- NEU: JSON Download Funktion ---
+        async function handleSaveJson() {
+            const data = getResultData();
+            if (!data) {
+                alert("Bitte führen Sie zuerst eine Berechnung durch.");
+                return;
+            }
+            
+            const probeNr = document.getElementById('probeNr').value.trim();
+            if (!probeNr) {
+                alert("Bitte geben Sie eine Probenummer ein.");
+                document.getElementById('probeNr').focus();
+                return;
+            }
+            
+            const beurteiler = document.getElementById('personName').value;
+            
+            // Aktuelle Eingaben sammeln
+            const inputData = {
+                beurteiler: beurteiler,
+                probeNr: probeNr,
+                aufwuchs: document.querySelector('input[name="aufwuchs"]:checked')?.value,
+                bestand: document.getElementById('bestandestyp').value,
+                stadiumLabel: aktuellesStadiumLabel,
+                konservierung: document.querySelector('input[name="konservierung"]:checked')?.value,
+                kuhGewicht: document.getElementById('kuhgewicht').value,
+                tsvOverride: document.getElementById('tsvOverride').value
+            };
+            
+            // Gesamtdaten
+            const exportData = {
+                meta: {
+                    erstelltAm: new Date().toISOString(),
+                    app: "AGFF Futterbewertung"
+                },
+                eingaben: inputData,
+                ergebnisse: data
+            };
+            
+            // Download auslösen
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", `Futterwert_${probeNr.replace(/[^a-z0-9]/gi, '_')}.json`);
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+            
+            // Dropdown schließen
+            document.getElementById('saveDropdownMenu').classList.add('hidden');
+        }
+
         async function handleSaveCloud() {
             if (!db || !auth.currentUser) return;
             const data = getResultData();
             if(!data) return;
             const btn = document.getElementById('saveCloudButton');
             btn.textContent = "Speichern...";
+
+            // --- Check 1: Leeres Feld ---
+            const probeNr = document.getElementById('probeNr').value.trim();
+            if (!probeNr) {
+                alert("Bitte geben Sie eine Probenummer ein.");
+                document.getElementById('probeNr').focus();
+                btn.textContent = "In Cloud speichern";
+                btn.disabled = false;
+                return;
+            }
+
+            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+            const collectionPath = `artifacts/${appId}/public/data/futterproben`;
+            const collectionRef = collection(db, collectionPath);
+
             try {
+                // --- Check 2: Duplikat in Cloud ---
+                const q = query(collectionRef, where("probeNr", "==", probeNr));
+                const querySnapshot = await getDocs(q);
+                
+                if (!querySnapshot.empty) {
+                    alert("Eine Probe mit dieser Nummer existiert bereits. Bitte wählen Sie eine andere Probenummer.");
+                    btn.textContent = "In Cloud speichern";
+                    btn.disabled = false;
+                    return;
+                }
+
                 const payload = {
                     beurteiler: document.getElementById('personName').value,
-                    probeNr: document.getElementById('probeNr').value,
+                    probeNr: probeNr,
                     mpp: data.mpp,
                     tsv: data.tsv,
                     erstelltAm: serverTimestamp(),
                     userId: auth.currentUser.uid
                 };
-                await addDoc(collection(db, `artifacts/${typeof __app_id !== 'undefined' ? __app_id : 'default'}/public/data/futterproben`), payload);
+                await addDoc(collectionRef, payload);
                 btn.textContent = "Gespeichert!";
                 setTimeout(() => btn.textContent = "In Cloud speichern", 2000);
-            } catch (e) { console.error(e); btn.textContent = "Fehler"; }
+            } catch (e) { 
+                console.error(e); 
+                btn.textContent = "Fehler"; 
+                alert("Fehler beim Speichern: " + e.message);
+            }
         }
         
         function getResultData() {
@@ -577,7 +698,7 @@
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100 space-y-3">
                     <h2 class="font-semibold text-gray-700 border-b pb-2">Probe-Informationen</h2>
                     <input type="text" id="personName" placeholder="Name Beurteiler" class="w-full p-2 border rounded focus:ring-2 focus:ring-green-500 outline-none">
-                    <input type="text" id="probeNr" placeholder="Proben-Nr. / Schlag" class="w-full p-2 border rounded focus:ring-2 focus:ring-green-500 outline-none">
+                    <input type="text" id="probeNr" placeholder="Probenr. oder Betriebsnummer/Parzelle/Jahr/Schnitt" class="w-full p-2 border rounded focus:ring-2 focus:ring-green-500 outline-none">
                 </div>
 
                 <div class="bg-white p-5 rounded-xl shadow-sm border border-gray-100">
@@ -726,6 +847,19 @@
                             <input type="number" id="kuhgewicht" value="650" class="w-full p-2 border rounded focus:ring-green-500">
                             <p class="text-xs text-gray-500 mt-1">Standardwert gemäss Bild: 650 kg (±0.1 kg TS Verzehr pro 10 kg Differenz).</p>
                         </div>
+                        
+                        <div class="pt-2 border-t border-gray-100">
+                            <p class="text-sm font-medium text-gray-700 mb-2">Rationsgestaltung & Fütterung</p>
+                            <label class="flex items-center gap-2 mb-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                                <input type="checkbox" id="check_ration_silage" data-tsv="-1.0" class="text-green-600 rounded focus:ring-green-500">
+                                <span class="text-sm text-gray-600">Hoher Silageanteil in Ration (> 75%) <span class="text-xs text-red-500 font-bold ml-1">-1.0 kg TS</span></span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-1 rounded">
+                                <input type="checkbox" id="check_ration_hay" data-tsv="0.5" class="text-green-600 rounded focus:ring-green-500">
+                                <span class="text-sm text-gray-600">Fütterungsbeginn mit Heu/Emd <span class="text-xs text-green-600 font-bold ml-1">+0.5 kg TS</span></span>
+                            </label>
+                        </div>
+
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-1">Futterverzehr (kg TS) manuell überschreiben</label>
                             <input type="number" step="0.1" id="tsvOverride" placeholder="Automatisch berechnet" class="w-full p-2 border rounded focus:ring-green-500">
@@ -741,7 +875,23 @@
 
                 <div id="report-buttons" class="space-y-3 hidden">
                     <button id="savePdfButton" class="w-full py-3 bg-gray-700 text-white rounded font-bold hover:bg-gray-800 shadow">PDF Speichern</button>
-                    <button id="saveCloudButton" class="w-full py-3 bg-blue-600 text-white rounded font-bold hover:bg-blue-700 shadow">In Cloud Speichern</button>
+                    
+                    <div class="relative flex w-full shadow-md rounded">
+                        <button id="saveCloudButton" class="flex-1 py-3 bg-blue-600 text-white font-bold rounded-l hover:bg-blue-700 transition-colors">
+                            In Cloud speichern
+                        </button>
+                        <div class="w-px bg-blue-700"></div>
+                        <button id="dropdownTrigger" class="px-4 bg-blue-600 text-white rounded-r hover:bg-blue-700 transition-colors flex items-center justify-center">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        
+                        <div id="saveDropdownMenu" class="absolute right-0 top-full mt-1 w-64 bg-white border border-gray-200 rounded-lg shadow-xl z-50 hidden">
+                            <button id="saveJsonButton" class="w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-50 flex items-center text-sm">
+                                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Als JSON herunterladen
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 
                  <div class="bg-white rounded-xl shadow-sm border border-gray-100">

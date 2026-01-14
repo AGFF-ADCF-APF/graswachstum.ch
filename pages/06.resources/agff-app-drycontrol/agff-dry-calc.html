@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heutrocknungs-Planer Pro (Stricter Logic)</title>
+    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 24 24&#39; fill=&#39;none&#39; stroke=&#39;%233b82f6&#39; stroke-width=&#39;2&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39;&gt;&lt;path d=&#39;M17.7 17.7A2.5 2.5 0 1 0 21 15H4M6.3 6.3A2.5 2.5 0 1 0 3 9H20&#39;/&gt;&lt;path d=&#39;M12 12H2&#39;/&gt;&lt;/svg&gt;">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0"></script>
+
+    <style>
+        input[type=number] { -moz-appearance: textfield; appearance: textfield; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        
+        input:disabled { background-color: #f1f5f9; color: #94a3b8; cursor: not-allowed; }
+        .disabled-group { opacity: 0.6; pointer-events: none; filter: grayscale(100%); }
+        
+        /* Smooth Accordion */
+        .accordion-content { transition: max-height 0.3s ease-in-out; }
+        
+        /* Custom Slider Thumb */
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px; width: 20px;
+            border-radius: 50%;
+            background: #ffffff;
+            border: 2px solid currentColor;
+            cursor: pointer;
+            margin-top: -8px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%; height: 6px; cursor: pointer;
+            background: #cbd5e1; border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 p-4 md:p-6 lg:p-8">
+
+    <div class="max-w-7xl mx-auto"> 
+        <header class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+                <h1 class="text-4xl font-extrabold text-slate-900 flex items-center gap-3 tracking-tight">
+                    <i data-lucide="wind" class="text-blue-600 w-10 h-10"></i>
+                    Heutrocknungs-Planer
+                </h1>
+                <p class="text-slate-500 mt-2 text-lg">Simulation von Aufbereitung, Wasserentzug &amp; Trocknungsstrategie</p>
+            </div>
+            <div class="flex gap-6 text-sm text-slate-600 bg-white px-6 py-3 rounded-xl shadow-sm border border-slate-200">
+                 <div class="flex items-center gap-2">
+                    <i data-lucide="gauge" class="h-5 w-5 text-slate-400"></i>
+                    <span id="altitude-display" class="font-medium">600 m ü.M.</span>
+                 </div>
+                 <div class="w-px h-5 bg-slate-200"></div>
+                 <div class="font-medium" id="pressure-display">943 hPa</div>
+                 <div class="w-px h-5 bg-slate-200"></div>
+                 <div class="font-medium" id="density-display">1.17 kg/m³</div>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+            <div class="lg:col-span-4 space-y-6">
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-semibold text-slate-700 flex justify-between items-center">
+                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-500"></div> 1. Aussenluft (Start)</span>
+                        <button id="camera-scan-btn" class="text-slate-400 hover:text-blue-600 transition-colors bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm" title="Wetterdaten holen">
+                            <i data-lucide="camera" class="h-4 w-4"></i>
+                        </button>
+                    </div>
+                    <div class="p-6">
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-slate-700">
+                                    <i data-lucide="thermometer" class="h-5 w-5 text-blue-400"></i> Temperatur
+                                </label>
+                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="tIn-text" min="-10" max="45" step="0.5" value="20.0" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
+                                    <span class="text-slate-500 font-normal pr-3">°C</span>
+                                </div>
+                            </div>
+                            <input type="range" id="tIn-slider" min="-10" max="45" step="0.5" value="20" class="w-full text-blue-500">
+                            <p class="text-xs text-slate-400 mt-2">Aktuelle Lufttemperatur im Schatten.</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-slate-700">
+                                    <i data-lucide="droplets" class="h-5 w-5 text-blue-400"></i> Rel. Feuchte
+                                </label>
+                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="hIn-text" min="10" max="100" step="1" value="60" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
+                                    <span class="text-slate-500 font-normal pr-3">%</span>
+                                 </div>
+                            </div>
+                            <input type="range" id="hIn-slider" min="10" max="100" step="1" value="60" class="w-full text-blue-500">
+                            <p class="text-xs text-slate-400 mt-2">Maßgeblich für das Trocknungspotential.</p>
+                        </div>
+
+                        <div class="mt-4 pt-4 border-t border-slate-100">
+                            <button id="fetch-weather-btn" class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="map-pin" class="h-4 w-4"></i> Lokales Wetter laden
+                            </button>
+                            <span id="weather-status-message" class="block text-center text-xs text-slate-400 mt-1 h-4"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 rounded-2xl shadow-sm border border-amber-100 overflow-hidden relative group hover:shadow-md transition-shadow duration-300">
+                    <div class="absolute right-0 top-0 p-4 opacity-5 pointer-events-none">
+                        <i data-lucide="sun" class="h-32 w-32"></i>
+                    </div>
+                    <div class="bg-amber-100/60 px-6 py-4 border-b border-amber-200 font-semibold text-amber-900 flex justify-between items-center">
+                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-amber-500"></div> 2. Aufbereitung (Simulation)</span>
+                    </div>
+                    <div class="p-6 relative z-10">
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-amber-900">
+                                    <i data-lucide="zap" class="h-5 w-5 text-amber-600"></i> Anwärmung (+ΔT)
+                                </label>
+                                <div class="flex items-center gap-2 bg-white border border-amber-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="sim-heat-text" min="0" max="30" step="0.5" value="0.0" class="w-24 text-right font-bold text-amber-900 bg-transparent py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <span class="text-amber-700 font-normal pr-3">°C</span>
+                                </div>
+                            </div>
+                            <input type="range" id="sim-heat-slider" min="0" max="30" step="0.5" value="0" class="w-full text-amber-600 accent-amber-600">
+                            <p class="text-xs text-amber-800/70 mt-2">Dachabsaugung oder Heizofen. <br>3°C Erwärmung senkt die rF um ca. 15%.</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-amber-900">
+                                    <i data-lucide="droplet-off" class="h-5 w-5 text-blue-600"></i> Entfeuchter (-Δx)
+                                </label>
+                                <div class="flex items-center gap-2 bg-white border border-amber-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="sim-dry-text" min="0" max="10" step="0.1" value="0.0" class="w-24 text-right font-bold text-amber-900 bg-transparent py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <span class="text-amber-700 font-normal pr-3">g/kg</span>
+                                </div>
+                            </div>
+                            <input type="range" id="sim-dry-slider" min="0" max="10" step="0.1" value="0" class="w-full text-blue-600 accent-blue-600">
+                            <p class="text-xs text-amber-800/70 mt-2">Wasserentzug durch Kondensations-Entfeuchter.</p>
+                        </div>
+                        
+                        <div class="mt-4 pt-4 border-t border-amber-200 grid grid-cols-2 gap-4">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-amber-800 tracking-wider">Zustand vor Stock</span>
+                                <div class="font-bold text-xl text-amber-900 mt-1"><span id="res-cond-temp">--</span>°C</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs uppercase font-bold text-amber-800 tracking-wider">Luftfeuchte</span>
+                                <div class="font-bold text-xl text-amber-900 mt-1"><span id="res-cond-rh">--</span>% <span class="text-sm font-normal text-amber-700">rF</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden group hover:shadow-md transition-shadow duration-300">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-semibold text-slate-700 flex justify-between items-center">
+                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-emerald-500"></div> 3. Abluft (Stock-Austritt)</span>
+                        
+                        <div class="flex items-center gap-2 bg-white px-2 py-1 rounded-full border border-slate-200 shadow-sm">
+                            <label for="checkAdiabat" class="text-xs font-medium text-slate-600 cursor-pointer select-none pl-1">Adiabatisch</label>
+                            <input type="checkbox" id="checkAdiabat" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer">
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        
+                        <div class="mb-6" id="tOut-container">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-slate-700">
+                                    <i data-lucide="thermometer" class="h-5 w-5 text-red-400"></i> Temperatur
+                                </label>
+                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="tOut-text" min="0" max="50" step="0.1" value="20.0" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
+                                    <span class="text-slate-500 font-normal pr-3">°C</span>
+                                </div>
+                            </div>
+                            <input type="range" id="tOut-slider" min="0" max="50" step="0.1" value="20" class="w-full text-red-400 accent-red-500">
+                            <p class="text-xs text-slate-400 mt-2">Temperatur oben auf dem Heustock.</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="flex items-center gap-2 font-medium text-slate-700">
+                                    <i data-lucide="droplets" class="h-5 w-5 text-blue-400"></i> Rel. Feuchte
+                                </label>
+                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
+                                    <input type="number" id="hOut-text" min="10" max="100" step="1" value="60" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
+                                    <span class="text-slate-500 font-normal pr-3">%</span>
+                                </div>
+                            </div>
+                            <input type="range" id="hOut-slider" min="10" max="100" step="1" value="60" class="w-full text-blue-500">
+                            <p class="text-xs text-slate-400 mt-2">Das wichtigste Kriterium für den Trocknungsgrad.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <button id="params-toggle" class="w-full bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center hover:bg-slate-100 transition-colors">
+                        <span class="flex items-center gap-2"><i data-lucide="sliders" class="w-4 h-4"></i> 4. Anlagenparameter (Optional)</span>
+                        <i id="params-icon" data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transform transition-transform duration-300"></i>
+                    </button>
+                    
+                    <div id="params-content" class="hidden p-6 bg-slate-50/50 border-t border-slate-100">
+                        <div class="mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700">
+                                    <i data-lucide="mountain" class="h-4 w-4 text-slate-500"></i> Höhe über Meer
+                                </label>
+                                <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                                    <input type="number" id="altitude-text" value="600" step="10" class="w-20 text-right font-bold text-slate-900 bg-transparent py-2 px-2.5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                                    <span class="text-slate-500 font-normal pr-3">m</span>
+                                </div>
+                            </div>
+                            <input type="range" id="altitude-slider" min="0" max="2500" step="10" value="600" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-400">
+                        </div>
+                        
+                        <div class="mb-1">
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700">
+                                    <i data-lucide="wind" class="h-4 w-4 text-slate-500"></i> Luftmenge
+                                </label>
+                                <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
+                                    <input type="number" id="flowRate-text" value="10.0" step="0.5" class="w-20 text-right font-bold text-slate-900 bg-transparent py-2 px-2.5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                                    <span class="text-slate-500 font-normal pr-3">m³/s</span>
+                                </div>
+                            </div>
+                            <input type="range" id="flowRate-slider" min="0" max="100" step="0.5" value="10.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-400">
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+
+            <div id="results-column" class="lg:col-span-8 space-y-6">
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-5">
+                            <i data-lucide="droplets" class="w-16 h-16 text-blue-900"></i>
+                        </div>
+                        <div class="text-slate-500 text-xs uppercase font-bold tracking-wider mb-2">Wasserentzug</div>
+                        <div class="flex items-baseline gap-2">
+                             <span id="water-h" class="text-4xl font-extrabold text-slate-900">0.0</span>
+                             <span class="text-sm font-medium text-slate-400">kg/h</span>
+                        </div>
+                        <div class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded bg-blue-50 text-blue-700 text-xs font-semibold">
+                            <i data-lucide="scale" class="w-3 h-3"></i>
+                            <span id="water-m3">0.00</span> g pro m³ Luft
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-5">
+                            <i data-lucide="wheat" class="w-16 h-16 text-emerald-900"></i>
+                        </div>
+                        <div class="text-slate-500 text-xs uppercase font-bold tracking-wider mb-2">Heu Status (Prognose)</div>
+                        <div class="flex items-baseline gap-2">
+                             <span id="tm-value" class="text-4xl font-extrabold text-emerald-600">N/A</span>
+                             <span class="text-sm font-medium text-slate-400">% TS</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2 mt-4 overflow-hidden">
+                            <div id="tm-bar" class="bg-emerald-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="decision-box" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-center shadow-sm transition-all duration-300">
+                         <div class="flex items-center gap-3 mb-2">
+                             <div class="p-2 rounded-full bg-white/50 backdrop-blur-sm">
+                                <i id="decision-icon" data-lucide="info" class="h-6 w-6 text-slate-500"></i>
+                             </div>
+                             <span id="decision-title" class="font-bold text-lg text-slate-700">Status</span>
+                         </div>
+                         <div id="decision-text" class="text-sm text-slate-600 leading-snug pl-1">
+                             Bitte Werte eingeben.
+                         </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[550px]">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center">
+                        <span class="flex items-center gap-2"><i data-lucide="line-chart" class="w-4 h-4"></i> Trocknungspfad (h-x)</span>
+                        <div class="flex gap-4 text-xs font-medium">
+                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-sm"></div> Aussen</div>
+                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-sm"></div> Eintritt</div>
+                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm"></div> Austritt</div>
+                        </div>
+                    </div>
+                    <div class="p-4 flex-grow relative">
+                        <canvas id="absFeuchteChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center">
+                         <span class="flex items-center gap-2"><i data-lucide="clipboard-list" class="w-4 h-4"></i> Protokoll</span>
+                         <div class="space-x-2">
+                             <button id="save-measurement-btn" class="text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition-colors">Speichern</button>
+                             <button id="clear-history-btn" class="text-xs font-semibold bg-red-50 text-red-700 border border-red-200 px-3 py-1.5 rounded-lg hover:bg-red-100 transition-colors">Löschen</button>
+                         </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="h-48 w-full">
+                            <canvas id="historyChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
+        </div>
+    </div>
+
+    <script>
+    window.addEventListener('load', () => {
+
+        // --- HILFSFUNKTIONEN & PHYSIK ---
+
+        const getSatVapPressure = (temp) => {
+            if (temp >= 0) return 6.1078 * Math.exp((17.08085 * temp) / (234.175 + temp));
+            return 6.1078 * Math.exp((17.84362 * temp) / (245.425 + temp));
+        };
+        const getAirPressure = (altitude) => 1013.25 * Math.pow(1 - 2.25577e-5 * altitude, 5.25588);
+        
+        const getAbsHumidity = (temp, relHum, pressure) => {
+            const satPress = getSatVapPressure(temp);
+            const vapPress = satPress * (relHum / 100);
+            return (622 * vapPress) / (pressure - vapPress); // g/kg
+        };
+
+        const getRelHumidity = (temp, absHum_g_kg, pressure) => {
+             const satPress = getSatVapPressure(temp);
+             const vapPress = (absHum_g_kg * pressure) / (622 + absHum_g_kg);
+             let rh = (vapPress / satPress) * 100;
+             return Math.max(0, Math.min(100, rh));
+        };
+
+        const getAirDensity = (temp, pressure) => { 
+            const gasConstantDryAir = 287.05;
+            const tempK = temp + 273.15;
+            return (pressure * 100) / (gasConstantDryAir * tempK);
+        };
+
+        const getEnthalpy = (temp, x) => {
+            return (1.006 * temp) + (x * (2501 + 1.86 * temp) / 1000);
+        }
+
+        const solveTempForEnthalpy = (hZiel, rhZiel, pressure) => {
+            let tMin = -20; let tMax = 100; let tMid = 0;
+            for(let i=0; i<20; i++) {
+                tMid = (tMin + tMax) / 2;
+                let x = getAbsHumidity(tMid, rhZiel, pressure);
+                let hCurr = getEnthalpy(tMid, x);
+                if(hCurr < hZiel) tMin = tMid; else tMax = tMid;
+            }
+            return tMid;
+        }
+
+        // --- TS BERECHNUNG (Sorptionsisotherme) ---
+        const estimateTM = (hOut) => {
+            const points = [
+                {rh: 30, tm: 92}, {rh: 40, tm: 89}, {rh: 50, tm: 88},
+                {rh: 60, tm: 86.5}, {rh: 70, tm: 82}, {rh: 80, tm: 74},
+                {rh: 90, tm: 62}, {rh: 98, tm: 40}
+            ];
+
+            if (hOut <= points[0].rh) return points[0].tm.toFixed(1); 
+            if (hOut >= points[points.length - 1].rh) return points[points.length - 1].tm.toFixed(1); 
+            
+            let p1, p2;
+            for (let i = 0; i < points.length - 1; i++) {
+                if (hOut >= points[i].rh && hOut < points[i+1].rh) { 
+                    p1 = points[i]; p2 = points[i+1]; break; 
+                }
+            }
+            const res = p1.tm + (hOut - p1.rh) * (p2.tm - p1.tm) / (p2.rh - p1.rh);
+            return res.toFixed(1);
+        };
+
+        const generateRelHumidityCurve = (relHum, minTemp, maxTemp, pressure) => {
+            const curve = [];
+            for (let t = minTemp; t <= maxTemp; t += 1) { 
+                const absHum_g_kg = getAbsHumidity(t, relHum, pressure);
+                curve.push({ x: t, y: absHum_g_kg });
+            }
+            return curve;
+        };
+
+        // --- DOM ELEMENTE ---
+        const inputs = {
+            tIn: { slider: document.getElementById('tIn-slider'), text: document.getElementById('tIn-text') },
+            hIn: { slider: document.getElementById('hIn-slider'), text: document.getElementById('hIn-text') },
+            simHeat: { slider: document.getElementById('sim-heat-slider'), text: document.getElementById('sim-heat-text') },
+            simDry: { slider: document.getElementById('sim-dry-slider'), text: document.getElementById('sim-dry-text') },
+            tOut: { slider: document.getElementById('tOut-slider'), text: document.getElementById('tOut-text') },
+            hOut: { slider: document.getElementById('hOut-slider'), text: document.getElementById('hOut-text') },
+            altitude: { slider: document.getElementById('altitude-slider'), text: document.getElementById('altitude-text') },
+            flowRate: { slider: document.getElementById('flowRate-slider'), text: document.getElementById('flowRate-text') },
+            checkAdiabat: document.getElementById('checkAdiabat')
+        };
+
+        const outputs = {
+            resCondTemp: document.getElementById('res-cond-temp'),
+            resCondRh: document.getElementById('res-cond-rh'),
+            waterH: document.getElementById('water-h'),
+            waterM3: document.getElementById('water-m3'),
+            tmValue: document.getElementById('tm-value'),
+            tmBar: document.getElementById('tm-bar'),
+            decisionBox: document.getElementById('decision-box'),
+            decisionTitle: document.getElementById('decision-title'),
+            decisionText: document.getElementById('decision-text'),
+            decisionIcon: document.getElementById('decision-icon'),
+            tOutContainer: document.getElementById('tOut-container'),
+            headerInfo: {
+                alt: document.getElementById('altitude-display'),
+                press: document.getElementById('pressure-display'),
+                dens: document.getElementById('density-display')
+            }
+        };
+
+        // --- UI Logic Accordion ---
+        const paramsToggle = document.getElementById('params-toggle');
+        const paramsContent = document.getElementById('params-content');
+        const paramsIcon = document.getElementById('params-icon');
+
+        paramsToggle.addEventListener('click', () => {
+            paramsContent.classList.toggle('hidden');
+            if (paramsContent.classList.contains('hidden')) {
+                paramsIcon.style.transform = 'rotate(0deg)';
+            } else {
+                paramsIcon.style.transform = 'rotate(180deg)';
+            }
+        });
+
+        // --- CHART SETUP ---
+        const ctx = document.getElementById('absFeuchteChart').getContext('2d');
+        const absFeuchteChart = new Chart(ctx, {
+            type: 'line', 
+            data: {
+                datasets: [
+                    ...[100, 90, 80, 70, 60, 50, 40, 30, 20, 10].map((rh, i) => ({
+                        label: rh + '% rF', data: [], borderColor: rh === 100 ? 'rgba(59, 130, 246, 0.3)' : 'rgba(148, 163, 184, 0.2)',
+                        borderWidth: rh === 100 ? 2 : 1, pointRadius: 0, fill: false, tension: 0.3
+                    })),
+                    {
+                        label: 'Prozesspunkte', data: [], pointBackgroundColor: ['#3b82f6', '#f59e0b', '#10b981'],
+                        pointBorderColor: '#fff', pointRadius: 8, showLine: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const labels = ['1. Aussenluft', '2. Stock-Eintritt', '3. Stock-Austritt'];
+                                const p = ctx.raw;
+                                return `${labels[ctx.dataIndex] || ''}: ${p.x.toFixed(1)}°C, ${p.rh.toFixed(0)}% rF, ${p.y.toFixed(1)} g/kg`;
+                            }
+                        }
+                    },
+                    annotation: {
+                        annotations: {
+                            arrow1: { type: 'line', borderColor: '#f59e0b', borderWidth: 2, arrowHeads: { end: { display: true, fill: true } } },
+                            arrow2: { type: 'line', borderColor: '#10b981', borderWidth: 2, arrowHeads: { end: { display: true, fill: true } } }
+                        }
+                    }
+                },
+                scales: {
+                    x: { type: 'linear', min: -10, max: 55, title: { display: true, text: 'Temperatur (°C)' } },
+                    y: { min: 0, max: 25, title: { display: true, text: 'Abs. Feuchte (g/kg)' } }
+                }
+            }
+        });
+
+        // --- MAIN LOGIC ---
+        let isCalculating = false;
+
+        function calculateResults() {
+            if(isCalculating) return;
+            isCalculating = true;
+
+            const tIn = parseFloat(inputs.tIn.text.value);
+            const hIn = parseFloat(inputs.hIn.text.value);
+            const simHeat = parseFloat(inputs.simHeat.text.value);
+            const simDry = parseFloat(inputs.simDry.text.value);
+            const hOut = parseFloat(inputs.hOut.text.value);
+            const alt = parseFloat(inputs.altitude.text.value);
+            const flow = parseFloat(inputs.flowRate.text.value);
+            const isAdiabat = inputs.checkAdiabat.checked;
+
+            const press = getAirPressure(alt);
+            const dens = getAirDensity(tIn, press);
+
+            // 1. Aussen
+            const x1 = getAbsHumidity(tIn, hIn, press);
+
+            // 2. Eintritt
+            const t2 = tIn + simHeat;
+            const x2 = Math.max(0, x1 - simDry);
+            const h2 = getRelHumidity(t2, x2, press);
+            const enth2 = getEnthalpy(t2, x2);
+
+            // 3. Austritt
+            let tOut = parseFloat(inputs.tOut.text.value);
+            
+            if (isAdiabat) {
+                inputs.tOut.text.disabled = true;
+                inputs.tOut.slider.disabled = true;
+                outputs.tOutContainer.classList.add('disabled-group');
+                tOut = solveTempForEnthalpy(enth2, hOut, press);
+                inputs.tOut.text.value = tOut.toFixed(1);
+                inputs.tOut.slider.value = tOut.toFixed(1);
+            } else {
+                inputs.tOut.text.disabled = false;
+                inputs.tOut.slider.disabled = false;
+                outputs.tOutContainer.classList.remove('disabled-group');
+            }
+
+            const x3 = getAbsHumidity(tOut, hOut, press);
+
+            // Ergebnisse
+            const deltaX = x3 - x2; 
+            const waterPerM3 = deltaX * dens;
+            const waterTotal = (waterPerM3 / 1000) * flow * 3600;
+            const ts = estimateTM(hOut);
+
+            // STATUS LOGIK (VERSCHÄRFT)
+            let status = { color: 'bg-slate-50 border-slate-200', icon: 'info', title: 'Bereit / Standby', text: 'Momentan kein nennenswerter Wasserentzug.', iconColor: 'text-slate-400' };
+            
+            // 1. Rückbefeuchtung
+            if (deltaX < -0.1) {
+                 status = { color: 'bg-red-50 border-red-200', icon: 'alert-triangle', title: 'Rückbefeuchtung!', text: 'Achtung: Heu nimmt Wasser auf! Heizung einschalten oder stoppen.', iconColor: 'text-red-600' };
+            } 
+            // 2. Lagerfähig (Streng: <= 55%)
+            else if (hOut <= 55) {
+                 status = { color: 'bg-emerald-50 border-emerald-200', icon: 'check-circle', title: 'Heu ist Trocken', text: `Abluft sehr trocken (${hOut}%). Ziel erreicht (Lagerstabil).`, iconColor: 'text-emerald-600' };
+            } 
+            // 3. Endphase (55-65%)
+            else if (hOut <= 65) {
+                 status = { color: 'bg-lime-50 border-lime-200', icon: 'check', title: 'Endphase / Nahezu lagerfähig', text: `Werte sind gut (${hOut}%), aber Heu gibt noch Feuchte ab. Dranbleiben.`, iconColor: 'text-lime-600' };
+            } 
+            // 4. Intervall
+            else if (hIn > 85 && simHeat === 0 && hOut > 65) {
+                status = { color: 'bg-yellow-50 border-yellow-200', icon: 'fan', title: 'Intervallbelüftung', text: 'Aussenluft zu feucht zum Trocknen. Nur kühlen (Intervall), um Erwärmung zu vermeiden.', iconColor: 'text-yellow-600' };
+            }
+            // 5. Nass
+            else if (hOut > 85) {
+                 status = { color: 'bg-amber-50 border-amber-200', icon: 'cloud-rain', title: 'Heu ist Feucht', text: `Abluft fast gesättigt (${hOut}%).`, iconColor: 'text-amber-600' };
+            } 
+            // 6. Normalbetrieb (Trocknung > 65%)
+            else if (deltaX > 0.1) {
+                 status = { color: 'bg-blue-50 border-blue-200', icon: 'activity', title: 'Trocknung läuft', text: 'Wasser wird entzogen (Haupttrocknungsphase).', iconColor: 'text-blue-600' };
+            }
+            else {
+                 status = { color: 'bg-slate-50 border-slate-200', icon: 'minus-circle', title: 'Keine Trocknung', text: 'Gleichgewicht: Kein Wasserentzug (Delta ≈ 0g).', iconColor: 'text-slate-500' };
+            }
+
+            isCalculating = false;
+            return { p1: { x: tIn, y: x1, rh: hIn }, p2: { x: t2, y: x2, rh: h2, enth: enth2 }, p3: { x: tOut, y: x3, rh: hOut }, res: { waterPerM3, waterTotal, ts, dens, press }, status };
+        }
+
+        function updateUI() {
+            const data = calculateResults();
+            if(!data) return; 
+
+            outputs.headerInfo.alt.textContent = inputs.altitude.text.value + " m";
+            outputs.headerInfo.press.textContent = Math.round(data.res.press) + " hPa";
+            outputs.headerInfo.dens.textContent = data.res.dens.toFixed(2) + " kg/m³";
+
+            outputs.resCondTemp.textContent = data.p2.x.toFixed(1);
+            outputs.resCondRh.textContent = data.p2.rh.toFixed(0);
+
+            outputs.waterH.textContent = data.res.waterTotal.toFixed(1);
+            outputs.waterM3.textContent = data.res.waterPerM3.toFixed(2);
+            outputs.waterM3.className = `font-bold ${data.res.waterPerM3 > 0 ? 'text-blue-600' : 'text-red-500'}`;
+
+            outputs.tmValue.textContent = data.res.ts;
+            outputs.tmBar.style.width = Math.min(100, Math.max(0, (parseFloat(data.res.ts)-50)*2)) + "%";
+
+            // Status Box
+            outputs.decisionBox.className = `p-6 rounded-2xl border flex flex-col justify-center shadow-sm transition-all duration-300 ${data.status.color}`;
+            outputs.decisionTitle.textContent = data.status.title;
+            outputs.decisionTitle.className = `font-bold text-lg ${data.status.iconColor.replace('text-', 'text-slate-')}`; 
+            outputs.decisionTitle.style.color = ''; 
+            
+            outputs.decisionText.textContent = data.status.text;
+            outputs.decisionIcon.setAttribute('data-lucide', data.status.icon);
+            outputs.decisionIcon.className = `h-6 w-6 ${data.status.iconColor}`;
+            lucide.createIcons();
+
+            // Chart
+            const maxTemp = Math.max(50, data.p2.x + 5);
+            absFeuchteChart.options.scales.x.max = maxTemp;
+            for(let i=0; i<10; i++) {
+                absFeuchteChart.data.datasets[i].data = generateRelHumidityCurve(100 - i*10, -10, maxTemp, data.res.press);
+            }
+            absFeuchteChart.data.datasets[10].data = [data.p1, data.p2, data.p3];
+            
+            const ann = absFeuchteChart.options.plugins.annotation.annotations;
+            ann.arrow1.xMin = data.p1.x; ann.arrow1.yMin = data.p1.y; ann.arrow1.xMax = data.p2.x; ann.arrow1.yMax = data.p2.y;
+            ann.arrow2.xMin = data.p2.x; ann.arrow2.yMin = data.p2.y; ann.arrow2.xMax = data.p3.x; ann.arrow2.yMax = data.p3.y;
+
+            absFeuchteChart.update();
+        }
+
+        // --- HISTORY CHART ---
+        const hCtx = document.getElementById('historyChart').getContext('2d');
+        const historyChart = new Chart(hCtx, {
+            type: 'line', data: { labels: [], datasets: [{ label: 'Entzug (kg/h)', data: [], borderColor: '#10b981', tension: 0.1, fill: true, backgroundColor: 'rgba(16, 185, 129, 0.1)' }] },
+            options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } }, plugins: { legend: { display: false } } }
+        });
+
+        document.getElementById('save-measurement-btn').addEventListener('click', () => {
+            const res = calculateResults().res;
+            const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+            historyChart.data.labels.push(time);
+            historyChart.data.datasets[0].data.push(res.waterTotal);
+            if(historyChart.data.labels.length > 20) { historyChart.data.labels.shift(); historyChart.data.datasets[0].data.shift(); }
+            historyChart.update();
+        });
+        document.getElementById('clear-history-btn').addEventListener('click', () => {
+            historyChart.data.labels = []; historyChart.data.datasets[0].data = []; historyChart.update();
+        });
+
+        // --- EVENT BINDING ---
+        Object.values(inputs).forEach(grp => {
+            if(grp.slider) {
+                const update = () => {
+                    grp.text.value = parseFloat(grp.slider.value).toFixed(grp.slider.step.includes('.') ? 1 : 0);
+                    updateUI();
+                };
+                grp.slider.addEventListener('input', update);
+                grp.text.addEventListener('change', () => { grp.slider.value = grp.text.value; updateUI(); });
+            }
+        });
+
+        inputs.checkAdiabat.addEventListener('change', updateUI);
+
+        document.getElementById('camera-scan-btn').addEventListener('click', () => alert("Kamera-Funktion (Demo)"));
+        document.getElementById('fetch-weather-btn').addEventListener('click', () => {
+             const status = document.getElementById('weather-status-message');
+             status.textContent = "Ortung...";
+             if(!navigator.geolocation) { status.textContent = "Kein GPS"; return; }
+             navigator.geolocation.getCurrentPosition(async (pos) => {
+                 status.textContent = "Lade...";
+                 try {
+                     const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&current=temperature_2m,relative_humidity_2m`);
+                     const d = await r.json();
+                     
+                     // ZULUFT UPDATE
+                     inputs.tIn.slider.value = d.current.temperature_2m;
+                     inputs.tIn.text.value = d.current.temperature_2m;
+                     inputs.hIn.slider.value = d.current.relative_humidity_2m;
+                     inputs.hIn.text.value = d.current.relative_humidity_2m;
+
+                     // ABLUFT UPDATE (Sync mit Zuluft)
+                     inputs.tOut.slider.value = d.current.temperature_2m;
+                     inputs.tOut.text.value = d.current.temperature_2m;
+                     inputs.hOut.slider.value = d.current.relative_humidity_2m;
+                     inputs.hOut.text.value = d.current.relative_humidity_2m;
+
+                     updateUI();
+                     status.textContent = "Aktualisiert";
+                 } catch(e) { status.textContent = "Fehler"; }
+             });
+        });
+
+        // Beim Starten: Abluft = Zuluft syncen
+        const initSync = () => {
+            inputs.tOut.slider.value = inputs.tIn.slider.value;
+            inputs.tOut.text.value = inputs.tIn.text.value;
+            inputs.hOut.slider.value = inputs.hIn.slider.value;
+            inputs.hOut.text.value = inputs.hIn.text.value;
+        };
+        initSync();
+
+        updateUI();
+        lucide.createIcons();
+    });
+    </script>
+</body>
+</html>

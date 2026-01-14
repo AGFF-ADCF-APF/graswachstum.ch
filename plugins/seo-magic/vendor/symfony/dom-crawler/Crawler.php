@@ -81,7 +81,7 @@ class Crawler implements \Countable, \IteratorAggregate
     /**
      * @param \DOMNodeList|\DOMNode|\DOMNode[]|string|null $node A Node to use as the base for the crawling
      */
-    public function __construct($node = null, string $uri = null, string $baseHref = null)
+    public function __construct($node = null, ?string $uri = null, ?string $baseHref = null)
     {
         $this->uri = $uri;
         $this->baseHref = $baseHref ?: $uri;
@@ -153,7 +153,7 @@ class Crawler implements \Countable, \IteratorAggregate
      * or ISO-8859-1 as a fallback, which is the default charset defined by the
      * HTTP 1.1 specification.
      */
-    public function addContent(string $content, string $type = null)
+    public function addContent(string $content, ?string $type = null)
     {
         if (empty($type)) {
             $type = str_starts_with($content, '<?xml') ? 'application/xml' : 'text/html';
@@ -164,24 +164,17 @@ class Crawler implements \Countable, \IteratorAggregate
             return;
         }
 
-        $charset = null;
-        if (false !== $pos = stripos($type, 'charset=')) {
-            $charset = substr($type, $pos + 8);
-            if (false !== $pos = strpos($charset, ';')) {
-                $charset = substr($charset, 0, $pos);
-            }
-        }
+        $charset = preg_match('//u', $content) ? 'UTF-8' : 'ISO-8859-1';
 
         // http://www.w3.org/TR/encoding/#encodings
         // http://www.w3.org/TR/REC-xml/#NT-EncName
-        if (null === $charset &&
-            preg_match('/\<meta[^\>]+charset *= *["\']?([a-zA-Z\-0-9_:.]+)/i', $content, $matches)) {
-            $charset = $matches[1];
-        }
+        $content = preg_replace_callback('/(charset *= *["\']?)([a-zA-Z\-0-9_:.]+)/i', function ($m) use (&$charset) {
+            if ('charset=' === $this->convertToHtmlEntities('charset=', $m[2])) {
+                $charset = $m[2];
+            }
 
-        if (null === $charset) {
-            $charset = preg_match('//u', $content) ? 'UTF-8' : 'ISO-8859-1';
-        }
+            return $m[1].$charset;
+        }, $content, 1);
 
         if ('x' === $xmlMatches[1]) {
             $this->addXmlContent($content, $charset);
@@ -373,7 +366,7 @@ class Crawler implements \Countable, \IteratorAggregate
      *
      * @return static
      */
-    public function slice(int $offset = 0, int $length = null)
+    public function slice(int $offset = 0, ?int $length = null)
     {
         return $this->createSubCrawler(\array_slice($this->nodes, $offset, $length));
     }
@@ -553,7 +546,7 @@ class Crawler implements \Countable, \IteratorAggregate
      * @throws \InvalidArgumentException When current node is empty
      * @throws \RuntimeException         If the CssSelector Component is not available and $selector is provided
      */
-    public function children(string $selector = null)
+    public function children(?string $selector = null)
     {
         if (!$this->nodes) {
             throw new \InvalidArgumentException('The current node list is empty.');
@@ -617,7 +610,7 @@ class Crawler implements \Countable, \IteratorAggregate
      *
      * @throws \InvalidArgumentException When current node is empty
      */
-    public function text(string $default = null, bool $normalizeWhitespace = true)
+    public function text(?string $default = null, bool $normalizeWhitespace = true)
     {
         if (!$this->nodes) {
             if (null !== $default) {
@@ -630,7 +623,7 @@ class Crawler implements \Countable, \IteratorAggregate
         $text = $this->getNode(0)->nodeValue;
 
         if ($normalizeWhitespace) {
-            return trim(preg_replace('/(?:\s{2,}+|[^\S ])/', ' ', $text));
+            return trim(preg_replace("/(?:[ \n\r\t\x0C]{2,}+|[\n\r\t\x0C])/", ' ', $text), " \n\r\t\x0C");
         }
 
         return $text;
@@ -653,7 +646,7 @@ class Crawler implements \Countable, \IteratorAggregate
      *
      * @throws \InvalidArgumentException When current node is empty
      */
-    public function html(string $default = null)
+    public function html(?string $default = null)
     {
         if (!$this->nodes) {
             if (null !== $default) {
@@ -785,7 +778,7 @@ class Crawler implements \Countable, \IteratorAggregate
      *
      * @return static
      *
-     * @throws \RuntimeException if the CssSelector Component is not available
+     * @throws \LogicException if the CssSelector Component is not available
      */
     public function filter(string $selector)
     {
@@ -922,7 +915,7 @@ class Crawler implements \Countable, \IteratorAggregate
      *
      * @throws \InvalidArgumentException If the current node list is empty or the selected node is not instance of DOMElement
      */
-    public function form(array $values = null, string $method = null)
+    public function form(?array $values = null, ?string $method = null)
     {
         if (!$this->nodes) {
             throw new \InvalidArgumentException('The current node list is empty.');
@@ -1158,12 +1151,30 @@ class Crawler implements \Countable, \IteratorAggregate
 
     private function parseHtml5(string $htmlContent, string $charset = 'UTF-8'): \DOMDocument
     {
-        return $this->html5Parser->parse($this->convertToHtmlEntities($htmlContent, $charset), [], $charset);
+        if (!$this->supportsEncoding($charset)) {
+            $htmlContent = $this->convertToHtmlEntities($htmlContent, $charset);
+            $charset = 'UTF-8';
+        }
+
+        return $this->html5Parser->parse($htmlContent, ['encoding' => $charset]);
+    }
+
+    private function supportsEncoding(string $encoding): bool
+    {
+        try {
+            return '' === @mb_convert_encoding('', $encoding, 'UTF-8');
+        } catch (\Throwable $e) {
+            return false;
+        }
     }
 
     private function parseXhtml(string $htmlContent, string $charset = 'UTF-8'): \DOMDocument
     {
-        $htmlContent = $this->convertToHtmlEntities($htmlContent, $charset);
+        if ('UTF-8' === $charset && preg_match('//u', $htmlContent)) {
+            $htmlContent = '<?xml encoding="UTF-8">'.$htmlContent;
+        } else {
+            $htmlContent = $this->convertToHtmlEntities($htmlContent, $charset);
+        }
 
         $internalErrors = libxml_use_internal_errors(true);
         if (\LIBXML_VERSION < 20900) {
@@ -1193,12 +1204,12 @@ class Crawler implements \Countable, \IteratorAggregate
         set_error_handler(function () { throw new \Exception(); });
 
         try {
-            return mb_convert_encoding($htmlContent, 'HTML-ENTITIES', $charset);
-        } catch (\Exception | \ValueError $e) {
+            return mb_encode_numericentity($htmlContent, [0x80, 0x10FFFF, 0, 0x1FFFFF], $charset);
+        } catch (\Exception|\ValueError $e) {
             try {
                 $htmlContent = iconv($charset, 'UTF-8', $htmlContent);
-                $htmlContent = mb_convert_encoding($htmlContent, 'HTML-ENTITIES', 'UTF-8');
-            } catch (\Exception | \ValueError $e) {
+                $htmlContent = mb_encode_numericentity($htmlContent, [0x80, 0x10FFFF, 0, 0x1FFFFF], 'UTF-8');
+            } catch (\Exception|\ValueError $e) {
             }
 
             return $htmlContent;

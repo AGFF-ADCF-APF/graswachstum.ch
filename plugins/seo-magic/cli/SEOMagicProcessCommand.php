@@ -11,9 +11,9 @@ namespace Grav\Plugin\Console;
 
 use Grav\Console\ConsoleCommand;
 use Grav\Common\Grav;
-use Grav\Plugin\SEOMagic\SEOGenerator;
+use Grav\Common\Utils;
+use Grav\Plugin\SeoMagicPlugin;
 use Symfony\Component\Console\Input\InputArgument;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 /**
@@ -46,8 +46,6 @@ class SEOMagicProcessCommand extends ConsoleCommand
      */
     protected function serve()
     {
-        include __DIR__ . '/../vendor/autoload.php';
-
         $grav = Grav::instance();
         $io = new SymfonyStyle($this->input, $this->output);
 
@@ -62,22 +60,55 @@ class SEOMagicProcessCommand extends ConsoleCommand
 
         $callback = function ($code, $url, $score = null) use ($io) {
             $color = $code === 200 ? 'green' : 'red';
-            $score_output = $score ? " <yellow>[{$score}%]</yellow>" : "";
+            $score_output = is_numeric($score) ? " <yellow>[" . (int)$score . "%]</yellow>" : "";
             $io->writeln("<$color>$code</$color>$score_output: $url");
         };
         $start = microtime(true);
+        $plugins = $grav['plugins'] ?? null;
+        $pluginInstance = null;
+        if (is_iterable($plugins)) {
+            foreach ($plugins as $instance) {
+                if ($instance instanceof SeoMagicPlugin) {
+                    $pluginInstance = $instance;
+                    break;
+                }
+            }
+        }
 
-        [$status, $message] = SEOGenerator::processSEOData($url, $callback, $show_score);
+        if (!$pluginInstance instanceof SeoMagicPlugin) {
+            $io->error('SEO-Magic plugin is not loaded.');
+            return 1;
+        }
 
-        $end =  number_format(microtime(true) - $start,1);
+        $sitemapUrl = $url ? Utils::url($url, true) : null;
+        $options = [
+            'show_score' => $show_score,
+            'update_status' => false,
+        ];
+        if (!empty($sitemapUrl)) {
+            $options['sitemap_url'] = $sitemapUrl;
+        }
+
+        try {
+            $result = $pluginInstance->runScan('full', function ($processed, $total, $route, $processedUrl, $code, $score) use ($callback) {
+                $callback($code, $processedUrl, $score);
+            }, $options);
+        } catch (\Throwable $e) {
+            $io->error($e->getMessage());
+            return 1;
+        }
+
+        $end = number_format(microtime(true) - $start, 1);
 
         $io->writeln('');
         $io->writeln("Completed SEO-Magic processing in {$end}s");
 
-        if ($status === 'success') {
-            $io->success($message);
-        } else {
-            $io->error($message);
+        if (!empty($result['status'])) {
+            $io->success($result['message'] ?? 'Scan completed');
+            return 0;
         }
+
+        $io->error($result['message'] ?? 'Scan failed');
+        return 1;
     }
 }

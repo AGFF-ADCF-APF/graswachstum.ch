@@ -7,6 +7,8 @@ The **Lightbox Gallery** Plugin is an extension for [Grav CMS](http://github.com
 ### Features
 
 - **Small** - only 11KB Gzipped
+- **Shortcode Support** - Supports [lightbox-gallery] and [lightbox] shortcodes
+- **Editor Pro Support** - NEW shortcode integration with Editor-Pro WYSIWYG editor (requires Editor-pro v1.1.0+)
 - **Framework Agnostic** - No jQuery or other JavaScript framework required.
 - **Fast and Responsive** - works with any screen size
 - **Gallery Support** - Create multiple galleries
@@ -19,6 +21,55 @@ The **Lightbox Gallery** Plugin is an extension for [Grav CMS](http://github.com
 - **API** - control the lightbox with the provided methods
 - **Themeable** - create your skin or modify the animations with some minor css changes
 
+## Usage
+
+### Gallery Lightbox Shortcode
+
+The preferred way to create a gallery is using the `[lightbox-gallery]` wrapper shortcode. This simplifies syntax, handles grouping automatically, allows sharing thumbnail options, and supports inline descriptions naturally.
+
+You can pass `thumb_options` to the wrapper to automatically resize thumbnails for all images in the gallery.
+
+```markdown
+[lightbox-gallery thumb_options="cropZoom=200,200" class="grid grid-cols-4 gap-4"]
+    [lightbox image="red-dbs-1.jpg"]
+        ### Aston Martin DBS 1
+        Morbi ac interdum velit. Ut sed purus in **erat feugiat mollis**. In porta ligula quis vulputate ullamcorper.
+    [/lightbox]
+
+    [lightbox image="red-dbs-2.jpg"]
+        ### Aston Martin DBS 2
+        Aenean eu condimentum odio. Aliquam ac justo eget libero ullamcorper vehicula.
+    [/lightbox]
+
+    [lightbox image="red-dbs-3.jpg" thumb="red-dbs-3.jpg?cropZoom=300,300]
+        ### Aston Martin DBS 3
+        You can easily add rich descriptions to each item.
+    [/lightbox]
+[/lightbox-gallery]
+```
+
+### Basic Lightbox Shortcode
+
+You can also use the standalone `[lightbox]` shortcode for individual images or more custom layouts.
+
+```markdown
+[lightbox image="white-vantage-v12.jpg" zoomable="false" draggable="false"]
+![White V12 Vantage](white-vantage-v12.jpg?cropZoom=200,200)
+[/lightbox]
+```
+
+Supported attributes:
+* `image` → target image
+* `video` → target video (YouTube, Vimeo, or local path)
+* `thumb` → custom thumbnail with media processing support
+* `class` → classes applied to the lightbox link
+* `gallery` → gallery name (for grouping)
+* `title` → title of the image
+* `desc` → textual description or class reference
+* `descPosition` → position of description (top, bottom, left, right)
+* `width`, `height` → dimensions
+* `zoomable`, `draggable` → boolean flags
+
 ## Important Links
 
 * [Lightbox Gallery Documentation](https://getgrav.org/premium/lightbox-gallery/docs)
@@ -27,6 +78,3 @@ The **Lightbox Gallery** Plugin is an extension for [Grav CMS](http://github.com
 ## Credits
 
 * [Bati Digital for their amazing Lightbox Gallery script](https://biati-digital.github.io/glightbox)
-
-
-

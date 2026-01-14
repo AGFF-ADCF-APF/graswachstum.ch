@@ -19,11 +19,14 @@ use Grav\Plugin\SEOMagic\StopWords\Italian;
 use Grav\Plugin\SEOMagic\StopWords\Norwegian;
 use Grav\Plugin\SEOMagic\StopWords\Russian;
 use Grav\Plugin\SEOMagic\StopWords\Spanish;
+use Grav\Plugin\SEOMagic\SEOScore;
 use PhpScience\TextRank\TextRankFacade;
 use RocketTheme\Toolbox\Event\Event;
 
 class SEOMagic
 {
+    public const DASHBOARD_REPORT_VERSION = 2;
+
     protected $config;
     protected $data_storage;
     protected $raw_data = [];
@@ -149,8 +152,11 @@ class SEOMagic
 
             Grav::instance()->fireEvent('onSeoMagicMetadataKeywords', new Event(['data' => $payload]));
 
-
-            $metadata['keywords'] = $payload->keywords;
+            // De-emphasize meta keywords: only write if enabled and non-empty
+            $write_keywords = (bool)$this->config->get('plugins.seo-magic.write_keywords_meta', false);
+            if ($write_keywords && !empty(trim((string)$payload->keywords))) {
+                $metadata['keywords'] = $payload->keywords;
+            }
 
             // Get an image for the opengraph cards
             $image_type = $this->pluginVar($page, 'seo-magic.images.type', 'auto');
@@ -167,6 +173,11 @@ class SEOMagic
                 $metadata['robots'] = $robots_meta;
             } elseif ($robots_meta_page) {
                 $metadata['robots'] = $robots_meta_page;
+            }
+
+            // Ensure canonical exists (themes may render meta; better to have correct hint than none)
+            if (empty($metadata['canonical'])) {
+                $metadata['canonical'] = $page->url(true);
             }
 
             if ($this->config->get('plugins.seo-magic.facebook.enabled')) {
@@ -191,8 +202,31 @@ class SEOMagic
                     $metadata['og:image'] = $metadata['image'];
                     $metadata['og:image:width'] = $this->config->get('plugins.seo-magic.images.size.x');
                     $metadata['og:image:height'] = $this->config->get('plugins.seo-magic.images.size.y');
+                    // Provide an alt text for accessibility
+                    $metadata['og:image:alt'] = $header->get('seo-magic.opengraph.image_alt') ?? $metadata['title'];
                     if (Utils::startsWith($metadata['image'], ['https://', '//'])) {
                         $metadata['og:image:secure'] = $metadata['image'];
+                    }
+                }
+                // Add locale hint for Open Graph (e.g., en_US) + alternates for other languages
+                $og_locale = $this->getLanguage();
+                if (!empty($og_locale)) {
+                    if (strpos($og_locale, '-') !== false) {
+                        [$l, $r] = explode('-', $og_locale, 2);
+                        $og_locale = $l . '_' . strtoupper($r);
+                    }
+                    $metadata['og:locale'] = $og_locale;
+
+                    // Build og:locale:alternate from translated languages
+                    $alts = [];
+                    $translated = (array)$page->translatedLanguages(true);
+                    foreach (array_keys($translated) as $code) {
+                        if ($code === $this->getLanguage()) { continue; }
+                        $codeNorm = strpos($code, '-') !== false ? (explode('-', $code, 2)[0] . '_' . strtoupper(explode('-', $code, 2)[1])) : $code;
+                        $alts[] = $codeNorm;
+                    }
+                    if (!empty($alts)) {
+                        $metadata['og:locale:alternate'] = implode(',', $alts);
                     }
                 }
             }
@@ -221,6 +255,11 @@ class SEOMagic
 
     public function getPageImage($image_type, $page, $url = true)
     {
+        // When no page context is available bail early to avoid fatal errors.
+        if (!$page instanceof PageInterface || !$page->exists()) {
+            return null;
+        }
+
         $fallback = $this->getAutoImageOrder($image_type);
 
         $options = [
@@ -323,6 +362,7 @@ class SEOMagic
                 $images = $media->images();
                 $image_media = array_shift($images);
                 break;
+            
             default:
                 $image = $this->config->get('plugins.seo-magic.images.default_image');
         }
@@ -341,6 +381,8 @@ class SEOMagic
 
         return $image;
     }
+
+    
 
     protected function getArrayFromString($string): array
     {
@@ -441,6 +483,32 @@ class SEOMagic
         return array_merge($global_keywords, $keywords);
     }
 
+    /**
+     * Attempt to detect the language code present in a page URL by matching any path segment
+     * against the list of supported languages. Returns empty string if no match found.
+     */
+    public function detectLanguageFromUrl(string $url): string
+    {
+        try {
+            $supported = (array)$this->config->get('system.languages.supported', []);
+            if (empty($supported)) {
+                return '';
+            }
+            $path = (string)parse_url($url, PHP_URL_PATH);
+            $segments = array_values(array_filter(explode('/', trim($path, '/'))));
+            foreach ($segments as $seg) {
+                foreach ($supported as $code) {
+                    if (strcasecmp($seg, (string)$code) === 0) {
+                        return (string)$code;
+                    }
+                }
+            }
+        } catch (\Throwable $t) {
+            // ignore detection failures and fall back to default
+        }
+        return '';
+    }
+
     public function getData($page)
     {
         $route = $page->url();
@@ -474,6 +542,210 @@ class SEOMagic
             $data = new SEOData($data_contents);
         }
         return $data;
+    }
+
+    /**
+     * Build a lightweight dashboard row payload from a full SEOData instance.
+     */
+    public function buildDashboardRowFromData(SEOData $data): array
+    {
+        $score = new SEOScore($data);
+        $scoresData = $score->getScores();
+        $overallScore = (int)($scoresData->get('score') ?? 0);
+        $compactScore = ['score' => $overallScore];
+
+        $summaryPaths = [
+            'items.url',
+            'items.head.items.title',
+            'items.head.items.meta',
+            'items.head.items.canonical',
+            'items.content.items.headers',
+            'items.content.items.links',
+            'items.content.items.images',
+        ];
+        foreach ($summaryPaths as $path) {
+            $raw = $scoresData->get($path);
+            if ($raw instanceof Data) {
+                $raw = $raw->toArray();
+            }
+            if (is_array($raw)) {
+                $compact = [];
+                if (isset($raw['score'])) {
+                    $compact['score'] = (int)$raw['score'];
+                }
+                if (isset($raw['weight'])) {
+                    $compact['weight'] = $raw['weight'];
+                }
+                if (isset($raw['msg'])) {
+                    $compact['msg'] = $raw['msg'];
+                }
+            } else {
+                $compact = $raw;
+            }
+            $this->setArrayPath($compactScore, $path, $compact);
+        }
+
+        $linksData = (array)$data->get('content.links', []);
+        $totalLinks = 0;
+        $brokenLinks = [];
+        foreach ($linksData as $href => $info) {
+            $totalLinks++;
+            $status = (int)($info['status'] ?? 200);
+            if ($status >= 400) {
+                $entry = [
+                    'status' => $status,
+                ];
+                if (isset($info['status_msg'])) {
+                    $entry['status_msg'] = $info['status_msg'];
+                }
+                if (isset($info['message'])) {
+                    $entry['message'] = $info['message'];
+                }
+                if (isset($info['external'])) {
+                    $entry['external'] = (bool)$info['external'];
+                }
+                if (isset($info['count'])) {
+                    $entry['count'] = (int)$info['count'];
+                }
+                $brokenLinks[$href] = $entry;
+            }
+        }
+
+        $imagesData = (array)$data->get('content.images', []);
+        $totalImages = 0;
+        $brokenImages = [];
+        foreach ($imagesData as $idx => $img) {
+            $totalImages++;
+            $status = (int)($img['status'] ?? 200);
+            if ($status >= 400) {
+                $key = $img['src'] ?? ('#' . ($idx + 1));
+                $entry = [
+                    'status' => $status,
+                ];
+                if (isset($img['src'])) {
+                    $entry['src'] = $img['src'];
+                }
+                if (isset($img['message'])) {
+                    $entry['message'] = $img['message'];
+                }
+                if (isset($img['alt'])) {
+                    $entry['alt'] = $img['alt'];
+                }
+                if (isset($img['external'])) {
+                    $entry['external'] = (bool)$img['external'];
+                }
+                $brokenImages[$key] = $entry;
+            }
+        }
+
+        $langCode = $data->get('grav.language');
+        if (!$langCode) {
+            $langCode = $this->detectLanguageFromUrl((string)$data->get('info.url'));
+        }
+        if ($langCode === '' || $langCode === null) {
+            $langCode = 'default';
+        }
+
+        return [
+            'route' => $data->get('grav.page_route'),
+            'rawroute' => $data->get('grav.page_rawroute'),
+            'title' => $data->get('grav.page_title'),
+            'url' => $data->get('info.url'),
+            'lang' => $langCode,
+            'updated' => (int)($data->get('updated') ?? time()),
+            'score' => $compactScore,
+            'broken_links' => $brokenLinks,
+            'broken_images' => $brokenImages,
+            'total_links' => $totalLinks,
+            'total_images' => $totalImages,
+            'has_issues' => !empty($brokenLinks) || !empty($brokenImages),
+            'report_version' => self::DASHBOARD_REPORT_VERSION,
+        ];
+    }
+
+    /**
+     * Normalize a stored dashboard row into runtime-friendly structures.
+     */
+    public function normalizeDashboardRow(array $row): array
+    {
+        $scoreArray = is_array($row['score'] ?? null) ? $row['score'] : ['score' => (int)($row['score'] ?? 0)];
+        $row['score'] = new Data($scoreArray);
+        $row['broken_links'] = is_array($row['broken_links'] ?? null) ? $row['broken_links'] : [];
+        $row['broken_images'] = is_array($row['broken_images'] ?? null) ? $row['broken_images'] : [];
+        $row['total_links'] = (int)($row['total_links'] ?? 0);
+        $row['total_images'] = (int)($row['total_images'] ?? 0);
+        if (!isset($row['lang']) || $row['lang'] === '') {
+            $row['lang'] = 'default';
+        }
+        if (!isset($row['has_issues'])) {
+            $row['has_issues'] = !empty($row['broken_links']) || !empty($row['broken_images']);
+        }
+        return $row;
+    }
+
+    public function persistDashboardRow(string $directory, array $row): void
+    {
+        $realDirectory = $directory;
+        if (strpos($realDirectory, '://') !== false) {
+            try {
+                $resolved = Grav::instance()['locator']->findResource($realDirectory, true, true);
+                if ($resolved) {
+                    $realDirectory = $resolved;
+                }
+            } catch (\Throwable $e) {
+                // leave as-is if locator fails; downstream may still handle stream wrappers
+            }
+        }
+
+        $path = rtrim($realDirectory, DIRECTORY_SEPARATOR) . '/report.json';
+        try {
+            Folder::create($realDirectory);
+        } catch (\Throwable $e) {
+            // ignore create errors (directory likely exists)
+        }
+
+        $payload = $row;
+        if (($payload['score'] ?? null) instanceof Data) {
+            $payload['score'] = $payload['score']->toArray();
+        }
+        $payload['report_version'] = self::DASHBOARD_REPORT_VERSION;
+
+        try {
+            file_put_contents($path, json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        } catch (\Throwable $e) {
+            // ignore persistence failures; dashboard will rebuild lazily
+        }
+    }
+
+    public function readDashboardRow(string $directory): ?array
+    {
+        $path = rtrim($directory, DIRECTORY_SEPARATOR) . '/report.json';
+        if (!is_file($path)) {
+            return null;
+        }
+        try {
+            $raw = file_get_contents($path);
+            $decoded = json_decode($raw ?: '[]', true);
+            return is_array($decoded) ? $decoded : null;
+        } catch (\Throwable $e) {
+            return null;
+        }
+    }
+
+    protected function setArrayPath(array &$target, string $path, $value): void
+    {
+        $segments = explode('.', $path);
+        $node =& $target;
+        foreach ($segments as $segment) {
+            if (!is_array($node)) {
+                $node = [];
+            }
+            if (!array_key_exists($segment, $node) || !is_array($node[$segment])) {
+                $node[$segment] = [];
+            }
+            $node =& $node[$segment];
+        }
+        $node = $value;
     }
 
     public function cleanBody($data, $keywords = null)
@@ -535,8 +807,13 @@ class SEOMagic
 
     public function checkSitemap()
     {
-        list($client, $response) = SEOGenerator::getSiteMap(null, 'HEAD');
-        return $response ?? null;
+        // Prefer GET to avoid servers that disallow HEAD on JSON endpoints
+        $result = SEOGenerator::getSiteMap(null, 'GET');
+        if (is_array($result)) {
+            list($client, $response) = $result;
+            return $response ?? null;
+        }
+        return null;
     }
     
     public function getRobotsFile()
@@ -565,6 +842,9 @@ class SEOMagic
     protected function getStopWords($lang, $words)
     {
         switch(strtolower($lang)) {
+            case 'nl':
+            case 'nl-nl':
+                return new \Grav\Plugin\SEOMagic\StopWords\Dutch($words);
             case 'fr':
             case 'fr-be':
             case 'fr-ca':
@@ -594,6 +874,9 @@ class SEOMagic
             case 'ru':
             case 'ru-ru':
                 return new Russian($words);
+            case 'tr':
+            case 'tr-tr':
+                return new \Grav\Plugin\SEOMagic\StopWords\Turkish($words);
             case 'es':
             case 'es-ar':
             case 'es-bo':

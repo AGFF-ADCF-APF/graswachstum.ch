@@ -1,7 +1,7 @@
 name: Lightbox Gallery
 slug: lightbox-gallery
 type: plugin
-version: 1.0.6
+version: 1.1.1
 premium: true
 description: A lightweight but flexible lightbox implementation for Grav that supports galleries
 icon: window-restore

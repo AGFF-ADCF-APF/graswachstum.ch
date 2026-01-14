@@ -17,7 +17,48 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 class SEOGenerator
 {
-    public static function processSEOData($url = null, $callback = null, $show_score = false, $only_link_checker = false) : array
+    protected static function requestWithRetry($client, string $method, string $url, array $options, int $maxAttempts, int $backoffMs, array $retryOn = [429, 408, 500, 502, 503, 504])
+    {
+        $attempt = 0;
+        $lastResponse = null;
+        $lastStatus = null;
+        $lastError = null;
+        while ($attempt < max(1, $maxAttempts)) {
+            $attempt++;
+            try {
+                $response = $client->request($method, $url, $options);
+                try {
+                    $status = $response->getStatusCode();
+                } catch (\Throwable $t) {
+                    $status = 0;
+                }
+                $lastResponse = $response;
+                $lastStatus = $status;
+                // Honour Retry-After header for 429/503 if present
+                if (in_array($status, $retryOn, true)) {
+                    $headers = [];
+                    try { $headers = $response->getHeaders(false); } catch (\Throwable $t) {}
+                    $retryAfter = $headers['retry-after'][0] ?? null;
+                    if ($attempt < $maxAttempts) {
+                        $sleepMs = $retryAfter ? ((int)$retryAfter * 1000) : ($backoffMs * $attempt);
+                        if ($sleepMs > 0) { usleep($sleepMs * 1000); }
+                        continue;
+                    }
+                }
+                return [$lastResponse, $lastStatus, null];
+            } catch (TransportExceptionInterface $e) {
+                $lastError = $e->getMessage();
+                if ($attempt < $maxAttempts) {
+                    $sleepMs = $backoffMs * $attempt;
+                    if ($sleepMs > 0) { usleep($sleepMs * 1000); }
+                    continue;
+                }
+                break;
+            }
+        }
+        return [$lastResponse, $lastStatus, $lastError];
+    }
+    public static function processSEOData($url = null, $callback = null, $show_score = false, $links_only_mode = false) : array
     {
         $config = Grav::instance()['config'];
         $ignore_routes = $config->get('plugins.seo-magic.ignore_routes', []);
@@ -36,13 +77,15 @@ class SEOGenerator
             $content_type = $url_response->getHeaders()['content-type'][0] ?? null;
             if (Utils::contains($content_type, 'application/json')) {
                 $sitemap = $url_response->toArray();
+                $delay_ms = (int)$config->get('plugins.seo-magic.page_crawl_delay_ms', 0);
                 foreach ($sitemap as $entries) {
                     foreach ($entries as $route => $entry) {
                         $total++;
                         if (isset($entry['location'])) {
                             $url = $entry['location'];
                             if (!in_array($entry['route'], $ignore_routes)) {
-                                list($status, $message) = static::processUrlSEOData($url, $client, $route, $callback, $count, $show_score, $only_link_checker);
+                                static::processUrlSEOData($url, $client, $route, $callback, $count, $show_score, $links_only_mode);
+                                if ($delay_ms > 0) { usleep($delay_ms * 1000); }
                             }
                         }
                     }
@@ -53,19 +96,41 @@ class SEOGenerator
             $message = sprintf($lang->translate('PLUGIN_SEOMAGIC.PROCESSED_RESULTS'), $result);
 
         } else {
-            // URL doesn't exist
-            if ($callback) {
-                $callback(404, $url);
+            // Fallback: enumerate published, routable Grav pages if sitemap is unavailable
+            try {
+                /** @var \Grav\Common\Page\Pages $pages */
+                $pages = Grav::instance()['pages'];
+                $site_base = Utils::url('/', true);
+                $collection = $pages->all();
+                $delay_ms = (int)$config->get('plugins.seo-magic.page_crawl_delay_ms', 0);
+                foreach ($collection as $page) {
+                    if (!$page->routable() || !$page->published() || !is_null($page->redirect())) {
+                        continue;
+                    }
+                    $route = $page->route();
+                    if (in_array($route, $ignore_routes, true)) {
+                        continue;
+                    }
+                    $total++;
+                    $page_url = $page->url(true, true, true);
+                    static::processUrlSEOData($page_url, $client ?? static::getHttpClient(), $route, $callback, $count, $show_score, $links_only_mode);
+                    if ($delay_ms > 0) { usleep($delay_ms * 1000); }
+                }
+                $result = $count . "/" . $total;
+                $message = sprintf($lang->translate('PLUGIN_SEOMAGIC.PROCESSED_RESULTS'), $result);
+            } catch (\Throwable $t) {
+                if ($callback) {
+                    $callback(404, $url);
+                }
+                $status = 'error';
+                $message = $url_response ?? sprintf($lang->translate('PLUGIN_SEOMAGIC.NO_SITEMAP'), $url);
             }
-
-            $status = 'error';
-            $message = $url_response ?? sprintf($lang->translate('PLUGIN_SEOMAGIC.NO_SITEMAP'), $url);
         }
 
         return [$status, $message];
     }
 
-    public static function processUrlSEOData(string $url, $client, $route, $callback = null, &$count = 0, $show_score = false, $only_link_checker = false): void
+    public static function processUrlSEOData(string $url, $client, $route, $callback = null, &$count = 0, $show_score = false, $links_only_mode = false): void
     {
         $config = Grav::instance()['config'];
         $lang = Grav::instance()['language'];
@@ -74,7 +139,9 @@ class SEOGenerator
         $log = Grav::instance()['log'];
 
         try {
-            $response = $client->request('GET', $url, ['timeout' => static::getClientTimeout()]);
+            $pageAttempts = max(1, (int)$config->get('plugins.seo-magic.page_retry_attempts', 2));
+            $pageBackoff = max(0, (int)$config->get('plugins.seo-magic.page_retry_backoff_ms', 250));
+            list($response, $code) = static::requestWithRetry($client, 'GET', $url, ['timeout' => static::getClientTimeout()], $pageAttempts, $pageBackoff);
             $code = $response->getStatusCode();
             $info = $response->getInfo();
             $url = $info['url'] ?? 'unknown';
@@ -92,7 +159,7 @@ class SEOGenerator
                 if (!empty($content)) {
                     $crawler = new Crawler($content);
 
-                    if ($only_link_checker) {
+                    if ($links_only_mode) {
                         $links = static::getLinks($crawler, $url);
                         $broken_links = static::getBrokenLinks($links, $client, $url);
                         $callback_message = $broken_links;
@@ -119,9 +186,38 @@ class SEOGenerator
                         $data->set('head.title', $title_obj->count() ? trim($title_obj->text()) : '');
                         $data->set('head.meta', static::getMetadata($crawler, $data->get('content.body')));
                         $data->set('head.icon', $icon_obj->count() ? $icon_obj->attr('href') : '');
-                        $data->set('head.canonical', $canonical_obj->count() ? $canonical_obj->attr('href') : '');
+                        // Canonical: prefer <link rel="canonical">, fall back to <meta name="canonical">
+                        $canonical = $canonical_obj->count() ? $canonical_obj->attr('href') : '';
+                        if (!$canonical) {
+                            $metaCanon = $data->get('head.meta.canonical') ?? '';
+                            if ($metaCanon) { $canonical = $metaCanon; }
+                        }
+                        $data->set('head.canonical', $canonical);
                         $data->set('head.links', static::getHeadLinkResources($crawler, $client, $url));
                         $data->set('head.scripts', static::getHeadScriptResources($crawler, $client, $url));
+
+                        // Derive alternates and flags
+                        $alternates = [];
+                        foreach ((array)$data->get('head.links', []) as $href => $attrs) {
+                            if (($attrs['rel'] ?? null) === 'alternate' && !empty($attrs['hreflang'])) {
+                                $alternates[$attrs['hreflang']] = $href;
+                            }
+                        }
+                        $data->set('head.alternates', $alternates);
+                        $data->set('head.flags.missing_canonical', empty($data->get('head.canonical')));
+                        try {
+                            $grav = Grav::instance();
+                            $language = $grav['language'];
+                            if ($language->enabled()) {
+                                /** @var \Grav\Common\Page\Pages $pages */
+                                $pages = $grav['pages'];
+                                $pageObj = $pages->find($page_route ?: $route, true);
+                                $hasTranslations = $pageObj ? count((array)$pageObj->translatedLanguages(true)) > 0 : false;
+                                $data->set('head.flags.missing_hreflang', $hasTranslations && count($alternates) === 0);
+                            }
+                        } catch (\Throwable $e) {
+                            // ignore
+                        }
 
                         $links = static::getLinks($crawler, $url);
                         if ($enable_link_checker) {
@@ -142,6 +238,16 @@ class SEOGenerator
                             $seo_score = new SEOScore($data);
                             $callback_message = intval($seo_score->getScores()->get('score'));
                         }
+
+                        try {
+                            $seoService = Grav::instance()['seomagic'] ?? null;
+                            if ($seoService && method_exists($seoService, 'buildDashboardRowFromData')) {
+                                $reportRow = $seoService->buildDashboardRowFromData($data);
+                                $seoService->persistDashboardRow(dirname($data_path), $reportRow);
+                            }
+                        } catch (\Throwable $ignored) {
+                            // fail silently; dashboard will rebuild row lazily
+                        }
                     }
                 }
 
@@ -150,7 +256,7 @@ class SEOGenerator
             }
 
             if ($config->get('plugins.seo-magic.log_results')) {
-                $log->addNotice(sprintf($lang->translate('PLUGIN_SEOMAGIC.LOG_RESULTS'), $url, $code));
+                $log->notice(sprintf($lang->translate('PLUGIN_SEOMAGIC.LOG_RESULTS'), $url, $code));
             }
 
             if ($callback) {
@@ -210,9 +316,13 @@ class SEOGenerator
         $config = Grav::instance()['config'];
         $options = [
             'headers' => ['User-Agent' => $config->get('plugins.seo-magic.user_agent')],
-            'verify_peer' => false,
-            'verify_host' => false,
         ];
+
+        // Opt-in only: allow insecure TLS for edge cases
+        if ($config->get('plugins.seo-magic.insecure_tls', false)) {
+            $options['verify_peer'] = false;
+            $options['verify_host'] = false;
+        }
 
         return Client::getClient($options, $config->get('plugins.seo-magic.client_connections', 10));
     }
@@ -291,8 +401,9 @@ class SEOGenerator
                 $type = $node->attr('type');
                 $media = $node->attr('media');
                 $crosssorigin = $node->attr('crosssorigin');
+                $hreflang = $node->attr('hreflang');
                 if ($href && !in_array($rel, ['icon', 'canonical'])) {
-                    $link_data[$href] = ['rel' => $rel, 'type' => $type, 'media' => $media, 'crossorigin' => $crosssorigin];
+                    $link_data[$href] = ['rel' => $rel, 'type' => $type, 'media' => $media, 'crossorigin' => $crosssorigin, 'hreflang' => $hreflang];
                 }
             });
         }
@@ -304,13 +415,19 @@ class SEOGenerator
         $script_element = $crawler->filterXPath('//script');
         $script_data = [];
         if ($script_element->count() > 0) {
-            $script_element->each(function (Crawler $node) use (&$script_data) {
+            $i = 0;
+            $script_element->each(function (Crawler $node) use (&$script_data, &$i) {
                 $src = $node->attr('src');
                 $async = $node->attr('async');
                 $defer = $node->attr('defer');
                 $type = $node->attr('type');
                 if ($src) {
                     $script_data[$src] = ['async' => $async, 'defer' => $defer, 'type' => $type];
+                } else {
+                    // Capture inline JSON-LD presence
+                    if (strtolower((string)$type) === 'application/ld+json') {
+                        $script_data['inline:ldjson:' . (++$i)] = ['type' => $type];
+                    }
                 }
             });
         }
@@ -321,39 +438,74 @@ class SEOGenerator
     {
         $image_elements = $crawler->filterXPath('//img');
         $images = [];
+        static $image_cache = [];
         $config = Grav::instance()['config'];
         $link_timeout = $config->get('plugins.seo-magic.link_check_timeout');
         $check_image_status = $config->get('plugins.seo-magic.enable_image_checker');
+        $image_check_sequential = (bool)$config->get('plugins.seo-magic.image_check_sequential', true);
 
         if ($image_elements->count() > 0) {
-            $image_elements->each(function (Crawler $node) use (&$client, $host_base, &$images, &$image_responses, $link_timeout, $check_image_status) {
+            $image_elements->each(function (Crawler $node) use (&$client, $host_base, &$images, &$image_cache, $link_timeout, $check_image_status, $image_check_sequential) {
                 $src = trim($node->attr('src'));
                 $alt = trim($node->attr('alt'));
 
                 if ($src) {
                     $src = static::getValidLink($src, $host_base);
                     $response = null;
+                    $external = static::isExternal($src, $host_base);
 
-                    if ($check_image_status) {
-                        $response = $client->request('HEAD', $src, ['timeout' => $link_timeout]);
+                    if ($check_image_status && isset($image_cache[$src])) {
+                        $cached = $image_cache[$src];
+                        $cached['alt'] = $alt;
+                        $cached['external'] = $external;
+                        if (!isset($cached['status_msg'])) {
+                            $cached['status_msg'] = 'cached';
+                        }
+                        $images[] = $cached;
+                        return;
                     }
 
-                    $images[] = ['src' => $src, 'alt' => $alt, 'external' => static::isExternal($src, $host_base), 'response' => $response];
+                    if ($check_image_status) {
+                        if ($image_check_sequential) {
+                            try {
+                                $resp = $client->request('HEAD', $src, ['timeout' => $link_timeout, 'headers' => ['Connection' => 'close']]);
+                                $status = $resp->getStatusCode();
+                            } catch (\Exception $e) {
+                                $status = 500;
+                            }
+                            $entry = ['src' => $src, 'alt' => $alt, 'external' => $external, 'status' => $status];
+                            $image_cache[$src] = $entry;
+                            $images[] = $entry;
+                            return; // continue to next img
+                        } else {
+                            $response = $client->request('HEAD', $src, ['timeout' => $link_timeout, 'headers' => ['Connection' => 'close']]);
+                        }
+                    }
+
+                    $images[] = ['src' => $src, 'alt' => $alt, 'external' => $external, 'response' => $response];
 
                 }
             });
         }
 
-        foreach ($images as &$image) {
-            if (isset($image['response'])) {
-                try {
-                    $image['status'] = $image['response']->getStatusCode();
-                } catch (\Exception $e) {
-                    $image['status'] = 500;
+        if (!$image_check_sequential) {
+            foreach ($images as &$image) {
+                if (isset($image['response'])) {
+                    try {
+                        $image['status'] = $image['response']->getStatusCode();
+                    } catch (\Exception $e) {
+                        $image['status'] = 500;
+                    }
+                    unset($image['response']);
+                    if ($check_image_status) {
+                        $image_cache[$image['src']] = $image;
+                    }
                 }
-                unset($image['response']);
+                if ($check_image_status && isset($image['src']) && !isset($image_cache[$image['src']])) {
+                    $image_cache[$image['src']] = $image;
+                }
             }
-
+            unset($image);
         }
         return $images;
     }
@@ -362,15 +514,33 @@ class SEOGenerator
     {
         $link_elements = $crawler->filterXPath('//a');
         $links = [];
+        $config = Grav::instance()['config'];
+        $ignore_patterns = (array)$config->get('plugins.seo-magic.link_ignore_patterns', []);
+        $respect_robots = (bool)$config->get('plugins.seo-magic.link_respect_robots', true);
+        $robots_ua = (string)$config->get('plugins.seo-magic.link_robots_user_agent', '*');
+        $disallows = $respect_robots ? static::getRobotsDisallows($robots_ua) : [];
 
         if ($link_elements->count() > 0) {
-            $link_elements->each(function (Crawler $node) use (&$links, $host_base) {
+            $link_elements->each(function (Crawler $node) use (&$links, $host_base, $ignore_patterns, $disallows) {
                 $href = trim($node->attr('href'));
                 $target = trim($node->attr('target'));
                 $rel = trim($node->attr('rel'));
                 $text = trim($node->text());
-
-                $links[$href] = ['count' => 0, 'target' => $target, 'rel' => $rel, 'text' => $text, 'external' => static::isExternal($href, $host_base)];
+                if (empty($href)) { return; }
+                // ignore patterns
+                foreach ($ignore_patterns as $pat) {
+                    if (@preg_match($pat, '') !== false) { // regex
+                        if (@preg_match($pat, $href)) { return; }
+                    } elseif (strpos($href, $pat) !== false) { return; }
+                }
+                // robots.txt for internal links
+                $is_ext = static::isExternal($href, $host_base);
+                if (!$is_ext) {
+                    $abs = static::getValidLink($href, $host_base);
+                    $path = parse_url($abs, PHP_URL_PATH) ?: '/';
+                    foreach ($disallows as $dis) { if ($dis !== '' && str_starts_with($path, $dis)) { return; } }
+                }
+                $links[$href] = ['count' => 0, 'target' => $target, 'rel' => $rel, 'text' => $text, 'external' => $is_ext];
             });
         }
 
@@ -404,12 +574,16 @@ class SEOGenerator
     {
         static $link_cache = [];
         $config = Grav::instance()['config'];
-        $max_retries = $config->get('plugins.seo-magic.link_max_retries');
         $link_timeout = $config->get('plugins.seo-magic.link_check_timeout');
         $link_whitelist = $config->get('plugins.seo-magic.link_check_whitelist');
+        $concurrency_internal = max(1, (int)$config->get('plugins.seo-magic.link_check_concurrency_internal', 1));
+        $concurrency_external = max(1, (int)$config->get('plugins.seo-magic.link_check_concurrency_external', 4));
+        $request_delay_ms = max(0, (int)$config->get('plugins.seo-magic.link_request_delay_ms', 0));
 
-        $link_responses = [];
         $link_results = [];
+        $internal = [];
+        $external = [];
+
         foreach (array_keys($links) as $link) {
             if (Utils::contains($link, $link_whitelist)) {
                 $link_data = $links[$link];
@@ -421,38 +595,67 @@ class SEOGenerator
 
             if (isset($link_cache[$link])) {
                 $link_data = $link_cache[$link];
-                if ($link_data['status'] === 200 || ($link_data['count'] >= $max_retries)) {
+                if (!isset($link_data['status_msg'])) {
                     $link_data['status_msg'] = 'cached';
-                    $link_results[$link] = $link_data;
-                    continue;
                 }
+                $link_results[$link] = $link_data;
+                continue;
             }
-            $clean_link = static::getValidLink($link, $url);
-            $link_responses[$link] = $client->request('HEAD', $clean_link, [
-                'headers' => [
-                    'Magic-Action' => 'broken-links',
-                ],
-                'timeout' => $link_timeout,
-                'max_redirects' => 20,
-            ]);
+
+            // Bucket by internal/external
+            $is_external = ($links[$link]['external'] ?? null) === true;
+            if ($is_external) {
+                $external[] = $link;
+            } else {
+                $internal[] = $link;
+            }
         }
 
-        foreach ($link_responses as $link => $response) {
-            $link_data = $link_cache[$link] ?? $links[$link] ?? [];
-            try {
-                $link_data['status'] = $response->getStatusCode();
-            } catch (TransportExceptionInterface $e) {
-                $msg = $e->getMessage();
-                $link_data['status'] = 404;
-                if (Utils::contains($msg, 'resolve host')) {
-                    $msg = 'Could not resolve hostname';
+        // Helper to process in batches with limited concurrency
+        $process_batch = function(array $batch) use (&$links, &$link_cache, &$link_results, $client, $link_timeout, $url) {
+            $attempts = max(1, (int)Grav::instance()['config']->get('plugins.seo-magic.link_max_retries', 2));
+            $backoff = max(0, (int)Grav::instance()['config']->get('plugins.seo-magic.link_retry_backoff_ms', 200));
+            foreach ($batch as $link) {
+                $clean_link = static::getValidLink($link, $url);
+                list($response, $status, $err) = static::requestWithRetry($client, 'HEAD', $clean_link, [
+                    'headers' => [ 'Magic-Action' => 'broken-links', 'Connection' => 'close' ],
+                    'timeout' => $link_timeout,
+                    'max_redirects' => 20,
+                ], $attempts, $backoff);
+
+                $link_data = $link_cache[$link] ?? $links[$link] ?? [];
+                if ($status === null) { $status = 500; }
+                $link_data['status'] = $status;
+                // Friendly status message hints
+                if ($status >= 500) { $link_data['status_msg'] = 'Server error'; }
+                elseif ($status === 429) { $link_data['status_msg'] = 'Too Many Requests'; }
+                elseif ($status >= 400) { $link_data['status_msg'] = 'Client error'; }
+                if ($err) {
+                    $msg = $err;
+                    if (Utils::contains($msg, 'resolve host')) { $msg = 'Could not resolve hostname'; }
+                    $link_data['message'] = $msg;
                 }
-                $link_data['message'] = $msg;
+                $link_data['count'] = (int)($link_data['count'] ?? 0) + 1;
+                $link_results[$link] = $link_cache[$link] = $link_data;
             }
+        };
 
-            $link_data['count']++;
+        // Process internal links (typically same host as the site) conservatively
+        if (!empty($internal)) {
+            $chunks = array_chunk($internal, $concurrency_internal);
+            foreach ($chunks as $chunk) {
+                $process_batch($chunk);
+                if ($request_delay_ms > 0) { usleep($request_delay_ms * 1000); }
+            }
+        }
 
-            $link_results[$link] = $link_cache[$link] = $link_data;
+        // Process external links with higher concurrency
+        if (!empty($external)) {
+            $chunks = array_chunk($external, $concurrency_external);
+            foreach ($chunks as $chunk) {
+                $process_batch($chunk);
+                if ($request_delay_ms > 0) { usleep($request_delay_ms * 1000); }
+            }
         }
         return $link_results;
     }
@@ -562,6 +765,44 @@ class SEOGenerator
             return false;
         }
         return true;
+    }
+
+    protected static function getRobotsDisallows(string $ua = '*'): array
+    {
+        static $cache;
+        if (isset($cache[$ua])) { return $cache[$ua]; }
+        $disallows = [];
+        $generic = [];
+        try {
+            $seomagic = new \Grav\Plugin\SEOMagic\SEOMagic();
+            $content = $seomagic->getRobotsFile();
+            if ($content) {
+                $currentUA = [];
+                foreach (preg_split('/\r?\n/', $content) as $line) {
+                    $line = trim($line);
+                    if ($line === '' || str_starts_with($line, '#')) { continue; }
+                    if (stripos($line, 'User-agent:') === 0) {
+                        $uaLine = trim(substr($line, 11));
+                        $uaLine = ltrim($uaLine, ':');
+                        $uaLine = trim($uaLine);
+                        $currentUA = [$uaLine];
+                    } elseif (stripos($line, 'Disallow:') === 0) {
+                        $path = trim(substr($line, 9));
+                        if ($path === '') { continue; }
+                        $path = rtrim($path, '/');
+                        foreach ($currentUA as $cua) {
+                            if ($cua === '*' || $cua === ' *') { $generic[] = $path; }
+                            if (strcasecmp($cua, $ua) === 0) { $disallows[] = $path; }
+                        }
+                    }
+                }
+            }
+        } catch (\Throwable $t) {}
+        // Prefer specific UA list; fallback to generic *
+        $out = !empty($disallows) ? $disallows : $generic;
+        $out = array_values(array_unique($out));
+        $cache[$ua] = $out;
+        return $out;
     }
 
     protected static function getValidLink($link, $base_url)

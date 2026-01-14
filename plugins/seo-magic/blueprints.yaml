@@ -1,7 +1,7 @@
 name: Seo Magic
 slug: seo-magic
 type: plugin
-version: 5.2.1
+version: 6.2.0
 premium: true
 description: Powerful SEO plugin
 icon: magic
@@ -88,6 +88,18 @@ form:
       validate:
         type: bool
 
+    detailed_logging:
+      type: toggle
+      label: PLUGIN_SEOMAGIC.DETAILED_LOGGING
+      help: PLUGIN_SEOMAGIC.DETAILED_LOGGING_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     user_agent:
       type: text
       label: PLUGIN_SEOMAGIC.USER_AGENT_STRING
@@ -166,6 +178,16 @@ form:
           validate:
             type: bool
 
+        link_ignore_patterns:
+          type: selectize
+          size: large
+          placeholder: "/^\\/admin/ , \\?preview=1"
+          label: PLUGIN_SEOMAGIC.LINK_IGNORE_PATTERNS
+          help: PLUGIN_SEOMAGIC.LINK_IGNORE_PATTERNS_HELP
+          classes: fancy
+          validate:
+            type: commalist
+
         link_check_timeout:
           type: number
           label: PLUGIN_SEOMAGIC.LINK_CHECK_TIMEOUT
@@ -193,6 +215,24 @@ form:
           validate:
             type: commalist
 
+        link_respect_robots:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.LINK_RESPECT_ROBOTS
+          help: PLUGIN_SEOMAGIC.LINK_RESPECT_ROBOTS_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        link_robots_user_agent:
+          type: text
+          label: PLUGIN_SEOMAGIC.LINK_ROBOTS_UA
+          help: PLUGIN_SEOMAGIC.LINK_ROBOTS_UA_HELP
+          placeholder: '*'
+
 
     meta_content_section:
       type: section
@@ -208,16 +248,7 @@ form:
         metadata.keywords_frontmatter:
           type: text
           label: PLUGIN_SEOMAGIC.KEYWORDS_FRONTMATTER
-        opengraph.enabled:
-          type: toggle
-          label: PLUGIN_SEOMAGIC.OPENGRAPH_ENABLED
-          highlight: 1
-          default: 1
-          options:
-            1: PLUGIN_ADMIN.ENABLED
-            0: PLUGIN_ADMIN.DISABLED
-          validate:
-            type: bool
+        # OpenGraph is always enabled now; no explicit toggle
 
         twitter.enabled:
           type: toggle
@@ -273,6 +304,54 @@ form:
           label: PLUGIN_SEOMAGIC.FACEBOOK_APP
           help: PLUGIN_SEOMAGIC.FACEBOOK_APP_HELP
           placeholder: '1234567890'
+
+        inject.canonical_always:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.INJECT_CANONICAL_ALWAYS
+          help: PLUGIN_SEOMAGIC.INJECT_CANONICAL_ALWAYS_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        inject.canonical_if_missing:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.INJECT_CANONICAL_IF_MISSING
+          help: PLUGIN_SEOMAGIC.INJECT_CANONICAL_IF_MISSING_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        inject.hreflang_always:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.INJECT_HREFLANG_ALWAYS
+          help: PLUGIN_SEOMAGIC.INJECT_HREFLANG_ALWAYS_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        inject.hreflang_if_missing:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.INJECT_HREFLANG_IF_MISSING
+          help: PLUGIN_SEOMAGIC.INJECT_HREFLANG_IF_MISSING_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
 
     meta_images_section:
       type: section
@@ -348,6 +427,150 @@ form:
           append: px
           placeholder: 600
 
+    structured_data_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.STRUCTURED_DATA
+      underline: true
+      fields:
+
+        structured_data.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_DATA_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        structured_data.organization.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_ORG_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.organization.name:
+          type: text
+          label: PLUGIN_SEOMAGIC.STRUCTURED_ORG_NAME
+          placeholder: 'Acme Inc.'
+
+        structured_data.organization.logo:
+          type: text
+          label: PLUGIN_SEOMAGIC.STRUCTURED_ORG_LOGO
+          placeholder: 'theme://images/logo.png'
+
+        structured_data.organization.same_as:
+          type: selectize
+          label: PLUGIN_SEOMAGIC.STRUCTURED_ORG_SAMEAS
+          classes: fancy
+          validate:
+            type: commalist
+
+        structured_data.website.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_WEBSITE_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.website.search_url:
+          type: text
+          label: PLUGIN_SEOMAGIC.STRUCTURED_WEBSITE_SEARCH_URL
+          help: PLUGIN_SEOMAGIC.STRUCTURED_WEBSITE_SEARCH_URL_HELP
+          placeholder: '/search?q={query}'
+
+        structured_data.auto_inject:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_AUTO_INJECT
+          help: PLUGIN_SEOMAGIC.STRUCTURED_AUTO_INJECT_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.breadcrumb.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_BREADCRUMB_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.article.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_ARTICLE_ENABLED
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.product.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_PRODUCT_ENABLED
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+        structured_data.event.enabled:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.STRUCTURED_EVENT_ENABLED
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+    scoring_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.SCORING
+      underline: true
+      fields:
+        score.consider_injection:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.SCORING_CONSIDER_INJECTION
+          help: PLUGIN_SEOMAGIC.SCORING_CONSIDER_INJECTION_HELP
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+
+    alt_fix_section:
+      type: section
+      title: PLUGIN_SEOMAGIC.ALT_FIX
+      underline: true
+      fields:
+        alt_fix.auto_persist:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.ALT_FIX_AUTO
+          help: PLUGIN_SEOMAGIC.ALT_FIX_AUTO_HELP
+          highlight: 0
+          default: 0
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        alt_fix.strategy:
+          type: select
+          label: PLUGIN_SEOMAGIC.ALT_FIX_STRATEGY
+          default: filename
+          options:
+            filename: PLUGIN_SEOMAGIC.ALT_FIX_FILENAME
+            title: PLUGIN_SEOMAGIC.ALT_FIX_TITLE
+
     autogeneration_section:
       type: section
       title: PLUGIN_SEOMAGIC.META_AUTOGENERATION
@@ -379,6 +602,18 @@ form:
           label: PLUGIN_SEOMAGIC.GENERATE_KEYWORDS
           highlight: 1
           default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+
+        write_keywords_meta:
+          type: toggle
+          label: PLUGIN_SEOMAGIC.WRITE_KEYWORDS_META
+          help: PLUGIN_SEOMAGIC.WRITE_KEYWORDS_META_HELP
+          highlight: 0
+          default: 0
           options:
             1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED

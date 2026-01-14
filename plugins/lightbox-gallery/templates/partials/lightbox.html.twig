@@ -6,17 +6,53 @@
   {% set target = page.media[image].url ?? image %}
 {% endif %}
 
-<a href="{{ target }}" class="glightbox {{ class }}"
-   {% if gallery %}data-gallery="{{ gallery }}"{% endif %}
-   {% if title %}data-title="{{ title }}"{% endif %}
-   {% if desc %}data-description="{{ desc }}"{% endif %}
-   {% if descPosition %}data-desc-position="{{ descPosition }}"{% endif %}
-   {% if type %}data-type="{{ type }}"{% endif %}
-   {% if effect %}data-effect="{{ effect }}"{% endif %}
-   {% if width %}data-width="{{ width }}"{% endif %}
-   {% if height %}data-height="{{ height }}"{% endif %}
-   {% if zoomable %}data-zoomable="{{ zoomable }}"{% endif %}
-   {% if draggable %}data-draggable="{{ draggable }}"{% endif %}
-   >
-    {{ content|raw }}
-</a>
+{% if thumbnail_media is defined and thumbnail_media %}
+    {# New Mode: Content is description, thumbnail_media is the trigger image #}
+    {% if not only_desc %}
+    <a href="{{ target }}" class="glightbox {{ class }}"
+       data-description=".{{ desc_id }}"
+       data-gallery="{{ gallery }}"
+       data-filename="{{ image }}"
+       {% if thumb %}data-thumb="{{ thumb }}"{% endif %}
+       {% if thumb %}data-custom-thumb="1"{% endif %}
+       {% if title %}data-title="{{ title }}"{% endif %}
+       {% if descPosition %}data-desc-position="{{ descPosition }}"{% endif %}
+       {% if type %}data-type="{{ type }}"{% endif %}
+       {% if effect %}data-effect="{{ effect }}"{% endif %}
+       {% if width %}data-width="{{ width }}"{% endif %}
+       {% if height %}data-height="{{ height }}"{% endif %}
+       {% if zoomable %}data-zoomable="{{ zoomable }}"{% endif %}
+       {% if draggable %}data-draggable="{{ draggable }}"{% endif %}
+       >
+        {% if thumbnail_media.html is defined %}
+            {{ thumbnail_media.html|raw }}
+        {% else %}
+            <img src="{{ thumbnail_media }}" alt="{{ title|default('') }}" />
+        {% endif %}
+    </a>
+    {% endif %}
+
+    {% if content and not only_anchor %}
+    <div class="glightbox-desc {{ desc_id }}">
+        {{ content|raw }}
+    </div>
+    {% endif %}
+
+{% else %}
+    {# Old Mode: Content is the trigger image/content #}
+    <a href="{{ target }}" class="glightbox {{ class }}"
+       data-gallery="{{ gallery }}"
+       data-filename="{{ image }}"
+       {% if title %}data-title="{{ title }}"{% endif %}
+       {% if desc %}data-description="{{ desc }}"{% endif %}
+       {% if descPosition %}data-desc-position="{{ descPosition }}"{% endif %}
+       {% if type %}data-type="{{ type }}"{% endif %}
+       {% if effect %}data-effect="{{ effect }}"{% endif %}
+       {% if width %}data-width="{{ width }}"{% endif %}
+       {% if height %}data-height="{{ height }}"{% endif %}
+       {% if zoomable %}data-zoomable="{{ zoomable }}"{% endif %}
+       {% if draggable %}data-draggable="{{ draggable }}"{% endif %}
+       >
+        {{ content|raw }}
+    </a>
+{% endif %}

@@ -4,14 +4,23 @@ enable_quicktray: true
 enable_seo_report: true
 enable_site_seo_report: true
 enable_image_checker: true
+image_check_sequential: true
 enable_link_checker: false
 link_max_retries: 2
+link_retry_backoff_ms: 200
 link_check_timeout: 10
 link_check_whitelist:
   - github.com
+link_ignore_patterns: []
+link_respect_robots: true
+link_robots_user_agent: '*'
+link_check_concurrency_internal: 1
+link_check_concurrency_external: 4
+link_request_delay_ms: 0
 client_timeout: 30
-client_connections: 1
+client_connections: 6
 log_results: true
+detailed_logging: false
 user_agent: 'Grav SEOMagic Plugin'
 robots: all
 body_selectors:
@@ -30,6 +39,7 @@ twitter:
   username:
   card: summary_large_image
   reading_time: true
+write_keywords_meta: false
 facebook:
   enabled: true
   appid:
@@ -38,6 +48,39 @@ global_keywords: []
 autogenerate_desc: true
 autogenerate_keywords: true
 desc_summarization_method: textrank
+insecure_tls: false
+inject:
+  canonical_always: true
+  canonical_if_missing: true
+  hreflang_always: true
+  hreflang_if_missing: true
+structured_data:
+  enabled: true
+  organization:
+    enabled: true
+    name: ''
+    logo: ''
+    same_as: []
+  website:
+    enabled: true
+    search_url: ''    # e.g., /search?q={query}
+  auto_inject: true
+  breadcrumb:
+    enabled: true
+  article:
+    enabled: true
+  product:
+    enabled: false
+  event:
+    enabled: false
+score:
+  consider_injection: false
+alt_fix:
+  auto_persist: false
+  strategy: filename   # filename|title
+page_crawl_delay_ms: 100
+page_retry_attempts: 2
+page_retry_backoff_ms: 250
 images:
   auto_order: ['image_name', 'image_attribute', 'og-image', 'media_first', 'default']
   type: webshot      # auto (og-image.jpg > og-image.png > default_url) | webshot | image_name (e.g. header.jpg) | image_attribute (e.g header_image) | default URL | none
@@ -49,4 +92,3 @@ images:
   size:
     x: 1200
     y: 630
-

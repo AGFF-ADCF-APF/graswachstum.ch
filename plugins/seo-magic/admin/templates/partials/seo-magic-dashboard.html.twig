@@ -1,0 +1,196 @@
+{% set raw = seodata ?? [] %}
+{% set summary = seo_summary ?? null %}
+{% if summary is null %}
+  {% set pages = raw|length %}
+  {% set total_score = 0 %}
+  {% set summary_links = 0 %}
+  {% set summary_images = 0 %}
+  {% set summary_issues = 0 %}
+  {% for r in raw %}
+    {% set total_score = total_score + (r.score.score|default(0)) %}
+    {% set bl = r.broken_links|length %}
+    {% set bi = r.broken_images|length %}
+    {% set summary_links = summary_links + bl %}
+    {% set summary_images = summary_images + bi %}
+    {% if bl > 0 or bi > 0 %}
+      {% set summary_issues = summary_issues + 1 %}
+    {% endif %}
+  {% endfor %}
+  {% set summary = {
+    pages: pages,
+    avg: pages > 0 ? (total_score / pages)|round(0, 'common') : 0,
+    broken_pages: 0,
+    broken_links: summary_links,
+    broken_images: summary_images,
+    issues_pages: summary_issues
+  } %}
+{% endif %}
+{% set listing = seo_listing ?? {
+  rows: raw,
+  total: raw|length,
+  pages: raw|length > 0 ? 1 : 1,
+  page: 1,
+  per_page: 25,
+  sort: 'updated',
+  dir: 'desc',
+  mode: 'all',
+  query: '',
+  lang: ''
+} %}
+{% set rows = listing.rows ?? [] %}
+{% set languages = seo_languages ?? [] %}
+{% if languages is empty and raw is not empty %}
+  {% set lang_set = [] %}
+  {% for r in raw %}
+    {% set code = r.lang is defined and r.lang is not empty ? r.lang : 'default' %}
+    {% if code not in lang_set %}
+      {% set lang_set = lang_set|merge([code]) %}
+    {% endif %}
+  {% endfor %}
+  {% set languages = lang_set|sort %}
+{% endif %}
+{% set active_mode = listing.mode|default('all') %}
+<div id="seomagic-dashboard" class="admin-block">
+  <div class="seomagic-report seomagic-report__padding">
+    {% if raw is empty %}
+      <div class="alert warning">No SEO data found. Use the Re‑crawl button to generate it.</div>
+    {% else %}
+      {% set link_checker_on = grav.config.get('plugins.seo-magic.enable_link_checker') %}
+      {% set image_checker_on = grav.config.get('plugins.seo-magic.enable_image_checker') %}
+      <div class="dashboard-summary">
+        <div class="dashboard-cards">
+          <div class="card metric metric--static metric--pages">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-copy"></i></span>
+                <span class="metric__label">Pages</span>
+              </div>
+              <div class="metric__value">{{ summary.pages }}</div>
+              <div class="metric__sub">Total crawled</div>
+            </div>
+          </div>
+          <div class="card metric metric--static metric--score">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-chart-line"></i></span>
+                <span class="metric__label">Avg Score</span>
+              </div>
+              <div class="metric__value">{{ summary.avg }}%</div>
+              <div class="metric__sub">Across all pages</div>
+            </div>
+          </div>
+          <div class="card metric metric--clickable{% if active_mode == 'issues' %} metric--active{% endif %}" id="metric-issues" data-filter="issues">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-exclamation-triangle"></i></span>
+                <span class="metric__label">Pages with Issues</span>
+              </div>
+              <div class="metric__value">{{ summary.issues_pages }}</div>
+              <div class="metric__sub">Broken links or images</div>
+            </div>
+          </div>
+          <div class="card metric metric--clickable{% if not link_checker_on %} metric--disabled{% elseif active_mode == 'links' %} metric--active{% endif %}" id="metric-links" data-filter="links" title="{% if not link_checker_on %}Enable link checker in plugin settings{% endif %}">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-link"></i></span>
+                <span class="metric__label">Broken Links</span>
+              </div>
+              <div class="metric__value">{{ summary.broken_links }}</div>
+              <div class="metric__sub">{% if not link_checker_on %}Checker off{% else %}Detected sitewide{% endif %}</div>
+            </div>
+          </div>
+          <div class="card metric metric--clickable{% if not image_checker_on %} metric--disabled{% elseif active_mode == 'images' %} metric--active{% endif %}" id="metric-images" data-filter="images" title="{% if not image_checker_on %}Enable image checker in plugin settings{% endif %}">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-image"></i></span>
+                <span class="metric__label">Broken Images</span>
+              </div>
+              <div class="metric__value">{{ summary.broken_images }}</div>
+              <div class="metric__sub">{% if not image_checker_on %}Checker off{% else %}Missing or failing{% endif %}</div>
+            </div>
+          </div>
+          <div class="card metric metric--trend">
+            <div class="metric__inner">
+              <div class="metric__header">
+                <span class="metric__icon"><i class="fa fa-area-chart"></i></span>
+                <span class="metric__label">Trend (avg)</span>
+              </div>
+              <div class="metric__chart">
+                {% set hist = (seohistory|default([]))|slice(-12, 12) %}
+                {% set maxv = 0 %}
+                {% set minv = 100 %}
+                {% for item in hist %}
+                  {% set maxv = item.avg > maxv ? item.avg : maxv %}
+                  {% set minv = item.avg < minv ? item.avg : minv %}
+                {% endfor %}
+                {% set maxv = (hist|length > 0) ? maxv : 100 %}
+                {% set minv = (hist|length > 0) ? minv : 0 %}
+                {% set range = (maxv - minv) ?: 1 %}
+                {% set w = 220 %}
+                {% set h = 54 %}
+                {% if hist|length > 1 %}
+                  {% set pts = [] %}
+                  {% for i, item in hist %}
+                    {% set x = (i * (w / (hist|length - 1))) %}
+                    {% set y = h - ((item.avg - minv) / range * h) %}
+                    {% set pts = pts|merge([x ~ ',' ~ y]) %}
+                  {% endfor %}
+                  <svg viewBox="0 0 {{ w }} {{ h }}" preserveAspectRatio="none" width="100%" height="{{ h }}">
+                    <polyline fill="none" stroke="#3B8AD9" stroke-width="2.4" points="{{ pts|join(' ') }}" />
+                  </svg>
+                {% else %}
+                  <div class="metric__empty">No trend yet</div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls dashboard-controls">
+          <input type="text" id="filter-q" class="dashboard-controls__search" placeholder="Filter by title or URL" value="{{ listing.query }}" />
+          <label title="{% if not link_checker_on %}Enable link checker in plugin settings{% endif %}"><input type="checkbox" id="only-broken" {% if not link_checker_on %}disabled{% elseif active_mode == 'links' %}checked{% endif %}/> Only broken</label>
+          <label>Language
+            <select id="lang-filter" class="form-select">
+              <option value="">All</option>
+              {% for code in languages %}
+                <option value="{{ code }}"{% if code == listing.lang %} selected{% endif %}>{{ code }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label>Per page
+            <select id="per-page">
+              {% for option in [10, 25, 50, 100] %}
+                <option value="{{ option }}"{% if option == listing.per_page %} selected{% endif %}>{{ option }}</option>
+              {% endfor %}
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <table class="regular-table seomagic-report" id="seo-table" data-total="{{ listing.total }}" data-page="{{ listing.page }}" data-pages="{{ listing.pages }}" data-sort="{{ listing.sort }}" data-dir="{{ listing.dir }}" data-mode="{{ active_mode }}">
+        <thead>
+        <tr>
+          <th class="sortable" data-sort="score" style="width:10%;">Score</th>
+          <th class="sortable" data-sort="lang" style="width:8%;">Lang</th>
+          <th class="sortable" data-sort="title">Page</th>
+          <th class="sortable" data-sort="links" style="width:40%;">Links</th>
+        </tr>
+        </thead>
+        <tbody id="seo-table-body">
+          {% include 'partials/seo-magic-table-rows.html.twig' with { rows: rows, listing: listing } %}
+        </tbody>
+      </table>
+      <div class="pagination">
+        <button class="button" id="prev"{% if listing.page <= 1 %} disabled{% endif %}>Prev</button>
+        <span id="page-info">
+          {% if listing.total > 0 %}
+            Page {{ listing.page }} / {{ listing.pages }} — {{ listing.total }} rows
+          {% else %}
+            No results
+          {% endif %}
+        </span>
+        <button class="button" id="next"{% if listing.page >= listing.pages %} disabled{% endif %}>Next</button>
+      </div>
+    {% endif %}
+  </div>
+</div>

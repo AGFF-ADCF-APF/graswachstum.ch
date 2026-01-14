@@ -1,0 +1,5 @@
+{% set schemas = seomagic_structured_data() %}
+{% for schema in schemas %}
+<script type="application/ld+json">{{ schema|json_encode(constant('JSON_UNESCAPED_SLASHES') bitor constant('JSON_UNESCAPED_UNICODE')) }}</script>
+{% endfor %}
+

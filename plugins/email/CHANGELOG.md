@@ -1,3 +1,25 @@
+# v4.2.1
+## 11/24/2025
+
+1. [](#improved)
+    * Added more details for HTTP error logs when using API-based email providers
+    * Addressed a compatibility issue with Grav 1.8beta
+
+# v4.2.0
+## 08/25/2025
+
+1. [](#new)
+    * PHP 8.4 compatibility
+1. [](#improved)
+    * Vendor library updates
+
+# v4.1.2
+## 01/06/2025
+
+1. [](#improved)
+    * Updated to latest symfony libraries (`v5.4.45`)
+    * Added a note about Google App Passwords for authentication in the README.md
+
 # v4.1.1
 ## 10/28/2024
 

@@ -1,3 +1,9 @@
+# v2.6.1
+## 09/23/2025
+
+1. [](#bugfix)
+   * Register stream paths in both admin + site to stop failure if Page::content() is called in admin
+
 # v2.6.0
 ## 12/02/2024
 

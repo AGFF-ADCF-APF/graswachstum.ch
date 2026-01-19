@@ -65,7 +65,13 @@ Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_p
 [ui-accordion-item title="App Heutrocknung steuern"]
 
 [App Heutrocknung steuern](https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html)  
-[qrcode size=100]https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html[/qrcode] 
+[qrcode size=100]https://graswachstum.ch/heutrocknung[/qrcode] 
+
+[/ui-accordion-item]
+[ui-accordion-item title="apps.graswachstum.ch"]
+
+[App Heutrocknung steuern](https://apps.graswachstum.ch/v02)  
+[qrcode size=100]https://graswachstum.ch/apps[/qrcode] 
 
 [/ui-accordion-item]
 [/ui-accordion]

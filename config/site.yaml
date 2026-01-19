@@ -19,7 +19,8 @@ redirects:
   /weideeingaenge: 'https://graswachstum.ch/de/blog/2024-12-weideeingaenge'
   /agff-mb3: /resources/agff-app-fodder-value/index.html
   /ebenrain2025: ''
-  /heutrocknung: ''
+  /heutrocknung: /resources/agff-app-drycontrol/agff-dry-calc.html
+  /apps: 'https://apps.graswachstum.ch/v02'
 routes: null
 blog:
   route: /home

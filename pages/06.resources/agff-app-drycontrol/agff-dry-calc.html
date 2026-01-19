@@ -1,690 +1,906 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heutrocknungs-Planer Pro (Stricter Logic)</title>
-    <link rel="icon" href="data:image/svg+xml,&lt;svg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 24 24&#39; fill=&#39;none&#39; stroke=&#39;%233b82f6&#39; stroke-width=&#39;2&#39; stroke-linecap=&#39;round&#39; stroke-linejoin=&#39;round&#39;&gt;&lt;path d=&#39;M17.7 17.7A2.5 2.5 0 1 0 21 15H4M6.3 6.3A2.5 2.5 0 1 0 3 9H20&#39;/&gt;&lt;path d=&#39;M12 12H2&#39;/&gt;&lt;/svg&gt;">
+    <title>AGFF Cockpit Pro 43.0 (UX Polish)</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.1.0"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        input[type=number] { -moz-appearance: textfield; appearance: textfield; }
-        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        body { background-color: #f8fafc; color: #0f172a; font-family: system-ui, -apple-system, sans-serif; }
         
-        input:disabled { background-color: #f1f5f9; color: #94a3b8; cursor: not-allowed; }
-        .disabled-group { opacity: 0.6; pointer-events: none; filter: grayscale(100%); }
+        /* Sliders */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; cursor: pointer; height: 24px; margin-top: 4px; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; background: #cbd5e1; border-radius: 999px; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #3b82f6; border: 2px solid #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-top: -7px; transition: transform 0.1s; }
         
-        /* Smooth Accordion */
-        .accordion-content { transition: max-height 0.3s ease-in-out; }
+        /* Cards */
+        .step-card { background: white; border-radius: 1rem; border: 1px solid #e2e8f0; padding: 1.25rem; transition: all 0.3s; position: relative; }
+        .step-card.manual-mode { border-color: #3b82f6; box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.1); }
+        .clickable-card { cursor: pointer; transition: all 0.2s; }
+        .clickable-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: #3b82f6; }
+
+        /* Visual Stock */
+        .stock-vis-container { display: flex; flex-direction: column-reverse; gap: 2px; background: #f1f5f9; padding: 4px; border-radius: 8px; min-height: 60px; max-height: 350px; overflow-y: auto; border: 2px solid #cbd5e1; position: relative; }
+        .stock-layer { padding: 4px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-align: center; border: 1px solid rgba(0,0,0,0.1); display: flex; flex-direction: column; justify-content: center; color: white; text-shadow: 0 1px 2px rgba(0,0,0,0.2); transition: all 0.2s; cursor: ns-resize;}
+        .stock-grate { background: repeating-linear-gradient(45deg, #64748b, #64748b 10px, #475569 10px, #475569 20px); color: white; text-align: center; padding: 6px; font-size: 0.7rem; font-weight: bold; border-radius: 4px; margin-top: 4px; }
+
+        /* Dialogs - Responsive Magic */
+        dialog:not([open]) { display: none; }
+        dialog { border: none; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); z-index: 100; }
+        dialog::backdrop { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); z-index: 99; }
         
-        /* Custom Slider Thumb */
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            height: 20px; width: 20px;
-            border-radius: 50%;
-            background: #ffffff;
-            border: 2px solid currentColor;
-            cursor: pointer;
-            margin-top: -8px; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        /* Mobile Fullscreen Modals */
+        @media (max-width: 768px) {
+            dialog.mobile-fullscreen { 
+                width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh; 
+                margin: 0; border-radius: 0; 
+            }
         }
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%; height: 6px; cursor: pointer;
-            background: #cbd5e1; border-radius: 4px;
+        @media (min-width: 769px) {
+            dialog { border-radius: 1rem; max-width: 90vw; }
         }
+
+        /* Details/Summary */
+        details > summary .chevron { transition: transform 0.2s ease; }
+        details[open] > summary .chevron { transform: rotate(180deg); }
+
+        /* Tooltip */
+        .info-tooltip { position: relative; display: inline-block; }
+        .info-tooltip .tooltip-text { visibility: hidden; width: 240px; background-color: #1e293b; color: #fff; text-align: left; border-radius: 6px; padding: 10px; position: absolute; z-index: 100; bottom: 125%; right: 0; opacity: 0; transition: opacity 0.3s; pointer-events: none;}
+        .info-tooltip:hover .tooltip-text { visibility: visible; opacity: 1; }
+        
+        @keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); border-color: #ef4444; } 70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); border-color: #ef4444; } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); border-color: #e2e8f0; } }
+        .animate-attention { animation: pulse-red 2s infinite; color: #dc2626 !important; background-color: #fef2f2 !important; }
+        
+        /* Phase Timeline */
+        .phase-item { position: relative; padding-left: 24px; border-left: 2px solid #e2e8f0; padding-bottom: 24px; }
+        .phase-item:last-child { border-left: transparent; }
+        .phase-dot { position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; }
+
+        details > summary { list-style: none; outline: none; cursor: pointer; }
+        details > summary::-webkit-details-marker { display: none; }
     </style>
 </head>
-<body class="bg-slate-100 font-sans text-slate-800 p-4 md:p-6 lg:p-8">
+<body class="pb-32">
 
-    <div class="max-w-7xl mx-auto"> 
-        <header class="mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <div>
-                <h1 class="text-4xl font-extrabold text-slate-900 flex items-center gap-3 tracking-tight">
-                    <i data-lucide="wind" class="text-blue-600 w-10 h-10"></i>
-                    Heutrocknungs-Planer
-                </h1>
-                <p class="text-slate-500 mt-2 text-lg">Simulation von Aufbereitung, Wasserentzug &amp; Trocknungsstrategie</p>
+    <div class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 text-white p-2 rounded-lg shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg></div>
+                <div><h1 class="font-bold text-lg leading-none text-slate-800">Heutrocknungs-Cockpit</h1><span class="text-xs text-slate-500 font-medium">Pro Version 43.0</span></div>
             </div>
-            <div class="flex gap-6 text-sm text-slate-600 bg-white px-6 py-3 rounded-xl shadow-sm border border-slate-200">
-                 <div class="flex items-center gap-2">
-                    <i data-lucide="gauge" class="h-5 w-5 text-slate-400"></i>
-                    <span id="altitude-display" class="font-medium">600 m ü.M.</span>
-                 </div>
-                 <div class="w-px h-5 bg-slate-200"></div>
-                 <div class="font-medium" id="pressure-display">943 hPa</div>
-                 <div class="w-px h-5 bg-slate-200"></div>
-                 <div class="font-medium" id="density-display">1.17 kg/m³</div>
+            <div class="flex gap-2">
+                <button onclick="openFanModal()" id="btn-fan-modal" class="flex items-center gap-2 px-3 py-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg text-blue-700 text-sm font-semibold transition shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 12a3 3 0 0 0 0-6 3 3 0 0 0 0 6Z"/><path d="M12 12a3 3 0 0 1 0 6 3 3 0 0 1 0-6Z"/><path d="M19.07 4.93 17.66 6.34"/><path d="M19.07 19.07 17.66 17.66"/><path d="M4.93 19.07 6.34 17.66"/><path d="M4.93 4.93 6.34 6.34"/></svg> Ventilator</button>
+                <button onclick="openLayersModal()" id="btn-layers-modal" class="flex items-center gap-2 px-3 py-2 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg text-emerald-700 text-sm font-semibold transition shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg> Futterlager</button>
+                <button onclick="document.getElementById('params-modal').showModal()" class="flex items-center gap-2 px-3 py-2 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-lg text-slate-600 text-sm font-semibold transition shadow-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1-1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></button>
             </div>
-        </header>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
-            <div class="lg:col-span-4 space-y-6">
-                
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden group hover:shadow-md transition-shadow duration-300">
-                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-semibold text-slate-700 flex justify-between items-center">
-                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-blue-500"></div> 1. Aussenluft (Start)</span>
-                        <button id="camera-scan-btn" class="text-slate-400 hover:text-blue-600 transition-colors bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm" title="Wetterdaten holen">
-                            <i data-lucide="camera" class="h-4 w-4"></i>
-                        </button>
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-slate-700">
-                                    <i data-lucide="thermometer" class="h-5 w-5 text-blue-400"></i> Temperatur
-                                </label>
-                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="tIn-text" min="-10" max="45" step="0.5" value="20.0" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
-                                    <span class="text-slate-500 font-normal pr-3">°C</span>
-                                </div>
-                            </div>
-                            <input type="range" id="tIn-slider" min="-10" max="45" step="0.5" value="20" class="w-full text-blue-500">
-                            <p class="text-xs text-slate-400 mt-2">Aktuelle Lufttemperatur im Schatten.</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-slate-700">
-                                    <i data-lucide="droplets" class="h-5 w-5 text-blue-400"></i> Rel. Feuchte
-                                </label>
-                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="hIn-text" min="10" max="100" step="1" value="60" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
-                                    <span class="text-slate-500 font-normal pr-3">%</span>
-                                 </div>
-                            </div>
-                            <input type="range" id="hIn-slider" min="10" max="100" step="1" value="60" class="w-full text-blue-500">
-                            <p class="text-xs text-slate-400 mt-2">Maßgeblich für das Trocknungspotential.</p>
-                        </div>
-
-                        <div class="mt-4 pt-4 border-t border-slate-100">
-                            <button id="fetch-weather-btn" class="w-full flex items-center justify-center gap-2 px-4 py-2 bg-blue-50 text-blue-600 text-sm font-medium rounded-lg hover:bg-blue-100 transition-colors">
-                                <i data-lucide="map-pin" class="h-4 w-4"></i> Lokales Wetter laden
-                            </button>
-                            <span id="weather-status-message" class="block text-center text-xs text-slate-400 mt-1 h-4"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-amber-50 rounded-2xl shadow-sm border border-amber-100 overflow-hidden relative group hover:shadow-md transition-shadow duration-300">
-                    <div class="absolute right-0 top-0 p-4 opacity-5 pointer-events-none">
-                        <i data-lucide="sun" class="h-32 w-32"></i>
-                    </div>
-                    <div class="bg-amber-100/60 px-6 py-4 border-b border-amber-200 font-semibold text-amber-900 flex justify-between items-center">
-                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-amber-500"></div> 2. Aufbereitung (Simulation)</span>
-                    </div>
-                    <div class="p-6 relative z-10">
-                        <div class="mb-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-amber-900">
-                                    <i data-lucide="zap" class="h-5 w-5 text-amber-600"></i> Anwärmung (+ΔT)
-                                </label>
-                                <div class="flex items-center gap-2 bg-white border border-amber-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="sim-heat-text" min="0" max="30" step="0.5" value="0.0" class="w-24 text-right font-bold text-amber-900 bg-transparent py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                    <span class="text-amber-700 font-normal pr-3">°C</span>
-                                </div>
-                            </div>
-                            <input type="range" id="sim-heat-slider" min="0" max="30" step="0.5" value="0" class="w-full text-amber-600 accent-amber-600">
-                            <p class="text-xs text-amber-800/70 mt-2">Dachabsaugung oder Heizofen. <br>3°C Erwärmung senkt die rF um ca. 15%.</p>
-                        </div>
-
-                        <div class="mb-4">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-amber-900">
-                                    <i data-lucide="droplet-off" class="h-5 w-5 text-blue-600"></i> Entfeuchter (-Δx)
-                                </label>
-                                <div class="flex items-center gap-2 bg-white border border-amber-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="sim-dry-text" min="0" max="10" step="0.1" value="0.0" class="w-24 text-right font-bold text-amber-900 bg-transparent py-2 px-3 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                    <span class="text-amber-700 font-normal pr-3">g/kg</span>
-                                </div>
-                            </div>
-                            <input type="range" id="sim-dry-slider" min="0" max="10" step="0.1" value="0" class="w-full text-blue-600 accent-blue-600">
-                            <p class="text-xs text-amber-800/70 mt-2">Wasserentzug durch Kondensations-Entfeuchter.</p>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-amber-200 grid grid-cols-2 gap-4">
-                            <div>
-                                <span class="text-xs uppercase font-bold text-amber-800 tracking-wider">Zustand vor Stock</span>
-                                <div class="font-bold text-xl text-amber-900 mt-1"><span id="res-cond-temp">--</span>°C</div>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-xs uppercase font-bold text-amber-800 tracking-wider">Luftfeuchte</span>
-                                <div class="font-bold text-xl text-amber-900 mt-1"><span id="res-cond-rh">--</span>% <span class="text-sm font-normal text-amber-700">rF</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden group hover:shadow-md transition-shadow duration-300">
-                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-semibold text-slate-700 flex justify-between items-center">
-                        <span class="flex items-center gap-2"><div class="w-2 h-2 rounded-full bg-emerald-500"></div> 3. Abluft (Stock-Austritt)</span>
-                        
-                        <div class="flex items-center gap-2 bg-white px-2 py-1 rounded-full border border-slate-200 shadow-sm">
-                            <label for="checkAdiabat" class="text-xs font-medium text-slate-600 cursor-pointer select-none pl-1">Adiabatisch</label>
-                            <input type="checkbox" id="checkAdiabat" class="w-4 h-4 text-blue-600 rounded focus:ring-blue-500 cursor-pointer">
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        
-                        <div class="mb-6" id="tOut-container">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-slate-700">
-                                    <i data-lucide="thermometer" class="h-5 w-5 text-red-400"></i> Temperatur
-                                </label>
-                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="tOut-text" min="0" max="50" step="0.1" value="20.0" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
-                                    <span class="text-slate-500 font-normal pr-3">°C</span>
-                                </div>
-                            </div>
-                            <input type="range" id="tOut-slider" min="0" max="50" step="0.1" value="20" class="w-full text-red-400 accent-red-500">
-                            <p class="text-xs text-slate-400 mt-2">Temperatur oben auf dem Heustock.</p>
-                        </div>
-
-                        <div class="mb-2">
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="flex items-center gap-2 font-medium text-slate-700">
-                                    <i data-lucide="droplets" class="h-5 w-5 text-blue-400"></i> Rel. Feuchte
-                                </label>
-                                <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 rounded-lg shadow-inner overflow-hidden">
-                                    <input type="number" id="hOut-text" min="10" max="100" step="1" value="60" class="w-24 text-right font-bold text-slate-900 bg-transparent py-2 px-3 focus:outline-none focus:bg-white transition-colors">
-                                    <span class="text-slate-500 font-normal pr-3">%</span>
-                                </div>
-                            </div>
-                            <input type="range" id="hOut-slider" min="10" max="100" step="1" value="60" class="w-full text-blue-500">
-                            <p class="text-xs text-slate-400 mt-2">Das wichtigste Kriterium für den Trocknungsgrad.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                    <button id="params-toggle" class="w-full bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center hover:bg-slate-100 transition-colors">
-                        <span class="flex items-center gap-2"><i data-lucide="sliders" class="w-4 h-4"></i> 4. Anlagenparameter (Optional)</span>
-                        <i id="params-icon" data-lucide="chevron-down" class="h-4 w-4 text-slate-400 transform transition-transform duration-300"></i>
-                    </button>
-                    
-                    <div id="params-content" class="hidden p-6 bg-slate-50/50 border-t border-slate-100">
-                        <div class="mb-6">
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700">
-                                    <i data-lucide="mountain" class="h-4 w-4 text-slate-500"></i> Höhe über Meer
-                                </label>
-                                <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
-                                    <input type="number" id="altitude-text" value="600" step="10" class="w-20 text-right font-bold text-slate-900 bg-transparent py-2 px-2.5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                                    <span class="text-slate-500 font-normal pr-3">m</span>
-                                </div>
-                            </div>
-                            <input type="range" id="altitude-slider" min="0" max="2500" step="10" value="600" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-400">
-                        </div>
-                        
-                        <div class="mb-1">
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="flex items-center gap-2 text-sm font-medium text-slate-700">
-                                    <i data-lucide="wind" class="h-4 w-4 text-slate-500"></i> Luftmenge
-                                </label>
-                                <div class="flex items-center gap-2 bg-white border border-slate-200 rounded-lg shadow-sm overflow-hidden">
-                                    <input type="number" id="flowRate-text" value="10.0" step="0.5" class="w-20 text-right font-bold text-slate-900 bg-transparent py-2 px-2.5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                                    <span class="text-slate-500 font-normal pr-3">m³/s</span>
-                                </div>
-                            </div>
-                            <input type="range" id="flowRate-slider" min="0" max="100" step="0.5" value="10.0" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-400">
-                        </div>
-                    </div>
-                </div>
-
-            </div> 
-
-            <div id="results-column" class="lg:col-span-8 space-y-6">
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-4 opacity-5">
-                            <i data-lucide="droplets" class="w-16 h-16 text-blue-900"></i>
-                        </div>
-                        <div class="text-slate-500 text-xs uppercase font-bold tracking-wider mb-2">Wasserentzug</div>
-                        <div class="flex items-baseline gap-2">
-                             <span id="water-h" class="text-4xl font-extrabold text-slate-900">0.0</span>
-                             <span class="text-sm font-medium text-slate-400">kg/h</span>
-                        </div>
-                        <div class="mt-3 inline-flex items-center gap-1.5 px-2 py-1 rounded bg-blue-50 text-blue-700 text-xs font-semibold">
-                            <i data-lucide="scale" class="w-3 h-3"></i>
-                            <span id="water-m3">0.00</span> g pro m³ Luft
-                        </div>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 p-4 opacity-5">
-                            <i data-lucide="wheat" class="w-16 h-16 text-emerald-900"></i>
-                        </div>
-                        <div class="text-slate-500 text-xs uppercase font-bold tracking-wider mb-2">Heu Status (Prognose)</div>
-                        <div class="flex items-baseline gap-2">
-                             <span id="tm-value" class="text-4xl font-extrabold text-emerald-600">N/A</span>
-                             <span class="text-sm font-medium text-slate-400">% TS</span>
-                        </div>
-                        <div class="w-full bg-slate-100 rounded-full h-2 mt-4 overflow-hidden">
-                            <div id="tm-bar" class="bg-emerald-500 h-full rounded-full transition-all duration-500" style="width: 0%"></div>
-                        </div>
-                    </div>
-                    
-                    <div id="decision-box" class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-center shadow-sm transition-all duration-300">
-                         <div class="flex items-center gap-3 mb-2">
-                             <div class="p-2 rounded-full bg-white/50 backdrop-blur-sm">
-                                <i id="decision-icon" data-lucide="info" class="h-6 w-6 text-slate-500"></i>
-                             </div>
-                             <span id="decision-title" class="font-bold text-lg text-slate-700">Status</span>
-                         </div>
-                         <div id="decision-text" class="text-sm text-slate-600 leading-snug pl-1">
-                             Bitte Werte eingeben.
-                         </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[550px]">
-                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center">
-                        <span class="flex items-center gap-2"><i data-lucide="line-chart" class="w-4 h-4"></i> Trocknungspfad (h-x)</span>
-                        <div class="flex gap-4 text-xs font-medium">
-                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-blue-500 shadow-sm"></div> Aussen</div>
-                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-amber-500 shadow-sm"></div> Eintritt</div>
-                            <div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-emerald-500 shadow-sm"></div> Austritt</div>
-                        </div>
-                    </div>
-                    <div class="p-4 flex-grow relative">
-                        <canvas id="absFeuchteChart"></canvas>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-                    <div class="bg-slate-50 px-6 py-4 border-b border-slate-100 font-medium text-slate-700 flex justify-between items-center">
-                         <span class="flex items-center gap-2"><i data-lucide="clipboard-list" class="w-4 h-4"></i> Protokoll</span>
-                         <div class="space-x-2">
-                             <button id="save-measurement-btn" class="text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition-colors">Speichern</button>
-                             <button id="clear-history-btn" class="text-xs font-semibold bg-red-50 text-red-700 border border-red-200 px-3 py-1.5 rounded-lg hover:bg-red-100 transition-colors">Löschen</button>
-                         </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="h-48 w-full">
-                            <canvas id="historyChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-            </div> 
         </div>
     </div>
 
-    <script>
-    window.addEventListener('load', () => {
+    <div class="max-w-7xl mx-auto p-4 lg:p-6 space-y-6">
 
-        // --- HILFSFUNKTIONEN & PHYSIK ---
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative">
+            <div id="step-1" class="step-card active">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-slate-700 flex items-center gap-2"><span class="bg-slate-200 text-slate-600 w-6 h-6 rounded-full flex items-center justify-center text-xs">1</span> Aussenluft</h3>
+                    <button type="button" id="fetch-weather" class="text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded hover:bg-blue-100 flex gap-1 items-center font-medium border border-blue-100"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg> Meteo</button>
+                </div>
+                <div class="mb-3"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Temperatur</span> <div class="bg-slate-50 border rounded px-1"><input type="number" id="t1-in" class="bg-transparent text-right w-16 font-bold outline-none" value="20.0" step="0.1"> °C</div></div><input type="range" id="t1-slider" min="-10" max="40" step="0.1" value="20"></div>
+                <div class="mb-2"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Rel. Feuchte</span> <div class="bg-slate-50 border rounded px-1"><input type="number" id="h1-in" class="bg-transparent text-right w-16 font-bold outline-none" value="60" step="1"> %</div></div><input type="range" id="h1-slider" min="10" max="100" step="1" value="60"></div>
+                <div class="flex justify-between text-xs text-slate-500 mt-3 pt-2 border-t"><span>Wassergehalt:</span> <span id="x-1" class="font-bold text-slate-700">0.0 g/m³</span></div>
+                <div class="flex justify-between text-xs text-slate-500"><span>Sättigungsdefizit:</span> <span id="def-1" class="font-bold text-slate-700">0.0 g/m³</span></div>
+            </div>
 
-        const getSatVapPressure = (temp) => {
-            if (temp >= 0) return 6.1078 * Math.exp((17.08085 * temp) / (234.175 + temp));
-            return 6.1078 * Math.exp((17.84362 * temp) / (245.425 + temp));
-        };
-        const getAirPressure = (altitude) => 1013.25 * Math.pow(1 - 2.25577e-5 * altitude, 5.25588);
+            <div id="step-2" class="step-card">
+                <div class="flex justify-between items-center mb-4"><h3 class="font-bold text-slate-700 flex items-center gap-2"><span class="bg-amber-200 text-amber-800 w-6 h-6 rounded-full flex items-center justify-center text-xs">2</span> Zuluft (Ventilator)</h3></div>
+                <div class="mb-3"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Temperatur</span> <div class="bg-white border rounded px-1 shadow-sm"><input type="number" id="t2-in" class="bg-transparent text-right w-16 font-bold outline-none" value="20.0" step="0.1"> °C</div></div><input type="range" id="t2-slider" min="-10" max="60" step="0.1" value="20"></div>
+                <div class="mb-2"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Rel. Feuchte</span> <div class="bg-white border rounded px-1 shadow-sm"><input type="number" id="h2-in" class="bg-transparent text-right w-16 font-bold outline-none" value="60" step="1"> %</div></div><input type="range" id="h2-slider" min="10" max="100" step="1" value="60"></div>
+                <div class="flex justify-between text-xs text-slate-500 mt-3 pt-2 border-t"><span>Wassergehalt:</span> <span id="x-2" class="font-bold text-amber-600">0.0 g/m³</span></div>
+                <div class="flex justify-between text-xs text-slate-500"><span>Sättigungsdefizit:</span> <span id="def-2" class="font-bold text-amber-600">0.0 g/m³</span></div>
+            </div>
+
+            <div id="step-3" class="step-card">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-slate-700 flex items-center gap-2"><span class="bg-emerald-200 text-emerald-800 w-6 h-6 rounded-full flex items-center justify-center text-xs">3</span> Abluft (Stock)</h3>
+                    <label class="flex items-center gap-1 cursor-pointer"><input type="checkbox" id="check-adiabatic" class="accent-emerald-600 w-4 h-4" onchange="manualStep3()" checked><span class="text-[10px] font-bold text-emerald-700 uppercase">Adiabatisch</span></label>
+                </div>
+                <div class="mb-3"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Temperatur</span> <div class="bg-white border rounded px-1 shadow-sm"><input type="number" id="t3-in" class="bg-transparent text-right w-16 font-bold outline-none" value="15.0" step="0.1"> °C</div></div><input type="range" id="t3-slider" min="0" max="50" step="0.1" value="15" oninput="manualStep3()"></div>
+                <div class="mb-2"><div class="flex justify-between text-sm font-medium text-slate-600 mb-1"><span>Rel. Feuchte</span> <div class="bg-white border rounded px-1 shadow-sm"><input type="number" id="h3-in" class="bg-transparent text-right w-16 font-bold outline-none" value="90" step="1" onchange="manualStep3()"> %</div></div><input type="range" id="h3-slider" min="10" max="100" step="1" value="90" oninput="manualStep3()"></div>
+                <div class="flex justify-between text-xs text-slate-500 mt-3 pt-2 border-t"><span>Wassergehalt:</span> <span id="x-3" class="font-bold text-emerald-600">0.0 g/m³</span></div>
+                <div class="flex justify-between text-xs text-slate-500"><span>Sättigungsdefizit:</span> <span id="def-3" class="font-bold text-emerald-600">0.0 g/m³</span></div>
+                <div class="text-[10px] text-slate-400 text-center mt-1">Verdunstungskälte: <span id="cooling-effect" class="font-bold text-blue-500">0.0</span> °C</div>
+                <div id="step3-warn" class="hidden mt-2 p-2 bg-red-100 text-red-700 text-[10px] font-bold rounded animate-pulse border border-red-200">Achtung: Abluft wärmer als Zuluft!</div>
+            </div>
+        </div>
+
+        <details class="bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden group" open>
+            <summary class="p-4 font-bold text-slate-700 bg-slate-50 hover:bg-slate-100 flex justify-between items-center select-none">
+                <span>Trocknungsverlauf (h-x)</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-slate-400 group-open:rotate-180 transition-transform"><path d="m6 9 6 6 6-6"/></svg>
+            </summary>
+            <div class="p-4 h-[500px] w-full relative bg-white"><canvas id="hxChart"></canvas></div>
+        </details>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="flex flex-col gap-4">
+                <div class="step-card text-center">
+                    <div class="text-xs font-bold uppercase text-slate-400">Entzug</div>
+                    <div class="flex justify-center items-baseline gap-1 my-2"><span id="res-water" class="text-4xl font-black text-blue-600">0.0</span> <span class="text-sm font-bold text-slate-600">Liter/h</span></div>
+                    <div class="text-xs font-bold text-slate-400" id="res-water-m3">0.0 g/m³</div>
+                </div>
+                <details class="bg-blue-50 border border-blue-200 rounded-xl shadow p-4 space-y-4" open>
+                    <summary class="font-bold text-xs text-blue-900 cursor-pointer mb-2 hover:text-blue-700 flex items-center justify-between">
+                        <span>Simulation Luftaufbereitung</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="chevron text-blue-600"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
+                    <div class="relative"><div class="flex justify-between items-center text-[10px] font-bold text-blue-700 mb-1"><span class="flex items-center gap-1">Entfeuchter <span class="info-tooltip text-blue-400 cursor-help"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><div class="tooltip-text text-left">Reduziert Wasserdampfgehalt und relative Feuchte durch Kondensation.<br><br><strong>Richtwert:</strong> ~7-10 g/kg Entzug pro kWh</div></span></span><span id="disp-sim-dehum">0 kW</span></div><input type="range" id="sim-dehum" min="0" max="100" step="1" value="0" class="accent-blue-500 w-full" oninput="runSim(this.value, 'dehum')"></div>
+                    <div class="relative"><div class="flex justify-between items-center text-[10px] font-bold text-amber-700 mb-1"><span class="flex items-center gap-1">Heizung <span class="info-tooltip text-amber-400 cursor-help"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><div class="tooltip-text text-left">Erwärmt die Zuluft um Trocknungskapazität und Wasserdampfaufnahmevermögen zu erhöhen.<br><br><strong>Richtwert:</strong> ~5-8 K Temperaturanstieg pro kWh</div></span></span><span id="disp-sim-heat">0 kW</span></div><input type="range" id="sim-heat" min="0" max="200" step="5" value="0" class="accent-amber-500 w-full" oninput="runSim(this.value, 'heat')"></div>
+                </details>
+            </div>
+            <div class="lg:col-span-2 flex flex-col gap-4">
+                <div class="flex gap-4 items-stretch">
+                    <div id="fan-status-card" class="bg-slate-100 rounded-xl p-4 flex-1 text-center border relative h-full"><div class="text-xs uppercase font-bold text-slate-400">Ventilator</div><div id="fan-status-text" class="text-2xl font-black text-slate-600">---</div><div class="info-tooltip absolute top-2 right-2 text-slate-300"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><div class="tooltip-text">Empfehlung:<br>1. <60% TS oder <24h: Zwingend EIN.<br>2. Sonst: EIN wenn Entzug > 0.2g/m³.</div></div></div>
+                    
+                    <div id="phase-card" class="bg-white border rounded-xl p-4 flex-[2] relative flex flex-col justify-center clickable-card h-full" onclick="document.getElementById('phases-modal').showModal()">
+                        <div class="flex justify-between items-start mb-1">
+                            <div class="text-xs uppercase font-bold text-slate-400">Phase</div>
+                            <div class="text-blue-500 animate-pulse bg-blue-50 p-1 rounded-full"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div>
+                        </div>
+                        <div id="phase-title" class="text-xl font-bold text-slate-700">Unbekannt</div>
+                        <div id="phase-desc" class="text-xs text-slate-500 mt-1">Bitte Futterlager definieren.</div>
+                    </div>
+                    
+                    <div class="bg-white border rounded-xl p-4 w-full md:w-1/3 h-full"><div class="text-xs font-bold text-slate-400">Heuzustand</div><div class="flex items-baseline gap-1 mt-1"><span id="res-ts" class="text-2xl font-bold text-emerald-600">-</span> <span class="text-xs text-slate-500">% TS</span></div><div class="w-full bg-slate-100 rounded-full h-1 mt-2"><div id="ts-bar" class="bg-emerald-500 h-1 rounded-full" style="width: 0%"></div></div></div>
+                </div>
+                <div class="bg-white border rounded-xl p-4 text-xs space-y-2">
+                    <div class="flex justify-between"><span>Luftmenge</span><span class="font-bold flex items-center gap-2" id="res-flow-act">-</span></div>
+                    <div class="flex justify-between"><span class="flex items-center gap-1">Luftgeschwindigkeit</span><span id="res-speed">-</span></div>
+                    <div class="flex justify-between"><span class="flex items-center gap-1">Gegendruck</span><span id="res-pressure">-</span></div>
+                    <div class="flex justify-between"><span>Leistungsbedarf</span><span id="res-power">-</span></div>
+                    <div class="flex justify-between"><span>Effizienz</span><span id="res-efficiency">-</span></div>
+                    <div class="flex justify-between"><span>Kosten (Strom+Wärme)</span><span class="font-bold" id="res-cost">-</span></div>
+                    <div class="flex justify-between"><span>Kosten pro g Wasser</span><span class="font-bold text-blue-600" id="res-cost-per-gram">-</span></div>
+                </div>
+            </div>
+        </div>
         
-        const getAbsHumidity = (temp, relHum, pressure) => {
-            const satPress = getSatVapPressure(temp);
-            const vapPress = satPress * (relHum / 100);
-            return (622 * vapPress) / (pressure - vapPress); // g/kg
-        };
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden mt-2">
+            <div class="bg-slate-50 px-4 py-2 font-bold text-xs text-slate-600 flex justify-between"><span>Protokoll</span> <button onclick="clearProtocol()" class="text-red-500">Löschen</button></div>
+            <div class="max-h-40 overflow-y-auto"><table class="w-full text-xs text-left"><tbody id="protocol-body"></tbody></table></div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden mt-2">
+            <div class="bg-slate-50 px-4 py-2 font-bold text-xs text-slate-600">Verlauf Temperatur (°C)</div>
+            <div class="p-4"><canvas id="tempChart" height="160"></canvas></div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden mt-2">
+            <div class="bg-slate-50 px-4 py-2 font-bold text-xs text-slate-600">Verlauf rel. Feuchte (%)</div>
+            <div class="p-4"><canvas id="humChart" height="160"></canvas></div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden mt-2">
+            <div class="bg-slate-50 px-4 py-2 font-bold text-xs text-slate-600">Wasserentzug (g/m³ Luft)</div>
+            <div class="p-4"><canvas id="removalChart" height="140"></canvas></div>
+        </div>
+        <div class="fixed bottom-6 right-6 z-50"><button onclick="saveMeasurement()" class="w-14 h-14 bg-blue-600 rounded-full shadow-lg text-white flex items-center justify-center font-bold"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg></button></div>
+    </div>
 
-        const getRelHumidity = (temp, absHum_g_kg, pressure) => {
-             const satPress = getSatVapPressure(temp);
-             const vapPress = (absHum_g_kg * pressure) / (622 + absHum_g_kg);
-             let rh = (vapPress / satPress) * 100;
-             return Math.max(0, Math.min(100, rh));
-        };
+    <dialog id="phases-modal" class="p-0 w-full max-w-lg mobile-fullscreen">
+        <div class="p-4 border-b bg-slate-50 flex justify-between items-center"><h3 class="font-bold">Trocknungs-Phasen (nach Kittl)</h3><button onclick="document.getElementById('phases-modal').close()" class="text-slate-400 font-bold">✕</button></div>
+        <div class="p-6">
+            <div class="phase-item"><div class="phase-dot bg-blue-500"></div><h4 class="font-bold text-sm text-blue-600">1. Anwelkphase (< 60% TS)</h4><p class="text-xs text-slate-600 mt-1">Gärungsgefahr!</p><div class="mt-1 bg-blue-50 p-2 rounded text-xs font-medium text-blue-800">Regel: Dauerbetrieb, auch nachts/Regen.</div></div>
+            <div class="phase-item"><div class="phase-dot bg-amber-500"></div><h4 class="font-bold text-sm text-amber-600">2. Haupttrocknung (60 - 80% TS)</h4><p class="text-xs text-slate-600 mt-1">Wasserentzug maximieren.</p><div class="mt-1 bg-amber-50 p-2 rounded text-xs font-medium text-amber-800">Regel: Trocknen nur bei Entzug > 2 g/kg. Aufbereitung nutzen.</div></div>
+            <div class="phase-item"><div class="phase-dot bg-lime-500"></div><h4 class="font-bold text-sm text-lime-600">3. Endtrocknung (80 - 87% TS)</h4><p class="text-xs text-slate-600 mt-1">Wasser sitzt tief im Stängel.</p><div class="mt-1 bg-lime-50 p-2 rounded text-xs font-medium text-lime-800">Regel: Intervallbetrieb (z.B. 1h EIN, 3h AUS).</div></div>
+            <div class="phase-item"><div class="phase-dot bg-emerald-500"></div><h4 class="font-bold text-sm text-emerald-600">4. Lagerung (> 87% TS)</h4><div class="mt-1 bg-emerald-50 p-2 rounded text-xs font-medium text-emerald-800">Regel: Kontrolle und Kühlung.</div></div>
+        </div>
+    </dialog>
 
-        const getAirDensity = (temp, pressure) => { 
-            const gasConstantDryAir = 287.05;
-            const tempK = temp + 273.15;
-            return (pressure * 100) / (gasConstantDryAir * tempK);
-        };
+    <dialog id="params-modal" class="p-6 w-full max-w-sm mobile-fullscreen">
+        <h3 class="font-bold text-lg mb-4">Einstellungen</h3>
+        <div class="space-y-4">
+            <div><label class="text-xs font-bold text-slate-500 uppercase">Höhe über Meer (m)</label><input id="inp-alt" type="number" class="w-full border rounded p-2 font-bold" onchange="saveParams()"></div>
+            <div><label class="text-xs font-bold text-slate-500 uppercase">Strompreis (Rp./kWh)</label><input id="inp-price" type="number" class="w-full border rounded p-2 font-bold" onchange="saveParams()"></div>
+            <div><label class="text-xs font-bold text-slate-500 uppercase">Wärmepreis (Rp./kWh)</label><input id="inp-price-heat" type="number" class="w-full border rounded p-2 font-bold" onchange="saveParams()"></div>
+        </div>
+        <div class="mt-6 text-right"><button onclick="closeModal('params-modal')" class="px-4 py-2 bg-blue-600 text-white rounded font-bold">OK</button></div>
+    </dialog>
 
-        const getEnthalpy = (temp, x) => {
-            return (1.006 * temp) + (x * (2501 + 1.86 * temp) / 1000);
+    <dialog id="fan-modal" class="p-0 w-full max-w-2xl mobile-fullscreen">
+        <div class="p-4 border-b bg-slate-50 flex justify-between items-center"><h3 class="font-bold">Ventilator</h3><button onclick="closeModal('fan-modal')" class="text-slate-400 font-bold">✕</button></div>
+        <div class="p-6 space-y-4">
+            <div>
+                <label class="text-xs font-bold text-slate-500 uppercase">Lüftermodell</label>
+                <input list="fan-list" id="fan-search" class="w-full border p-2 rounded font-bold" placeholder="Modell suchen..." oninput="checkFanDB(this.value)">
+                <datalist id="fan-list"></datalist>
+                <div id="fan-import-status" class="text-xs h-4 mt-1 font-bold text-emerald-600"></div>
+            </div>
+            <div class="flex gap-2 text-xs font-bold">
+                <button onclick="setFanMode('simple')" id="btn-fan-simple" class="flex-1 py-2 border rounded">Pauschal</button>
+                <button onclick="setFanMode('curve')" id="btn-fan-curve" class="flex-1 py-2 border rounded">Kennlinie</button>
+            </div>
+            <div id="view-fan-simple">
+                <div><label class="block text-xs font-bold text-slate-500 uppercase">Luftmenge fix (m³/s)</label><input type="number" id="inp-fan-flow" class="w-full border p-2 rounded text-lg font-bold" value="10"></div>
+                <div><label class="block text-xs font-bold text-slate-500 uppercase">Maximaldruck (mbar)</label><input type="number" id="inp-fan-pmax-simple" class="w-full border p-2 rounded text-lg font-bold" value="25" placeholder="mbar"></div>
+            </div>
+            <div id="view-fan-curve" class="hidden">
+                <div class="relative w-full h-48 bg-white border rounded p-2"><canvas id="fanChart"></canvas></div>
+                <div class="grid grid-cols-2 gap-4 mb-2">
+                    <div><label class="text-xs font-bold text-slate-500">P-Max (mbar)</label><input id="inp-fan-pmax" type="number" class="w-full border p-2 rounded font-bold"></div>
+                    <div><label class="text-xs font-bold text-slate-500">Nenn (kW)</label><input id="inp-fan-nenn" type="number" class="w-full border p-2 rounded font-bold"></div>
+                </div>
+                <div class="max-h-32 overflow-y-auto border-t pt-2"><table class="w-full text-sm"><thead><tr class="bg-slate-100 text-slate-500 text-xs"><th class="p-2 text-left">Druck (mbar)</th><th class="p-2 text-left">Menge (m³/s)</th><th class="p-2 text-left">Leistung (kW)</th><th class="p-2"></th></tr></thead><tbody id="fan-curve-body"></tbody></table></div>
+                <button onclick="addFanPoint()" class="text-blue-600 text-xs font-bold mt-2">+ Punkt</button>
+            </div>
+        </div>
+        <div class="p-4 border-t text-right"><button onclick="saveFanSettings()" class="px-6 py-2 bg-blue-600 text-white rounded font-bold">Speichern</button></div>
+    </dialog>
+
+    <dialog id="layers-modal" class="p-0 w-full max-w-6xl h-[95vh] max-h-[95vh] mobile-fullscreen">
+        <div class="p-4 border-b bg-slate-50 flex justify-between items-center"><h3 class="font-bold">Futterlager</h3><button onclick="closeModal('layers-modal')" class="text-slate-400 font-bold">✕</button></div>
+        <div class="flex flex-col md:flex-row h-full overflow-hidden">
+            <div class="w-full md:w-2/3 p-4 overflow-y-auto border-r border-slate-100 bg-white">
+                <div class="mb-4 bg-slate-50 p-3 rounded-xl border border-slate-200">
+                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Grundfläche (m²)</label>
+                    <input type="number" id="inp-area" class="w-full border p-2 rounded font-bold text-lg" onchange="renderLayers()">
+                </div>
+                <div id="layers-list" class="space-y-2"></div>
+                <button onclick="addLayer()" class="w-full py-3 border-2 border-dashed border-slate-300 text-slate-400 font-bold mt-4 rounded-xl hover:text-blue-500 hover:border-blue-400 transition">+ Schicht hinzufügen</button>
+            </div>
+            <div class="w-full md:w-1/3 p-4 bg-slate-50 flex flex-col">
+                <div class="flex-grow flex flex-col justify-end relative h-48 md:h-auto">
+                    <div id="stock-vis" class="stock-vis-container w-full h-full"></div>
+                    <div class="mt-2 text-center text-xs font-bold text-slate-400 w-full border-t border-slate-200 pt-2">Gegendruck Rost: <span id="vis-pressure-zone" class="text-blue-600">0 mbar</span></div>
+                </div>
+                <div class="mt-2 grid grid-cols-2 gap-2 text-center">
+                    <div class="bg-white p-2 rounded shadow-sm"><div class="text-xs text-slate-500">Gesamthöhe</div><div class="font-bold text-lg"><span id="total-height-disp">0.00</span> m</div></div>
+                    <div class="bg-white p-2 rounded shadow-sm"><div class="text-xs text-slate-500">Gesamtmasse</div><div class="font-bold text-lg text-blue-600"><span id="total-dt-disp">0</span> dt TS</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="p-4 border-t text-right"><button onclick="saveLayers()" class="px-6 py-2 bg-emerald-600 text-white rounded font-bold">Übernehmen</button></div>
+    </dialog>
+
+    <script>
+        // --- HELPERS ---
+        function setInp(id, v) { 
+            const sl = document.getElementById(id+'-slider');
+            const inF = document.getElementById(id+'-in');
+            if(sl) sl.value = v; 
+            if(inF) inF.value = v.toFixed(id.includes('t')?1:0); 
         }
+        function safeSetText(id, val) { const el = document.getElementById(id); if(el) el.innerText = val; }
 
-        const solveTempForEnthalpy = (hZiel, rhZiel, pressure) => {
-            let tMin = -20; let tMax = 100; let tMid = 0;
-            for(let i=0; i<20; i++) {
-                tMid = (tMin + tMax) / 2;
-                let x = getAbsHumidity(tMid, rhZiel, pressure);
-                let hCurr = getEnthalpy(tMid, x);
-                if(hCurr < hZiel) tMin = tMid; else tMax = tMid;
+        // --- DATA & PHYSICS ---
+        const App = { step: 1, params: { alt: 600, price: 25, priceHeat: 10 }, layers: [], sim: { heat: 0, dehum: 0 }, vals: { t1: 20, h1: 60, t2: 20, h2: 60, t3: 15, h3: 90 }, fan: { name: 'Manuell', mode: 'simple', flow: 50, pmax: 25, kw: 15, curve: [] }, area: 100, totalHeight: 0, calculatedPressure: 0, step2Manual: false, step3Manual: false, history: [] };
+        const DENSITY_OPTS = [{ id: 'loose_l', label: 'Lose (Leicht)', tsDens: 60, pressFactor: 1.5, resistance: 120 }, { id: 'loose_m', label: 'Lose (Mittel)', tsDens: 80, pressFactor: 2.0, resistance: 200 }, { id: 'loose_h', label: 'Lose (Fest)', tsDens: 100, pressFactor: 3.5, resistance: 350 }, { id: 'bales', label: 'Rundballen', tsDens: 130, pressFactor: 6.0, resistance: 600 }];
+        const PT_COLORS = ['#3b82f6', '#f59e0b', '#10b981']; 
+        
+        const PHY = {
+            sat: t => 6.1078 * Math.exp((17.08 * t) / (234.2 + t)),
+            p: a => 1013.25 * Math.pow(1 - 2.25e-5 * a, 5.25),
+            dens: (t, p) => (p * 100) / (287.05 * (t + 273.15)),
+            abs: (t, rh, p) => (622 * PHY.sat(t) * rh / 100) / (p - PHY.sat(t) * rh / 100),
+            rel: (t, x, p) => Math.min(100, (x * p / (622 + x) / PHY.sat(t)) * 100),
+            def: (t, rh, p) => (PHY.abs(t, 100, p) - PHY.abs(t, rh, p)) * PHY.dens(t, p)
+        };
+        let hxChart, fanChart, tempChart, humChart, removalChart, fanDB = [];
+
+        window.onload = () => {
+            if(window.ChartDataLabels) Chart.register(ChartDataLabels);
+            loadData();
+            setTimeout(() => { initChart(); initHistoryCharts(); updateHistoryCharts(); update(); manualStep3(); }, 150);
+            fetch('607_Heuluefterliste_Bund_FAT.csv').then(r => r.text()).then(t => parseCSV(t)).catch(e => console.log('No DB'));
+            if(App.layers.length===1 && App.layers[0].h===2 && App.layers[0].ts===60) {
+                const btn1 = document.getElementById('btn-fan-modal'); const btn2 = document.getElementById('btn-layers-modal');
+                if(btn1) btn1.classList.add('animate-attention'); if(btn2) btn2.classList.add('animate-attention');
             }
-            return tMid;
+            const b1 = document.getElementById('btn-fan-modal'); if(b1) b1.addEventListener('click', function(){this.classList.remove('animate-attention')});
+            const b2 = document.getElementById('btn-layers-modal'); if(b2) b2.addEventListener('click', function(){this.classList.remove('animate-attention')});
+            lucide.createIcons();
+            
+            // Listeners
+            ['t1','h1','t2','h2','t3','h3'].forEach(k => {
+                const sl = document.getElementById(k+'-slider'), inp = document.getElementById(k+'-in');
+                if(sl && inp) {
+                    sl.addEventListener('input', () => { inp.value = parseFloat(sl.value).toFixed(k.includes('t')?1:0); if(k.includes('3')) manualStep3(); else if(k.includes('1')) runSim(); else update(); });
+                    inp.addEventListener('change', () => { sl.value = inp.value; if(k.includes('3')) manualStep3(); else if(k.includes('1')) runSim(); else update(); });
+                }
+            });
+            
+            // Meteo Button
+            const fetchBtn = document.getElementById('fetch-weather');
+            if(fetchBtn) {
+                fetchBtn.addEventListener('click', () => {
+                    fetchBtn.innerHTML = '<svg class="animate-spin" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Lade...';
+                    if(!navigator.geolocation) { fetchBtn.innerText = 'Kein GPS'; return; }
+                    navigator.geolocation.getCurrentPosition(async pos => {
+                        try {
+                            const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&current=temperature_2m,relative_humidity_2m`);
+                            const d = await r.json();
+                            setInp('t1', d.current.temperature_2m);
+                            setInp('h1', d.current.relative_humidity_2m);
+                            setInp('t2', d.current.temperature_2m);
+                            setInp('h2', d.current.relative_humidity_2m);
+                            setInp('t3', d.current.temperature_2m);
+                            setInp('h3', d.current.relative_humidity_2m);
+                            fetchBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> OK';
+                            setTimeout(() => fetchBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg> Meteo', 2000);
+                            update();
+                        } catch(e) { fetchBtn.innerText = 'Fehler: ' + e.message; }
+                    }, err => { fetchBtn.innerText = 'GPS Fehler'; });
+                });
+            }
+        };
+
+        function parseCSV(text) {
+            fanDB = []; const rows = text.split('\n');
+            for(let i=1; i<rows.length; i++) {
+                const c = rows[i].split(';'); if(c.length<10) continue;
+                const f = { label: c[0]+' '+c[3]+' ('+c[1]+')', kw: parseFloat(c[5]), pmax: parseFloat(c[6]), pts: [] };
+                for(let p=2; p<=8; p++) { let iv=7+(p-2)*2; let ip=8+(p-2)*2; if(c[iv]&&c[iv].trim()) f.pts.push({p:p, q:parseFloat(c[iv]), kw:parseFloat(c[ip])}); }
+                fanDB.push(f);
+                const list = document.getElementById('fan-list'); if(list) { const o = document.createElement('option'); o.value = f.label; list.appendChild(o); }
+            }
+            const st = document.getElementById('fan-import-status'); if(st) st.innerText = fanDB.length + " Lüfter geladen";
+        }
+        function checkFanDB(val) {
+            const f = fanDB.find(x => x.label === val);
+            if(f) { 
+                App.fan.name=f.label; App.fan.mode='curve'; App.fan.pmax=f.pmax; App.fan.kw=f.kw; App.fan.curve=f.pts;
+                const st = document.getElementById('fan-import-status'); if(st) st.innerText = "✓ Importiert!";
+                document.getElementById('inp-fan-pmax').value=f.pmax; document.getElementById('inp-fan-nenn').value=f.kw;
+                setFanMode('curve'); renderFanCurveTable();
+            }
         }
 
-        // --- TS BERECHNUNG (Sorptionsisotherme) ---
-        const estimateTM = (hOut) => {
-            const points = [
-                {rh: 30, tm: 92}, {rh: 40, tm: 89}, {rh: 50, tm: 88},
-                {rh: 60, tm: 86.5}, {rh: 70, tm: 82}, {rh: 80, tm: 74},
-                {rh: 90, tm: 62}, {rh: 98, tm: 40}
-            ];
-
-            if (hOut <= points[0].rh) return points[0].tm.toFixed(1); 
-            if (hOut >= points[points.length - 1].rh) return points[points.length - 1].tm.toFixed(1); 
+        // --- CORE ---
+        function loadData() {
+            const d = JSON.parse(localStorage.getItem('agff_v30'));
+            if(d) { App.params = d.params; App.layers = d.layers; App.fan = d.fan || App.fan; App.area = d.area; App.history = d.history || []; if(d.prot) document.getElementById('protocol-body').innerHTML = d.prot; }
+            // Ensure defaults for area and layers
+            if(!App.area) App.area = 100;
+            if(!App.layers || App.layers.length === 0) App.layers=[{ h: 2.0, ts: 60, type: 'loose_m', date: new Date().toISOString().split('T')[0] }];
             
-            let p1, p2;
-            for (let i = 0; i < points.length - 1; i++) {
-                if (hOut >= points[i].rh && hOut < points[i+1].rh) { 
-                    p1 = points[i]; p2 = points[i+1]; break; 
+            if(!App.params.priceHeat) App.params.priceHeat = 10;
+
+            if((!App.history || App.history.length === 0) && document.getElementById('protocol-body')) {
+                rebuildHistoryFromProtocol();
+            }
+
+            const setVal = (id, val) => { const el = document.getElementById(id); if(el) el.value = val; };
+            setVal('inp-alt', App.params.alt); setVal('inp-price', App.params.price); setVal('inp-price-heat', App.params.priceHeat); setVal('inp-area', App.area); setVal('inp-fan-flow', App.fan.flow); setVal('fan-search', App.fan.name || 'Manuell'); setVal('inp-fan-pmax-simple', App.fan.pmax || 25); setVal('inp-fan-pmax', App.fan.pmax || 30); setVal('inp-fan-nenn', App.fan.kw || 15);
+            renderFanCurveTable();
+        }
+        function saveData() { localStorage.setItem('agff_v30', JSON.stringify({ params: App.params, layers: App.layers, fan: App.fan, area: App.area, prot: document.getElementById('protocol-body').innerHTML })); }
+
+        // --- GLOBAL FUNCTIONS (HOISTED) ---
+        function evaluatePhase(removal) {
+            let minTS=100; App.layers.forEach(l=>minTS=Math.min(minTS, l.ts));
+            const phT = document.getElementById('phase-title'); const faT = document.getElementById('fan-status-text'); const faC = document.getElementById('fan-status-card');
+            const phD = document.getElementById('phase-desc');
+            
+            let fS="STOP", fC="bg-slate-100 border-slate-300 text-slate-500";
+            if(minTS < 60) { 
+                fS="DAUER (Sicherheit)"; fC="bg-red-100 border-red-300 text-red-700"; 
+                if(removal>0.2) fC="bg-emerald-100 border-emerald-300 text-emerald-700"; 
+            }
+            else { 
+                if(removal>0.2) { fS="DAUER"; fC="bg-emerald-100 border-emerald-300 text-emerald-700"; } 
+                else if(removal<-0.1) { fS="STOP (Nass)"; fC="bg-red-100 border-red-300 text-red-700"; } 
+                else { fS="INTERVALL"; fC="bg-amber-100 border-amber-300 text-amber-700"; } 
+            }
+            if(faT) faT.innerText = fS; 
+            if(faC) faC.className = "rounded-xl p-4 flex-1 text-center border relative " + fC;
+            
+            let phS = "Lager"; let phDes = "Kontrolle.";
+            if(minTS<60) { phS="1. Anwelk (<60%)"; phDes="Kritisch! Gärungsgefahr."; }
+            else if(minTS<80) { phS="2. Haupttrocknung"; phDes="Entzug maximieren."; }
+            else if(minTS<87) { phS="3. Endtrocknung"; phDes="Intervallbetrieb empfohlen."; }
+            
+            if(phT) phT.innerText = phS;
+            if(phD) phD.innerText = phDes;
+        }
+
+        function update() {
+            ['t1','h1','t2','h2','t3','h3'].forEach(k => { const el = document.getElementById(k+'-slider'); if(el) App.vals[k] = parseFloat(el.value); });
+            if(!App.step3Manual && App.step < 3) {
+                App.vals.t3 = App.vals.t2; App.vals.h3 = App.vals.h2;
+                setInp('t3', App.vals.t2); setInp('h3', App.vals.h2);
+            }
+            calcStackPressure();
+            const fanRes = calcFanPerformance();
+            const flow = fanRes.flow;
+            const flowEl = document.getElementById('res-flow-act');
+            let flowHTML = flow.toFixed(1) + " m³/s";
+            if(App.calculatedPressure > App.fan.pmax) {
+                flowHTML += '<span class="text-red-600 font-bold ml-1">⚠ ÜBERLASTET</span>';
+            }
+            if(flowEl) flowEl.innerHTML = flowHTML;
+            const p = PHY.p(App.params.alt); const rho = PHY.dens(App.vals.t1, p);
+            ['1','2','3'].forEach(n => {
+                const t = App.vals['t'+n];
+                const h = App.vals['h'+n];
+                const x_gm3 = PHY.abs(t, h, p) * PHY.dens(t, p);
+                safeSetText('def-'+n, PHY.def(t, h, p).toFixed(1) + ' g/m³');
+                safeSetText('x-'+n, x_gm3.toFixed(1) + ' g/m³');
+            });
+            const dx = PHY.abs(App.vals.t3, App.vals.h3, p) - PHY.abs(App.vals.t2, App.vals.h2, p);
+            const removal = dx * rho;
+            safeSetText('res-water', Math.max(0, removal * flow * 3600 / 1000).toFixed(1));
+            const rm3 = document.getElementById('res-water-m3');
+            if(rm3) { rm3.innerText = (removal>0?'+':'') + removal.toFixed(2) + ' g/m³'; rm3.className = removal > 0.2 ? 'text-sm font-bold text-emerald-600 mt-1' : (removal < -0.1 ? 'text-sm font-bold text-red-600 mt-1' : 'text-sm font-bold text-amber-500 mt-1'); }
+            
+            const elecCost = (fanRes.power + App.sim.dehum) * App.params.price;
+            const heatCost = App.sim.heat * App.params.priceHeat;
+            const totalCostPerHour = (elecCost + heatCost) / 100; // in CHF/h
+            safeSetText('res-cost', totalCostPerHour.toFixed(2) + " CHF/h");
+            
+            // Cost per liter of water removed
+            const waterRemovalLiterPerHour = Math.max(0, removal * flow * 3600 / 1000);
+            let costPerLiterText = '-';
+            if(waterRemovalLiterPerHour > 0.01) { // Only show if meaningful removal
+                const costPerLiter = totalCostPerHour / waterRemovalLiterPerHour; // in CHF/L = Fr./L
+                costPerLiterText = costPerLiter.toFixed(2) + " Fr./L";
+            }
+            safeSetText('res-cost-per-gram', costPerLiterText);
+            
+            const speed = flow / App.area; 
+            const speedEl = document.getElementById('res-speed');
+            if(speedEl) {
+                const speedTip = '<div class="tooltip-text text-left bg-slate-700 text-white text-[10px]"><strong>Kittl-Vorgaben (m/s):</strong><br>Optimal: 0,11 m/s<br>Minimum: 0,07 m/s (sonst Gärung)<br>Kanal-Max: 5,0 m/s (ideal 3-4)<br>Entfeuchter: 1,5-3,0 m/s<br><br>Ampel: Grün (0.07-0.13 m/s), Gelb (0.06 oder 0.13-0.2), Rot (&lt;0.06 oder &gt;0.2)</div>';
+                let speedHTML = '';
+                if(speed >= 0.07 && speed <= 0.13) {
+                    speedHTML = '<span class="info-tooltip text-green-600 font-bold text-base">✓' + speedTip + '</span> ' + speed.toFixed(2) + ' m/s';
+                } else if((speed >= 0.06 && speed < 0.07) || (speed > 0.13 && speed <= 0.2)) {
+                    speedHTML = '<span class="info-tooltip text-amber-600 font-bold text-base">⚠' + speedTip + '</span> ' + speed.toFixed(2) + ' m/s';
+                } else {
+                    speedHTML = '<span class="info-tooltip text-red-600 font-bold text-base">✗' + speedTip + '</span> ' + speed.toFixed(2) + ' m/s';
+                }
+                speedEl.innerHTML = speedHTML;
+            }
+            
+            const pressureEl = document.getElementById('res-pressure');
+            if(pressureEl) {
+                const pressureTip = '<div class="tooltip-text text-left bg-slate-700 text-white text-[10px]"><strong>⚠️ WICHTIG: Druck messen!</strong><br>Diese Berechnung basiert auf Annahmen. Der tatsächliche Gegendruck sollte mit einem Manometer gemessen werden!<br><br><strong>Herleitung:</strong><br>Δp (mbar) = Σ(h × Δp<sub>Pa/m</sub> / 100)<br>Δp<sub>Pa/m</sub> aus Dichte/Typ, TS-Korrektur<br><br><strong>Richtwerte pro Meter Höhe:</strong><br>Luzerne (stängelreich): 1.2–1.8 mbar/m<br>Heu (locker): 1.5–2.5 mbar/m<br>Heu (stark verdichtet): 3.0–4.5 mbar/m<br>Welksilage (kurz): 4.5–7.0 mbar/m<br><br>Warnung: Rot wenn &gt; pmax des Lüfters (dann Stillstand)</div>';
+                let pressureHTML = '';
+                if(App.calculatedPressure > App.fan.pmax) {
+                    pressureHTML = '<span class="info-tooltip text-red-600 font-bold text-base">✗' + pressureTip + '</span> ' + App.calculatedPressure.toFixed(1) + ' mbar';
+                } else if(App.calculatedPressure > App.fan.pmax * 0.8) {
+                    pressureHTML = '<span class="info-tooltip text-amber-600 font-bold text-base">⚠' + pressureTip + '</span> ' + App.calculatedPressure.toFixed(1) + ' mbar';
+                } else {
+                    pressureHTML = '<span class="info-tooltip text-green-600 font-bold text-base">✓' + pressureTip + '</span> ' + App.calculatedPressure.toFixed(1) + ' mbar';
+                }
+                pressureEl.innerHTML = pressureHTML;
+            }
+            const powerEl = document.getElementById('res-power');
+            const effEl = document.getElementById('res-efficiency');
+            const hydPowerKw = (App.calculatedPressure * 100 * flow) / 1000;
+            if(powerEl) {
+                if(fanRes.power > 0) powerEl.innerText = fanRes.power.toFixed(2) + ' kW';
+                else if(flow > 0 && App.calculatedPressure > 0) powerEl.innerText = hydPowerKw.toFixed(2) + ' kW';
+                else powerEl.innerText = '-';
+            }
+            if(effEl) {
+                if(fanRes.power > 0 && flow > 0 && App.calculatedPressure > 0) {
+                    const effPct = Math.min(100, Math.max(0, (hydPowerKw / fanRes.power) * 100));
+                    effEl.innerText = effPct.toFixed(0) + ' %';
+                    effEl.className = effPct >= 60 ? 'font-bold text-emerald-600' : (effPct >= 40 ? 'font-bold text-amber-600' : 'font-bold text-red-600');
+                } else {
+                    effEl.innerText = '-';
+                    effEl.className = '';
                 }
             }
-            const res = p1.tm + (hOut - p1.rh) * (p2.tm - p1.tm) / (p2.rh - p1.rh);
-            return res.toFixed(1);
-        };
-
-        const generateRelHumidityCurve = (relHum, minTemp, maxTemp, pressure) => {
-            const curve = [];
-            for (let t = minTemp; t <= maxTemp; t += 1) { 
-                const absHum_g_kg = getAbsHumidity(t, relHum, pressure);
-                curve.push({ x: t, y: absHum_g_kg });
+            const w3 = document.getElementById('step3-warn');
+            if(w3) { if(App.vals.t3 > App.vals.t2 + 0.2) w3.classList.remove('hidden'); else w3.classList.add('hidden'); }
+            
+            const t_cool = App.vals.t2 - App.vals.t3;
+            const cElem = document.getElementById('cooling-effect');
+            if(cElem) {
+                if(t_cool > 0.1) { cElem.innerText = "-" + t_cool.toFixed(1); cElem.className = "font-bold text-blue-500"; }
+                else if (t_cool < -0.1) { cElem.innerText = "+" + Math.abs(t_cool).toFixed(1); cElem.className = "font-bold text-red-500"; }
+                else { cElem.innerText = "0.0"; cElem.className = "font-bold text-slate-400"; }
             }
-            return curve;
-        };
+            const ts = estimateTS(App.vals.h3); safeSetText('res-ts', App.step >= 3 ? ts.toFixed(0) : '-'); 
+            const bar = document.getElementById('ts-bar'); if(bar) bar.style.width = App.step >= 3 ? ((ts-30)/70)*100+"%" : "0%";
+            evaluatePhase(removal); updateChart(p);
+            
+            const s2=document.getElementById('step-2'); if(s2) s2.classList.toggle('manual-mode', App.step2Manual);
+            const s3=document.getElementById('step-3'); if(s3) s3.classList.toggle('manual-mode', App.step3Manual);
+        }
 
-        // --- DOM ELEMENTE ---
-        const inputs = {
-            tIn: { slider: document.getElementById('tIn-slider'), text: document.getElementById('tIn-text') },
-            hIn: { slider: document.getElementById('hIn-slider'), text: document.getElementById('hIn-text') },
-            simHeat: { slider: document.getElementById('sim-heat-slider'), text: document.getElementById('sim-heat-text') },
-            simDry: { slider: document.getElementById('sim-dry-slider'), text: document.getElementById('sim-dry-text') },
-            tOut: { slider: document.getElementById('tOut-slider'), text: document.getElementById('tOut-text') },
-            hOut: { slider: document.getElementById('hOut-slider'), text: document.getElementById('hOut-text') },
-            altitude: { slider: document.getElementById('altitude-slider'), text: document.getElementById('altitude-text') },
-            flowRate: { slider: document.getElementById('flowRate-slider'), text: document.getElementById('flowRate-text') },
-            checkAdiabat: document.getElementById('checkAdiabat')
-        };
+        // --- SIMULATION PHYSICS (FIXED) ---
+        function runSim(v, t) { 
+            if(t){ App.sim[t]=parseFloat(v); document.getElementById('disp-sim-'+t).innerText=v+' kW'; } 
+            
+            const fanRes = calcFanPerformance(); 
+            const flow_m3s = Math.max(0.5, fanRes.flow); 
+            const p = PHY.p(App.params.alt); 
+            const rho = PHY.dens(App.vals.t1, p);
+            const m_dot = flow_m3s * rho; 
+            const cp = 1.006; 
+            const lv = 2450; 
+            
+            const dt_heat = App.sim.heat / (m_dot * cp);
+            
+            const efficiency = 1.8; 
+            const m_water_extracted = (App.sim.dehum * efficiency) / 3600; 
+            const q_cond = m_water_extracted * lv; 
+            const q_total_dehum = App.sim.dehum + q_cond; 
+            const dt_dehum = q_total_dehum / (m_dot * cp);
+            const dx_dehum = (m_water_extracted / m_dot) * 1000; 
 
-        const outputs = {
-            resCondTemp: document.getElementById('res-cond-temp'),
-            resCondRh: document.getElementById('res-cond-rh'),
-            waterH: document.getElementById('water-h'),
-            waterM3: document.getElementById('water-m3'),
-            tmValue: document.getElementById('tm-value'),
-            tmBar: document.getElementById('tm-bar'),
-            decisionBox: document.getElementById('decision-box'),
-            decisionTitle: document.getElementById('decision-title'),
-            decisionText: document.getElementById('decision-text'),
-            decisionIcon: document.getElementById('decision-icon'),
-            tOutContainer: document.getElementById('tOut-container'),
-            headerInfo: {
-                alt: document.getElementById('altitude-display'),
-                press: document.getElementById('pressure-display'),
-                dens: document.getElementById('density-display')
+            const tN = App.vals.t1 + dt_heat + dt_dehum;
+            const x1 = PHY.abs(App.vals.t1, App.vals.h1, p);
+            const xN = Math.max(1, x1 - dx_dehum); 
+            const hN = PHY.rel(tN, xN, p);
+
+            if(!App.step2Manual) { App.vals.t2 = tN; App.vals.h2 = hN; setInp('t2', tN); setInp('h2', hN); }
+            // Only sync t3/h3 to t2/h2 on initial setup (when no simulation running), not during sim changes
+            if(!App.step3Manual && App.sim.dehum === 0 && App.sim.heat === 0) { App.vals.t3 = App.vals.t2; App.vals.h3 = App.vals.h2; setInp('t3', App.vals.t3); setInp('h3', App.vals.h3); }
+            update(); 
+        }
+
+        // Adiabatic Logic
+        function calcAdiabaticT(tS, hS, p, tRH) {
+            const xS = PHY.abs(tS, hS, p)/1000; // kg/kg
+            const entS = 1.006 * tS + xS * (2501 + 1.86 * tS);
+            let t = tS;
+            for(let i=0; i<200; i++) {
+               t -= 0.1; 
+               const xReq = (entS - 1.006 * t) / (2501 + 1.86 * t);
+               const rhCalc = PHY.rel(t, xReq*1000, p);
+               if(rhCalc >= tRH) return t;
+               if(t < -10) break;
             }
-        };
+            return t;
+        }
 
-        // --- UI Logic Accordion ---
-        const paramsToggle = document.getElementById('params-toggle');
-        const paramsContent = document.getElementById('params-content');
-        const paramsIcon = document.getElementById('params-icon');
-
-        paramsToggle.addEventListener('click', () => {
-            paramsContent.classList.toggle('hidden');
-            if (paramsContent.classList.contains('hidden')) {
-                paramsIcon.style.transform = 'rotate(0deg)';
-            } else {
-                paramsIcon.style.transform = 'rotate(180deg)';
+        function manualStep3() { 
+            const chk = document.getElementById('check-adiabatic');
+            if(chk && chk.checked) {
+                const trh = parseFloat(document.getElementById('h3-slider').value); const p = PHY.p(App.params.alt);
+                const t3 = calcAdiabaticT(App.vals.t2, App.vals.h2, p, trh);
+                setInp('t3', t3);
+                App.vals.t3 = t3; 
             }
-        });
+            App.step3Manual=true; activateStep(3); 
+        }
 
-        // --- CHART SETUP ---
-        const ctx = document.getElementById('absFeuchteChart').getContext('2d');
-        const absFeuchteChart = new Chart(ctx, {
-            type: 'line', 
-            data: {
-                datasets: [
-                    ...[100, 90, 80, 70, 60, 50, 40, 30, 20, 10].map((rh, i) => ({
-                        label: rh + '% rF', data: [], borderColor: rh === 100 ? 'rgba(59, 130, 246, 0.3)' : 'rgba(148, 163, 184, 0.2)',
-                        borderWidth: rh === 100 ? 2 : 1, pointRadius: 0, fill: false, tension: 0.3
-                    })),
-                    {
-                        label: 'Prozesspunkte', data: [], pointBackgroundColor: ['#3b82f6', '#f59e0b', '#10b981'],
-                        pointBorderColor: '#fff', pointRadius: 8, showLine: false
+        function activateStep(s, copy) { 
+            App.step=s; 
+            const el = document.getElementById('step-'+s);
+            if(el) { el.classList.remove('disabled'); el.classList.add('active'); }
+            if(copy) {
+                if(s==2) runSim(0,null);
+                if(s==3) { 
+                    const t2 = parseFloat(document.getElementById('t2-slider').value); const h2 = parseFloat(document.getElementById('h2-slider').value);
+                    setInp('t3', t2); setInp('h3', h2);
+                    App.step3Manual = true;
+                }
+            }
+            update(); 
+        }
+
+        function calcStackPressure() { let p = 0; let h = 0; App.layers.forEach(l => { h += l.h; let f = DENSITY_OPTS.find(o => o.id === l.type)?.pressFactor || 1.5; if(l.ts < 60) f *= 1.5; else if(l.ts > 85) f *= 0.8; p += l.h * f; }); App.totalHeight = h; App.calculatedPressure = p; safeSetText('res-pressure', p.toFixed(1) + " mbar"); safeSetText('vis-pressure-zone', p.toFixed(1) + " mbar"); }
+        function calcFanPerformance() {
+            const pMax = App.fan.pmax || 25; const cP = App.calculatedPressure;
+            if (cP >= pMax) return { flow: 0, power: 0 }; 
+            if (App.fan.mode === 'simple') { const f = App.fan.flow; return { flow: f, power: (f * cP*100) / 0.6 / 1000 }; }
+            const pts = App.fan.curve.sort((a,b) => a.p - b.p); if(pts.length < 1) return { flow: App.fan.flow, power: (App.fan.flow * cP*100)/600 };
+            const interpolate = (x, a, b, k) => b.p === a.p ? a[k] : a[k] + (b[k] - a[k]) * ((x - a.p) / (b.p - a.p));
+            let p1 = pts[0], p2 = pts[pts.length-1], found=false;
+            if (cP < p1.p) { p2=p1; p1={p:0, q:p1.q, kw:p1.kw}; } 
+            else { for(let i=0; i<pts.length-1; i++) { if(cP>=pts[i].p && cP<=pts[i+1].p) { p1=pts[i]; p2=pts[i+1]; found=true; break; } } if(!found) { p1=pts[pts.length-1]; p2={p:pMax, q:0, kw:0}; } }
+            const q = Math.max(0, interpolate(cP, p1, p2, 'q'));
+            let kw = 0; if(pts.some(pt => pt.kw > 0)) { if(p2.kw===undefined) p2.kw=0; if(p1.kw===undefined) p1.kw=(p1.q*p1.p*100)/600/1000; kw = Math.max(0, interpolate(cP, p1, p2, 'kw')); } else { kw = (q * cP*100) / 0.6 / 1000; }
+            return { flow: q, power: kw };
+        }
+
+        // --- FAN CHART ---
+        function openFanModal() { document.getElementById('fan-modal').showModal(); setTimeout(updateFanChart, 50); setFanMode(App.fan.mode); document.getElementById('btn-fan-modal').classList.remove('animate-attention');}
+        
+        function initFanChart() {}
+        function updateFanChart() {
+            // Re-Init chart every time to fit modal
+            const cvs = document.getElementById('fanChart');
+            if(!cvs) return;
+            
+            if(fanChart) fanChart.destroy();
+
+            const ctx = cvs.getContext('2d');
+            fanChart = new Chart(ctx, {
+                type: 'line',
+                data: { datasets: [] },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins:{legend:{display:true}, datalabels: {display: false}},
+                    scales: { 
+                        x: { type: 'linear', title: {display:true, text:'Menge m³/s'} }, 
+                        y: { type: 'linear', position: 'left', title: {display:true, text:'Druck mbar'} }, 
+                        y1: { type: 'linear', position: 'right', title: {display:true, text:'Leistung kW'}, grid: {drawOnChartArea:false} } 
                     }
-                ]
-            },
-            options: {
-                responsive: true, maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: {
-                        callbacks: {
-                            label: (ctx) => {
-                                const labels = ['1. Aussenluft', '2. Stock-Eintritt', '3. Stock-Austritt'];
-                                const p = ctx.raw;
-                                return `${labels[ctx.dataIndex] || ''}: ${p.x.toFixed(1)}°C, ${p.rh.toFixed(0)}% rF, ${p.y.toFixed(1)} g/kg`;
+                }
+            });
+            
+            const dataP = App.fan.curve.map(p => ({x:p.q, y:p.p})).sort((a,b)=>a.x-b.x);
+            const dataK = App.fan.curve.map(p => ({x:p.q, y:p.kw})).sort((a,b)=>a.x-b.x);
+            
+            fanChart.data.datasets = [
+                { label: 'Druck (mbar)', data: dataP, borderColor: '#3b82f6', yAxisID: 'y', tension:0.2 },
+                { label: 'Leistung (kW)', data: dataK, borderColor: '#ef4444', yAxisID: 'y1', tension:0.2 }
+            ];
+            fanChart.update();
+        }
+
+        function setFanMode(m) { 
+            App.fan.mode = m; 
+            const btnSimple = document.getElementById('btn-fan-simple');
+            const btnCurve = document.getElementById('btn-fan-curve');
+            if(btnSimple) btnSimple.className = m=='simple' ? "flex-1 py-2 rounded-lg font-bold border-2 border-blue-500 bg-blue-50 text-blue-700" : "flex-1 py-2 rounded-lg font-bold border-2 border-slate-200 text-slate-500"; 
+            if(btnCurve) btnCurve.className = m=='curve' ? "flex-1 py-2 rounded-lg font-bold border-2 border-blue-500 bg-blue-50 text-blue-700" : "flex-1 py-2 rounded-lg font-bold border-2 border-slate-200 text-slate-500"; 
+            document.getElementById('view-fan-simple').className = m=='simple' ? '' : 'hidden'; 
+            document.getElementById('view-fan-curve').className = m=='curve' ? '' : 'hidden'; 
+            if(m=='curve') setTimeout(updateFanChart, 50); 
+        }
+
+        // --- CHART HX ---
+        function initChart() { 
+            if(hxChart) hxChart.destroy();
+            const ctx=document.getElementById('hxChart').getContext('2d'); 
+            hxChart=new Chart(ctx,{
+                type: 'line', data:{datasets:[]},
+                options: {
+                    aspectRatio: 2, maintainAspectRatio: false,
+                    layout: { padding: { right: 35 } },
+                    plugins: {
+                        legend: { 
+                            display: true, 
+                            position: 'top',
+                            labels: {
+                                usePointStyle: true, 
+                                filter: function(item, chart) {
+                                    return ['Aussen', 'Zuluft', 'Abluft'].includes(item.text);
+                                }
                             }
+                        },
+                        tooltip: { enabled: true, callbacks: { label: c => `${c.dataset.label||''}: ${c.parsed.x.toFixed(1)}° / ${c.parsed.y.toFixed(1)} g/m³` } },
+                        datalabels: {
+                            display: function(context) { 
+                                return context.datasetIndex < 10 && context.dataIndex === context.dataset.data.length - 1; 
+                            },
+                            align: 'right', anchor: 'center', clip: false, 
+                            backgroundColor: 'rgba(255,255,255,0.7)', borderRadius: 4,
+                            formatter: function(value, context) { return context.dataset.label; },
+                            color: '#64748b', font: { size: 10, weight: 'bold' }
                         }
                     },
-                    annotation: {
-                        annotations: {
-                            arrow1: { type: 'line', borderColor: '#f59e0b', borderWidth: 2, arrowHeads: { end: { display: true, fill: true } } },
-                            arrow2: { type: 'line', borderColor: '#10b981', borderWidth: 2, arrowHeads: { end: { display: true, fill: true } } }
-                        }
-                    }
-                },
-                scales: {
-                    x: { type: 'linear', min: -10, max: 55, title: { display: true, text: 'Temperatur (°C)' } },
-                    y: { min: 0, max: 25, title: { display: true, text: 'Abs. Feuchte (g/kg)' } }
+                    scales: { x: { type: 'linear', min: -5, max: 45, title: { display: true, text: 'Temperatur °C' } }, y: { min: 0, max: 25, title: { display: true, text: 'Wassergehalt g/m³' } } }
                 }
-            }
-        });
-
-        // --- MAIN LOGIC ---
-        let isCalculating = false;
-
-        function calculateResults() {
-            if(isCalculating) return;
-            isCalculating = true;
-
-            const tIn = parseFloat(inputs.tIn.text.value);
-            const hIn = parseFloat(inputs.hIn.text.value);
-            const simHeat = parseFloat(inputs.simHeat.text.value);
-            const simDry = parseFloat(inputs.simDry.text.value);
-            const hOut = parseFloat(inputs.hOut.text.value);
-            const alt = parseFloat(inputs.altitude.text.value);
-            const flow = parseFloat(inputs.flowRate.text.value);
-            const isAdiabat = inputs.checkAdiabat.checked;
-
-            const press = getAirPressure(alt);
-            const dens = getAirDensity(tIn, press);
-
-            // 1. Aussen
-            const x1 = getAbsHumidity(tIn, hIn, press);
-
-            // 2. Eintritt
-            const t2 = tIn + simHeat;
-            const x2 = Math.max(0, x1 - simDry);
-            const h2 = getRelHumidity(t2, x2, press);
-            const enth2 = getEnthalpy(t2, x2);
-
-            // 3. Austritt
-            let tOut = parseFloat(inputs.tOut.text.value);
+            }); 
+        }
+        function updateChart(p) {
+            const ds=[]; 
+            // 1. Background Lines (10-100%) - Indices 0-9
+            [10,20,30,40,50,60,70,80,90,100].forEach(rh=>{ 
+                // y in g/m³: absolute humidity (g/kg) * air density (kg/m³)
+                const d=[]; for(let t=-5;t<=50;t+=5) d.push({x:t,y:PHY.abs(t,rh,p)*PHY.dens(t,p)}); 
+                let c='rgba(0,0,0,0.06)', w=1; if(rh==100){c='#3b82f6';w=2;}
+                ds.push({ label:rh+'%',data:d,borderColor:c,borderWidth:w,pointRadius:0,tension:0.4 }); 
+            });
             
-            if (isAdiabat) {
-                inputs.tOut.text.disabled = true;
-                inputs.tOut.slider.disabled = true;
-                outputs.tOutContainer.classList.add('disabled-group');
-                tOut = solveTempForEnthalpy(enth2, hOut, press);
-                inputs.tOut.text.value = tOut.toFixed(1);
-                inputs.tOut.slider.value = tOut.toFixed(1);
-            } else {
-                inputs.tOut.text.disabled = false;
-                inputs.tOut.slider.disabled = false;
-                outputs.tOutContainer.classList.remove('disabled-group');
-            }
+            // 2. Process Line (Index 10) - Hidden from legend by filter
+            const pts=[];
+            // points in g/m³
+            pts.push({x:App.vals.t1, y:PHY.abs(App.vals.t1,App.vals.h1,p)*PHY.dens(App.vals.t1,p)});
+            pts.push({x:App.vals.t2, y:PHY.abs(App.vals.t2,App.vals.h2,p)*PHY.dens(App.vals.t2,p)});
+            pts.push({x:App.vals.t3, y:PHY.abs(App.vals.t3,App.vals.h3,p)*PHY.dens(App.vals.t3,p)});
+            ds.push({ label: 'Prozess', data:pts, borderColor:'#10b981', pointBackgroundColor: PT_COLORS, pointBorderColor: PT_COLORS, pointBorderWidth: 2, pointRadius: 6, showLine: true, tension: 0 });
 
-            const x3 = getAbsHumidity(tOut, hOut, press);
+            // 3. DUMMY Datasets for Legend (Indices 11, 12, 13)
+            ds.push({ label: 'Aussen', data: [], backgroundColor: PT_COLORS[0], borderColor: PT_COLORS[0], pointRadius: 6 });
+            ds.push({ label: 'Zuluft', data: [], backgroundColor: PT_COLORS[1], borderColor: PT_COLORS[1], pointRadius: 6 });
+            ds.push({ label: 'Abluft', data: [], backgroundColor: PT_COLORS[2], borderColor: PT_COLORS[2], pointRadius: 6 });
 
-            // Ergebnisse
-            const deltaX = x3 - x2; 
-            const waterPerM3 = deltaX * dens;
-            const waterTotal = (waterPerM3 / 1000) * flow * 3600;
-            const ts = estimateTM(hOut);
-
-            // STATUS LOGIK (VERSCHÄRFT)
-            let status = { color: 'bg-slate-50 border-slate-200', icon: 'info', title: 'Bereit / Standby', text: 'Momentan kein nennenswerter Wasserentzug.', iconColor: 'text-slate-400' };
-            
-            // 1. Rückbefeuchtung
-            if (deltaX < -0.1) {
-                 status = { color: 'bg-red-50 border-red-200', icon: 'alert-triangle', title: 'Rückbefeuchtung!', text: 'Achtung: Heu nimmt Wasser auf! Heizung einschalten oder stoppen.', iconColor: 'text-red-600' };
-            } 
-            // 2. Lagerfähig (Streng: <= 55%)
-            else if (hOut <= 55) {
-                 status = { color: 'bg-emerald-50 border-emerald-200', icon: 'check-circle', title: 'Heu ist Trocken', text: `Abluft sehr trocken (${hOut}%). Ziel erreicht (Lagerstabil).`, iconColor: 'text-emerald-600' };
-            } 
-            // 3. Endphase (55-65%)
-            else if (hOut <= 65) {
-                 status = { color: 'bg-lime-50 border-lime-200', icon: 'check', title: 'Endphase / Nahezu lagerfähig', text: `Werte sind gut (${hOut}%), aber Heu gibt noch Feuchte ab. Dranbleiben.`, iconColor: 'text-lime-600' };
-            } 
-            // 4. Intervall
-            else if (hIn > 85 && simHeat === 0 && hOut > 65) {
-                status = { color: 'bg-yellow-50 border-yellow-200', icon: 'fan', title: 'Intervallbelüftung', text: 'Aussenluft zu feucht zum Trocknen. Nur kühlen (Intervall), um Erwärmung zu vermeiden.', iconColor: 'text-yellow-600' };
-            }
-            // 5. Nass
-            else if (hOut > 85) {
-                 status = { color: 'bg-amber-50 border-amber-200', icon: 'cloud-rain', title: 'Heu ist Feucht', text: `Abluft fast gesättigt (${hOut}%).`, iconColor: 'text-amber-600' };
-            } 
-            // 6. Normalbetrieb (Trocknung > 65%)
-            else if (deltaX > 0.1) {
-                 status = { color: 'bg-blue-50 border-blue-200', icon: 'activity', title: 'Trocknung läuft', text: 'Wasser wird entzogen (Haupttrocknungsphase).', iconColor: 'text-blue-600' };
-            }
-            else {
-                 status = { color: 'bg-slate-50 border-slate-200', icon: 'minus-circle', title: 'Keine Trocknung', text: 'Gleichgewicht: Kein Wasserentzug (Delta ≈ 0g).', iconColor: 'text-slate-500' };
-            }
-
-            isCalculating = false;
-            return { p1: { x: tIn, y: x1, rh: hIn }, p2: { x: t2, y: x2, rh: h2, enth: enth2 }, p3: { x: tOut, y: x3, rh: hOut }, res: { waterPerM3, waterTotal, ts, dens, press }, status };
+            hxChart.data.datasets=ds; hxChart.update('none');
         }
 
-        function updateUI() {
-            const data = calculateResults();
-            if(!data) return; 
+        function initHistoryCharts() {
+            const tempCvs = document.getElementById('tempChart');
+            const humCvs = document.getElementById('humChart');
+            const removalCvs = document.getElementById('removalChart');
+            if(tempChart) tempChart.destroy();
+            if(humChart) humChart.destroy();
+            if(removalChart) removalChart.destroy();
 
-            outputs.headerInfo.alt.textContent = inputs.altitude.text.value + " m";
-            outputs.headerInfo.press.textContent = Math.round(data.res.press) + " hPa";
-            outputs.headerInfo.dens.textContent = data.res.dens.toFixed(2) + " kg/m³";
-
-            outputs.resCondTemp.textContent = data.p2.x.toFixed(1);
-            outputs.resCondRh.textContent = data.p2.rh.toFixed(0);
-
-            outputs.waterH.textContent = data.res.waterTotal.toFixed(1);
-            outputs.waterM3.textContent = data.res.waterPerM3.toFixed(2);
-            outputs.waterM3.className = `font-bold ${data.res.waterPerM3 > 0 ? 'text-blue-600' : 'text-red-500'}`;
-
-            outputs.tmValue.textContent = data.res.ts;
-            outputs.tmBar.style.width = Math.min(100, Math.max(0, (parseFloat(data.res.ts)-50)*2)) + "%";
-
-            // Status Box
-            outputs.decisionBox.className = `p-6 rounded-2xl border flex flex-col justify-center shadow-sm transition-all duration-300 ${data.status.color}`;
-            outputs.decisionTitle.textContent = data.status.title;
-            outputs.decisionTitle.className = `font-bold text-lg ${data.status.iconColor.replace('text-', 'text-slate-')}`; 
-            outputs.decisionTitle.style.color = ''; 
-            
-            outputs.decisionText.textContent = data.status.text;
-            outputs.decisionIcon.setAttribute('data-lucide', data.status.icon);
-            outputs.decisionIcon.className = `h-6 w-6 ${data.status.iconColor}`;
-            lucide.createIcons();
-
-            // Chart
-            const maxTemp = Math.max(50, data.p2.x + 5);
-            absFeuchteChart.options.scales.x.max = maxTemp;
-            for(let i=0; i<10; i++) {
-                absFeuchteChart.data.datasets[i].data = generateRelHumidityCurve(100 - i*10, -10, maxTemp, data.res.press);
+            if(tempCvs) {
+                tempChart = new Chart(tempCvs.getContext('2d'), {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: true, position: 'bottom' }, datalabels: { display: false } },
+                        scales: { x: { ticks: { autoSkip: true, maxRotation: 0 }, grid: { display: false } }, y: { title: { display: true, text: '°C' } } }
+                    }
+                });
             }
-            absFeuchteChart.data.datasets[10].data = [data.p1, data.p2, data.p3];
-            
-            const ann = absFeuchteChart.options.plugins.annotation.annotations;
-            ann.arrow1.xMin = data.p1.x; ann.arrow1.yMin = data.p1.y; ann.arrow1.xMax = data.p2.x; ann.arrow1.yMax = data.p2.y;
-            ann.arrow2.xMin = data.p2.x; ann.arrow2.yMin = data.p2.y; ann.arrow2.xMax = data.p3.x; ann.arrow2.yMax = data.p3.y;
 
-            absFeuchteChart.update();
+            if(humCvs) {
+                humChart = new Chart(humCvs.getContext('2d'), {
+                    type: 'line',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: true, position: 'bottom' }, datalabels: { display: false } },
+                        scales: { x: { ticks: { autoSkip: true, maxRotation: 0 }, grid: { display: false } }, y: { min: 0, max: 100, title: { display: true, text: '%' } } }
+                    }
+                });
+            }
+
+            if(removalCvs) {
+                removalChart = new Chart(removalCvs.getContext('2d'), {
+                    type: 'bar',
+                    data: { labels: [], datasets: [] },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            datalabels: { display: true, color: '#0f172a', anchor: 'end', align: 'end', formatter: v => v.toFixed(1) }
+                        },
+                        scales: { x: { ticks: { autoSkip: true, maxRotation: 0 }, grid: { display: false } }, y: { title: { display: true, text: 'g/m³' } } }
+                    }
+                });
+            }
         }
 
-        // --- HISTORY CHART ---
-        const hCtx = document.getElementById('historyChart').getContext('2d');
-        const historyChart = new Chart(hCtx, {
-            type: 'line', data: { labels: [], datasets: [{ label: 'Entzug (kg/h)', data: [], borderColor: '#10b981', tension: 0.1, fill: true, backgroundColor: 'rgba(16, 185, 129, 0.1)' }] },
-            options: { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } }, plugins: { legend: { display: false } } }
-        });
+        function updateHistoryCharts() {
+            const labels = App.history.map(h => h.time);
+            const t1 = App.history.map(h => h.t1);
+            const t2 = App.history.map(h => h.t2);
+            const t3 = App.history.map(h => h.t3);
+            const h1 = App.history.map(h => h.h1);
+            const h2 = App.history.map(h => h.h2);
+            const h3 = App.history.map(h => h.h3);
+            const removal = App.history.map(h => h.removalGm3 ?? 0);
 
-        document.getElementById('save-measurement-btn').addEventListener('click', () => {
-            const res = calculateResults().res;
-            const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            historyChart.data.labels.push(time);
-            historyChart.data.datasets[0].data.push(res.waterTotal);
-            if(historyChart.data.labels.length > 20) { historyChart.data.labels.shift(); historyChart.data.datasets[0].data.shift(); }
-            historyChart.update();
-        });
-        document.getElementById('clear-history-btn').addEventListener('click', () => {
-            historyChart.data.labels = []; historyChart.data.datasets[0].data = []; historyChart.update();
-        });
-
-        // --- EVENT BINDING ---
-        Object.values(inputs).forEach(grp => {
-            if(grp.slider) {
-                const update = () => {
-                    grp.text.value = parseFloat(grp.slider.value).toFixed(grp.slider.step.includes('.') ? 1 : 0);
-                    updateUI();
-                };
-                grp.slider.addEventListener('input', update);
-                grp.text.addEventListener('change', () => { grp.slider.value = grp.text.value; updateUI(); });
+            if(tempChart) {
+                tempChart.data.labels = labels;
+                tempChart.data.datasets = [
+                    { label: 'T1', data: t1, borderColor: '#3b82f6', backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 },
+                    { label: 'T2', data: t2, borderColor: '#f59e0b', backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 },
+                    { label: 'T3', data: t3, borderColor: '#10b981', backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 }
+                ];
+                tempChart.update('none');
             }
-        });
 
-        inputs.checkAdiabat.addEventListener('change', updateUI);
+            if(humChart) {
+                humChart.data.labels = labels;
+                humChart.data.datasets = [
+                    { label: 'H1', data: h1, borderColor: '#3b82f6', borderDash: [6,4], backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 },
+                    { label: 'H2', data: h2, borderColor: '#f59e0b', borderDash: [6,4], backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 },
+                    { label: 'H3', data: h3, borderColor: '#10b981', borderDash: [6,4], backgroundColor: 'transparent', tension: 0.2, spanGaps: true, pointRadius: 2 }
+                ];
+                humChart.update('none');
+            }
 
-        document.getElementById('camera-scan-btn').addEventListener('click', () => alert("Kamera-Funktion (Demo)"));
-        document.getElementById('fetch-weather-btn').addEventListener('click', () => {
-             const status = document.getElementById('weather-status-message');
-             status.textContent = "Ortung...";
-             if(!navigator.geolocation) { status.textContent = "Kein GPS"; return; }
-             navigator.geolocation.getCurrentPosition(async (pos) => {
-                 status.textContent = "Lade...";
-                 try {
-                     const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&current=temperature_2m,relative_humidity_2m`);
-                     const d = await r.json();
-                     
-                     // ZULUFT UPDATE
-                     inputs.tIn.slider.value = d.current.temperature_2m;
-                     inputs.tIn.text.value = d.current.temperature_2m;
-                     inputs.hIn.slider.value = d.current.relative_humidity_2m;
-                     inputs.hIn.text.value = d.current.relative_humidity_2m;
+            if(removalChart) {
+                removalChart.data.labels = labels;
+                const colors = removal.map(v => v < 0 ? '#ef4444' : '#3b82f6');
+                removalChart.data.datasets = [
+                    { label: 'Wasserentzug', data: removal, backgroundColor: colors,
+                      datalabels: { color: '#0f172a', anchor: 'end', align: 'end', formatter: v => v.toFixed(1) } }
+                ];
+                removalChart.update('none');
+            }
+        }
 
-                     // ABLUFT UPDATE (Sync mit Zuluft)
-                     inputs.tOut.slider.value = d.current.temperature_2m;
-                     inputs.tOut.text.value = d.current.temperature_2m;
-                     inputs.hOut.slider.value = d.current.relative_humidity_2m;
-                     inputs.hOut.text.value = d.current.relative_humidity_2m;
-
-                     updateUI();
-                     status.textContent = "Aktualisiert";
-                 } catch(e) { status.textContent = "Fehler"; }
-             });
-        });
-
-        // Beim Starten: Abluft = Zuluft syncen
-        const initSync = () => {
-            inputs.tOut.slider.value = inputs.tIn.slider.value;
-            inputs.tOut.text.value = inputs.tIn.text.value;
-            inputs.hOut.slider.value = inputs.hIn.slider.value;
-            inputs.hOut.text.value = inputs.hIn.text.value;
-        };
-        initSync();
-
-        updateUI();
-        lucide.createIcons();
-    });
+        // Modal/Layer Logic
+        function openLayersModal() { 
+            const modal = document.getElementById('layers-modal');
+            // Calculate total height of all layers
+            let totalHeight = 0;
+            App.layers.forEach(l => totalHeight += l.h);
+            // Set dynamic height: 50vh minimum, 80vh maximum, based on content
+            const contentHeight = 220 + Math.ceil(totalHeight * 70); // 220 for overhead, 70px per meter
+            const viewportHeight = window.innerHeight;
+            const modalHeightVh = Math.min(80, Math.max(50, (contentHeight / viewportHeight) * 100));
+            modal.style.height = modalHeightVh + 'vh';
+            modal.style.maxHeight = modalHeightVh + 'vh';
+            modal.showModal(); 
+            setTimeout(() => renderLayers(), 50); 
+            document.getElementById('btn-layers-modal').classList.remove('animate-attention');
+        }
+        function closeModal(id) { document.getElementById(id).close(); }
+        function openModal(id) { document.getElementById(id).showModal(); }
+        function renderFanCurveTable() { const b = document.getElementById('fan-curve-body'); b.innerHTML = ''; App.fan.curve.forEach((p, i) => { b.innerHTML += `<tr class="border-b"><td class="p-2"><input type="number" value="${p.p}" class="w-16 border rounded px-1" onchange="updFanPoint(${i},'p',this.value)"></td><td class="p-2"><input type="number" value="${p.q}" class="w-16 border rounded px-1" onchange="updFanPoint(${i},'q',this.value)"></td><td class="p-2"><input type="number" value="${p.kw||0}" class="w-16 border rounded px-1" onchange="updFanPoint(${i},'kw',this.value)"></td><td class="p-2"><button class="text-red-500" onclick="remFanPoint(${i})">✕</button></td></tr>`; }); updateFanChart(); }
+        function addFanPoint() { App.fan.curve.push({p:0, q:0, kw:0}); renderFanCurveTable(); }
+        function remFanPoint(i) { App.fan.curve.splice(i,1); renderFanCurveTable(); }
+        function updFanPoint(i, k, v) { App.fan.curve[i][k] = parseFloat(v); updateFanChart(); }
+        function saveFanSettings() { App.fan.flow = parseFloat(document.getElementById('inp-fan-flow').value); App.fan.pmax = parseFloat(document.getElementById(App.fan.mode=='simple'?'inp-fan-pmax-simple':'inp-fan-pmax').value); const searchEl = document.getElementById('fan-search'); if(searchEl && searchEl.value) App.fan.name = searchEl.value; closeModal('fan-modal'); update(); saveData(); }
+        function renderLayers() {
+            const list = document.getElementById('layers-list'); const vis = document.getElementById('stock-vis');
+            if(!list || !vis) return;
+            list.innerHTML = ''; vis.innerHTML = '<div class="stock-grate">ROSTUNG</div>';
+            let totDt = 0;
+            App.layers.forEach((l, i) => {
+                const dens = DENSITY_OPTS.find(o => o.id === l.type)?.tsDens || 80; l.dt = Math.round(l.h * App.area * dens / 100); totDt += l.dt;
+                let opts = DENSITY_OPTS.map(o => `<option value="${o.id}" ${l.type==o.id?'selected':''}>${o.label}</option>`).join('');
+                list.insertAdjacentHTML('afterbegin', `<div class="bg-slate-50 border p-3 rounded-lg flex flex-wrap gap-3 items-center text-sm shadow-sm relative"><div class="absolute left-0 top-0 bottom-0 w-1 bg-slate-300 rounded-l-lg"></div><div class="font-bold text-slate-400">#${i+1}</div><div class="flex-grow grid grid-cols-2 md:grid-cols-4 gap-2"><div><label class="text-[9px] uppercase text-slate-400 font-bold block">Datum</label><input type="date" value="${l.date}" onchange="updLayer(${i},'date',this.value)" class="bg-transparent font-bold w-full border-b border-slate-300"></div><div><label class="text-[9px] uppercase text-slate-400 font-bold block flex items-center gap-1">Dichte/Typ <span class="info-tooltip text-slate-400 cursor-help"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg><div class="tooltip-text text-left bg-slate-700 text-white text-[10px]"><strong>Widerstandsbeiwerte (Pa/m):</strong><br>Leicht: ~120 Pa/m (1.5 mbar/m)<br>Mittel: ~200 Pa/m (2.0 mbar/m)<br>Fest: ~350 Pa/m (3.5 mbar/m)<br>Rundballen: ~600 Pa/m (6.0 mbar/m)<br><br>Druck (mbar) = Δp/100 × Höhe</div></span></label><select class="bg-transparent font-bold w-full border-b border-slate-300 text-xs" onchange="updLayer(${i},'type',this.value)">${opts}</select></div><div><label class="text-[9px] uppercase text-slate-400 font-bold block">Höhe (m)</label><input type="number" step="0.1" value="${l.h}" class="bg-transparent font-bold w-full border-b border-slate-300 text-center" onchange="updLayer(${i},'h',this.value)"></div><div><label class="text-[9px] uppercase text-slate-400 font-bold block">TS-Gehalt</label><select class="bg-transparent font-bold w-full border-b border-slate-300" onchange="updLayer(${i},'ts',this.value)"><option value="45" ${l.ts==45?'selected':''}>45%</option><option value="55" ${l.ts==55?'selected':''}>55%</option><option value="60" ${l.ts==60?'selected':''}>60%</option><option value="70" ${l.ts==70?'selected':''}>70%</option><option value="80" ${l.ts==80?'selected':''}>80%</option><option value="88" ${l.ts==88?'selected':''}>88%</option></select></div></div><div class="flex flex-col items-end gap-1"><div class="flex gap-1"><button class="text-slate-400 hover:text-blue-500" onclick="moveLayer(${i},1)">▲</button><button class="text-slate-400 hover:text-blue-500" onclick="moveLayer(${i},-1)">▼</button><button class="text-red-400 hover:text-red-600 ml-2" onclick="remLayer(${i})">✕</button></div></div></div>`);
+                const d = document.createElement('div');
+                let c = l.ts < 60 ? 'bg-blue-500' : (l.ts < 80 ? 'bg-amber-500' : (l.ts < 88 ? 'bg-lime-500' : 'bg-emerald-500'));
+                d.className = `stock-layer ${c}`; d.style.height = (l.h * 70) + 'px';
+                d.innerHTML = `<span class="text-xs">${l.ts}% TS</span><span class="text-[9px] opacity-75">${l.dt} dt</span>`;
+                vis.appendChild(d);
+            });
+            document.getElementById('total-height-disp').innerText = App.totalHeight.toFixed(2); document.getElementById('total-dt-disp').innerText = totDt;
+        }
+        function updLayer(i,k,v){ App.layers[i][k]=k=='date'||k=='type'?v:parseFloat(v); renderLayers(); update(); saveData(); }
+        function moveLayer(i,d){ let t=i+d; if(App.layers[t]) { [App.layers[i],App.layers[t]]=[App.layers[t],App.layers[i]]; renderLayers(); update(); saveData(); }}
+        function remLayer(i){ App.layers.splice(i,1); renderLayers(); update(); saveData(); }
+        function addLayer(){ App.layers.push({h:1.25,ts:60,type:'loose_m',date:new Date().toISOString().split('T')[0]}); renderLayers(); update(); saveData(); }
+        function saveLayers(){ App.area=parseFloat(document.getElementById('inp-area').value); closeModal('layers-modal'); update(); saveData(); }
+        function saveFan() { App.fan.flow = parseFloat(document.getElementById('inp-fan-flow').value); App.fan.pmax = parseFloat(document.getElementById(App.fan.mode=='simple'?'inp-fan-pmax-simple':'inp-fan-pmax').value); const searchEl = document.getElementById('fan-search'); if(searchEl && searchEl.value) App.fan.name = searchEl.value; closeModal('fan-modal'); update(); saveData(); }
+        function saveParams() { App.params.alt=parseFloat(document.getElementById('inp-alt').value); App.params.price=parseFloat(document.getElementById('inp-price').value); closeModal('params-modal'); update(); saveData(); }
+        function saveData() { localStorage.setItem('agff_v30', JSON.stringify({params:App.params, layers:App.layers, fan:App.fan, area:App.area, history: App.history, prot:document.getElementById('protocol-body').innerHTML})); }
+        function saveMeasurement() {
+            const stamp = new Date();
+            const id = stamp.getTime().toString();
+            const label = stamp.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+            const p = PHY.p(App.params.alt);
+            const rho = PHY.dens(App.vals.t1, p);
+            const dx = PHY.abs(App.vals.t3, App.vals.h3, p) - PHY.abs(App.vals.t2, App.vals.h2, p);
+            const removalGm3 = dx * rho;
+            const r=`<tr class="bg-white border-b" data-id="${id}" data-time="${label}" data-t1="${App.vals.t1.toFixed(1)}" data-t2="${App.vals.t2.toFixed(1)}" data-t3="${App.vals.t3.toFixed(1)}" data-h1="${App.vals.h1.toFixed(0)}" data-h2="${App.vals.h2.toFixed(0)}" data-h3="${App.vals.h3.toFixed(0)}" data-removal="${removalGm3.toFixed(2)}"><td class="px-2 py-1">${label}</td><td>${App.vals.t1.toFixed(1)}°</td><td>${App.vals.t2.toFixed(1)}°</td><td>${App.vals.t3.toFixed(1)}°</td><td class="font-bold text-blue-600">${document.getElementById('res-water').innerText} L/h</td><td class="px-2 py-1 text-right"><button class="text-red-500" onclick="deleteProtocolEntry('${id}')">✕</button></td></tr>`;
+            document.getElementById('protocol-body').insertAdjacentHTML('afterbegin',r);
+            App.history.push({
+                id,
+                time: label,
+                t1: App.vals.t1, t2: App.vals.t2, t3: App.vals.t3,
+                h1: App.vals.h1, h2: App.vals.h2, h3: App.vals.h3,
+                removalGm3
+            });
+            if(App.history.length > 200) App.history.shift();
+            updateHistoryCharts();
+            saveData();
+        }
+        function deleteProtocolEntry(id) {
+            const row = document.querySelector(`#protocol-body tr[data-id="${id}"]`);
+            if(row) row.remove();
+            App.history = App.history.filter(h => h.id !== id);
+            updateHistoryCharts();
+            saveData();
+        }
+        function rebuildHistoryFromProtocol() {
+            const rows = Array.from(document.querySelectorAll('#protocol-body tr'));
+            if(rows.length === 0) return;
+            const history = [];
+            rows.reverse().forEach(row => {
+                const d = row.dataset || {};
+                if(d.t1 && d.t2 && d.t3 && d.h1 && d.h2 && d.h3) {
+                    const p = PHY.p(App.params.alt);
+                    const rho = PHY.dens(parseFloat(d.t1), p);
+                    const dx = PHY.abs(parseFloat(d.t3), parseFloat(d.h3), p) - PHY.abs(parseFloat(d.t2), parseFloat(d.h2), p);
+                    const removalGm3 = d.removal ? parseFloat(d.removal) : dx * rho;
+                    history.push({
+                        id: d.id || Math.random().toString(36).slice(2),
+                        time: d.time || row.cells[0]?.innerText || '',
+                        t1: parseFloat(d.t1), t2: parseFloat(d.t2), t3: parseFloat(d.t3),
+                        h1: parseFloat(d.h1), h2: parseFloat(d.h2), h3: parseFloat(d.h3),
+                        removalGm3
+                    });
+                }
+            });
+            App.history = history;
+            updateHistoryCharts();
+            saveData();
+        }
+        function clearProtocol(){ document.getElementById('protocol-body').innerHTML=''; App.history = []; updateHistoryCharts(); saveData(); }
+        function estimateTS(rh) { if(rh < 40) return 90; if(rh > 95) return 40; return Math.max(40, 90 - ((rh-40) * 0.9)); }
     </script>
 </body>
 </html>

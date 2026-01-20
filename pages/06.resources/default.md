@@ -50,16 +50,12 @@ feed:
 
 
 [ui-accordion independent=true open=none]
-[ui-accordion-item title="App Futterwert bestimmen (AGFF Merkblatt 3)"]
+[[ui-accordion-item title="App Futterwertrechner"]
 
-[App Futterwert bestimmen](https://graswachstum.ch/resources/agff-app-fodder-value/index.html) Methode gemäss AGFF Merkblatt Nr. 3
-[qrcode size=100]https://graswachstum.ch/resources/agff-app-fodder-value/index.html[/qrcode]
+[App Futterwertrechner](https://apps.graswachstum.ch/futter)  
+[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode] 
 
 Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf),  [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856)
-
-* [App Futterwert bestimmen (AGFF Merkblatt 3)](https://graswachstum.ch/resources/agff-app-fodder-value/index.html)
-[qrcode size=100]https://graswachstum.ch/resources/agff-app-fodder-value/index.html[/qrcode]
-
 [/ui-accordion-item]
 
 [ui-accordion-item title="App Heutrocknung steuern"]
@@ -75,12 +71,7 @@ Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_p
 
 [/ui-accordion-item]
 
-[ui-accordion-item title="apps.graswachstum.ch"]
 
-[App Futterwertrechner](https://apps.graswachstum.ch/futter)  
-[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode] 
-
-[/ui-accordion-item]
 [/ui-accordion]
 
 

@@ -21,6 +21,7 @@ redirects:
   /ebenrain2025: ''
   /heutrocknung: /resources/agff-app-drycontrol/agff-dry-calc.html
   /apps: 'https://apps.graswachstum.ch/v02'
+  /futterwert: 'https://apps.graswachstum.ch/futter'
 routes: null
 blog:
   route: /home

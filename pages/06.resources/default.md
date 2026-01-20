@@ -74,6 +74,13 @@ Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_p
 [qrcode size=100]https://graswachstum.ch/apps[/qrcode] 
 
 [/ui-accordion-item]
+
+[ui-accordion-item title="apps.graswachstum.ch"]
+
+[App Futterwertrechner](https://apps.graswachstum.ch/futter)  
+[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode] 
+
+[/ui-accordion-item]
 [/ui-accordion]
 
 

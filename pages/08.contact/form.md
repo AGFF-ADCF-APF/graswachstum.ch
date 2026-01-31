@@ -66,7 +66,7 @@ hero:
             classes: 'bg-primary text-white'
         -
             text: Kontaktformular
-            link: '#kontaktformular'
+            link: '/contact#kontaktformular'
             classes: 'bg-primary text-white'
     height: 20px
 feed:
@@ -76,18 +76,13 @@ shortcode-citation:
     reorder_uncited: true
 ---
 
-Fragen, Vorschläge, Bedenken?  
-[Kontaktiere uns!](/contact?classes=button) [[fa=whatsapp /]](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr)
 
-### Whatsapp-Gruppe "Graswachstumsberichte" 
-[[fa=whatsapp /] Link zum Beitreten](https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr) 
- 
- 
 
 ### Partner
 [Bauernzeitung](https://www.bauernzeitung.ch/graswachstum-serie) 
 [AGFF](https://www.agff.ch) 
 [IG Weidemilch](https://www.weidemilch.ch) 
 [Betriebe und Organisationen](/about)
+
 
 ## Kontaktformular

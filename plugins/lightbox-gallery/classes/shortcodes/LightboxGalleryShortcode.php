@@ -104,9 +104,10 @@ class LightboxGalleryShortcode extends Shortcode
         $this->shortcode->getHandlers()->add('lightbox', function(ShortcodeInterface $sc) {
             // Standard processing
             $image = $sc->getParameter('image');
+            $video = $sc->getParameter('video');
             $thumb = $sc->getParameter('thumb');
             $content = trim($this->unindent($sc->getContent()));
-            
+
             // Determine Mode (new vs legacy)
             $is_desc_mode = false;
             $thumbnail_media = null;
@@ -120,6 +121,17 @@ class LightboxGalleryShortcode extends Shortcode
                 $thumbnail_media = $this->getMedia($image);
                 $is_desc_mode = true;
             }
+
+            // Process markdown content to prevent <p> tag wrapping when used as trigger
+            if (!$is_desc_mode && $content) {
+                // Content is the trigger - process markdown and strip block-level tags
+                $page = $this->shortcode->getPage();
+                $processed = \Grav\Common\Utils::processMarkdown($content, $page);
+                // Remove wrapping <p> tags if present
+                $processed = preg_replace('/^\s*<p>(.*?)<\/p>\s*$/s', '$1', $processed);
+                $content = $processed;
+            }
+
             $desc_id = 'gl-desc-' . substr(md5(uniqid()), 0, 8);
             $gallery = $sc->getParameter('gallery') ?: md5((string) $image);
 
@@ -129,6 +141,7 @@ class LightboxGalleryShortcode extends Shortcode
                     'page'            => $this->shortcode->getPage(),
                     'content'         => $content,
                     'image'           => $image,
+                    'video'           => $video,
                     'thumbnail_media' => $thumbnail_media,
                     'thumb'           => $thumb,
                     'desc_id'         => $desc_id,
@@ -144,7 +157,7 @@ class LightboxGalleryShortcode extends Shortcode
                     'draggable'       => $sc->getParameter('draggable'),
                     'thumb'           => $thumb,
                     'only_desc'       => false,
-                    'only_anchor'     => false, 
+                    'only_anchor'     => false,
                 ]
             );
         });

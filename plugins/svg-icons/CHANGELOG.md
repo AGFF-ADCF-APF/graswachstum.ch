@@ -1,3 +1,27 @@
+# v3.1.0
+## 12/23/2025
+
+1. [](#new)
+    * Added `editor-pro` support for shortcodes
+1. [](#bugfix)
+    * Fixed a bbcode formatting issue
+   
+# v3.0.1
+## 12/15/2025
+
+1. [](#bugfix)
+    * Quick fix for badly formatted Tabler SVGs
+
+# v3.0.0
+## 12/14/2025
+
+1. [](#new)
+   * Added a new custom `svgicon` field type that allows you to select 
+   * Updated Tabler to `3.36.0` (5634 icons)
+   * Updated Boostrap Icons to `1.13.1` (2086 icons)
+   * Updated Lucide Icons to `0.561.0` (1867 icons)
+   * Updated Simple Brand Icons to `16.2.0` (3640 icons)
+
 # v2.6.1
 ## 09/23/2025
 
@@ -8,7 +32,7 @@
 ## 12/02/2024
 
 1. [](#new)
-   * Upgraded Tabler to `3.23.0` (5736 icons)
+   * Upgraded Tabler to `3.23.0` (5536 icons)
    * Upgraded Hero Icons to `2.2.0` (324 icons)
    * Upgraded to Simple Brand Icons to `13.19.0` (3256 icons)
    * Upgraded to Bootstrap Icons to `1.11.3` (2059 icons)

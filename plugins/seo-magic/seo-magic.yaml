@@ -52,8 +52,8 @@ insecure_tls: false
 inject:
   canonical_always: true
   canonical_if_missing: true
-  hreflang_always: true
-  hreflang_if_missing: true
+  hreflang_always: false
+  hreflang_if_missing: false
 structured_data:
   enabled: true
   organization:

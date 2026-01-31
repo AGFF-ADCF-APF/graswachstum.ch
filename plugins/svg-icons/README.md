@@ -4,12 +4,12 @@ The **SVG Icons** Plugin is an extension for [Grav CMS](http://github.com/getgra
 
 This package currently contains 6 primary SVG icon sets:
 
-* [Tabler Icons (5736)](https://tabler-icons.io/) → [DEFAULT] Developed by [Csaba Kissi](https://twitter.com/csaba_kiss) (v3.23.0)
+* [Tabler Icons (5634)](https://tabler-icons.io/) → [DEFAULT] Developed by [Csaba Kissi](https://twitter.com/csaba_kiss) (v3.36.0)
 * [Hero Icons (324)](https://heroicons.dev/) → Developed by [Steve Schoger](https://twitter.com/steveschoger) with both `outline` and `solid` variants (v2.2.0)
-* [Simple Icon Brands (3256)](https://simpleicons.org/) → Over 2400 popular brand icons (v13.19.0)
-* [Bootstrap Icons (2059)](https://icons.getbootstrap.com/) → Over 2000 icons (v1.11.3)
+* [Simple Icon Brands (3640)](https://simpleicons.org/) → Over 2400 popular brand icons (v16.2.0)
+* [Bootstrap Icons (2086)](https://icons.getbootstrap.com/) → Over 2000 icons (v1.13.1)
 * [Iconsax icons (1792)](https://iconsax.io/) →  `outline` and `bold` variants (v1.0)
-* [Lucide icons (1704)](https://lucide.dev/) → Forked from feather icons (v0.462.0)
+* [Lucide icons (1867)](https://lucide.dev/) → Forked from feather icons (v0.561.0)
 * [Social Icons (6)](#) → A few basic consistent social networking icons (v1.0)
 
 ## Installation
@@ -104,6 +104,58 @@ This is using the `tabler/plus.svg` icon with various TailwindCS classes for wid
 
 Here we are using the `star.svg` from HeroIcons in Outline style.  The classes use the current color.
 
+### Blueprint Field for Admin
+
+The plugin provides a custom `svgicon` field type for use in blueprints. This creates a visual icon picker in the Admin panel.
+
+#### Basic Usage
+
+```yaml
+header.icon:
+  type: svgicon
+  label: Icon
+```
+
+#### Field Options
+
+| Option | Type | Default | Description |
+|--------|------|---------|-------------|
+| `default_set` | string | `tabler` | The default icon set to show in the picker |
+| `placeholder` | string | `No icon selected` | Placeholder text when no icon is selected |
+| `choose_label` | string | `Choose Icon` | Label for the choose button |
+| `clear_label` | string | `Clear` | Label for the clear button |
+| `allowed_sets` | array | `[]` | Limit available icon sets (empty = all sets) |
+| `toggleable` | bool | `false` | Allow field to be toggled on/off |
+
+#### Example with Options
+
+```yaml
+header.icon:
+  type: svgicon
+  label: Page Icon
+  toggleable: true
+  default_set: tabler
+  placeholder: Select an icon...
+  allowed_sets:
+    - tabler
+    - heroicons/outline
+```
+
+#### Stored Value Format
+
+The field stores the icon path in the format `set/icon-name.svg`, for example:
+- `tabler/home.svg`
+- `heroicons/outline/star.svg`
+- `brands/github.svg`
+
+This value can then be used in Twig templates:
+
+```twig
+{% if page.header.icon %}
+    {{ svg_icon(page.header.icon, 'w-6 h-6')|raw }}
+{% endif %}
+```
+
 ### Custom Icons
 
 If you want to add your own icons, you should clean them up to ensure any hardcoded colors are removed and `currentColor` is used instead.  For example, search and replace:
@@ -133,9 +185,3 @@ And in Twig syntax:
 ```twig
 {{ svg_icon('duotone/custom-icon.svg', 'w-12 h-12 text-primary')|raw }}
 ```
-
-
-
-
-
-

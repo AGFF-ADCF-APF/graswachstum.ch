@@ -511,7 +511,8 @@ class SEOMagic
 
     public function getData($page)
     {
-        $route = $page->url();
+        // Use rawRoute for consistent storage key across languages and subdirectory installations
+        $route = $page->rawRoute();
 
         if (is_null($route)) {
             return null;

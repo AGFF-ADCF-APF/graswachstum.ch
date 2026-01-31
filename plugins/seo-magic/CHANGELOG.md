@@ -1,3 +1,19 @@
+# v6.2.2
+## 12/08/2025
+
+1. [](#bugfix)
+   * Fixed admin banner incorrectly showing "unpublished" or "non-routable" for valid pages by using `admin.page` instead of `form.object`
+   * Fixed SEO data not regenerating on save due to `published()` and `routable()` returning incorrect defaults from event object
+   * Fixed SEO data storage key mismatch in multilingual sites by using `rawRoute()` for consistent storage across languages and subdirectory installations
+   * Added `routable` check to banner template with appropriate warning message for non-routable pages
+
+# v6.2.1
+## 12/01/2025
+
+1. [](#bugfix)
+   * Fix for "This page is unpublished.." banner showing incorrectly
+   * Tooltip for "AI Suggest" to explain AI-Pro required
+
 # v6.2.0
 ## 11/27/2025
 

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein-Score Rechner & Tabelle</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .container {
+            max_width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        /* Calculator Styles */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .result-box {
+            background: #eef2f7;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #3498db;
+        }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .comp-card {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .comp-header {
+            font-weight: bold;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .metric-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .highlight {
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+        th:hover {
+            background-color: #34495e;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .file-upload {
+            margin-bottom: 20px;
+            border: 2px dashed #3498db;
+            background-color: #f0f8ff;
+            padding: 20px;
+            text-align: center;
+        }
+        .empty-state {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+            font-style: italic;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Notabene Nutrition Protein-Score</h1>
+
+    <div class="card file-upload">
+        <label for="csvInput" style="font-size:1.2em; margin-bottom:10px; cursor:pointer;">📂 Hier klicken, um CSV-Datei zu laden</label>
+        <input type="file" id="csvInput" accept=".csv">
+        <div style="font-size: 0.9em; color: #666; margin-top: 10px;">
+            Bitte laden Sie die Datei <code>NotabeneNutrition_2025_Protein-score.csv</code> (oder ähnlich), um zu starten.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Vergleichs-Rechner</h2>
+        <div class="calculator-grid">
+            <div>
+                <div class="input-group">
+                    <label for="foodSelect">Lebensmittel auswählen:</label>
+                    <select id="foodSelect">
+                        <option value="">-- Bitte zuerst Daten laden --</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="refAmount">Referenzmenge Kuhmilchprotein (g):</label>
+                    <input type="number" id="refAmount" value="30" min="1">
+                </div>
+            </div>
+            
+            <div class="result-box" id="resultArea">
+                <h3>Ergebnis</h3>
+                <div id="calcText">Bitte wählen Sie ein Lebensmittel.</div>
+                
+                <div class="comparison-grid">
+                    <div class="comp-card" style="border-left: 4px solid #2ecc71;">
+                        <span class="comp-header">Referenz (Kuhmilch)</span>
+                        <div class="metric-row"><span>Protein:</span> <span id="milkProt">30 g</span></div>
+                        <div class="metric-row"><span>Menge:</span> <span id="milkQty">930 g</span></div>
+                        <div class="metric-row"><span>Kalorien:</span> <span id="milkCal">520</span></div>
+                    </div>
+                    <div class="comp-card" style="border-left: 4px solid #e74c3c;">
+                        <span class="comp-header">Ausgewähltes Lebensmittel</span>
+                        <div class="metric-row"><span>Protein (dekl.):</span> <span id="foodProt" class="highlight">-</span></div>
+                        <div class="metric-row"><span>Menge:</span> <span id="foodQty" class="highlight">-</span></div>
+                        <div class="metric-row"><span>Kalorien:</span> <span id="foodCal" class="highlight">-</span></div>
+                    </div>
+                </div>
+                <p style="margin-top:10px; font-size: 0.9em;">
+                    <i>N2-PS Faktor: <span id="psFactor">-</span></i><br>
+                    Um die Nährwert-Äquivalenz zu <span id="refValDisplay">30</span>g Kuhmilchprotein zu erreichen, benötigen Sie die oben gezeigte Menge.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Datentabelle</h2>
+        <p style="font-size: 0.9em; color: #666;">Klicken Sie auf die Spaltentitel, um die Tabelle zu sortieren.</p>
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable('Lebensmittel')">Lebensmittel</th>
+                        <th onclick="sortTable('N2-PS')">N2-PS</th>
+                        <th onclick="sortTable('Menge (g)')">Menge (g)</th>
+                        <th onclick="sortTable('Prot. dekl. (g)')">Prot. dekl. (g)</th>
+                        <th onclick="sortTable('Leucin (g)')">Leucin (g)</th>
+                        <th onclick="sortTable('Kalorien')">Kalorien</th>
+                        <th onclick="sortTable('WID %')">WID %</th>
+                        <th onclick="sortTable('FAO-DIAAS')">FAO-DIAAS</th>
+                        <th onclick="sortTable('N2-DIAAS')">N2-DIAAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+            <div id="emptyState" class="empty-state">
+                Keine Daten vorhanden. Bitte laden Sie eine CSV-Datei.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Initial Data Empty
+    let tableData = [];
+
+    // DOM Elements
+    const foodSelect = document.getElementById('foodSelect');
+    const refInput = document.getElementById('refAmount');
+    const tableBody = document.querySelector('#dataTable tbody');
+    const csvInput = document.getElementById('csvInput');
+    const emptyState = document.getElementById('emptyState');
+
+    // Calculator DOM
+    const milkProtEl = document.getElementById('milkProt');
+    const milkQtyEl = document.getElementById('milkQty');
+    const milkCalEl = document.getElementById('milkCal');
+    const foodProtEl = document.getElementById('foodProt');
+    const foodQtyEl = document.getElementById('foodQty');
+    const foodCalEl = document.getElementById('foodCal');
+    const psFactorEl = document.getElementById('psFactor');
+    const refValDisplay = document.getElementById('refValDisplay');
+    const calcText = document.getElementById('calcText');
+
+    // Constants for Reference (Milk)
+    const MILK_REF_PROT = 30;
+    const MILK_REF_QTY = 930;
+    const MILK_REF_CAL = 520;
+
+    // Initialization
+    function init() {
+        // Listeners
+        foodSelect.addEventListener('change', calculate);
+        refInput.addEventListener('input', calculate);
+        csvInput.addEventListener('change', handleFileUpload);
+    }
+
+    // Populate Dropdown
+    function populateSelect() {
+        foodSelect.innerHTML = '';
+        
+        if (tableData.length === 0) {
+            const opt = document.createElement('option');
+            opt.textContent = "-- Bitte zuerst Daten laden --";
+            foodSelect.appendChild(opt);
+            return;
+        }
+
+        const sorted = [...tableData].sort((a,b) => a.Lebensmittel.localeCompare(b.Lebensmittel));
+        sorted.forEach(item => {
+            const opt = document.createElement('option');
+            opt.value = item.Lebensmittel;
+            opt.textContent = item.Lebensmittel;
+            foodSelect.appendChild(opt);
+        });
+        
+        // Select first item by default
+        if(sorted.length > 0) foodSelect.selectedIndex = 0;
+    }
+
+    // Calculator Logic
+    function calculate() {
+        if (tableData.length === 0) return;
+
+        const selectedName = foodSelect.value;
+        const refAmount = parseFloat(refInput.value) || 0;
+        const item = tableData.find(d => d.Lebensmittel === selectedName);
+
+        if (!item) return;
+
+        // Milk Calculation
+        const ratio = refAmount / MILK_REF_PROT;
+        const mQty = (MILK_REF_QTY * ratio).toFixed(0);
+        const mCal = (MILK_REF_CAL * ratio).toFixed(0);
+
+        milkProtEl.textContent = refAmount + " g";
+        milkQtyEl.textContent = mQty + " g";
+        milkCalEl.textContent = mCal;
+
+        // Food Calculation
+        const ps = item['N2-PS'];
+        const equivProt = (ps * refAmount).toFixed(1);
+        const fQty = ((item['Menge (g)'] / 30) * refAmount).toFixed(0);
+        const fCal = ((item['Kalorien'] / 30) * refAmount).toFixed(0);
+
+        foodProtEl.textContent = equivProt + " g";
+        foodQtyEl.textContent = fQty + " g";
+        foodCalEl.textContent = fCal;
+        
+        psFactorEl.textContent = ps;
+        refValDisplay.textContent = refAmount;
+
+        calcText.innerHTML = `<strong>${fQty} g ${item.Lebensmittel}</strong> sind nährwert-äquivalent zu <strong>${mQty} g Kuhmilch</strong> (bei ${refAmount}g Referenzprotein).`;
+    }
+
+    // Table Logic
+    let currentSort = { col: null, asc: true };
+
+    function sortTable(col) {
+        if (tableData.length === 0) return;
+
+        if (currentSort.col === col) {
+            currentSort.asc = !currentSort.asc;
+        } else {
+            currentSort.col = col;
+            currentSort.asc = true;
+        }
+        
+        tableData.sort((a, b) => {
+            let valA = a[col];
+            let valB = b[col];
+            
+            if (typeof valA === 'string') valA = valA.toLowerCase();
+            if (typeof valB === 'string') valB = valB.toLowerCase();
+
+            if (valA < valB) return currentSort.asc ? -1 : 1;
+            if (valA > valB) return currentSort.asc ? 1 : -1;
+            return 0;
+        });
+        
+        renderTable(tableData);
+    }
+
+    function renderTable(data) {
+        tableBody.innerHTML = '';
+        
+        if (data.length === 0) {
+            emptyState.style.display = 'block';
+            return;
+        } else {
+            emptyState.style.display = 'none';
+        }
+
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            const cols = ['Lebensmittel', 'N2-PS', 'Menge (g)', 'Prot. dekl. (g)', 'Leucin (g)', 'Kalorien', 'WID %', 'FAO-DIAAS', 'N2-DIAAS'];
+            
+            cols.forEach(col => {
+                const td = document.createElement('td');
+                const val = row[col];
+                td.textContent = val;
+                
+                if (col === 'N2-PS') {
+                    td.style.backgroundColor = getColorForPS(val);
+                    td.style.color = val > 3 ? 'white' : 'black';
+                } else if (col === 'FAO-DIAAS' || col === 'N2-DIAAS' || col === 'WID %') {
+                    td.style.backgroundColor = getColorForScore(val);
+                     if(val < 50) td.style.color = 'white';
+                }
+                
+                tr.appendChild(td);
+            });
+            tableBody.appendChild(tr);
+        });
+    }
+
+    // Color Scales
+    function getColorForPS(val) {
+        const min = 1.0;
+        const max = 8.0; 
+        let norm = (val - min) / (max - min);
+        if (norm < 0) norm = 0;
+        if (norm > 1) norm = 1;
+        const hue = (1 - norm) * 120; 
+        return `hsl(${hue}, 70%, 85%)`;
+    }
+
+    function getColorForScore(val) {
+        let norm = val / 140;
+        if (norm > 1) norm = 1;
+        if (norm < 0) norm = 0;
+        const hue = norm * 120;
+        return `hsl(${hue}, 70%, 85%)`;
+    }
+
+    // CSV Parser
+    function handleFileUpload(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+            const text = evt.target.result;
+            const newData = parseCSV(text);
+            if (newData && newData.length > 0) {
+                tableData = newData;
+                populateSelect();
+                renderTable(tableData);
+                calculate();
+                // Optional: Try to set default to Peas if available
+                const defaultFood = tableData.find(d => d.Lebensmittel.includes("Erbsen, grün, gekocht"));
+                if(defaultFood) {
+                    foodSelect.value = defaultFood.Lebensmittel;
+                    calculate();
+                }
+                alert('Daten erfolgreich geladen!');
+            } else {
+                alert('Fehler beim Lesen der CSV.');
+            }
+        };
+        reader.readAsText(file);
+    }
+
+    function parseCSV(text) {
+        const lines = text.trim().split('\n');
+        if (lines.length < 2) return null;
+        
+        const headers = lines[0].split(';').map(h => h.trim());
+        const result = [];
+        
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+            
+            const values = line.split(';');
+            
+            const obj = {};
+            headers.forEach((h, index) => {
+                let val = values[index];
+                if(val === undefined) val = "";
+                
+                // Clean numbers: Remove thousand separators
+                if (['N2-PS', 'Leucin (g)', 'Menge (g)', 'Prot. dekl. (g)', 'Kalorien', 'WID %', 'FAO-DIAAS', 'N2-DIAAS'].includes(h)) {
+                    if (val) {
+                         let cleanVal = val.replace(/,/g, ''); 
+                         obj[h] = parseFloat(cleanVal);
+                    } else {
+                        obj[h] = 0;
+                    }
+                } else {
+                    obj[h] = val;
+                }
+            });
+            result.push(obj);
+        }
+        return result;
+    }
+
+    // Run
+    init();
+
+</script>
+</body>
+</html>

@@ -1117,8 +1117,8 @@ class SeoMagicPlugin extends Plugin
         }
 
         // Hreflang injection
-        $hreflangAlways = (bool)$grav['config']->get('plugins.seo-magic.inject.hreflang_always', true);
-        $hreflangIfMissing = (bool)$grav['config']->get('plugins.seo-magic.inject.hreflang_if_missing', true);
+        $hreflangAlways = (bool)$grav['config']->get('plugins.seo-magic.inject.hreflang_always', false);
+        $hreflangIfMissing = (bool)$grav['config']->get('plugins.seo-magic.inject.hreflang_if_missing', false);
         if ($language->enabled()) {
             if ($hreflangAlways || ($hreflangIfMissing && (bool)$seoData->get('head.flags.missing_hreflang'))) {
                 $translated = (array)$page->translatedLanguages(true);
@@ -1129,13 +1129,14 @@ class SeoMagicPlugin extends Plugin
                     if (!isset($translated[$currentLang])) {
                         $translated[$currentLang] = $page->route();
                     }
+                    $isHomePage = $page->home();
                     foreach ($translated as $code => $route) {
-                        $href = $pages->url($route, $code, true);
+                        // Use homeUrl() for home page instead of actual route (e.g. '/home')
+                        $href = $isHomePage ? $pages->homeUrl($code, true) : $pages->url($route, $code, true);
                         $this->queueHeadLink(['rel' => 'alternate', 'hreflang' => $code, 'href' => $href]);
                     }
                     $defaultCode = $language->getDefault();
-                    $defaultRoute = $translated[$defaultCode] ?? $page->route();
-                    $defaultHref = $pages->url($defaultRoute, $defaultCode, true);
+                    $defaultHref = $isHomePage ? $pages->homeUrl($defaultCode, true) : $pages->url($translated[$defaultCode] ?? $page->route(), $defaultCode, true);
                     $this->queueHeadLink(['rel' => 'alternate', 'hreflang' => 'x-default', 'href' => $defaultHref]);
                 }
             }
@@ -1748,9 +1749,20 @@ class SeoMagicPlugin extends Plugin
         }
 
         $obj = $event['object'] ?: $event['page'];
-        if ($obj instanceof PageInterface && $obj->routable() && $obj->published() && is_null($obj->redirect())) {
+        if (!$obj instanceof PageInterface) {
+            return true;
+        }
+        // Use admin.page() for reliable status since event object may not have correct defaults
+        $page = $this->getPage();
+        $useAdminPage = ($page instanceof PageInterface && $page->exists());
+        $published = $useAdminPage ? $page->published() : $obj->published();
+        $routable = $useAdminPage ? $page->routable() : $obj->routable();
+        $redirect = $obj->redirect();
+
+        if ($routable && $published && is_null($redirect)) {
             $url = $obj->url(true, true, true);
-            $route = $obj->url();
+            // Use rawRoute for consistent storage key across languages and subdirectory installations
+            $route = $obj->rawRoute();
             $client = SEOGenerator::getHttpClient();
 
             SEOGenerator::processUrlSEOData($url, $client, $route);

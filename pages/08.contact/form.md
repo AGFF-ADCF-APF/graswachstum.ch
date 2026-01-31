@@ -65,8 +65,8 @@ hero:
             link: 'https://chat.whatsapp.com/HWT0TodVZBuBDVAFVrUUbr'
             classes: 'bg-primary text-white'
         -
-            text: null
-            link: null
+            text: Kontaktformular
+            link: '#kontaktformular'
             classes: 'bg-primary text-white'
     height: 20px
 feed:

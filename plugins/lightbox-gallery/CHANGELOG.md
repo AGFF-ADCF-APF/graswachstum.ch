@@ -1,3 +1,11 @@
+# v1.2.0
+## 12/02/2025
+
+1. [](#bugfix)
+   * Fix missing `video` support in new shortcode syntax
+   * Fix extra `<p>` tags getting put around thumbnails breaking layout
+   * Fix for empty 'content' in lightbox shortcode throwing JS error
+
 # v1.1.1
 ## 11/23/2025
 

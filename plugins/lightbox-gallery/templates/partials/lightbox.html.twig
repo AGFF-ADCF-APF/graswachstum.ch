@@ -10,7 +10,7 @@
     {# New Mode: Content is description, thumbnail_media is the trigger image #}
     {% if not only_desc %}
     <a href="{{ target }}" class="glightbox {{ class }}"
-       data-description=".{{ desc_id }}"
+       {% if content %}data-description=".{{ desc_id }}"{% endif %}
        data-gallery="{{ gallery }}"
        data-filename="{{ image }}"
        {% if thumb %}data-thumb="{{ thumb }}"{% endif %}

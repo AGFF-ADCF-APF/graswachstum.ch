@@ -21,9 +21,14 @@
     </div>
   {% endif %}
 </div>
+{% set ai_pro_enabled = config.plugins['ai-pro'].enabled ?? false %}
 <div class="seomagic-ai-tools">
-  <button type="button" class="button seomagic-ai" data-purpose="title">AI: Suggest Title</button>
+  {% if ai_pro_enabled %}
+    <button type="button" class="button seomagic-ai" data-purpose="title">AI: Suggest Title</button>
+  {% else %}
+    <span class="hint--bottom" data-hint="{{ 'PLUGIN_SEOMAGIC.AI_PRO_REQUIRED'|tu }}"><button type="button" class="button seomagic-ai" disabled style="pointer-events: none;">AI: Suggest Title</button></span>
+  {% endif %}
   <textarea class="seomagic-body" style="display:none">{{ seomagic_body }}</textarea>
-  <small class="muted">Uses AI‑Pro default provider to suggest an SEO title (≤ 60 chars)</small>
+  {% if ai_pro_enabled %}<small class="muted">{{ 'PLUGIN_SEOMAGIC.AI_SUGGEST_TITLE_HELP'|tu }}</small>{% endif %}
 </div>
 {% endblock %}

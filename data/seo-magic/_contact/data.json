@@ -4,36 +4,36 @@
         "page_rawroute": "\/contact",
         "page_title": "Kontakt"
     },
-    "updated": 1738874253,
+    "updated": 1769890543,
     "response_headers": {
+        "server": "nginx",
+        "date": "Sat, 31 Jan 2026 20:15:43 GMT",
+        "content-type": "text\/html; charset=utf-8",
         "pragma": "no-cache",
         "grav-page-title": "Kontakt",
         "grav-page-route": "\/contact",
         "grav-page-rawroute": "\/contact",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 13 Feb 2025 20:37:33 GMT",
-        "content-encoding": "gzip",
-        "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 06 Feb 2025 20:37:33 GMT",
-        "server": "Apache"
+        "expires": "Sat, 07 Feb 2026 20:15:43 GMT",
+        "content-encoding": "gzip"
     },
     "timings": {
-        "start_time": 1738874253.798943996429443359375,
-        "total_time": 0.132514999999999993907096040857140906155109405517578125,
-        "namelookup_time": 2.19999999999999994279749337966478606176679022610187530517578125e-5,
-        "connect_time": 2.300000000000000001799775606325937360452371649444103240966796875e-5,
-        "pretransfer_time": 9.3999999999999994475773090751857807845226489007472991943359375e-5,
-        "starttransfer_time": 0.1323999999999999899191749364035786129534244537353515625,
+        "start_time": 1769890543.2416169643402099609375,
+        "total_time": 0.24947500000000000230926389122032560408115386962890625,
+        "namelookup_time": 0.017601999999999999590993837728092330507934093475341796875,
+        "connect_time": 0.017705999999999999516830939683131873607635498046875,
+        "pretransfer_time": 0.048049000000000001431299523346751811914145946502685546875,
+        "starttransfer_time": 0.2487989999999999923829818726517260074615478515625,
         "redirect_time": 0
     },
     "info": {
-        "url": "https:\/\/graswachstum.ch\/contact",
+        "url": "https:\/\/graswachstum.ch\/de\/contact",
         "content_type": "text\/html; charset=utf-8",
-        "header_size": 519,
-        "request_size": 116,
+        "header_size": 518,
+        "request_size": 119,
         "redirect_count": 0,
-        "size_download": 6276,
-        "speed_download": 47545,
+        "size_download": 8322,
+        "speed_download": 33358,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 27769
+        "content_size": 47429
     },
     "content": {
-        "body": "<p>Fragen, Vorschl&auml;ge, Bedenken?\nKontaktiere uns! <i><\/i><\/p>\n<h3>Whatsapp-Gruppe \"Graswachstumsberichte\"<\/h3>\n<p><i><\/i> Link zum Beitreten <\/p>\n<h3>Partner<\/h3>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>\n    \n\n\n\n                \n\n\n\n\n\n\n\n\n\n\n\n        \n                                      \n                          \n            Name              *\n      \n        \n                        \n                                    \n                                      \n                        \n  \n                                                      \n                          \n            Email              *\n      \n        \n                        \n                                    \n                                  \n                        \n  \n                                                      \n                          \n            Message              *\n      \n        \n                  \n                \n                            \n                \n  \n                                                      \n                          \n            \n      \n        \n                    \n    \n    \n                  \n  \n                            \n\n        \n            \n    \n    \n      \n            \n  \n\n                    \n      \n      \n  Absenden\n\n                            \n      \n      \n  Zur&uuml;cksetzen",
+        "body": "<p>Fragen, Vorschl&auml;ge, Bedenken?\nKontaktiere uns! <i><\/i><\/p>\n<h3>Whatsapp-Gruppe \"Graswachstumsberichte\"<\/h3>\n<p><i><\/i> Link zum Beitreten <\/p>\n<h3>Partner<\/h3>\n<p>Bauernzeitung\nAGFF\nIG Weidemilch\nBetriebe und Organisationen<\/p>\n    \n\n\n\n\n                \n\n\n\n\n\n\n\n\n\n\n\n        \n                                      \n                          \n            Name              *\n      \n        \n                        \n                                    \n                                      \n                        \n  \n                                                      \n                          \n            Email              *\n      \n        \n                        \n                                    \n                                  \n                        \n  \n                                                      \n                          \n            Message              *\n      \n        \n                  \n                \n                            \n                \n  \n                                                      \n                                  \n                \n    \n            \n            \n      \n        \n                              \n                \n                                                            \n            \n                \n            \n\n            \n            \n                            \n  \n                                \n\n        \n            \n    \n    \n      \n            \n  \n\n                    \n      \n      \n  Absenden\n\n                            \n      \n      \n  Zur&uuml;cksetzen",
         "headers": {
             "h1": [
                 "Kontakt"
@@ -66,13 +66,13 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/91.contact\/IMG_20170925_123125_HDR.jpg?g-1442c913",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/08.contact\/IMG_20170925_123125_HDR.jpg?g-bbc9536a",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-bbc9536a",
                 "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
@@ -93,110 +93,173 @@
             "flash": 0
         },
         "links": {
-            "\/": {
-                "count": 0,
+            "\/de": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "",
-                "external": false
+                "text": "Wachstumsberichte",
+                "external": false,
+                "status": 200
             },
-            "\/growth": {
-                "count": 0,
+            "\/de\/growth": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "Kurven",
-                "external": false
+                "text": "Graswachstum",
+                "external": false,
+                "status": 200
             },
-            "\/resources": {
-                "count": 0,
+            "\/de\/growth\/years": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Jahresauswertungen",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Standorte",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Ressourcen",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "\/about": {
-                "count": 0,
+            "\/de\/resources\/2025-webinar-grasmessen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Grasmess-Webinar 2025",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-11-06-ebenrain": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Ebenrain 06.11.2025",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/nn-protein-score": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Nn-protein-score",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/about": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "\u00dcber uns",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "\/contact": {
-                "count": 0,
+            "\/de\/contact": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Kontakt",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Link zum Beitreten",
-                "external": true
-            },
-            "": {
-                "count": 0,
+            "\/fr\/contact": {
+                "count": 1,
                 "target": "",
                 "rel": "",
-                "text": "",
-                "external": false
+                "text": "Fran\u00e7ais",
+                "external": false,
+                "status": 200
+            },
+            "\/#kontaktformular": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Kontaktformular",
+                "external": false,
+                "status": 200
             },
             "#whatsapp-gruppe-graswachs": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "",
-                "external": false
+                "external": false,
+                "status": 200
             },
             "#partner": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "https:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Bauernzeitung",
-                "external": true
-            },
-            "https:\/\/www.agff.ch": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "AGFF",
-                "external": true
-            },
-            "https:\/\/www.weidemilch.ch": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "IG Weidemilch",
-                "external": true
-            },
-            "\/legal": {
-                "count": 0,
+            "\/de\/legal": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Datenschutz und Rechtsausschluss",
-                "external": false
+                "external": false,
+                "status": 200
             },
-            "https:\/\/getgrav.org": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "graswachstum.ch",
-                "external": true
+            "https:\/\/chat.whatsapp.com\/HWT0TodVZBuBDVAFVrUUbr": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Link zum Beitreten",
+                "external": true,
+                "status": 200
             },
-            "https:\/\/agff.ch": {
-                "count": 0,
+            "https:\/\/www.bauernzeitung.ch\/graswachstum-serie": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Bauernzeitung",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agff.ch": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "AGFF",
-                "external": true
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.weidemilch.ch": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "IG Weidemilch",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/getgrav.org": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "graswachstum.ch",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/agff.ch": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF",
+                "external": true,
+                "status": 200
             }
         }
     },
@@ -208,129 +271,169 @@
             "generator": "GravCMS",
             "description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
             "title": "Kontakt | graswachstum.ch",
-            "keywords": "bauernzeitung,organisationen,message,email,link,beitreten,partner,name,agff,weidemilch",
-            "image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
-            "og:url": "https:\/\/graswachstum.ch\/contact",
+            "image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/de\/contact",
             "og:site_name": "graswachstum.ch",
             "og:title": "Kontakt | graswachstum.ch",
             "og:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
             "og:type": "article",
-            "og:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
+            "og:image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:secure": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
+            "og:image:alt": "Kontakt | graswachstum.ch",
+            "og:image:secure": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
+            "og:locale": "de",
             "twitter:card": "summary_large_image",
             "twitter:title": "Kontakt | graswachstum.ch",
             "twitter:description": "Whatsapp-Gruppe Graswachstumsberichte Link zum Beitreten Partner Bauernzeitung AGFF IG Weidemilch Betriebe und Organisationen Name * Email * Message * Absenden\u2026",
-            "twitter:image": "https:\/\/graswachstum.ch\/contact\/seomagic-image.jpg",
+            "twitter:image": "https:\/\/graswachstum.ch\/de\/contact\/seomagic-image.jpg",
             "twitter:image:alt": "Kontakt | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten"
+            "twitter:data1": "0 Minuten",
+            "keywords": "link,beitreten,partner,bauernzeitung,agff,weidemilch,betriebe,organisationen,name,email"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
-        "canonical": "https:\/\/graswachstum.ch\/contact",
+        "canonical": "https:\/\/graswachstum.ch\/de\/contact",
         "links": {
+            "\/user\/plugins\/vimeo\/css\/vimeo.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
+            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/form\/assets\/form-styles.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/image-captions\/css\/image-captions.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/langswitcher\/css\/langswitcher.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/simplesearch\/css\/simplesearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/youtube\/css\/youtube.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/prism-highlight\/css\/prism.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/login\/css\/login.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/themes\/typhoon\/build\/css\/site.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             }
         },
         "scripts": {
@@ -340,6 +443,11 @@
                 "type": null
             },
             "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/page-stats\/js\/ps.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -379,12 +487,21 @@
                 "defer": "defer",
                 "type": null
             },
-            "https:\/\/www.google.com\/recaptcha\/api.js?onload=captchaOnloadCallback_contact&render=explicit&hl=de&theme=light ": {
-                "async": "",
-                "defer": "defer",
-                "type": null
+            "inline:ldjson:1": {
+                "type": "application\/ld+json"
+            },
+            "inline:ldjson:2": {
+                "type": "application\/ld+json"
+            },
+            "inline:ldjson:3": {
+                "type": "application\/ld+json"
             },
             "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simplesearch\/js\/simplesearch.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -403,8 +520,18 @@
                 "async": null,
                 "defer": null,
                 "type": null
+            },
+            "https:\/\/www.google.com\/recaptcha\/api.js?onload=captchaCheckboxOnloadCallback_contact&render=explicit": {
+                "async": null,
+                "defer": "defer",
+                "type": null
             }
+        },
+        "alternates": [],
+        "flags": {
+            "missing_canonical": false,
+            "missing_hreflang": true
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: d7 (easy handle 0x558313472b20)\n> GET \/contact HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:33 GMT\r\n* Added cookie grav-site-23a95d8=\"7c809457771c86a7e86647c4a0cb0255\" for domain graswachstum.ch, path \/, expire 1738876053\n< set-cookie: grav-site-23a95d8=7c809457771c86a7e86647c4a0cb0255; expires=Thu, 06-Feb-2025 21:07:33 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:33 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n*  CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n*  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Dec 19 02:44:23 2025 GMT\n*  expire date: Mar 19 02:44:22 2026 GMT\n*  subjectAltName: host \"graswachstum.ch\" matched cert's \"graswachstum.ch\"\n*  issuer: C=US; O=Let's Encrypt; CN=R12\n*  SSL certificate verify ok.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 2: Public key type RSA (4096\/152 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/contact\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/contact]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/contact HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< server: nginx\r\n< date: Sat, 31 Jan 2026 20:15:43 GMT\r\n< content-type: text\/html; charset=utf-8\r\n< pragma: no-cache\r\n< grav-page-title: Kontakt\r\n< grav-page-route: \/contact\r\n< grav-page-rawroute: \/contact\r\n< cache-control: max-age=604800\r\n< expires: Sat, 07 Feb 2026 20:15:43 GMT\r\n* Added cookie grav-site-23a95d8=\"72746ac7132daec4baa5ef9c3498ece7\" for domain graswachstum.ch, path \/, expire 1769892343\n< set-cookie: grav-site-23a95d8=72746ac7132daec4baa5ef9c3498ece7; expires=Sat, 31 Jan 2026 20:45:43 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< \r\n"
 }

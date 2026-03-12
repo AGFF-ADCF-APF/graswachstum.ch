@@ -1,0 +1,749 @@
+Code;Bezeichnung;Leistung_Einheit;Kosten_CHF_h;Treibstoff_CHF_h;Flaechenleistung_ha_h
+1000;Traktoren (Standard);;0.0;0.0;1.0
+1001;Traktor 30–36 kW (41–49 PS);33 kW;27.0;7.25;1.0
+1002;Traktor 37–44 kW (50–60 PS);41 kW;33.0;9.0;25.0
+1003;Traktor 45–54 kW (61–73 PS);50 kW;34.0;10.98;25.0
+1004;Traktor 55–64 kW (74–87 PS);60 kW;40.0;13.18;25.0
+1005;Traktor 65–74 kW (88–101 PS);70 kW;43.0;15.37;25.0
+1006;Traktor 75–89 kW (102–121 PS);82 kW;49.0;18.77;25.0
+1010;Traktor 90–104 kW (122–142 PS);97 kW;61.0;22.21;20.0
+1011;Traktor 105–124 kW (143–169 PS);115 kW;69.0;26.33;20.0
+1012;Traktor 125–149 kW (171–203 PS);137 kW;83.0;31.37;20.0
+1013;Traktor 150–199 kW (204–271 PS);175 kW;100.0;40.07;20.0
+1014;Traktor 200–250 kW (272–340 PS);225 kW;130.0;51.51;20.0
+1020;Doppelbereifung / Frontausrüstung / Lenksysteme;;0.0;0.0;1.0
+1021;Doppelbereifung zu Traktor, bis 64 kW (87 PS), vorne, 9.5 R 24/20; ;2.7;0.0;1.0
+1022;Doppelbereifung zu Traktor, bis 64 kW (87 PS), hinten, 230/95 R 40/30; ;4.1;0.0;50.0
+1023;Doppelbereifung zu Traktor, ab 65 kW (88 PS), vorne, 270/95 R 32/24; ;3.4;0.0;50.0
+1024;Doppelbereifung zu Traktor, ab 65 kW (88 PS), hinten, 230/95 R 44/34; ;4.2;0.0;50.0
+1025;Fronthydraulik mit Zapfwelle; ;2.5;0.0;50.0
+1026;"Automatisches Lenksystem, mit Terminal 12"", GPS/RTK";;5.7;0.0;1.0
+1030;Traktoren mit Forstausrüstung;;0.0;0.0;1.0
+1032;Forsttraktor 110 kW (150 PS);90 kW;100.0;24.71;20.0
+1040;Schmalspurtraktoren (Obstbau, Weinbau);;0.0;0.0;1.0
+1043;Schmalspurtraktor, 4-Radantrieb, 37 kW (50 PS);30 kW;34.0;6.59;20.0
+1044;Schmalspurtraktor, 4-Radantrieb, 45 kW (61 PS);45 kW;39.0;9.88;20.0
+1045;Schmalspurtraktor, 4-Radantrieb, 55 kW (75 PS);55 kW;49.0;12.08;20.0
+1046;Schmalspurtraktor, 4-Radantrieb, 70 kW (95 PS);70 kW;60.0;15.37;20.0
+1050;Spezialtraktoren und Raupenfahrzeuge;;0.0;0.0;1.0
+1051;Traktor mit Knicklenkung, 40 kW (55 PS);40 kW;47.0;8.78;1.0
+1052;Traktor mit Knicklenkung, 50 kW (68 PS);50 kW;58.0;10.98;20.0
+1053;Traktor mit Knicklenkung, 65 kW (88 PS);65 kW;63.0;14.27;20.0
+1058;Raupentransporter mit Brücke, Benzin, 4 kW (5 PS);4 kW;21.0;2.45;20.0
+1059;Trägerfahrzeug mit Raupen, Diesel, 18 kW (24 PS);15 kW;37.0;5.76;20.0
+1060;Trägerfahrzeug mit Raupen, mit Hubwerk, Diesel, 25 kW (34 PS);25 kW;43.0;8.24;20.0
+1061;Trägerfahrzeug mit Raupen, mit Hubwerk, Diesel, 44 kW (60 PS);44 kW;59.0;9.66;20.0
+1062;Gemüsebau-Geräteträger, Diesel, 68 kW (92 PS);40 a/h;70.0;0.0;0.4
+1070;Zweiachsmäher (Hanggeräteträger);;0.0;0.0;20.0
+1071;Zweiachsmäher, Diesel, 30 kW (41 PS);30 kW;51.0;6.59;20.0
+1072;Zweiachsmäher, Diesel, 35 kW (48 PS);35 kW;52.0;7.69;1.0
+1073;Zweiachsmäher, Diesel, 45 kW (61 PS);45 kW;53.0;9.88;1.0
+1074;Zweiachsmäher, Diesel, 55 kW (75 PS);55 kW;62.0;12.08;1.0
+1075;Zweiachsmäher, Diesel, 70 kW (95 PS);70 kW;67.0;15.37;20.0
+1080;Transporter ;;0.0;0.0;20.0
+1084;Transporter, Diesel, 40 kW (54 PS);40 kW;54.0;8.78;20.0
+1085;Transporter, Diesel, 50 kW (68 PS);50 kW;59.0;10.98;1.0
+1086;Transporter, Diesel, 55 kW (75 PS);55 kW;58.0;12.08;1.0
+1087;Transporter, Diesel, 80 kW (109 PS);80 kW;76.0;17.57;1.0
+1090;Doppelbereifung vorne/hinten zu Transporter oder Zweiachsmäher; ;2.3;0.0;20.0
+1100;Umschlagmaschinen;;0.0;0.0;20.0
+1101;Hof-, Kompaktlader mit Mistgabel, Diesel, 20 kW (27 PS);20 kW;35.0;4.39;20.0
+1102;Hof-, Kompaktlader mit Mistgabel, Diesel, 44 kW (60 PS);44 kW;54.0;9.66;20.0
+1103;Teleskoplader, 50 kW (68 PS), 2.5 t, ohne Anbau;50 kW;50.0;10.98;20.0
+1104;Teleskoplader, 75 kW (102 PS), 2.5–3.4 t, ohne Anbau;75 kW;58.0;16.47;50.0
+1106;Teleskoplader, 90 kW (122 PS), > 3.4 t, ohne Anbau;90 kW;62.0;19.76;1.0
+1105;Hubstapler, selbstfahrend, Benzin, 15 kW (20 PS);15 kW;19.0;3.29;1.0
+1110;Umschlagmaschinen, elektrisch;;0.0;0.0;20.0
+1111;Hoflader, elektrisch, 10–15 kW (15–20 PS), ohne Anbau;13 KW;34.0;3.77;20.0
+1112;Hoflader, elektrisch, 15–20 kW (20–25 PS), ohne Anbau;18 kW;38.0;5.22;20.0
+1113;Teleskop-Radlader, elektrisch, 20–25 kW (27–34 PS), ohne Anbau;25 kW;52.0;7.25;20.0
+1114;Teleskoplader, elektrisch, 50–65 kW (67–87 PS), ohne Anbau;58 kW;67.0;16.82;1.0
+1115;Kompaktlader, elektrisch 20–30 kW (27–40 PS);20 kW;45.0;5.8;1.0
+1119;Hubstapler, selbstfahrend, Elektromotor, 1.5 t ;15 kW;23.0;4.35;1.0
+1120;Motormäher und übrige Motoreinachser (Geräteträger), Schneefräse;;0.0;0.0;2.0
+1121;Motormäher, 1.6 m Balken, Benzin, 6.6 kW (9 PS);33 a/h;33.0;0.0;0.33
+1122;Motormäher, 1.9 m Balken, Benzin, 10 kW (13 PS);50 a/h;56.0;0.0;0.5
+1123;Motormäher, 1.9 m Balken, Benzin, 10 kW (14 PS), mit Hangausrüstung;50 a/h;57.0;0.0;0.5
+1130;Motormäher, 2.3 m Balken, Benzin, 12 kW (16 PS), mit Hangausrüstung, Doppelmessermähwerk;80 a/h;88.0;0.0;0.8
+1131;Motormäher, 2.6–3.5 m Balken, Benzin, 20 kW (27 PS) mit Hangausrüstung, Doppelmessermähwerk;100 a/h;110.0;0.0;1.0
+1124;Kleinmäher für Rebbau, Benzin, 5 kW (7 PS);5 kW;17.0;3.5;20.0
+1125;Einachser Benzin, 6 kW (9 PS);6 kW;15.0;3.15;20.0
+1126;Einachser Benzin, 17 kW (23 PS);8 kW;28.0;4.2;20.0
+1127;Einachser Benzin, hydraulischer Antrieb, 10 kW (14 PS);10 kW;20.0;5.25;1.0
+1128;Schneefräse, Benzin, 10 kW (14 PS), Raupen, Profiausführung;10 kW;24.0;5.25;1.0
+1129;Rasentraktor, Schnittbreite 90–120 cm, 9–15 kW (13–20 PS);12 kW;18.0;6.3;1.0
+1140;Motor-Kleingeräte;;0.0;0.0;10.0
+1141;Kettensäge, Schwert 0.4 m, Benzin, 2 kW (3 PS);2 kW;12.5;3.87;10.0
+1142;Kettensäge, Schwert 0.5 m, Benzin, 4 kW (5 PS);4 kW;20.0;7.73;10.0
+1143;Kettensäge, Schwert 0.6 m, Benzin, 5 kW (7 PS);5 kW;23.0;9.66;10.0
+1144;Rindenschälgerät mit Motorsäge, 4 kW (5 PS);2 m³/h;21.5;7.73;5.0
+1145;Motorsense, Benzin, 2 kW (3 PS);2 kW;12.5;3.38;10.0
+1146;Forstfreischneider, Benzin, 3 kW (4 PS);3 kW;15.0;6.52;10.0
+1147;Rückensprühgerät, 25 l, Benzin, 0.7 kW (1 PS);2 kW;16.5;4.35;1.0
+1148;Blasgerät, Rucksackbläser, 3 kW (4 PS);3 kW;14.5;6.52;1.0
+1149;Pflanzlochbohrer, Benzin, 4 kW (5 PS);4 kW;16.0;8.7;1.0
+1160;Geländefahrzeuge und Viehtransporter;;0.0;0.0;100.0
+1161;Gelände-Allzweckfahrzeug, Benzin, 10 kW (14 PS);;25.0;5.25;1000.0
+1162;Gelände-Allzweckfahrzeug, Diesel, 15 kW (20 PS);;32.0;4.73;1000.0
+1163;Geländewagen, Pick-up, Diesel, 125 kW (170 PS);60 km/h;46.0;0.0;1.0
+1164;Geländewagen, Diesel, 140 kW (190 PS);60 km/h;54.0;0.0;1.0
+1165;Viehtransporter, 3.5 t, Diesel, 84 kW (um 130 PS);50 km/h;62.0;0.0;1.0
+2010;Frontlader und Anbaugeräte;;0.0;0.0;20.0
+2011;Frontlader, leicht, ohne Anbaugerät, bis 48 kW (65 PS); ;12.0;0.0;20.0
+2012;Frontlader, mittel, ohne Anbaugerät, 49–66 kW (66–90 PS); ;13.0;0.0;50.0
+2013;Frontlader, schwer, ohne Anbaugerät, > 66 kW (90 PS); ;13.0;0.0;20.0
+2014;Mistgabel zu Frontlader, 1.7–2 m;;3.1;0.0;20.0
+2015;Transportgabel für Grossballen zu Frontlader; ;5.9;0.0;20.0
+2016;Erdschaufel zu Frontlader, 1.9–2.5 m;;3.6;0.0;20.0
+2017;Silozange zu Frontlader, 1.2–1.8 m;;7.1;0.0;50.0
+2018;Krokodilzange zu Frontlader, 1.2–2.2 m;;7.1;0.0;20.0
+2019;Ballenspiess zu Frontlader;;3.0;0.0;1.0
+2020;Rundballenzange zu Frontlader; ;7.8;0.0;1.0
+2021;Palettgabel zu Frontlader;;4.3;0.0;1.0
+2030;Geräte für Dreipunktanbau;;0.0;0.0;50.0
+2031;Transportgabel für Grossballen; ;2.8;0.0;100.0
+2032;Grossballengreifer, 1.5–2 m;;10.1;0.0;50.0
+2033;Entnahme- und Verteilgerät zu Flachsilo, 1.8–2.3 m3; ;19.5;0.0;20.0
+2034;Kippschaufel, 2 m; ;4.0;0.0;20.0
+2035;Hecklader mit Mistgabel; ;10.7;0.0;20.0
+2036;Hecklader, hydraulisch; ;10.0;0.0;10.0
+2037;Hubstapler, Heckanbau, 3 m Hubhöhe; ;7.8;0.0;1.0
+2039;Planierschild zu Traktor, 2 m; ;10.0;0.0;1.0
+2050;Zusatzgeräte zu Transporter;;0.0;0.0;30.0
+2052;Kippbrücke  (Metall); ;16.5;0.0;40.0
+2053;Aufbaukran zu Kippbrücke, Dreipunktanbau; ;17.5;0.0;1.0
+2070;Geräte für Schneeräumung;;0.0;0.0;1.0
+2071;Schneepflug zu Traktor bis 59 kW (80 PS); ;24.0;0.0;50.0
+2072;Schneepflug zu Traktor, 60–88 kW (80–120 PS); ;33.0;0.0;50.0
+2073;Schneepflug zu Traktor, ≥ 89 kW (120 PS); ;36.0;0.0;25.0
+2074;Schneeschleuder zu Traktor, 41–80 kW (56–109 PS); ;43.0;0.0;25.0
+2075;Schneeschleuder zu Traktor, > 80 kW (109 PS); ;58.0;0.0;20.0
+2076;Salzstreuer, bis  600 l;;11.5;0.0;20.0
+2077;Tellerstreuer für Salz und Split, 1000–1400 l;;28.0;0.0;50.0
+2078;"Schneeketten zu Traktor, vorne (Paar), Bereifung 280–440 R 24""";;21.0;0.0;50.0
+2079;"Schneeketten zu Traktor, hinten (Paar), Bereifung 420–540 R 34"""; ;24.0;0.0;1.0
+2100;Zusatzgeräte zu Motoreinachser;;0.0;0.0;1.0
+2101;Mähwerk, 1.9 m;50 a/h;19.0;0.0;0.5
+2102;Breitspurmähwerk, Doppelmesser, zu Motor-Einachser, 2–2.5 m;80 a/h;22.5;0.0;0.8
+2104;Kommunal-Mähbalken, 1.2 m;30 a/h;7.1;0.0;0.3
+2106;Bandrechen, 180 cm;50 a/h;17.0;0.0;0.5
+2116;#Heuschieber mit Pick-up, 1.5 m  ;45 a/h;14.5;0.0;0.45
+2114;Abräumgerät mit Pick-up und Querförderband, 2 m ;60 a/h;24.0;0.0;0.6
+2107;Bandeingrasvorrichtung, 1.9 m;;0.0;0.0;30.0
+2117;#Übersaatgerät mit Walze, 1.4 m;70 a/h;125.0;0.0;0.7
+2110;Bodenfräse, 70–110 cm; ;0.0;0.0;20.0
+2115;Schlegelmulcher, 90–110 cm; ;13.0;0.0;20.0
+2111;Schneepflug, 1.3 m; ;7.5;0.0;20.0
+2112;Schneefräse, 60–85 cm; ;11.0;0.0;1.0
+2113;Schneefräse, 1 m; ;13.5;0.0;1.0
+3000;Transportanhänger (Angaben in Nutzlast);;0.0;0.0;90.0
+3002;Anhänger 1-achsig, 7 t, hydraulisch kippbar;1 Fu/h;39.0;0.0;90.0
+3004;Anhänger 2-achsig, 5 t, hydraulisch kippbar;1 Fu/h;48.0;0.0;60.0
+3006;Anhänger 2-achsig, 8 t, hydraulisch kippbar;1 Fu/h;50.0;0.0;90.0
+3008;Anhänger 2-achsig, 10 t, hydraulisch kippbar;1 Fu/h;57.0;0.0;60.0
+3009;Anhänger 2-achsig, > 10 t, hydraulisch kippbar;1 Fu/h;62.0;0.0;90.0
+3010;Anhänger Tandem, 2-achsig, 10 t, hydraulisch kippbar;1 Fu/h;52.0;0.0;60.0
+3011;Anhänger Tandem, 2-achsig, 15 t, hydraulisch kippbar;1 Fu/h;52.0;0.0;60.0
+3012;Autoanhänger;1 Fu/h;15.0;0.0;60.0
+3013;Lenk-Triebachsanhänger an Traktor, ohne Aufbau;3 Fu/h;23.0;0.0;60.0
+3014;Häcksel- bzw. Bunkeraufsatz zu Pneuwagen;1.5 Fu/h;10.0;0.0;90.0
+3020;Muldenkipper, Hakengeräte (Nutzlast);;0.0;0.0;1.0
+3021;Anhänger Tandem, 2-achsig, 12 t, hydraulisch kippbar;1 Fu/h;43.0;0.0;1.0
+3022;Anhänger Tandem, 2-achsig, 15 t, hydraulisch kippbar;1 Fu/h;52.0;0.0;100.0
+3023;Anhänger 3-achsig (Tridem), 20 t, hydraulisch kippbar;1 Fu/h;68.0;0.0;100.0
+3025;Hakengerät um 15 t, mit Container, 25 m3;1 Fu/h;59.0;0.0;100.0
+3026;Hakengerät um 22 t, mit Container, 25 m3;1 Fu/h;91.0;0.0;200.0
+3040;Viehtransport- und Tränkewagen;;0.0;0.0;1.0
+3041;Viehtransportwagen für zwei Kühe;1 Fu/h;14.0;0.0;30.0
+3042;Viehtransportwagen bis 7 Grossviehpl.;1 Fu/h;27.0;0.0;30.0
+3043;Viehtransportwagen bis 11 Grossviehpl.;1 Fu/h;41.0;0.0;30.0
+3045;Tränkewagen, 1000 l; ;0.0;0.0;50.0
+3046;Tränkewagen, 2000 l; ;0.0;0.0;50.0
+3047;Tränkewagen, 4000 l; ;0.0;0.0;50.0
+4000;Grubber, Tiefenlockerer und Spatenmaschinen;;0.0;0.0;1.0
+4001;Untergrundlockerer, Drainagepflug, schwere Ausführung, 70 cm Tiefe;35 a/h;12.0;0.0;0.35
+4002;Tiefenlockerer, 3 m;55 a/h;41.0;0.0;0.55
+4004;Grubber mit Nachläufer, 2.5 m;119 a/h;46.0;0.0;1.19
+4005;Grubber mit Nachläufer, 3 m;140 a/h;66.0;0.0;1.4
+4006;Spatenmaschine, 2 m;30 a/h;49.0;0.0;0.3
+4007;Spatenmaschine, 3 m;45 a/h;87.0;0.0;0.45
+4020;Pflüge;;0.0;0.0;1.0
+4021;Pflug, 2-scharig;32 a/h;25.0;0.0;0.32
+4022;Pflug, 3-scharig;47 a/h;49.0;0.0;0.47
+4023;Pflug, 4-scharig;62 a/h;73.0;0.0;0.62
+4024;Pflug, 5-scharig;78 a/h;105.0;0.0;0.78
+4025;Pflug, 6-scharig;93 a/h;120.0;0.0;0.93
+4030;Eggen gezogen, ohne Antrieb;;0.0;0.0;1.0
+4032;Scheibenegge, gezogen, 3 m;142 a/h;140.0;0.0;1.42
+4033;Scheibenegge, gezogen, 4 m;192 a/h;190.0;0.0;1.92
+4034;Kurzscheibenegge mit Nachwalze, 3 m;142 a/h;94.0;0.0;1.42
+4035;Kurzscheibenegge mit Nachwalze, 4 m;192 a/h;175.0;0.0;1.92
+4038;Federzinkenegge mit Krümler, 3 m;158 a/h;80.0;0.0;1.58
+4039;Federzinkenegge mit Krümler, aufklappbar, 4 m;212 a/h;110.0;0.0;2.12
+4040;Federzinkenegge mit Krümler, aufklappbar, 6 m;307 a/h;200.0;0.0;3.07
+4050;Eggen mit Antrieb;;0.0;0.0;20.0
+4053;Bodenfräse mit Stabkrümler, 2.1 m;65 a/h;66.0;0.0;0.65
+4054;Bodenfräse mit Stabkrümler, 2.5 m;76 a/h;97.0;0.0;0.76
+4055;Kreiselegge mit Packerwalze, 2.5 m;92 a/h;80.0;0.0;0.92
+4056;Kreiselegge mit Packerwalze, 3 m;109 a/h;105.0;0.0;1.09
+4057;Kreiselegge mit Packerwalze, 4 m;140 a/h;160.0;0.0;1.4
+4058;Zinkenrotor mit Packerwalze, 2.5 m;92 a/h;100.0;0.0;0.92
+4059;Zinkenrotor mit Packerwalze, 3 m;109 a/h;105.0;0.0;1.09
+4070;Walzen;;0.0;0.0;10.0
+4072;Glattwalze, 3 m;184 a/h;30.0;0.0;1.84
+4073;Glattwalze, 5 m;303 a/h;76.0;0.0;3.03
+4074;Rauhwalze, 2.5 m, einteilig, Dreipunktanbau;156 a/h;38.0;0.0;1.56
+4075;Rauhwalze, 3 m, einteilig, Dreipunktanbau;184 a/h;42.0;0.0;1.84
+4076;Rauhwalze, 6 m, dreiteilig, gezogen;365 a/h;110.0;0.0;3.65
+4077;Rauhwalze, 8 m, dreiteilig, gezogen;492 a/h;165.0;0.0;4.92
+4078;Messerwalze, 3 m;300 a/h;125.0;0.0;3.0
+4079;Messerwalze, 6 m;500 a/h;230.0;0.0;5.0
+4090;Übrige Geräte für Bodenbearbeitung;;0.0;0.0;40.0
+4092;Huckepack-Grundausrüstung;;0.0;0.0;1.0
+4093;Frontpacker, 1.5 m;;0.0;0.0;1.0
+4101;Streifenlockerer 3 m, 4−6 Reihen (Strip Tillage);100 a/h;99.0;0.0;1.0
+4102;Streifenfräse (z.B. für Maissaat), 4-reihig;50 a/h;66.0;0.0;0.5
+5000;Konventionelle Sämaschinen;;0.0;0.0;1.0
+5001;Sämaschine mit Fahrgassenschaltung, 2.5 m;140 a/h;77.0;0.0;1.4
+5002;Sämaschine mit Fahrgassenschaltung, 3 m;164 a/h;100.0;0.0;1.64
+5004;Aufbausämaschine, pneumatisch, 3 m;160 a/h;92.0;0.0;1.6
+5006;Aufbausämaschine pneumatisch, 4 m;220 a/h;125.0;0.0;2.2
+5007;#Anbausämaschine pneumatisch, 6 m;330 a/h;180.0;0.0;3.3
+5005;Direktsämaschine, 3 m;150 a/h;120.0;0.0;1.5
+5137;Säwalze, 3 m;110 a/h;28.0;0.0;1.1
+5020;Einzelkornsämaschinen für Mais;;0.0;0.0;1.0
+5021;Einzelkornsämaschine, 4-reihig;115 a/h;81.0;0.0;1.15
+5022;Einzelkornsämaschine, 6-reihig;170 a/h;110.0;0.0;1.7
+5023;Einzelkornsämaschine, 8-reihig;225 a/h;155.0;0.0;2.25
+5030;Einzelkornsämaschinen für Rüben;;0.0;0.0;10.0
+5031;Einzelkornsämaschine für Rüben, 6-reihig;104 a/h;93.0;0.0;1.04
+5032;Einzelkornsämaschine für Rüben, 12-reihig;203 a/h;165.0;0.0;2.03
+5040;Kartoffellege- und Pflanzsetzmaschinen;;0.0;0.0;10.0
+5043;Kartoffellegemaschine, automatisch, 2-reihig;50 a/h;110.0;0.0;0.5
+5044;Kartoffellegemaschine, automatisch, 4-reihig;100 a/h;220.0;0.0;1.0
+5047;Kartoffelsetzmaschine «All-in-one»;50 a/h;170.0;0.0;0.5
+5045;Pflanzensetzmaschine, 2-reihig;;0.0;0.0;1.0
+5046;Tabaksetzmaschine, 2-reihig;10 a/h;29.0;0.0;0.1
+5060;Bestellkombinationen und Zusatzgeräte;;0.0;0.0;1.0
+5061;   Zapfwellenegge + Sämaschine, 2.5 m;65 a/h;63.0;0.0;0.65
+5062;   Zapfwellenegge + Sämaschine, 3 m;75 a/h;98.0;0.0;0.75
+5067;   Zapfwellenegge + Sämaschine, 4 m;120 a/h;165.0;0.0;1.2
+5063;   Streifenfräse, 4-reihig + Einzelkornsämaschine für Mais, 4-reihig + Düngerstreuer + Bandspritze, mit Huckepack;50 a/h;120.0;0.0;0.5
+5066;Aufbau-Granulatstreuer, 4-6-reihig;;0.0;0.0;4.0
+5080;Hackstriegel;;0.0;0.0;1.0
+5081;Hackstriegel, 6 m;400 a/h;93.0;0.0;4.0
+5082;Hackstriegel, hydraulisch klappbar, 9 m;556 a/h;130.0;0.0;5.56
+5083;Hackstriegel, hydraulisch klappbar, 12 m;718 a/h;165.0;0.0;7.18
+5085;Rollstriegel, 6 m;360 a/h;140.0;0.0;3.6
+5086;Rollstriegel, 12 m;720 a/h;290.0;0.0;7.2
+5100;Pflegegeräte für Kartoffeln;;0.0;0.0;1.0
+5101;Kartoffelhack- und häufelgerät, 4-reihig;100 a/h;64.0;0.0;1.0
+5102;Dammformer für Kartoffeln, 4-reihig;100 a/h;80.0;0.0;1.0
+5104;Dammfräse für Kartoffeln, 4-reihig;70 a/h;110.0;0.0;0.7
+5106;Beetformer für Kartoffeln, 4-reihig;70 a/h;49.0;0.0;0.7
+5107;Separator für Kartoffeln, 2-reihig;35 a/h;145.0;0.0;0.35
+5120;Pflegegeräte für Mais und Rüben;;0.0;0.0;1.0
+5091;Scharhackgerät, 4-reihig, starr;125 a/h;55.0;0.0;1.25
+5121;Scharhackgerät, 6-reihig, klappbar;190 a/h;76.0;0.0;1.9
+5124;Scharhackgerät, 8-reihig, hydraulisch klappbar;250 a/h;96.0;0.0;2.5
+5125;Scharhackgerät, 6-reihig, Kamerasteuerung mit Verschieberahmen;190 a/h;120.0;0.0;1.9
+5126;Scharhackgerät, 8-reihig, Kamerasteuerung mit Verschieberahmen;250 a/h;140.0;0.0;2.5
+5130;Pflegegeräte für Wiesen und Weiden;;0.0;0.0;10.0
+5131;Wiesenegge, 4 m;191 a/h;17.0;0.0;1.91
+5132;Wiesenegge, 6 m;278 a/h;24.0;0.0;2.78
+5133;Striegel, 3 m;142 a/h;28.0;0.0;1.42
+5134;Striegel, 6 m ;280 a/h;55.0;0.0;2.8
+5135;Striegel + pneumatische Sämaschine, 3 m;130 a/h;35.0;0.0;1.3
+5136;Striegel + pneumatische Sämaschine, 6 m;260 a/h;80.0;0.0;2.6
+5137;Säwalze, 3 m;110 a/h;28.0;0.0;1.1
+5138;Mäusevergasungsapparat, Benzin, 2 kW (3 PS);2 kW;14.5;8.51;15.0
+5140;Mulchgeräte;;0.0;0.0;1.0
+5141;Schlegelmulcher, Front-/Heckanbau, 1.75−2 m;52 a/h;14.0;0.0;0.52
+5142;Schlegelmulcher, Front-/Heckanbau, 2.5 m;87 a/h;32.0;0.0;0.87
+5143;Schlegelmulcher, Front-/Heckanbau, 3 m;102 a/h;35.0;0.0;1.02
+5144;Schlegelmulcher, Front-/Heckanbau, bis 3.5 m;115 a/h;49.0;0.0;1.15
+5145;Seitenmulcher mit Schwenkarm, 1.55 m;;25.0;0.0;40.0
+5146;Seitenmulcher mit Schwenkarm, 2 m ;;28.0;0.0;1.0
+5147;Böschungsmäher mit Ausleger (3−5 m);;40.0;0.0;1.0
+5148;Böschungsmäher mit Ausleger (5−7 m);;33.0;0.0;1.0
+5150;Pflanzenschutz ;;0.0;0.0;20.0
+5151;Körnerstreuer, 100−110 l;200 a/h;36.0;0.0;2.0
+5153;Anbaufeldspritze, 12 m Balken, 600 l Fass;253 a/h;150.0;0.0;2.53
+5154;Anbaufeldspritze, 15 m Balken, 800 l Fass;358 a/h;105.0;0.0;3.58
+5156;Anbaufeldspritze, 21 m Balken, 1000 l Fass;402 a/h;90.0;0.0;4.02
+5157;Anhängefeldspritze, 18 m Balken, 2000 l Fass;323 a/h;180.0;0.0;3.23
+5158;Anhängefeldspritze, 24 m Balken, 2500 l Fass;412 a/h;155.0;0.0;4.12
+5160;Feldspritze, selbstfahrend, 21 m Balken, 3000 l Tank;700 a/h;1050.0;20.59;7.0
+5161;Präzisions-Feldspritze, kameragesteuert, 6 m, 700 l Fronttank;300 a/h;260.0;0.0;3.0
+6000;Düngerstreuer (Mineraldünger);;0.0;0.0;15.0
+6001;Einkasten-Düngerstreuer, 2.5 m;;0.0;0.0;15.0
+6002;Reihendüngerstreuer zu Hackgerät, 4−8-reihig;80 a/h;34.0;0.0;0.8
+6003;Schleuderstreuer, bis 500 l;100 a/h;10.5;0.0;1.0
+6004;Schleuderstreuer, 500−1000 l;200 a/h;20.0;0.0;2.0
+6005;Schleuderstreuer, > 1000 l, mit Bordcomputer;300 a/h;59.0;0.0;3.0
+6006;Reihenstreugerät zu Schleuderstreuer;;0.0;0.0;1.0
+6020;Miststreuer ;;0.0;0.0;10.0
+6021;Aufbau-Seitenstreuer zu Transporter, 2.5 m3;2.8 Fu/h;91.0;0.0;20.0
+6022;Aufbau-Seitenstreuer zu Transporter, 3.5 m3;2.4 Fu/h;98.0;0.0;20.0
+6023;Aufbau-Seitenstreuer zu Transporter, 4.5 m3;2.3 Fu/h;90.0;0.0;20.0
+6024;Miststreuer mit Seitenstreuwerk, um 5 m3;2.1 Fu/h;87.0;0.0;20.0
+6025;Miststreuer mit Seitenstreuwerk, um 7 m3;1.7 Fu/h;73.0;0.0;1.0
+6026;Miststreuer, um 8 m3;1.6 Fu/h;53.0;0.0;1.0
+6027;Miststreuer, um 10 m3;1.4 Fu/h;47.0;0.0;1.0
+6028;Miststreuer, um 12 m3;1.3 Fu/h;43.0;0.0;8.0
+6029;Universalstreuer, um 14 m3;1.1 Fu/h;33.0;0.0;8.0
+6030;Universalstreuer, um 16 m3;1.0 Fu/h;34.0;0.0;8.0
+6031;Universalstreuer, um 21 m3;0.8 Fu/h;31.0;0.0;8.0
+6040;Mistkräne (Hydrauliklader);;0.0;0.0;8.0
+6041;Hydrauliklader, Dreipunktanbau, Zapfwellenantrieb;13 m³/h;25.0;0.0;20.0
+6042;Hydrauliklader, Elektromotor, 5.5 kW (7.5 PS);13 m³/h;51.0;0.0;20.0
+6043;Hydrauliklader mit Zapfwellenantrieb;13 m³/h;50.0;0.0;20.0
+6050;Vakuumfässer;;0.0;0.0;1.0
+6051;Aufbau-Vakuumfass zu Transporter, 3000 l;6 m³/h;18.0;0.0;1.0
+6053;Vakuumfass, 4000 l;18 m³/h;41.0;0.0;20.0
+6054;Vakuumfass, 5000 l;20 m³/h;40.0;0.0;20.0
+6055;Vakuumfass, 6000 l;22 m³/h;39.0;0.0;20.0
+6056;Vakuumfass, 8000 l;26 m³/h;46.0;0.0;1.0
+6057;Vakuumfass, 10 000 l;29 m³/h;44.0;0.0;1.0
+6058;Vakuumfass, 12 000 l;31 m³/h;43.0;0.0;1.0
+6070;Pumpfässer;;0.0;0.0;150.0
+6069;Aufbau-Pumpfass zu Transporter,  2600 l;6 m³/h;25.0;0.0;250.0
+6071;Aufbau-Pumpfass zu Transporter,  3000 l;12 m³/h;39.0;0.0;300.0
+6072;Aufbau-Pumpfass zu Transporter,  3500 l;15 m³/h;44.0;0.0;400.0
+6073;Pumpfass, 4000 l;18 m³/h;52.0;0.0;500.0
+6074;Pumpfass, 5000 l;20 m³/h;47.0;0.0;600.0
+6075;Pumpfass, 6000 l;22 m³/h;51.0;0.0;100.0
+6076;Pumpfass, 8000 l;26 m³/h;53.0;0.0;1.0
+6077;Pumpfass, 10 000 l;29 m³/h;57.0;0.0;1.0
+6078;Pumpfass, 12 000 l;31 m³/h;61.0;0.0;1.0
+6079;Pumpfass, 15 000 l;35 m³/h;84.0;0.0;100.0
+6080;Fässer mit Schleppschuhverteiler;;0.0;0.0;100.0
+6081;9 m Schleppschuhverteiler + 5000 l Fass;20 m³/h;57.0;0.0;200.0
+6082;12 m Schleppschuhverteiler + 6000 l Fass;22 m³/h;79.0;0.0;250.0
+6083;12 m Schleppschuhverteiler + 8000 l Fass;26 m³/h;92.0;0.0;300.0
+6084;12 m Schleppschuhverteiler + 10 000 l Fass;29 m³/h;85.0;0.0;400.0
+6085;15 m Schleppschuhverteiler + 12 000 l Fass;31 m³/h;93.0;0.0;500.0
+6086;15 m Schleppschuhverteiler + 15 000 l Fass;35 m³/h;100.0;0.0;600.0
+6090;Fässer mit Schleppschlauchverteiler;;0.0;0.0;1.0
+6096;5 m Schleppschlauchverteiler + 3000 l Fass auf Transporter;15 m³/h;49.0;0.0;250.0
+6091;9 m Schleppschlauchverteiler + 5000 l Fass;20 m³/h;48.0;0.0;300.0
+6092;12 m Schleppschlauchverteiler + 6000 l Fass;22 m³/h;57.0;0.0;400.0
+6093;12 m Schleppschlauchverteiler + 8000 l Fass;26 m³/h;67.0;0.0;500.0
+6094;12 m Schleppschlauchverteiler + 10 000 l Fass;29 m³/h;61.0;0.0;600.0
+6095;12 m Schleppschlauchverteiler + 12 000 l Fass;31 m³/h;61.0;0.0;1.0
+6097;15m Schleppschlauchverteiler + 15 000 l Fass;35 m³/h;82.0;0.0;1.0
+6100;Güllepumpen, Güllemixer und Separatoren;;0.0;0.0;20.0
+6103;Tauchpumpe fahrbar, Elektromotor, 9 kW (12 PS);20 m³/h;33.0;0.0;10.0
+6105;Einkolbenpumpe, doppelwirkend, Elektromotor + Agropilot;20 m³/h;35.0;0.0;10.0
+6107;Zweikolbenpumpe, doppelwirkend, Elektromotor + Agropilot;50 m³/h;58.0;0.0;10.0
+6109;Drehkolbenpumpe, Zapfwellenantrieb;60 m³/h;22.0;0.0;10.0
+6117;Drehkolbenpumpe, Elektromotor, 15 kW, 61 m3/h;60 m³/h;33.0;0.0;20.0
+6110;Schneckenpumpe, Elektromotor, 15 kW (20 PS), Funkfernsteuerung;60 m³/h;49.0;0.0;20.0
+6111;Schneckenpumpe, Zapfwellenantrieb, zweistufig;60 m³/h;45.0;0.0;10.0
+6113;Güllenmixer, Elektromotor, 3−5 m, 9 kW (12 PS); ;11.0;0.0;20.0
+6114;Güllenmixer, Zapfwellenantrieb, 4−6 m; ;11.0;0.0;20.0
+6115;Schiffschraubenrührwerk, Elektromotor, 7.5 kW (10 PS); ;22.0;0.0;20.0
+6116;Separator, Elektromotor, 9 kW (12 PS);20 m³/h;10.5;0.0;20.0
+6130;Geräte für Gülleverschlauchung;;0.0;0.0;1.0
+6131;Güllewerfer, Dreipunktanbau, Handbedienung;60 m³/h;18.0;0.0;800.0
+6132;Gülleverteiler, Dreipunktanbau, mechanisch automatisch;60 m³/h;23.0;0.0;800.0
+6133;Gülleverteiler, Dreipunktanbau, elektronisch automatisch;60 m³/h;33.0;0.0;800.0
+6137;Schleppschlauchverteiler, Dreipunktanbau, 7 m;60 m³/h;61.0;0.0;600.0
+6134;Schleppschlauchverteiler, Dreipunktanbau, 9 m;60 m³/h;69.0;0.0;600.0
+6135;Schleppschlauchverteiler, Dreipunktanbau, 12 m;60 m³/h;80.0;0.0;600.0
+6136;Schleppschlauchverteiler, Dreipunktanbau, 15 m;60 m³/h;78.0;0.0;1.0
+6138;Schleppschuhverteiler, Dreipunktanbau, 7 m;60 m³/h;86.0;0.0;1.0
+6139;Schleppschuhverteiler, Dreipunktanbau, 9 m;60 m³/h;85.0;0.0;1.0
+6140;Schleppschuhverteiler, Dreipunktanbau, 12 m ;60 m³/h;120.0;0.0;800.0
+6141;Schleppschuhverteiler, Dreipunktanbau, 15 m;60 m³/h;135.0;0.0;600.0
+6150;Rohre und Schläuche;;0.0;0.0;600.0
+6151;PVC-Schlauch, 100 m, ø 75 mm;25 m³/h;5.0;0.0;30.0
+6152;PVC-Schlauch auf Dreipunkthaspel, 300 m, ø 75 mm;60 m³/h;45.0;0.0;20.0
+6153;PVC-Schlauch auf Dreipunkthaspel, 600 m, ø 75 mm;60 m³/h;65.0;0.0;30.0
+6154;PVC-Schlauch auf Dreipunkthaspel, 300 m, ø 90 mm ;90 m³/h;54.0;0.0;20.0
+6155;PVC-Schlauch auf Dreipunkthaspel, 600 m, ø 90 mm ;90 m³/h;77.0;0.0;1.0
+6156;PE-Rohr, 100 m, ø 75 mm; ;2.6;0.0;1.0
+6159;PE-Rohr, 100 m, ø 90 mm; ;3.6;0.0;1.0
+6160;Güllenröhren, 100 m, ø 70 mm; ;6.4;0.0;25.0
+6170;Beregnung;;0.0;0.0;20.0
+6171;Beregnungspumpe zu Traktor, 100 m Rohr;50 m³/h;4.1;0.0;20.0
+6177;Beregnungspumpe, elektrisch 22−30 kW (30−40 PS);58 m³/h;5.5;0.0;20.0
+6172;Beregnungsanlage, 37 Regner, 600 m Rohr; ;8.0;0.0;1.0
+6173;Beregnungsmaschine klein, 170 m Schlauch ; ;6.9;0.0;1.0
+6174;Beregnungsmaschine mittel, 350 m Schlauch; ;13.0;0.0;1.0
+6175;Beregnungsmaschine gross, 450 m Schlauch; ;15.0;0.0;10.0
+6180;Kompostierung;;0.0;0.0;8.0
+6181;Abfallschredder, Zapfwellenantrieb;;65.0;0.0;1.0
+6182;Abfallschredder mit Aufbaumotor, Diesel, 30 kW (41 PS);30 kW;83.0;9.88;1.0
+6183;Kompostwendemaschine, Zapfwellenantrieb;250 m/h;43.0;0.0;1.0
+7000;Mähdrescher (ohne Schneidwerk);;0.0;0.0;4.0
+7002;Mähdrescher (170 PS, 125 kW) bei 4.2−4.8 m;133 a/h;330.0;41.18;1.33
+7003;Mähdrescher (204 PS, 150 kW) bei 4.8−5.2 m;143 a/h;380.0;49.41;1.43
+7004;Mähdrescher (238 PS, 175 kW) bei 5.2−6 m ;162 a/h;450.0;67.25;1.62
+7005;Mähdrescher (299 PS, 220 kW) bei 5.2−6 m;175 a/h;490.0;84.55;1.75
+7006;Mähdrescher (350 PS, 257 kW) bei 6−7 m;189 a/h;530.0;98.77;1.89
+7007;Mähdrescher (400 PS, 294 kW) bei 7−8 m;200 a/h;560.0;112.98;2.0
+7008;Mähdrescher (470 PS, 345 kW) bei 8−9 m;220 a/h;580.0;132.58;2.2
+7009;Mähdrescher (550 PS, 404 kW) bei 9−10 m;260 a/h;690.0;155.26;2.6
+7020;Schneidwerke mit Wagen;;0.0;0.0;5.0
+7021;Schneidwerk, 3.9−4.2 m (mit Wagen);120 a/h;67.0;0.0;1.2
+7022;Schneidwerk, 4.2−4.8 m (mit Wagen);133 a/h;72.0;0.0;1.33
+7023;Schneidwerk, 4.8−5.2 m (mit Wagen);143 a/h;84.0;0.0;1.43
+7024;Schneidwerk, 5.2−6 m (mit Wagen);168 a/h;105.0;0.0;1.68
+7025;Schneidwerk, 6−7 m (mit Wagen);189 a/h;115.0;0.0;1.89
+7026;Schneidwerk, 7−8 m (mit Wagen);200 a/h;125.0;0.0;2.0
+7027;Schneidwerk, 8−9 m (mit Wagen);230 a/h;130.0;0.0;2.3
+7028;Schneidwerk, 9−10 m (mit Wagen);260 a/h;155.0;0.0;2.6
+7040;Übrige Anbaugeräte für Mähdrescher;;0.0;0.0;15.0
+7046;Pflückvorsatz, 6-reihig, mit Unterbauhäcksler;120 a/h;175.0;0.0;1.2
+7047;Pflückvorsatz, 8-reihig, mit Unterbauhäcksler;140 a/h;210.0;0.0;1.4
+7050;Rapsschneidvorsatz, 5.40 m;140 a/h;110.0;0.0;1.4
+7051;Sonnenblumen-Schneidwerk, mit Unterbauhäcksler, 5.40 m;140 a/h;340.0;0.0;1.4
+7060;Strohbearbeitung, Schroter und Umladewagen;;0.0;0.0;20.0
+7063;Strohverteiler zu Mähdrescher;;0.0;0.0;10.0
+7064;Überladewagen, 20−25 m3;;0.0;0.0;1.0
+8000;Krautschläger und Abflammgeräte;;0.0;0.0;1.0
+8001;Kartoffelkrautschläger, 1.8 m, 2-reihig;60 a/h;74.0;0.0;0.6
+8002;Kartoffelkrautschläger, 3 m, 4-reihig;120 a/h;140.0;0.0;1.2
+8003;Abflammgerät für Kartoffeln, 3 m, 4-reihig;40 a/h;240.0;0.0;0.4
+8010;Kartoffelroder und -vollernter;;0.0;0.0;1.0
+8013;Kartoffelvollernter, gross, Rollbodenbunker, 1-reihig;10 a/h;150.0;0.0;0.1
+8014;Kartoffelvollernter mit Vorsortierung, Rollböden und Zusatzbunker, 1-reihig;10 a/h;165.0;0.0;0.1
+8016;Kartoffelvollernter mit Überladeband, 2-reihig, Bunker 7 t;20 a/h;260.0;0.0;0.2
+8015;Kartoffelvollernter mit Überladeband, 2-reihig, Bunker 9 t;30 a/h;450.0;0.0;0.3
+8060;Rübenernte;;0.0;0.0;1.0
+8063;Zuckerrübenvollernter, gezogen, 2-reihig, ;25 a/h;110.0;0.0;0.25
+8067;Zuckerrübenvollernter, selbstfahrend, 6-reihig, 24 m3, Diesel, 480 kW (652 PS);100 a/h;560.0;0.0;1.0
+8080;Rübenreinigungsgeräte;;0.0;0.0;30.0
+8082;Zuckerrüben-Ladegerät, selbstfahrend, Diesel, 260 kW (354 PS);130 t/h;320.0;49.96;50.0
+9000;Mähwerke und Bandrechen zu Zweiachsmäher;;0.0;0.0;4.0
+9001;Doppelmessermähwerk, 2.1−2.4 m;137 a/h;94.0;0.0;1.37
+9002;Rotationsmähwerk, Front, 2.2 m;137 a/h;41.0;0.0;1.37
+9003;Bandrechen, 2.8−3.1 m;130 a/h;29.0;0.0;1.3
+9010;Mähwerke und Aufbereiter zu Traktoren;;0.0;0.0;1.0
+9011;Doppelmessermähwerk, Heck, 1.7−2.1 m, hydraulisch klappbar;137 a/h;59.0;0.0;1.37
+9012;Doppelmessermähwerk, Front, 2.5 m;180 a/h;59.0;0.0;1.8
+9015;Rotationsmähwerk, Front, 2.5−3.0 m;200 a/h;64.0;0.0;2.0
+9016;Rotationsmähwerk mit Aufbereiter, Front, 2.5−3.0 m;200 a/h;105.0;0.0;2.0
+9017;Rotationsmähwerk mit Aufbereiter, Front, 3.5 m;300 a/h;160.0;0.0;3.0
+9019;Rotationsmähwerk mit Aufbereiter, gezogen, Heck, 2.5−3.1 m;201 a/h;125.0;0.0;2.01
+9020;Rotationsmähwerk, Heck, 1.6−2.0 m;130 a/h;33.0;0.0;1.3
+9021;Rotationsmähwerk, Heck, 2.1−2.6 m ;172 a/h;47.0;0.0;1.72
+9022;Rotationsmähwerk mit Aufbereiter, Heck, 2.1−2.6 m;172 a/h;84.0;0.0;1.72
+9023;Rotationsmähwerk mit Aufbereiter, Heck, 2.8−3.2 m;250 a/h;155.0;0.0;2.5
+9024;Rotationsmähwerk mit Aufbereiter, Heck, 3.2−4.0 m;300 a/h;195.0;0.0;3.0
+9025;Mähkombination, 1 x Front / 1 x Heck, 5−6 m;400 a/h;150.0;0.0;4.0
+9026;Mähkombination mit Aufbereiter, 1 x Front / 1 x Heck, 5−6m;400 a/h;190.0;0.0;4.0
+9027;Mähkombination 1 x Front / 2 x Heck, 8−10 m;600 a/h;220.0;0.0;6.0
+9028;Mähkombination mit Aufbereiter, 1 x Front / 2 x Heck, 8−10 m;600 a/h;300.0;0.0;6.0
+9029;Mähkombination mit Aufbereiter, Schwadzusammenführung, 1 x Front / 2 x Heck, 8−10 m;650 a/h;630.0;0.0;6.5
+9030;Aufbereiter, 2 m, Dreipunktanbau;120 a/h;26.0;0.0;1.2
+9031;Aufbereiter intensiv, Dreipunktanbau, 1.8 m;120 a/h;34.0;0.0;1.2
+9040;Zetten und Wenden;;0.0;0.0;2.0
+9041;Kreiselheuer, 3.5−4.5 m;280 a/h;42.0;0.0;2.8
+9042;Kreiselheuer, 4.6−6 m;376 a/h;51.0;0.0;3.76
+9043;Kreiselheuer, 6.1−7.5 m;469 a/h;74.0;0.0;4.69
+9044;Kreiselheuer, 7.5−9 m;535 a/h;87.0;0.0;5.35
+9045;Kreiselheuer, 9−13 m;674 a/h;130.0;0.0;6.74
+9046;Schwadwender, 2.5 m;100 a/h;23.0;0.0;1.0
+9060;Schwaden;;0.0;0.0;20.0
+9061;Kreiselschwader, 2.8−3.3 m;139 a/h;21.0;0.0;1.39
+9062;Kreiselschwader, 3.4−4.5 m;183 a/h;30.0;0.0;1.83
+9063;Doppel-Kreiselschwader, Mittelablage, 5.5−6.5 m;272 a/h;58.0;0.0;2.72
+9064;Doppel-Kreiselschwader, Mittelablage, > 6.5 m;287 a/h;72.0;0.0;2.87
+9065;Doppel−Kreiselschwader, Seitenablage, 5.5−6.5 m;272 a/h;69.0;0.0;2.72
+9066;Sternradrechen,  6.5−7.5 m;250 a/h;36.0;0.0;2.5
+9068;Pick-up−Bandschwader, Front/Heck, 3−4 m;300 a/h;31.0;0.0;3.0
+9069;Pick-up−Bandschwader, Heck, 6−7.5 m;470 a/h;140.0;0.0;4.7
+9067;Pick-up−Bandschwader, Heck, 8−10 m;550 a/h;180.0;0.0;5.5
+9080;Ladewagen;;0.0;0.0;50.0
+9081;Aufbau-Ladegerät zu Transporter, 9,5 m3 DIN;3.3 Fu/h;69.0;0.0;30.0
+9082;Aufbau-Ladegerät zu Transporter, 13 m3 DIN;3.0 Fu/h;105.0;0.0;1.0
+9083;Ladewagen mit Schneidvorrichtung, 15 m3 DIN;2.7 Fu/h;74.0;0.0;1.0
+9084;Ladewagen mit Schneidvorrichtung, 20 m3 DIN;2.5 Fu/h;66.0;0.0;1.0
+9085;Ladewagen mit Schneidvorrichtung, 25 m3 DIN;2.0 Fu/h;70.0;0.0;20.0
+9086;Rotor-Ladewagen, 30 m3 DIN;1.5 Fu/h;71.0;0.0;20.0
+9087;Rotor-Ladewagen, 35 m3 DIN;1.2 Fu/h;79.0;0.0;40.0
+9088;Rotor-Ladewagen, 40 m3 DIN;1.0 Fu/h;76.0;0.0;40.0
+9090;Dosierentladung zu Ladewagen;2 Fu/h;16.0;0.0;40.0
+9091;Querförderband zu Ladewagen;2 Fu/h;14.0;0.0;80.0
+9100;Häckselwagen, Abschiebewagen ;;0.0;0.0;1.0
+9101;Häckselwagen mit Dosiereinrichtung, 25 m3 DIN;2.5 Fu/h;87.0;0.0;30.0
+9102;Häckselwagen mit Dosiereinrichtung, 35 m3 DIN;1.8 Fu/h;69.0;0.0;20.0
+9103;Häckselwagen mit Dosiereinrichtung, 45 m3 DIN;1.3 Fu/h;65.0;0.0;30.0
+9105;Abschiebewagen, 25 m3 DIN;2.5 Fu/h;58.0;0.0;20.0
+9106;Abschiebewagen, 35 m3 DIN;1.8 Fu/h;59.0;0.0;15.0
+9107;Abschiebewagen, 45 m3 DIN;1.3 Fu/h;67.0;0.0;10.0
+9120;Pressen und Ballenerntegeräte;;0.0;0.0;10.0
+9121;Siloschlauchpresse mit Folie, ø 2.4 m;120 m³/h;750.0;0.0;15.0
+9122;Hochdruckpresse (Kleinballen);220 Ba/h;150.0;0.0;10.0
+9123;Rundballenpresse klein, Schnurbindung, ø 0.5 m, 0.14 m3;50 Rb/h;57.0;0.0;20.0
+9124;Rundballenpresse Festkammer, 1.4 m3 (Heu/Stroh);25 Rb/h;125.0;0.0;1.0
+9125;Rundballenpresse Festk., Zusatzmesser, 1.4 m3 (Silo);25 Rb/h;145.0;0.0;1.0
+9126;Rundballenpresse Vario, 2.1 m3 (Heu/Stroh);20 Rb/h;145.0;0.0;1.0
+9127;Rundballenpresse Vario, Zusatzmesser, 2.1 m3 (Silo);20 Rb/h;150.0;0.0;20.0
+9128;Quaderballenpresse mittel, 1.4 m3;60 Qb/h;470.0;0.0;20.0
+9129;Quaderballenpresse gross, 2 m3;40 Qb/h;450.0;0.0;20.0
+9142;Quaderballenpresse gross, mit Vorbauhäcksler, 2 m3 ;35 Qb/h;430.0;0.0;20.0
+9130;Rundballenpresse mit Wickelgerät, ø 1.2 m, 1.4 m3;20 Rb/h;290.0;0.0;20.0
+9144;Rundballenpresse Vario mit Wickelgerät, 2.1 m3 (Silo);18 Rb/h;300.0;0.0;20.0
+9131;Folienwickelgerät für kleine Rundballen, ø 0.5 m, 0.14 m3;45 Rb/h;90.0;0.0;20.0
+9132;Folienwickelgerät für mittlere Rundballen, Dreipunktanbau, ø 1.2 m, 1.4 m3;22 Rb/h;145.0;0.0;1.0
+9133;Folienwickelgerät für grosse Rundballen, gezogen, ø 1.5 m, 2.1 m3;22 Rb/h;180.0;0.0;1.0
+9134;Folienwickelgerät für Quaderballen, 1.2 m3;30 Qb/h;280.0;0.0;1.0
+9135;Press-Wickelkombination für Silomaisballen;30 Rb/h;470.0;0.0;400.0
+9136;Ballenwagen zu Hochdruckpresse, 30−50 Ba;100 Ba/h;20.0;0.0;500.0
+9140;Rundballen-Ladewagen (8 Ballen);16 Ba/h;0.0;0.0;500.0
+9139;Grossballen-Transportwagen, 10 t;1 Fu/h;0.0;0.0;50.0
+9180;Feldhäcksler Mais/Gras (angebaut oder gezogen);;0.0;0.0;50.0
+9181;Anbaumaishäcksler, 1-reihig;32 a/h;100.0;0.0;0.32
+9182;Anbaumaishäcksler, schwenkbar, 2-reihig;62 a/h;100.0;0.0;0.62
+9185;Maishäcksler, 4-reihig, Front- oder Heckanbau;100 a/h;170.0;0.0;1.0
+9200;Feldhäcksler, selbstfahrend (Grundgerät);;0.0;0.0;100.0
+9201;Selbstfahrender Häcksler, 280 kW (380 PS);;430.0;107.6;100.0
+9202;Selbstfahrender Häcksler, 360 kW (490 PS);;520.0;138.35;1000.0
+9203;Selbstfahrender Häcksler, 478 kW (650 PS);;640.0;183.7;100.0
+9204;Selbstfahrender Häcksler, 625 kW (850 PS);;730.0;240.19;1.0
+9220;Pick-ups und Maisgebisse für Feldhäcksler selbstfahrend;;0.0;0.0;10.0
+9221;Maisgebiss, 4-reihig;100 a/h;85.0;0.0;1.0
+9222;Maisgebiss, 6-reihig;140 a/h;100.0;0.0;1.4
+9223;Maisgebiss, 8-reihig;200 a/h;140.0;0.0;2.0
+9226;#Maisgebiss, 10-reihig ;280 a/h;220.0;0.0;2.8
+9224;3 m-Pick-up zu selbstfahrendem Häcksler, 280 kW;286 a/h;105.0;0.0;2.86
+9225;3 m-Pick-up zu selbstfahrendem Häcksler, 360 kW;360 a/h;115.0;0.0;3.6
+9227;3 m-Pick-up zu selbstfahrendem Häcksler, 478 kW;390 a/h;125.0;0.0;3.9
+9228;3 m-Pick-up zu selbstfahrendem Häcksler, 625 kW;420 a/h;130.0;0.0;4.2
+10000;Gebläse und Dosiergeräte;;0.0;0.0;1.0
+10001;Häckselgebläse, Zapfwellenantrieb; ;32.0;0.0;1.0
+10002;Vielzweckgebläse, Elektromotor, 11 kW (15 PS);11 kW;30.0;0.0;1.0
+10003;Dosiergerät;4 Fu/h;87.0;0.0;4.0
+10004;Zubringerband zu Gebläse und Dosiergerät, 3−3.5 m;4 Fu/h;17.0;0.0;4.0
+10005;Dieselmotor, Occasion, Antrieb von Häckselgebläse oder Mühle, 175 kW (238 PS) ;175 kW;29.0;0.0;4.0
+10006;Häckselgebläse mit aufgebautem Occasions-Dieselmotor, 175 kW (238 PS);175 kW;28.0;0.0;4.0
+10010;Förderbänder;;0.0;0.0;1.0
+10011;Förderband, 6 m, Elektromotor, 1 kW (2 PS) ;1 kW;34.0;0.0;1.0
+10012;Förderband, 10 m, Elektromotor, 2 kW (3 PS) ;2 kW;45.0;0.0;1.0
+10030;Futterentnahme und Fütterung;;0.0;0.0;15.0
+10031;Futtermischwagen mit Messer und Waage, 7 m3;2 Fu/h;25.0;0.0;10.0
+10032;Futtermischwagen mit Messer und Waage, 10 m3;2 Fu/h;30.0;0.0;50.0
+10033;Futtermischwagen mit Messer und Waage, 12 m3;2 Fu/h;34.0;0.0;20.0
+10034;Futtermischwagen mit Messer und Waage, 14 m3;2 Fu/h;33.0;0.0;20.0
+10035;Futtermischwagen mit Messer und Waage, 16 m3;2 Fu/h;40.0;0.0;1.0
+10049;Futtermischwagen mit Messer und Waage, 25 m3;2 Fu/h;50.0;0.0;1.0
+10036;Futtermischwagen mit Schneidschild, Waage, 7 m3 ;2 Fu/h;32.0;0.0;1.0
+10037;Futtermischwagen mit Schneidschild, Waage, 10 m3;2 Fu/h;41.0;0.0;100.0
+10038;Futtermischwagen mit Schneidschild, Waage, 12 m3 ;2 Fu/h;43.0;0.0;100.0
+10039;Futterfräs- und -mischwagen mit Waage, 14 m3 ;2 Fu/h;47.0;0.0;100.0
+10040;Futterfräs- und -mischwagen mit Waage, 16 m3 ;2 Fu/h;52.0;0.0;100.0
+10041;Futterfräs- und -mischwagen mit Waage, 18 m3 ;2 Fu/h;53.0;0.0;50.0
+10042;Fräsmischwagen, selbstfahrend, Diesel, 17 m3 (130 kW, 175 PS) ;4 Fu/h;120.0;0.0;100.0
+10043;Siloentnahme- und Verteilgerät, 2.3 m3;5 m³/h;16.0;0.0;1.0
+10045;Blockschneider für Fahrsiloentnahme, 1.5−1.9 m3;10 m³/h;29.0;0.0;1.0
+10046;Rundballenschneider;;18.0;0.0;1.0
+10047;Abwickel- und Verteilgerät für Rundballen;;28.0;0.0;30.0
+10048;Futtermischer, Elektromotor, 4 kW (5 PS);4 kW;27.0;1.16;30.0
+10051;Futtermischwagen, selbstfahrend, elektr. (18 kW, Kabel), 3−5 m³ ;2 Fu/h;45.0;0.0;30.0
+10052;Futtermischwagen, selbstfahrend, elektr. (22 kW, Kabel), 7−10 m³;2 Fu/h;57.0;0.0;30.0
+10053;Futtermischwagen, selbstfahrend, elektr. (22 kW, Kabel), 12−14 m³ ;2 Fu/h;60.0;0.0;30.0
+11000;Stroheinstreu;;0.0;0.0;30.0
+11004;Stroh-Einstreugerät;;59.0;0.0;30.0
+11010;Reinigungsgeräte;;0.0;0.0;50.0
+11011;Wisch- und Reinigungsmaschine, bis 2.25 m;;16.0;0.0;70.0
+11012;Hochdruckreiniger, Elektromotor, 8 kW (11 PS), bis 200 bar; ;12.0;0.0;100.0
+11013;Hochdruckreiniger mit Heisswasser, Elektromotor, 7.8 kW (11 PS), bis 200 bar; ;16.5;0.0;20.0
+11020;Diverse Geräte;;0.0;0.0;50.0
+11021;Generator, Zapfwellenantrieb, 30 kVA (24 kW, 40 A);24 kW;8.5;0.0;1.0
+11022;Generator, Zapfwellenantrieb, 50 kVA (40 kW, 63 A);40 kW;10.6;0.0;1.0
+11023;Generator, Dieselmotor, 40 kVA (32 kW);32 kW;45.0;15.81;1.0
+11024;Generator, Dieselmotor, 60 kVA (48 kW);48 kW;58.0;23.72;1.0
+11026;Heizofen ohne Oel, 100 000 kcal, 120 kW; ;4.5;0.0;20.0
+11027;Feuchtgetreidemühle, Zapfwellenantrieb, Dreipunktanbau, ab 36 kW (50 PS);10 t/h;59.0;0.0;20.0
+11033;Körnerschnecke, 6 m, Elektromotor, 1 kW (2 PS);10 t/h;40.0;0.0;20.0
+11030;Klauenpflegestand, kippbar, mobil (3-Punkt); ;0.0;0.0;30.0
+11031;Behandlungsstand für Rindvieh;;0.0;0.0;1.0
+11034;Fang- und Behandlungsanlage für Rindvieh, mobil;;0.0;0.0;1.0
+11032;Elektronische Waage zu Fang- und Behandlungsanlage mit Wiegestäben;;0.0;0.0;1.0
+12000;Sägen und Spalten (siehe auch Motor-Kleingeräte);;0.0;0.0;1.0
+12001;Kreissäge mit Elektromotor; ;8.4;0.0;1.0
+12002;Kreissäge mit Zapfwellenantrieb; ;10.0;0.0;50.0
+12004;Kleinholzspalter mit hydraulischem Spaltkeil;1 m³/h;6.8;0.0;50.0
+12005;Holzspaltmaschine für Spälten, hydraulisch, Zapfwellenantrieb;3 m³/h;14.0;0.0;50.0
+12006;Seilzug zu Holzspaltmaschine für Spälten;3 m³/h;7.4;0.0;50.0
+12007;Holzspalter für Spälten, fahrbar, Zapfwellenantrieb;4 m³/h;22.0;0.0;50.0
+12008;Holzspalter für Spälten, fahrbar, Aufbaumotor, 10 kW (14 PS);4 m³/h;24.0;4.38;50.0
+12009;Bündelgerät für Holz, 1 m3;;0.0;0.0;50.0
+12010;Schneidspalter;3 m³/h;22.0;0.0;100.0
+12012;Schäl- und Spitzmaschine für Pfähle; ;17.0;0.0;1000.0
+12020;Seilwinden und Transportzubehör;;0.0;0.0;50.0
+12022;Eintrommel-Anbauseilwinde, 4 t Zugkraft; ;9.0;0.0;200.0
+12023;Eintrommel-Anbauseilwinde, 6.5 t Zugkraft; ;10.0;0.0;1.0
+12033;Eintrommel-Anbauseilwinde, 8 t Zugkraft; ;13.0;0.0;1.0
+12034;Doppeltrommel-Anbauseilwinde, 2 x 6 t Zugkraft; ;14.5;0.0;1.0
+12024;Rückekran; ;19.0;0.0;1.0
+12025;Funkgerät zu Einfachwinde; ;2.2;0.0;1.0
+12026;Funkgerät zu Doppeltrommelwinde; ;2.4;0.0;10.0
+12030;Polterschild zu Frontlader;;8.7;0.0;10.0
+12031;Hydraulische Rückezange, Dreipunkt; ;11.5;0.0;20.0
+12032;Forstanhänger mit Kran, 8−12 t; ;24.0;0.0;10.0
+12040;Holzhacker;;0.0;0.0;20.0
+12041;Schnitzelholzhacker, Zapfwellenantrieb, bis 10 cm Stamm Ø; ;19.0;0.0;50.0
+12042;Schnitzelholzhacker, Zapfwellenantrieb, bis 25 cm Stamm Ø; ;23.0;0.0;15.0
+12050;Pflegen und Pflanzen;;0.0;0.0;20.0
+12051;Forstmulchgerät, bis 2.3 m;;41.0;0.0;1.0
+12053;Stockfräse; ;40.0;0.0;1.0
+12055;Pflanzlochbohrer, Dreipunktanbau; ;8.8;0.0;30.0
+12070;Baumaschinen;;0.0;0.0;25.0
+12073;Kompaktbagger, 1 t, 7.5 kW (10 PS);8 kW;27.0;3.09;50.0
+12074;Kompaktbagger, 1.7 t, 12 kW (16 PS);12 kW;39.0;4.94;50.0
+12075;Raupentransporter, 500 kg, Benzin, 4.5 kW (6 PS);4 kW;28.0;2.45;30.0
+12076;Raupentransporter, 700 kg, Benzin, um 10 kW (13 PS);25 kW;35.0;16.41;30.0
+12072;Betonmischer, 1200 l, Zapfwellenantrieb; ;8.5;0.0;30.0
+13000;Pflege;;0.0;0.0;1.0
+13001;Sichelmulchgerät fixe Bauweise, 2−3 m;80 a/h;24.0;0.0;0.8
+13002;Sichelmulchgerät mit einseitigem Schwenkarm, 2−3 m;50 a/h;18.0;0.0;0.5
+13003;Sichelmulchgerät mit beidseitigem Schwenkarm, 2−3.5 m;80 a/h;36.0;0.0;0.8
+13004;Schlegelmulchgerät ohne Holzräumer, 1.3−2.7 m;100 a/h;49.0;0.0;1.0
+13005;Schlegelmulchgerät mit Holzräumer, 1.3−2 m;50 a/h;29.0;0.0;0.5
+13006;Holzräumer, einseitig;50 a/h;16.0;0.0;0.5
+13007;Hackgerät für Baumreihe, einseitig, mit Tastarm (Ladurner);20 a/h;26.0;0.0;0.2
+13008;Hackgerät für Baumreihe, beidseitig, mit Tastarm (Typ Ladurner);40 a/h;39.0;0.0;0.4
+13012;Rollhacke mit Fingerhacke, einseitig;60 a/h;21.0;0.0;0.6
+13013;Rollhacke mit Fingerhacke, zweiseitig;120 a/h;59.0;0.0;1.2
+13014;Fadengerät gegen Unkraut, einseitig;70 a/h;28.0;0.0;0.7
+13015;Fadengerät gegen Unkraut, zweiseitig;160 a/h;94.0;0.0;1.6
+13010;Fadengerät für Blütenausdünnung;50 a/h;33.0;0.0;0.5
+13011;Wurzelschnittgerät, einseitig, hydraulisch; ;0.0;0.0;1.0
+13016;Entlaubungsgerät pneumatisch, einseitig;15 a/h;26.0;0.0;0.15
+13020;Spritzen;;0.0;0.0;20.0
+13021;Anbaugebläsespritze, 500 l Fass;;0.0;0.0;1.0
+13026;Anbaugebläsespritze, 500 l Fass, mit Bordcomputer;;0.0;0.0;1.0
+13022;Anhängegebläsespritze, 1000 l Fass;;0.0;0.0;1.0
+13027;Anhängegebläsespritze, 1000 l Fass, mit Bordcomputer;;0.0;0.0;1.0
+13023;Herbizidbalken einseitig, mit hydraulischer Breitenverstellung;;0.0;0.0;10.0
+13024;Herbizidbalken beidseitig, mit hydraulischer Breitenverstellung;;0.0;0.0;10.0
+13025;Herbizidfass, Aufsattelspritze 400 l;;0.0;0.0;10.0
+13030;Erntegeräte und Transportzubehör;;0.0;0.0;10.0
+13031;Baumschüttler mit Seil;5 Bäume/h;16.0;0.0;10.0
+13032;Baumschüttler, hydraulisch angetrieben, Dreipunktanbau;;59.0;0.0;10.0
+13033;Mostobstauflesemaschine, 3 kW (4 PS);0.8 t/h;17.0;2.1;10.0
+13034;Aufsitz-Mostobstauflesemaschine, Benzin, 15 kW (20 PS);2.5 t/h;47.0;7.7;5.0
+13035;Erntewagen für 1 Grosskiste, für Erntezug (2-achsig);;0.0;0.0;1.0
+13036;Erntewagen für 1 Grosskiste (1-achsig);;0.0;0.0;1.0
+13037;Erntewagen für 4 Grosskisten;;0.0;0.0;1.0
+13038;Arbeitsbühne 2 Personen, selbstfahrend, elektrisch;5 kW;9.5;0.58;1.0
+13039;Arbeitsbühne Standard, selbstfahrend, elektrisch;3 kW;20.0;0.35;15.0
+13040;Arbeitsbühne Vollausstattung, selbstfahrend, elektrisch;5 kW;29.0;0.58;15.0
+13041;Arbeitslift für Hochstammarbeiten;7 kW;20.0;2.45;10.0
+13042;Obsterntemaschine mit Pflückbändern, Pluk-O-Track, Benzin, 8 kW (11 PS);8 kW;27.0;4.9;10.0
+13043;Leerkistenwagen zu Obsterntemaschine;;5.5;0.0;5.0
+13044;Packpresse, hydraulisch, fahrbar; ;0.0;0.0;1.0
+13050;Diverse Geräte und Spezialgeräte für Beerenanbau;;0.0;0.0;1.0
+13051;Pfahlrammer, bis 3.6 m; ;22.0;0.0;10.0
+13052;Grabenfräse für Baumpflanzung unter Hagelnetz;;52.0;0.0;10.0
+13053;Kompoststreuer für Obstanlagen, um 3 m3;2.6 Fu/h;120.0;0.0;10.0
+13054;Kirschen-Entstielgerät;250 kg/h;15.0;0.0;30.0
+13055;Folienmontagewagen für Kirschen;8 a/h;30.0;0.0;0.08
+13056;Folienwickelgerät für Witterungsschutz, Folie auf First (Kirschen);8 a/h;73.0;0.0;0.08
+13057;Folienlegegerät für Beerenanbau, 1- oder 3-reihig (ohne Folie);3300 lm/h;157.0;0.0;20.0
+13070;Windmaschine für Frostschutz (Tow&Blow), Diesel, 22 kW (30 PS);22 kW;220.0;16.36;20.0
+13071;"Warmluftgebläse für Frostschutz (stationär); Gasflaschen-Plattform";;225.0;59.67;20.0
+13072;Warmluftgebläse für Frostschutz (mit Gasflaschenplattform), gezogen von Traktor;;580.0;191.79;20.0
+13073;Spritzbalken für Erdbeeren, 5-reihig, inkl. Standard-Feldspritze;100 a/h;62.0;0.0;1.0
+13074;Spritzbalken für Erdbeeren, 8-reihig, inkl. Standard-Feldspritze;130 a/h;77.0;0.0;1.3
+13075;Strohhäcksler für Rundballen;40 a/h;95.0;0.0;0.4
+14000;Bodenbearbeitung und Düngung;;0.0;0.0;25.0
+14001;Kultivator, ohne Antrieb, 1.5 m;50 a/h;74.0;0.0;0.5
+14002;Bodenfräse, 1.25 m;25 a/h;48.0;0.0;0.25
+14003;Kreiselegge, 1.25 m;25 a/h;36.0;0.0;0.25
+14009;Körnerstreuer zu Kreiselegge, 100−110 l;25 a/h;10.0;0.0;0.25
+14004;Spatenmaschine, 1.25 m;20 a/h;38.0;0.0;0.2
+14005;Motorseilwinde, Benzin, 7 kW (9 PS);7 kW;44.0;3.68;1.0
+14006;Motorhacke, Benzin, 5 kW (7 PS);5 kW;45.0;4.16;1.0
+14007;Schleuderstreuer mit seitlichem Auswurf, 300 l;;0.0;0.0;1.0
+14008;Kompoststreuer, um 3 m3;2.6 Fu/h;130.0;0.0;1.0
+14020;Bodenpflege;;0.0;0.0;20.0
+14021;Schlegelmulchgerät, Anbau, 1.2−1.5 m;;47.0;0.0;10.0
+14022;Schlegelmulchgerät, auf Raupentransporter Nr. 1058, Benzin, 7 kW (10 PS);7 kW;60.0;4.29;3.0
+14025;Sichelmulchgerät, selbstfahrend, Benzin, 8 kW (11 PS);8 kW;27.0;4.9;20.0
+14026;Sichelmulchgerät, Dreipunktanbau, 1.5 m;;31.0;0.0;10.0
+14034;Sichelmulchgerät, Dreipunktanbau, 1.6−2.2 m;;44.0;0.0;20.0
+14027;Mulchgerät mit Unterstockräumer, 2-seitig, 1.3−2.1 m;;37.0;0.0;10.0
+14028;Räum-, Rotorbürsten, 1-seitig;;14.0;0.0;1.0
+14029;Unterstockräumer zu Traktor (Löffelschargerät), 1-seitig;12 a/h;3.5;0.0;0.12
+14031;Unterstockräumer zu Traktor (Löffelschargerät), 2-seitig;30 a/h;19.0;0.0;0.3
+14032;Böschungsmäher mit Knickarm, Dreipunktanbau, 0.8−1 m ;25 a/h;21.0;0.0;0.25
+14033;Kreiselstockräumer mit Feintaster zu Traktor, 1-seitig;30 a/h;14.5;0.0;0.3
+14035;Unterstockbürsten, für Reihenbreiten 1.6−2.4 m, Dreipunktanbau;30 a/h;14.5;0.0;0.3
+14040;Rebpflege;;0.0;0.0;50.0
+14041;Vorschneider für Rebholz, Schneidwalzen;75 a/h;440.0;0.0;0.75
+14042;Laubschneidegerät (inkl. Grundrahmen), 1-reihig, überzeilig;50 a/h;98.0;0.0;0.5
+14048;Entlaubungsgerät pneumatisch (inkl. Grundrahmen), 1-seitig, Dreipunktanbau;15 a/h;69.0;0.0;0.15
+14050;Baum- oder Rebschere, mit Ersatz-Akku; ;3.7;0.0;20.0
+14051;Pneumatisches Schnittgerät, 2 Scheren, Dreipunktanbau; ;6.4;0.0;8.0
+14052;Pneumatisches Schnittgerät, 2 Scheren, Benzin, 2 kW (3 PS);2 kW;8.2;1.23;5.0
+14053;Laubhefter, 1-reihig, überzeilig;25 a/h;76.0;0.0;0.25
+14054;Anbindezange, elektrisch, mit Ersatz-Akku; ;3.9;0.0;1.0
+14060;Spritzgeräte;;0.0;0.0;20.0
+14061;Gebläsespritze, 200−300 l Fass, Dreipunktanbau;66 a/h;28.0;0.0;0.66
+14063;Aufbaugebläsespritze, 100–150 l Fass, Benzin, 6.5 kW (9 PS);66 a/h;55.0;0.0;0.66
+14064;Anhängegebläsespritze, 600 l Fass;66 a/h;44.0;0.0;0.66
+14067;Aufsitzsprühgerät, 4-Radantrieb, 220 l Fass, Benzin, 19 kW (26 PS);66 a/h;49.0;0.0;0.66
+14068;Sprühdrohne, inklusive Akku;50 a/h;41.0;0.0;0.5
+14070;Traubenernte;;0.0;0.0;20.0
+14071;Traubenvollernter, gezogen;85 a/h;540.0;0.0;0.85
+15000;Bodenbearbeitung und Düngung;;0.0;0.0;1.0
+15003;Beetfräse, 1.50 m;25 a/h;48.0;0.0;0.25
+15001;Beetfräse, 1.80 m;25 a/h;57.0;0.0;0.25
+15002;Düngerstreuer auf Beetfräse, 1.80 m;25 a/h;19.0;0.0;0.25
+15004;Spargeldammfräse, 2 m;25 a/h;115.0;0.0;0.25
+15005;Dammfräse für Karotten;;0.0;0.0;10.0
+15006;Geohobel, 1.50 m;;0.0;0.0;10.0
+15007;Schälfräse, 3 m;;0.0;0.0;10.0
+15010;Saat, Pflanzung;;0.0;0.0;1.0
+15011;Einzelkornsämaschine für Gemüse, 4-reihig;33 a/h;140.0;0.0;0.33
+15018;Einzelkornsämaschine für Gemüse, Doppelreihe für 3 m;60 a/h;340.0;0.0;0.6
+15012;Sämaschine Typ Sembner, 1.80 m;33 a/h;78.0;0.0;0.33
+15019;Sämaschine für Babyleaf, 1.80 m;33 a/h;110.0;0.0;0.33
+15013;Präzisions-Sämaschine Gewächshaus, 1.00 m;10 a/h;170.0;0.0;0.1
+15014;Pflanzmaschine, mechanisch, 4-reihig, 1.80 m ;8 a/h;37.0;0.0;0.08
+15015;Pflanzmaschine Typ Bändchen, 4-reihig, 1.80 m;16 a/h;20.0;0.0;0.16
+15016;Pflanzmaschine Typ Spidy, 4-reihig, 1.80 m;20 a/h;50.0;0.0;0.2
+15017;Pflanzmaschine Nüsslisalat, Benzin 3.5 kW (5 PS), selbstfahrend, 1.50 m, 2500 Pfl./h;1.50 a/h;10.5;0.0;0.015
+15020;Pflanzmaschine halbautomatisch, mit Trennsystem, 4-reihig;20 a/h;80.0;0.0;0.2
+15021;Folienlegegerät, leicht;20 a/h;30.0;0.0;0.2
+15022;Folienlegegerät, 1.80 m, schwer (CM);20 a/h;56.0;0.0;0.2
+15030;Pflege und Pflanzenschutz;;0.0;0.0;1.0
+15031;Scharhack- und -häufelgerät mit Düngeaggregat, 4-reihig, 1.80 m;40 a/h;34.0;0.0;0.4
+15032;Fingerhackgerät, 1.80 m, 4-reihig;40 a/h;74.0;0.0;0.4
+15041;#Fingerhackgerät, 3.0 m, 5-reihig;65 a/h;98.0;0.0;0.65
+15042;#Sternhackgerät, 3.0 m, 5-reihig;65 a/h;74.0;0.0;0.65
+15043;#Dammhackgerät, 3.0 m, 5-reihig;65 a/h;80.0;0.0;0.65
+15044;#Reihenhackfräse, 3.0 m, 5-reihig;30 a/h;73.0;0.0;0.3
+5081;Hackstriegel, 6 m;400 a/h;93.0;0.0;4.0
+15045;#Präzisions-Hackstriegel, 6 m;200 a/h;70.0;0.0;2.0
+15033;Pflanzenschutzspritze mit Schlauchhaspel, 300 l Fass auf Fahrgestell, Benzin, 4 kW;10 a/h;16.5;0.0;0.1
+15034;Bandspritze 200 l für Beetbehandlung, 1.80 m, in Kombination;15 a/h;14.0;0.0;0.15
+15038; Zinkenstriegel, 1.7 m;10 a/h;7.5;0.0;0.1
+15039; Zinkenstriegel, 4.7 m;10 a/h;6.5;0.0;0.1
+15036;Hackroboter, Front- oder Heckanbau;15 a/h;91.0;0.0;0.15
+15037;Spargelkrautfräse;10 a/h;74.0;0.0;0.1
+5123;Bürstenhackgerät, 5-reihig;80 a/h;115.0;0.0;0.8
+5095;Kamerasteuerung für Hackgeräte;100 a/h;60.0;0.0;1.0
+15040;Ernte und Nachernte;;0.0;0.0;1.0
+15041;Karottenvollernter, 1-reihig, 3-Punkt;12 a/h;39.0;0.0;0.12
+15048;Karottenvollernter, 1-reihig, gezogen;15 a/h;200.0;0.0;0.15
+15049;Karottenvollernter, 2-reihig, Überlademaschine, gezogen;24 a/h;255.0;0.0;0.24
+15050;Vakuumkrautschläger, 1.80 m;70 a/h;170.0;0.0;0.7
+15042;Siebkettenroder (Zwiebeln), 1.80 m;40 a/h;110.0;0.0;0.4
+15043;Kartoffelvollernter mit Schwadaufnahme für Zwiebeln, 1.80 m;25 a/h;32.0;0.0;0.25
+15051;Unterfahrmesser für Lauchernte, 1.80 m;;0.0;0.0;1.0
+15052;Klemmbandroder für Lauchernte, 3-Punkt;;0.0;0.0;1.0
+15044;Erntewagen mit Dach (6.5 x 2.5 m), 10 Paletten;;0.0;0.0;1.0
+15053;Erntewagen mit Dach (9 x 2.5 m), 16 Paletten ;;0.0;0.0;1.0
+15045;Ernteband zu Erntewagen, 8 m Breite;;0.0;0.0;1.0
+15054;Ernteband zu Erntewagen, 10 m Breite;;0.0;0.0;1.0
+15046;Vollernter Babysalat, gezogen, 1.80 m;10 a/h;69.0;0.0;0.1
+15047;Waschtunnel/-strasse für Frischgemüse; ;13.5;0.0;1.0
+15055;Spargelspinne;;0.0;0.0;1.0
+15056;Gurkenflieger;;0.0;0.0;1.0
+15057;Niederhub-Mitgänger, elektrisch;3 kW;5.0;0.35;1.0

@@ -1,0 +1,65 @@
+en:
+  PLUGIN_REVISIONS_PRO:
+    REVISIONS: Revisions
+    REVISION_HISTORY: Revision History
+    DATE: Date
+    USER: User
+    ACTION: Action
+    ACTIONS: Actions
+    VIEW: View
+    COMPARE: Compare
+    RESTORE: Restore
+    CURRENT_VERSION: Current Version
+    NO_REVISIONS: No revisions found
+    REVISION_RESTORED: Revision restored successfully
+    REVISION_RESTORE_FAILED: Failed to restore revision
+    REVISION_DELETED: Revision deleted successfully
+    REVISION_DELETE_FAILED: Failed to delete revision
+    REFRESH: Refresh
+    LOADING: Loading
+    CONTENT: Content
+    REVISION_NOT_FOUND: Revision not found
+    DIFF_VIEW: Diff View
+    REVISION: Revision
+    NO_CHANGES: No changes detected
+    DIFF_ERROR: Error generating diff
+    
+    # Settings
+    STORAGE_SETTINGS: Storage Settings
+    MAX_REVISIONS_PER_PAGE: Maximum Revisions per Page
+    MAX_REVISIONS_PER_PAGE_HELP: Maximum number of revisions to keep for each page (0 = unlimited)
+    AUTO_CLEANUP: Automatic Cleanup
+    AUTO_CLEANUP_HELP: Automatically remove old revisions
+    CLEANUP_OLDER_THAN: Delete Revisions Older Than (days)
+    CLEANUP_OLDER_THAN_HELP: Revisions older than this will be automatically deleted
+    
+    FEATURES: Features
+    TRASH_SETTINGS: Trash Settings
+    ENABLE_TRASH: Enable Trash for Deleted Pages
+    ENABLE_TRASH_HELP: Keep deleted pages in a recoverable trash bin before they are permanently removed.
+    TRASH_RETENTION_DAYS: Trash Retention (days)
+    TRASH_RETENTION_DAYS_HELP: Automatically purge trash items older than this many days (0 disables automatic purge).
+    TRASH_MAX_ITEMS: Maximum Trash Items
+    TRASH_MAX_ITEMS_HELP: Limit the number of deleted pages stored in trash (0 keeps all items).
+    TRACK_PAGES: Track Page Changes
+    TRACK_PAGES_HELP: Create revisions when pages are saved
+    TRACK_CONFIG: Track Configuration Changes
+    TRACK_CONFIG_HELP: Create revisions when system/site configuration is changed
+    TRACK_PLUGINS: Track Plugin Configuration
+    TRACK_PLUGINS_HELP: Create revisions when plugin settings are changed
+    
+    UI_SETTINGS: User Interface Settings
+    SHOW_REVISION_COUNT: Show Revision Count Indicator
+    SHOW_REVISION_COUNT_HELP: Display the number of revisions in the page title bar
+    COMPARE_MODE: Comparison Mode
+    COMPARE_MODE_HELP: Choose whether to compare revisions with the current version, previous revision, or next revision
+    COMPARE_MODE_CURRENT: Compare with Current Version
+    COMPARE_MODE_PREVIOUS: Compare with Previous Revision
+    COMPARE_MODE_NEXT: Compare with Next Revision
+    
+    TRASH_RESTORE_SUCCESS: Page restored from trash
+    TRASH_DELETE_SUCCESS: Page removed from trash
+    TRASH_EMPTY_SUCCESS: Trash emptied successfully
+    TRASH_RESTORE: Restore
+    TRASH_DELETE: Delete
+    TRASH_EMPTY_STATE: No deleted pages in trash.

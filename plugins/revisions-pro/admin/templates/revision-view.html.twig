@@ -1,0 +1,62 @@
+{% if revision %}
+<div class="revisions">
+<div class="revision-view-modern">
+    <div class="revision-header">
+        <div class="revision-title">
+            <i class="fa fa-history"></i>
+            <h3>
+                {% if revision.data.filePath %}
+                    {{ revision.data.filePath|split('/')|last }}
+                {% elseif revision.file %}
+                    {{ revision.file|split('/')|last|replace({'.rev': ''})|regex_replace('/\\.\\d{8}-\\d{6}$/', '') }}
+                {% else %}
+                    {{ revision.data.title|default(revision.title|default('Revision')) }}
+                {% endif %}
+            </h3>
+        </div>
+        <div class="revision-actions">
+            <button class="button button-small" onclick="navigator.clipboard.writeText(document.querySelector('.revision-code-content').textContent); this.textContent = 'Copied!'; setTimeout(() => { this.innerHTML = '<i class=\'fa fa-copy\'></i> Copy'; }, 2000);">
+                <i class="fa fa-copy"></i> Copy
+            </button>
+        </div>
+    </div>
+    
+    <div class="revision-info-bar">
+        <div class="revision-info-item">
+            <i class="fa fa-calendar"></i>
+            <span>{{ revision.date|date('M j, Y g:i a') }}</span>
+        </div>
+        <div class="revision-info-item">
+            <i class="fa fa-user"></i>
+            <span>{{ revision.user }}</span>
+        </div>
+    </div>
+    
+    <div class="revision-content-wrapper">
+        <div class="revision-code-container">
+            {% set content = revision.data.rawContent|default(revision.data.content|default('')) %}
+            {% set isYaml = (revision.type starts with 'config' or revision.data.type starts with 'config' or revision.type == 'unknown' or (revision.data.filePath is defined and revision.data.filePath ends with '.yaml')) %}
+            {% set language = isYaml ? 'yaml' : 'markdown' %}
+            <pre class="line-numbers"><code class="language-{{ language }} revision-code-content">{{ content|e }}</code></pre>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Load Prism.js -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script>
+    // Re-run Prism highlighting
+    setTimeout(() => Prism.highlightAll(), 100);
+</script>
+
+{% else %}
+<div class="alert alert-error">
+    {{ "PLUGIN_REVISIONS_PRO.REVISION_NOT_FOUND"|t }}
+</div>
+{% endif %}

@@ -1,0 +1,12 @@
+enabled: true
+track_pages: true
+track_config: true
+track_plugins: true
+max_revisions_per_page: 25
+auto_cleanup: true
+cleanup_older_than: 90
+show_revision_count: true
+compare_mode: current
+enable_trash: true
+trash_retention_days: 30
+trash_max_items: 0

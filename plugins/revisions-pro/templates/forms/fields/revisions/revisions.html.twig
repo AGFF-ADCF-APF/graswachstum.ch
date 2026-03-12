@@ -1,0 +1,23 @@
+{% extends "forms/fields/text/text.html.twig" %}
+
+{% block field %}
+{% set page_route = admin.page.route %}
+{% if not page_route %}
+    {% set page_route = uri.route %}
+{% endif %}
+<div class="revisions-field-container" data-grav-field="revisions" data-grav-disabled="{{ disabled }}" data-grav-default="{{ field.default|json_encode|e('html_attr') }}">
+    <div class="revision-widget">
+        <div class="revision-widget-header">
+            <span class="revision-widget-title">{{ 'PLUGIN_REVISIONS_PRO.REVISION_HISTORY'|t }}</span>
+        </div>
+        <div id="page-revision-list-container-tab">
+            <p style="color: #666; font-style: italic; padding: 2rem; text-align: center;">
+                <i class="fa fa-info-circle"></i> 
+                Click the <i class="fa fa-history"></i> History button in the toolbar to view revisions.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+{% endblock %}

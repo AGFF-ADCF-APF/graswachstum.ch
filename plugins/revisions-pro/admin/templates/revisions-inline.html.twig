@@ -1,0 +1,75 @@
+{% if revisions|length > 0 %}
+    <script>
+        // Store revision IDs for previous comparison mode
+        window.currentRevisions = [
+            {% for revision in revisions %}
+                { id: '{{ revision.id }}', index: {{ loop.index0 }} }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ];
+        
+        // Update compare button titles based on compare mode
+        $(document).ready(function() {
+            // Don't disable compare buttons in the list - let the user click any revision
+            // The comparison panel will handle showing which modes are available
+        });
+    </script>
+    <div class="revisions-blocks">
+        {% for revision in revisions %}
+        <div class="revision-block" data-revision-id="{{ revision.id }}">
+            <span class="revision-number">{{ loop.revindex }}</span>
+            <div class="revision-block-header">
+                <div class="revision-timestamp-line">
+                    <div class="revision-timestamp-group">
+                        <span class="revision-timestamp">{{ revision.date }}</span>
+                        {% if loop.first %}
+                            <i class="fa fa-star revision-current" title="{{ "PLUGIN_REVISIONS_PRO.CURRENT_VERSION"|t|default('Current Version') }}"></i>
+                        {% endif %}
+                    </div>
+                    <span class="revision-user"><i class="fa fa-user"></i> {{ revision.user }}</span>
+                </div>
+                {% if revision.size_formatted %}
+                <div class="revision-secondary">
+                    <span class="revision-size"><i class="fa fa-file-o"></i> {{ revision.size_formatted }}</span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="revision-block-actions">
+                <button type="button" 
+                        class="button button-small" 
+                        title="View revision content"
+                        onclick="RevisionsProPlugin.showDetailPanel('view', '{{ revision.id }}'); return false;">
+                    <i class="fa fa-eye"></i> View
+                </button>
+                <button type="button" 
+                        class="button button-small compare-button"
+                        title="Compare revision"
+                        data-revision-id="{{ revision.id }}"
+                        data-is-current="{{ loop.first ? 'true' : 'false' }}"
+                        data-revision-index="{{ loop.index0 }}"
+                        data-total-revisions="{{ revisions|length }}"
+                        data-is-last="{{ loop.last ? 'true' : 'false' }}"
+                        onclick="RevisionsProPlugin.showDetailPanel('diff', '{{ revision.id }}'); return false;">
+                    <i class="fa fa-exchange"></i> Compare
+                </button>
+                <button type="button" 
+                        class="button button-small button-primary"
+                        title="Restore this revision"
+                        onclick="RevisionsProPlugin.restoreRevision('{{ revision.id }}')">
+                    <i class="fa fa-undo"></i> Restore
+                </button>
+                <button type="button" 
+                        class="button button-small button-danger"
+                        title="Delete this revision"
+                        onclick="RevisionsProPlugin.deleteRevision('{{ revision.id }}')">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="no-revisions">
+        <i class="fa fa-history fa-3x"></i>
+        <p>{{ "PLUGIN_REVISIONS_PRO.NO_REVISIONS"|t }}</p>
+    </div>
+{% endif %}

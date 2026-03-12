@@ -1,0 +1,169 @@
+name: Revisions Pro
+version: 2.0.0
+premium: true
+description: Advanced revision system with tracking, comparison viewing, and restore
+icon: history
+author:
+  name: Trilby Media, LLC
+  email: hello@trilby.media
+homepage: https://getgrav.org/premium/revisions-pro
+keywords: grav, plugin, revisions, tracking, comparison, restore, admin
+bugs: https://github.com/getgrav/grav-premium-issues/labels/revisions-pro
+docs: https://getgrav.org/premium/revisions-pro/docs
+license: https://getgrav.org/premium/license
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+  - { name: admin, version: '>=1.10.0' }
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    storage_section:
+      type: section
+      title: PLUGIN_REVISIONS_PRO.STORAGE_SETTINGS
+      underline: true
+
+    max_revisions_per_page:
+      type: number
+      label: PLUGIN_REVISIONS_PRO.MAX_REVISIONS_PER_PAGE
+      help: PLUGIN_REVISIONS_PRO.MAX_REVISIONS_PER_PAGE_HELP
+      default: 50
+      validate:
+        min: 1
+        max: 1000
+
+    auto_cleanup:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.AUTO_CLEANUP
+      help: PLUGIN_REVISIONS_PRO.AUTO_CLEANUP_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool  
+
+    cleanup_older_than:
+      type: number
+      label: PLUGIN_REVISIONS_PRO.CLEANUP_OLDER_THAN
+      help: PLUGIN_REVISIONS_PRO.CLEANUP_OLDER_THAN_HELP
+      default: 90
+      validate:
+        min: 1
+        max: 365
+
+    features_section:
+      type: section
+      title: PLUGIN_REVISIONS_PRO.FEATURES
+      underline: true
+
+    trash_section:
+      type: section
+      title: PLUGIN_REVISIONS_PRO.TRASH_SETTINGS
+      underline: true
+
+    enable_trash:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.ENABLE_TRASH
+      help: PLUGIN_REVISIONS_PRO.ENABLE_TRASH_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    trash_retention_days:
+      type: number
+      label: PLUGIN_REVISIONS_PRO.TRASH_RETENTION_DAYS
+      help: PLUGIN_REVISIONS_PRO.TRASH_RETENTION_DAYS_HELP
+      default: 30
+      validate:
+        min: 0
+        max: 365
+
+    trash_max_items:
+      type: number
+      label: PLUGIN_REVISIONS_PRO.TRASH_MAX_ITEMS
+      help: PLUGIN_REVISIONS_PRO.TRASH_MAX_ITEMS_HELP
+      default: 0
+      validate:
+        min: 0
+        max: 500
+
+    track_pages:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.TRACK_PAGES
+      help: PLUGIN_REVISIONS_PRO.TRACK_PAGES_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool  
+
+    track_config:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.TRACK_CONFIG
+      help: PLUGIN_REVISIONS_PRO.TRACK_CONFIG_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool  
+
+    track_plugins:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.TRACK_PLUGINS
+      help: PLUGIN_REVISIONS_PRO.TRACK_PLUGINS_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool  
+
+    ui_section:
+      type: section
+      title: PLUGIN_REVISIONS_PRO.UI_SETTINGS
+      underline: true
+
+    show_revision_count:
+      type: toggle
+      label: PLUGIN_REVISIONS_PRO.SHOW_REVISION_COUNT
+      help: PLUGIN_REVISIONS_PRO.SHOW_REVISION_COUNT_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    
+    compare_mode:
+      type: select
+      label: PLUGIN_REVISIONS_PRO.COMPARE_MODE
+      help: PLUGIN_REVISIONS_PRO.COMPARE_MODE_HELP
+      default: current
+      options:
+        current: PLUGIN_REVISIONS_PRO.COMPARE_MODE_CURRENT
+        previous: PLUGIN_REVISIONS_PRO.COMPARE_MODE_PREVIOUS
+        next: PLUGIN_REVISIONS_PRO.COMPARE_MODE_NEXT

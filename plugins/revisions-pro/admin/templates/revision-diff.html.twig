@@ -1,0 +1,210 @@
+{% if diff %}
+<div class="revisions">
+<div class="revision-view-modern" data-revision-id="{{ diff.revision.id }}">
+    <div class="revision-header">
+        <div class="revision-title">
+            <i class="fa fa-exchange"></i>
+            <h3>{{ "PLUGIN_REVISIONS_PRO.DIFF_VIEW"|t|default('Diff View') }}</h3>
+        </div>
+        <div class="comparison-mode-toggle" data-current-mode="{% if compareWith == 'current' %}current{% elseif compareRevision %}{% if diff.revision.timestamp < compareRevision.timestamp %}next{% else %}previous{% endif %}{% endif %}" data-revision-id="{{ diff.revision.id }}">
+            <!-- Buttons will be dynamically added based on available options -->
+        </div>
+        <div class="diff-legend">
+            <span class="diff-added"><i class="fa fa-plus-circle"></i> Added</span>
+            <span class="diff-removed"><i class="fa fa-minus-circle"></i> Removed</span>
+        </div>
+    </div>
+    
+    <div class="revision-info-bar">
+        <div class="revision-info-item">
+            <i class="fa fa-code-fork"></i>
+            <span>{{ diff.revision.date|date('M j, Y g:i a') }}</span>
+        </div>
+        <div class="revision-info-item">
+            <i class="fa fa-user"></i>
+            <span>{{ diff.revision.user }}</span>
+        </div>
+        <div class="revision-info-item">
+            <i class="fa fa-arrows-h"></i>
+            <span>
+                {% if compareWith == 'current' %}
+                    Comparing w/current version
+                {% elseif compareRevision %}
+                    Comparing w/rev:{{ compareRevision.date|date('Y-m-d H:i:s') }}
+                {% else %}
+                    Comparing w/previous revision
+                {% endif %}
+            </span>
+        </div>
+    </div>
+    
+    <div class="revision-content-wrapper">
+        {% if diff.htmlDiff %}
+            <div class="revision-diff-viewer">
+                {{ diff.htmlDiff|raw }}
+            </div>
+        {% elseif diff.diff %}
+            <div class="revision-code-container">
+                <pre class="language-diff line-numbers"><code>{{ diff.diff|e }}</code></pre>
+            </div>
+        {% else %}
+            <div class="no-changes-modern">
+                <i class="fa fa-check-circle fa-3x"></i>
+                <p>{{ "PLUGIN_REVISIONS_PRO.NO_CHANGES"|t|default('No changes') }}</p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+</div>
+
+<!-- Load Prism.js with diff support -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/diff-highlight/prism-diff-highlight.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-diff.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/diff-highlight/prism-diff-highlight.min.js"></script>
+<script>
+    // Re-run Prism highlighting
+    setTimeout(() => Prism.highlightAll(), 100);
+    
+    // Handle comparison mode toggle
+    $(document).ready(function() {
+        // Function to create toggle buttons based on available options
+        function createToggleButtons() {
+            var revisionId = $('.comparison-mode-toggle').data('revision-id');
+            var currentMode = $('.comparison-mode-toggle').data('current-mode') || 'current';
+            var $container = $('.comparison-mode-toggle');
+            
+            if (!revisionId) return;
+            
+            var $revisionBlock = $('.revision-block[data-revision-id="' + revisionId + '"]');
+            var $compareButton = $revisionBlock.find('.compare-button');
+            var isFirst = $compareButton.attr('data-is-current') === 'true';
+            var isLast = $compareButton.attr('data-is-last') === 'true';
+            
+            // Clear existing buttons
+            $container.empty();
+            
+            // Determine which buttons to show
+            var buttons = [];
+            
+            // Current button - only show if not the newest revision
+            if (!isFirst) {
+                buttons.push({
+                    mode: 'current',
+                    icon: 'fa-file-text-o',
+                    label: 'Current'
+                });
+            }
+            
+            // Previous button - only show if not the oldest revision
+            if (!isLast) {
+                buttons.push({
+                    mode: 'previous',
+                    icon: 'fa-chevron-down',
+                    label: 'Previous'
+                });
+            }
+            
+            // Next button - only show if not the newest revision
+            if (!isFirst) {
+                buttons.push({
+                    mode: 'next',
+                    icon: 'fa-chevron-up',
+                    label: 'Next'
+                });
+            }
+            
+            // If only one option available, auto-select it
+            if (buttons.length === 1) {
+                currentMode = buttons[0].mode;
+                // Don't save this auto-selection to preferences
+            }
+            
+            // Create the buttons
+            buttons.forEach(function(btn) {
+                var $button = $('<button type="button" class="button button-small mode-toggle" data-mode="' + btn.mode + '">' +
+                    '<i class="fa ' + btn.icon + '"></i> ' + btn.label +
+                    '</button>');
+                
+                if (btn.mode === currentMode) {
+                    $button.addClass('active').prop('disabled', true);
+                }
+                
+                $container.append($button);
+            });
+            
+            // If no buttons (shouldn't happen), show a message
+            if (buttons.length === 0) {
+                $container.html('<span class="no-comparison-options">No comparison options available</span>');
+            }
+        }
+        
+        // Handle toggle clicks (use delegated events since buttons are dynamic)
+        $('.comparison-mode-toggle').on('click', '.mode-toggle', function() {
+            var $button = $(this);
+            if ($button.prop('disabled')) return;
+            
+            var mode = $button.data('mode');
+            var revisionId = $('.revision-view-modern').data('revision-id');
+            
+            // Save user preference
+            if (window.localStorage) {
+                localStorage.setItem('revisions-pro-compare-mode', mode);
+            }
+            
+            if (revisionId && window.RevisionsProPlugin) {
+                // Determine what to compare with based on the mode
+                var compareWith = 'current';
+                
+                if (mode === 'previous' || mode === 'next') {
+                    // Find the revision in the list to get adjacent revisions
+                    var $revisionBlock = $('.revision-block[data-revision-id="' + revisionId + '"]');
+                    var revisionIndex = parseInt($revisionBlock.find('.compare-button').attr('data-revision-index'));
+                    var $allRevisionBlocks = $('#page-revision-list-container .revision-block');
+                    
+                    if (mode === 'previous' && !isNaN(revisionIndex)) {
+                        var $nextBlock = $allRevisionBlocks.eq(revisionIndex + 1);
+                        if ($nextBlock.length > 0) {
+                            compareWith = $nextBlock.attr('data-revision-id');
+                        }
+                    } else if (mode === 'next' && !isNaN(revisionIndex) && revisionIndex > 0) {
+                        var $prevBlock = $allRevisionBlocks.eq(revisionIndex - 1);
+                        if ($prevBlock.length > 0) {
+                            compareWith = $prevBlock.attr('data-revision-id');
+                        }
+                    }
+                }
+                
+                // Reload the diff with new comparison mode
+                var url = RevisionsProPlugin.getAdminUrl('revisions-api') + '?action=diff&id=' + revisionId;
+                if (compareWith !== 'current') {
+                    url += '&compare=' + compareWith;
+                }
+                
+                $('.revisions').html('<p class="loading"><i class="fa fa-spinner fa-spin"></i> Loading comparison...</p>');
+                
+                $.ajax({
+                    url: url,
+                    success: function(response) {
+                        $('.revisions').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        $('.revisions').html('<div class="alert alert-error">Error loading comparison: ' + error + '</div>');
+                    }
+                });
+            }
+        });
+        
+        // Create toggle buttons based on available options
+        createToggleButtons();
+    });
+</script>
+
+{% else %}
+<div class="alert alert-error">
+    {{ "PLUGIN_REVISIONS_PRO.DIFF_ERROR"|t }}
+</div>
+{% endif %}

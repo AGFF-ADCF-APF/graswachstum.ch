@@ -1,0 +1,1253 @@
+/* Revisions Pro Plugin Styles */
+
+/* History button in toolbar - will inherit standard button styles */
+#admin-main .titlebar .button.revisions-history-button {
+    margin-right: 2px !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+/* Revision count badge */
+.revision-count-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+/* Trash button badge */
+#admin-main .titlebar .button.revisions-trash-button {
+    margin-right: 6px !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.trash-count-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #4db6ff;
+    color: #1a1a1a;
+    border-radius: 10px;
+    padding: 2px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1;
+    pointer-events: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+/* Disabled button state */
+.revisions-panel .button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+/* Error messages in dark theme */
+.revisions-panel .error,
+.revisions-detail-panel .error {
+    color: #ff6b6b;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Overlay */
+.revisions-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100001;
+}
+
+.revisions-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Primary sliding panel */
+.revisions-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    max-width: 400px;
+    height: 100vh;
+    background: #1a1a1a;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease;
+    z-index: 100002;
+    display: flex;
+    flex-direction: column;
+}
+
+.revisions-panel.active {
+    right: 0;
+}
+
+/* Secondary detail panel */
+.revisions-detail-panel {
+    position: fixed;
+    top: 0;
+    right: -600px;
+    width: 600px;
+    height: 100vh;
+    background: #0d0d0d;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 100002;
+    display: flex;
+    flex-direction: column;
+}
+
+.revisions-detail-panel.active {
+    right: 400px; /* Positioned next to primary panel */
+}
+
+
+/* Panel headers */
+.revisions-panel-header {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #2a2d5e 0%, #3a2d4a 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.revisions-panel-header h3 {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.revisions-panel-header .close-panel,
+.revisions-panel-header .close-detail-panel,
+.revisions-panel-header .close-trash-panel {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.revisions-panel-header .close-panel:hover,
+.revisions-panel-header .close-detail-panel:hover,
+.revisions-panel-header .close-trash-panel:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Panel content */
+.revisions-panel-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #1a1a1a;
+}
+
+.revisions-trash-panel .revisions-panel-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #2a2a2a;
+    background: #111;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.revisions-trash-panel .revisions-panel-footer .button {
+    min-width: 120px;
+}
+
+.revisions-trash-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.revisions-trash-panel .trash-item {
+    background: #232323;
+    border: 1px solid #2e2e2e;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.revisions-trash-panel .trash-item:hover {
+    border-color: #3a56ff;
+    background: #26283b;
+}
+
+.revisions-trash-panel .trash-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.revisions-trash-panel .trash-item-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.revisions-trash-panel .trash-item-path {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 0.85rem;
+    color: #9cb9ff;
+    word-break: break-all;
+}
+
+.revisions-trash-panel .trash-item-meta {
+    font-size: 0.85rem;
+    color: #9a9a9a;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.revisions-trash-panel .trash-item-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.revisions-trash-panel .trash-item-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.revisions-trash-panel .trash-item-actions .button {
+    flex: 1;
+    min-width: 110px;
+}
+
+.revisions-trash-panel .no-trash-items {
+    text-align: center;
+    color: #888;
+    padding: 2rem 1rem;
+    font-style: italic;
+}
+
+.revisions-detail-panel .revisions-panel-content {
+    background: #0d0d0d;
+}
+
+/* Loading states */
+.loading {
+    text-align: center;
+    color: #999;
+    padding: 2rem;
+}
+
+/* Panel instructions */
+.panel-instructions {
+    text-align: center;
+    color: #666;
+    padding: 3rem 2rem;
+    font-style: italic;
+}
+
+/* Body class when panel is open */
+body.revisions-panel-open {
+    overflow: hidden;
+}
+
+/* Custom confirmation dialog */
+.revisions-confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100005;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.revisions-confirm-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.revisions-confirm-box {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.revisions-confirm-overlay.active .revisions-confirm-box {
+    transform: scale(1);
+}
+
+.revisions-confirm-header {
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #2a2d5e 0%, #3a2d4a 100%);
+    border-radius: 8px 8px 0 0;
+}
+
+.revisions-confirm-header h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.revisions-confirm-body {
+    padding: 1.5rem;
+    color: #e5e5e5;
+}
+
+.revisions-confirm-body p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.revisions-confirm-footer {
+    padding: 1rem 1.5rem;
+    background: #262626;
+    border-top: 1px solid #333;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.revisions-confirm-footer .button {
+    margin: 0;
+}
+
+.revisions-confirm-footer .button-cancel {
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+}
+
+.revisions-confirm-footer .button-cancel:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #555;
+    color: #ccc;
+}
+
+.revisions-confirm-footer .button-confirm {
+    background: #667eea;
+    border: 1px solid #667eea;
+    color: white;
+}
+
+.revisions-confirm-footer .button-confirm:hover {
+    background: #7289ee;
+    border-color: #7289ee;
+}
+
+/* Success/Error notification styles */
+.revisions-confirm-header.success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.revisions-confirm-header.error {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.revisions-confirm-header i {
+    margin-right: 0.5rem;
+}
+
+.revisions-trash-restore-box .restore-description {
+    color: #bbbbbb;
+    margin-bottom: 1rem;
+}
+
+.revisions-trash-restore-box .restore-option {
+    margin-bottom: 1rem;
+}
+
+.revisions-trash-restore-box .restore-option label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.revisions-trash-restore-box .restore-option label input[type="radio"] {
+    margin-right: 0.4rem;
+}
+
+.revisions-trash-restore-box .restore-custom-fields {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #2e2e2e;
+    border-radius: 5px;
+    background: #1a1a1a;
+}
+
+.revisions-trash-restore-box .restore-custom-fields label {
+    display: block;
+    font-weight: 500;
+    color: #cccccc;
+    margin-bottom: 0.35rem;
+}
+
+.revisions-trash-restore-box .restore-custom-fields input {
+    width: 100%;
+    padding: 0.45rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #3a3a3a;
+    background: #101010;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+.revisions-trash-restore-box .restore-custom-fields input:last-child {
+    margin-bottom: 0;
+}
+
+.revisions-trash-restore-box .overwrite-option label {
+    font-weight: 500;
+    color: #cccccc;
+}
+
+/* Revision blocks */
+.revisions-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.revision-block {
+    background: #262626;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 0.875rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Revision number badge */
+.revision-number {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: #392D4B;
+    color: #999;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 6px;
+    border-radius: 12px;
+    line-height: 1;
+    z-index: 5;
+}
+
+.revision-block:hover {
+    background: #2d2d2d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: #444;
+}
+
+.revision-block.selected {
+    background: #3a3a4a;
+    border-color: #667eea;
+    box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+}
+
+.revision-block-header {
+    margin-bottom: 0.75rem;
+}
+
+.revision-timestamp-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.revision-timestamp-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+}
+
+.revision-timestamp {
+    font-family: monospace;
+    font-size: 0.875rem;
+    color: #e5e5e5;
+}
+
+.revision-current {
+    color: #fbbf24;
+    font-size: 0.875rem;
+}
+
+.revision-user {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.revision-user i {
+    margin-right: 0.25rem;
+    color: #777;
+}
+
+.revision-secondary {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.revision-secondary i {
+    margin-right: 0.25rem;
+    color: #777;
+}
+
+.revision-block-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.revision-block-actions .button {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.775rem;
+    background: transparent;
+    border: 1px solid #444;
+    color: #aaa;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    min-width: auto;
+}
+
+.revision-block-actions .button:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #777;
+    color: #fff;
+}
+
+.revision-block-actions .button-primary {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+}
+
+.revision-block-actions .button-primary:hover {
+    background: #7289ee;
+    border-color: #7289ee;
+}
+
+.revision-block-actions .button-danger {
+    background: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.revision-block-actions .button-danger:hover {
+    background: #e74c3c;
+    border-color: #e74c3c;
+}
+
+/* Revision widget in page editor */
+.revision-widget {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    background: #fafafa;
+}
+
+
+.revision-widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.revision-widget-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Revisions table */
+.revisions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.revisions-table th,
+.revisions-table td {
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.revisions-table th {
+    font-weight: bold;
+    background: #f5f5f5;
+}
+
+.revision-row:hover {
+    background: #f9f9f9;
+}
+
+.revision-timestamp {
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.revision-actions .button-group {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.revision-actions .button {
+    padding: 0.25rem 0.5rem;
+}
+
+/* Badges */
+/* .badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.badge-create {
+    background: #28a745;
+    color: white;
+}
+
+.badge-update {
+    background: #007bff;
+    color: white;
+}
+
+.badge-delete {
+    background: #dc3545;
+    color: white;
+}
+
+.badge-success {
+    background: #28a745;
+    color: white;
+} */
+
+/* No revisions message */
+.no-revisions {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+}
+
+.no-revisions i {
+    margin-bottom: 1rem;
+    opacity: 0.3;
+    color: #555;
+}
+
+/* Modal content */
+#revision-modal-content {
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.revision-modal-actions {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e5e5;
+    text-align: right;
+}
+
+/* Remodal overrides for better appearance */
+.remodal[data-remodal-id="revision-modal"] {
+    max-width: 95vw;
+    width: 1200px;
+    padding: 0;
+    background: transparent;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.remodal[data-remodal-id="revision-modal"] .revision-modal-actions {
+    background: #fff;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Ensure modal is responsive */
+@media (max-width: 1300px) {
+    .remodal[data-remodal-id="revision-modal"] {
+        width: 95vw;
+    }
+}
+
+/* Apply dark theme to all revision views in detail panel */
+.revisions-detail-panel .revision-view-modern,
+.revisions-detail-panel .revision-header,
+.revisions-detail-panel .revision-content-wrapper,
+.revisions-detail-panel .revision-code-container {
+    background-color: #1a1a1a !important;
+    color: #e5e5e5 !important;
+}
+
+/* Ensure all content in detail panel uses dark theme */
+#revision-detail-container {
+    color: #e5e5e5;
+}
+
+#revision-detail-container .revision-view-modern {
+    background: #1a1a1a !important;
+    border: 1px solid #333 !important;
+}
+
+#revision-detail-container .revision-info-bar {
+    background: #262626 !important;
+    border-bottom: 1px solid #333 !important;
+}
+
+#revision-detail-container .revision-info-item {
+    color: #999 !important;
+}
+
+/* Override any light borders in detail panel */
+#revision-detail-container * {
+    border-color: #333 !important;
+}
+
+/* Modern Revision view - with .revisions prefix to avoid conflicts */
+.revisions .revision-view-modern,
+.revisions-detail-panel .revision-view-modern {
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin: 0;
+    border: 1px solid #333;
+}
+
+.revisions .revision-header,
+.revisions-detail-panel .revision-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background: linear-gradient(135deg, #2a2d5e 0%, #3a2d4a 100%);
+    color: white;
+    border-bottom: 1px solid #1a1a1a;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.revisions .revision-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.revisions .revision-title h3 {
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.revisions .revision-title i {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/*.revisions .revision-header .button,*/
+/*.revisions-detail-panel .revision-header .button {*/
+/*    background: rgba(255,255,255,0.1);*/
+/*    border: 1px solid rgba(255,255,255,0.2);*/
+/*    color: white;*/
+/*    padding: 0.3rem 0.6rem;*/
+/*    font-size: 0.8rem;*/
+/*    transition: all 0.3s ease;*/
+/*}*/
+
+/*.revisions .revision-header .button:hover,*/
+/*.revisions-detail-panel .revision-header .button:hover {*/
+/*    background: rgba(255,255,255,0.2);*/
+/*    border-color: rgba(255,255,255,0.3);*/
+/*}*/
+
+/* Comparison mode toggle - pill bar style */
+.comparison-mode-toggle {
+    display: inline-flex;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 3px;
+    gap: 0;
+}
+
+.comparison-mode-toggle .mode-toggle {
+    background: rgba(0,0,0,0.1);
+    border: none;
+    color: rgba(255,255,255,0.7);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 17px;
+    margin: 0;
+}
+
+.comparison-mode-toggle .mode-toggle:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.comparison-mode-toggle .mode-toggle:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.comparison-mode-toggle .mode-toggle:not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.comparison-mode-toggle .mode-toggle:first-child:last-child {
+    border-radius: 17px;
+}
+
+/* When there are only 2 buttons */
+.comparison-mode-toggle .mode-toggle:first-child:nth-last-child(2),
+.comparison-mode-toggle .mode-toggle:last-child:nth-child(2) {
+    border-radius: 17px;
+}
+
+.comparison-mode-toggle .mode-toggle:hover:not(:disabled) {
+    background: rgba(0,0,0,0.3);
+    color: rgba(255,255,255,0.9);
+}
+
+.comparison-mode-toggle .mode-toggle:disabled {
+    opacity: 1;
+}
+
+.comparison-mode-toggle .mode-toggle.active {
+    background: #667EEA;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Diff legend in header */
+.revisions .diff-legend,
+.revisions-detail-panel .diff-legend {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+}
+
+.revisions .diff-legend span,
+.revisions-detail-panel .diff-legend span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.revisions .diff-added i {
+    color: #86efac;
+}
+
+.revisions .diff-removed i {
+    color: #fca5a5;
+}
+
+.revisions .revision-info-bar,
+.revisions-detail-panel .revision-info-bar {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background: #262626;
+    border-bottom: 1px solid #333;
+}
+
+.revisions .revision-info-item,
+.revisions-detail-panel .revision-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.revisions .revision-info-item i,
+.revisions-detail-panel .revision-info-item i {
+    color: #667eea;
+    font-size: 0.875rem;
+}
+
+.revisions .revision-content-wrapper {
+    padding: 0;
+}
+
+.revisions .revision-code-container,
+.revisions-detail-panel .revision-code-container {
+    margin: 0;
+    max-height: calc(90vh - 80px);
+    overflow-y: auto;
+    background: #2d2d2d;
+    border: 1px solid #333;
+}
+
+.revisions .revision-code-container pre,
+.revisions-detail-panel .revision-code-container pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: #2d2d2d !important;
+    padding: 2rem !important;
+    border: none !important;
+}
+
+/* Override Prism styles for better integration */
+.revisions .revision-code-container pre[class*="language-"],
+.revisions-detail-panel .revision-code-container pre[class*="language-"] {
+    background: #2d2d2d !important;
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+    padding: 2rem !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    border: none !important;
+}
+
+.revisions .revision-code-container code[class*="language-"],
+.revisions-detail-panel .revision-code-container code[class*="language-"] {
+    background: none !important;
+    font-size: 0.9rem !important;
+    text-shadow: none !important;
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* Fix bracket padding in Prism syntax highlighting */
+.revisions .revision-code-container .token.punctuation {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Desktop styles - maintain fixed widths */
+@media (min-width: 981px) {
+    .revisions-panel {
+        width: 400px !important;
+        max-width: 400px !important;
+    }
+    
+    .revisions-detail-panel {
+        width: 600px !important;
+        max-width: 600px !important;
+    }
+}
+
+/* Mobile responsiveness - applies to tablets and phones */
+@media (max-width: 980px) {
+    /* Panels take full width on mobile */
+    .revisions-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .revisions-panel.active {
+        right: 0;
+        transition: right 0.3s ease;
+    }
+    
+    /* Slide main panel to the right when detail panel is active */
+    .revisions-panel.active.mobile-hidden {
+        right: -100%;
+    }
+    
+    .revisions-detail-panel {
+        width: 100%;
+        left: -100%;
+        right: auto;
+    }
+    
+    .revisions-detail-panel.active {
+        left: 0; /* Slide in from left */
+        right: auto;
+    }
+    
+    /* Stack panels vertically on small screens */
+    .revisions-panel-content {
+        padding: 0.75rem;
+    }
+    
+    /* Adjust revision blocks for mobile */
+    .revision-block {
+        padding: 0.75rem;
+    }
+    
+    .revision-block-actions .button {
+        min-width: 0;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    
+    .revision-block-actions .button i {
+        margin-right: 0;
+    }
+    
+    /* Hide button text on very small screens */
+    @media (max-width: 480px) {
+        .revision-block-actions .button {
+            font-size: 0;
+        }
+        
+        .revision-block-actions .button i {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+/* High z-index for panels to appear above admin elements */
+.revisions-overlay {
+    z-index: 100001;
+}
+
+.revisions-detail-panel {
+    z-index: 100002;
+}
+
+.revisions-panel {
+    z-index: 100003; /* Main panel on top */
+}
+
+.revisions .revision-code-container .token {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.revisions .revision-code-container .line-numbers .line-numbers-rows {
+    border-right: 1px solid #444;
+    padding: 2rem 0.5rem 2rem 1rem !important;
+}
+
+.revisions .revision-code-container .line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.revisions .revision-code-container .line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #6c757d;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+
+/* Updated badges with better colors */
+.revisions .badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.revisions .badge-create {
+    background: #10b981;
+    color: white;
+}
+
+.revisions .badge-update {
+    background: #3b82f6;
+    color: white;
+}
+
+.revisions .badge-delete {
+    background: #ef4444;
+    color: white;
+}
+
+.revisions .badge-success {
+    background: #10b981;
+    color: white;
+}
+
+/* No changes message */
+.revisions .no-changes-modern {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #10b981;
+}
+
+.revisions .no-changes-modern i {
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.revisions .no-changes-modern p {
+    font-size: 1.125rem;
+    color: #6c757d;
+}
+
+/* Loading spinner */
+#revisions-spinner {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+}
+
+#revisions-spinner i {
+    margin-right: 0.5rem;
+}
+
+/* Claude Code-style diff viewer */
+.revision-diff-viewer {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    overflow-x: auto;
+    max-height: calc(90vh - 80px);
+    overflow-y: auto;
+}
+
+.revisions-diff-container {
+    padding: 0;
+}
+
+.diff-line {
+    display: flex;
+    padding: 0;
+    min-height: 1.5rem;
+}
+
+.diff-line-num {
+    display: inline-block;
+    width: 3rem;
+    padding: 0.125rem 0.5rem;
+    text-align: right;
+    color: #858585;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.diff-line-content {
+    flex: 1;
+    padding: 0.125rem 0.5rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Unchanged lines */
+.diff-unchanged {
+    color: #d4d4d4;
+}
+
+.diff-unchanged:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Removed lines */
+.diff-removed {
+    background: rgba(248, 81, 73, 0.15);
+}
+
+.diff-removed .diff-line-content {
+    color: #f88078;
+}
+
+.diff-removed .diff-line-num {
+    background: rgba(248, 81, 73, 0.2);
+    color: #f88078;
+}
+
+/* Added lines */
+.diff-added {
+    background: rgba(46, 160, 67, 0.15);
+}
+
+.diff-added .diff-line-content {
+    color: #85e089;
+}
+
+.diff-added .diff-line-num {
+    background: rgba(46, 160, 67, 0.2);
+    color: #85e089;
+}
+
+/* Inline diff highlighting for changed parts */
+.diff-removed .diff-highlight {
+    background: rgba(248, 81, 73, 0.6);
+    color: #ffd4d1;
+    padding: 0 2px;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.diff-added .diff-highlight {
+    background: rgba(46, 160, 67, 0.6);
+    color: #c5ffc5;
+    padding: 0 2px;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: none;
+}

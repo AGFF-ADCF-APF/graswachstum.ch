@@ -1,0 +1,79 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block titlebar %}
+    <div class="button-bar">
+        <a class="button" href="{{ base_url }}"><i class="fa fa-reply"></i> {{ "PLUGIN_ADMIN.BACK"|t }}</a>
+    </div>
+    <h1><i class="fa fa-fw fa-history"></i> {{ "PLUGIN_REVISIONS_PRO.REVISIONS"|t }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="revisions-container">
+    <div class="revisions-header">
+        <h2>{{ "PLUGIN_REVISIONS_PRO.REVISION_HISTORY"|t }}</h2>
+        <p class="revisions-route">{{ route }}</p>
+    </div>
+    
+    {% if revisions|length > 0 %}
+        <div class="revisions-list">
+            <table class="revisions-table">
+                <thead>
+                    <tr>
+                        <th>{{ "PLUGIN_REVISIONS_PRO.DATE"|t }}</th>
+                        <th>{{ "PLUGIN_REVISIONS_PRO.USER"|t }}</th>
+                        <th>{{ "PLUGIN_REVISIONS_PRO.ACTIONS"|t }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for revision in revisions %}
+                    <tr class="revision-row" data-revision-id="{{ revision.id }}">
+                        <td class="revision-date">
+                            <span class="revision-timestamp">{{ revision.date }}</span>
+                            <span class="revision-relative">{{ revision.timestamp|nicetime }}</span>
+                            {% if loop.first %}
+                                <span class="badge badge-success" style="margin-left: 0.5rem;">{{ "PLUGIN_REVISIONS_PRO.CURRENT_VERSION"|t|default('Current Version') }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="revision-user">
+                            <i class="fa fa-user"></i> {{ revision.user }}
+                        </td>
+                        <td class="revision-actions">
+                            <div class="button-group">
+                                <button class="button button-small" onclick="RevisionsProPlugin.viewRevision('{{ revision.id }}')">
+                                    <i class="fa fa-eye"></i> {{ "PLUGIN_REVISIONS_PRO.VIEW"|t }}
+                                </button>
+                                {% if not loop.first %}
+                                <button class="button button-small" onclick="RevisionsProPlugin.showDiff('{{ revision.id }}')">
+                                    <i class="fa fa-exchange"></i> {{ "PLUGIN_REVISIONS_PRO.COMPARE"|t }}
+                                </button>
+                                {% endif %}
+                                <button class="button button-small button-primary" onclick="RevisionsProPlugin.restoreRevision('{{ revision.id }}')">
+                                    <i class="fa fa-undo"></i> {{ "PLUGIN_REVISIONS_PRO.RESTORE"|t }}
+                                </button>
+                                <button class="button button-small button-danger" onclick="RevisionsProPlugin.deleteRevision('{{ revision.id }}')">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <div class="no-revisions">
+            <i class="fa fa-history fa-3x"></i>
+            <p>{{ "PLUGIN_REVISIONS_PRO.NO_REVISIONS"|t }}</p>
+        </div>
+    {% endif %}
+</div>
+
+<div id="revision-modal" class="remodal" data-remodal-id="revision-modal">
+    <button data-remodal-action="close" class="remodal-close"></button>
+    <h2 class="revision-modal-title"></h2>
+    <div class="revision-modal-content"></div>
+    <div class="revision-modal-actions">
+        <button data-remodal-action="cancel" class="button">{{ "PLUGIN_ADMIN.CLOSE"|t }}</button>
+    </div>
+</div>
+{% endblock %}

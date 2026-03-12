@@ -1,0 +1,37 @@
+{
+  "name": "trilbymedia/revisions-pro",
+  "type": "grav-plugin",
+  "description": "Advanced revision system for Grav",
+  "keywords": [
+    "grav",
+    "plugin",
+    "revisions",
+    "version control"
+  ],
+  "homepage": "https://github.com/yourusername/grav-plugin-revisions-pro",
+  "license": "Grav Premium License",
+  "authors": [
+    {
+      "name": "Trilby Media, LLC",
+      "email": "hello@trilby.media",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.6",
+    "sebastian/diff": "^4.0 || ^5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\RevisionsPro\\": "classes/"
+    },
+    "classmap": [
+      "revisions-pro.php"
+    ]
+  },
+  "config": {
+    "platform": {
+      "php": "7.3.6"
+    }
+  }
+}

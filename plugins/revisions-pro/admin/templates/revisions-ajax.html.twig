@@ -1,0 +1,24 @@
+{% set route = uri.query('route') %}
+{% set type = uri.query('type')|default('page') %}
+{% set action = uri.query('action')|default('list') %}
+
+{% if action == 'list' %}
+    {% if type == 'page' %}
+        {% set page = grav.pages.find('/' ~ route) %}
+        {% if page %}
+            {% set revisions = revisions_pro.getPageRevisions(page) %}
+            {% include 'revisions-inline.html.twig' with { revisions: revisions, route: route, type: type } %}
+        {% else %}
+            <p class="error">Page not found: {{ route }}</p>
+        {% endif %}
+    {% endif %}
+{% elseif action == 'view' %}
+    {% set id = uri.query('id') %}
+    {% set revision = revisions_pro.getRevision(id) %}
+    {% include 'revision-view.html.twig' with { revision: revision } %}
+{% elseif action == 'diff' %}
+    {% set id = uri.query('id') %}
+    {% set compare = uri.query('compare')|default('current') %}
+    {% set diff = revisions_pro.getDiff(id, compare) %}
+    {% include 'revision-diff.html.twig' with { diff: diff } %}
+{% endif %}

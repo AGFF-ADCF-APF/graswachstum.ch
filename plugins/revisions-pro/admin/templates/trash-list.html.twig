@@ -1,0 +1,46 @@
+{% if items %}
+    <ul class="revisions-trash-list">
+        {% for item in items %}
+            {% set meta = item.metadata %}
+            <li class="trash-item"
+                data-id="{{ item.id }}"
+                data-title="{{ meta.title|e }}"
+                data-route="{{ meta.original_route|e }}"
+                data-relative-path="{{ meta.relative_path|e }}"
+                data-folder="{{ meta.folder|e }}"
+                data-slug="{{ meta.slug|e }}"
+                data-parent-route="{{ meta.parent_route|e }}"
+                data-deleted-at="{{ meta.deleted_at|e }}"
+                data-deleted-by="{{ meta.deleted_by|e }}"
+                data-language="{{ meta.language|default('')|e }}">
+                <div class="trash-item-header">
+                    <span class="trash-item-title">
+                        <i class="fa fa-file"></i> {{ meta.title|e }}
+                        {% if meta.language %}
+                            <span class="badge lang">{{ meta.language|e }}</span>
+                        {% endif %}
+                    </span>
+                    <span class="trash-item-path">{{ meta.original_route|default('/')|e }}</span>
+                </div>
+                <div class="trash-item-meta">
+                    <span><i class="fa fa-map-marker"></i> {{ meta.relative_path|default('')|e }}</span>
+                    <span><i class="fa fa-user"></i> {{ meta.deleted_by|default('unknown')|e }}</span>
+                    <span><i class="fa fa-clock-o"></i> {{ meta.deleted_at|date('Y-m-d H:i') }}</span>
+                </div>
+                <div class="trash-item-actions">
+                    <button type="button" class="button button-small button-primary revisions-trash-restore">
+                        <i class="fa fa-undo"></i> {{ 'PLUGIN_REVISIONS_PRO.TRASH_RESTORE'|t|default('Restore') }}
+                    </button>
+                    <button type="button" class="button button-small button-danger revisions-trash-delete">
+                        <i class="fa fa-times"></i> {{ 'PLUGIN_REVISIONS_PRO.TRASH_DELETE'|t|default('Delete') }}
+                    </button>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <div class="no-trash-items">
+        <i class="fa fa-trash fa-2x"></i>
+        <p>{{ 'PLUGIN_REVISIONS_PRO.TRASH_EMPTY_STATE'|t|default('No deleted pages in trash.') }}</p>
+    </div>
+{% endif %}

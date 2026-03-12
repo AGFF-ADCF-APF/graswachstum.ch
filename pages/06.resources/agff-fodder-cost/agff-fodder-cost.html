@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futterernte Pro 2026 - Eigenständige App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --lego-shadow: rgba(0,0,0,0.25); }
+        body { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif; }
+        
+        /* LEGO-DESIGN */
+        .baustein { 
+            cursor: grab; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative; border-radius: 12px;
+            border-bottom: 6px solid var(--lego-shadow);
+            border-right: 2px solid rgba(0,0,0,0.1);
+            background-image: radial-gradient(circle at 15px 15px, rgba(255,255,255,0.15) 3px, transparent 0);
+            background-size: 30px 30px;
+        }
+        .baustein:active { cursor: grabbing; transform: translateY(2px); border-bottom-width: 2px; }
+        .baustein:hover { filter: brightness(1.05); transform: translateY(-2px); }
+        
+        .arbeitsflaeche { 
+            min-height: 500px; border: 3px dashed #cbd5e1; background-color: #f8fafc;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .traktor-label { 
+            position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); 
+            background: #1e293b; color: white; padding: 2px 8px; border-radius: 8px; 
+            font-size: 9px; font-weight: bold; border: 1px solid white; white-space: nowrap;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); z-index: 10;
+        }
+
+        .remove-btn { 
+            position: absolute; top: -10px; right: -10px; background: #ef4444; color: white; 
+            width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; 
+            justify-content: center; font-size: 12px; font-weight: bold; cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2); opacity: 0; transition: opacity 0.2s; z-index: 20;
+        }
+        .baustein:hover .remove-btn { opacity: 1; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-100 p-2 md:p-6 text-slate-900">
+
+    <div class="container mx-auto bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+        <div class="bg-slate-800 p-4 flex flex-wrap justify-between items-center gap-4 text-white">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🌱</span>
+                <div>
+                    <h1 class="font-black uppercase tracking-tighter leading-none">Futterernte Pro</h1>
+                    <p class="text-[9px] text-slate-400 uppercase font-bold tracking-widest">Agroscope Richtwerte 2025</p>
+                </div>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="undo()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-xl text-xs font-bold transition-all">↩️ Rückgängig</button>
+                <button onclick="redo()" class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-xl text-xs font-bold transition-all">↪️ Wiederholen</button>
+                <button onclick="loadStandardHeu()" class="ml-2 px-6 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-900 rounded-xl font-black text-xs uppercase shadow-lg transition-all">✨ Heu-Standard laden</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row">
+            <aside class="lg:w-80 p-6 bg-slate-50 border-r border-slate-200">
+                <h2 class="text-xs font-black text-slate-400 uppercase mb-4 tracking-widest">Grünland-Palette</h2>
+                <div id="baustein-palette" class="grid grid-cols-1 gap-3 mb-8">
+                    </div>
+
+                <div class="pt-6 border-t border-slate-200">
+                    <h2 class="text-xs font-black text-slate-400 uppercase mb-4 tracking-widest">Spezial-Katalog</h2>
+                    <div class="space-y-3">
+                        <select id="filter-kategorie" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs font-bold outline-none focus:ring-2 focus:ring-indigo-500" onchange="updateKatalogDropdown()">
+                            <option value="">-- Gruppe wählen --</option>
+                        </select>
+                        <select id="katalog-dropdown" class="w-full p-3 bg-white border border-slate-300 rounded-xl text-xs outline-none">
+                            <option value="">Maschine wählen...</option>
+                        </select>
+                        <button onclick="addFromCatalog()" class="w-full py-3 bg-slate-900 text-white rounded-xl text-xs font-black uppercase hover:bg-black transition-all">📦 Übernehmen</button>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="flex-grow p-6">
+                <div id="arbeitsflaeche" class="arbeitsflaeche rounded-3xl p-8 mb-8 flex flex-wrap content-start gap-12 transition-all">
+                    </div>
+
+                <div class="bg-slate-900 text-white p-8 rounded-[2rem] shadow-2xl grid grid-cols-2 md:grid-cols-6 gap-8 items-center">
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-2">Gesamtfläche</label>
+                        <div class="flex items-baseline gap-2">
+                            <input type="number" id="flaeche-input" value="10" oninput="pushHistory(); calc();" class="bg-transparent text-4xl font-black w-24 outline-none text-white focus:text-indigo-400">
+                            <span class="text-slate-500 font-bold uppercase">ha</span>
+                        </div>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-2">Dieselpreis</label>
+                        <div class="flex items-baseline gap-2">
+                            <input type="number" id="sprit-preis-input" value="1.80" step="0.01" oninput="calc();" class="bg-transparent text-4xl font-black w-24 outline-none text-white focus:text-indigo-400">
+                            <span class="text-slate-500 font-bold uppercase">CHF</span>
+                        </div>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-2">Ø Feldweg je Einsatz</label>
+                        <div class="flex items-baseline gap-2">
+                            <input type="number" id="feldweg-input" value="0" step="0.1" min="0" oninput="calc();" class="bg-transparent text-4xl font-black w-20 outline-none text-white focus:text-indigo-400">
+                            <select id="feldweg-einheit" onchange="toggleFieldwegSpeedVisibility(); calc();" class="bg-slate-800 border border-slate-700 rounded-lg px-2 py-1 text-xs font-bold uppercase outline-none focus:ring-2 focus:ring-indigo-500">
+                                <option value="min">min</option>
+                                <option value="km">km</option>
+                            </select>
+                        </div>
+                        <div id="feldweg-speed-wrap" class="mt-2 hidden items-baseline gap-2">
+                            <span class="text-[10px] text-slate-500 uppercase font-bold">Tempo</span>
+                            <input type="number" id="feldweg-speed" value="30" step="1" min="1" oninput="calc();" class="bg-transparent text-xl font-black w-14 outline-none text-white focus:text-indigo-400">
+                            <span class="text-slate-500 font-bold uppercase text-xs">km/h</span>
+                        </div>
+                        <p class="text-[9px] text-slate-500 mt-1">Je Arbeitsschritt, Hin+Rückfahrt</p>
+                    </div>
+                    <div class="border-l border-slate-800 pl-6 hidden md:block">
+                        <p class="text-slate-500 text-[10px] uppercase font-bold mb-1">Total Zeit / Traktor</p>
+                        <p id="gesamtzeit" class="text-lg font-bold">0.00 h</p>
+                        <p id="traktorzeit" class="text-lg font-bold text-indigo-400">0.00 h</p>
+                    </div>
+                    <div class="col-span-2 md:col-span-2 text-right">
+                        <p class="text-emerald-500 text-[10px] uppercase font-bold tracking-widest mb-1">Verfahrenskosten Total</p>
+                        <div class="flex items-baseline justify-end gap-3">
+                            <span id="gesamtkosten" class="text-5xl font-black tracking-tighter">0.00</span>
+                            <span class="text-emerald-500 font-bold">CHF</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-50 text-[10px] uppercase text-slate-400 font-black tracking-wider">
+                            <tr>
+                                <th class="p-4">Arbeitsschritt</th>
+                                <th class="p-4">Zugfahrzeug</th>
+                                <th class="p-4">Leistung</th>
+                                <th class="p-4">Stunden</th>
+                                <th class="p-4 text-right">Total CHF</th>
+                                <th class="p-4 text-center">Aktion</th>
+                            </tr>
+                        </thead>
+                        <tbody id="evaluation-table" class="text-xs font-medium">
+                            </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div id="edit-modal" class="fixed inset-0 bg-slate-900/90 hidden flex items-center justify-center p-4 z-50 backdrop-blur-md">
+        <div class="bg-white rounded-[2.5rem] p-10 w-full max-w-2xl shadow-2xl border-4 border-slate-200">
+            <div class="flex justify-between items-start mb-8">
+                <div>
+                    <h3 class="text-3xl font-black text-slate-800" id="modal-title">Anpassung</h3>
+                    <p class="text-xs font-bold text-indigo-500 uppercase tracking-widest" id="modal-subtitle">Agroscope Parameter</p>
+                </div>
+                <span class="text-6xl" id="modal-icon">⚙️</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-5">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200">
+                        <label class="text-[10px] font-black text-slate-500 uppercase block mb-2">Zugfahrzeug (Traktor)</label>
+                        <select id="traktor-select" class="w-full p-3 rounded-xl font-bold bg-white border border-slate-300 outline-none focus:ring-2 focus:ring-indigo-500"></select>
+                        <div class="mt-4 flex flex-col gap-2">
+                            <label class="flex items-center gap-3 text-xs font-bold text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="front-hydraulik" class="w-4 h-4 rounded text-indigo-600"> Fronthydraulik (+5 CHF/h)
+                            </label>
+                            <label class="flex items-center gap-3 text-xs font-bold text-slate-600 cursor-pointer">
+                                <input type="checkbox" id="front-lader" class="w-4 h-4 rounded text-indigo-600"> Frontlader (+8 CHF/h)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-50 p-5 rounded-2xl border border-indigo-100">
+                        <label class="text-[10px] font-black text-indigo-400 uppercase block mb-2">Arbeitstarif</label>
+                        <select id="arbeit-select" class="w-full p-3 rounded-xl font-bold bg-white border border-indigo-200 outline-none">
+                            <option value="28">Selbst / Familie (28.-/h)</option>
+                            <option value="33">Angestellt (33.-/h)</option>
+                            <option value="45">Lohnunternehmer (45.-/h)</option>
+                            <option value="55">Öffentlicher Dienst (55.-/h)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <label class="text-[9px] text-slate-400 font-bold uppercase">Maschinenkatalog (alle Gattungen)</label>
+                        <select id="variant-changer" class="w-full bg-transparent font-bold text-indigo-600 outline-none py-1" onchange="applyVariant(this.value)"></select>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <label class="text-[9px] text-slate-400 font-bold uppercase">Art der Arbeit (Symbol + Farbe)</label>
+                        <select id="edit-style" class="w-full bg-transparent font-bold text-xs outline-none py-2" onchange="applyStyleFromSelector(this.value)"></select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <label class="text-[9px] text-slate-400 font-bold uppercase">ha / h</label>
+                            <input type="number" id="edit-leist" class="w-full bg-transparent font-black text-xl outline-none" step="0.1">
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                            <label class="text-[9px] text-slate-400 font-bold uppercase">Gerät CHF/h</label>
+                            <input type="number" id="edit-kost" class="w-full bg-transparent font-black text-xl outline-none">
+                        </div>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                        <label class="text-[9px] text-slate-400 font-bold uppercase">Sprit Liter/h</label>
+                        <input type="number" id="edit-sprit" class="w-full bg-transparent font-black text-xl outline-none" step="0.1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+                <button onclick="resetRowToDefault()" class="px-6 py-3 border border-red-200 rounded-2xl text-[10px] font-bold text-red-500 hover:bg-red-50 transition-all uppercase tracking-widest">↺ Standard-Werte</button>
+                <div class="flex-grow"></div>
+                <button onclick="closeModal()" class="px-6 py-3 text-slate-400 font-bold hover:text-slate-600">Abbrechen</button>
+                <button onclick="saveModal()" class="px-12 py-4 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest shadow-xl hover:bg-black active:scale-95 transition-all">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // MASCHINEN-KATALOG (Auszug aus Agroscope 2025)
+        const CATALOG_FALLBACK = [
+            { kat: "Mähen", name: "Scheibenmähwerk 3m", leist: 2.5, kost: 70, sprit: 17, farbe: "bg-blue-500 text-white" },
+            { kat: "Mähen", name: "Mähkombi 8.5m", leist: 7.5, kost: 153, sprit: 35, farbe: "bg-blue-600 text-white" },
+            { kat: "Zetten", name: "Kreiselheuer 6m", leist: 6.0, kost: 55, sprit: 10, farbe: "bg-yellow-400 text-slate-900" },
+            { kat: "Zetten", name: "Kreiselheuer 10m", leist: 10.0, kost: 90, sprit: 16, farbe: "bg-yellow-500 text-slate-900" },
+            { kat: "Schwaden", name: "Schwader 1-Kreisel", leist: 3.5, kost: 44, sprit: 7, farbe: "bg-orange-500 text-white" },
+            { kat: "Schwaden", name: "Schwader 2-Kreisel", leist: 6.0, kost: 72, sprit: 11, farbe: "bg-orange-600 text-white" },
+            { kat: "Laden", name: "Ladewagen 30m³", leist: 1.3, kost: 93, sprit: 18, farbe: "bg-red-500 text-white" },
+            { kat: "Laden", name: "Ballenpresse Kombi", leist: 1.5, kost: 165, sprit: 20, farbe: "bg-red-600 text-white" },
+            { kat: "Düngung", name: "Güllefass 8m³", leist: 0.8, kost: 45, sprit: 12, farbe: "bg-amber-800 text-white" },
+            { kat: "Wiesenpflege", name: "Wiesenegge 6m", leist: 2.5, kost: 23, sprit: 8, farbe: "bg-emerald-500 text-white" },
+            { kat: "Handarbeit", name: "Handarbeit allgemein", leist: 0.2, kost: 0, sprit: 0, farbe: "bg-fuchsia-500 text-white" },
+            { kat: "Traktoren", name: "Traktor 75-89 kW", leist: 1, kost: 49, sprit: 18.7, farbe: "bg-slate-700 text-white" },
+            { kat: "Traktoren", name: "Traktor 90-104 kW", leist: 1, kost: 61, sprit: 22.2, farbe: "bg-slate-800 text-white" },
+            { kat: "Traktoren", name: "Traktor 110-130 kW", leist: 1, kost: 83, sprit: 31.3, farbe: "bg-slate-900 text-white" }
+        ];
+        let CATALOG_DATA = [...CATALOG_FALLBACK];
+        const CSV_PATH = 'Rohdaten_Maschinen_Cleaned.csv';
+        const DEFAULT_ROAD_SPEED_KMH = 30;
+
+        const CATEGORY_STYLE = {
+            "Mähen": { icon: "✂️", farbe: "bg-blue-500 text-white" },
+            "Zetten": { icon: "🔄", farbe: "bg-yellow-400 text-slate-900" },
+            "Schwaden": { icon: "🧹", farbe: "bg-orange-500 text-white" },
+            "Laden": { icon: "🚜", farbe: "bg-red-500 text-white" },
+            "Düngung": { icon: "💩", farbe: "bg-amber-800 text-white" },
+            "Wiesenpflege": { icon: "🌱", farbe: "bg-emerald-500 text-white" },
+            "Handarbeit": { icon: "🧑‍🌾", farbe: "bg-fuchsia-500 text-white" }
+        };
+
+        const STYLE_OPTIONS = [
+            { key: "maehen", label: "Mähen", icon: "✂️", farbe: "bg-blue-500 text-white" },
+            { key: "zetten", label: "Wenden/Zetten", icon: "🔄", farbe: "bg-yellow-400 text-slate-900" },
+            { key: "schwaden", label: "Schwaden", icon: "🧹", farbe: "bg-orange-500 text-white" },
+            { key: "laden", label: "Laden/Ernte", icon: "🚜", farbe: "bg-red-500 text-white" },
+            { key: "duengung", label: "Düngung", icon: "💩", farbe: "bg-amber-800 text-white" },
+            { key: "pflege", label: "Pflege", icon: "🌱", farbe: "bg-emerald-500 text-white" },
+            { key: "handarbeit", label: "Handarbeit", icon: "🧑‍🌾", farbe: "bg-fuchsia-500 text-white" },
+            { key: "werkstatt", label: "Werkstatt", icon: "🛠️", farbe: "bg-cyan-700 text-white" },
+            { key: "logistik", label: "Logistik", icon: "📦", farbe: "bg-slate-700 text-white" },
+            { key: "sonstiges", label: "Sonstiges", icon: "⚙️", farbe: "bg-slate-600 text-white" }
+        ];
+
+        let history = [];
+        let historyIndex = -1;
+        const globals = { bausteineOnArbeitsflaeche: [], editIdx: null, dragIdx: null };
+
+        function styleForCategory(kat) {
+            return CATEGORY_STYLE[kat] || { icon: "⚙️", farbe: "bg-slate-600 text-white" };
+        }
+
+        function getCatalog() {
+            return CATALOG_DATA && CATALOG_DATA.length > 0 ? CATALOG_DATA : CATALOG_FALLBACK;
+        }
+
+        function parseNumber(raw) {
+            if (!raw) return 0;
+            const cleaned = String(raw).trim().replace(',', '.');
+            const parsed = parseFloat(cleaned);
+            return Number.isFinite(parsed) ? parsed : 0;
+        }
+
+        function parseCsvLine(line) {
+            const out = [];
+            let current = '';
+            let inQuotes = false;
+            for (let i = 0; i < line.length; i++) {
+                const ch = line[i];
+                if (ch === '"') {
+                    if (inQuotes && line[i + 1] === '"') {
+                        current += '"';
+                        i++;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (ch === ';' && !inQuotes) {
+                    out.push(current);
+                    current = '';
+                } else {
+                    current += ch;
+                }
+            }
+            out.push(current);
+            return out;
+        }
+
+        function normalizeKat(rawKat, machineName) {
+            const kat = (rawKat || 'Allgemein').trim();
+            if (/traktor/i.test(kat) || /traktor/i.test(machineName || '')) return 'Traktoren';
+            return kat;
+        }
+
+        function parseCatalogCsv(csvText) {
+            const lines = csvText.split(/\r?\n/).filter((l) => l.trim().length > 0);
+            if (lines.length < 2) return [];
+            let currentKat = 'Allgemein';
+            const parsed = [];
+            for (let i = 1; i < lines.length; i++) {
+                const cols = parseCsvLine(lines[i]);
+                if (cols.length < 6) continue;
+                const name = (cols[1] || '').trim();
+                const kosten = parseNumber(cols[3]);
+                const sprit = parseNumber(cols[4]);
+                const leist = parseNumber(cols[5]);
+                if (!name) continue;
+
+                // Kapitel-/Gattungszeilen in der CSV haben i.d.R. 0 Kosten und 0 Treibstoff.
+                if (kosten === 0 && sprit === 0) {
+                    currentKat = name;
+                    continue;
+                }
+
+                const kat = normalizeKat(currentKat, name);
+                const style = styleForCategory(kat);
+                parsed.push({
+                    kat,
+                    name,
+                    leist: leist > 0 ? leist : 1,
+                    kost: kosten,
+                    sprit,
+                    farbe: style.farbe
+                });
+            }
+
+            if (!parsed.find((m) => m.kat === 'Handarbeit')) {
+                parsed.push({ kat: 'Handarbeit', name: 'Handarbeit allgemein', leist: 0.2, kost: 0, sprit: 0, farbe: 'bg-fuchsia-500 text-white' });
+            }
+            return parsed;
+        }
+
+        async function loadCatalogFromCsv() {
+            try {
+                const res = await fetch(CSV_PATH, { cache: 'no-cache' });
+                if (!res.ok) throw new Error(`CSV konnte nicht geladen werden (${res.status})`);
+                const text = await res.text();
+                const parsed = parseCatalogCsv(text);
+                if (parsed.length > 0) CATALOG_DATA = parsed;
+            } catch (err) {
+                console.warn('CSV-Import fehlgeschlagen, fallback aktiv.', err);
+                CATALOG_DATA = [...CATALOG_FALLBACK];
+            }
+        }
+
+        function suggestIcon(kat) {
+            return styleForCategory(kat).icon;
+        }
+
+        function suggestColor(kat, fallback) {
+            return fallback || styleForCategory(kat).farbe;
+        }
+
+        function findStyleKey(icon, farbe) {
+            const exact = STYLE_OPTIONS.find((s) => s.icon === icon && s.farbe === farbe);
+            return exact ? exact.key : "sonstiges";
+        }
+
+        function styleByKey(key) {
+            return STYLE_OPTIONS.find((s) => s.key === key) || STYLE_OPTIONS.find((s) => s.key === "sonstiges");
+        }
+
+        function applyStyleFromSelector(key) {
+            const style = styleByKey(key);
+            document.getElementById('modal-icon').innerText = style.icon;
+        }
+
+        function createBlock(machine, extras = {}) {
+            const katStyle = styleForCategory(machine.kat);
+            const block = {
+                ...machine,
+                icon: extras.icon || katStyle.icon,
+                farbe: extras.farbe || machine.farbe || katStyle.farbe,
+                traktor: extras.traktor === undefined ? suggestTraktor(machine) : extras.traktor,
+                arbeitAnsatz: extras.arbeitAnsatz || 28,
+                styleKey: extras.styleKey || findStyleKey(extras.icon || katStyle.icon, extras.farbe || machine.farbe || katStyle.farbe)
+            };
+            block.original = {
+                name: machine.name,
+                kat: machine.kat,
+                leist: machine.leist,
+                kost: machine.kost,
+                sprit: machine.sprit,
+                icon: block.icon,
+                farbe: block.farbe,
+                styleKey: block.styleKey
+            };
+            return block;
+        }
+
+        function fillStyleSelect() {
+            const styleSel = document.getElementById('edit-style');
+            styleSel.innerHTML = '';
+            STYLE_OPTIONS.forEach((s) => styleSel.add(new Option(`${s.icon} ${s.label}`, s.key)));
+        }
+
+        async function init() {
+            await loadCatalogFromCsv();
+
+            // Palette rendern
+            const templates = [
+                { name: "Mähen", icon: "✂️", kat: "Mähen" },
+                { name: "Wenden", icon: "🔄", kat: "Zetten" },
+                { name: "Schwaden", icon: "🧹", kat: "Schwaden" },
+                { name: "Laden", icon: "🚜", kat: "Laden" },
+                { name: "Düngung", icon: "💩", kat: "Düngung" },
+                { name: "Pflege", icon: "🌱", kat: "Wiesenpflege" },
+                { name: "Handarbeit", icon: "🧑‍🌾", kat: "Handarbeit" }
+            ];
+            
+            const palette = document.getElementById('baustein-palette');
+            const catalog = getCatalog();
+            templates.forEach(t => {
+                const match = catalog.find(m => m.kat === t.kat) || CATALOG_FALLBACK.find(m => m.kat === t.kat);
+                if (!match) return;
+                const el = document.createElement('div');
+                el.className = `baustein p-4 ${match.farbe} flex items-center gap-3 text-xs font-black shadow-lg mb-1`;
+                el.draggable = true;
+                el.innerHTML = `<span class="text-lg">${t.icon}</span> <span class="uppercase">${t.name}</span>`;
+                el.addEventListener('dragstart', (e) => {
+                    const block = createBlock(match, { icon: t.icon, traktor: suggestTraktor(match) });
+                    e.dataTransfer.setData('application/json', JSON.stringify(block));
+                });
+                palette.appendChild(el);
+            });
+
+            fillStyleSelect();
+
+            // Katalog Filter
+            const kats = [...new Set(catalog.map(m => m.kat))].sort();
+            const filter = document.getElementById('filter-kategorie');
+            kats.forEach(k => filter.add(new Option(k, k)));
+
+            toggleFieldwegSpeedVisibility();
+
+            pushHistory();
+            renderArbeitsflaeche();
+        }
+
+        function suggestTraktor(m) {
+            if (m.kat === "Handarbeit" || m.kat === "Traktoren") return null;
+            const tr = getCatalog().filter(c => c.kat === "Traktoren");
+            return (m.kat === "Laden" || m.kat === "Mähen") ? tr[1] : tr[0];
+        }
+
+        function toggleFieldwegSpeedVisibility() {
+            const unit = document.getElementById('feldweg-einheit').value;
+            const wrap = document.getElementById('feldweg-speed-wrap');
+            if (unit === 'km') {
+                wrap.classList.remove('hidden');
+                wrap.classList.add('flex');
+            } else {
+                wrap.classList.add('hidden');
+                wrap.classList.remove('flex');
+            }
+        }
+
+        function getRoadSpeedKmh() {
+            const speed = parseFloat(document.getElementById('feldweg-speed').value) || DEFAULT_ROAD_SPEED_KMH;
+            return speed > 0 ? speed : DEFAULT_ROAD_SPEED_KMH;
+        }
+
+        function getTravelHoursPerStep() {
+            const raw = parseFloat(document.getElementById('feldweg-input').value) || 0;
+            const unit = document.getElementById('feldweg-einheit').value;
+            if (raw <= 0) return 0;
+            const oneWayMinutes = unit === 'km' ? ((raw / getRoadSpeedKmh()) * 60) : raw;
+            return (oneWayMinutes * 2) / 60;
+        }
+
+        function renderArbeitsflaeche() {
+            const container = document.getElementById('arbeitsflaeche');
+            container.innerHTML = globals.bausteineOnArbeitsflaeche.length === 0 ? '<div class="w-full text-center mt-20 opacity-10 font-black uppercase tracking-[1rem] select-none">Leer</div>' : '';
+            
+            const tableBody = document.getElementById('evaluation-table');
+            tableBody.innerHTML = '';
+            const f = parseFloat(document.getElementById('flaeche-input').value) || 0;
+            const p = parseFloat(document.getElementById('sprit-preis-input').value) || 0;
+            const travelH = getTravelHoursPerStep();
+
+            globals.bausteineOnArbeitsflaeche.forEach((b, idx) => {
+                const el = document.createElement('div');
+                el.className = `baustein p-6 ${b.farbe} w-48 text-center shadow-xl`;
+                el.draggable = true;
+                el.addEventListener('dragstart', (e) => {
+                    globals.dragIdx = idx;
+                    e.dataTransfer.setData('application/x-block-index', String(idx));
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+                el.addEventListener('dragover', (e) => e.preventDefault());
+                el.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const fromStr = e.dataTransfer.getData('application/x-block-index');
+                    if (!fromStr) return;
+                    moveBlock(parseInt(fromStr, 10), idx);
+                });
+                const tLabel = b.traktor ? `<div class="traktor-label">🚜 ${b.traktor.name}</div>` : '';
+                el.innerHTML = `<div class="remove-btn" onclick="removeBlock(${idx})">✕</div><div class="text-5xl mb-3">${b.icon || '⚙️'}</div><div class="font-black text-[10px] uppercase h-10 flex items-center justify-center leading-tight tracking-tighter">${b.name}</div>${tLabel}`;
+                el.ondblclick = () => openEdit(idx);
+                container.appendChild(el);
+
+                const h = (f / b.leist) + travelH;
+                const cost = h * (b.kost + (b.traktor ? b.traktor.kost : 0) + (b.arbeitAnsatz || 28) + ((b.sprit + (b.traktor?b.traktor.sprit:0)) * p));
+                tableBody.insertAdjacentHTML('beforeend', `
+                    <tr class="border-b hover:bg-slate-50 transition-colors">
+                        <td class="p-4 font-bold text-slate-700">${b.name}</td>
+                        <td class="p-4 text-slate-500 font-bold">${b.traktor ? b.traktor.name : '-'}</td>
+                        <td class="p-4 font-medium">${b.leist} ha/h</td>
+                        <td class="p-4 font-medium">${h.toFixed(2)}h</td>
+                        <td class="p-4 font-black text-right text-indigo-600">${cost.toLocaleString('de-CH', {minimumFractionDigits:2})}</td>
+                        <td class="p-4 text-center"><button onclick="openEdit(${idx})" class="text-[10px] bg-slate-900 text-white px-3 py-1 rounded-lg font-black uppercase tracking-widest hover:bg-indigo-600 transition-all">Edit</button></td>
+                    </tr>
+                `);
+            });
+            calc();
+        }
+
+        function openEdit(idx) {
+            globals.editIdx = idx;
+            const b = globals.bausteineOnArbeitsflaeche[idx];
+            document.getElementById('modal-title').innerText = b.name;
+            document.getElementById('modal-icon').innerText = b.icon || '⚙️';
+            document.getElementById('modal-subtitle').innerText = `${b.kat || 'Spezial'} • Agroscope Parameter`;
+            
+            const tSel = document.getElementById('traktor-select');
+            tSel.innerHTML = '<option value="null">-- Kein Zugfahrzeug --</option>';
+            getCatalog().filter(c => c.kat === "Traktoren").forEach(t => {
+                const opt = new Option(`${t.name} (${t.kost}.-/h)`, JSON.stringify(t));
+                if(b.traktor && b.traktor.name === t.name) opt.selected = true;
+                tSel.add(opt);
+            });
+
+            const vSel = document.getElementById('variant-changer');
+            vSel.innerHTML = '<option value="">Maschine aus Katalog wählen...</option>';
+            const groups = [...new Set(getCatalog().map(c => c.kat))].sort();
+            groups.forEach((kat) => {
+                const group = document.createElement('optgroup');
+                group.label = kat;
+                getCatalog().filter(c => c.kat === kat).forEach((v) => {
+                    const opt = new Option(v.name, JSON.stringify(v));
+                    group.appendChild(opt);
+                });
+                vSel.appendChild(group);
+            });
+
+            document.getElementById('edit-leist').value = b.leist;
+            document.getElementById('edit-kost').value = b.kost;
+            document.getElementById('edit-sprit').value = b.sprit;
+            document.getElementById('arbeit-select').value = b.arbeitAnsatz || 28;
+            document.getElementById('front-hydraulik').checked = b.frontHydr || false;
+            document.getElementById('front-lader').checked = b.frontLader || false;
+            document.getElementById('edit-style').value = b.styleKey || findStyleKey(b.icon, b.farbe);
+            
+            document.getElementById('edit-modal').classList.remove('hidden');
+        }
+
+        function applyVariant(vStr) {
+            if (!vStr) return;
+            const v = JSON.parse(vStr);
+            document.getElementById('edit-leist').value = v.leist;
+            document.getElementById('edit-kost').value = v.kost;
+            document.getElementById('edit-sprit').value = v.sprit;
+            document.getElementById('modal-title').innerText = v.name;
+            document.getElementById('modal-subtitle').innerText = `${v.kat} • Agroscope Parameter`;
+            const defaultStyleKey = findStyleKey(suggestIcon(v.kat), suggestColor(v.kat, v.farbe));
+            document.getElementById('edit-style').value = defaultStyleKey;
+            applyStyleFromSelector(defaultStyleKey);
+            const suggestedTraktor = suggestTraktor(v);
+            document.getElementById('traktor-select').value = suggestedTraktor ? JSON.stringify(suggestedTraktor) : 'null';
+        }
+
+        function saveModal() {
+            const b = globals.bausteineOnArbeitsflaeche[globals.editIdx];
+            b.leist = parseFloat(document.getElementById('edit-leist').value);
+            b.kost = parseFloat(document.getElementById('edit-kost').value);
+            b.sprit = parseFloat(document.getElementById('edit-sprit').value);
+            b.arbeitAnsatz = parseFloat(document.getElementById('arbeit-select').value);
+            b.frontHydr = document.getElementById('front-hydraulik').checked;
+            b.frontLader = document.getElementById('front-lader').checked;
+            b.styleKey = document.getElementById('edit-style').value;
+            const style = styleByKey(b.styleKey);
+            b.icon = style.icon;
+            b.farbe = style.farbe;
+            const tVal = document.getElementById('traktor-select').value;
+            b.traktor = tVal === "null" ? null : JSON.parse(tVal);
+            b.name = document.getElementById('modal-title').innerText;
+            const selectedVariant = document.getElementById('variant-changer').value;
+            if (selectedVariant) {
+                const v = JSON.parse(selectedVariant);
+                b.kat = v.kat;
+            }
+            
+            closeModal(); pushHistory(); renderArbeitsflaeche();
+        }
+
+        function calc() {
+            const f = parseFloat(document.getElementById('flaeche-input').value) || 0;
+            const p = parseFloat(document.getElementById('sprit-preis-input').value) || 0;
+            const travelH = getTravelHoursPerStep();
+            let tk = 0, tz = 0, trz = 0;
+            globals.bausteineOnArbeitsflaeche.forEach(b => {
+                const h = (f / b.leist) + travelH; tz += h;
+                tk += h * (b.kost + (b.sprit * p) + (b.arbeitAnsatz || 28));
+                if (b.traktor) {
+                    trz += h;
+                    tk += h * (b.traktor.kost + (b.traktor.sprit * p) + (b.frontHydr ? 5 : 0) + (b.frontLader ? 8 : 0));
+                }
+            });
+            document.getElementById('gesamtkosten').innerText = tk.toLocaleString('de-CH', {minimumFractionDigits: 2});
+            document.getElementById('gesamtzeit').innerText = tz.toFixed(2) + ' h';
+            document.getElementById('traktorzeit').innerText = trz.toFixed(2) + ' h';
+        }
+
+        function pushHistory() {
+            const state = JSON.stringify(globals.bausteineOnArbeitsflaeche);
+            if (historyIndex === -1 || state !== history[historyIndex]) {
+                history = history.slice(0, historyIndex + 1);
+                history.push(state);
+                historyIndex++;
+            }
+        }
+
+        function undo() { if (historyIndex > 0) { historyIndex--; globals.bausteineOnArbeitsflaeche = JSON.parse(history[historyIndex]); renderArbeitsflaeche(); } }
+        function redo() { if (historyIndex < history.length - 1) { historyIndex++; globals.bausteineOnArbeitsflaeche = JSON.parse(history[historyIndex]); renderArbeitsflaeche(); } }
+
+        function loadStandardHeu() {
+            const steps = [
+                { k: "Mähen", i: "✂️" }, { k: "Zetten", i: "🔄" }, { k: "Schwaden", i: "🧹" }, { k: "Laden", i: "🚜" }
+            ];
+            globals.bausteineOnArbeitsflaeche = steps.map(s => {
+                const m = getCatalog().find(c => c.kat === s.k);
+                return createBlock(m, { icon: s.i, traktor: suggestTraktor(m) });
+            });
+            pushHistory(); renderArbeitsflaeche();
+        }
+
+        function moveBlock(fromIdx, toIdx) {
+            if (Number.isNaN(fromIdx) || Number.isNaN(toIdx) || fromIdx === toIdx) return;
+            if (fromIdx < 0 || toIdx < 0 || fromIdx >= globals.bausteineOnArbeitsflaeche.length || toIdx >= globals.bausteineOnArbeitsflaeche.length) return;
+            const [moved] = globals.bausteineOnArbeitsflaeche.splice(fromIdx, 1);
+            globals.bausteineOnArbeitsflaeche.splice(toIdx, 0, moved);
+            pushHistory();
+            renderArbeitsflaeche();
+        }
+
+        function updateKatalogDropdown() {
+            const kat = document.getElementById('filter-kategorie').value;
+            const dropdown = document.getElementById('katalog-dropdown');
+            dropdown.innerHTML = '';
+            if (!kat) return;
+            getCatalog().filter(m => m.kat === kat).forEach(m => dropdown.add(new Option(m.name, JSON.stringify(m))));
+        }
+
+        function addFromCatalog() {
+            const val = document.getElementById('katalog-dropdown').value;
+            if (!val) return;
+            const machine = JSON.parse(val);
+            const block = createBlock(machine, { traktor: suggestTraktor(machine) });
+            globals.bausteineOnArbeitsflaeche.push(block);
+            pushHistory(); renderArbeitsflaeche();
+        }
+
+        function resetRowToDefault() {
+            const b = globals.bausteineOnArbeitsflaeche[globals.editIdx];
+            if (b.original) {
+                document.getElementById('edit-leist').value = b.original.leist;
+                document.getElementById('edit-kost').value = b.original.kost;
+                document.getElementById('edit-sprit').value = b.original.sprit;
+                const resetStyleKey = b.original.styleKey || findStyleKey(b.original.icon || suggestIcon(b.original.kat), b.original.farbe || suggestColor(b.original.kat));
+                document.getElementById('edit-style').value = resetStyleKey;
+                document.getElementById('modal-title').innerText = b.original.name;
+                document.getElementById('modal-subtitle').innerText = `${b.original.kat} • Agroscope Parameter`;
+                applyStyleFromSelector(resetStyleKey);
+                const tr = suggestTraktor(b.original);
+                document.getElementById('traktor-select').value = tr ? JSON.stringify(tr) : 'null';
+            }
+        }
+
+        function closeModal() { document.getElementById('edit-modal').classList.add('hidden'); }
+        function removeBlock(i) { globals.bausteineOnArbeitsflaeche.splice(i,1); pushHistory(); renderArbeitsflaeche(); }
+        
+        const af = document.getElementById('arbeitsflaeche');
+        af.ondragover = (e) => e.preventDefault();
+        af.ondrop = (e) => {
+            e.preventDefault();
+            const fromStr = e.dataTransfer.getData('application/x-block-index');
+            if (fromStr) {
+                moveBlock(parseInt(fromStr, 10), globals.bausteineOnArbeitsflaeche.length - 1);
+                return;
+            }
+            const raw = e.dataTransfer.getData('application/json');
+            if (!raw) return;
+            const m = JSON.parse(raw);
+            const block = createBlock(m, {
+                icon: m.icon || suggestIcon(m.kat),
+                farbe: m.farbe || suggestColor(m.kat),
+                traktor: m.traktor === undefined ? suggestTraktor(m) : m.traktor,
+                arbeitAnsatz: m.arbeitAnsatz || 28,
+                styleKey: m.styleKey || findStyleKey(m.icon || suggestIcon(m.kat), m.farbe || suggestColor(m.kat))
+            });
+            globals.bausteineOnArbeitsflaeche.push(block);
+            pushHistory(); renderArbeitsflaeche();
+        };
+
+        init();
+    </script>
+</body>
+</html>

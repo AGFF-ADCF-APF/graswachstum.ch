@@ -1,0 +1,57 @@
+{
+    "metadata": {
+        "timestamp": 1773303311,
+        "user": "martinz",
+        "type": "unknown",
+        "action": "update"
+    },
+    "content": {
+        "enabled": true,
+        "default_for_all": true,
+        "toolbar": [
+            "undo",
+            "redo",
+            "|",
+            "removeformat",
+            "heading",
+            "bold",
+            "italic",
+            "underline",
+            "strikethrough",
+            "link",
+            "image",
+            "blockquote",
+            "bulletList",
+            "orderedList",
+            "codeBlock",
+            "table",
+            "htmlBlock",
+            "shortcodeBlock"
+        ],
+        "extra_typography": {
+            "enabled": true,
+            "custom": {
+                ":)": "\ud83d\ude0a",
+                ":(": "\ud83d\ude22",
+                ":D": "\ud83d\ude03",
+                ";)": "\ud83d\ude09",
+                ":P": "\ud83d\ude1b",
+                ":o": "\ud83d\ude2e",
+                ":|": "\ud83d\ude10",
+                ":*": "\ud83d\ude18",
+                "B)": "\ud83d\ude0e",
+                ":\/": "\ud83d\ude15",
+                "<3": "\u2764\ufe0f",
+                "<\/3": "\ud83d\udc94",
+                "~=": "\u2248",
+                "[ ": "\u2610",
+                "[x": "\u2611",
+                "(\/)": "\u2713",
+                "(x)": "\u2717"
+            }
+        }
+    },
+    "rawContent": "enabled: true\ndefault_for_all: true\ntoolbar:\n  - undo\n  - redo\n  - '|'\n  - removeformat\n  - heading\n  - bold\n  - italic\n  - underline\n  - strikethrough\n  - link\n  - image\n  - blockquote\n  - bulletList\n  - orderedList\n  - codeBlock\n  - table\n  - htmlBlock\n  - shortcodeBlock\nextra_typography:\n  enabled: true\n  custom:\n    ':)': \ud83d\ude0a\n    ':(': \ud83d\ude22\n    ':D': \ud83d\ude03\n    ;): \ud83d\ude09\n    ':P': \ud83d\ude1b\n    ':o': \ud83d\ude2e\n    ':|': \ud83d\ude10\n    ':*': \ud83d\ude18\n    B): \ud83d\ude0e\n    ':\/': \ud83d\ude15\n    '<3': \u2764\ufe0f\n    '<\/3': \ud83d\udc94\n    ~=: \u2248\n    '[ ': \u2610\n    '[x': \u2611\n    (\/): \u2713\n    (x): \u2717\n",
+    "filePath": "\/www\/htdocs\/w01573d0\/graswachstum.ch\/user\/config\/plugins\/editor-pro.yaml",
+    "type": "unknown"
+}

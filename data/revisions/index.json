@@ -18,5 +18,15 @@
             "type": "page",
             "action": "create"
         }
+    ],
+    "\/forecast\/graslandbewirtschaftung-ertragsbetont": [
+        {
+            "id": "813d9fc4782b85f84c633e0cca652783",
+            "file": "user\/pages\/01.forecast\/03.Graslandbewirtschaftung-ertragsbetont\/post.de.md.20260323-082110.rev",
+            "timestamp": 1774250470,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
+        }
     ]
 }

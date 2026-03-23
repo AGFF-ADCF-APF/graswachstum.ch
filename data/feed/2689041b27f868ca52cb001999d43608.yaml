@@ -1,10 +1,10 @@
-last_checked: 1773302455
+last_checked: 1774250176
 data:
   -
     title: 'Introducing Our New Licensing & Purchase System'
     url: 'https://getgrav.org/blog/new-licensing-system'
     date: 1769515200
-    nicetime: '1 Monate her'
+    nicetime: '2 Monate her'
   -
     title: 'TailwindCSS 4.0 upgrade for Typhoon Premium Theme'
     url: 'https://getgrav.org/blog/tailwindcss4-upgrade-for-typhoon-premium-theme'
@@ -34,19 +34,19 @@ data:
     title: 'macOS 15.0 Sequoia Apache Setup: Upgrading Homebrew'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-upgrade-homebrew'
     date: 1726660800
-    nicetime: '1 Jahre her'
+    nicetime: '2 Jahre her'
   -
     title: 'macOS 15.0 Sequoia Apache Setup: LetsEncrypt SSL'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-ssl'
     date: 1726657380
-    nicetime: '1 Jahre her'
+    nicetime: '2 Jahre her'
   -
     title: 'macOS 15.0 Sequoia Apache Setup: MySQL, Xdebug & More...'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-mysql-vhost-apc'
     date: 1726657200
-    nicetime: '1 Jahre her'
+    nicetime: '2 Jahre her'
   -
     title: 'macOS 15.0 Sequoia Apache Setup: Multiple PHP Versions'
     url: 'https://getgrav.org/blog/macos-sequoia-apache-multiple-php-versions'
     date: 1726653600
-    nicetime: '1 Jahre her'
+    nicetime: '2 Jahre her'

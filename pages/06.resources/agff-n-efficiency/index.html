@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreislauf Simulator: N-Bilanz & Effizienz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        h1 { color: #2c3e50; text-align: center; }
+        p.subtitle { text-align: center; color: #7f8c8d; margin-bottom: 30px; }
+        .grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 25px; }
+        .section-card { padding: 20px; border-radius: 10px; border-top: 5px solid; }
+        .feld-card { background-color: #eafaf1; border-color: #2ecc71; }
+        .stall-card { background-color: #fef9e7; border-color: #f1c40f; }
+        h2 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        .feld-card h2 { color: #27ae60; }
+        .stall-card h2 { color: #d35400; }
+        
+        .input-group {
+            margin-bottom: 15px; background: rgba(255,255,255,0.6);
+            padding: 12px; border-radius: 6px;
+        }
+        label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.95em; }
+        input[type="number"], input[type="range"] {
+            width: 100%; padding: 8px; box-sizing: border-box;
+            border: 1px solid #bdc3c7; border-radius: 4px;
+        }
+        .value-display { font-weight: normal; float: right; color: #34495e; }
+        .info-text { font-size: 0.8em; color: #7f8c8d; margin-top: 4px; }
+        
+        /* Kaskade */
+        .kaskade { margin-top: 15px; }
+        .kaskade-box {
+            background: #fff; padding: 12px; border-radius: 6px;
+            border-left: 4px solid #d35400; margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .kaskade-box strong { font-size: 1.1em; }
+        .kaskade-box span { font-size: 1.2em; font-weight: bold; color: #d35400; }
+        
+        .kaskade-step {
+            background: #fdf2e9; margin: 8px 0; padding: 15px;
+            border-radius: 6px; border: 1px dashed #e67e22;
+        }
+        
+        /* Gülle Management Styling */
+        .management-step { background: #eaf2f8; border: 1px dashed #3498db; }
+        .management-step label { color: #2980b9; }
+        .badge { background: #3498db; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.8em; margin-left: 5px; }
+        
+        .preset-buttons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .preset-btn { background: #fff; border: 1px solid #bdc3c7; padding: 5px 10px; border-radius: 20px; font-size: 0.8em; cursor: pointer; transition: all 0.2s; color: #34495e; }
+        .preset-btn:hover { background: #eafaf1; border-color: #27ae60; }
+        .btn-reset { border-color: #3498db; color: #2980b9; }
+        .btn-reset:hover { background: #3498db; color: white; }
+
+        .results { margin-top: 30px; padding: 20px; background: #ecf0f1; border-radius: 10px; text-align: center; }
+        .result-box { display: flex; justify-content: space-around; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
+        .res-item { background: white; padding: 15px; border-radius: 8px; flex: 1; min-width: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .res-item h3 { margin: 0 0 10px 0; font-size: 1.1em; color: #7f8c8d; }
+        .res-item span { font-size: 1.6em; font-weight: bold; color: #2c3e50; }
+        .calc-comment {
+            margin-top: 10px;
+            text-align: left;
+            font-size: 0.82em;
+            color: #5d6d7e;
+            background: #f8fafc;
+            border: 1px solid #e5eaf0;
+            border-radius: 6px;
+            padding: 8px;
+            line-height: 1.4;
+        }
+        .calc-comment strong { color: #2c3e50; }
+        .factor-hint {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #e8f1fb;
+            color: #1f6fb2;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 4px;
+            cursor: help;
+            border: 1px solid #c8dff5;
+            line-height: 1;
+            vertical-align: text-bottom;
+        }
+        .factor-hint.inline {
+            margin-left: 6px;
+            vertical-align: middle;
+        }
+
+        .app-tooltip {
+            position: fixed;
+            z-index: 9999;
+            max-width: 320px;
+            background: #1f2937;
+            color: #f9fafb;
+            border-radius: 8px;
+            padding: 10px 12px;
+            font-size: 0.8em;
+            line-height: 1.4;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255,255,255,0.1);
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity 0.14s ease, transform 0.14s ease;
+            visibility: hidden;
+            white-space: normal;
+        }
+        .app-tooltip.visible {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+        
+        .efficiency-card { background: #34495e; color: white; padding: 20px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; }
+        .efficiency-main { display: flex; justify-content: space-around; width: 100%; margin-bottom: 15px; }
+        .eff-box { text-align: center; }
+        .eff-box h3 { margin: 0 0 5px 0; font-size: 1em; color: #bdc3c7; font-weight: normal; }
+        .eff-box span { font-size: 2.2em; font-weight: bold; }
+        .saldo-plus { color: #2ecc71; }
+        .saldo-minus { color: #e74c3c; }
+        
+        .efficiency-card p { margin: 10px 0 0 0; font-size: 1em; line-height: 1.5; padding: 15px; background: rgba(0,0,0,0.2); border-radius: 6px; width: 100%; box-sizing: border-box; }
+
+        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } .efficiency-main { flex-direction: column; gap: 20px; } }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Kreislauf-Simulator: N-Bilanz & Effizienz</h1>
+    <p class="subtitle">Idee und Umsetzung: M. Zbinden 2026. Version 0.1.Angaben ohne Gewähr.</p>
+
+    <div class="grid">
+        <div class="section-card feld-card">
+            <h2>🌱 Feld (Produktion)</h2>
+            <div class="input-group">
+                <label>TS-Ertrag (kg TS/ha)
+                    <input type="number" id="ertrag" value="9000" step="500" oninput="calculate(false)">
+                </label>
+            </div>
+            <div class="input-group">
+                <label>Rohprotein im Futter (%) <span class="value-display" id="rp-val">15 %</span>
+                    <input type="range" id="rp" min="10" max="25" value="15" oninput="calculate(false)">
+                </label>
+            </div>
+            <div class="input-group">
+                <label>Kleeanteil (%) <span class="value-display" id="klee-val">15 %</span>
+                    <input type="range" id="klee" min="0" max="50" value="15" oninput="calculate(false)">
+                </label>
+            </div>
+            <div class="input-group">
+                <label>Mineraldünger Zukauf (kg N/ha)
+                    <span class="factor-hint inline" title="Agronomischer Richtwert bei guter N-Effizienz: ca. 10-20 kg TS Mehrertrag pro 1 kg Mineraldünger-N (standort-, witterungs- und schnittabhangig).">i</span>
+                    <input type="number" id="mineral" value="20" oninput="calculate(false)">
+                </label>
+            </div>
+        </div>
+
+        <div class="section-card stall-card">
+            <h2>🐄 Stall & Dünger-Logistik</h2>
+            
+            <div style="text-align: center; margin-bottom: 15px; font-weight: bold; color: #7f8c8d;">
+                Theoretischer Tierbesatz: <span id="kuh-anzahl" style="color: #d35400; font-size: 1.2em;">0.0</span> Kühe / ha
+            </div>
+
+            <div class="kaskade">
+                <div class="kaskade-box">
+                    <div>
+                        <strong>Ntot (Ausscheidung)</strong>
+                        <span class="factor-hint inline" title="Annahme: 105 kg N je Kuh und Jahr (Richtwert fur die Modellrechnung).">i</span>
+                    </div>
+                    <span id="res-ntot">0</span>
+                </div>
+                
+                <div class="kaskade-step">
+                    <label style="color: #e67e22;">⬇️ Stall- & Lagerverluste (%) <span class="value-display" id="stallVerlust-val">15 %</span>
+                        <input type="range" id="stallVerlust" min="5" max="40" value="15" oninput="calculate(false)">
+                    </label>
+                </div>
+                
+                <div class="kaskade-box">
+                    <div>
+                        <strong>Nges (Eigenproduktion)</strong><br>
+                        <span class="info-text">~ <span id="m3-eigen-text">0</span> m³ Rindviehgülle <span class="factor-hint inline" title="Umrechnung: 2.4 kg Gesamt-N pro m3 Rindviehgulle (typischer Richtwert).">i</span></span>
+                    </div>
+                    <span id="res-nges-eigen">0</span>
+                </div>
+
+                <div class="kaskade-step management-step">
+                    <label>🔄 Auf dem Feld ausgebracht <span class="badge">m³ Gülle</span>
+                        <span class="value-display" id="guelle-val" style="font-weight:bold;">0 m³</span>
+                        <input type="range" id="guelle" min="0" max="150" value="0" step="1" oninput="calculate(true)">
+                    </label>
+                    <div class="preset-buttons">
+                        <button class="preset-btn btn-reset" onclick="resetGuelle()">Zurück auf Eigenproduktion</button>
+                    </div>
+                </div>
+
+                <div class="kaskade-step">
+                    <label style="color: #e67e22;">⬇️ Wirkungsgrad Ausbringung (%) <span class="value-display" id="ausbringung-val">60 %</span>
+                        <input type="range" id="ausbringung" min="30" max="95" value="60" oninput="calculate(true)">
+                    </label>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setAusbringung(40)" data-tip="Richtwert bei hoher NH3-Verfluchtung: warm, trocken, windig. Niedrige N-Ausnutzung.">Prallteller (warm/trocken)</button>
+                        <button class="preset-btn" onclick="setAusbringung(60)" data-tip="Richtwert bei gunstigeren Bedingungen: kuhl/feucht reduziert NH3-Verluste.">Prallteller (kühl/feucht)</button>
+                        <button class="preset-btn" onclick="setAusbringung(70)" data-tip="Schleppschlauch reduziert Oberflachenkontakt und meist auch NH3-Verluste gegenuber Prallteller.">Schleppschlauch (warm)</button>
+                        <button class="preset-btn" onclick="setAusbringung(85)" data-tip="Hohe N-Wirkung bei emissionsarmer Ausbringung und kuhlen/feuchten Bedingungen.">Schleppschlauch (kühl)</button>
+                    </div>
+                </div>
+
+                <div class="kaskade-step management-step">
+                    <label>🕒 Nachwirkung Vorjahr (%)
+                        <span class="value-display" id="nach1-val">10 %</span>
+                        <span class="factor-hint inline" data-tip="Zusatzwirkung im aktuellen Jahr aus organischem N fruherer Gaben (vereinfachter Richtwert).">i</span>
+                        <input type="range" id="nach1" min="0" max="30" value="10" oninput="calculate(false)">
+                    </label>
+                    <label style="margin-top:10px;">🕒 Nachwirkung 2. Vorjahr (%)
+                        <span class="value-display" id="nach2-val">3 %</span>
+                        <input type="range" id="nach2" min="0" max="15" value="3" oninput="calculate(false)">
+                    </label>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" onclick="setNachwirkung(5, 1)" data-tip="Tiefe Nachwirkung (kalte Standorte, geringe Mineralisation).">tief</button>
+                        <button class="preset-btn" onclick="setNachwirkung(10, 3)" data-tip="Mittlere Nachwirkung (typischer Richtwert).">mittel</button>
+                        <button class="preset-btn" onclick="setNachwirkung(15, 5)" data-tip="Hohe Nachwirkung (warme Standorte, gute Mineralisation).">hoch</button>
+                    </div>
+                </div>
+
+                <div class="kaskade-box" style="border-left-color: #27ae60;">
+                    <div>
+                        <strong style="color: #27ae60;">Nverf gesamt (Verfügbar)</strong>
+                        <span class="factor-hint inline" data-tip="Nverf gesamt = Direktwirkung aus aktueller Gabe + Nachwirkung aus Vorjahren.">i</span>
+                        <br>
+                        <span class="info-text">Direkt: <span id="res-nverf-direct">0</span> kg | Nachwirkung: <span id="res-nverf-carry">0</span> kg</span>
+                    </div>
+                    <span id="res-nverf" style="color: #27ae60;">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        <div class="result-box">
+            <div class="res-item">
+                <h3>N-Abfuhr (Output Feld)</h3>
+                <span id="res-abfuhr">0</span> kg N/ha
+                <div class="calc-comment" id="comment-abfuhr">
+                    <strong>Rechnung:</strong><br>
+                    N-Gehalt = Rohprotein / 6.25 <span class="factor-hint" title="Faktor 6.25: Rohprotein enthält im Mittel 16% N. Daher gilt N = Rohprotein / 6.25 (100/16).">i</span> = <span id="calc-ngehalt">0.00</span> %<br>
+                    N-Abfuhr = Ertrag * (N-Gehalt / 100)<br>
+                    = <span id="calc-ertrag">0</span> * (<span id="calc-ngehalt-2">0.00</span> / 100)
+                </div>
+            </div>
+            <div class="res-item">
+                <h3>N-Zufuhr (Input Feld)</h3>
+                <span id="res-zufuhr">0</span> kg N/ha
+                <div class="calc-comment" id="comment-zufuhr">
+                    <strong>Rechnung:</strong><br>
+                    Klee-Fixierung = Kleeanteil * 3.5 <span class="factor-hint" title="Faustzahl 3.5 kg N pro Prozentpunkt Kleeanteil (je ha) für die biologische N-Fixierung im graslandbasierten System.">i</span> = <span id="calc-kleefix">0.0</span> kg N/ha<br>
+                    Nverf gesamt = Nverf direkt + Nachwirkung = <span id="calc-nverf-direct">0.0</span> + <span id="calc-nverf-carry">0.0</span><br>
+                    N-Zufuhr = Mineraldünger + Klee-Fixierung + Nverf gesamt<br>
+                    = <span id="calc-mineral">0.0</span> + <span id="calc-kleefix-2">0.0</span> + <span id="calc-nverf">0.0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="efficiency-card">
+            <div class="efficiency-main">
+                <div class="eff-box">
+                    <h3>N-Bilanz (Saldo)</h3>
+                    <span id="res-saldo">0 kg N/ha</span>
+                </div>
+                <div class="eff-box">
+                    <h3>Ausnutzungs-Effizienz</h3>
+                    <span id="res-eff">0 %</span>
+                </div>
+            </div>
+            <p id="feedback-text"></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    let isManualGuelle = false;
+    let tooltipBox = null;
+    let tooltipTarget = null;
+
+    function ensureTooltipBox() {
+        if (!tooltipBox) {
+            tooltipBox = document.createElement('div');
+            tooltipBox.className = 'app-tooltip';
+            tooltipBox.id = 'app-tooltip';
+            document.body.appendChild(tooltipBox);
+        }
+    }
+
+    function positionTooltip(el) {
+        if (!tooltipBox) return;
+        const rect = el.getBoundingClientRect();
+        const ttRect = tooltipBox.getBoundingClientRect();
+        const margin = 10;
+
+        let top = rect.top - ttRect.height - margin;
+        if (top < margin) top = rect.bottom + margin;
+
+        let left = rect.left + (rect.width / 2) - (ttRect.width / 2);
+        const maxLeft = window.innerWidth - ttRect.width - margin;
+        if (left < margin) left = margin;
+        if (left > maxLeft) left = maxLeft;
+
+        tooltipBox.style.top = `${Math.round(top)}px`;
+        tooltipBox.style.left = `${Math.round(left)}px`;
+    }
+
+    function showTooltip(el) {
+        const tip = el.getAttribute('data-tip');
+        if (!tip) return;
+        ensureTooltipBox();
+        tooltipTarget = el;
+        tooltipBox.textContent = tip;
+        tooltipBox.classList.add('visible');
+        positionTooltip(el);
+    }
+
+    function hideTooltip() {
+        if (!tooltipBox) return;
+        tooltipBox.classList.remove('visible');
+        tooltipTarget = null;
+    }
+
+    function initTooltips() {
+        ensureTooltipBox();
+        const targets = document.querySelectorAll('[data-tip], [title]');
+        targets.forEach(el => {
+            const tip = el.getAttribute('data-tip') || el.getAttribute('title');
+            if (!tip) return;
+            el.setAttribute('data-tip', tip);
+            el.removeAttribute('title');
+
+            if (el.classList.contains('factor-hint') && !el.hasAttribute('tabindex')) {
+                el.setAttribute('tabindex', '0');
+            }
+
+            el.addEventListener('mouseenter', () => showTooltip(el));
+            el.addEventListener('mouseleave', () => {
+                if (tooltipTarget === el) hideTooltip();
+            });
+            el.addEventListener('focus', () => showTooltip(el));
+            el.addEventListener('blur', () => {
+                if (tooltipTarget === el) hideTooltip();
+            });
+            el.addEventListener('click', (ev) => {
+                ev.stopPropagation();
+                if (tooltipTarget === el && tooltipBox && tooltipBox.classList.contains('visible')) hideTooltip();
+                else showTooltip(el);
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (tooltipTarget && tooltipBox && tooltipBox.classList.contains('visible')) positionTooltip(tooltipTarget);
+        });
+        window.addEventListener('scroll', () => {
+            if (tooltipTarget && tooltipBox && tooltipBox.classList.contains('visible')) positionTooltip(tooltipTarget);
+        }, true);
+        document.addEventListener('click', () => hideTooltip());
+    }
+
+    function resetGuelle() { isManualGuelle = false; calculate(false); }
+    function setAusbringung(wert) { document.getElementById('ausbringung').value = wert; calculate(true); }
+    function setNachwirkung(vorjahr, vorvorjahr) {
+        document.getElementById('nach1').value = vorjahr;
+        document.getElementById('nach2').value = vorvorjahr;
+        calculate(false);
+    }
+
+    function calculate(manualTrigger) {
+        if (manualTrigger) isManualGuelle = true;
+
+        let ertrag = parseFloat(document.getElementById('ertrag').value) || 0;
+        let rp = parseFloat(document.getElementById('rp').value) || 0;
+        let klee = parseFloat(document.getElementById('klee').value) || 0;
+        let mineral = parseFloat(document.getElementById('mineral').value) || 0;
+        let stallVerlust = parseFloat(document.getElementById('stallVerlust').value) || 0;
+        let ausbringung = parseFloat(document.getElementById('ausbringung').value) || 0;
+        let nach1 = parseFloat(document.getElementById('nach1').value) || 0;
+        let nach2 = parseFloat(document.getElementById('nach2').value) || 0;
+
+        document.getElementById('rp-val').innerText = rp + ' %';
+        document.getElementById('klee-val').innerText = klee + ' %';
+        document.getElementById('stallVerlust-val').innerText = stallVerlust + ' %';
+        document.getElementById('ausbringung-val').innerText = ausbringung + ' %';
+        document.getElementById('nach1-val').innerText = nach1 + ' %';
+        document.getElementById('nach2-val').innerText = nach2 + ' %';
+
+        let kuehe = Math.max(0, ertrag / 6000);
+        document.getElementById('kuh-anzahl').innerText = kuehe.toFixed(1);
+
+        let ntot = kuehe * 105; 
+        let nges_eigen = ntot * (1 - (stallVerlust / 100));
+        let m3_eigen = nges_eigen / 2.4; 
+
+        document.getElementById('res-ntot').innerText = ntot.toFixed(1) + ' kg';
+        document.getElementById('res-nges-eigen').innerText = nges_eigen.toFixed(1) + ' kg';
+        document.getElementById('m3-eigen-text').innerText = m3_eigen.toFixed(1);
+
+        let guelleSlider = document.getElementById('guelle');
+        if (!isManualGuelle) guelleSlider.value = m3_eigen;
+        
+        let m3_tatsaechlich = parseFloat(guelleSlider.value);
+        document.getElementById('guelle-val').innerText = m3_tatsaechlich.toFixed(1) + ' m³';
+
+        let nges_tatsaechlich = m3_tatsaechlich * 2.4;
+        let nverfDirekt = nges_tatsaechlich * (ausbringung / 100);
+        let nNachwirkung1 = nges_tatsaechlich * (nach1 / 100);
+        let nNachwirkung2 = nges_tatsaechlich * (nach2 / 100);
+        let nverfCarry = nNachwirkung1 + nNachwirkung2;
+        let nverf = nverfDirekt + nverfCarry;
+
+        document.getElementById('res-nverf').innerText = nverf.toFixed(1) + ' kg';
+        document.getElementById('res-nverf-direct').innerText = nverfDirekt.toFixed(1);
+        document.getElementById('res-nverf-carry').innerText = nverfCarry.toFixed(1);
+
+        // --- Bilanz & Saldo ---
+        let nGehalt = rp / 6.25; 
+        let nAbfuhr = ertrag * (nGehalt / 100);
+        let kleeFix = klee * 3.5; 
+        let nZufuhr = mineral + kleeFix + nverf;
+
+        document.getElementById('calc-ngehalt').innerText = nGehalt.toFixed(2);
+        document.getElementById('calc-ngehalt-2').innerText = nGehalt.toFixed(2);
+        document.getElementById('calc-ertrag').innerText = ertrag.toFixed(0);
+        document.getElementById('calc-kleefix').innerText = kleeFix.toFixed(1);
+        document.getElementById('calc-kleefix-2').innerText = kleeFix.toFixed(1);
+        document.getElementById('calc-mineral').innerText = mineral.toFixed(1);
+        document.getElementById('calc-nverf-direct').innerText = nverfDirekt.toFixed(1);
+        document.getElementById('calc-nverf-carry').innerText = nverfCarry.toFixed(1);
+        document.getElementById('calc-nverf').innerText = nverf.toFixed(1);
+
+        // Saldo = Zufuhr - Abfuhr
+        let saldo = nZufuhr - nAbfuhr;
+        let effizienz = nZufuhr > 0 ? (nAbfuhr / nZufuhr) * 100 : 0;
+
+        document.getElementById('res-abfuhr').innerText = nAbfuhr.toFixed(1);
+        document.getElementById('res-zufuhr').innerText = nZufuhr.toFixed(1);
+        
+        // Saldo formatieren (Farbe und Vorzeichen)
+        let saldoElement = document.getElementById('res-saldo');
+        if (saldo >= 0) {
+            saldoElement.innerText = '+' + saldo.toFixed(1) + ' kg N/ha';
+            saldoElement.className = 'saldo-plus';
+        } else {
+            saldoElement.innerText = saldo.toFixed(1) + ' kg N/ha';
+            saldoElement.className = 'saldo-minus';
+        }
+
+        document.getElementById('res-eff').innerText = effizienz.toFixed(1) + ' %';
+
+        // --- Feedback Logik ---
+        let feedback = "";
+        
+        if (saldo < -10) {
+            feedback = "⚠️ <strong>Negative Bilanz (Auszehrung):</strong> Du erntest deutlich mehr Stickstoff, als du dem Feld zurückgibst. Der Boden wird langfristig abgebaut. Lösung: Kleeanteil erhöhen, mehr düngen oder Erwartungen an den Ertrag senken.";
+        } else if (saldo >= -10 && saldo <= 15) {
+            feedback = "✅ <strong>Ausgeglichene Bilanz:</strong> Optimaler Bereich. Zufuhr und Abfuhr halten sich die Waage. Die Bodenfruchtbarkeit bleibt erhalten (Idealzustand auch für Bio-Betriebe).";
+        } else {
+            feedback = "💡 <strong>Positive Bilanz (Überschuss):</strong> Es wird mehr Stickstoff zugeführt als die Pflanzen entziehen. Das bietet Potenzial für Humusaufbau, erhöht aber das Risiko von Nährstoffverlusten (Auswaschung). Lösung: Mineraldünger reduzieren oder Gülle auf anderen Parzellen einsetzen.";
+        }
+
+        if (m3_tatsaechlich < m3_eigen - 5) {
+            feedback += "<br><br><em>Info: Es wird weniger Gülle ausgebracht als die theoretischen Kühe produzieren (Futter- oder Gülle-Export).</em>";
+        } else if (m3_tatsaechlich > m3_eigen + 5) {
+            feedback += "<br><br><em>Info: Es wird mehr Gülle ausgebracht als eigene Tiere produzieren (Gülle-Zukauf).</em>";
+        }
+
+        document.getElementById('feedback-text').innerHTML = feedback;
+    }
+
+    initTooltips();
+    calculate(false);
+</script>
+
+</body>
+</html>

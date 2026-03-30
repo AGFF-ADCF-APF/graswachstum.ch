@@ -276,3 +276,8 @@ types:
     thumb: null
     mime: text/csv
     image: null
+  kml:
+    type: file
+    thumb: null
+    mime: text/kml
+    image: null

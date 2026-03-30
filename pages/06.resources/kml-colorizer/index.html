@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>KML Editor - Pro</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        :root { --sidebar-bg: #2c3e50; --card-bg: #34495e; }
+        body { margin: 0; font-family: sans-serif; display: flex; height: 100vh; background: #eee; }
+        #sidebar { width: 380px; background: var(--sidebar-bg); color: white; padding: 20px; overflow-y: auto; z-index: 1000; box-shadow: 4px 0 10px rgba(0,0,0,0.2); }
+        #map { flex-grow: 1; }
+        
+        /* Upload Feld */
+        #upload-area { 
+            border: 2px dashed #7f8c8d; padding: 30px 10px; text-align: center; 
+            border-radius: 8px; cursor: pointer; transition: 0.3s; margin-bottom: 20px;
+        }
+        #upload-area:hover { border-color: #3498db; background: rgba(52, 152, 219, 0.1); }
+        #file-input { display: none; }
+
+        .layer-card { background: var(--card-bg); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 6px solid #95a5a6; }
+        .palette-btn { width: 28px; height: 28px; border: 2px solid #fff; cursor: pointer; display: inline-block; margin: 3px; border-radius: 4px; }
+        .download-btn { 
+            background: #27ae60; color: white; border: none; padding: 10px; 
+            border-radius: 4px; cursor: pointer; margin-top: 12px; width: 100%; font-weight: bold; 
+        }
+        .download-btn:hover { background: #2ecc71; }
+        .download-all-btn {
+            background: #1f6feb; color: white; border: none; padding: 10px;
+            border-radius: 4px; cursor: pointer; margin-top: 12px; width: 100%; font-weight: bold;
+        }
+        .download-all-btn:hover { background: #388bfd; }
+        .palette-label { font-size: 11px; text-transform: uppercase; color: #bdc3c7; display: block; margin-top: 8px; }
+        .opacity-wrap { margin-top: 10px; }
+        .opacity-wrap label { font-size: 12px; color: #ecf0f1; display: block; margin-bottom: 4px; }
+        .opacity-wrap input[type="range"] { width: 100%; }
+        h3 { margin: 0 0 10px 0; font-size: 14px; word-break: break-all; }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <h2>KML Manager</h2>
+    
+    <div id="upload-area" onclick="document.getElementById('file-input').click()">
+        <strong>Datei hierher ziehen</strong><br>oder klicken zum Auswählen
+        <input type="file" id="file-input" multiple accept=".kml">
+    </div>
+
+    <div id="layer-list"></div>
+    <button id="download-all-btn" class="download-all-btn" style="display:none;" onclick="exportAllKML()">Alle als eine KML herunterladen</button>
+</div>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-omnivore@0.3.4/leaflet-omnivore.min.js"></script>
+
+<script>
+    const map = L.map('map').setView([46.8, 8.2], 8);
+    L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: 'OSM' }).addTo(map);
+
+    const fileInput = document.getElementById('file-input');
+    const uploadArea = document.getElementById('upload-area');
+    const layerList = document.getElementById('layer-list');
+    const downloadAllBtn = document.getElementById('download-all-btn');
+    const loadedLayers = [];
+
+    const palettes = {
+        "Standard": ["#FFFF00", "#FF0000", "#0000FF"],
+        "Barrierefrei (Okabe-Ito)": ["#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7"]
+    };
+
+    const config = { pointDeltaDeg: 0.0001, lineAlpha: "33", defaultFillOpacity: 0.25 }; // Punkte-Ausduennung nach Grad-Differenz, 20% Linie, Fill dynamisch
+
+    // Drag & Drop
+    uploadArea.addEventListener('dragover', e => { e.preventDefault(); });
+    uploadArea.addEventListener('drop', e => {
+        e.preventDefault();
+        handleFiles(e.dataTransfer.files);
+    });
+    fileInput.addEventListener('change', e => handleFiles(e.target.files));
+
+    function handleFiles(files) {
+        Array.from(files).forEach(file => {
+            if (file.name.toLowerCase().endsWith('.kml')) {
+                const reader = new FileReader();
+                reader.onload = (e) => processKML(e.target.result, file.name);
+                reader.readAsText(file);
+            }
+        });
+    }
+
+    function processKML(kmlText, fileName) {
+        try {
+            const runLayer = omnivore.kml.parse(kmlText);
+
+            if (!runLayer || runLayer.getLayers().length === 0) {
+                console.error('Keine Geometrie aus KML gelesen:', fileName);
+                return;
+            }
+
+            let initialColor = "#cccccc";
+            const lowerName = fileName.toLowerCase();
+            if(lowerName.includes("mosaik")) initialColor = "#FFFF00";
+            else if(lowerName.includes("trocken")) initialColor = "#FF0000";
+            else if(lowerName.includes("feucht")) initialColor = "#0000FF";
+
+            applyStyleAndSimplify(runLayer, initialColor);
+            addLayerToUI(fileName, runLayer, initialColor);
+            runLayer.addTo(map);
+            const bounds = runLayer.getBounds();
+            if (bounds && bounds.isValid()) {
+                map.fitBounds(bounds);
+            }
+        } catch (err) {
+            console.error('KML konnte nicht geladen werden:', fileName, err);
+        }
+    }
+
+    function applyStyleAndSimplify(layerGroup, color, fillOpacity = config.defaultFillOpacity) {
+        layerGroup.eachLayer(layer => {
+            if (layer.getLatLngs && !layer.options.__isSimplified) {
+                const isLeafRing = (pts) => Array.isArray(pts) && pts.length > 0 && pts[0] && typeof pts[0].lat === 'number';
+                const isClosedRing = (pts) => pts.length > 2 && pts[0].equals && pts[0].equals(pts[pts.length - 1]);
+
+                const thinLeafPoints = (pts, isClosed) => {
+                    if (!Array.isArray(pts) || pts.length === 0) return pts;
+                    if (pts.length <= (isClosed ? 4 : 2)) return pts;
+
+                    const out = [pts[0]];
+                    let lastKept = pts[0];
+
+                    // Bei geschlossenen Ringen den letzten Punkt (Schluss-Punkt) separat behandeln.
+                    const endIndex = isClosed ? pts.length - 1 : pts.length;
+                    for (let i = 1; i < endIndex; i++) {
+                        const p = pts[i];
+                        const dLat = Math.abs(p.lat - lastKept.lat);
+                        const dLng = Math.abs(p.lng - lastKept.lng);
+                        if (dLat > config.pointDeltaDeg || dLng > config.pointDeltaDeg) {
+                            out.push(p);
+                            lastKept = p;
+                        }
+                    }
+
+                    if (!isClosed) {
+                        out.push(pts[pts.length - 1]);
+                        return out.length >= 2 ? out : pts;
+                    }
+
+                    // Ring wieder schliessen und Mindestanzahl sicherstellen.
+                    out.push(out[0]);
+                    return out.length >= 4 ? out : pts;
+                };
+
+                const thinCoords = (pts) => {
+                    if (!Array.isArray(pts) || pts.length === 0) return pts;
+
+                    if (!isLeafRing(pts)) {
+                        return pts.map(thinCoords);
+                    }
+
+                    return thinLeafPoints(pts, isClosedRing(pts));
+                };
+
+                layer.setLatLngs(thinCoords(layer.getLatLngs()));
+                layer.options.__isSimplified = true;
+            }
+            layer.setStyle({
+                color: color, weight: 2, opacity: 0.2,
+                fillColor: color, fillOpacity: fillOpacity
+            });
+            layer.options.customColor = color; // Merken für Export
+            layer.options.customFillOpacity = fillOpacity; // Merken für Export
+        });
+    }
+
+    function addLayerToUI(name, layerGroup, color) {
+        const id = "L" + Math.random().toString(36).substr(2, 9);
+        const initialTransparencyPercent = Math.round((1 - config.defaultFillOpacity) * 100);
+        const card = document.createElement('div');
+        card.className = 'layer-card';
+        card.id = id;
+        card.style.borderLeftColor = color;
+
+        let btns = '';
+        Object.entries(palettes).forEach(([pName, colors]) => {
+            btns += `<span class="palette-label">${pName}</span>`;
+            colors.forEach(c => {
+                btns += `<div class="palette-btn" style="background:${c}" onclick="updateColor('${id}', '${c}')"></div>`;
+            });
+        });
+
+        card.innerHTML = `<h3>${name}</h3>${btns}
+            <div class="opacity-wrap">
+                <label>Fill-Transparenz: <span id="${id}-opacity-label">${initialTransparencyPercent}%</span></label>
+                <input type="range" min="0" max="100" value="${initialTransparencyPercent}" oninput="updateFillOpacity('${id}', this.value)">
+            </div>
+            <button class="download-btn" onclick="exportKML('${id}', '${name}')">💾 KML herunterladen</button>`;
+        
+        layerList.appendChild(card);
+        window[id] = layerGroup;
+        loadedLayers.push({ id, name });
+        downloadAllBtn.style.display = 'block';
+    }
+
+    window.updateColor = (id, color) => {
+        const lg = window[id];
+        const firstLayer = lg.getLayers()[0];
+        const currentFillOpacity = firstLayer?.options?.customFillOpacity ?? config.defaultFillOpacity;
+        applyStyleAndSimplify(lg, color, currentFillOpacity);
+        document.getElementById(id).style.borderLeftColor = color;
+    };
+
+    window.updateFillOpacity = (id, percent) => {
+        const lg = window[id];
+        const firstLayer = lg.getLayers()[0];
+        const currentColor = firstLayer?.options?.customColor || "#cccccc";
+        const transparency = Math.max(0, Math.min(1, Number(percent) / 100));
+        const fillOpacity = 1 - transparency;
+        applyStyleAndSimplify(lg, currentColor, fillOpacity);
+        document.getElementById(`${id}-opacity-label`).textContent = `${Math.round(transparency * 100)}%`;
+    };
+
+    // Hilfsfunktion: Wandelt Hex (#RRGGBB) in KML Color (AABBGGRR) um
+    function hexToKmlColor(hex, alphaHex) {
+        const r = hex.substring(1,3);
+        const g = hex.substring(3,5);
+        const b = hex.substring(5,7);
+        return alphaHex + b + g + r;
+    }
+
+    function opacityToAlphaHex(opacity) {
+        const clamped = Math.max(0, Math.min(1, opacity));
+        const alpha = Math.round(clamped * 255).toString(16).padStart(2, '0');
+        return alpha.toUpperCase();
+    }
+
+    function coordinatesToKmlString(coords) {
+        return coords.map(pt => `${pt[0]},${pt[1]}${pt[2] != null ? `,${pt[2]}` : ''}`).join(' ');
+    }
+
+    function polygonToKml(coords) {
+        if (!Array.isArray(coords) || coords.length === 0) return '';
+        let kml = '<Polygon>';
+        const outerRing = coords[0];
+        kml += `<outerBoundaryIs><LinearRing><coordinates>${coordinatesToKmlString(outerRing)}</coordinates></LinearRing></outerBoundaryIs>`;
+
+        for (let i = 1; i < coords.length; i++) {
+            const innerRing = coords[i];
+            kml += `<innerBoundaryIs><LinearRing><coordinates>${coordinatesToKmlString(innerRing)}</coordinates></LinearRing></innerBoundaryIs>`;
+        }
+
+        kml += '</Polygon>';
+        return kml;
+    }
+
+    function geometryToKml(geo) {
+        if (!geo) return '';
+        if (geo.type === "Polygon") {
+            return polygonToKml(geo.coordinates);
+        }
+        if (geo.type === "MultiPolygon") {
+            let kml = '<MultiGeometry>';
+            geo.coordinates.forEach(polyCoords => {
+                kml += polygonToKml(polyCoords);
+            });
+            kml += '</MultiGeometry>';
+            return kml;
+        }
+        return '';
+    }
+
+    function escapeXml(value) {
+        return String(value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&apos;');
+    }
+
+    window.exportKML = (id, originalName) => {
+        const lg = window[id];
+        const firstLayer = lg.getLayers()[0];
+        const color = firstLayer.options.customColor;
+        const fillOpacity = firstLayer.options.customFillOpacity ?? config.defaultFillOpacity;
+        
+        const lineKmlColor = hexToKmlColor(color, config.lineAlpha);
+        const polyKmlColor = hexToKmlColor(color, opacityToAlphaHex(fillOpacity));
+
+        // Minimaler KML Builder um Styles zu erhalten
+        let kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="customStyle">
+      <LineStyle><color>${lineKmlColor}</color><width>2</width></LineStyle>
+      <PolyStyle><color>${polyKmlColor}</color></PolyStyle>
+    </Style>`;
+
+        lg.eachLayer(layer => {
+            const geo = layer.toGeoJSON().geometry;
+            const geoKml = geometryToKml(geo);
+            if (geoKml) {
+                kml += `<Placemark><styleUrl>#customStyle</styleUrl>${geoKml}</Placemark>`;
+            }
+        });
+
+        kml += `</Document></kml>`;
+
+        const blob = new Blob([kml], {type: 'application/vnd.google-earth.kml+xml'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `neu_${originalName}`;
+        a.click();
+    };
+
+    window.exportAllKML = () => {
+        if (loadedLayers.length === 0) return;
+
+        let kml = `<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>`;
+
+        loadedLayers.forEach((entry, index) => {
+            const lg = window[entry.id];
+            if (!lg || lg.getLayers().length === 0) return;
+
+            const firstLayer = lg.getLayers()[0];
+            const color = firstLayer.options.customColor || "#cccccc";
+            const fillOpacity = firstLayer.options.customFillOpacity ?? config.defaultFillOpacity;
+            const styleId = `style_${index}`;
+            const lineKmlColor = hexToKmlColor(color, config.lineAlpha);
+            const polyKmlColor = hexToKmlColor(color, opacityToAlphaHex(fillOpacity));
+
+            kml += `
+    <Style id="${styleId}">
+      <LineStyle><color>${lineKmlColor}</color><width>2</width></LineStyle>
+      <PolyStyle><color>${polyKmlColor}</color></PolyStyle>
+    </Style>`;
+
+            lg.eachLayer(layer => {
+                const geoKml = geometryToKml(layer.toGeoJSON().geometry);
+                if (geoKml) {
+                    kml += `<Placemark><name>${escapeXml(entry.name)}</name><styleUrl>#${styleId}</styleUrl>${geoKml}</Placemark>`;
+                }
+            });
+        });
+
+        kml += `
+  </Document>
+</kml>`;
+
+        const blob = new Blob([kml], {type: 'application/vnd.google-earth.kml+xml'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'alle_layer.kml';
+        a.click();
+    };
+</script>
+</body>
+</html>

@@ -279,5 +279,5 @@ types:
   kml:
     type: file
     thumb: null
-    mime: text/kml
+    mime: application/vnd.google-earth.kml+xml
     image: null

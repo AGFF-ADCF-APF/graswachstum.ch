@@ -44,5 +44,15 @@
             "type": "page",
             "action": "create"
         }
+    ],
+    "\/config\/media.yaml": [
+        {
+            "id": "d8877a2be66c98b4fcd729fee29bc29e",
+            "file": "user\/config\/media.yaml.20260331-095043.rev",
+            "timestamp": 1774943443,
+            "user": "martinz",
+            "type": "unknown",
+            "action": "update"
+        }
     ]
 }

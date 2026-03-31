@@ -284,5 +284,5 @@ types:
   kmz:
     type: file
     thumb: null
-    mime: application/vnd.google-earth.kmz
+    mime: null
     image: null

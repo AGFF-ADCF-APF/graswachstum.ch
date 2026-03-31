@@ -281,3 +281,8 @@ types:
     thumb: null
     mime: application/vnd.google-earth.kml+xml
     image: null
+  kmz:
+    type: file
+    thumb: null
+    mime: application/vnd.google-earth.kmz
+    image: null

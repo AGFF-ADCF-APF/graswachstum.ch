@@ -1,0 +1,39 @@
+{
+  "nutzungsflaechen": {
+    "strokeColor": "#66CCFF",
+    "defaultFillOpacity": 0.45,
+    "fallbackFill": "#D3D3D3",
+    "fillByCode": {
+      "611": "#99FF99",
+      "613": "#99FF99",
+      "616": "#CCFF66",
+      "617": "#CCFF66",
+      "705": "#CCCC00",
+      "852": "#996600",
+      "902": "#CCCC99",
+      "921": "#FFCC66"
+    },
+    "fillByLabelContains": {
+      "acker": "#FFCC66",
+      "dauerwiese": "#99FF99",
+      "prairie": "#99FF99",
+      "dauerweide": "#CCFF66",
+      "weiden": "#CCFF66",
+      "paturage": "#CCFF66",
+      "reben": "#FF66CC",
+      "obst": "#FF6633",
+      "beeren": "#CCCC00",
+      "dauerkultur": "#CCCC00",
+      "geschutzter anbau": "#669999",
+      "streue": "#33CCFF",
+      "hecken": "#996600",
+      "ufergeholze": "#996600",
+      "ufergeh": "#996600",
+      "sommerungsflache": "#FFFF99",
+      "vegetation nicht ln": "#CCCC99",
+      "unproduktiv": "#CCCC99",
+      "wald": "#336633",
+      "ubrige flache innerhalb der ln": "#999999"
+    }
+  }
+}

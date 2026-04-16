@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGFF Futter-Analyse-Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Plotly.js (eine leistungsstarke Visualisierungs-Bibliothek) -->
+    <!-- Aktualisierte Version (v2+), um die Warnung zu beheben -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // Firebase-Kern-SDKs
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        
+        // Firestore-SDKs (jetzt mit Schreib-/Löschfunktionen)
+        import { 
+            getFirestore, 
+            collection, 
+            getDocs, 
+            query, 
+            where, 
+            doc, 
+            deleteDoc, 
+            updateDoc, 
+            writeBatch,
+            Timestamp 
+        } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // --- KONSTANTEN ---
+        // Passwort für den Admin-Bereich (kann hier geändert werden)
+        const ADMIN_PASSWORT = "agff-admin-2025";
+        
+        // Farben für die Futterarten (Silage, Grünfutter, Dürrfutter)
+        const FUTTERART_FARBEN = {
+            'Silage': 'rgba(0, 120, 186, 1)', // Blau
+            'Grünfutter': 'rgba(0, 158, 115, 1)', // Grün
+            'Dürrfutter': 'rgba(230, 159, 0, 1)' // Orange
+        };
+        const STANDARD_FARBE = 'rgba(128, 128, 128, 1)'; // Grau
+
+        // --- GLOBALE VARIABLEN ---
+        let db, auth;
+        let alleProben = []; // Lokaler Cache für alle geladenen Proben
+
+        // --- INITIALISIERUNG ---
+        document.addEventListener('DOMContentLoaded', async () => {
+            showLoading(true, "Initialisiere App...");
+            try {
+                // 1. Firebase verbinden
+                await initializeFirebase();
+                
+                // 2. Event-Listener für Filter und Admin-Bereich einrichten
+                setupEventListeners();
+                
+                // 3. Daten laden (passiert jetzt *innerhalb* von initializeFirebase, nach dem Login)
+                // Das Laden und erste Zeichnen wird von loadFirebaseData() übernommen
+                
+            } catch (error) {
+                console.error("Initialisierungsfehler:", error);
+                showLoading(false, `Initialisierungsfehler: ${error.message}`, true);
+                // Verhindern, dass die Filter bei einem Fehler angezeigt werden
+                document.getElementById('filter-wrapper').classList.add('hidden');
+            }
+        });
+
+        /**
+         * Initialisiert die Firebase-App und meldet sich anonym an.
+         * Lädt anschließend die Daten.
+         */
+        async function initializeFirebase() {
+            try {
+                // 1. Fügen Sie hier Ihr firebaseConfig-Objekt von Firebase ein:
+                const firebaseConfig = {
+                  apiKey: "AIzaSyBvPcqBRCVrCBy2GIdi1vN92IC49iGb0Ks",
+                  authDomain: "agff-apps.firebaseapp.com",
+                  projectId: "agff-apps",
+                  storageBucket: "agff-apps.firebasestorage.app",
+                  messagingSenderId: "963390091539",
+                  appId: "1:963390091539:web:eff9117033c24eda21eae6"
+                };
+
+                // KORREKTUR: Wir verwenden dieselbe Logik wie die Erfassungs-App,
+                // um die 'appId' zu bestimmen, damit die Pfade übereinstimmen.
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+
+                if (!firebaseConfig.apiKey) {
+                    throw new Error("Firebase-Konfiguration (apiKey) fehlt.");
+                }
+
+                const app = initializeApp(firebaseConfig);
+                auth = getAuth(app);
+                db = getFirestore(app);
+
+                // KORREKTUR: Wir melden uns nur noch 'anonymously' an.
+                // Das 'custom-token-mismatch' passierte, weil das Canvas-Token
+                // nicht für das 'agff-apps'-Projekt gültig ist.
+                await signInAnonymously(auth);
+                console.log("Firebase Auth & Firestore initialisiert. User ID:", auth.currentUser?.uid);
+                
+                // 4. Daten laden (NACH erfolgreichem Login)
+                await loadFirebaseData(appId);
+
+            } catch (error) {
+                console.error("Firebase Initialisierungsfehler:", error);
+                // Wir werfen den Fehler weiter, damit die .catch-Block in DOMContentLoaded ihn fängt
+                throw new Error(`Firebase konnte nicht initialisiert werden: ${error.message}`);
+            }
+        }
+
+        /**
+         * Richtet alle Event-Listener für die Filter-Dropdowns ein.
+         */
+        function setupEventListeners() {
+            const filterIds = [
+                'filter-metrik', 
+                'filter-gruppe', 
+                'filter-aufwuchs', 
+                'filter-konservierung', 
+                'filter-bestand'
+            ];
+            
+            // 1. Filter-Listener (Dropdowns)
+            filterIds.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.addEventListener('change', updateChart);
+                } else {
+                    console.warn(`Filter-Element mit ID '${id}' nicht gefunden.`);
+                }
+            });
+            
+            // 2. NEU: Filter-Listener (Textfeld Präfix)
+            // 'input' reagiert auf jede Tasten-Eingabe
+            const prefixFilter = document.getElementById('filter-prefix');
+            if (prefixFilter) {
+                prefixFilter.addEventListener('input', updateChart);
+            }
+            
+            // 3. Listener für Admin-Freischaltung
+            const unlockButton = document.getElementById('admin-unlock-btn');
+            if(unlockButton) {
+                unlockButton.addEventListener('click', handleAdminUnlock);
+            }
+        }
+        
+        /**
+         * Prüft das Admin-Passwort und schaltet den Admin-Bereich frei.
+         * Initialisiert die Admin-Event-Listener ERST NACH erfolgreicher Freischaltung.
+         */
+        function handleAdminUnlock() {
+            const passInput = document.getElementById('admin-passwort');
+            const statusEl = document.getElementById('admin-unlock-status');
+            
+            if (passInput.value === ADMIN_PASSWORT) {
+                // Erfolg
+                document.getElementById('admin-unlock-wrapper').classList.add('hidden');
+                document.getElementById('admin-wrapper').classList.remove('hidden');
+                statusEl.textContent = "";
+                
+                // JETZT ERST die Event-Listener für die Admin-Knöpfe einrichten
+                const btnDelete = document.getElementById('btn-delete-probe');
+                btnDelete.addEventListener('click', handleDeleteProbe);
+                // Doppelklick-Logik als einfacher Schutz
+                btnDelete.dataset.clicks = 0; 
+
+                document.getElementById('btn-add-prefix').addEventListener('click', handleAddPrefix);
+                document.getElementById('btn-remove-prefix').addEventListener('click', handleRemovePrefix);
+                // NEU: Listener für "Präfix austauschen"
+                document.getElementById('btn-swap-prefix').addEventListener('click', handleSwapPrefix);
+                
+                // Listener für Admin-Akkordeon
+                document.getElementById('admin-accordion-toggle').addEventListener('click', () => {
+                    document.getElementById('admin-accordion-content').classList.toggle('hidden');
+                    document.getElementById('admin-accordion-icon').classList.toggle('rotate-180');
+                });
+
+            } else {
+                // Fehler
+                statusEl.textContent = "Falsches Passwort.";
+                passInput.value = "";
+            }
+        }
+
+        /**
+         * Lädt alle Proben aus der Firestore-Datenbank.
+         */
+        async function loadFirebaseData(appId) {
+            showLoading(true, "Lade Proben aus Datenbank...");
+            
+            // Pfad muss exakt dem Pfad in der Erfassungs-App entsprechen
+            const collectionPath = `artifacts/${appId}/public/data/futterproben`;
+            console.log(`Lese von Pfad: ${collectionPath}`);
+
+            const querySnapshot = await getDocs(collection(db, collectionPath));
+            
+            if (querySnapshot.empty) {
+                console.warn("Keine Proben in der Datenbank gefunden.");
+            } else {
+                 querySnapshot.forEach((doc) => {
+                    // WICHTIG: Wir speichern die 'doc.id' für Lösch/Update-Aktionen
+                    alleProben.push({
+                        id: doc.id, 
+                        ...doc.data()
+                    });
+                });
+                console.log(`Erfolgreich ${alleProben.length} Proben geladen.`);
+            }
+            
+            // updateChart() wird aufgerufen (kann mit leerem Array umgehen)
+            updateChart();
+            showLoading(false);
+        }
+        
+        // --- ADMIN-FUNKTIONEN (LÖSCHEN / ÄNDERN) ---
+
+        /**
+         * Löscht alle Proben, die exakt der eingegebenen Proben-Nr. entsprechen.
+         */
+        async function handleDeleteProbe() {
+            const button = document.getElementById('btn-delete-probe');
+            const probeNrInput = document.getElementById('admin-delete-probe-nr');
+            const probeNr = probeNrInput.value.trim();
+            const statusEl = document.getElementById('admin-status');
+
+            if (!probeNr) {
+                statusEl.textContent = "Bitte Proben-Nr. eingeben.";
+                statusEl.className = "text-xs text-red-600";
+                return;
+            }
+
+            // Doppelklick-Schutz
+            let clicks = parseInt(button.dataset.clicks || 0) + 1;
+            button.dataset.clicks = clicks;
+
+            if (clicks !== 2) {
+                statusEl.textContent = `Sicher? '${probeNr}' löschen? Nochmal klicken.`;
+                statusEl.className = "text-xs text-yellow-700";
+                button.classList.add('bg-yellow-500', 'hover:bg-yellow-600');
+                button.classList.remove('bg-red-600', 'hover:bg-red-700');
+                // Timer, um Klick zurückzusetzen
+                setTimeout(() => {
+                    button.dataset.clicks = 0;
+                    statusEl.textContent = "";
+                    button.classList.remove('bg-yellow-500', 'hover:bg-yellow-600');
+                    button.classList.add('bg-red-600', 'hover:bg-red-700');
+                }, 3000);
+                return;
+            }
+
+            // Klick 2: Aktion ausführen
+            statusEl.textContent = "Lösche...";
+            statusEl.className = "text-xs text-gray-600";
+
+            try {
+                // 1. Finde alle Proben im lokalen Cache
+                const probenZuLoeschen = alleProben.filter(p => p.probeNr === probeNr);
+                if (probenZuLoeschen.length === 0) {
+                    throw new Error("Keine Proben mit dieser Nr. gefunden.");
+                }
+
+                // 2. Firebase Batch-Löschung vorbereiten
+                const batch = writeBatch(db);
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+                probenZuLoeschen.forEach(probe => {
+                    const docRef = doc(db, `artifacts/${appId}/public/data/futterproben`, probe.id);
+                    batch.delete(docRef);
+                });
+
+                // 3. Batch ausführen
+                await batch.commit();
+
+                // 4. Lokalen Cache aktualisieren
+                alleProben = alleProben.filter(p => p.probeNr !== probeNr);
+
+                // 5. UI aktualisieren
+                updateChart(); // Zeichnet das Diagramm neu
+                statusEl.textContent = `Erfolgreich ${probenZuLoeschen.length} Probe(n) gelöscht.`;
+                statusEl.className = "text-xs text-green-600";
+                probeNrInput.value = "";
+                
+            } catch (error) {
+                console.error("Fehler beim Löschen:", error);
+                statusEl.textContent = `Fehler: ${error.message}`;
+                statusEl.className = "text-xs text-red-600";
+            } finally {
+                // Button-Status zurücksetzen
+                button.dataset.clicks = 0;
+                button.classList.remove('bg-yellow-500', 'hover:bg-yellow-600');
+                button.classList.add('bg-red-600', 'hover:bg-red-700');
+            }
+        }
+
+        /**
+         * Fügt allen Proben-Nummern, die nicht bereits damit beginnen, ein Präfix hinzu.
+         * Berücksichtigt optional einen Datumsbereich.
+         */
+        async function handleAddPrefix() {
+            const prefixInput = document.getElementById('admin-add-prefix');
+            const prefix = prefixInput.value.trim();
+            const statusEl = document.getElementById('admin-status');
+            
+            const startDateString = document.getElementById('admin-add-prefix-start').value;
+            const endDateString = document.getElementById('admin-add-prefix-end').value;
+
+            let startDate = null;
+            let endDate = null;
+
+            if (startDateString) {
+                startDate = new Date(startDateString + "T00:00:00");
+            }
+            if (endDateString) {
+                endDate = new Date(endDateString + "T23:59:59");
+            }
+
+            if (!prefix) {
+                statusEl.textContent = "Bitte Präfix eingeben.";
+                statusEl.className = "text-xs text-red-600";
+                return;
+            }
+
+            statusEl.textContent = "Suche Proben zum Aktualisieren...";
+            statusEl.className = "text-xs text-gray-600";
+
+            try {
+                // 1. Finde alle Proben im lokalen Cache, die aktualisiert werden müssen
+                const probenZuAendern = alleProben.filter(p => {
+                    const prefixMatch = !p.probeNr.startsWith(prefix);
+                    if (!prefixMatch) return false;
+                    
+                    let dateMatch = true; 
+                    if (startDate || endDate) {
+                        // Prüfen, ob erstelltAm ein Firebase Timestamp-Objekt ist
+                        if (p.erstelltAm && typeof p.erstelltAm.toDate === 'function') {
+                            const probeDate = p.erstelltAm.toDate(); 
+                            if (startDate && probeDate < startDate) {
+                                dateMatch = false; 
+                            }
+                            if (endDate && probeDate > endDate) {
+                                dateMatch = false; 
+                            }
+                        } else {
+                            // Wenn kein gültiges Datum vorhanden ist, nicht abgleichen
+                            dateMatch = false; 
+                        }
+                    }
+                    return dateMatch; 
+                });
+
+                if (probenZuAendern.length === 0) {
+                    throw new Error("Keine Proben gefunden, die den Kriterien entsprechen.");
+                }
+
+                // 2. Firebase Batch-Update vorbereiten
+                const batch = writeBatch(db);
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+                probenZuAendern.forEach(probe => {
+                    const docRef = doc(db, `artifacts/${appId}/public/data/futterproben`, probe.id);
+                    batch.update(docRef, {
+                        probeNr: `${prefix}${probe.probeNr}`
+                    });
+                });
+
+                // 3. Batch ausführen
+                await batch.commit();
+
+                // 4. Lokalen Cache aktualisieren (WICHTIG: dieselbe Logik wie oben)
+                alleProben.forEach(probe => {
+                    const prefixMatch = !probe.probeNr.startsWith(prefix);
+                    let dateMatch = true;
+                    if (startDate || endDate) {
+                        if (probe.erstelltAm && typeof probe.erstelltAm.toDate === 'function') {
+                            const probeDate = probe.erstelltAm.toDate();
+                            if (startDate && probeDate < startDate) dateMatch = false;
+                            if (endDate && probeDate > endDate) dateMatch = false;
+                        } else {
+                            dateMatch = false;
+                        }
+                    }
+                    if (prefixMatch && dateMatch) {
+                        probe.probeNr = `${prefix}${probe.probeNr}`;
+                    }
+                });
+
+
+                // 5. UI aktualisieren
+                updateChart(); 
+                statusEl.textContent = `Erfolgreich ${probenZuAendern.length} Probe(n) aktualisiert.`;
+                statusEl.className = "text-xs text-green-600";
+                prefixInput.value = "";
+                document.getElementById('admin-add-prefix-start').value = "";
+                document.getElementById('admin-add-prefix-end').value = "";
+
+            } catch (error) {
+                console.error("Fehler beim Hinzufügen des Präfix:", error);
+                statusEl.textContent = `Fehler: ${error.message}`;
+                statusEl.className = "text-xs text-red-600";
+            }
+        }
+        
+        /**
+         * Entfernt ein Präfix von allen Proben-Nummern, die damit beginnen.
+         */
+        async function handleRemovePrefix() {
+            const prefixInput = document.getElementById('admin-remove-prefix');
+            const prefix = prefixInput.value.trim();
+            const statusEl = document.getElementById('admin-status');
+
+            if (!prefix) {
+                statusEl.textContent = "Bitte Präfix eingeben.";
+                statusEl.className = "text-xs text-red-600";
+                return;
+            }
+
+            statusEl.textContent = "Suche Proben zum Aktualisieren...";
+            statusEl.className = "text-xs text-gray-600";
+            
+            try {
+                // 1. Finde alle Proben im lokalen Cache, die aktualisiert werden müssen
+                const probenZuAendern = alleProben.filter(p => p.probeNr.startsWith(prefix));
+
+                if (probenZuAendern.length === 0) {
+                    throw new Error("Keine Proben gefunden, die mit diesem Präfix beginnen.");
+                }
+
+                // 2. Firebase Batch-Update vorbereiten
+                const batch = writeBatch(db);
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+                probenZuAendern.forEach(probe => {
+                    const docRef = doc(db, `artifacts/${appId}/public/data/futterproben`, probe.id);
+                    batch.update(docRef, {
+                        probeNr: probe.probeNr.substring(prefix.length) // Entfernt das Präfix
+                    });
+                });
+
+                // 3. Batch ausführen
+                await batch.commit();
+
+                // 4. Lokalen Cache aktualisieren
+                alleProben.forEach(probe => {
+                    if (probe.probeNr.startsWith(prefix)) {
+                        probe.probeNr = probe.probeNr.substring(prefix.length);
+                    }
+                });
+
+                // 5. UI aktualisieren
+                updateChart(); 
+                statusEl.textContent = `Erfolgreich ${probenZuAendern.length} Probe(n) aktualisiert.`;
+                statusEl.className = "text-xs text-green-600";
+                prefixInput.value = "";
+
+            } catch (error) {
+                console.error("Fehler beim Entfernen des Präfix:", error);
+                statusEl.textContent = `Fehler: ${error.message}`;
+                statusEl.className = "text-xs text-red-600";
+            }
+        }
+        
+        /**
+         * NEU: Tauscht ein altes Präfix gegen ein neues aus.
+         */
+        async function handleSwapPrefix() {
+            const oldPrefixInput = document.getElementById('admin-swap-prefix-old');
+            const newPrefixInput = document.getElementById('admin-swap-prefix-new');
+            const oldPrefix = oldPrefixInput.value.trim();
+            const newPrefix = newPrefixInput.value.trim();
+            const statusEl = document.getElementById('admin-status');
+
+            if (oldPrefix === "" || newPrefix === "") {
+                statusEl.textContent = "Bitte altes und neues Präfix eingeben.";
+                statusEl.className = "text-xs text-red-600";
+                return;
+            }
+
+            statusEl.textContent = "Suche Proben zum Aktualisieren...";
+            statusEl.className = "text-xs text-gray-600";
+            
+            try {
+                // 1. Finde alle Proben im lokalen Cache, die aktualisiert werden müssen
+                const probenZuAendern = alleProben.filter(p => p.probeNr.startsWith(oldPrefix));
+
+                if (probenZuAendern.length === 0) {
+                    throw new Error("Keine Proben gefunden, die mit dem *alten* Präfix beginnen.");
+                }
+
+                // 2. Firebase Batch-Update vorbereiten
+                const batch = writeBatch(db);
+                const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-agff-app-public';
+                probenZuAendern.forEach(probe => {
+                    const docRef = doc(db, `artifacts/${appId}/public/data/futterproben`, probe.id);
+                    const restDerNummer = probe.probeNr.substring(oldPrefix.length);
+                    batch.update(docRef, {
+                        probeNr: `${newPrefix}${restDerNummer}` // Tauscht das Präfix aus
+                    });
+                });
+
+                // 3. Batch ausführen
+                await batch.commit();
+
+                // 4. Lokalen Cache aktualisieren
+                alleProben.forEach(probe => {
+                    if (probe.probeNr.startsWith(oldPrefix)) {
+                        const restDerNummer = probe.probeNr.substring(oldPrefix.length);
+                        probe.probeNr = `${newPrefix}${restDerNummer}`;
+                    }
+                });
+
+                // 5. UI aktualisieren
+                updateChart(); 
+                statusEl.textContent = `Erfolgreich ${probenZuAendern.length} Probe(n) aktualisiert.`;
+                statusEl.className = "text-xs text-green-600";
+                oldPrefixInput.value = "";
+                newPrefixInput.value = "";
+
+            } catch (error) {
+                console.error("Fehler beim Austauschen des Präfix:", error);
+                statusEl.textContent = `Fehler: ${error.message}`;
+                statusEl.className = "text-xs text-red-600";
+            }
+        }
+
+
+        // --- VISUALISIERUNG (PLOTLY) ---
+
+        /**
+         * Zeichnet das Plotly-Diagramm basierend auf den aktuellen Filtern
+         * und den globalen 'alleProben'-Daten.
+         */
+        function updateChart() {
+            const chartContainer = document.getElementById('chart-container');
+            
+            // 1. Prüfen, ob überhaupt Daten geladen wurden
+            if (!alleProben || alleProben.length === 0) {
+                chartContainer.innerHTML = `<div class="text-gray-500 text-center">Keine Daten zum Anzeigen gefunden.</div>`;
+                chartContainer.parentElement.classList.add('flex', 'items-center', 'justify-center');
+                Plotly.purge(chartContainer); 
+                return;
+            }
+
+            // 2. Aktuelle Filterwerte auslesen
+            const yAchseKey = document.getElementById('filter-metrik')?.value || 'mpp';
+            const xAchseKey = document.getElementById('filter-gruppe')?.value || 'probeNr';
+            const aufwuchsFilter = document.getElementById('filter-aufwuchs')?.value || 'alle';
+            const konservFilter = document.getElementById('filter-konservierung')?.value || 'alle';
+            const bestandFilter = document.getElementById('filter-bestand')?.value || 'alle';
+            // NEU: Präfix-Textfilter
+            const prefixFilterText = (document.getElementById('filter-prefix')?.value || '').trim();
+
+            // 3. Daten filtern
+            const gefilterteProben = alleProben.filter(probe => {
+                const aufwuchsMatch = (aufwuchsFilter === 'alle') || (probe.aufwuchs === aufwuchsFilter);
+                const konservMatch = (konservFilter === 'alle') || (probe.konservierung === konservFilter);
+                const bestandMatch = (bestandFilter === 'alle') || (probe.bestand === bestandFilter);
+                
+                // NEU: Präfix-Filter-Logik
+                const prefixMatch = (prefixFilterText === '') || (probe.probeNr && probe.probeNr.startsWith(prefixFilterText));
+                
+                // Prüfen, ob der Wert für die Y-Achse überhaupt existiert
+                const yValue = getValue(probe, yAchseKey);
+                const hasValue = (yValue !== undefined && yValue !== null && !isNaN(yValue));
+
+                return aufwuchsMatch && konservMatch && bestandMatch && prefixMatch && hasValue;
+            });
+
+            // 4. Prüfen, ob nach dem Filtern Daten übrig sind
+            if (gefilterteProben.length === 0) {
+                chartContainer.innerHTML = `<div class="text-gray-500 text-center">Keine Daten für die aktuellen Filter gefunden.</div>`;
+                chartContainer.parentElement.classList.add('flex', 'items-center', 'justify-center');
+                Plotly.purge(chartContainer);
+                return;
+            }
+            
+            // Layout-Styling für Zentrierung entfernen, wenn Daten vorhanden sind
+            chartContainer.parentElement.classList.remove('flex', 'items-center', 'justify-center');
+            chartContainer.innerHTML = ''; 
+            
+            // 5. Daten für Plotly aufbereiten (mit Farbgruppierung)
+            
+            // Finde die einzigartigen Futterarten in den gefilterten Daten
+            const konservierungTypen = [...new Set(gefilterteProben.map(p => p.konservierungLabel || 'Unbekannt'))];
+            
+            let dataTraces = [];
+
+            // Für jede Futterart einen eigenen "Trace" (Diagrammserie) erstellen
+            konservierungTypen.forEach(typ => {
+                // Nur die Proben dieser Futterart
+                const probenDieserArt = gefilterteProben.filter(p => (p.konservierungLabel || 'Unbekannt') === typ);
+                
+                // Basisfarbe für diese Futterart holen
+                const basisFarbe = FUTTERART_FARBEN[typ] || STANDARD_FARBE;
+                
+                // Farbe mit Transparenz für verblasste Elemente
+                const verblassteFarbe = basisFarbe.replace(', 1)', ', 0.2)'); 
+                
+                // Benutzerdefinierter Hover-Text (Tooltipp)
+                const customHoverText = probenDieserArt.map(p => {
+                    // Werte sicher abrufen und formatieren
+                    const mpp = getValue(p, 'mpp') !== undefined ? getValue(p, 'mpp').toFixed(1) : 'N/A';
+                    const nel = getValue(p, 'effektiveWerte.nel') !== undefined ? getValue(p, 'effektiveWerte.nel').toFixed(2) : 'N/A';
+                    const apde = getValue(p, 'effektiveWerte.apde') !== undefined ? getValue(p, 'effektiveWerte.apde').toFixed(0) : 'N/A';
+                    const apdn = getValue(p, 'effektiveWerte.apdn') !== undefined ? getValue(p, 'effektiveWerte.apdn').toFixed(0) : 'N/A';
+                    const yValue = getValue(p, yAchseKey); 
+                    
+                    return `<b>${p.probeNr} (${p.konservierungLabel || 'N/A'})</b><br>` +
+                           `<b>${yAchseKey.toUpperCase()}: ${yValue !== undefined ? yValue.toFixed(2) : 'N/A'}</b><br>` +
+                           `--------------------<br>` +
+                           `Aufwuchs: ${p.aufwuchsLabel || 'N/A'}<br>` +
+                           `Bestand: ${p.bestandLabel || 'N/A'}<br>` +
+                           `Stadium: ${p.stadiumLabel || 'N/A'}<br>` +
+                           `--------------------<br>` +
+                           `MPP: ${mpp} kg (lim. durch ${p.limitierenderFaktor || 'N/A'})<br>` +
+                           `NEL: ${nel} MJ/kg<br>` +
+                           `APDE: ${apde} g/kg<br>` +
+                           `APDN: ${apdn} g/kg<br>` +
+                           `<extra></extra>`; // <extra> ist ein Plotly-Trick, um leeren Platz zu entfernen
+                });
+
+                const trace = {
+                    y: probenDieserArt.map(p => getValue(p, yAchseKey)),
+                    x: probenDieserArt.map(p => p[xAchseKey]),
+                    name: typ, 
+                    type: 'violin',
+
+                    hovertext: customHoverText, 
+                    hoverinfo: 'text',          
+
+                    // --- STYLING ---
+                    points: 'all',
+                    jitter: 0.3, 
+                    pointpos: 0, 
+                    marker: {
+                        color: verblassteFarbe, 
+                        size: 5,
+                        line: { width: 0 }
+                    },
+                    fillcolor: verblassteFarbe, 
+                    line: {
+                        color: verblassteFarbe, 
+                        width: 1
+                    },
+                    box: {
+                        visible: true,
+                        width: 0.1,
+                        line: {
+                            color: verblassteFarbe, 
+                            width: 1
+                        }
+                    },
+                    // MITTELWERT (STARK HERVORGEHOBEN)
+                    meanline: {
+                        visible: true,
+                        color: basisFarbe.replace(', 1)', ', 1)'), // Kräftige Farbe
+                        width: 4 // Dicker Strich
+                    }
+                };
+                
+                dataTraces.push(trace);
+            });
+
+
+            // 6. Layout-Definition für Plotly
+            const layout = {
+                title: `<b>${yAchseKey.toUpperCase()}-Analyse</b><br>(gruppiert nach ${xAchseKey})`,
+                yaxis: {
+                    title: yAchseKey.toUpperCase(),
+                    zeroline: false
+                },
+                xaxis: {
+                    title: xAchseKey,
+                    // Zeigt nur Kategorien an, die Daten haben (wichtig nach Filterung)
+                    categoryorder: 'trace' 
+                },
+                hovermode: 'closest',
+                margin: { l: 60, r: 30, b: 100, t: 100 },
+                showlegend: true, // Legende anzeigen
+                violinmode: 'group', // Violins nebeneinander
+                hoverlabel: {
+                    align: 'left' // Tooltip-Text linksbündig
+                }
+            };
+
+            // 7. Diagramm zeichnen (oder neu zeichnen)
+            Plotly.newPlot(chartContainer, dataTraces, layout, {responsive: true});
+        }
+
+        // --- HILFSFUNKTIONEN ---
+
+        /**
+         * Liest einen Wert aus einem Objekt, auch wenn der Pfad verschachtelt ist
+         * (z.B. 'effektiveWerte.nel')
+         */
+        function getValue(obj, path) {
+            // Prüft, ob der Pfad gültig ist
+            if (!path || typeof path !== 'string') return undefined; 
+            
+            const parts = path.split('.');
+            let current = obj;
+            for (let i = 0; i < parts.length; i++) {
+                if (current === null || typeof current !== 'object') {
+                    return undefined;
+                }
+                current = current[parts[i]];
+            }
+            // Stellt sicher, dass der Endwert eine Zahl ist
+            const val = parseFloat(current);
+            return isNaN(val) ? undefined : val;
+        }
+        
+        /**
+         * Zeigt oder versteckt den Lade-Spinner.
+         */
+        function showLoading(isLoading, message = "Lade...", isError = false) {
+            const spinnerWrapper = document.getElementById('loading-spinner');
+            const spinnerMessage = document.getElementById('loading-message');
+            const mainContent = document.getElementById('main-content');
+            
+            if (isLoading) {
+                spinnerMessage.textContent = message;
+                spinnerMessage.classList.remove('text-red-500');
+                spinnerWrapper.querySelector('svg').classList.remove('hidden');
+                spinnerWrapper.classList.remove('hidden');
+                mainContent.classList.add('hidden');
+            } else {
+                if (isError) {
+                    spinnerMessage.textContent = message;
+                    spinnerMessage.classList.add('text-red-500');
+                    spinnerWrapper.classList.remove('hidden');
+                    spinnerWrapper.querySelector('svg').classList.add('hidden');
+                    // Zeige den Hauptinhalt trotzdem an, damit die Fehlermeldung sichtbar ist
+                    mainContent.classList.remove('hidden'); 
+                } else {
+                    // Erfolgreich geladen
+                    spinnerWrapper.classList.add('hidden');
+                    mainContent.classList.remove('hidden');
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <!-- Lade-Spinner (wird bei Start angezeigt) -->
+    <div id="loading-spinner" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <div class="flex flex-col items-center">
+            <svg class="animate-spin h-10 w-10 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <p id="loading-message" class="mt-4 text-gray-600">Lade Futterwert-Daten...</p>
+        </div>
+    </div>
+
+    <!-- Hauptinhalt (standardmässig versteckt) -->
+    <div id="main-content" class="hidden">
+        
+        <header class="bg-white shadow-sm sticky top-0 z-30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <span class="text-3xl flex-shrink-0">📊</span>
+                        <div class="ml-3">
+                            <h1 class="text-2xl font-semibold text-gray-800">Futter-Analyse-Dashboard</h1>
+                            <div class="flex items-center text-sm text-gray-500">
+                                Visualisierung der gespeicherten Futterproben
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+                <!-- Linke Spalte: Filter -->
+                <div id="filter-wrapper" class="lg:col-span-4 space-y-6">
+                    
+                    <div class="p-5 bg-white rounded-2xl shadow-lg space-y-4">
+                        <h2 class="text-xl font-semibold text-gray-700 border-b pb-3">Filter & Ansicht</h2>
+                        
+                        <!-- Y-Achse -->
+                        <div>
+                            <label for="filter-metrik" class="block text-sm font-medium text-gray-600 mb-1">Metrik (Y-Achse):</label>
+                            <select id="filter-metrik" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="mpp">Milchproduktionspotenzial (MPP)</option>
+                                <option value="effektiveWerte.nel">NEL (effektiv)</option>
+                                <option value="effektiveWerte.apde">APDE (effektiv)</option>
+                                <option value="effektiveWerte.apdn">APDN (effektiv)</option>
+                                <option value="automatischTSV">Futterverzehr (TSV)</option>
+                            </select>
+                        </div>
+                        
+                        <!-- X-Achse -->
+                        <div>
+                            <label for="filter-gruppe" class="block text-sm font-medium text-gray-600 mb-1">Gruppierung (X-Achse):</label>
+                            <select id="filter-gruppe" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="probeNr" selected>Nach Proben-Nr.</option>
+                                <option value="bestandLabel">Nach Bestandestyp</option>
+                                <option value="stadiumLabel">Nach Stadium</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="p-5 bg-white rounded-2xl shadow-lg space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-700 border-b pb-2">Daten filtern</h3>
+                        
+                        <!-- NEU: Filter: Präfix -->
+                        <div>
+                            <label for="filter-prefix" class="block text-sm font-medium text-gray-600 mb-1">Nach Proben-Nr. Präfix filtern:</label>
+                            <input type="text" id="filter-prefix" placeholder="z.B. '2024_'" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                        </div>
+                        
+                        <!-- Filter: Aufwuchs -->
+                        <div>
+                            <label for="filter-aufwuchs" class="block text-sm font-medium text-gray-600 mb-1">Aufwuchs:</label>
+                            <select id="filter-aufwuchs" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="alle">Alle</option>
+                                <option value="erster">1. Aufwuchs</option>
+                                <option value="folge">Folgeaufwuchs</option>
+                            </select>
+                        </div>
+
+                        <!-- Filter: Konservierung -->
+                        <div>
+                            <label for="filter-konservierung" class="block text-sm font-medium text-gray-600 mb-1">Konservierung:</label>
+                            <select id="filter-konservierung" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="alle">Alle</option>
+                                <option value="greenfeed">Grünfutter</option>
+                                <option value="silage">Silage</option>
+                                <option value="hay">Dürrfutter</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Filter: Bestand -->
+                        <div>
+                            <label for="filter-bestand" class="block text-sm font-medium text-gray-600 mb-1">Bestandestyp:</label>
+                            <select id="filter-bestand" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                <option value="alle">Alle</option>
+                                <option value="G">G: Gräserreich (andere Gräser)</option>
+                                <option value="GR">GR: Gräserreich (Raigräser)</option>
+                                <option value="A">A: Ausgewogen (andere Gräser)</option>
+                                <option value="AR">AR: Ausgewogen (Raigräser)</option>
+                                <option value="L">L: Leguminosenreich</option>
+                                <option value="KF">KF: Kräuterreich (feinblättrig)</option>
+                                <option value="KG">KG: Kräuterreich (grobstängelig)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Admin-Zugang -->
+                    <div id="admin-unlock-wrapper" class="p-5 bg-white rounded-2xl shadow-lg space-y-3">
+                        <label for="admin-passwort" class="block text-sm font-medium text-gray-700">Admin-Zugang</label>
+                        <input type="password" id="admin-passwort" placeholder="Passwort eingeben" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                        <button id="admin-unlock-btn" class="w-full p-2 bg-gray-600 text-white rounded-lg text-sm font-medium hover:bg-gray-700">
+                            Freischalten
+                        </button>
+                        <p id="admin-unlock-status" class="text-xs text-red-600"></p>
+                    </div>
+
+                    <!-- Datenverwaltung (standardmässig versteckt) -->
+                    <div id="admin-wrapper" class="hidden">
+                        <div id="admin-accordion" class="bg-white rounded-2xl shadow-lg">
+                            <button id="admin-accordion-toggle" type="button" class="flex justify-between items-center w-full p-5 font-semibold text-gray-700 text-left">
+                                <span>Datenverwaltung (Admin)</span>
+                                <svg id="admin-accordion-icon" class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            
+                            <!-- Inhalt der Datenverwaltung -->
+                            <div id="admin-accordion-content" class="hidden p-5 border-t border-gray-200 space-y-4">
+                                <p class="text-xs text-yellow-800 bg-yellow-50 p-2 rounded-lg">
+                                    <strong>Achtung:</strong> Aktionen hier ändern die Daten in der Datenbank permanent.
+                                </p>
+
+                                <!-- Proben löschen -->
+                                <div class="space-y-2 p-3 bg-white/50 rounded-lg border">
+                                    <label for="admin-delete-probe-nr" class="block text-sm font-medium text-gray-700">Proben löschen</label>
+                                    <input type="text" id="admin-delete-probe-nr" placeholder="Genaue Proben-Nr. eingeben" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                    <button id="btn-delete-probe" data-clicks="0" class="w-full p-2 bg-red-600 text-white rounded-lg text-sm font-medium hover:bg-red-700">
+                                        Löschen (2 Klicks nötig)
+                                    </button>
+                                </div>
+                                
+                                <!-- Präfix hinzufügen -->
+                                <div class="space-y-2 p-3 bg-white/50 rounded-lg border">
+                                    <label for="admin-add-prefix" class="block text-sm font-medium text-gray-700">Präfix zu Proben-Nr. hinzufügen</label>
+                                    <input type="text" id="admin-add-prefix" placeholder="z.B. '2025_'" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                    
+                                    <label class="block text-xs font-medium text-gray-500 pt-1">Optional: Nur für Erstellungs-Zeitraum</label>
+                                    <div class="flex gap-2">
+                                        <input type="date" id="admin-add-prefix-start" title="Start-Datum" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                        <input type="date" id="admin-add-prefix-end" title="End-Datum" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                    </div>
+                                    
+                                    <button id="btn-add-prefix" class="w-full p-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700">
+                                        Präfix hinzufügen
+                                    </button>
+                                </div>
+                                
+                                <!-- Präfix entfernen -->
+                                <div class="space-y-2 p-3 bg-white/50 rounded-lg border">
+                                    <label for="admin-remove-prefix" class="block text-sm font-medium text-gray-700">Präfix von Proben-Nr. entfernen</label>
+                                    <input type="text" id="admin-remove-prefix" placeholder="z.B. '2025_'" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                    <button id="btn-remove-prefix" class="w-full p-2 bg-yellow-600 text-white rounded-lg text-sm font-medium hover:bg-yellow-700">
+                                        Präfix entfernen
+                                    </button>
+                                </div>
+                                
+                                <!-- NEU: Präfix austauschen -->
+                                <div class="space-y-2 p-3 bg-white/50 rounded-lg border">
+                                    <label for="admin-swap-prefix-old" class="block text-sm font-medium text-gray-700">Präfix austauschen</label>
+                                    <input type="text" id="admin-swap-prefix-old" placeholder="Altes Präfix (z.B. '2024_')" class="w-full p-2 text-sm border border-gray-300 rounded-lg">
+                                    <input type="text" id="admin-swap-prefix-new" placeholder="Neues Präfix (z.B. '2025_')" class="w-full p-2 text-sm border border-gray-300 rounded-lg mt-1">
+                                    <button id="btn-swap-prefix" class="w-full p-2 bg-teal-600 text-white rounded-lg text-sm font-medium hover:bg-teal-700">
+                                        Präfix austauschen
+                                    </button>
+                                </div>
+
+                                <!-- Status-Meldung für Admin-Aktionen -->
+                                <p id="admin-status" class="text-xs"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 
+                  KORREKTUR (Layout-Fix): 
+                  Der 'chart-container' ist jetzt der einzige Container in der rechten Spalte.
+                  Er ist standardmässig ein Flex-Container, um Fehlermeldungen zu zentrieren.
+                  'updateChart' entfernt 'flex', 'items-center', 'justify-center', wenn das Diagramm gezeichnet wird.
+                -->
+                <div class="lg:col-span-8 p-5 bg-white rounded-2xl shadow-lg min-h-[600px] flex items-center justify-center">
+                    <!-- Plotly-Diagramm-Container (ODER "Keine Daten"-Meldung) -->
+                    <div id="chart-container" class="w-full h-full min-h-[600px]"></div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

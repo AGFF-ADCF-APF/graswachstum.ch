@@ -17,6 +17,52 @@
         }
         #upload-area:hover { border-color: #3498db; background: rgba(52, 152, 219, 0.1); }
         #file-input { display: none; }
+        .remote-panel {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid #4a5c6d;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 14px;
+        }
+        .remote-panel-title {
+            font-size: 12px;
+            color: #d0d7de;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .remote-panel-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .remote-panel-row input[type="number"] {
+            width: 84px;
+            border: 1px solid #7f8c8d;
+            border-radius: 4px;
+            padding: 6px;
+            background: #263544;
+            color: #ecf0f1;
+        }
+        .remote-load-btn {
+            flex: 1;
+            border: none;
+            border-radius: 4px;
+            padding: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            background: #1f6feb;
+            color: #ffffff;
+        }
+        .remote-load-btn:hover { background: #388bfd; }
+        .remote-status {
+            min-height: 16px;
+            font-size: 11px;
+            color: #c9d1d9;
+            line-height: 1.3;
+        }
 
         .layer-card { background: var(--card-bg); padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 6px solid #95a5a6; }
         .palette-btn { width: 28px; height: 28px; border: 2px solid #fff; cursor: pointer; display: inline-block; margin: 3px; border-radius: 4px; }
@@ -47,6 +93,18 @@
         <input type="file" id="file-input" multiple accept=".kml">
     </div>
 
+    <div class="remote-panel">
+        <div class="remote-panel-title">Nutzungsflaechen von geodienste.ch</div>
+        <div class="remote-panel-row">
+            <label for="remote-radius-km">Umkreis (km):</label>
+            <input id="remote-radius-km" type="number" min="1" max="50" step="1" value="5">
+        </div>
+        <div class="remote-panel-row">
+            <button id="remote-load-btn" class="remote-load-btn" type="button" onclick="loadNutzungsflaechenAroundCenter()">Um Kartenmittelpunkt laden</button>
+        </div>
+        <div id="remote-status" class="remote-status">Liest WFS via BBOX (ungefaehrer Radius). Nutzt lokal zuerst wfs-cache.php.</div>
+    </div>
+
     <div id="layer-list"></div>
     <button id="download-all-btn" class="download-all-btn" style="display:none;" onclick="exportAllKML()">Alle als eine KML herunterladen</button>
 </div>
@@ -64,6 +122,8 @@
     const uploadArea = document.getElementById('upload-area');
     const layerList = document.getElementById('layer-list');
     const downloadAllBtn = document.getElementById('download-all-btn');
+    const remoteStatusEl = document.getElementById('remote-status');
+    const remoteLoadBtnEl = document.getElementById('remote-load-btn');
     const loadedLayers = [];
 
     const palettes = {
@@ -117,6 +177,109 @@
             console.error('KML konnte nicht geladen werden:', fileName, err);
         }
     }
+
+    function setRemoteStatus(text) {
+        if (remoteStatusEl) remoteStatusEl.textContent = text;
+    }
+
+    function kmRadiusToBbox(center, radiusKm) {
+        const lat = Number(center.lat);
+        const lng = Number(center.lng);
+        const dLat = radiusKm / 111.32;
+        const cosLat = Math.max(0.1, Math.cos(lat * Math.PI / 180));
+        const dLng = radiusKm / (111.32 * cosLat);
+        return {
+            minLat: lat - dLat,
+            maxLat: lat + dLat,
+            minLng: lng - dLng,
+            maxLng: lng + dLng
+        };
+    }
+
+    function getRadiusKm() {
+        const input = document.getElementById('remote-radius-km');
+        const parsed = Number(input?.value || 5);
+        return Math.max(1, Math.min(50, Number.isFinite(parsed) ? parsed : 5));
+    }
+
+    function buildNutzungsflaechenWfsUrl(bbox) {
+        const outputFormat = encodeURIComponent('application/json; subtype=geojson');
+        const bboxParam = [
+            bbox.minLng.toFixed(6),
+            bbox.minLat.toFixed(6),
+            bbox.maxLng.toFixed(6),
+            bbox.maxLat.toFixed(6),
+            'EPSG:4326'
+        ].join(',');
+
+        return `https://wfs.geodienste.ch/lwb_nutzungsflaechen_v3_0_0/deu?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetFeature&TYPENAMES=ms:nutzungsflaechen&BBOX=${bboxParam}&COUNT=10000&OUTPUTFORMAT=${outputFormat}&srsName=EPSG:4326`;
+    }
+
+    function buildCacheProxyUrl(center, radiusKm) {
+        const q = new URLSearchParams({
+            lat: center.lat.toFixed(6),
+            lng: center.lng.toFixed(6),
+            r: String(radiusKm)
+        });
+        return `./wfs-cache.php?${q.toString()}`;
+    }
+
+    window.loadNutzungsflaechenAroundCenter = async () => {
+        const center = map.getCenter();
+        const radiusKm = getRadiusKm();
+        const bbox = kmRadiusToBbox(center, radiusKm);
+        const requestUrl = buildNutzungsflaechenWfsUrl(bbox);
+        const cacheUrl = buildCacheProxyUrl(center, radiusKm);
+
+        try {
+            if (remoteLoadBtnEl) remoteLoadBtnEl.disabled = true;
+            setRemoteStatus('Lade Nutzungsflaechen (Cache-Proxy zuerst)...');
+
+            let response;
+            let sourceLabel = 'Direkt-WFS';
+            try {
+                response = await fetch(cacheUrl, { cache: 'no-store' });
+                sourceLabel = 'PHP-Cache';
+            } catch (cacheErr) {
+                console.warn('Cache-Proxy nicht erreichbar, nutze Direkt-WFS:', cacheErr);
+                response = await fetch(requestUrl);
+            }
+
+            if (!response.ok && sourceLabel === 'PHP-Cache') {
+                response = await fetch(requestUrl);
+                sourceLabel = 'Direkt-WFS';
+            }
+
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+
+            const geojson = await response.json();
+            const features = Array.isArray(geojson?.features) ? geojson.features : [];
+            if (features.length === 0) {
+                setRemoteStatus('Keine Features im aktuellen Umkreis gefunden.');
+                return;
+            }
+
+            const layerName = `nutzungsflaechen_${radiusKm}km_${center.lat.toFixed(3)}_${center.lng.toFixed(3)}.geojson`;
+            const geoLayer = L.geoJSON(geojson);
+            const color = '#5DADE2';
+
+            applyStyleAndSimplify(geoLayer, color, 0.2);
+            addLayerToUI(layerName, geoLayer, color);
+            geoLayer.addTo(map);
+
+            const bounds = geoLayer.getBounds();
+            if (bounds && bounds.isValid()) map.fitBounds(bounds);
+
+            setRemoteStatus(`${features.length} Features geladen (${sourceLabel}, BBOX um ~${radiusKm} km).`);
+        } catch (err) {
+            console.error('WFS Abruf fehlgeschlagen:', err);
+            setRemoteStatus('Abruf fehlgeschlagen (CORS/Auth/Netz). Pruefe wfs-cache.php und Webserver/PHP.');
+        } finally {
+            if (remoteLoadBtnEl) remoteLoadBtnEl.disabled = false;
+        }
+    };
 
     function applyStyleAndSimplify(layerGroup, color, fillOpacity = config.defaultFillOpacity) {
         layerGroup.eachLayer(layer => {

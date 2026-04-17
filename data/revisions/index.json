@@ -62,5 +62,15 @@
             "type": "unknown",
             "action": "update"
         }
+    ],
+    "\/resources": [
+        {
+            "id": "9bace3eba92c43c5296430f02665d12b",
+            "file": "user\/pages\/06.resources\/default.md.20260417-172425.rev",
+            "timestamp": 1776439465,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
+        }
     ]
 }

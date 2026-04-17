@@ -1,0 +1,45 @@
+{
+    "metadata": {
+        "timestamp": 1776439465,
+        "user": "martinz",
+        "type": "page",
+        "action": "create"
+    },
+    "content": "---\ntitle: Ressourcen\npublished: true\nhide_page_title: false\nshow_sidebar: false\nhide_git_sync_repo_link: false\nhero:\n    image: IMG_20190509_061615.jpg\n    image_alignment: object-center\nroot_of_blog: true\ncontent:\n    items:\n        - '@self.children'\n    limit: 10\n    order:\n        by: date\n        dir: desc\nmedia_order: '20230921_142411.JPG,IMG_20190509_061615.jpg'\nshortcode-citation:\n    items: cited\n    reorder_uncited: true\nsitemap:\n    lastmod: '30-10-2025 14:03'\nfeed:\n    limit: 10\n---\n\n## Grasland bewirtschaften\n\n- [eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen](https:\/\/www.eagff.ch\/wiesenpflanzen-kennen\/graeser\/einleitung\/einleitung-uebersicht)\n- [Wurzelbilder von Futtergr\u00e4sern](https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc)\n- [AGFF.ch: AGFF-Merkbl\u00e4tter bestellen](https:\/\/www.agff.ch\/online-shop.html) bzw. [AGFF-Mitglied werden](https:\/\/www.agff.ch\/mitglied-werden.html)\n- [Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT](https:\/\/raumberg-gumpenstein.at\/forschung\/infothek\/agrar-science-wissen-kompakt.html)\n\n## Futter konservieren\n\n- [Zuckergehalt von Wiesen bestimmen](https:\/\/www.agrarheute.com\/pflanze\/gruenland\/knoblauchpresse-ins-gras-553913)\n\n## Professionelles Weidemanagement\n\n- [eAGFF.ch: Weideplaner (Exceldatei mit Makros)](https:\/\/www.eagff.ch\/files\/downloads\/Weideplaner_AGFF.xlsm)\n- [Teagasc.ie: Grass10 Newsletter](https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/)\n\n## Graswachstum messen\n\n- [Github.com: R-Skripts f\u00fcr automatische Darstellung von Graswachstum auf CH-Karte](https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth)\n\n## AGFF-Apps (BETA)\n\n[notice]\nWir \u00fcbernehmen keine Garantie f\u00fcr die Richtigkeit der Resultate und Empfehlungen der Apps!\n[\/notice]\n[ui-accordion independent=\"true\" open=\"none\"]\n[\n\n[ui-accordion-item title=\"App Futterwertrechner\"]\n[App Futterwertrechner  \n](https:\/\/apps.graswachstum.ch\/futter)[qrcode size=100]https:\/\/graswachstum.ch\/futterwert[\/qrcode]\n\nQuellen: [AGFF Merkblatt 3](https:\/\/www.eagff.ch\/files\/images\/bilder\/Raufutter_produzieren\/Futterqualitaet\/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf), [Agridea, Wegleitung zum Fu\u0308tterungsplan fu\u0308r Milchku\u0308he](https:\/\/agridea.abacuscity.ch\/abauserimage\/Agridea_2_Free\/1330_3_D.pdf?xet=1532491420856)\n[\/ui-accordion-item]\n[ui-accordion-item title=\"App Heutrocknung steuern\"]\n[App Heutrocknung steuern  \n](https:\/\/graswachstum.ch\/resources\/agff-app-drycontrol\/agff-dry-calc.html)[qrcode size=100]https:\/\/graswachstum.ch\/heutrocknung[\/qrcode]\n[\/ui-accordion-item]\n[ui-accordion-item title=\"apps.graswachstum.ch\"]\n[Graswachstumsbericht  \n](https:\/\/apps.graswachstum.ch\/v02)[qrcode]https:\/\/graswachstum.ch\/[\/qrcode]\n[\/ui-accordion-item]\n\n[\/ui-accordion]",
+    "rawContent": "---\ntitle: Ressourcen\npublished: true\nhide_page_title: false\nshow_sidebar: false\nhide_git_sync_repo_link: false\nhero:\n    image: IMG_20190509_061615.jpg\n    image_alignment: object-center\nroot_of_blog: true\ncontent:\n    items:\n        - '@self.children'\n    limit: 10\n    order:\n        by: date\n        dir: desc\nmedia_order: '20230921_142411.JPG,IMG_20190509_061615.jpg'\nshortcode-citation:\n    items: cited\n    reorder_uncited: true\nsitemap:\n    lastmod: '30-10-2025 14:03'\nfeed:\n    limit: 10\n---\n\n## Grasland bewirtschaften\n\n- [eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen](https:\/\/www.eagff.ch\/wiesenpflanzen-kennen\/graeser\/einleitung\/einleitung-uebersicht)\n- [Wurzelbilder von Futtergr\u00e4sern](https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc)\n- [AGFF.ch: AGFF-Merkbl\u00e4tter bestellen](https:\/\/www.agff.ch\/online-shop.html) bzw. [AGFF-Mitglied werden](https:\/\/www.agff.ch\/mitglied-werden.html)\n- [Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT](https:\/\/raumberg-gumpenstein.at\/forschung\/infothek\/agrar-science-wissen-kompakt.html)\n\n## Futter konservieren\n\n- [Zuckergehalt von Wiesen bestimmen](https:\/\/www.agrarheute.com\/pflanze\/gruenland\/knoblauchpresse-ins-gras-553913)\n\n## Professionelles Weidemanagement\n\n- [eAGFF.ch: Weideplaner (Exceldatei mit Makros)](https:\/\/www.eagff.ch\/files\/downloads\/Weideplaner_AGFF.xlsm)\n- [Teagasc.ie: Grass10 Newsletter](https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/)\n\n## Graswachstum messen\n\n- [Github.com: R-Skripts f\u00fcr automatische Darstellung von Graswachstum auf CH-Karte](https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth)\n\n## AGFF-Apps (BETA)\n\n[notice]\nWir \u00fcbernehmen keine Garantie f\u00fcr die Richtigkeit der Resultate und Empfehlungen der Apps!\n[\/notice]\n[ui-accordion independent=\"true\" open=\"none\"]\n[\n\n[ui-accordion-item title=\"App Futterwertrechner\"]\n[App Futterwertrechner  \n](https:\/\/apps.graswachstum.ch\/futter)[qrcode size=100]https:\/\/graswachstum.ch\/futterwert[\/qrcode]\n\nQuellen: [AGFF Merkblatt 3](https:\/\/www.eagff.ch\/files\/images\/bilder\/Raufutter_produzieren\/Futterqualitaet\/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf), [Agridea, Wegleitung zum Fu\u0308tterungsplan fu\u0308r Milchku\u0308he](https:\/\/agridea.abacuscity.ch\/abauserimage\/Agridea_2_Free\/1330_3_D.pdf?xet=1532491420856)\n[\/ui-accordion-item]\n[ui-accordion-item title=\"App Heutrocknung steuern\"]\n[App Heutrocknung steuern  \n](https:\/\/graswachstum.ch\/resources\/agff-app-drycontrol\/agff-dry-calc.html)[qrcode size=100]https:\/\/graswachstum.ch\/heutrocknung[\/qrcode]\n[\/ui-accordion-item]\n[ui-accordion-item title=\"apps.graswachstum.ch\"]\n[Graswachstumsbericht  \n](https:\/\/apps.graswachstum.ch\/v02)[qrcode]https:\/\/graswachstum.ch\/[\/qrcode]\n[\/ui-accordion-item]\n\n[\/ui-accordion]",
+    "header": {
+        "title": "Ressourcen",
+        "published": true,
+        "hide_page_title": false,
+        "show_sidebar": false,
+        "hide_git_sync_repo_link": false,
+        "hero": {
+            "image": "IMG_20190509_061615.jpg",
+            "image_alignment": "object-center"
+        },
+        "root_of_blog": true,
+        "content": {
+            "items": [
+                "@self.children"
+            ],
+            "limit": 10,
+            "order": {
+                "by": "date",
+                "dir": "desc"
+            }
+        },
+        "media_order": "20230921_142411.JPG,IMG_20190509_061615.jpg",
+        "shortcode-citation": {
+            "items": "cited",
+            "reorder_uncited": true
+        },
+        "sitemap": {
+            "lastmod": "30-10-2025 14:03"
+        },
+        "feed": {
+            "limit": 10
+        }
+    },
+    "route": "\/resources",
+    "title": "Ressourcen"
+}

@@ -54,18 +54,15 @@ Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlung
 [
 
 [ui-accordion-item title="App Futterwertrechner"]
-[App Futterwertrechner  
-](https://apps.graswachstum.ch/futter)[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode]
+[App Futterwertrechner ](https://apps.graswachstum.ch/futter)[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode]
 
 Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf), [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856)
 [/ui-accordion-item]
 [ui-accordion-item title="App Heutrocknung steuern"]
-[App Heutrocknung steuern  
-](https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html)[qrcode size=100]https://graswachstum.ch/heutrocknung[/qrcode]
+[App Heutrocknung steuern ](https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html)[qrcode size=100]https://graswachstum.ch/heutrocknung[/qrcode]
 [/ui-accordion-item]
-[ui-accordion-item title="apps.graswachstum.ch"]
-[Graswachstumsbericht  
-](https://apps.graswachstum.ch/v02)[qrcode]https://graswachstum.ch/[/qrcode]
+[ui-accordion-item title="graswachstum.ch"]
+[Graswachstumsbericht ](https://apps.graswachstum.ch/v02)[qrcode]https://graswachstum.ch/[/qrcode]
 [/ui-accordion-item]
 
 [/ui-accordion]

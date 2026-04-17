@@ -4,36 +4,36 @@
         "page_rawroute": "\/resources",
         "page_title": "Ressourcen"
     },
-    "updated": 1738874254,
+    "updated": 1776439465,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Ressourcen",
         "grav-page-route": "\/resources",
         "grav-page-rawroute": "\/resources",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 13 Feb 2025 20:37:34 GMT",
+        "expires": "Fri, 24 Apr 2026 15:24:25 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 06 Feb 2025 20:37:34 GMT",
+        "date": "Fri, 17 Apr 2026 15:24:25 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1738874254.224091053009033203125,
-        "total_time": 0.1057950000000000001509903313490212894976139068603515625,
-        "namelookup_time": 1.2999999999999999199967216922946278145900578238070011138916015625e-5,
-        "connect_time": 1.3999999999999999789990039189557791132756392471492290496826171875e-5,
-        "pretransfer_time": 4.69999999999999972378865453759289039226132445037364959716796875e-5,
-        "starttransfer_time": 0.10570000000000000228705943072782247327268123626708984375,
+        "start_time": 1776439465.2235329151153564453125,
+        "total_time": 0.177078000000000013169909607313456945121288299560546875,
+        "namelookup_time": 0.002164000000000000124844579119098852970637381076812744140625,
+        "connect_time": 0.0022309999999999999102662240346717226202599704265594482421875,
+        "pretransfer_time": 0.0308369999999999998274713419732506736181676387786865234375,
+        "starttransfer_time": 0.1754159999999999886011181615685927681624889373779296875,
         "redirect_time": 0
     },
     "info": {
-        "url": "https:\/\/graswachstum.ch\/resources",
+        "url": "https:\/\/graswachstum.ch\/de\/resources",
         "content_type": "text\/html; charset=utf-8",
         "header_size": 526,
-        "request_size": 118,
+        "request_size": 121,
         "redirect_count": 0,
-        "size_download": 5523,
-        "speed_download": 52600,
+        "size_download": 8367,
+        "speed_download": 47250,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,10 +41,10 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 22908
+        "content_size": 40732
     },
     "content": {
-        "body": "<h2>Grasland bewirtschaften<\/h2>\n<ul>\n<li>eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen<\/li>\n<li>Wurzelbilder von Futtergr&auml;sern<\/li>\n<li>AGFF.ch: AGFF-Merkbl&auml;tter bestellen bzw. AGFF-Mitglied werden<\/li>\n<li>Raumberg-Gumpenstein.at: PODCASTS :\/&gt; AGRAR SCIENCE - WISSEN KOMPAKT<\/li>\n<\/ul>\n<h2>Futter konservieren<\/h2>\n<ul>\n<li>Zuckergehalt von Wiesen bestimmen<\/li>\n<\/ul>\n<h2>Professionelles Weidemanagement<\/h2>\n<ul>\n<li>eAGFF.ch: Weideplaner (Exceldatei mit Makros)<\/li>\n<li>Teagasc.ie: Grass10 Newsletter<\/li>\n<\/ul>\n<h2>Graswachstum messen<\/h2>\n<ul>\n<li>Github.com: R-Skript f&uuml;r automatische Darstellung von Graswachstum auf CH-Karte<\/li>\n<li>\n<\/li>\n<\/ul>",
+        "body": "<h2>Grasland bewirtschaften<\/h2>\n<ul>\n<li>eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen<\/li>\n<li>Wurzelbilder von Futtergr&auml;sern<\/li>\n<li>AGFF.ch: AGFF-Merkbl&auml;tter bestellen bzw. AGFF-Mitglied werden<\/li>\n<li>Raumberg-Gumpenstein.at: PODCASTS :\/&gt; AGRAR SCIENCE - WISSEN KOMPAKT<\/li>\n<\/ul>\n<h2>Futter konservieren<\/h2>\n<ul>\n<li>Zuckergehalt von Wiesen bestimmen<\/li>\n<\/ul>\n<h2>Professionelles Weidemanagement<\/h2>\n<ul>\n<li>eAGFF.ch: Weideplaner (Exceldatei mit Makros)<\/li>\n<li>Teagasc.ie: Grass10 Newsletter<\/li>\n<\/ul>\n<h2>Graswachstum messen<\/h2>\n<ul>\n<li>Github.com: R-Skripts f&uuml;r automatische Darstellung von Graswachstum auf CH-Karte<\/li>\n<\/ul>\n<h2>AGFF-Apps (BETA)<\/h2>\n\n  \n<p>Wir &uuml;bernehmen keine Garantie f&uuml;r die Richtigkeit der Resultate und Empfehlungen der Apps!<\/p>\n\n\n\n                    \n            \n            App Futterwertrechner\n            \n<p>App Futterwertrechner\n<\/p>\n<p>Quellen: AGFF Merkblatt 3, Agridea, Wegleitung zum Fu&#776;tterungsplan fu&#776;r Milchku&#776;he<\/p>\n\n        \n                    \n            \n            App Heutrocknung steuern\n            \n<p>App Heutrocknung steuern\n<\/p>\n\n        \n                    \n            \n            apps.graswachstum.ch\n            \n<p>Graswachstumsbericht\n<\/p>",
         "headers": {
             "h1": [
                 "Ressourcen"
@@ -53,7 +53,8 @@
                 "Grasland bewirtschaften",
                 "Futter konservieren",
                 "Professionelles Weidemanagement",
-                "Graswachstum messen"
+                "Graswachstum messen",
+                "AGFF-Apps (BETA)"
             ],
             "h3": [],
             "h4": [],
@@ -68,13 +69,31 @@
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/03.resources\/IMG_20190509_061615.jpg?g-1442c913",
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/06.resources\/IMG_20190509_061615.jpg?g-5d13f79b",
                 "alt": "Hero Image",
                 "external": true,
                 "status": 200
             },
             {
-                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-1442c913",
+                "src": "https:\/\/graswachstum.ch\/de\/resources\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACEAQMAAABrihHkAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAE4SURBVEiJ7dUtjsMwEAXgsQoCewP7GgaRfKXAsjFbmCtFMsg1EvUChgFW3r5ou1WXbN2aduAHovnzROQTTwKAlcGl6IBcLYucrReTshWplytG22V+x4atUcw0GPqLYkME82kT1mWQ3SSPlT6Vo4d+WNP4p6uvC4NF8cuP8VSWgJ0pFVl6zQ3itmGdYRLWolItmMc9cIUYl3pxczSAhHFFzA2yeBV\/ttzG+3Qq5LQNthsxyb3z78mVdYm6SVEu9VI8Rx85wb1vEvbBITMfk6LUixfms\/cqvbbIaVP20\/aKFHO9zHw43Pm8h02qheNbMaIon0yTMBk\/sBAJsV6Od8orUdS2yXEzOxYF6aVejhvllfkAX7lNuLe8tOskL4mZ4zGOoi3yczPBo522ern9myZdfrvxnnzin\/gGJxCX6UHbiusAAAAASUVORK5CYII=",
+                "alt": "",
+                "external": false,
+                "status": 404
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/de\/resources\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACEAQMAAABrihHkAAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAE9SURBVEiJ7dQxroQgEAbgn1hYcoENXMPChCtRbofdll6JxMJrYPYClBTGecNmX9zXPFHanY4vkcjPMMC3DoqIVOeUIU0UiyVAKjixQgHl8qQRsLxUJlWKMsNmhrMikiVvK4XPJZITFD9PeiivDO0yjX9TPS1cmqLeV0XyTC50UtOgmkesEJp523HhzVeUC2e4dZI7IfQOxYI2Xx\/gwm+G10QnyRnSasWUUCwNDQFZuIdjhTznMXROTKT9CeF9uOsWL9G3qJAbOEy7NcNCj3IJJpLH1oz8SzVy46HRjowB93KhhA2OL5H8CcnTppOUK9UIl4IV3sHs7+dQ+HvNyfNrNe8Mr0n+n5aIb9AMsVjyjOIB1Uta32lcFu3z6AgfOxfJTOg5kHuN8Llg4jIRTXsah\/LKkLuOW66tkW\/9Uz9kZIrkh2rc0wAAAABJRU5ErkJggg==",
+                "alt": "",
+                "external": false,
+                "status": 404
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/de\/resources\/data:image\/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOgAAADoAQMAAADfZzo7AAAABlBMVEX\/\/\/8AAABVwtN+AAAAAnRSTlP9\/RSN3GkAAAAJcEhZcwAADsQAAA7EAZUrDhsAAADVSURBVFiF7ZVRFoQwCANz\/0uzu4VAt73BKL5XlcGPhhSlN+ARGevhu\/wuZ5h01lhEVx5GM+P9TwZObYSnUHsdT6tGU7PncXR6Plpcs45DHZk4kkBau1c3X7sWPJqvLlx6rBIqTR1CliPVUX\/Ao1EVsgizAGme6HDfo26BpfXowx0tEJWWEMvwp9uJdPe9CrbbibTcnmLkv8rNB9K9SDaBsNT7\/zvlPc2A1Fo0k6calKa7YzP7OdqhtAZ5KnOpQaMjwCrj0lpLgPE9lI6\/k1fzqfQNcHwA1NMuX2+SzVYAAAAASUVORK5CYII=",
+                "alt": "",
+                "external": false,
+                "status": 404
+            },
+            {
+                "src": "https:\/\/graswachstum.ch\/user\/pages\/images\/AGFF_f.svg?decoding=auto&fetchpriority=auto&g-5d13f79b",
                 "alt": "Logo AGFF",
                 "external": true,
                 "status": 200
@@ -86,7 +105,7 @@
                 "nav": 1,
                 "section": 2,
                 "aside": 0,
-                "article": 1,
+                "article": 4,
                 "footer": 1
             }
         },
@@ -95,152 +114,264 @@
             "flash": 0
         },
         "links": {
-            "\/": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false
-            },
-            "\/growth": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "Kurven",
-                "external": false
-            },
-            "\/resources": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "Ressourcen",
-                "external": false
-            },
-            "\/about": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "\u00dcber uns",
-                "external": false
-            },
-            "\/contact": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "Kontakt",
-                "external": false
-            },
-            "#grasland-bewirtschaften": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false
-            },
-            "https:\/\/www.eagff.ch\/wiesenpflanzen-kennen\/graeser\/einleitung\/einleitung-uebersicht": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen",
-                "external": true
-            },
-            "https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Wurzelbilder von Futtergr\u00e4sern",
-                "external": true
-            },
-            "https:\/\/www.agff.ch\/online-shop.html": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "AGFF.ch: AGFF-Merkbl\u00e4tter bestellen",
-                "external": true
-            },
-            "https:\/\/www.agff.ch\/mitglied-werden.html": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "AGFF-Mitglied werden",
-                "external": true
-            },
-            "https:\/\/raumberg-gumpenstein.at\/forschung\/infothek\/agrar-science-wissen-kompakt.html": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT",
-                "external": true
-            },
-            "#futter-konservieren": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false
-            },
-            "https:\/\/www.agrarheute.com\/pflanze\/gruenland\/knoblauchpresse-ins-gras-553913": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Zuckergehalt von Wiesen bestimmen",
-                "external": true
-            },
-            "#professionelles-weidemana": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false
-            },
-            "https:\/\/www.eagff.ch\/files\/downloads\/Weideplaner_AGFF.xlsm": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "eAGFF.ch: Weideplaner (Exceldatei mit Makros)",
-                "external": true
-            },
-            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/": {
-                "count": 0,
-                "target": "_blank",
-                "rel": "nofollow noopener noreferrer",
-                "text": "Teagasc.ie: Grass10 Newsletter",
-                "external": true
-            },
-            "#graswachstum-messen": {
-                "count": 0,
-                "target": "",
-                "rel": "",
-                "text": "",
-                "external": false
-            },
             "https:\/\/github.com\/AGFF-ADCF-APF\/r-grassgrowth": {
                 "count": 0,
                 "target": "_blank",
                 "rel": "nofollow noopener noreferrer",
-                "text": "Github.com: R-Skript f\u00fcr automatische Darstellung von Graswachstum auf CH-Karte",
-                "external": true
+                "text": "Github.com: R-Skripts f\u00fcr automatische Darstellung von Graswachstum auf CH-Karte",
+                "external": true,
+                "status": 302,
+                "status_msg": "whitelisted"
             },
-            "\/legal": {
-                "count": 0,
+            "\/de": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Wachstumsberichte",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/growth": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Graswachstum",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/growth\/years": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Jahresauswertungen",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/places": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Standorte",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Ressourcen",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-webinar-grasmessen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Grasmess-Webinar 2025",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/resources\/2025-11-06-ebenrain": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Ebenrain 06.11.2025",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/about": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "\u00dcber uns",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/contact": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Kontakt",
+                "external": false,
+                "status": 200
+            },
+            "\/fr\/resources": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Fran\u00e7ais",
+                "external": false,
+                "status": 200
+            },
+            "#grasland-bewirtschaften": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#futter-konservieren": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#professionelles-weidemana": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#graswachstum-messen": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "#agff-apps-beta": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "",
+                "external": false,
+                "status": 200
+            },
+            "\/de\/legal": {
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "Datenschutz und Rechtsausschluss",
-                "external": false
+                "external": false,
+                "status": 200
+            },
+            "https:\/\/www.eagff.ch\/wiesenpflanzen-kennen\/graeser\/einleitung\/einleitung-uebersicht": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/images.wur.nl\/digital\/collection\/coll13\/search\/searchterm\/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae\/field\/subcol\/mode\/all\/conn\/and\/order\/title\/ad\/asc": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Wurzelbilder von Futtergr\u00e4sern",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agff.ch\/online-shop.html": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF.ch: AGFF-Merkbl\u00e4tter bestellen",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agff.ch\/mitglied-werden.html": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF-Mitglied werden",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/raumberg-gumpenstein.at\/forschung\/infothek\/agrar-science-wissen-kompakt.html": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.agrarheute.com\/pflanze\/gruenland\/knoblauchpresse-ins-gras-553913": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Zuckergehalt von Wiesen bestimmen",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.eagff.ch\/files\/downloads\/Weideplaner_AGFF.xlsm": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "eAGFF.ch: Weideplaner (Exceldatei mit Makros)",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.teagasc.ie\/crops\/grassland\/grass10\/grass10-newsletter\/": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Teagasc.ie: Grass10 Newsletter",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/apps.graswachstum.ch\/futter": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "App Futterwertrechner",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/www.eagff.ch\/files\/images\/bilder\/Raufutter_produzieren\/Futterqualitaet\/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "AGFF Merkblatt 3",
+                "external": true,
+                "status": 404,
+                "status_msg": "Client error"
+            },
+            "https:\/\/agridea.abacuscity.ch\/abauserimage\/Agridea_2_Free\/1330_3_D.pdf?xet=1532491420856": {
+                "count": 1,
+                "target": "_blank",
+                "rel": "nofollow noopener noreferrer",
+                "text": "Agridea, Wegleitung zum Fu\u0308tterungsplan fu\u0308r Milchku\u0308he",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/graswachstum.ch\/resources\/agff-app-drycontrol\/agff-dry-calc.html": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "App Heutrocknung steuern",
+                "external": true,
+                "status": 200
+            },
+            "https:\/\/apps.graswachstum.ch\/v02": {
+                "count": 1,
+                "target": "",
+                "rel": "",
+                "text": "Graswachstumsbericht",
+                "external": true,
+                "status": 405,
+                "status_msg": "Client error"
             },
             "https:\/\/getgrav.org": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "graswachstum.ch",
-                "external": true
+                "external": true,
+                "status": 200
             },
             "https:\/\/agff.ch": {
-                "count": 0,
+                "count": 1,
                 "target": "",
                 "rel": "",
                 "text": "AGFF",
-                "external": true
+                "external": true,
+                "status": 200
             }
         }
     },
@@ -250,131 +381,185 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
+            "description": "Grasland bewirtschaften eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen Wurzelbilder von Futtergr\u00e4sern AGFF.ch: AGFF-Merkbl\u00e4tter bestellen bzw\u2026",
             "title": "Ressourcen | graswachstum.ch",
-            "keywords": "graswachstum,messen,darstellung,newsletter,ch-karte,exceldatei,bestimmen,professionelles,weidemanagement,eagff.ch",
-            "image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
-            "og:url": "https:\/\/graswachstum.ch\/resources",
+            "image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
+            "og:url": "https:\/\/graswachstum.ch\/de\/resources",
             "og:site_name": "graswachstum.ch",
             "og:title": "Ressourcen | graswachstum.ch",
-            "og:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
+            "og:description": "Grasland bewirtschaften eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen Wurzelbilder von Futtergr\u00e4sern AGFF.ch: AGFF-Merkbl\u00e4tter bestellen bzw\u2026",
             "og:type": "article",
-            "og:image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
+            "og:image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:secure": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
+            "og:image:alt": "Ressourcen | graswachstum.ch",
+            "og:image:secure": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
+            "og:locale": "de",
             "twitter:card": "summary_large_image",
             "twitter:title": "Ressourcen | graswachstum.ch",
-            "twitter:description": "AGFF-Mitglied werden Raumberg-Gumpenstein.at: PODCASTS :\/> AGRAR SCIENCE - WISSEN KOMPAKT Futter konservieren Zuckergehalt von Wiesen bestimmen Professionelles\u2026",
-            "twitter:image": "https:\/\/graswachstum.ch\/resources\/seomagic-image.jpg",
+            "twitter:description": "Grasland bewirtschaften eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen Wurzelbilder von Futtergr\u00e4sern AGFF.ch: AGFF-Merkbl\u00e4tter bestellen bzw\u2026",
+            "twitter:image": "https:\/\/graswachstum.ch\/de\/resources\/seomagic-image.jpg",
             "twitter:image:alt": "Ressourcen | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten"
+            "twitter:data1": "0 Minuten",
+            "keywords": "graswachstum,newsletter,messen,darstellung,eagff,pflanzeneigenschaften,kennen,lenkungsmassnahmen,planen,wurzelbilder"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
-        "canonical": "https:\/\/graswachstum.ch\/resources",
+        "canonical": "https:\/\/graswachstum.ch\/de\/resources",
         "links": {
+            "\/user\/plugins\/vimeo\/css\/vimeo.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
+            },
             "\/user\/plugins\/admin-power-tools\/assets\/scroll_fix.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/markdown-notices\/assets\/notices.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/likes-ratings\/assets\/likes-ratings.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/\/cdnjs.cloudflare.com\/ajax\/libs\/cookieconsent2\/3.0.6\/cookieconsent.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/external_links\/assets\/css\/external_links.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/form\/assets\/form-styles.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/image-captions\/css\/image-captions.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/langswitcher\/css\/langswitcher.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/lightbox-gallery\/css\/glightbox.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/page-toc\/assets\/page-toc-anchors.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/simple-responsive-tables\/assets\/css\/simple-responsive-tables.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/simplesearch\/css\/simplesearch.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/tntsearch\/assets\/tntsearch.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/youtube\/css\/youtube.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/prism-highlight\/css\/prism.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/prism-highlight\/css\/themes\/prism-one-light.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/featherlight\/css\/featherlight.min.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/plugins\/login\/css\/login.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/shortcode-core\/css\/shortcode-notice.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
+            },
+            "\/user\/plugins\/shortcode-ui\/css\/ui-accordion.css": {
+                "rel": "stylesheet",
+                "type": "text\/css",
+                "media": null,
+                "crossorigin": null,
+                "hreflang": null
             },
             "\/user\/themes\/typhoon\/build\/css\/site.css": {
                 "rel": "stylesheet",
                 "type": "text\/css",
                 "media": null,
-                "crossorigin": null
+                "crossorigin": null,
+                "hreflang": null
             }
         },
         "scripts": {
@@ -384,6 +569,11 @@
                 "type": null
             },
             "https:\/\/cdn.jsdelivr.net\/npm\/bootstrap@4.6.0\/dist\/js\/bootstrap.bundle.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/page-stats\/js\/ps.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -423,7 +613,21 @@
                 "defer": "defer",
                 "type": null
             },
+            "inline:ldjson:1": {
+                "type": "application\/ld+json"
+            },
+            "inline:ldjson:2": {
+                "type": "application\/ld+json"
+            },
+            "inline:ldjson:3": {
+                "type": "application\/ld+json"
+            },
             "\/user\/plugins\/lightbox-gallery\/js\/glightbox.min.js": {
+                "async": null,
+                "defer": null,
+                "type": null
+            },
+            "\/user\/plugins\/simplesearch\/js\/simplesearch.js": {
                 "async": null,
                 "defer": null,
                 "type": null
@@ -443,7 +647,12 @@
                 "defer": null,
                 "type": null
             }
+        },
+        "alternates": [],
+        "flags": {
+            "missing_canonical": false,
+            "missing_hreflang": true
         }
     },
-    "debug": "* Found bundle for host graswachstum.ch: 0x5583133a79a0 [can multiplex]\n* Re-using existing connection! (#0) with host graswachstum.ch\n* Connected to graswachstum.ch (85.13.141.84) port 443 (#0)\n* Using Stream ID: 137 (easy handle 0x55831343e3b0)\n> GET \/resources HTTP\/2\r\nHost: graswachstum.ch\r\nuser-agent: Grav SEOMagic Plugin\r\naccept: *\/*\r\naccept-encoding: gzip\r\n\r\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Thu, 13 Feb 2025 20:37:34 GMT\r\n* Added cookie grav-site-23a95d8=\"a4bd0ed06df73a0c86bd695b5a08f920\" for domain graswachstum.ch, path \/, expire 1738876054\n< set-cookie: grav-site-23a95d8=a4bd0ed06df73a0c86bd695b5a08f920; expires=Thu, 06-Feb-2025 21:07:34 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 06 Feb 2025 20:37:34 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n*  CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n*  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 02:51:50 2026 GMT\n*  expire date: May 18 02:51:49 2026 GMT\n*  subjectAltName: host \"graswachstum.ch\" matched cert's \"graswachstum.ch\"\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify ok.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 2: Public key type RSA (4096\/152 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\/resources\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de\/resources]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de\/resources HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Ressourcen\r\n< grav-page-route: \/resources\r\n< grav-page-rawroute: \/resources\r\n< cache-control: max-age=604800\r\n< expires: Fri, 24 Apr 2026 15:24:25 GMT\r\n* Added cookie grav-site-23a95d8=\"6489669cdf1ea1701da7d7b72cba3035\" for domain graswachstum.ch, path \/, expire 1776441265\n< set-cookie: grav-site-23a95d8=6489669cdf1ea1701da7d7b72cba3035; expires=Fri, 17 Apr 2026 15:54:25 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Fri, 17 Apr 2026 15:24:25 GMT\r\n< server: Apache\r\n< \r\n"
 }

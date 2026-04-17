@@ -71,6 +71,14 @@
             "user": "martinz",
             "type": "page",
             "action": "create"
+        },
+        {
+            "id": "b44798cd4ee966ce50b87cdce8ed0dc0",
+            "file": "user\/pages\/06.resources\/default.md.20260417-172507.rev",
+            "timestamp": 1776439507,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
         }
     ]
 }

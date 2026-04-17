@@ -26,52 +26,46 @@ feed:
 ---
 
 ## Grasland bewirtschaften
-*   [eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/einleitung/einleitung-uebersicht)
-*   [Wurzelbilder von Futtergräsern](https://images.wur.nl/digital/collection/coll13/search/searchterm/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae/field/subcol/mode/all/conn/and/order/title/ad/asc)
-*   [AGFF.ch: AGFF-Merkblätter bestellen](https://www.agff.ch/online-shop.html) bzw. [AGFF-Mitglied werden](https://www.agff.ch/mitglied-werden.html)
-* [Raumberg-Gumpenstein.at: PODCASTS :/> AGRAR SCIENCE - WISSEN KOMPAKT](https://raumberg-gumpenstein.at/forschung/infothek/agrar-science-wissen-kompakt.html)
+
+- [eAGFF: Pflanzeneigenschaften kennen, Lenkungsmassnahmen planen](https://www.eagff.ch/wiesenpflanzen-kennen/graeser/einleitung/einleitung-uebersicht)
+- [Wurzelbilder von Futtergräsern](https://images.wur.nl/digital/collection/coll13/search/searchterm/wurzelatlas%20mitteleuropaeischer%20gruenlandpflanzen,%20band%201:%20monocotyledoneae/field/subcol/mode/all/conn/and/order/title/ad/asc)
+- [AGFF.ch: AGFF-Merkblätter bestellen](https://www.agff.ch/online-shop.html) bzw. [AGFF-Mitglied werden](https://www.agff.ch/mitglied-werden.html)
+- [Raumberg-Gumpenstein.at: PODCASTS :/> AGRAR SCIENCE - WISSEN KOMPAKT](https://raumberg-gumpenstein.at/forschung/infothek/agrar-science-wissen-kompakt.html)
 
 ## Futter konservieren
-*   [Zuckergehalt von Wiesen bestimmen](https://www.agrarheute.com/pflanze/gruenland/knoblauchpresse-ins-gras-553913)
 
+- [Zuckergehalt von Wiesen bestimmen](https://www.agrarheute.com/pflanze/gruenland/knoblauchpresse-ins-gras-553913)
 
 ## Professionelles Weidemanagement
-*  [eAGFF.ch: Weideplaner (Exceldatei mit Makros)](https://www.eagff.ch/files/downloads/Weideplaner_AGFF.xlsm)
-*  [Teagasc.ie: Grass10 Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/)
+
+- [eAGFF.ch: Weideplaner (Exceldatei mit Makros)](https://www.eagff.ch/files/downloads/Weideplaner_AGFF.xlsm)
+- [Teagasc.ie: Grass10 Newsletter](https://www.teagasc.ie/crops/grassland/grass10/grass10-newsletter/)
 
 ## Graswachstum messen
 
-* [Github.com: R-Skripts für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
-
+- [Github.com: R-Skripts für automatische Darstellung von Graswachstum auf CH-Karte](https://github.com/AGFF-ADCF-APF/r-grassgrowth)
 
 ## AGFF-Apps (BETA)
-[notice]Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
-[/notice] 
 
+[notice]
+Wir übernehmen keine Garantie für die Richtigkeit der Resultate und Empfehlungen der Apps!
+[/notice]
+[ui-accordion independent="true" open="none"]
+[
 
-[ui-accordion independent=true open=none]
-[[ui-accordion-item title="App Futterwertrechner"]
+[ui-accordion-item title="App Futterwertrechner"]
+[App Futterwertrechner  
+](https://apps.graswachstum.ch/futter)[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode]
 
-[App Futterwertrechner](https://apps.graswachstum.ch/futter)  
-[qrcode size=100]https://graswachstum.ch/futterwert[/qrcode] 
-
-Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf),  [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856)
+Quellen: [AGFF Merkblatt 3](https://www.eagff.ch/files/images/bilder/Raufutter_produzieren/Futterqualitaet/agff-mb3_1707_D_21_bewertung_von_wiesenfutter_ohne_06.05.pdf), [Agridea, Wegleitung zum Fütterungsplan für Milchkühe](https://agridea.abacuscity.ch/abauserimage/Agridea_2_Free/1330_3_D.pdf?xet=1532491420856)
 [/ui-accordion-item]
-
 [ui-accordion-item title="App Heutrocknung steuern"]
-
-[App Heutrocknung steuern](https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html)  
-[qrcode size=100]https://graswachstum.ch/heutrocknung[/qrcode] 
-
+[App Heutrocknung steuern  
+](https://graswachstum.ch/resources/agff-app-drycontrol/agff-dry-calc.html)[qrcode size=100]https://graswachstum.ch/heutrocknung[/qrcode]
 [/ui-accordion-item]
 [ui-accordion-item title="apps.graswachstum.ch"]
-
-[App Heutrocknung steuern](https://apps.graswachstum.ch/v02)  
-[qrcode size=100]https://graswachstum.ch/apps[/qrcode] 
-
+[Graswachstumsbericht  
+](https://apps.graswachstum.ch/v02)[qrcode]https://graswachstum.ch/[/qrcode]
 [/ui-accordion-item]
 
-
 [/ui-accordion]
-
-

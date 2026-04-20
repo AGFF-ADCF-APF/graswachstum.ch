@@ -48,7 +48,7 @@ hero:
             link: 'https://www.agrometeo.ch/de/meteorologie/grafik?stations=159,160,136,223,216,194,55,185,212,128&sensors=1%3Aavg,2%3Aavg,3%3Aavg,1%3Acumsum%3A0,6%3Asum,11%3Aavg,10%3Asum&from=2025-01-01&to=2025-12-31&scale=day&groupBy=sensor'
             classes: 'bg-primary text-white'
         -
-            text: 'Mini-App Futterwert-Rechner'
+            text: '[svg-icon icon="calc" /]Futterwert-Rechner'
             link: 'https://graswachstum.ch/futterwert'
             classes: 'bg-primary text-white'
 show_breadcrumbs: true

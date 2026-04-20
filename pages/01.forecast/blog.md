@@ -50,7 +50,7 @@ hero:
         -
             text: '[svg-icon icon="calculator" /]Futterwertrechner'
             link: 'https://graswachstum.ch/futterwert'
-            classes: 'bg-secondary text-white'
+            classes: 'bg-primary text-white'
 show_breadcrumbs: true
 show_pagination: true
 author: 'Martin Zbinden'

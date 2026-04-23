@@ -98,5 +98,15 @@
             "type": "page",
             "action": "create"
         }
+    ],
+    "\/": [
+        {
+            "id": "b89851182b9db29f45e7595fc46c8728",
+            "file": "user\/pages\/01.forecast\/blog.md.20260423-232603.rev",
+            "timestamp": 1776979563,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
+        }
     ]
 }

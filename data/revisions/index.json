@@ -107,6 +107,14 @@
             "user": "martinz",
             "type": "page",
             "action": "create"
+        },
+        {
+            "id": "43c711bc0db32af1a67f362220b00db1",
+            "file": "user\/pages\/01.forecast\/blog.md.20260423-232649.rev",
+            "timestamp": 1776979609,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
         }
     ]
 }

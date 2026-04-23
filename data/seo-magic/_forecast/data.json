@@ -4,26 +4,26 @@
         "page_rawroute": "\/forecast",
         "page_title": "Wachstumsberichte"
     },
-    "updated": 1776979563,
+    "updated": 1776979609,
     "response_headers": {
         "pragma": "no-cache",
         "grav-page-title": "Wachstumsberichte",
         "grav-page-route": "\/",
         "grav-page-rawroute": "\/forecast",
         "cache-control": "max-age=604800",
-        "expires": "Thu, 30 Apr 2026 21:26:03 GMT",
+        "expires": "Thu, 30 Apr 2026 21:26:49 GMT",
         "content-encoding": "gzip",
         "content-type": "text\/html; charset=utf-8",
-        "date": "Thu, 23 Apr 2026 21:26:03 GMT",
+        "date": "Thu, 23 Apr 2026 21:26:49 GMT",
         "server": "Apache"
     },
     "timings": {
-        "start_time": 1776979563.0341320037841796875,
-        "total_time": 0.287082000000000003847588914140942506492137908935546875,
-        "namelookup_time": 0.01151899999999999972544184601019878755323588848114013671875,
-        "connect_time": 0.01161599999999999958955054779607962700538337230682373046875,
-        "pretransfer_time": 0.06667900000000000215738538145160418935120105743408203125,
-        "starttransfer_time": 0.2863890000000000046753712013014592230319976806640625,
+        "start_time": 1776979609.326795101165771484375,
+        "total_time": 0.47822399999999998243538357201032340526580810546875,
+        "namelookup_time": 0.0003589999999999999983658904856298477170639671385288238525390625,
+        "connect_time": 0.000429000000000000019338697310189445488504134118556976318359375,
+        "pretransfer_time": 0.05252500000000000224265050974281621165573596954345703125,
+        "starttransfer_time": 0.47748299999999999077004986247629858553409576416015625,
         "redirect_time": 0
     },
     "info": {
@@ -32,8 +32,8 @@
         "header_size": 523,
         "request_size": 111,
         "redirect_count": 0,
-        "size_download": 11236,
-        "speed_download": 39138,
+        "size_download": 11267,
+        "speed_download": 23560,
         "download_content_length": -1,
         "primary_ip": "85.13.141.84",
         "certinfo": [],
@@ -41,7 +41,7 @@
         "http_version": 3,
         "ssl_verifyresult": 0,
         "scheme": "HTTPS",
-        "content_size": 63884
+        "content_size": 64562
     },
     "content": {
         "body": "weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 36 (01.09.-08.09.2025)\n        <\/h3>\n      \n            <h1>Wie Wasser zu Milch wird<\/h1>\n<p>Mildes, feuchtes Herbstwetter befeuert derzeit in vielen Regionen das Graswachstum. Zuwachsraten von 80 kg TS\/ha\/Tag und mehr werden im Graswachstum-Messnetz der AGFF registriert. Wie wichtig eine ausreichende Wasserversorgung f&uuml;r Wiesen ist, wird in Gampelen BE deutlich.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 36\n                            <ul>\n                    \n                    <li>\n            Vergleich Graswachstum an verschiedenen Standorten\n                    <\/li>\n    \n                <\/ul>\n                    <\/li>\n                    <li>\n            Wasser, der wichtigste N&auml;hrstoff f&uuml;r Wiesen\n                            <ul>\n                    \n                    <li>\n            Milchwirtschaft auf Sandb&ouml;den dank Bew&auml;sserung\n                    <\/li>\n                    <li>\n            Technische Einrichtungen und Kosten\n                    <\/li>\n                    <li>\n            Verbesserungen sind immer m&ouml;glich\n                    <\/li>\n    \n                <\/ul>\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      5th Sep 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 30 (21.07.-27.07.2025)\n        <\/h3>\n      \n            <h1>Gr&auml;seranteil mit Stickstoff f&ouml;rdern<\/h1>\n<p>Der Regen der vergangenen Woche brachte Entspannung im Gr&uuml;nland. Es bieten sich optimale Bedingungen zum D&uuml;ngen der Weiden mit G&uuml;lle.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 30\n                    <\/li>\n                    <li>\n            G&uuml;llewetter nutzen\n                    <\/li>\n                    <li>\n            Best&auml;nde selektieren\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      26th Jul 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 26 (23.06.-29.06.2025)\n        <\/h3>\n      \n            <h1>Trockenstress in den Voralpen<\/h1>\n<p>In der jetzigen Phase ist ein haush&auml;lterischer Umgang mit den Grasreserven wichtig. Wo es in den letzten 3 Wochen nicht geregnet hat, hat das Graswachstum deutlich abgenommen und die Wiesenpflanzen zeigen zunehmend Stressanzeichen. Die nationale Trockenheitsplattform des Bundes zeigt eine grobe &Uuml;bersicht &uuml;ber die Situation.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 26\n                    <\/li>\n                    <li>\n            Trockenheit: aktuelle Situation\n                    <\/li>\n                    <li>\n            Gestresste Wiesen schonen\n                    <\/li>\n                    <li>\n            Intensit&auml;t reduzieren\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      27th Jun 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 22 (26.05.-01.06.2025)\n        <\/h3>\n      \n            <h1>Mit dem &Auml;hreschieben sinkt das Blattwachstum<\/h1>\n<p>Ein hoher Weidedruck in den letzten Wochen zahlt sich jetzt mit einer h&ouml;heren Grasqualit&auml;t aus. Wenn hingegen viele Geilstellen vorhanden sind, sollte &ndash; bei trockenen Bedingungen &ndash; vorgem&auml;ht oder ein S&auml;uberungsschnitt eingeplant werden.\nUm die Bestockungskrise zu &uuml;berbr&uuml;cken, ist ein vorausschauendes Management &ndash; wie beim Traktorfahren &ndash; wichtig. <\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 22\n                    <\/li>\n                    <li>\n            Die Weide gleicht einer riesigen Solaranlage\n                    <\/li>\n                    <li>\n            Neue Bl&auml;tter dank Reserven\n                    <\/li>\n                    <li>\n            Ein neues Blatt pro Woche\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      30th May 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 18 (28.04.-06.05.2025)\n        <\/h3>\n      \n            <h1>Wachstumsspitze erreicht?<\/h1>\n<p>Das Graswachstum erreicht langsam seinen H&ouml;hepunkt. Dennoch liegen die Messwerte im Messnetz der AGFF eher im mittleren Bereich. Eine Ursachensuche.<\/p>\n<p>\n\n<\/p>\n                <h4>Inhaltsverzeichnis<\/h4>\n        <ul>\n            \n                    <li>\n            Graswachstumsbericht Kalenderwoche 18\n                    <\/li>\n                    <li>\n            Auf Weiden vegetatives Wachstum erhalten\n                    <\/li>\n                    <li>\n            G&uuml;lled&uuml;ngung gut planen\n                    <\/li>\n    \n        <\/ul>\n    \n\n\n    \n    \n      2nd May 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            futterbau\n        \n      \n          \n        \n            agff\n        \n      \n      \n      \n      \n        <h3>\n           Obs'herbe: Studie zu Silagequalit&auml;t \n        <\/h3>\n      \n            <h1>Fermentation von Grassilagen unter der Lupe<\/h1>\n<p>Eine Studie von Agroscope hat die Faktoren untersucht, die die Fermentationsqualit&auml;t von Grassilagen aus Dauerwiesen beeinflussen. Die Ergebnisse zeigen eine starke Variabilit&auml;t in der Silagequalit&auml;t, die durch verschiedene Faktoren wie den Vegetationszyklus, den Trockenmassegehalt und die botanische Zusammensetzung beeinflusst wird. Silagen aus den ersten Schnitten des Jahres neigen dazu, besser zu fermentieren, w&auml;hrend die letzten Schnitte mehr Risiken bergen. Die Studie empfiehlt, gute Silierpraktiken anzuwenden, um eine qualitativ hochwertige Futterproduktion zu gew&auml;hrleisten.<\/p>\n\n    \n    \n      3rd Apr 2025\n\n\n          \n\n  \n\n  \n          \n        \n      \n        \n      \n            \n          \n        \n            weide\n        \n      \n          \n        \n            gallerie\n        \n      \n          \n        \n            wachstumsbericht\n        \n      \n      \n      \n      \n        <h3>\n           Woche 14 (31.03.-06.04.2025)\n        <\/h3>\n      \n            <h1>Graswachstum im Aufwind<\/h1>\n<p>Mit zunehmenden Sonnenstunden steigt auch die Bodentemperatur, welche in der Talzone  bereits zwischen 8 und 10 &deg; Celsius liegt. Erste Vollweidebetriebe haben bereits gegen 90% Weidefutteranteil in der Gesamtration. Kalte N&auml;chte d&uuml;rften das Wachstum n&auml;chste Woche aber noch einmal bremsen.\nAusserdem: Zupftest f&uuml;r Neuansaaten, Farmwalks auf verschiedenen Betrieben<\/p>\n\n    \n    \n      2nd Apr 2025",
@@ -773,29 +773,29 @@
             "charset": "utf-8",
             "viewport": "width=device-width, initial-scale=1",
             "generator": "GravCMS",
-            "description": "AGFF-Grasmessnetzwerk",
-            "title": "Wachstumsberichte",
+            "description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Die Weide gleicht einer riesigen Solaranlage Neue Bl\u00e4tter dank Reserven Ein neues Blatt pro Woche 30t\u2026",
+            "title": "Wachstumsberichte | graswachstum.ch",
             "image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "og:url": "https:\/\/graswachstum.ch\/de",
             "og:site_name": "graswachstum.ch",
-            "og:title": "Wachstumsberichte",
-            "og:description": "AGFF-Grasmessnetzwerk",
+            "og:title": "Wachstumsberichte | graswachstum.ch",
+            "og:description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Die Weide gleicht einer riesigen Solaranlage Neue Bl\u00e4tter dank Reserven Ein neues Blatt pro Woche 30t\u2026",
             "og:type": "website",
             "og:image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:alt": "Wachstumsberichte",
+            "og:image:alt": "Wachstumsberichte | graswachstum.ch",
             "og:image:secure": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
             "og:locale": "de",
             "og:locale:alternate": "fr",
             "twitter:card": "summary_large_image",
-            "twitter:title": "Wachstumsberichte",
-            "twitter:description": "AGFF-Grasmessnetzwerk",
+            "twitter:title": "Wachstumsberichte | graswachstum.ch",
+            "twitter:description": "Inhaltsverzeichnis Graswachstumsbericht Kalenderwoche 22 Die Weide gleicht einer riesigen Solaranlage Neue Bl\u00e4tter dank Reserven Ein neues Blatt pro Woche 30t\u2026",
             "twitter:image": "https:\/\/graswachstum.ch\/de\/seomagic-image.jpg",
-            "twitter:image:alt": "Wachstumsberichte",
+            "twitter:image:alt": "Wachstumsberichte | graswachstum.ch",
             "twitter:label1": "Est. reading time",
-            "twitter:data1": "0 Minuten",
-            "keywords": ""
+            "twitter:data1": "2 Minuten",
+            "keywords": "wachstumsbericht,weide,woche,2025,graswachstumsbericht,kalenderwoche,inhaltsverzeichnis,30th,31.03.-06.04.2025,gallerie"
         },
         "icon": "\/user\/assets\/typhoon\/favicon.png",
         "canonical": "https:\/\/graswachstum.ch\/de",
@@ -1052,5 +1052,5 @@
             "missing_hreflang": true
         }
     },
-    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n*  CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n*  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 02:51:50 2026 GMT\n*  expire date: May 18 02:51:49 2026 GMT\n*  subjectAltName: host \"graswachstum.ch\" matched cert's \"graswachstum.ch\"\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify ok.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 2: Public key type RSA (4096\/152 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsberichte\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/forecast\r\n< cache-control: max-age=604800\r\n< expires: Thu, 30 Apr 2026 21:26:03 GMT\r\n* Added cookie grav-site-23a95d8=\"25187f3d9f79ee4571b7497a67451f6a\" for domain graswachstum.ch, path \/, expire 1776981363\n< set-cookie: grav-site-23a95d8=25187f3d9f79ee4571b7497a67451f6a; expires=Thu, 23 Apr 2026 21:56:03 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 23 Apr 2026 21:26:03 GMT\r\n< server: Apache\r\n< \r\n"
+    "debug": "* WARNING: failed to open cookie file \"\"\n* Host graswachstum.ch:443 was resolved.\n* IPv6: (none)\n* IPv4: 85.13.141.84\n*   Trying 85.13.141.84:443...\n* Connected to graswachstum.ch (85.13.141.84) port 443\n* ALPN: curl offers h2,http\/1.1\n*  CAfile: \/etc\/ssl\/certs\/ca-certificates.crt\n*  CApath: \/etc\/ssl\/certs\n* SSL connection using TLSv1.3 \/ TLS_AES_256_GCM_SHA384 \/ X25519 \/ RSASSA-PSS\n* ALPN: server accepted h2\n* Server certificate:\n*  subject: CN=graswachstum.ch\n*  start date: Feb 17 02:51:50 2026 GMT\n*  expire date: May 18 02:51:49 2026 GMT\n*  subjectAltName: host \"graswachstum.ch\" matched cert's \"graswachstum.ch\"\n*  issuer: C=US; O=Let's Encrypt; CN=R13\n*  SSL certificate verify ok.\n*   Certificate level 0: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 1: Public key type RSA (2048\/112 Bits\/secBits), signed using sha256WithRSAEncryption\n*   Certificate level 2: Public key type RSA (4096\/152 Bits\/secBits), signed using sha256WithRSAEncryption\n* using HTTP\/2\n* [HTTP\/2] [1] OPENED stream for https:\/\/graswachstum.ch\/de\n* [HTTP\/2] [1] [:method: GET]\n* [HTTP\/2] [1] [:scheme: https]\n* [HTTP\/2] [1] [:authority: graswachstum.ch]\n* [HTTP\/2] [1] [:path: \/de]\n* [HTTP\/2] [1] [user-agent: Grav SEOMagic Plugin]\n* [HTTP\/2] [1] [accept: *\/*]\n* [HTTP\/2] [1] [accept-encoding: gzip]\n> GET \/de HTTP\/2\r\nHost: graswachstum.ch\r\nUser-Agent: Grav SEOMagic Plugin\r\nAccept: *\/*\r\nAccept-Encoding: gzip\r\n\r\n* old SSL session ID is stale, removing\n< HTTP\/2 200 \r\n< pragma: no-cache\r\n< grav-page-title: Wachstumsberichte\r\n< grav-page-route: \/\r\n< grav-page-rawroute: \/forecast\r\n< cache-control: max-age=604800\r\n< expires: Thu, 30 Apr 2026 21:26:49 GMT\r\n* Added cookie grav-site-23a95d8=\"49054580de43257306aa223ddab7d6f4\" for domain graswachstum.ch, path \/, expire 1776981409\n< set-cookie: grav-site-23a95d8=49054580de43257306aa223ddab7d6f4; expires=Thu, 23 Apr 2026 21:56:49 GMT; Max-Age=1800; path=\/; domain=graswachstum.ch; secure; HttpOnly; SameSite=Lax\r\n< vary: Accept-Encoding,User-Agent\r\n< content-encoding: gzip\r\n< content-type: text\/html; charset=utf-8\r\n< date: Thu, 23 Apr 2026 21:26:49 GMT\r\n< server: Apache\r\n< \r\n"
 }

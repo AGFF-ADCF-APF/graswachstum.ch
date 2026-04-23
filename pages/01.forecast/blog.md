@@ -36,7 +36,7 @@ hero:
     image: csm_img_7352_f4e25fef1d.webp
     buttons:
         0:
-            text: '[svg-icon icon="calculator" /]Messwerte'
+            text: '[svg-icon icon="chart-line" /]Messwerte'
             link: '/growth#karte'
             classes: 'bg-primary text-white'
         3:

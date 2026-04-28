@@ -1,3 +1,15 @@
+# v2.0.1
+## 04/20/2026
+
+1. [](#improved) 
+    * Added compatibility setting for 2.0 in `blueprints.yaml`
+
+# v2.0.0
+## 04/17/2026
+
+1. [](#new) 
+    * New Grav 2.0 Support
+
 # v1.0.2
 ## 05/10/2023
 

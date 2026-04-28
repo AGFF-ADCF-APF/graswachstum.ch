@@ -50,13 +50,13 @@ npm update
 There are times when you need to step beyond the TailwindCSS-provided utility classes and use your own custom CSS.  This is most likely to occur when you have no ability to change the output and include the required classes.  For these situations, or when you want to make modifications to the core `tailwind.config.js` file or add your own custom css, you need to recompile the development `build/css/site.css` file.  The best way to do this is to run in a dynamic 'watch' mode that automatically recompiles when a change is detected:
 
 ```shell script
-npm run watch
+npm run dev
 ```
 
 If you want to do a quick compile that does not watch, simply use:
 
 ```shell
-npm run build
+npm run prod
 ```
 
 The custom modifications should be put in the `css/custom/` folder.  If you create a new file you should reference that in the top level `css/site.css` file to ensure it gets picked up and compiled. Best practices for developing custom Tailwind CSS dictates that you should try to use the existing Tailwind classes via the `@apply` directive as much as possible to ensure global configuration trickles down to your custom CSS.
@@ -83,11 +83,11 @@ body {
 
 Prior to JIT support in Tailwind CSS it was essential to compile your CSS for production before using.  This ensured that only the **required** classes were included in your production CSS.  JIT however has changed how we work with Tailwind.  With JIT enabled (the default for Typhoon), the `site.css` file is always **purged** and is already optimized to only include the required CSS files.  This means that you no longer have to build a specific production version of your CSS.  You can simply use the default `site.css`. 
 
-However, you still should use `npm run watch` or `npm run build` to ensure that the site.css always contains the Tailwind CSS classes you are using.
+However, you still should use `npm run dev` or `npm run prod` to ensure that the site.css always contains the Tailwind CSS classes you are using.
 
 #### Troubleshooting CSS issues
 
-The Tailwind CSS file which is compiled into `buld/css/site.css` file utilizes the `purgecss` package to only include CSS classes that are being used.  PostCSS is used to handle this process, and the configuration for where `purgecss` looks for classes is contained in the `tailwind.config.js` file.  Feel free to modify this file to include other locations if a class is not getting found and included in the production CSS.
+The Tailwind CSS file which is compiled into `buld/css/site.css` file utilizes the `purgecss` package to only include CSS classes that are being used.  Vite is used to handle this process, and the configuration for where `purgecss` looks for classes is contained in the `tailwind.config.js` file.  Feel free to modify this file to include other locations if a class is not getting found and included in the production CSS.
 
 By default, Typhoon's purge configuration looks like this:
 
@@ -150,7 +150,7 @@ The relevant Twig code (`templates/modular/features.html.twig`) looks like this:
                 <a class="group-hover:text-primary dark:group-hover:text-primary" href="{{ url(feature.link) }}">
                 {% endif %}
                     <div class="text-gray-500 group-hover:text-primary rounded-md p-3 text-center">
-                            {{ svg_icon(feature.icon, 'w-16 h-16 stroke-current stroke-3/2 mx-auto')|raw }}
+                            {{ svg_icon(feature.icon, 'w-16 h-16 stroke-current stroke-[1.5] mx-auto')|raw }}
                     </div>
 ```
 
@@ -159,7 +159,7 @@ Here you can see that we're looping over the `page.header.features` and assignin
 If you want to target a specific icon directly, or use a different icon set, you can simply change the path, for example:
 
 ```twig
-{{ svg_icon('brands/codeship.svg', 'w-16 h-16 stroke-current stroke-3/2 mx-auto')|raw }}
+{{ svg_icon('brands/codeship.svg', 'w-16 h-16 stroke-current stroke-[1.5] mx-auto')|raw }}
 ```
 
 Also feel free to play with the Tailwind classes to make the icons a different size, or color, etc.

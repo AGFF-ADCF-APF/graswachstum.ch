@@ -283,6 +283,8 @@ THEME_TYPHOON:
     MENU_ICON_CLASSES_HELP: Extra classes to override the deafult theme-level icon classes
     MODULAR_ONPAGE_MENU: Modular On-Page menu
     MODULAR_ONPAGE_MENU_HELP: Enable an on-page menu that jumps to the sections (modular sub-pages) on this modular page only
+    MODULAR_ONPAGE_MENU_REPLACE: Replace Main Menu
+    MODULAR_ONPAGE_MENU_REPLACE_HELP: When enabled, the on-page menu replaces the main header navigation. When disabled, a separate sticky scrollspy bar slides into view as you scroll, keeping the main navigation intact.
     IMAGE_ALIGN: Image Alignment
     VERTICAL_CLASSES: Vertical Classes
     VERTICAL_CLASSES_HELP: Tailwind classes used for the vertical layout

@@ -1,3 +1,73 @@
+# v4.2.1
+## 04/07/2026
+
+1. [](#improved)
+   * Added hreflang partial twig if `langswitcher` is available.
+
+# v4.2.0
+## 03/06/2026
+
+1. [](#new)
+    * Added new scrollspy on-page navigation mode for modular pages. When `onpage_menu` is enabled with `onpage_menu_replace: false`, a sticky scrollspy bar slides into view as you scroll, highlighting the active section — while keeping the main navigation intact
+    * Added `Replace Main Menu` toggle to modular page blueprint to choose between legacy menu-replacement behavior (default) and the new scrollspy bar
+    * Added symlink-aware `resolve-sources.js` script for Tailwind CSS builds, ensuring correct `@source` paths when the theme is symlinked during development
+1. [](#bugfix)
+    * Fixed empty fixed header bar appearing on mobile when `Display Mobile Navigation` is disabled and `Fixed Header Bar` is enabled ([#548](https://github.com/getgrav/grav-premium-issues/issues/548))
+    * Fixed FOUC (flash of unstyled content) on page load by adding inline early theme-detection script
+1. [](#improved)
+    * Updated to latest Tailwind `v4.2.1`
+
+# v4.1.0
+## 11/12/2025
+
+1. [](#improved)
+    * Updated to latest Tailwind `v4.1.17`
+
+# v4.0.4
+## 03/17/2025
+
+1. [](#bugfix)
+    * Fixed invalid nesting in `sidebar-nav` styling
+
+# v4.0.3
+## 03/14/2025
+
+1. [](#improved)
+    * Updated to latest Tailwind `v4.0.14`
+    * UPdated AlpineJS to `3.14.9`
+
+# v4.0.2
+## 03/03/2025
+
+1. [](#improved)
+    * Updated to latest Tailwind `v4.0.9`
+    * Minor improvements to login styling in dark mode
+
+# v4.0.0
+## 02/12/2025
+
+1. [](#new)
+   * MAJOR UPDATE: Migrated to TailwindCSS 4.0.6
+   * HUGE SPEED INCREASES with new LightningCSS engine
+   * Migrated to `site.css` based configuration, removed `tailwind.config.js`
+   * Moved to **Vite** removed **Post CSS** for Tailwind building
+   * Optimized CSS to remove unneeded styles and unified styles so that everything uses Tailwind classes across the board
+   * Migrated deprecated classes for Tailwind 4.0
+1. [](#improved)
+   * Upgrade **AlpineJS** to `3.14.8`
+   * Updated Tailwind `forms` and `typography` plugins to latest versions
+   * Removed `columns` Tailwind plugin as no longer needed
+   * Removed `debug-screens` Tailwind plugin as not compatible with Tailwind 4.0
+
+# v2.4.8
+## 02/04/2025
+
+1. [](#improved)
+   * Updated to latest Tailwind `v3.4.17` + PostCss `v8.4.49`
+   * Updated `parials/taxonomylist.html.twig` to support latest updates in that plugin
+3. [](#bugfix)   
+   * Fix for `modular/image-block.html.twig` not displaying selected image correctly 
+
 # v2.4.7
 ## 11/06/2024
 

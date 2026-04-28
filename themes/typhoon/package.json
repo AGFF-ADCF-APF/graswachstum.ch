@@ -1,26 +1,24 @@
 {
-  "name": "postcss8-tailwind",
+  "name": "typhoon-theme",
   "repository": "",
   "private": true,
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "watch": "tailwindcss -i ./css/site.css -o ./build/css/site.css --postcss --watch --minify --verbose",
-    "dev": "tailwindcss -i ./css/site.css -o ./build/css/site.css --postcss --watch --minify --verbose",
-    "build": "NODE_ENV=production tailwindcss -i ./css/site.css -o ./build/css/site.css --postcss --minify",
-    "prod": "NODE_ENV=production tailwindcss -i ./css/site.css -o ./build/css/site.css --postcss --minify"
+    "resolve-sources": "node scripts/resolve-sources.js",
+    "dev": "npm run resolve-sources && npx @tailwindcss/cli -i ./css/site.css -o ./build/css/site.css --watch --minify --verbose",
+    "prod": "npm run resolve-sources && NODE_ENV=production npx @tailwindcss/cli -i ./css/site.css -o ./build/css/site.css --minify"
   },
   "dependencies": {
-    "@tailwindcss/forms": "^0.5.9",
-    "@tailwindcss/typography": "^0.5.15",
-    "postcss-import": "^16.1.0",
-    "tailwindcss-debug-screens": "^2.2.1",
-    "tailwindcss-multi-column": "^1.0.2"
+    "@tailwindcss/cli": "^4.2.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5",
+    "@tailwindcss/vite": "^4.2.1",
+    "alpinejs": "^3.15.8"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14"
+    "autoprefixer": "^10.4.27",
+    "tailwindcss": "^4.2.1"
   }
 }

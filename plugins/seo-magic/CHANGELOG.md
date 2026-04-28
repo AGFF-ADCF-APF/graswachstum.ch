@@ -1,3 +1,34 @@
+# v7.0.1
+## 04/23/2026
+
+1. [](#bugfix)
+   * Blueprint typo
+
+# v7.0.0
+## 04/22/2026
+
+1. [](#new)
+    * Grav 2.0 + API + Admin 2.0 support
+    * Requires admin-next that exposes `window.__GRAV_CONTENT_LANG` to custom field web components
+1. [](#bugfix)
+    * Custom fields now read the active content language from `window.__GRAV_CONTENT_LANG` instead of `localStorage` directly — the stored key is site-scoped and was not resolvable from web components on sub-path installs, causing SEO checks to silently fall back to the default language
+
+# v6.2.4
+## 03/31/2026
+
+1. [](#improved)
+  * Image code cleanup
+  * Safer handling of `null` values when getting images
+1. [](#bugfix)
+  * Fixed a PHP 8.5 stream bug
+
+# v6.2.3
+## 03/14/2026
+
+1. [](#bugfix)
+  * Fix edge case of pages having custom extensions
+  * Try-catch to avoid rendering exceptions
+
 # v6.2.2
 ## 12/08/2025
 

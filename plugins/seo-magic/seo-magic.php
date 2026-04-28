@@ -72,6 +72,16 @@ class SeoMagicPlugin extends Plugin
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
             'onAdminGenerateReports' => ['onAdminGenerateReports', 10],
             'onSchedulerInitialized' => ['onSchedulerInitialized', 0],
+            // Admin-next (API) integration events
+            'onApiRegisterRoutes'    => ['onApiRegisterRoutes', 0],
+            'onApiSidebarItems'      => ['onApiSidebarItems', 0],
+            'onApiPluginPageInfo'    => ['onApiPluginPageInfo', 0],
+            'onApiGenerateReports'   => ['onApiGenerateReports', 0],
+            'onApiMenubarItems'      => ['onApiMenubarItems', 0],
+            'onApiMenubarAction'     => ['onApiMenubarAction', 0],
+            // Static subscriptions so API-triggered saves also fire SEO re-crawl
+            'onAdminAfterSave'       => ['onObjectSave', 0],
+            'onAdminAfterDelete'     => ['onObjectDelete', 0],
         ];
     }
 
@@ -91,6 +101,7 @@ class SeoMagicPlugin extends Plugin
     public function onPluginsInitialized()
     {
         $this->grav['seomagic'] = $seo = new SEOMagic();
+        $this->grav['seomagic_plugin'] = $this;
 
         /** @var Uri $uri */
         $uri = $this->grav['uri'];
@@ -116,23 +127,11 @@ class SeoMagicPlugin extends Plugin
                 ]);
             }
 
-            // Log current admin template/route for troubleshooting
-            if (isset($this->grav['log']) && method_exists($this->grav['log'], 'notice')) {
-                try { $this->grav['log']->notice('SEOMagic admin context', ['location' => $admin->location, 'route' => $admin->route]); } catch (\Throwable $e) {}
-            }
-
             // When on dashboard route, add templates + assets/vars (Cloudflare pattern)
             if ($admin->location === $this->admin_route || $admin->route === $this->admin_route) {
                 $this->enable([
                     'onTwigTemplatePaths' => ['onTwigAdminTemplatePaths', 0],
                     'onPageInitialized'   => ['onPageInitializedAdmin', 0],
-                ]);
-            }
-
-            if ($this->config->get('plugins.seo-magic.enable_admin_page_events', true)) {
-                $this->enable([
-                    'onAdminAfterSave'   => ['onObjectSave', 0],
-                    'onAdminAfterDelete' => ['onObjectDelete', 0],
                 ]);
             }
 
@@ -175,6 +174,167 @@ class SeoMagicPlugin extends Plugin
             ];
         }
     }
+
+    // ─── Admin-Next (API) Event Handlers ─────────────────────────────
+
+    /**
+     * Register API routes for admin-next.
+     */
+    public function onApiRegisterRoutes(Event $event): void
+    {
+        $routes = $event['routes'];
+        $controller = \Grav\Plugin\SEOMagic\SeoMagicApiController::class;
+
+        $routes->get('/seo-magic/config', [$controller, 'config']);
+        $routes->get('/seo-magic/dashboard', [$controller, 'dashboard']);
+        $routes->post('/seo-magic/crawl', [$controller, 'crawl']);
+        $routes->post('/seo-magic/crawl-changed', [$controller, 'crawlChanged']);
+        $routes->post('/seo-magic/delete-data', [$controller, 'deleteData']);
+        $routes->get('/seo-magic/export/csv', [$controller, 'exportCsv']);
+        $routes->get('/seo-magic/status', [$controller, 'status']);
+        $routes->post('/seo-magic/cancel', [$controller, 'cancel']);
+        $routes->get('/seo-magic/page-data/{route:.*}', [$controller, 'pageData']);
+        $routes->get('/seo-magic/sitemap-status', [$controller, 'sitemapStatus']);
+    }
+
+    /**
+     * Register sidebar item for admin-next.
+     */
+    public function onApiSidebarItems(Event $event): void
+    {
+        if (!$this->config->get('plugins.seo-magic.enabled', true)) {
+            return;
+        }
+
+        $items = $event['items'] ?? [];
+        $items[] = [
+            'id'       => 'seo-magic',
+            'plugin'   => 'seo-magic',
+            'label'    => 'SEO-Magic',
+            'icon'     => 'fa-chart-line',
+            'route'    => '/plugin/seo-magic',
+            'priority' => 5,
+        ];
+        $event['items'] = $items;
+    }
+
+    /**
+     * Provide page definition for admin-next plugin page.
+     */
+    public function onApiPluginPageInfo(Event $event): void
+    {
+        if ($event['plugin'] !== 'seo-magic') {
+            return;
+        }
+
+        if (!$this->config->get('plugins.seo-magic.enabled', true)) {
+            return;
+        }
+
+        $event['definition'] = [
+            'id'        => 'seo-magic',
+            'plugin'    => 'seo-magic',
+            'title'     => 'SEO Magic',
+            'icon'      => 'fa-chart-line',
+            'page_type' => 'component',
+            'actions'   => [
+                [
+                    'id'       => 'recrawl',
+                    'label'    => 'Re-crawl',
+                    'icon'     => 'fa-refresh',
+                    'children' => [
+                        [
+                            'id'    => 'recrawl-changed',
+                            'label' => 'Re-crawl (changed only)',
+                            'icon'  => 'fa-refresh',
+                        ],
+                    ],
+                ],
+                [
+                    'id'    => 'export-csv',
+                    'label' => 'Export CSV',
+                    'icon'  => 'fa-download',
+                ],
+                [
+                    'id'       => 'options',
+                    'label'    => 'Options',
+                    'icon'     => 'fa-cog',
+                    'navigate' => '/plugins/seo-magic',
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Provide reports data for admin-next reports page.
+     */
+    public function onApiGenerateReports(Event $event): void
+    {
+        if (!$this->config->get('plugins.seo-magic.enable_site_seo_report')) {
+            return;
+        }
+
+        $summary = $this->summarizeSeoData($this->getSeoData());
+
+        $reports = $event['reports'];
+        $reports[] = [
+            'id'        => 'seo-magic',
+            'title'     => 'SEO-Magic Report',
+            'provider'  => 'seo-magic',
+            'component' => 'seo-magic-report',
+            'status'    => $summary['issues_pages'] > 0 ? 'warning' : 'success',
+            'message'   => sprintf(
+                '%d pages crawled, %d%% avg score, %d broken links',
+                $summary['pages'],
+                $summary['avg'],
+                $summary['broken_links']
+            ),
+            'items'     => $summary,
+        ];
+        $event['reports'] = $reports;
+    }
+
+    /**
+     * Register menubar item for admin-next quicktray.
+     */
+    public function onApiMenubarItems(Event $event): void
+    {
+        if (!$this->config->get('plugins.seo-magic.enable_quicktray')) {
+            return;
+        }
+
+        $items = $event['items'] ?? [];
+        $items[] = [
+            'id'      => 'seo-magic-crawl',
+            'plugin'  => 'seo-magic',
+            'label'   => 'SEO-Magic Crawl',
+            'icon'    => 'fa-wand-magic-sparkles',
+            'action'  => 'crawl',
+            'confirm' => 'Start SEO crawl of all pages?',
+        ];
+        $event['items'] = $items;
+    }
+
+    /**
+     * Handle menubar action for admin-next.
+     */
+    public function onApiMenubarAction(Event $event): void
+    {
+        if ($event['plugin'] !== 'seo-magic') {
+            return;
+        }
+
+        if ($event['action'] === 'crawl') {
+            $this->initScanStatus('full');
+            $spawned = $this->launchBackgroundScan('full');
+            $event['result'] = [
+                'status'  => 'success',
+                'message' => $spawned ? 'SEO crawl started in background' : 'SEO crawl scheduled',
+            ];
+        }
+    }
+
+    // ─── Admin-Classic Event Handlers ──────────────────────────────────
 
     /** Add admin templates path for dashboard rendering (Admin collector) */
     public function onAdminTwigTemplatePaths($event): void
@@ -682,6 +842,9 @@ class SeoMagicPlugin extends Plugin
     {
         $entries = [];
         $ignore_routes = (array)$this->grav['config']->get('plugins.seo-magic.ignore_routes', []);
+        // Strip base path from sitemap routes so data is stored by page route, not full URI
+        $basePath = rtrim($this->grav['base_url_relative'] ?? '', '/');
+
         try {
             $sitemapResult = \Grav\Plugin\SEOMagic\SEOGenerator::getSiteMap($sitemapUrl, 'GET');
             $resp = is_array($sitemapResult) ? ($sitemapResult[1] ?? null) : null;
@@ -689,11 +852,17 @@ class SeoMagicPlugin extends Plugin
                 $content_type = $resp->getHeaders()['content-type'][0] ?? '';
                 if (\Grav\Common\Utils::contains($content_type, 'application/json')) {
                     $map = $resp->toArray();
-                    foreach ($map as $set) {
+                    foreach ($map as $lang => $set) {
+                        if (!is_array($set)) { continue; }
                         foreach ($set as $route => $entry) {
                             if (!empty($entry['location'])) {
-                                if (!in_array($route, $ignore_routes, true)) {
-                                    $entries[] = ['route' => $route, 'url' => $entry['location']];
+                                // Strip base path prefix (e.g. /grav-api) from route
+                                $cleanRoute = $route;
+                                if ($basePath && str_starts_with($cleanRoute, $basePath)) {
+                                    $cleanRoute = substr($cleanRoute, strlen($basePath));
+                                }
+                                if (!in_array($cleanRoute, $ignore_routes, true)) {
+                                    $entries[] = ['route' => $cleanRoute, 'url' => $entry['location'], 'lang' => $lang];
                                 }
                             }
                         }
@@ -705,14 +874,15 @@ class SeoMagicPlugin extends Plugin
         }
 
         if (empty($entries)) {
-            // fallback to pages enumeration
+            // fallback to pages enumeration (default language only)
             try {
                 $pages = $this->grav['pages'];
+                $defaultLang = $this->grav['language']->getDefault() ?: 'en';
                 foreach ($pages->all() as $page) {
                     if (!$page->routable() || !$page->published() || !is_null($page->redirect())) { continue; }
                     $route = $page->route();
                     if (in_array($route, $ignore_routes, true)) { continue; }
-                    $entries[] = ['route' => $route, 'url' => $page->url(true, true, true)];
+                    $entries[] = ['route' => $route, 'url' => $page->url(true, true, true), 'lang' => $defaultLang];
                 }
                 $this->logMessage('info', 'SEO-Magic fallback enumeration collected pages', ['count' => count($entries)]);
             } catch (\Throwable $e) {}
@@ -1441,7 +1611,11 @@ class SeoMagicPlugin extends Plugin
             $seo_data = $seo->getData($page);
             // Fallback bootstrap for brand-new pages with no SEO data yet
             if (!$seo_data->get('updated')) {
-                $body = strip_tags((string)$page->content());
+                try {
+                    $body = strip_tags((string)$page->content());
+                } catch (\Exception $e) {
+                    $body = strip_tags($page->getRawContent());
+                }
                 $lang = $seo->getLanguage();
                 $seo_data->set('head.title', $page->title());
                 $seo_data->set('content.body', $body);
@@ -1501,67 +1675,22 @@ class SeoMagicPlugin extends Plugin
 
         // Handle direct requests to dynamic SEO-Magic image regardless of fallback flow
         $uri = $this->grav['uri'];
-        $basename = strtolower((string)$uri->basename());
-        if (in_array($basename, ['seomagic-image.jpg','seomagic-image.jpeg','seomagic-image.png'], true)) {
-            $images_cache = $this->grav['locator']->findResource('cache://seo-magic/images', true, true);
-            if (!file_exists($images_cache)) {
-                Folder::create($images_cache);
-            }
-            // Determine the page by using the directory part of the path
+        if ($this->isSeoMagicImageRequest($uri->basename())) {
             $route_dir = rtrim((string)dirname($uri->path()), '/');
-            /** @var \Grav\Common\Page\Pages $pages */
-            $pages = $this->grav['pages'];
-            $target = $pages->find($route_dir ?: '/', true);
-            if ($target) {
+            $target = $this->grav['pages']->find($route_dir ?: '/', true);
+
+            if ($target instanceof PageInterface && $target->exists()) {
                 /** @var SEOMagic $seo */
                 $seo = $this->grav['seomagic'];
                 $image_type = $seo->pluginVar($target, 'seo-magic.images.type', 'auto');
                 if ($image_type !== 'none') {
                     $image = $seo->getPageImage($image_type, $target, false);
-                    // External: webshot streamed; non-webshot cached then streamed
-                    if (Uri::isExternal($image)) {
-                        if ($this->isWebshotImage($image)) {
-                            try {
-                                $client = Client::getClient();
-                                $response = $client->request('GET', $image);
-                                if ($response->getStatusCode() === 200) {
-                                    $headers = $response->getHeaders(false);
-                                    $contentType = $headers['content-type'][0] ?? 'application/octet-stream';
-                                    $content = $response->getContent();
-                                    $this->sanitizeImageResponse($content, $contentType);
-                                    if (ini_get('zlib.output_compression')) { @ini_set('zlib.output_compression', 'Off'); }
-                                    header('Content-Type: ' . $contentType);
-                                    header('Content-Length: ' . strlen($content));
-                                    if ($this->grav['config']->get('system.cache.enabled')) {
-                                        header('Cache-Control: public, max-age=86400');
-                                        header('Expires: ' . gmdate('D, d M Y H:i:s T', time() + 86400));
-                                        header('Pragma: cache');
-                                    }
-                                    echo $content; exit;
-                                }
-                            } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $ex) { /* fall through */ }
-                        } else {
-                            $hash = md5($uri->path());
-                            $extension = pathinfo($image, PATHINFO_EXTENSION) ?: 'png';
-                            $local_image = "$images_cache/$hash.$extension";
-                            if (!file_exists($local_image)) {
-                                $client = Client::getClient();
-                                try {
-                                    $response = $client->request('GET', $image);
-                                    if ($response->getStatusCode() === 200) {
-                                        $image_content = $response->getContent();
-                                        file_put_contents($local_image, $image_content);
-                                    }
-                                } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $ex) { /* ignore */ }
-                            }
-                            if (file_exists($local_image)) { Utils::download($local_image, false); }
-                        }
-                    } else {
-                        Utils::download($image, false);
+                    if ($image) {
+                        $this->serveImage($image, $uri);
                     }
                 }
             }
-            // If anything failed above, make sure Grav continues (404)
+            // If anything failed above, Grav continues normally (404)
         }
 
         $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? null;
@@ -1587,7 +1716,9 @@ class SeoMagicPlugin extends Plugin
 
         /** @var Page $page */
         $page = $e['page'];
-        if ($page->templateFormat() === 'html') {
+        $format = strtolower((string)$page->templateFormat());
+        $hasUrlExtension = isset($page->header()->append_url_extension);
+        if ($format === 'html' || $hasUrlExtension) {
             $metadata = $seo->updateMetadata($page);
             if ($metadata) {
                 $page->header()->metadata = $metadata;
@@ -1597,89 +1728,32 @@ class SeoMagicPlugin extends Plugin
 
     public function onPageFallBackUrl($event): bool
     {
-        $uri = $event['uri'];
+        if (!$this->isSeoMagicImageRequest($event['filename'])) {
+            return false;
+        }
+
+        $this->grav['log']->notice('SEOMagic fallback hit', [
+            'uri' => $event['uri']->path(),
+            'filename' => basename((string)$event['filename']),
+        ]);
+
         $page = $event['page'];
-        $filename = $event['filename'];
-        $local_path = $this->grav['locator']->findResource('cache://seo-magic/images', true, true);
-
-        if (!file_exists($local_path)) {
-            Folder::create($local_path);
+        if (!$page instanceof PageInterface || !$page->exists()) {
+            return false;
         }
 
-        // check if this is an seo-magic image proxy reference (be tolerant of path)
-        $requested_basename = basename((string)$filename);
-        $requested_basename_lc = strtolower($requested_basename);
-        if (in_array($requested_basename_lc, ['seomagic-image.jpg','seomagic-image.jpeg','seomagic-image.png'], true)) {
-            // Log once for troubleshooting intercepts
-            if (method_exists($this->grav['log'], 'notice')) {
-                $this->grav['log']->notice('SEOMagic fallback hit', ['uri' => $uri->path(), 'filename' => $requested_basename]);
-            }
-
-            if (!$page instanceof PageInterface || !$page->exists()) {
-                return false;
-            }
-
-            /** @var SEOMagic $seo */
-            $seo = $this->grav['seomagic'];
-            $image_type = $seo->pluginVar($page, 'seo-magic.images.type', 'auto');
-            if ($image_type !== 'none') {
-                $image = $seo->getPageImage($image_type, $page, false);
-
-                if (Uri::isExternal($image)) {
-                    // External URL
-                    if ($this->isWebshotImage($image)) {
-                        // Stream remote webshot image directly
-                        try {
-                            $client = Client::getClient();
-                            $response = $client->request('GET', $image);
-                            if ($response->getStatusCode() === 200) {
-                                $headers = $response->getHeaders(false);
-                                $contentType = $headers['content-type'][0] ?? 'application/octet-stream';
-                                $content = $response->getContent();
-
-                                $this->sanitizeImageResponse($content, $contentType);
-
-                                if (ini_get('zlib.output_compression')) {
-                                    @ini_set('zlib.output_compression', 'Off');
-                                }
-                                header('Content-Type: ' . $contentType);
-                                header('Content-Length: ' . strlen($content));
-                                if ($this->grav['config']->get('system.cache.enabled')) {
-                                    header('Cache-Control: public, max-age=86400');
-                                    header('Expires: ' . gmdate('D, d M Y H:i:s T', time() + 86400));
-                                    header('Pragma: cache');
-                                }
-                                echo $content;
-                                exit;
-                            }
-                        } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $e) {
-                            return false;
-                        }
-                    } else {
-                        // Non-webshot external: cache locally once and stream
-                        $hash = md5($uri->path());
-                        $extension = pathinfo($image, PATHINFO_EXTENSION) ?: 'png';
-                        $local_image = "$local_path/$hash.$extension";
-                        if (!file_exists($local_image)) {
-                            $client = Client::getClient();
-                            try {
-                                $response = $client->request('GET', $image);
-                                if ($response->getStatusCode() === 200) {
-                                    $image_content = $response->getContent();
-                                    file_put_contents($local_image, $image_content);
-                                }
-                            } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $e) {
-                                return false;
-                            }
-                        }
-                        Utils::download($local_image,false);
-                    }
-                } else {
-                    // Local file from page media pipeline
-                    Utils::download($image, false);
-                }
-            }
+        /** @var SEOMagic $seo */
+        $seo = $this->grav['seomagic'];
+        $image_type = $seo->pluginVar($page, 'seo-magic.images.type', 'auto');
+        if ($image_type === 'none') {
+            return false;
         }
+
+        $image = $seo->getPageImage($image_type, $page, false);
+        if ($image) {
+            $this->serveImage($image, $event['uri']);
+        }
+
         return false;
     }
 
@@ -1742,9 +1816,100 @@ class SeoMagicPlugin extends Plugin
         }
     }
 
+    protected function serveImage(string $image, $uri): void
+    {
+        if (!Uri::isExternal($image)) {
+            Utils::download($image, false);
+            return;
+        }
+
+        if ($this->isWebshotImage($image)) {
+            $this->streamRemoteImage($image);
+            return;
+        }
+
+        $this->cacheAndServeRemoteImage($image, $uri);
+    }
+
+    protected function isSeoMagicImageRequest($filename): bool
+    {
+        $basename = strtolower(basename((string)$filename));
+        return in_array($basename, ['seomagic-image.jpg', 'seomagic-image.jpeg', 'seomagic-image.png'], true);
+    }
+
+    protected function streamRemoteImage(string $url): bool
+    {
+        try {
+            $client = Client::getClient();
+            $response = $client->request('GET', $url);
+            if ($response->getStatusCode() !== 200) {
+                return false;
+            }
+
+            $content = $response->getContent();
+            $contentType = $response->getHeaders(false)['content-type'][0] ?? 'application/octet-stream';
+            $this->sanitizeImageResponse($content, $contentType);
+            $this->sendImageResponse($content, $contentType);
+        } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $e) {
+            return false;
+        }
+
+        return false;
+    }
+
+    protected function cacheAndServeRemoteImage(string $url, $uri): bool
+    {
+        $cache_path = $this->grav['locator']->findResource('cache://seo-magic/images', true, true);
+        if (!file_exists($cache_path)) {
+            Folder::create($cache_path);
+        }
+
+        $hash = md5($uri->path());
+        $extension = pathinfo($url, PATHINFO_EXTENSION) ?: 'png';
+        $local_file = "$cache_path/$hash.$extension";
+
+        if (!file_exists($local_file)) {
+            try {
+                $client = Client::getClient();
+                $response = $client->request('GET', $url);
+                if ($response->getStatusCode() === 200) {
+                    file_put_contents($local_file, $response->getContent());
+                }
+            } catch (TransportExceptionInterface|ClientExceptionInterface|RedirectionExceptionInterface|ServerExceptionInterface $e) {
+                return false;
+            }
+        }
+
+        if (file_exists($local_file)) {
+            Utils::download($local_file, false);
+        }
+
+        return false;
+    }
+
+    protected function sendImageResponse(string $content, string $contentType): void
+    {
+        if (ini_get('zlib.output_compression')) {
+            @ini_set('zlib.output_compression', 'Off');
+        }
+        header('Content-Type: ' . $contentType);
+        header('Content-Length: ' . strlen($content));
+        if ($this->grav['config']->get('system.cache.enabled')) {
+            header('Cache-Control: public, max-age=86400');
+            header('Expires: ' . gmdate('D, d M Y H:i:s T', time() + 86400));
+            header('Pragma: cache');
+        }
+        echo $content;
+        exit;
+    }
+
     public function onObjectSave($event): bool
     {
         if (defined('CLI_DISABLE_SEOMAGIC')) {
+            return true;
+        }
+
+        if (!$this->config->get('plugins.seo-magic.enable_admin_page_events', true)) {
             return true;
         }
 
@@ -1761,8 +1926,13 @@ class SeoMagicPlugin extends Plugin
 
         if ($routable && $published && is_null($redirect)) {
             $url = $obj->url(true, true, true);
-            // Use rawRoute for consistent storage key across languages and subdirectory installations
+            // Use rawRoute with language prefix for consistent multilang storage
             $route = $obj->rawRoute();
+            $language = $this->grav['language'];
+            if ($language->enabled()) {
+                $activeLang = $language->getLanguage() ?: $language->getDefault() ?: 'en';
+                $route = '/' . $activeLang . $route;
+            }
             $client = SEOGenerator::getHttpClient();
 
             SEOGenerator::processUrlSEOData($url, $client, $route);
@@ -1934,8 +2104,14 @@ class SeoMagicPlugin extends Plugin
 
     public static function shouldShowReportTab()
     {
-        $page = Grav::instance()['admin']->page();
-        return ($page->routable() && $page->published() && is_null($page->redirect()));
+        try {
+            $admin = Grav::instance()['admin'] ?? null;
+            $page = $admin ? $admin->page() : null;
+            return $page && $page->routable() && $page->published() && is_null($page->redirect());
+        } catch (\Throwable $e) {
+            // In API context there may be no current page — default to true (client handles visibility)
+            return true;
+        }
     }
 
     protected function getPage()
@@ -1944,13 +2120,17 @@ class SeoMagicPlugin extends Plugin
             /** @var Admin $admin */
             $admin = $this->grav['admin'];
             $page = $admin->page();
+            if (!$page) {
+                // In API context, admin is registered but has no page — fall back to $grav['page']
+                return $this->grav['page'] ?? null;
+            }
             // Fix for admin
             if ($page->home()) {
                 $page->route('/');
             }
             return $page;
         } else {
-            return $this->grav['page'];
+            return $this->grav['page'] ?? null;
         }
     }
 

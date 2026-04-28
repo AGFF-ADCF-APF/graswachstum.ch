@@ -267,6 +267,7 @@ class SEOMagic
             'image_y' => $this->config->get('plugins.seo-magic.images.size.y') ?: $this->config->get('plugins.seo-magic.images.size.x')
         ];
 
+        $image = null;
         foreach ($fallback as $type) {
             $image = $this->getPageImageByType($type, $page, $url, $options);
             if (isset($image)) {
@@ -295,6 +296,10 @@ class SEOMagic
 
     public function getPageImageByType($image_type, $page, $url, $options): ?string
     {
+        if (!$page instanceof PageInterface) {
+            return null;
+        }
+
         $media = $page->media();
         $image = null;
         $image_media = null;
@@ -391,7 +396,8 @@ class SEOMagic
 
     public function generateSummary($content, $lang = null)
     {
-        $page = Utils::isAdminPlugin() ? Grav::instance()['admin']->page() : Grav::instance()['page'];
+        $grav = Grav::instance();
+        $page = Utils::isAdminPlugin() ? ($grav['admin']->page() ?? ($grav['page'] ?? null)) : ($grav['page'] ?? null);
 
         if ($this->pluginVar($page, 'seo-magic.autogenerate_desc' )) {
 
@@ -450,7 +456,8 @@ class SEOMagic
     {
         $global_keywords = $this->config->get('plugins.seo-magic.global_keywords', []);
         $keywords = [];
-        $page = Utils::isAdminPlugin() ? Grav::instance()['admin']->page() : Grav::instance()['page'];
+        $grav = Grav::instance();
+        $page = Utils::isAdminPlugin() ? ($grav['admin']->page() ?? ($grav['page'] ?? null)) : ($grav['page'] ?? null);
 
         if ($this->pluginVar($page, 'seo-magic.autogenerate_keywords' )) {
 
@@ -509,7 +516,7 @@ class SEOMagic
         return '';
     }
 
-    public function getData($page)
+    public function getData($page, ?string $lang = null)
     {
         // Use rawRoute for consistent storage key across languages and subdirectory installations
         $route = $page->rawRoute();
@@ -518,12 +525,25 @@ class SEOMagic
             return null;
         }
 
-        $data = $this->raw_data[$route] ?? null;
-        if (is_null($data)) {
+        // Prepend language prefix to match how crawl stores data (e.g. /en/about → _en_about)
+        $language = Grav::instance()['language'];
+        if ($language->enabled()) {
+            $activeLang = $lang ?: $language->getLanguage() ?: $language->getDefault() ?: 'en';
+            $langRoute = '/' . $activeLang . $route;
+        } else {
+            $langRoute = $route;
+        }
 
-            $data_path = SEOData::getFilename(str_replace('/', '_', $route));
+        $data = $this->raw_data[$langRoute] ?? null;
+        if (is_null($data)) {
+            $data_path = SEOData::getFilename(str_replace('/', '_', $langRoute));
             $data = $this->getDataByPath($data_path);
-            $this->raw_data[$route] = $data;
+            // Fallback: try without language prefix for legacy data
+            if (is_null($data)) {
+                $data_path = SEOData::getFilename(str_replace('/', '_', $route));
+                $data = $this->getDataByPath($data_path);
+            }
+            $this->raw_data[$langRoute] = $data;
         }
 
         if (is_null($data)) {

@@ -18,12 +18,12 @@
 
   {% if notice.enabled and display_notice %}
     <div class="relative {{ colors[notice.type]|first }}">
-      <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+      <div class="max-w-(--breakpoint-xl) mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div class="pr-16 sm:text-center sm:px-16">
           <p class="font-medium {{ colors[notice.type]|last }}">
             {{ notice.content|markdown(false) }}
             {% if notice.learn_more_link %}
-              <span class="block sm:ml-2 sm:inline-block"><a href="{{ url(notice.learn_more_link) }}" class="{{ colors[notice.type]|last }} font-bold underline">Learn more →</a></span>
+              <span class="block sm:ml-2 sm:inline-flex"><a href="{{ url(notice.learn_more_link) }}" class="{{ colors[notice.type]|last }} font-bold underline">Learn more →</a></span>
             {% endif %}
           </p>
         </div>

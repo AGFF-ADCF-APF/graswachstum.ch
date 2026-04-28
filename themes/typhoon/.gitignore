@@ -1,4 +1,5 @@
 node_modules
+css/_sources.css
 images/logo/*
 /yarn-error.log
 .DS_Store

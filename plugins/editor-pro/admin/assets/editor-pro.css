@@ -478,7 +478,7 @@ body.dragging * {
 /* Toolbar Styles */
 .editor-pro-toolbar {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 8px 12px;
   background: transparent;
@@ -505,6 +505,7 @@ body.dragging * {
 
 .toolbar-right {
   margin-left: 12px;
+  flex-shrink: 0;
 }
 
 .editor-pro-toolbar button {

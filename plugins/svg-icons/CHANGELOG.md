@@ -1,3 +1,10 @@
+# v3.1.1
+## 04/17/2026
+
+1. [](#new)
+    * Added admin-next support for the `svgicon` field. Ships a web component at `admin-next/fields/svgicon.js` that renders a preview row (Choose / Clear) plus a modal icon picker with set tabs, search, and infinite-scroll grid. Icons use CSS `mask-image` + `currentColor` so they render correctly on both light and dark themes.
+    * New API endpoints (`GET /svg-icons/sets`, `GET /svg-icons/icons?set=&q=&offset=&limit=`) back the admin-next field, served by a dedicated `SvgIconsController` that reads the existing `data/icons-manifest.min.json`. The legacy admin-classic endpoint is unchanged.
+
 # v3.1.0
 ## 12/23/2025
 

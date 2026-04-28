@@ -14,8 +14,8 @@
     a: 'flex items-center h-full px-3',
     li: {
       base: 'flex ml-4 text-sm relative inline-flex items-center pt-1 border-b-2 font-medium leading-5 transition duration-150 ease-in-out ',
-      inactive: 'border-transparent ' ~ hover_class ~' hover:border-primary focus:outline-none focus:border-gray-300 ',
-      active: 'font-semibold border-primary focus:outline-none focus:border-primary ' ~ (header_fixed ?: active_class) ,
+      inactive: 'border-transparent ' ~ hover_class ~' hover:border-primary focus:outline-hidden focus:border-gray-300 ',
+      active: 'font-semibold border-primary focus:outline-hidden focus:border-primary ' ~ (header_fixed ?: active_class) ,
     },
     ul: 'flex transition duration-300 z-10 absolute py-2 flex-col w-48 rounded-b bg-white border-gray-200 shadow-lg',
   }

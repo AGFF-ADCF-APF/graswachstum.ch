@@ -15,12 +15,11 @@ nav.header-nav {
 
     &.animated {
         ul li:hover > ul {
-          @apply transform opacity-100 translate-y-0 -translate-x-1/2
+          @apply transform opacity-100 translate-y-0;
         }
 
         ul ul {
-          @apply transform opacity-0 -translate-y-4 -translate-x-1/2;
-          transition: transform .3s, opacity .5s;
+          @apply transform transition duration-200 opacity-0 -translate-y-4;
         }
     }
 
@@ -29,14 +28,14 @@ nav.header-nav {
 
         /* level 1 (submenus) */
         ul.level_1 {
+            @apply -translate-x-1/2;
 
             .has-submenu:hover {
                 @apply bg-gray-100 dark:bg-gray-800 transition duration-300;
             }
 
             button {
-              @apply absolute right-0;
-              top: 6px;
+              @apply absolute right-0 top-[6px];
             }
 
             li {
@@ -47,17 +46,14 @@ nav.header-nav {
 
             /* level 2+ (submenus) */
             ul {
-                border-left-color: transparent !important;
-                top: -2px;
-                left: 100%;
-                transform: translateY(-1rem);
+                @apply border-l-transparent -top-[2px]! left-[150%] transform translate-y-[-1rem];
             }
             li:hover > ul {
-              transform: translateY(0);
+                @apply translate-y-0;
             }
 
             ul.level_2, ul.level_3 {
-              top: -10px;
+                @apply -top-[10px]
             }
         }
     }
@@ -70,25 +66,28 @@ nav.header-nav {
 }
 
 
+#scrollspy-nav .scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .sidebar-nav {
   a {
     @apply py-1;
   }
 
-  & > {
-    & li {
+  & > li {
       & > div > a {
         @apply font-medium text-gray-700 dark:text-gray-400 my-1;
       }
     }
-    & li.active {
-      & > div > a {
-        @apply border-primary;
-      }
-    }
-  }
 
-  li.active > div > a {
-    @apply font-bold;
+  & > li.active {
+    & > div > a {
+      @apply border-primary font-bold;
+    }
   }
 }

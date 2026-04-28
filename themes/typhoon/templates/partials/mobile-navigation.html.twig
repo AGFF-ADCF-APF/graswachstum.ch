@@ -19,17 +19,14 @@
 {% set alpine = {
   parent: 'x-data="{ selected: MENU_STATE }"',
   button: '@click="selected = !selected"',
-  child: 'x-show="selected"
-            x-transition:enter="transition duration-700"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-1"',
+  child: 'x-show="selected"',
   svg_open: 'x-show="selected"',
   svg_closed: 'x-show="!selected"'
 } %}
 
 {% set svg = null %}
-{% set open = svg_icon('tabler/minus.svg', 'h-6 w-6 text-gray-500 stroke-3/2') %}
-{% set closed = svg_icon('tabler/plus.svg', 'h-6 w-6 text-gray-600 stroke-3/2') %}
+{% set open = svg_icon('tabler/minus.svg', 'h-6 w-6 text-gray-500 stroke-[1.5]') %}
+{% set closed = svg_icon('tabler/plus.svg', 'h-6 w-6 text-gray-600 stroke-[1.5]') %}
 
 {% if open or closed %}
   {% set svg = { closed: closed, open: open} %}
@@ -51,7 +48,7 @@
   {# CLOSE BUTTON #}
   <div class="absolute top-2 right-2">
     <button @click="show_mobile_nav = false" aria-label="Close button" type="button"
-            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-primary focus:outline-none focus:text-gray-800 transition duration-150 ease-in-out">
+            class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-primary focus:outline-hidden focus:text-gray-800 transition duration-150 ease-in-out">
       {{ svg_icon('tabler/x.svg', 'h-8 w-8 text-gray-300 hover:text-white')|raw }}
     </button>
   </div>

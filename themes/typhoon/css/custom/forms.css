@@ -1,19 +1,15 @@
-
 form {
   .form-input, .form-textarea, .form-select, .search-input  {
     @apply border bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-100 rounded-md border-gray-300 dark:border-gray-600 w-full;
 
     &:focus {
-      @apply border-primary focus:ring-transparent focus:outline-none focus:shadow-none;
-    }
-    &::placeholder {
-      @apply text-gray-500;
+      @apply border-primary focus:ring-transparent focus:outline-hidden focus:shadow-none;
     }
   }
 }
 
 .form-button {
-  @apply inline-block leading-6 font-medium rounded-md focus:outline-none px-8 py-3 focus:ring transition duration-300 ease-in-out;
+  @apply inline-block leading-6 font-medium rounded-md focus:outline-hidden px-8 py-3 focus:ring-3 transition duration-300 ease-in-out;
 
   &:not(.no-default-style) {
     @apply text-white bg-primary hover:bg-primary-darker;
@@ -47,15 +43,13 @@ form {
       @apply inline text-inherit relative cursor-pointer pl-0 mr-6 align-middle;
 
       &:before {
-        content:"\2713";
-        @apply text-lg text-center static leading-none rounded-md inline-block text-transparent w-5 h-5 mr-2 border border-gray-300 dark:border-gray-600;
+        @apply content-['\2713'] text-lg text-center static leading-none rounded-md inline-block text-transparent w-5 h-5 mr-2 border border-gray-300 dark:border-gray-600;
       }
 
     }
 
     &:checked + label:before {
-      content:"\2713";
-      @apply text-lg bg-primary leading-none border-transparent text-white text-center;
+      @apply content-['\2713'] text-lg bg-primary leading-none border-transparent text-white text-center;
     }
   }
 

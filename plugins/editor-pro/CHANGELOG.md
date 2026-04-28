@@ -1,8 +1,50 @@
+# v2.0.1
+## 04/26/2026
+
+1. [](#new)
+    * **Real-time collaborative editing** in the admin-next field via y-prosemirror. The editor now accepts a Yjs `XmlFragment` + `Awareness` from the host (admin-next's page editor) and routes ProseMirror's document state through `ySyncPlugin` / `yCursorPlugin`, so multiple users editing the same page see each other's changes character-by-character along with named cursors. Yjs and `y-protocols/awareness` are externalized in the build (`build-admin-next.mjs`) and resolve at runtime to admin-next's instances on `window.__GRAV_YJS__` — sharing class identities is mandatory because y-prosemirror's `instanceof Y.XmlFragment` check would otherwise reject a fragment created by a different copy of Yjs. The web component wrapper picks up `yFragment` / `yAwareness` / `yUser` properties before `connectedCallback` so `EditorProClass` can wire the collab extension at construction time; the initial markdown content seeds an empty Yjs fragment so the first peer's content propagates to later joiners. Backwards-compatible — when no `yFragment` is provided the editor behaves exactly as before. Requires grav-admin-next ≥ beta.13 (which sets `window.__GRAV_YJS__`) and grav-plugin-sync.
+2. [](#bugfix)
+    * Cmd-Z / Cmd-Y / the toolbar undo+redo buttons no longer roll back peer edits when collaborative editing is active. TipTap's StarterKit `history` extension is now disabled when `this.collab.fragment` is set (its keymap walked the full ProseMirror transaction stack, which includes remote edits applied via `ySyncPlugin`); the new `TiptapCollaboration` extension binds `Mod-Z` / `Mod-Y` / `Mod-Shift-Z` to y-prosemirror's `yUndo` / `yRedo` via `addKeyboardShortcuts`, and the toolbar undo/redo buttons branch on collab to call `window.TiptapYjs.yUndo` / `yRedo` instead of `editor.commands.undo`. y-prosemirror's `yUndoPlugin` already scopes the underlying `Y.UndoManager` to `ySyncPluginKey` origin, so only edits that originated from the local ySyncPlugin are undoable.
+    * Heading shortcodes (`[h1]`–`[h6]`) no longer save with their content on a separate line, which previously caused the markdown engine to wrap the inner text in a `<p>` and produced invalid HTML like `<h2><p>My Heading</p></h2>` on the frontend. The shortcode-block serializer now emits headings on a single line (`[h2]My Heading[/h2]`) regardless of their block-level classification, since heading elements can't legally contain block-level children. Fixes [getgrav/grav-premium-issues#569](https://github.com/getgrav/grav-premium-issues/issues/569).
+
+# v2.0.0
+## 04/22/2026
+
+1. [](#new)
+    * **Admin-next integration via a web component custom field.** Editor Pro now renders natively inside admin-next alongside its existing admin-classic form-field mode — no shims or iframes. Ships as a self-contained ES module (`admin-next/fields/editor-pro.js`) built with esbuild, with `EditorProClass` exposed on `window.EditorPro` so the web component wrapper can instantiate the editor with the same config path the admin-classic field uses.
+    * New `EditorProController` with API endpoints for config resolution, shortcode discovery, path lookup, and plugin-script loading. Routes are registered via `onApiRegisterRoutes`, so the editor fetches everything it needs through the standard Grav API — no direct filesystem or admin-session assumptions.
+    * `onApiBlueprintResolved` event hook rewrites `type: markdown` fields in page/plugin/theme blueprints to Editor Pro when admin-next requests a blueprint, giving every markdown editor in the admin a consistent modern experience without per-blueprint config. `type: editor` (explicit code editor / CodeMirror) is deliberately left alone.
+    * Bundled dark-theme support: all Tailwind `slate` greys swapped to `neutral` to match admin-next's palette, and the dark theme is aliased to the `.dark` class so it tracks admin-next's color-mode toggle instead of requiring a separate switch.
+2. [](#improved)
+    * Toolbar configuration set in plugin config (or field blueprint) is now honored by the admin-next editor field — previously the admin-next variant rendered the default toolbar regardless of the configured string.
+3. [](#bugfix)
+    * `createCodeMirrorCompatibility` no longer crashes with `jQuery is not defined` in admin-next, where jQuery isn't loaded. The bare `jQuery` reference is now guarded with a `typeof` check.
+    * Only `type: markdown` fields are overridden to Editor Pro in the blueprint resolver. `type: editor` fields (intended as CodeMirror code editors) stay on CodeMirror as intended — previously they were being swapped too, breaking fields that needed the code-editor behavior.
+
+# v1.3.5
+## 03/24/2026
+
+1. [](#bugfix)
+    * Fix for single apostrophes in shortcodes breaking editor
+
+# v1.3.4
+## 03/24/2026
+
+1. [](#bugfix)
+    * Another fix for markdown target
+
+# v1.3.3
+## 03/23/2026
+
+1. [](#bugfix)
+    * Fix target attribute not updating to use Grav's markdown target
+    * Minor CSS fix for toolbar icon alignment
+
 # v1.3.2
 ## 03/06/2026
 
 1. [](#bugfix)
-    * fix for shortcode first in content
+    * Fix for shortcode first in content
 
 # v1.3.1
 ## 12/23/2025

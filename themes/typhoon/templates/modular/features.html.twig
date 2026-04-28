@@ -18,7 +18,7 @@
             <a class="group-hover:text-primary dark:group-hover:text-primary" href="{{ url(feature.link) }}">
               {% endif %}
               <div class="text-gray-500 group-hover:text-primary rounded-md p-3 text-center">
-                {{ svg_icon(feature.icon, 'w-16 h-16 stroke-current stroke-3/2 mx-auto')|raw }}
+                {{ svg_icon(feature.icon, 'w-16 h-16 stroke-current stroke-[1.5] mx-auto')|raw }}
               </div>
 
               <h3 class="mb-2 text-base md:text-lg group-hover:text-primary text-center">
@@ -35,7 +35,7 @@
 
         {% else %}
 
-          <div class="flex-shrink-0">
+          <div class="shrink-0">
             <div class="bg-primary text-gray-200 rounded-md p-3">
               {{ svg_icon(feature.icon, 'w-8 h-8 stroke-current')|raw }}
             </div>

@@ -6,8 +6,8 @@
 
 ## Features
 
-* Built on top of the latest Tailwind CSS framework
-* Fully compatible with PurgeCSS to create high performance and optimized 'production' CSS files
+* Built on top of the latest TailwindCSS 4.0 framework
+* Utilized Tailwind CLI to create high performance and optimized 'production' CSS files
 * Fully responsive and built "mobile-first"
 * Supports both "Light" & "Dark" themes
 * Can use system settings, a specific variation, or user controlled light/dar theme preference
@@ -21,6 +21,20 @@
 * Clean default typography
 * Blog Site example
 * One-Page modular example with GLightbox gallery support + Contact form
+
+## Typhoon 4.0 w/TailwindCSS 4.0 Upgrade Notes
+
+Typhoon 4.0 has been completely overhauled for TailwindCSS 4.0 due to the fundamental architectural changes made in the framework.  As such after upgrading form Typhoon 2.x to Typhoon 4+, you will have some extra files that are no longer needed and can be removed.  
+
+**Manually remove these files:**
+
+* `/postcss.config.js` (moved to vite for Tailwind build)
+* `/tailwind.config.js` (moved to `/css/site.css` for Tailwind4 css-variable based config)
+* `/tailwind-full.config.js` (unused)
+* `/css/custom/bugs.css` (no longer needed as safari doesn't need this fix any longer)
+* `/css/custom/dark.css` (moved dark styling into `/css/custom/typography.css`)
+* `/css/custom/social.css` (changed to css-variables and moved remaining to `/css/custom/typography.css`)
+* `/js/alpine.js` (replaced with latest `/js/alpine.js.min`)
 
 ## Important Links
 

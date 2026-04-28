@@ -1,0 +1,83 @@
+{
+    "metadata": {
+        "timestamp": 1776979705,
+        "user": "martinz",
+        "type": "page",
+        "action": "create"
+    },
+    "content": "---\ntitle: Wachstumsberichte\npublished: true\nvisible: true\nhide_page_title: true\nmodular_content:\n    items: '@self.modular'\n    order:\n        by: folder\n        dir: asc\ncontent:\n    items:\n        - '@self.children'\n    limit: 7\n    order:\n        by: date\n        dir: desc\n    pagination: true\n    url_taxonomy_filters: true\n    filter:\n        published: true\nhide_post_summary: true\npost_icon: calendar-o\nhide_post_date: true\nhide_post_taxonomy: false\nfeed:\n    description: Graswachstumsberichte\n    limit: 10\nshow_sidebar: true\nhide_git_sync_repo_link: false\nhero_scroll: false\ncontinue_link_as_button: true\nmedia_order: csm_img_7352_f4e25fef1d.webp\nroot_of_blog: true\nhero:\n    image: csm_img_7352_f4e25fef1d.webp\n    buttons:\n        0:\n            text: '[svg-icon icon=\"chart-line\" \/]Messwerte'\n            link: '\/growth#karte'\n            classes: 'bg-primary text-white'\n        3:\n            text: '[svg-icon icon=\"calculator\" \/]Futterwertrechner'\n            link: 'https:\/\/graswachstum.ch\/futterwert'\n            classes: 'bg-primary text-white'\nshow_breadcrumbs: true\nshow_pagination: true\nauthor: 'Martin Zbinden'\nsitemap:\n    lastmod: '17-12-2024 20:21'\naura:\n    author: zbma\nshortcode-citation:\n    items: cited\n    reorder_uncited: true\nmenu_before_icon: tabler\/send.svg\n---\n\n",
+    "rawContent": "---\ntitle: Wachstumsberichte\npublished: true\nvisible: true\nhide_page_title: true\nmodular_content:\n    items: '@self.modular'\n    order:\n        by: folder\n        dir: asc\ncontent:\n    items:\n        - '@self.children'\n    limit: 7\n    order:\n        by: date\n        dir: desc\n    pagination: true\n    url_taxonomy_filters: true\n    filter:\n        published: true\nhide_post_summary: true\npost_icon: calendar-o\nhide_post_date: true\nhide_post_taxonomy: false\nfeed:\n    description: Graswachstumsberichte\n    limit: 10\nshow_sidebar: true\nhide_git_sync_repo_link: false\nhero_scroll: false\ncontinue_link_as_button: true\nmedia_order: csm_img_7352_f4e25fef1d.webp\nroot_of_blog: true\nhero:\n    image: csm_img_7352_f4e25fef1d.webp\n    buttons:\n        0:\n            text: '[svg-icon icon=\"chart-line\" \/]Messwerte'\n            link: '\/growth#karte'\n            classes: 'bg-primary text-white'\n        3:\n            text: '[svg-icon icon=\"calculator\" \/]Futterwertrechner'\n            link: 'https:\/\/graswachstum.ch\/futterwert'\n            classes: 'bg-primary text-white'\nshow_breadcrumbs: true\nshow_pagination: true\nauthor: 'Martin Zbinden'\nsitemap:\n    lastmod: '17-12-2024 20:21'\naura:\n    author: zbma\nshortcode-citation:\n    items: cited\n    reorder_uncited: true\nmenu_before_icon: tabler\/send.svg\n---\n\n",
+    "header": {
+        "title": "Wachstumsberichte",
+        "published": true,
+        "visible": true,
+        "hide_page_title": true,
+        "modular_content": {
+            "items": "@self.modular",
+            "order": {
+                "by": "folder",
+                "dir": "asc"
+            }
+        },
+        "content": {
+            "items": [
+                "@self.children"
+            ],
+            "limit": 7,
+            "order": {
+                "by": "date",
+                "dir": "desc"
+            },
+            "pagination": true,
+            "url_taxonomy_filters": true,
+            "filter": {
+                "published": true
+            }
+        },
+        "hide_post_summary": true,
+        "post_icon": "calendar-o",
+        "hide_post_date": true,
+        "hide_post_taxonomy": false,
+        "feed": {
+            "description": "Graswachstumsberichte",
+            "limit": 10
+        },
+        "show_sidebar": true,
+        "hide_git_sync_repo_link": false,
+        "hero_scroll": false,
+        "continue_link_as_button": true,
+        "media_order": "csm_img_7352_f4e25fef1d.webp",
+        "root_of_blog": true,
+        "hero": {
+            "image": "csm_img_7352_f4e25fef1d.webp",
+            "buttons": {
+                "0": {
+                    "text": "[svg-icon icon=\"chart-line\" \/]Messwerte",
+                    "link": "\/growth#karte",
+                    "classes": "bg-primary text-white"
+                },
+                "3": {
+                    "text": "[svg-icon icon=\"calculator\" \/]Futterwertrechner",
+                    "link": "https:\/\/graswachstum.ch\/futterwert",
+                    "classes": "bg-primary text-white"
+                }
+            }
+        },
+        "show_breadcrumbs": true,
+        "show_pagination": true,
+        "author": "Martin Zbinden",
+        "sitemap": {
+            "lastmod": "17-12-2024 20:21"
+        },
+        "aura": {
+            "author": "zbma"
+        },
+        "shortcode-citation": {
+            "items": "cited",
+            "reorder_uncited": true
+        },
+        "menu_before_icon": "tabler\/send.svg"
+    },
+    "route": "\/",
+    "title": "Wachstumsberichte"
+}

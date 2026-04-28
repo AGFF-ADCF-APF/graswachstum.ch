@@ -51,7 +51,7 @@
 
 <header
   {% if header_fixed %}
-  :class="{ 'scrolled {{ header_bg_scrolled }} {{ text_scrolled }} shadow-xl': !atTopOfPage, '{{ header_bg_class }} {{ header_text_class }}': atTopOfPage, 'absolute': !fixedHeader, 'fixed': fixedHeader }"
+  :class="{ 'scrolled {{ header_bg_scrolled }} {{ text_scrolled }} shadow-xl': !atTopOfPage, '{{ header_bg_class }} {{ header_text_class }}': atTopOfPage, 'absolute': !fixedHeader, 'fixed {{ not theme_config.menu.mobile_nav ? 'max-md:absolute' : '' }}': fixedHeader }"
   x-init="atTopOfPage = scrollPosition(), fixedHeader = isFixedHeader()"
   @scroll.window="atTopOfPage = scrollPosition(), fixedHeader = isFixedHeader()"
   {% endif %}
@@ -69,7 +69,7 @@
           </div>
         </div>
         {% if theme_config.menu.primary_location == 'header' %}
-          <div class="hidden h-full md:flex md:flex-grow justify-end">
+          <div class="hidden h-full md:flex md:grow justify-end">
             {% include 'partials/navigation.html.twig' %}
           </div>
         {% endif %}
@@ -78,7 +78,7 @@
     {% if theme_config.menu.mobile_nav == true %}
       <div class="flex items-center md:hidden justify-end">
         <button @click="show_mobile_nav = true" aria-label="Mobile menu" type="button"
-                class="inline-flex items-center justify-center p-2 mr-2 rounded-md focus:outline-none transition duration-150 ease-in-out">
+                class="inline-flex items-center justify-center p-2 mr-2 rounded-md focus:outline-hidden transition duration-150 ease-in-out">
           {{ svg_icon('tabler/menu.svg', 'current-color h-8 w-8')|raw }}
         </button>
       </div>

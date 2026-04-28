@@ -1,0 +1,27 @@
+{% set scrollspy_items = theme_onpage_menu() %}
+{% if scrollspy_items|length > 0 %}
+<div id="scrollspy-nav"
+     x-data="scrollspy({{ header_fixed ? 'true' : 'false' }})"
+     x-init="init()"
+     @scroll.window.throttle.50ms="onScroll()"
+     :class="visible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'"
+     :style="fixedHeader ? 'top: ' + headerH + 'px' : 'top: 0'"
+     class="fixed left-0 right-0 z-[9] -translate-y-full opacity-0 transition-all duration-300 ease-in-out {{ header_bg_scrolled ?: 'bg-white dark:bg-gray-900' }} {{ text_scrolled ?: 'text-gray-800 dark:text-gray-300' }} shadow-md">
+  <div class="{{ theme_var('wrapper_spacing')|e }}">
+    <nav class="flex items-center overflow-x-auto scrollbar-hide">
+      <ul class="flex items-center gap-1 whitespace-nowrap py-2 text-sm">
+        {% for item in scrollspy_items %}
+          <li>
+            <a href="{{ item.href }}"
+               :class="activeSection === '{{ item.href[1:] }}' ? 'bg-primary/10 text-primary font-semibold' : 'hover:text-primary'"
+               class="px-3 py-1.5 rounded-full transition duration-200 inline-block"
+               @click.prevent="scrollToSection('{{ item.href[1:] }}')">
+              {{ item.text }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</div>
+{% endif %}

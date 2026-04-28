@@ -24,7 +24,7 @@
           <span {{ alpine.button|raw }} class="w-full {{ a_classes }} cursor-pointer">{{ menu_text|raw }}</span>
         {% endif %}
         {%- if has_children -%}
-          <button {{ alpine.button|raw }} class="focus:outline-none" aria-label="Expand / collapse menu">
+          <button {{ alpine.button|raw }} class="focus:outline-hidden" aria-label="Expand / collapse menu">
             {% if svg.open and svg.closed %}
               <div {{ alpine.svg_open|raw }}>{{ svg.open|raw }}</div>
               <div {{ alpine.svg_closed|raw }}>{{ svg.closed|raw }}</div>

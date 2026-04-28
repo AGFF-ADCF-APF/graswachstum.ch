@@ -1,0 +1,9 @@
+name: Graswachstum.ch
+slug: graswachstum
+type: theme
+version: 1.0.0
+description: Child theme for graswachstum.ch based on Typhoon
+icon: rebel
+extends@:
+  type: typhoon
+  context: blueprints://

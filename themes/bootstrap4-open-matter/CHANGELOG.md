@@ -1,3 +1,50 @@
+# v5.0.2
+## 04/22/2026
+
+1. [](#improved)
+    * Streamlined Theme Style options to 2026 Refresh and Classic.
+
+# v5.0.1
+## 04/21/2026
+
+1. [](#improved)
+    * Update card image to use aspect-ratio 16/9 for consistent display across screen sizes
+    * Updated card layout to responsively transition from three to two to one column as screen width decreases.
+
+# v5.0.0
+## 04/21/2026
+
+1. [](#new)
+    * Added 2026 Refresh theme with accessibility and rendering refinements, plus Dark Mode option for all theme styles. 2025 theme and Classic theme still available via theme settings.
+1. [](#improved)
+    * Removed Bootswatch theme stylesheets. Sites using a custom Bootswatch theme should switch to a Theme Style option.
+    * Existing mytheme installations require manual update of mytheme.yaml and mytheme/blueprints.yaml to surface new Theme Style and Dark Mode options.
+
+# v4.0.2
+## 09/01/2025
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+    
+# v4.0.1
+## 08/31/2025
+
+1. [](#improved)
+    * Minor theme cleanup
+
+# v4.0.0
+## 08/30/2025
+
+1. [](#new)
+    * Refreshed theme (theme-2025.css), including optional dark mode. Original theme still available (theme-classic.css).
+    * Updated demo pages in theme '_demo' folder
+
+# v3.8.4
+## 08/25/2025
+
+1. [](#improved)
+    * Updated demo pages in theme '_demo' folder
+
 # v3.8.3
 ## 12/06/2024
 

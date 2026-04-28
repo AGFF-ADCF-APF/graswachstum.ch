@@ -20,3 +20,15 @@ form:
                     0: PLUGIN_ADMIN.NO
                   validate:
                     type: bool
+                header.onpage_menu_replace:
+                  toggleable: true
+                  type: toggle
+                  label: THEME_TYPHOON.BLUEPRINTS.MODULAR_ONPAGE_MENU_REPLACE
+                  help: THEME_TYPHOON.BLUEPRINTS.MODULAR_ONPAGE_MENU_REPLACE_HELP
+                  default: 1
+                  highlight: 1
+                  options:
+                    1: PLUGIN_ADMIN.YES
+                    0: PLUGIN_ADMIN.NO
+                  validate:
+                    type: bool

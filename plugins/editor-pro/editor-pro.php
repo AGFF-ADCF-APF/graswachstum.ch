@@ -9,6 +9,14 @@ use RocketTheme\Toolbox\Event\Event;
 use Twig\TwigFunction;
 use Grav\Common\Helpers\Excerpts;
 
+// Register autoloader for plugin classes so the API router can resolve
+// EditorProController at dispatch time (routes may be cached)
+spl_autoload_register(function ($class) {
+    if ($class === 'Grav\\Plugin\\EditorPro\\EditorProController') {
+        require_once __DIR__ . '/classes/EditorProController.php';
+    }
+});
+
 /**
  * Class EditorProPlugin
  * @package Grav\Plugin
@@ -23,6 +31,8 @@ class EditorProPlugin extends Plugin
             'onPluginsInitialized' => ['onPluginsInitialized', 10],
             'onAdminListContentEditors' => ['onAdminListContentEditors', 0],
             'onTwigInitialized' => ['onTwigInitialized', 0],
+            'onApiRegisterRoutes' => ['onApiRegisterRoutes', 0],
+            'onApiBlueprintResolved' => ['onApiBlueprintResolved', 0],
         ];
     }
 
@@ -351,6 +361,63 @@ class EditorProPlugin extends Plugin
         $twig->twig()->addFunction(
             new TwigFunction('editor_pro_path_mappings', [$this, 'getPathMappingsForPage'])
         );
+    }
+
+    /**
+     * Register API routes for admin-next integration.
+     */
+    public function onApiRegisterRoutes(Event $event)
+    {
+        $routes = $event['routes'];
+        $controller = \Grav\Plugin\EditorPro\EditorProController::class;
+
+        $routes->group('/editor-pro', function ($group) use ($controller) {
+            $group->get('/config', [$controller, 'getConfig']);
+            $group->get('/shortcodes', [$controller, 'getShortcodes']);
+            $group->post('/resolve', [$controller, 'resolvePaths']);
+            $group->get('/plugins', [$controller, 'getPluginScripts']);
+        });
+    }
+
+    /**
+     * Override editor/markdown field types to editor-pro in API blueprints
+     * when the current user has editor-pro selected as their content editor.
+     */
+    public function onApiBlueprintResolved(Event $event)
+    {
+        $user = $event['user'] ?? null;
+        if (!$user) {
+            return;
+        }
+
+        $this->getConfigs();
+
+        $contentEditor = method_exists($user, 'getContentEditor')
+            ? $user->getContentEditor()
+            : ($user->content_editor ?? 'default');
+
+        if ($contentEditor === 'editor-pro' ||
+            ($this->configs['default_for_all'] && $contentEditor === 'default')) {
+            // Event doesn't support pass-by-reference — read, modify, write back
+            $fields = $event['fields'];
+            $this->overrideEditorFields($fields);
+            $event['fields'] = $fields;
+        }
+    }
+
+    /**
+     * Recursively walk blueprint fields and change editor/markdown types to editor-pro.
+     */
+    private function overrideEditorFields(array &$fields): void
+    {
+        foreach ($fields as &$field) {
+            if (isset($field['type']) && $field['type'] === 'markdown') {
+                $field['type'] = 'editor-pro';
+            }
+            if (isset($field['fields']) && is_array($field['fields'])) {
+                $this->overrideEditorFields($field['fields']);
+            }
+        }
     }
 
 }

@@ -7,9 +7,8 @@
 {% set icon_left = svg_icon('tabler/chevron-left.svg', 'w-5') %}
 {% set icon_right = svg_icon('tabler/chevron-right.svg', 'w-5') %}
 
-{% set author = authors[page.header.author] %}
 {% if page.header.author %}
-  {% set subtitle = subtitle ~ ' - ' ~ author.name %}
+  {% set subtitle = subtitle ~ ' - ' ~ page.header.author %}
 {% endif %}
 
 {% set hero_tags = true %}
@@ -26,20 +25,7 @@
 
       <article class="magic-content {{ prose_style }} max-w-none my-6">
         {{ page.content|raw }}
-    	
-	{% include 'partials/gallery.html.twig' %}
-
-	{% include 'partials/citations.html.twig' %}
-	
-
-        {% include 'partials/author-bio.html.twig' ignore missing %}
-    
-		{{ page.header.authorString|raw }}
-        
       </article>
-    {{ likes_ratings() }}
-
-        
 
       <div class="flex-none flex-centered w-full p-6 mx-auto">
         <div class="space-x-3 text-center">

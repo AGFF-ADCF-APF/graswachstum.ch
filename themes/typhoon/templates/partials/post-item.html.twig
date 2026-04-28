@@ -23,11 +23,8 @@
     </div>
     <div class="p-4 -mt-4 text-description text-sm text-gray-500">
       {{ page.date|date(system.pages.dateformat.short) }}
-
-{% set author = authors[page.header.author] %}
-
-      {% if author %}
-        - {{ author.name }}
+      {% if page.header.author %}
+        - {{ page.header.author }}
       {% endif %}
     </div>
 

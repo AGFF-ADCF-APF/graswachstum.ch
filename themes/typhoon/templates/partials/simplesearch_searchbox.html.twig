@@ -35,7 +35,7 @@
             x-cloak
             x-show="hasResults()"
             x-on:click.away="hide"
-            class="search-results absolute left-0 right-0 bg-white dark:bg-gray-700 shadow-lg border dark:border-gray-600 rounded top-full mt-px z-10 p-2"
+            class="search-results absolute left-0 right-0 bg-white dark:bg-gray-700 shadow-lg border dark:border-gray-600 rounded-sm top-full mt-px z-10 p-2"
     >
       <ul class="list-none my-3 divide-y divide-gray-300 dark:divide-gray-600">
         <template x-for="item in searchResults" :key="item">

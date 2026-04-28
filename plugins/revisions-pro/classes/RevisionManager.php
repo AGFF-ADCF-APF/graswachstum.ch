@@ -367,62 +367,67 @@ class RevisionManager
             $index = json_decode(file_get_contents($indexFile), true);
             $needsCleanup = false;
             
-            // Look for entries that match config patterns
-            foreach ($index as $indexRoute => $indexRevisions) {
-                // Check if this route matches our config file
-                $match = false;
-                if ($type === 'plugin-config') {
-                    $match = strpos($indexRoute, '/config/plugins/' . $route . '.yaml') !== false;
-                } elseif ($type === 'theme-config') {
-                    $match = strpos($indexRoute, '/config/themes/' . $route . '.yaml') !== false;
-                } else {
-                    $match = strpos($indexRoute, '/config/' . $route . '.yaml') !== false;
+            // Look for entries that match config patterns.
+            // Use exact key match first; the canonical key has no environment prefix.
+            $needle = match (true) {
+                $type === 'plugin-config' => '/config/plugins/' . $route . '.yaml',
+                $type === 'theme-config' => '/config/themes/' . $route . '.yaml',
+                default => '/config/' . $route . '.yaml',
+            };
+
+            // Prefer exact match (canonical path without environment prefix)
+            $matchedKey = null;
+            if (isset($index[$needle])) {
+                $matchedKey = $needle;
+            } else {
+                // Fallback: find any key ending with the needle
+                foreach ($index as $indexRoute => $indexRevisions) {
+                    if (str_ends_with($indexRoute, $needle)) {
+                        $matchedKey = $indexRoute;
+                        break;
+                    }
                 }
-                
-                if ($match) {
-                    
-                    $revisions = [];
-                    $validRevisions = [];
-                    
-                    foreach ($indexRevisions as $revision) {
-                        // Convert relative path to absolute
-                        $absolutePath = GRAV_ROOT . '/' . $revision['file'];
-                        
-                        if (file_exists($absolutePath)) {
-                            $data = json_decode(file_get_contents($absolutePath), true);
-                            if ($data) {
-                                $revisions[] = [
-                                    'id' => $revision['id'],
-                                    'file' => $absolutePath,
-                                    'timestamp' => $revision['timestamp'],
-                                    'user' => $revision['user'],
-                                    'action' => $revision['action'],
-                                    'type' => $revision['type'] ?? $type,
-                                    'date' => date('Y-m-d H:i:s', $revision['timestamp']),
-                                    'size' => filesize($absolutePath),
-                                    'size_formatted' => $this->formatFileSize(filesize($absolutePath))
-                                ];
-                                $validRevisions[] = $revision;
-                            }
-                        } else {
-                            // File doesn't exist, mark for cleanup
-                            $needsCleanup = true;
+            }
+
+            if ($matchedKey !== null) {
+                $indexRevisions = $index[$matchedKey];
+                $revisions = [];
+                $validRevisions = [];
+
+                foreach ($indexRevisions as $revision) {
+                    $absolutePath = GRAV_ROOT . '/' . $revision['file'];
+
+                    if (file_exists($absolutePath)) {
+                        $data = json_decode(file_get_contents($absolutePath), true);
+                        if ($data) {
+                            $revisions[] = [
+                                'id' => $revision['id'],
+                                'file' => $absolutePath,
+                                'timestamp' => $revision['timestamp'],
+                                'user' => $revision['user'],
+                                'action' => $revision['action'],
+                                'type' => $revision['type'] ?? $type,
+                                'date' => date('Y-m-d H:i:s', $revision['timestamp']),
+                                'size' => filesize($absolutePath),
+                                'size_formatted' => $this->formatFileSize(filesize($absolutePath))
+                            ];
+                            $validRevisions[] = $revision;
                         }
+                    } else {
+                        $needsCleanup = true;
                     }
-                    
-                    // Update index if we found missing files
-                    if ($needsCleanup) {
-                        $index[$indexRoute] = $validRevisions;
-                        file_put_contents($indexFile, json_encode($index, JSON_PRETTY_PRINT));
-                    }
-                    
-                    // Sort by timestamp descending
-                    usort($revisions, function($a, $b) {
-                        return $b['timestamp'] - $a['timestamp'];
-                    });
-                    
-                    return array_slice($revisions, 0, $limit);
                 }
+
+                if ($needsCleanup) {
+                    $index[$matchedKey] = $validRevisions;
+                    file_put_contents($indexFile, json_encode($index, JSON_PRETTY_PRINT));
+                }
+
+                usort($revisions, function($a, $b) {
+                    return $b['timestamp'] - $a['timestamp'];
+                });
+
+                return array_slice($revisions, 0, $limit);
             }
         }
         

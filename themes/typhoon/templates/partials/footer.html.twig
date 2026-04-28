@@ -38,7 +38,7 @@
                   </span>
                 </span>
             <select x-model="appearance" @change="typhoonStore({ appearance: $event.target.value });"
-                    class="form-select focus:ring-transparent focus:outline-none focus:shadow-none"
+                    class="form-select focus:ring-transparent focus:outline-hidden focus:shadow-none"
                     aria-label="Change color theme">
               <option value="system" :selected="appearance === 'system'">System</option>
               <option value="light" :selected="appearance === 'light'">Light</option>

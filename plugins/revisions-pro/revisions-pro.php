@@ -29,7 +29,14 @@ class RevisionsProPlugin extends Plugin
             ],
             'onAssetsInitialized' => ['onAssetsInitialized', 0],
             'onAdminTaskExecute' => ['onAdminTaskExecute', 0],
-            'onSchedulerInitialized' => ['onSchedulerInitialized', 0]
+            'onSchedulerInitialized' => ['onSchedulerInitialized', 0],
+            'onApiRegisterRoutes' => ['onApiRegisterRoutes', 0],
+            'onApiContextPanels' => ['onApiContextPanels', 0],
+            // Always subscribe — the handler lazily inits RevisionManager.
+            // This must be in getSubscribedEvents (not enable()) because
+            // the API's AdminProxy isn't registered until after onPluginsInitialized.
+            'onAdminSave' => ['onAdminSave', 0],
+            'onAdminAfterSave' => ['onAdminAfterSave', 0],
         ];
     }
 
@@ -41,14 +48,11 @@ class RevisionsProPlugin extends Plugin
     public function onPluginsInitialized()
     {
         
-        // Include classes
-        include_once __DIR__ . '/classes/RevisionManager.php';
-        include_once __DIR__ . '/classes/TrashManager.php';
-        
         if ($this->isAdmin()) {
+            // Initialize managers eagerly for admin-classic
+            $this->initManagers();
+
             $this->enable([
-                'onAdminSave' => ['onAdminSave', 0],
-                'onAdminAfterSave' => ['onAdminAfterSave', 0],
                 'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
                 'onAdminPageTypes' => ['onAdminPageTypes', 0],
                 'onPageProcessed' => ['onPageProcessed', 0],
@@ -56,7 +60,7 @@ class RevisionsProPlugin extends Plugin
                 'onTwigInitialized' => ['onTwigInitialized', 0],
                 'onPagesInitialized' => ['onPagesInitialized', 0],
             ]);
-            
+
             // Register AJAX route for revisions
             $uri = $this->grav['uri'];
             if (strpos($uri->path(), $this->config->get('plugins.admin.route') . '/revisions-api') !== false) {
@@ -64,10 +68,6 @@ class RevisionsProPlugin extends Plugin
                     'onPagesInitialized' => ['handleAjaxRequest', 100000]
                 ]);
             }
-
-            // Initialize revision manager
-            $this->revisionManager = new RevisionManager($this->grav, $this->grav['config']);
-            $this->trashManager = new TrashManager($this->grav, $this->grav['config'], $this->revisionManager);
         }
     }
 
@@ -106,6 +106,21 @@ class RevisionsProPlugin extends Plugin
         }
     }
 
+    /**
+     * Lazily initialize RevisionManager and TrashManager.
+     * Called eagerly in admin-classic, lazily in API context.
+     */
+    protected function initManagers(): void
+    {
+        if ($this->revisionManager) {
+            return;
+        }
+        include_once __DIR__ . '/classes/RevisionManager.php';
+        include_once __DIR__ . '/classes/TrashManager.php';
+        $this->revisionManager = new RevisionManager($this->grav, $this->grav['config']);
+        $this->trashManager = new TrashManager($this->grav, $this->grav['config'], $this->revisionManager);
+    }
+
     public function onAdminSave(Event $event)
     {
         // We don't need to do anything here anymore
@@ -114,9 +129,8 @@ class RevisionsProPlugin extends Plugin
 
     public function onAdminAfterSave(Event $event)
     {
+        $this->initManagers();
         $object = $event['object'];
-
-        // Debug logging
 
         if ($object instanceof PageInterface) {
             // Check if page tracking is enabled
@@ -132,14 +146,14 @@ class RevisionsProPlugin extends Plugin
             }
         } elseif ($object instanceof Data) {
             $type = $this->getDataType($object);
-            
+
             // Check if the specific tracking is enabled
             if ($type === 'plugin-config' && !$this->config->get('plugins.revisions-pro.track_plugins', true)) {
                 return;
-            } elseif (in_array($type, ['config-system', 'config-site']) && !$this->config->get('plugins.revisions-pro.track_config', true)) {
+            } elseif (strpos($type, 'config-') === 0 && !$this->config->get('plugins.revisions-pro.track_config', true)) {
                 return;
             }
-            
+
             // Try to get the file path from the Data object
             $filePath = null;
             if (method_exists($object, 'file')) {
@@ -148,7 +162,7 @@ class RevisionsProPlugin extends Plugin
                     $filePath = $file->filename();
                 }
             }
-            
+
             try {
                 $result = $this->revisionManager->createRevision($object, $type, $filePath);
             } catch (\Exception $e) {
@@ -796,23 +810,37 @@ class RevisionsProPlugin extends Plugin
     protected function getDataType($object)
     {
         // Detect config type from admin route
-        $route = $this->grav['admin']->route;
-        
-        // Handle plugin configs
+        $route = $this->grav['admin']->route ?? '';
+
+        // Handle plugin configs (admin: /plugins/xxx, API: /plugins/xxx)
         if (strpos($route, '/plugins/') !== false) {
             return 'plugin-config';
         }
-        
-        // Handle theme configs
+
+        // Handle theme configs (admin: /themes/xxx, API: /themes/xxx)
         if (strpos($route, '/themes/') !== false) {
             return 'theme-config';
         }
-        
-        // Handle all config types dynamically
+
+        // Handle config types (admin: /config/system, API: /config/system)
         if (preg_match('/\/config\/([^\/]+)/', $route, $matches)) {
             return 'config-' . $matches[1];
         }
-        
+
+        // Fallback: try to detect from the Data object's file path
+        if (method_exists($object, 'file') && $object->file()) {
+            $filePath = $object->file()->filename();
+            if (strpos($filePath, '/config/plugins/') !== false) {
+                return 'plugin-config';
+            }
+            if (strpos($filePath, '/config/themes/') !== false) {
+                return 'theme-config';
+            }
+            if (preg_match('/\/config\/([^\/]+)\.yaml$/', $filePath, $matches)) {
+                return 'config-' . $matches[1];
+            }
+        }
+
         return 'unknown';
     }
     
@@ -925,11 +953,78 @@ class RevisionsProPlugin extends Plugin
     public function onSchedulerInitialized(Event $event)
     {
         $scheduler = $event['scheduler'];
-        
+
         // Only add cleanup task if auto_cleanup is enabled
         if ($this->config->get('plugins.revisions-pro.auto_cleanup', true)) {
             $job = $scheduler->addCommand('bin/plugin revisions-pro cleanup --quiet');
             $job->at('0 3 * * *'); // Run at 3 AM daily
         }
+    }
+
+    /**
+     * Register API routes for admin-next.
+     */
+    public function onApiRegisterRoutes(Event $event): void
+    {
+        $routes = $event['routes'];
+        $controller = \Grav\Plugin\RevisionsPro\RevisionsApiController::class;
+
+        $routes->group('/revisions-pro', function ($group) use ($controller) {
+            $group->get('/config', [$controller, 'config']);
+            $group->get('/badge', [$controller, 'badge']);
+            $group->get('/revisions', [$controller, 'list']);
+            // Static routes before parameterized (FastRoute constraint)
+            $group->get('/revisions/{id}', [$controller, 'show']);
+            $group->get('/revisions/{id}/diff', [$controller, 'diff']);
+            $group->post('/revisions/{id}/restore', [$controller, 'restore']);
+            $group->delete('/revisions/{id}', [$controller, 'delete']);
+
+            // Trash endpoints — static routes before parameterized
+            $group->get('/trash/badge', [$controller, 'trashBadge']);
+            $group->get('/trash', [$controller, 'trashList']);
+            $group->delete('/trash', [$controller, 'trashEmpty']);
+            $group->post('/trash/{id}/restore', [$controller, 'trashRestore']);
+            $group->delete('/trash/{id}', [$controller, 'trashDelete']);
+        });
+    }
+
+    /**
+     * Register the revisions context panel for admin-next.
+     * Contexts are gated by the plugin's tracking config settings.
+     */
+    public function onApiContextPanels(Event $event): void
+    {
+        $contexts = [];
+
+        if ($this->config->get('plugins.revisions-pro.track_pages', true)) {
+            $contexts[] = 'pages';
+        }
+        if ($this->config->get('plugins.revisions-pro.track_config', true)) {
+            $contexts[] = 'config';
+        }
+        if ($this->config->get('plugins.revisions-pro.track_plugins', true)) {
+            $contexts[] = 'plugins';
+        }
+        // Themes use the same track_plugins setting (plugin/theme configs are similar)
+        if ($this->config->get('plugins.revisions-pro.track_plugins', true)) {
+            $contexts[] = 'themes';
+        }
+
+        if (empty($contexts)) {
+            return;
+        }
+
+        $panels = $event['panels'] ?? [];
+        $panels[] = [
+            'id'            => 'revisions-pro',
+            'plugin'        => 'revisions-pro',
+            'label'         => 'Revision History',
+            'icon'          => 'history',
+            'contexts'      => $contexts,
+            'priority'      => 10,
+            'width'         => 900,
+            'badgeEndpoint' => '/revisions-pro/badge',
+        ];
+        $event['panels'] = $panels;
     }
 }

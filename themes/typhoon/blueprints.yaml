@@ -1,9 +1,9 @@
 name: Typhoon
-version: 2.4.7
+version: 4.2.1
 type: theme
 slug: typhoon
 premium: true
-description: Typhoon theme utilizing the Tailwind 3 CSS framework
+description: Typhoon theme utilizing the NEW Tailwind 4.1 CSS framework
 icon: bolt
 author:
   name: Trilby Media, LLC

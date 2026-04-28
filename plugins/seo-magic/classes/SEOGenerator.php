@@ -229,8 +229,10 @@ class SEOGenerator
                         $data->set('debug', $info['debug']);
 
                         $data_path = SEOData::getFilename(str_replace('/', '_', $route));
+                        // Resolve stream URI to real path to avoid PHP 8.5 stream wrapper write issues
+                        $resolved_path = Grav::instance()['locator']->findResource($data_path, true, true);
                         $formatter = new JsonFormatter(['encode_options' => JSON_PRETTY_PRINT]);
-                        $data_file = new JsonFile($data_path, $formatter);
+                        $data_file = new JsonFile($resolved_path, $formatter);
                         $data_file->save($data);
 
 

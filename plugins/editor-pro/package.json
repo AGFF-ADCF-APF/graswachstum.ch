@@ -10,6 +10,7 @@
     "watch": "npm run watch:tiptap & npm run watch:editor",
     "watch:tiptap": "esbuild src/tiptap-bundle.js --bundle --outfile=admin/assets/vendor/tiptap-bundle.js --format=iife --global-name=TipTap --watch --sourcemap",
     "watch:editor": "esbuild admin/assets/editor-pro.js --outfile=admin/assets/editor-pro.min.js --watch --sourcemap",
+    "build:admin-next": "node build-admin-next.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -38,7 +39,10 @@
     "@tiptap/extension-underline": "^2.22.3",
     "@tiptap/pm": "^2.23.0",
     "@tiptap/starter-kit": "^2.22.3",
-    "marked": "^15.0.12"
+    "marked": "^15.0.12",
+    "y-prosemirror": "^1.3.7",
+    "y-protocols": "^1.0.7",
+    "yjs": "^13.6.30"
   },
   "devDependencies": {
     "esbuild": "^0.25.5"

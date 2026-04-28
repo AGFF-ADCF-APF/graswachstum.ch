@@ -969,21 +969,30 @@
                             isBlockLevel = blockLevelShortcodes.some(name => shortcodeName.toLowerCase() === name.toLowerCase());
                         }
                         
+                        // Heading shortcodes (h1-h6) hold inline-only content; keep on a single line
+                        // to avoid markdown wrapping the inner text in a <p> tag, which produces
+                        // invalid HTML like <h2><p>...</p></h2>.
+                        const isHeadingShortcode = /^h[1-6]$/i.test(shortcodeName);
+
                         // Format with proper newlines for block-level shortcodes
                         if (isBlockLevel) {
                             // Simplified logic: block shortcodes always end with a single newline
                             let shortcodeText = '';
-                            
+
                             // Format the shortcode
                             if (content && content.trim()) {
-                                // For block shortcodes, ensure content has proper newlines
                                 const trimmedContent = content.trim();
-                                shortcodeText = `[${shortcodeName}${params ? ` ${params}` : ''}]\n${trimmedContent}\n[/${shortcodeName}]\n`;
+                                if (isHeadingShortcode) {
+                                    shortcodeText = `[${shortcodeName}${params ? ` ${params}` : ''}]${trimmedContent}[/${shortcodeName}]\n`;
+                                } else {
+                                    // For block shortcodes, ensure content has proper newlines
+                                    shortcodeText = `[${shortcodeName}${params ? ` ${params}` : ''}]\n${trimmedContent}\n[/${shortcodeName}]\n`;
+                                }
                             } else {
                                 // Empty block shortcode
                                 shortcodeText = `[${shortcodeName}${params ? ` ${params}` : ''}][/${shortcodeName}]\n`;
                             }
-                            
+
                             return shortcodeText;
                         } else {
                             // Inline shortcode - keep compact
@@ -1071,6 +1080,12 @@
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
+    }
+
+    // Safely encode data for use in single-quoted HTML attributes.
+    // Apostrophes in JSON content would otherwise break the attribute boundary.
+    function jsonAttr(obj) {
+        return JSON.stringify(obj).replace(/'/g, '&#39;');
     }
 
     function getBlockTitle(blockType, blockData) {
@@ -2556,8 +2571,14 @@
 
     // Main Editor Pro Class
     class EditorPro {
-        constructor(textarea) {
+        constructor(textarea, options) {
             this.textarea = textarea;
+            this.options = options || {};
+            // Collaborative editing context (Phase 6). When `fragment` is set,
+            // the Editor is built with the Yjs y-prosemirror extension and the
+            // Yjs fragment becomes the document source-of-truth. Initial HTML
+            // is used as the seed only if the fragment is empty.
+            this.collab = this.options.collab || null;
             this.preserver = new ContentPreserver();
             this.preservedBlocks = new Map();
             this.editor = null;
@@ -2759,10 +2780,30 @@
                 }
             }, 600);
             
-            // Define toolbar items with proper icons
+            // Define toolbar items with proper icons.
+            // Undo/redo route through y-prosemirror's UndoManager when
+            // collab is active so we honor the local-origin fence; the
+            // TipTap StarterKit history.undo/redo commands aren't
+            // registered in that mode.
+            const undoAction = () => {
+                if (this.collab && this.collab.fragment && window.TiptapYjs) {
+                    window.TiptapYjs.yUndo(this.editor.view.state);
+                    this.editor.view.focus();
+                } else {
+                    this.editor.commands.undo();
+                }
+            };
+            const redoAction = () => {
+                if (this.collab && this.collab.fragment && window.TiptapYjs) {
+                    window.TiptapYjs.yRedo(this.editor.view.state);
+                    this.editor.view.focus();
+                } else {
+                    this.editor.commands.redo();
+                }
+            };
             const toolbarItems = [
-                { name: 'undo', title: 'Undo', icon: 'undo', action: () => this.editor.commands.undo() },
-                { name: 'redo', title: 'Redo', icon: 'redo', action: () => this.editor.commands.redo() },
+                { name: 'undo', title: 'Undo', icon: 'undo', action: undoAction },
+                { name: 'redo', title: 'Redo', icon: 'redo', action: redoAction },
                 { type: 'separator' },
                 { name: 'removeformat', title: 'Remove Format', icon: 'removeformat', action: () => this.editor.chain().focus().clearNodes().unsetAllMarks().run() },
                 { type: 'separator' },
@@ -2942,13 +2983,51 @@
                 return;
             }
 
+            // Prefer pure CSS `position: sticky`. Hosts can offset the
+            // toolbar below their own pinned header by setting the inherited
+            // CSS custom property `--sticky-header-height` (admin-next does
+            // this via a ResizeObserver, so it tracks responsive breakpoints
+            // and the scrolled-vs-unscrolled header height transition with
+            // no JS polling). CSS sticky only works if no scrolling ancestor
+            // up to the scroll container has `overflow: hidden` — fall back
+            // to the JS-driven fixed-positioning path if it does.
+            const hasHiddenAncestor = (el) => {
+                let p = el.parentElement;
+                while (p) {
+                    const s = window.getComputedStyle(p);
+                    if (s.overflowY === 'auto' || s.overflowY === 'scroll' ||
+                        s.overflow === 'auto' || s.overflow === 'scroll') {
+                        return false; // reached the scroll container, all clear
+                    }
+                    if (s.overflow === 'hidden' || s.overflowY === 'hidden' || s.overflowX === 'hidden') {
+                        return true;
+                    }
+                    p = p.parentElement;
+                }
+                return false;
+            };
+
+            if (!hasHiddenAncestor(stickyElement)) {
+                stickyElement.style.position = 'sticky';
+                stickyElement.style.top = 'var(--sticky-header-height, 0px)';
+                stickyElement.style.zIndex = '1001';
+                stickyElement.classList.add('is-sticky');
+                this.stickyCleanup = () => {
+                    stickyElement.style.position = '';
+                    stickyElement.style.top = '';
+                    stickyElement.style.zIndex = '';
+                    stickyElement.classList.remove('is-sticky');
+                };
+                return;
+            }
+
             // Look for the main content area that scrolls
             // In Grav admin, it's typically the main[role="region"] element
             let scrollRegion = document.querySelector('main [role="region"]');
-            
+
             if (!scrollRegion) {
                 // Try alternative selectors
-                scrollRegion = document.querySelector('.content-wrapper') || 
+                scrollRegion = document.querySelector('.content-wrapper') ||
                               document.querySelector('.admin-content') ||
                               document.querySelector('main');
             }
@@ -2958,7 +3037,7 @@
                 let parent = element.parentElement;
                 while (parent) {
                     const style = window.getComputedStyle(parent);
-                    if (style.overflow === 'auto' || style.overflow === 'scroll' || 
+                    if (style.overflow === 'auto' || style.overflow === 'scroll' ||
                         style.overflowY === 'auto' || style.overflowY === 'scroll') {
 
                         return parent;
@@ -2967,9 +3046,9 @@
                 }
                 return null;
             };
-            
+
             const actualScroller = findScrollableParent(stickyElement);
-            
+
             // Use the actual scroller if found, otherwise use scrollRegion
             if (actualScroller) {
                 scrollRegion = actualScroller;
@@ -2993,16 +3072,30 @@
             let isSticky = false;
             let rafId = null;
             
+            // Read an additional offset from a CSS custom property on the
+            // toolbar (inherited from any ancestor). Hosts that already pin
+            // their own header at the top of the scroll region (e.g.
+            // admin-next sets --sticky-header-height on the page-edit root)
+            // can use this to push the editor toolbar below it instead of
+            // having it disappear behind the host header.
+            const readStickyOffset = () => {
+                const raw = getComputedStyle(stickyElement).getPropertyValue('--sticky-header-height');
+                const n = parseFloat(raw);
+                return Number.isFinite(n) ? n : 0;
+            };
+
             const checkSticky = () => {
                 rafId = null;
-                
+
                 const scrollTop = scrollRegion.scrollTop;
                 const scrollRegionRect = scrollRegion.getBoundingClientRect();
                 const stickyRect = isSticky ? placeholder.getBoundingClientRect() : stickyElement.getBoundingClientRect();
-                
+                const offset = readStickyOffset();
+                const stickTop = scrollRegionRect.top + offset;
+
                 // Calculate if toolbar should be sticky
-                const shouldStick = stickyRect.top <= scrollRegionRect.top;
-                
+                const shouldStick = stickyRect.top <= stickTop;
+
                 if (shouldStick && !isSticky) {
 
                     // Make sticky
@@ -3010,7 +3103,7 @@
                     placeholder.style.display = 'block';
                     placeholder.style.height = stickyElement.offsetHeight + 'px'; // Update height in case search bar is shown
                     stickyElement.style.position = 'fixed';
-                    stickyElement.style.top = scrollRegionRect.top + 'px';
+                    stickyElement.style.top = stickTop + 'px';
                     stickyElement.style.left = stickyRect.left + 'px';
                     stickyElement.style.width = stickyRect.width + 'px';
                     stickyElement.style.zIndex = '1001';
@@ -3027,10 +3120,10 @@
                     stickyElement.style.zIndex = '';
                     stickyElement.classList.remove('is-sticky');
                 }
-                
+
                 // Update position while sticky
                 if (isSticky) {
-                    stickyElement.style.top = scrollRegionRect.top + 'px';
+                    stickyElement.style.top = stickTop + 'px';
                     stickyElement.style.left = placeholder.getBoundingClientRect().left + 'px';
                     stickyElement.style.width = placeholder.getBoundingClientRect().width + 'px';
                     // Update placeholder height in case search bar opened/closed
@@ -3461,12 +3554,14 @@
             // Store original markdown for fresh parsing when needed
             this.originalMarkdown = this.textarea.value;
 
-            // Prepare extensions list
+            // Prepare extensions list. When collab is active we disable
+            // StarterKit's history extension — yUndoPlugin (added below
+            // by TiptapCollaboration) owns undo/redo and is fenced to
+            // local-origin edits so Cmd-Z doesn't roll back peers.
+            const collabActive = !!(this.collab && this.collab.fragment);
             const extensions = [
                 TiptapStarterKit.StarterKit.configure({
-                    history: {
-                        depth: 100,
-                    },
+                    history: collabActive ? false : { depth: 100 },
                     // Disable the default paragraph extension to prevent unwanted wrapping
                     paragraph: false,
                     // Disable the default document extension to customize it
@@ -3823,9 +3918,23 @@
             this.searchExtension = this.createSearchHighlightExtension();
             extensions.push(this.searchExtension);
 
+            // Collaboration (Phase 6): when the web-component wrapper hands us
+            // a Y.XmlFragment we wire y-prosemirror in so TipTap's document
+            // state is backed by Yjs. ySyncPlugin will seed the fragment from
+            // TipTap's initial content if the fragment is empty, or override
+            // TipTap's content with the fragment's state if someone else has
+            // already seeded the room.
+            if (this.collab && this.collab.fragment && window.TiptapCollaboration) {
+                extensions.push(window.TiptapCollaboration.Collaboration.configure({
+                    fragment: this.collab.fragment,
+                    awareness: this.collab.awareness || null,
+                    user: this.collab.user || null,
+                }));
+            }
+
             // Create the editor
             const initialContent = this.basicMarkdownToHtml(processed || '');
-            
+
             this.editor = new TiptapCore.Editor({
                 element: container,
                 extensions: extensions,
@@ -3835,6 +3944,23 @@
                 onCreate: ({ editor }) => {
                     // Store reference to the editor's DOM element
                     this.editorElement = editor.view.dom;
+
+                    // Phase 6: when collab is active and the shared
+                    // Y.XmlFragment is empty, ySyncPlugin will have just
+                    // wiped the editor's initial doc to match. Seed the
+                    // fragment from our initial markdown so this client's
+                    // content is what other peers adopt. The setContent
+                    // dispatch flows through ProseMirror → ySyncPlugin →
+                    // Y.XmlFragment, populating it for everyone.
+                    if (this.collab && this.collab.fragment && this.collab.fragment.length === 0 && initialContent) {
+                        Promise.resolve().then(() => {
+                            try {
+                                editor.commands.setContent(initialContent, { emitUpdate: false });
+                            } catch (e) {
+                                console.warn('[EditorPro] failed to seed Yjs fragment from initial content:', e);
+                            }
+                        });
+                    }
 
                     // NOW set up event delegation for inline shortcodes after editor is created
                     this.setupInlineShortcodeEventDelegation();
@@ -4555,12 +4681,12 @@
                                     }
                                     
                                     const styleAttr = customCSS ? ` style="${escapeHtml(customCSS)}"` : '';
-                                    const inlineHtml = `<span data-preserved-inline="true" data-block-id="${blockId}" data-block-type="shortcode" data-block-data='${JSON.stringify(block)}' class="preserved-inline shortcode" contenteditable="false" title="${escapeHtml(block.original)} (click to edit)"${styleAttr}>${escapeHtml(block.original)}</span>`;
+                                    const inlineHtml = `<span data-preserved-inline="true" data-block-id="${blockId}" data-block-type="shortcode" data-block-data='${jsonAttr(block)}' class="preserved-inline shortcode" contenteditable="false" title="${escapeHtml(block.original)} (click to edit)"${styleAttr}>${escapeHtml(block.original)}</span>`;
                                     return inlineHtml;
                                 }
                             }
                             // Other inline types can be added here
-                            return `<span data-preserved-inline="true" data-block-id="${blockId}" data-block-type="${block.type}" data-block-data='${JSON.stringify(block)}' class="preserved-inline ${block.type}">${escapeHtml(block.original)}</span>`;
+                            return `<span data-preserved-inline="true" data-block-id="${blockId}" data-block-type="${block.type}" data-block-data='${jsonAttr(block)}' class="preserved-inline ${block.type}">${escapeHtml(block.original)}</span>`;
                         }
                         
                         // For block-level content, return appropriate placeholder
@@ -4656,7 +4782,7 @@
                             const encodedParams = btoa(unescape(encodeURIComponent(normalizedParams)));
 
                             // Build the div attributes, including code content for code-type shortcodes
-                            let divAttrs = `data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params-base64="${encodedParams}" data-attributes='${JSON.stringify(block.attributes || {})}' data-placeholder-id="${blockId}" data-content-type="${isCodeShortcode ? 'code' : 'blocks'}"`;
+                            let divAttrs = `data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params-base64="${encodedParams}" data-attributes='${jsonAttr(block.attributes || {})}' data-placeholder-id="${blockId}" data-content-type="${isCodeShortcode ? 'code' : 'blocks'}"`;
 
                             if (isCodeShortcode && block.codeContent) {
                                 const encodedCodeContent = btoa(unescape(encodeURIComponent(block.codeContent)));
@@ -4666,7 +4792,7 @@
                             return `<div ${divAttrs} class="shortcode-block ${block.tagName}">${innerContent}</div>`;
                         } else {
                             // Use preservedBlock for HTML/Twig blocks
-                            return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}" data-block-data='${JSON.stringify(block)}' class="preserved-block ${block.type}"></div>`;
+                            return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}" data-block-data='${jsonAttr(block)}' class="preserved-block ${block.type}"></div>`;
                         }
                     }
                     return match;
@@ -4704,7 +4830,7 @@
                         }
 
                         const shortcodeNameAttr = block.type === 'shortcode' && block.tagName ? ` data-shortcode-name="${block.tagName}"` : '';
-                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${JSON.stringify(block)}' class="preserved-block ${block.type}">
+                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${jsonAttr(block)}' class="preserved-block ${block.type}">
                             <div class="preserved-block-header">
                                 <span>${blockTitle}</span>
                                 <div class="preserved-block-controls">
@@ -4761,7 +4887,7 @@
                         }
 
                         const shortcodeNameAttr = block.type === 'shortcode' && block.tagName ? ` data-shortcode-name="${block.tagName}"` : '';
-                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${JSON.stringify(block)}' class="preserved-block ${block.type}">
+                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${jsonAttr(block)}' class="preserved-block ${block.type}">
                             <div class="preserved-block-header">
                                 <span>${blockTitle}</span>
                                 <div class="preserved-block-controls">
@@ -4807,7 +4933,7 @@
                         }
                         
                         const shortcodeNameAttr = block.type === 'shortcode' && block.tagName ? ` data-shortcode-name="${block.tagName}"` : '';
-                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${JSON.stringify(block)}' class="preserved-block ${block.type}">
+                        return `<div data-preserved-block="true" data-block-id="${blockId}" data-block-type="${block.type}"${shortcodeNameAttr} data-block-data='${jsonAttr(block)}' class="preserved-block ${block.type}">
                             <div class="preserved-block-header">
                                 <span>${blockTitle}</span>
                                 <div class="preserved-block-controls">
@@ -5003,7 +5129,7 @@
                 const encodedParams = btoa(unescape(encodeURIComponent(normalizedParams)));
 
                 // Build the div attributes, including code content for code-type shortcodes
-                let divAttrs = `data-shortcode-block="true" data-shortcode-name="${nestedBlock.tagName}" data-params-base64="${encodedParams}" data-attributes='${JSON.stringify(nestedBlock.attributes || {})}' data-placeholder-id="${nestedBlockId}" data-content-type="${isCodeShortcode ? 'code' : 'blocks'}"`;
+                let divAttrs = `data-shortcode-block="true" data-shortcode-name="${nestedBlock.tagName}" data-params-base64="${encodedParams}" data-attributes='${jsonAttr(nestedBlock.attributes || {})}' data-placeholder-id="${nestedBlockId}" data-content-type="${isCodeShortcode ? 'code' : 'blocks'}"`;
 
                 if (isCodeShortcode && (nestedBlock.codeContent || nestedBlock.content)) {
                     const codeContent = nestedBlock.codeContent || nestedBlock.content;
@@ -5031,11 +5157,11 @@
                     // For inline self-closing shortcodes, return inline representation
                     if (block.shortcodeType === 'inline' || block.isBlock === false) {
                         // Return as an inline shortcode span
-                        return `<span data-shortcode-inline="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-params-base64="${encodedParams}" data-attributes='${JSON.stringify(block.attributes || {})}' data-placeholder-id="${blockId}" class="shortcode-inline ${block.tagName}">[${block.tagName}${block.params ? ' ' + block.params : ''} /]</span>`;
+                        return `<span data-shortcode-inline="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-params-base64="${encodedParams}" data-attributes='${jsonAttr(block.attributes || {})}' data-placeholder-id="${blockId}" class="shortcode-inline ${block.tagName}">[${block.tagName}${block.params ? ' ' + block.params : ''} /]</span>`;
                     }
                     
                     // For block self-closing shortcodes
-                    return `<div data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-params-base64="${encodedParams}" data-attributes='${JSON.stringify(block.attributes || {})}' data-placeholder-id="${blockId}" class="shortcode-block ${block.tagName}"></div>`;
+                    return `<div data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-params-base64="${encodedParams}" data-attributes='${jsonAttr(block.attributes || {})}' data-placeholder-id="${blockId}" class="shortcode-block ${block.tagName}"></div>`;
                 }
                 
                 // Process the shortcode content as markdown with proper image/link resolution
@@ -5168,7 +5294,7 @@
                 }
                 
                 // Return the shortcode HTML using the new shortcode-block format
-                return `<div data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-attributes='${JSON.stringify(attributes)}' data-placeholder-id="${blockId}" class="shortcode-block ${block.tagName}">${processedContent}</div>`;
+                return `<div data-shortcode-block="true" data-shortcode-name="${block.tagName}" data-params="${escapedParams}" data-attributes='${jsonAttr(attributes)}' data-placeholder-id="${blockId}" class="shortcode-block ${block.tagName}">${processedContent}</div>`;
         }
 
         fixSummaryDelimiterBlockquotes(html) {
@@ -5769,9 +5895,16 @@
                 } else if (isBlockLevel && finalInnerContent.trim()) {
                     // For block shortcodes, always use block formatting with newlines
                     const trimmedContent = finalInnerContent.trim();
-                    
-                    // Always use proper block formatting for section and other structural shortcodes
-                    shortcodeMarkdown = `[${shortcodeName}${params ? ` ${params}` : ''}]\n${trimmedContent}\n[/${shortcodeName}]\n`;
+
+                    // Heading shortcodes (h1-h6) hold inline-only content; keep on a single line
+                    // to avoid markdown wrapping the inner text in a <p> tag, which produces
+                    // invalid HTML like <h2><p>...</p></h2>.
+                    if (/^h[1-6]$/i.test(shortcodeName)) {
+                        shortcodeMarkdown = `[${shortcodeName}${params ? ` ${params}` : ''}]${trimmedContent}[/${shortcodeName}]\n`;
+                    } else {
+                        // Always use proper block formatting for section and other structural shortcodes
+                        shortcodeMarkdown = `[${shortcodeName}${params ? ` ${params}` : ''}]\n${trimmedContent}\n[/${shortcodeName}]\n`;
+                    }
 
                 } else if (isBlockLevel) {
                     // Empty block shortcode - add single newline
@@ -5857,7 +5990,13 @@
                 if (isBlockLevel && innerContent.trim()) {
                     // For block shortcodes, ensure content ends with a newline before closing tag
                     const trimmedContent = innerContent.trim();
-                    shortcodeMarkdown = `[${tagName}${unescapedParams ? ` ${unescapedParams}` : ''}]\n${trimmedContent}\n[/${tagName}]`;
+                    // Heading shortcodes (h1-h6) hold inline-only content; keep on a single line
+                    // to avoid markdown wrapping the inner text in a <p> tag.
+                    if (/^h[1-6]$/i.test(tagName)) {
+                        shortcodeMarkdown = `[${tagName}${unescapedParams ? ` ${unescapedParams}` : ''}]${trimmedContent}[/${tagName}]`;
+                    } else {
+                        shortcodeMarkdown = `[${tagName}${unescapedParams ? ` ${unescapedParams}` : ''}]\n${trimmedContent}\n[/${tagName}]`;
+                    }
                 } else if (innerContent.trim()) {
                     shortcodeMarkdown = `[${tagName}${unescapedParams ? ` ${unescapedParams}` : ''}]${innerContent.trim()}[/${tagName}]`;
                 } else {
@@ -6323,38 +6462,64 @@
                     case 'a':
                         const href = node.getAttribute('href') || '';
                         const dataHref = node.getAttribute('data-href');
+                        const linkTarget = node.getAttribute('target');
                         const linkText = children;
-                        
+
                         // Skip empty links
                         if (!href) return linkText;
-                        
-                        // First check data-href for original path
+
+                        // Determine the URL to use
+                        let linkUrl = href;
                         if (dataHref) {
-                            return `[${linkText}](${dataHref})`;
-                        }
-                        
-                        // Then check path mappings
-                        for (const [original, mapping] of Object.entries(this.pathMappings?.links || {})) {
-                            if (mapping.resolved === href) {
-                                return `[${linkText}](${original})`;
+                            linkUrl = dataHref;
+                        } else {
+                            for (const [original, mapping] of Object.entries(this.pathMappings?.links || {})) {
+                                if (mapping.resolved === href) {
+                                    linkUrl = original;
+                                    break;
+                                }
                             }
                         }
-                        
-                        // Fallback to href
-                        return `[${linkText}](${href})`;
+
+                        // Strip any existing target param from URL (may be in data-href from prior save)
+                        linkUrl = linkUrl
+                            .replace(/\?target=[^&]*&/, '?')
+                            .replace(/&target=[^&]*/, '')
+                            .replace(/\?target=[^&]*$/, '');
+                        // Re-add target if set via link mark attribute
+                        if (linkTarget) {
+                            linkUrl += (linkUrl.includes('?') ? '&' : '?') + `target=${linkTarget}`;
+                        }
+
+                        return `[${linkText}](${linkUrl})`;
                     
                     // Text formatting
+                    // Note: Markdown requires inline markers to be adjacent to text (no spaces inside).
+                    // e.g. "**bold **" is invalid but "**bold** " is valid.
+                    // So we move any leading/trailing whitespace outside the markers.
                     case 'strong':
-                    case 'b':
-                        return `**${children}**`;
-                    
+                    case 'b': {
+                        const leadingWs = children.match(/^(\s*)/)[0];
+                        const trailingWs = children.match(/(\s*)$/)[0];
+                        const trimmed = children.slice(leadingWs.length, children.length - trailingWs.length || undefined);
+                        return trimmed ? `${leadingWs}**${trimmed}**${trailingWs}` : children;
+                    }
+
                     case 'em':
-                    case 'i':
-                        return `_${children}_`;  // Use underscore for italic (visual distinction from bold **)
-                    
+                    case 'i': {
+                        const leadingWs = children.match(/^(\s*)/)[0];
+                        const trailingWs = children.match(/(\s*)$/)[0];
+                        const trimmed = children.slice(leadingWs.length, children.length - trailingWs.length || undefined);
+                        return trimmed ? `${leadingWs}_${trimmed}_${trailingWs}` : children;
+                    }
+
                     case 's':
-                    case 'strike':
-                        return `~~${children}~~`;
+                    case 'strike': {
+                        const leadingWs = children.match(/^(\s*)/)[0];
+                        const trailingWs = children.match(/(\s*)$/)[0];
+                        const trimmed = children.slice(leadingWs.length, children.length - trailingWs.length || undefined);
+                        return trimmed ? `${leadingWs}~~${trimmed}~~${trailingWs}` : children;
+                    }
                     
                     case 'u':
                         return `<u>${children}</u>`; // Markdown doesn't have underline
@@ -7633,7 +7798,11 @@
             // Get current attributes
             const currentHref = linkMark.attrs.href || '';
             const currentTarget = linkMark.attrs.target || '';
-            const originalHref = linkMark.attrs['data-href'] || currentHref;
+            // Strip Grav target param from URL - target is managed by the dropdown
+            const originalHref = (linkMark.attrs['data-href'] || currentHref)
+                .replace(/\?target=[^&]*&/, '?')
+                .replace(/&target=[^&]*/, '')
+                .replace(/\?target=[^&]*$/, '');
             const currentText = linkElement.textContent || '';
             
             const content = `
@@ -10874,7 +11043,7 @@
         createCodeMirrorCompatibility() {
             // First, ensure Editor object exists
             if (typeof window.Editor === 'undefined') {
-                window.Editor = { editors: jQuery ? jQuery() : [] };
+                window.Editor = { editors: (typeof jQuery !== 'undefined') ? jQuery() : [] };
             }
             
             // Create a fake CodeMirror instance that Grav's media panel can use
@@ -11032,7 +11201,12 @@
 
     // Initialize global plugin system
     window.EditorPro = window.EditorPro || {};
-    
+
+    // Expose classes for admin-next web component integration
+    window.EditorPro.EditorProClass = EditorPro;
+    window.EditorPro.ContentPreserverClass = ContentPreserver;
+    window.EditorPro.ShortcodeRegistryClass = ShortcodeRegistry;
+
     window.EditorPro.pluginSystem = new EditorProPluginSystem();
     window.EditorPro.registerPlugin = function(plugin) {
         window.EditorPro.pluginSystem.register(plugin);

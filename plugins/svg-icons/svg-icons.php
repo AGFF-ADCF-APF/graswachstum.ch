@@ -45,7 +45,22 @@ class SVGIconsPlugin extends Plugin
             'onEditorProShortcodeRegister' => ['onEditorProShortcodeRegister', 0],
             'onAssetsInitialized'         => ['onAssetsInitialized', 0],
             'onAdminTwigTemplatePaths'    => ['onAdminTwigTemplatePaths', 0],
+            'onApiRegisterRoutes'         => ['onApiRegisterRoutes', 0],
         ];
+    }
+
+    /**
+     * Register API routes for admin-next svgicon field component.
+     */
+    public function onApiRegisterRoutes(Event $event): void
+    {
+        $routes = $event['routes'];
+        $controller = \Grav\Plugin\SVGIcons\Api\SvgIconsController::class;
+
+        $routes->group('/svg-icons', function ($group) use ($controller) {
+            $group->get('/sets', [$controller, 'sets']);
+            $group->get('/icons', [$controller, 'icons']);
+        });
     }
 
     /**

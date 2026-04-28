@@ -23,9 +23,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     {% include 'partials/metadata.html.twig' %}
+    {% include 'partials/langswitcher.hreflang.html.twig' ignore missing %}
     {% include 'partials/favicon.html.twig' %}
     <link rel="canonical" href="{{ page.url(true, true) }}"/>
   {% endblock head %}
+
+  <script>
+    (function() {
+      try {
+        var el = document.documentElement;
+        var data = JSON.parse(el.dataset.appearance || '{}');
+        var store = null;
+        if (data.type === 'cookie') {
+          var m = document.cookie.match(/(?:^| )typhoon-appearance=([^;]+)/);
+          store = m ? JSON.parse(decodeURIComponent(m[1])) : null;
+        } else {
+          store = JSON.parse(localStorage.getItem('typhoon-appearance'));
+        }
+        var theme = (store && store.appearance) || data.appearance;
+        if (!theme || theme === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        el.classList.remove('light', 'dark');
+        el.classList.add(theme);
+      } catch (e) {}
+    })();
+  </script>
 
   {% block stylesheets %}
     {% do assets.addCss('theme://build/css/site.css') %}
@@ -40,14 +63,14 @@
     {% if theme_config.appearance.cookie %}
       {% do assets.addJs('theme://js/js-cookie.js', { loading: 'defer' }) %}
     {% endif %}
-    {% do assets.addJs('theme://js/alpine.js', {loading: 'defer'}) %}
+    {% do assets.addJs('theme://js/alpine.min.js', {loading: 'defer'}) %}
     {% do assets.addJs('theme://js/appearance.js', {group: 'bottom'}) %}
     {% do assets.addJs('theme://js/site.js', { group: 'bottom' }) %}
   {% endblock %}
 
   {% block assets deferred %}
-  {{ assets.css() | raw }}
-  {{ assets.js() | raw }}
+    {{ assets.css() | raw }}
+    {{ assets.js() | raw }}
   {% endblock %}
 </head>
 
@@ -59,6 +82,12 @@
 <div class="flex-1 flex flex-col relative">
   {% block header %}
     {% include 'partials/header.html.twig' %}
+  {% endblock %}
+
+  {% block scrollspy %}
+    {% if show_scrollspy_menu is defined and show_scrollspy_menu %}
+      {% include 'partials/scrollspy-navigation.html.twig' %}
+    {% endif %}
   {% endblock %}
 
   {% block hero %}

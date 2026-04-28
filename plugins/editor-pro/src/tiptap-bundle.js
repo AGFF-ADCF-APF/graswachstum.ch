@@ -24,6 +24,13 @@ import CustomCodeBlock from './extensions/CustomCodeBlock.js'
 import { RawMarkdownMode } from './RawMarkdownMode.js'
 import { Plugin, PluginKey, NodeSelection } from '@tiptap/pm/state'
 import { Decoration, DecorationSet } from '@tiptap/pm/view'
+// yjs and y-protocols/awareness are externalized by build-admin-next.mjs
+// so they resolve at runtime to admin2's instances on window.__GRAV_YJS__.
+// y-prosemirror is bundled here but uses the same shared yjs internally
+// (its own `import 'yjs'` statements get redirected by the same plugin).
+import * as Y from 'yjs'
+import { Awareness } from 'y-protocols/awareness'
+import { ySyncPlugin, yCursorPlugin, yUndoPlugin, undo as yUndo, redo as yRedo } from 'y-prosemirror'
 
 // Configure marked for Grav-like markdown
 marked.setOptions({
@@ -61,3 +68,67 @@ window.TiptapPM = { Plugin, PluginKey, NodeSelection }
 window.TiptapPMView = { Decoration, DecorationSet }
 window.marked = marked
 window.RawMarkdownMode = RawMarkdownMode
+
+// --- Yjs collaboration (Phase 6) -----------------------------------------
+// Y and Awareness here are admin2's instances (shared via the build-time
+// plugin redirect). y-prosemirror was bundled with the same redirected yjs
+// import, so its internal class identities match. Pass-through to window.
+window.TiptapYjs = {
+    Y,
+    Awareness,
+    ySyncPlugin,
+    yCursorPlugin,
+    yUndoPlugin,
+    yUndo,
+    yRedo,
+}
+
+/**
+ * TipTap extension wrapping y-prosemirror's plugins.
+ *
+ * Usage:
+ *   TiptapCollaboration.configure({
+ *       fragment: yXmlFragment,       // required
+ *       awareness: yAwareness,        // optional, enables live cursors
+ *       user: { name: 'Alice', color: '#f96' }, // optional cursor label
+ *   })
+ *
+ * Pass alongside the rest of the extensions to `new Editor({ extensions: […] })`.
+ * When this extension is in the set, ySyncPlugin takes ownership of the
+ * document — initial `content` in the Editor constructor is ignored IF the
+ * fragment is non-empty; otherwise it seeds the fragment from the content.
+ */
+const TiptapCollaboration = Extension.create({
+    name: 'collaboration',
+    addOptions() {
+        return { fragment: null, awareness: null, user: null };
+    },
+    addProseMirrorPlugins() {
+        const plugins = [];
+        if (!this.options.fragment) return plugins;
+        plugins.push(ySyncPlugin(this.options.fragment));
+        if (this.options.awareness) {
+            if (this.options.user) {
+                this.options.awareness.setLocalStateField('user', this.options.user);
+            }
+            plugins.push(yCursorPlugin(this.options.awareness));
+        }
+        plugins.push(yUndoPlugin());
+        return plugins;
+    },
+    // When collab is active StarterKit's history extension is disabled
+    // (otherwise its keymap would walk the full ProseMirror transaction
+    // stack and roll back peer edits). We replace it here with bindings
+    // that route through yUndoPlugin, whose internal Y.UndoManager only
+    // tracks edits originating from the local ySyncPlugin.
+    addKeyboardShortcuts() {
+        if (!this.options.fragment) return {};
+        const run = (fn) => () => fn(this.editor.view.state);
+        return {
+            'Mod-z': run(yUndo),
+            'Mod-y': run(yRedo),
+            'Mod-Shift-z': run(yRedo),
+        };
+    },
+});
+window.TiptapCollaboration = { Collaboration: TiptapCollaboration }

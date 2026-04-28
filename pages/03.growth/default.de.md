@@ -31,39 +31,35 @@ sitemap:
 ---
 
 ## Karte
-![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
+![Graswachstumskarte_aktuell](/uploads/Graswachstumskarte_aktuell.svg "Graswachstumskarte_aktuell")
 
 ## Graswachstumskurve
 
-<iframe src="/uploads/Graswachstumskurve_ohneLegende_2026.html" style="width:100%; height:600px;" ></iframe>
-[Interaktive Grafik in neuem Tab öffnen](/uploads/Graswachstumskurve_ohneLegende_2026.html?target=_blank)
+![](/user/pages/uploads/Graswachstumskurve_2026.svg)
 
+```
+<iframe src="/uploads/Graswachstumskurve_ohneLegende_2026.html" style="width:100%; height:600px;" ></iframe>Interaktive Grafik in neuem Tab öffnen
+```
 
-[ui-accordion independent=true open=none]
+[ui-accordion independent="true" open="none"]
 [ui-accordion-item title="Bedienung der interaktiven Graswachstumskurve"]
-Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres. 
-Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittelland.
-
+Die schwarze, gestrichelte Linie bildet sich aus dem Durchschnitt aller Graswachstumsmeldungen des Jahres. Die rote, gestrichelte Linie ist ein langjähriger Mittelwert für das CH-Mittelland.
 
 ### Tipps:
+
 - Klick auf Standort: ein-/ausblenden
 - Doppelklick auf Standort: alle anderen Standorte werden ausgeblendet
-- Kamerasymbol: angezeigte Grafik lokal speichern
-[ui-accordion-item title="Graswachtumskurve als SVG"]
-![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
+- Kamerasymbol: angezeigte Grafik lokal speichern [ui-accordion-item title="Graswachtumskurve als SVG"] ![Graswachstumskurve_2024](/user/pages/uploads/Graswachstumskurve_2024.svg?decoding=auto&fetchpriority=auto&g-9c0b390f$ "Graswachstumskurve_2024")
 [/ui-accordion-item]
+
 [/ui-accordion]
-
-
-
-[ui-accordion independent=true open=none]
+[ui-accordion independent="true" open="none"]
 [ui-accordion-item title="Graswachtumskurve 2024"]
 ![Graswachstumskurve_2024](/uploads/Graswachstumskurve_2024.svg "Graswachstumskurve_2024")
 [/ui-accordion-item]
 [ui-accordion-item title="Vergangene Graswachstumskarten"]
-{% for key,image in page.find('/uploads/archive/').media %}
-  {{ image.html() | raw }}
-{% endfor %}
+{{RAW_BLOCK_block_2_1777412747234}}
 [/ui-accordion-item]
+
 [/ui-accordion]

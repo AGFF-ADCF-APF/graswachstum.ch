@@ -124,5 +124,15 @@
             "type": "page",
             "action": "create"
         }
+    ],
+    "\/growth": [
+        {
+            "id": "fb624fc9fd3c85549986f92a547745d1",
+            "file": "user\/pages\/03.growth\/default.de.md.20260428-234753.rev",
+            "timestamp": 1777412873,
+            "user": "martinz",
+            "type": "page",
+            "action": "create"
+        }
     ]
 }
